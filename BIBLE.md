@@ -154,7 +154,8 @@ Cada lección tiene **6 sesiones de 3 a 5 minutos**, siempre en este orden:
 
 ## 6. Imágenes
 
-- **Escenas (foto realista documental):** el `hero` de cada lección y la imagen del diálogo. Formato 4:5 vertical, sin texto visible, luz natural, ropa de trabajo real y usada. Mismos personajes siempre: generar primero una foto de referencia de cada uno y usarla en todas las demás.
+- **Escenas (foto realista documental):** el `hero` de cada lección y la imagen del diálogo. **Solo personas y ambiente:** planos cerrados, el buque de fondo, fuera de foco o cortado. **Nunca nada técnico en la foto** (cabos, bitas, planchada, equipos, maniobras): la IA lo dibuja mal y un oficial lo nota. Sin texto visible, luz natural, ropa de trabajo real y usada. Mismos personajes siempre: usar la ficha de cada uno como referencia.
+- **Buques enteros:** si hace falta mostrar un buque completo, foto real con licencia libre (Wikimedia Commons, Unsplash, Pexels), nunca generada.
 - **Láminas para nombrar cosas (ilustración):** las dibuja Claude en SVG dentro del repositorio (`img/lNN/plate.svg`). Así los pines caen exactos y el dibujo no inventa detalles.
 
 ---
