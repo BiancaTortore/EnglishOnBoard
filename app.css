@@ -4,7 +4,7 @@
   --bg:#EDF1F3; --surface:#FFFFFF; --ink:#0D1F2D; --muted:#566874; --rule:#D3DCE2;
   --accent:#D9480F; --accent-ink:#FFFFFF;
   --sea:#17506A; --sea-ink:#FFFFFF; --sea-soft:#DCE9EF; --water:#CFE1E9; --quay:#B9C3C9;
-  --hull:#22303A; --deck:#8FA597; --super:#FFFFFF;
+  --hull:#22303A; --deck:#8FA597; --super:#FFFFFF; --antifoul:#9A3B2F;
   --ok:#1C7C4E; --ok-soft:#DCF2E4; --bad:#B8322A; --bad-soft:#FADFDC;
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -14,13 +14,13 @@
   --bg:#09131A; --surface:#112029; --ink:#E3EBF0; --muted:#93A6B3; --rule:#22394A;
   --accent:#FF6B35; --accent-ink:#1A0A03;
   --sea:#0F3446; --sea-ink:#E3EBF0; --sea-soft:#16384A; --water:#0F2E3D; --quay:#3A4A55;
-  --hull:#05090C; --deck:#4D6156; --super:#C9D4DB;
+  --hull:#05090C; --deck:#4D6156; --super:#C9D4DB; --antifoul:#6E2C24;
   --ok:#52C48C; --ok-soft:#123426; --bad:#F2776C; --bad-soft:#3A1D1B; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#09131A; --surface:#112029; --ink:#E3EBF0; --muted:#93A6B3; --rule:#22394A;
   --accent:#FF6B35; --accent-ink:#1A0A03;
   --sea:#0F3446; --sea-ink:#E3EBF0; --sea-soft:#16384A; --water:#0F2E3D; --quay:#3A4A55;
-  --hull:#05090C; --deck:#4D6156; --super:#C9D4DB;
+  --hull:#05090C; --deck:#4D6156; --super:#C9D4DB; --antifoul:#6E2C24;
   --ok:#52C48C; --ok-soft:#123426; --bad:#F2776C; --bad-soft:#3A1D1B; color-scheme:dark}
 
 [hidden]{display:none!important}
@@ -126,7 +126,7 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 .plate svg{display:block;width:100%;height:auto}
 .p-water{fill:var(--water)} .p-quay{fill:var(--quay)} .p-hull{fill:var(--hull)}
 .p-deck{fill:var(--deck)} .p-super{fill:var(--super)} .p-line{stroke:var(--ink);fill:none}
-.p-dome{fill:var(--super);stroke:var(--hull)} .p-ink{fill:var(--ink)} .p-soft{fill:var(--sea-soft)}
+.p-dome{fill:var(--super);stroke:var(--hull)} .p-ink{fill:var(--ink)} .p-soft{fill:var(--sea-soft)} .p-red{fill:var(--antifoul)} .p-stroke{stroke:var(--ink);fill:none}
 .p-label{fill:var(--ink);opacity:.6;font:500 9px var(--f-mono);letter-spacing:.1em}
 .p-arrow{stroke:var(--ink);stroke-width:2;fill:none}
 .pin{cursor:pointer}

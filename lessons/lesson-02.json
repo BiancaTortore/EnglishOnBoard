@@ -1,0 +1,206 @@
+{
+  "n": 2,
+  "module": 1,
+  "title": "Parts of the ship",
+  "place": "Day 1 · 09:00 · Houston, main deck",
+  "goal": "Name the main parts of the ship and ask what something is called.",
+  "images": {"hero": "img/l02/hero.jpg", "scene": "img/l02/scene.jpg"},
+
+  "audio": {
+    "l02-01": {"voice": "rolando", "text": "OK, this is the main deck. Leave your bag here for a minute.", "es": "Bueno, esta es la cubierta principal. Dejá tu bolso acá un minuto."},
+    "l02-02": {"voice": "diego",   "text": "It's huge! Are those white spheres the cargo tanks?", "es": "¡Es enorme! ¿Esas esferas blancas son los tanques de carga?"},
+    "l02-03": {"voice": "rolando", "text": "Yes, four cargo tanks. The LNG is inside, very, very cold.", "es": "Sí, cuatro tanques de carga. El GNL está adentro, muy, muy frío."},
+    "l02-04": {"voice": "diego",   "text": "And the black part under the deck, that's the hull?", "es": "¿Y la parte negra debajo de la cubierta es el casco?"},
+    "l02-05": {"voice": "rolando", "text": "That's right. The hull is the body of the ship.", "es": "Así es. El casco es el cuerpo del buque."},
+    "l02-06": {"voice": "diego",   "text": "What's that tall white building, aft?", "es": "¿Qué es ese edificio blanco alto, a popa?"},
+    "l02-07": {"voice": "rolando", "text": "That's the accommodation. Your cabin is in there, and the bridge is on top.", "es": "Es la acomodación. Tu camarote está ahí, y el puente está arriba de todo."},
+    "l02-08": {"voice": "diego",   "text": "And behind the bridge, the chimney?", "es": "¿Y detrás del puente, la chimenea?"},
+    "l02-09": {"voice": "rolando", "text": "Ha! On a ship it's called the funnel.", "es": "¡Ja! En un buque se llama funnel."},
+    "l02-10": {"voice": "diego",   "text": "Funnel. OK. And what's that called, forward, at the bow?", "es": "Funnel. OK. ¿Y cómo se llama eso, a proa, en la proa?"},
+    "l02-11": {"voice": "rolando", "text": "That's the forecastle. It's long when you write it, but we say it short: fo'c'sle. The mast is there too.", "es": "Es el castillo de proa. Se escribe largo, pero se dice corto: fo'c'sle. El mástil también está ahí."},
+    "l02-12": {"voice": "diego",   "text": "Sorry, how do you say it again?", "es": "Perdón, ¿cómo se dice otra vez?"},
+    "l02-13": {"voice": "rolando", "text": "Fo'c'sle. Don't worry, you'll hear it every day!", "es": "Fo'c'sle. Tranquilo, lo vas a escuchar todos los días."},
+
+    "w-hull":       {"voice": "model", "text": "hull"},
+    "w-maindeck":   {"voice": "model", "text": "main deck"},
+    "w-tank":       {"voice": "model", "text": "cargo tank"},
+    "w-accom":      {"voice": "model", "text": "accommodation"},
+    "w-bridge":     {"voice": "model", "text": "bridge"},
+    "w-funnel":     {"voice": "model", "text": "funnel"},
+    "w-forecastle": {"voice": "model", "text": "forecastle"},
+    "w-mast":       {"voice": "model", "text": "mast"},
+
+    "x-hull":       {"voice": "model", "text": "The hull is black.", "es": "El casco es negro."},
+    "x-maindeck":   {"voice": "model", "text": "Leave your bag on the main deck.", "es": "Dejá tu bolso en la cubierta principal."},
+    "x-tank":       {"voice": "model", "text": "The ship has four cargo tanks.", "es": "El buque tiene cuatro tanques de carga."},
+    "x-accom":      {"voice": "model", "text": "Your cabin is in the accommodation.", "es": "Tu camarote está en la acomodación."},
+    "x-bridge":     {"voice": "model", "text": "The bridge is on top of the accommodation.", "es": "El puente está arriba de la acomodación."},
+    "x-funnel":     {"voice": "model", "text": "The funnel is behind the bridge.", "es": "La chimenea está detrás del puente."},
+    "x-forecastle": {"voice": "model", "text": "The forecastle is at the bow.", "es": "El castillo de proa está en la proa."},
+    "x-mast":       {"voice": "model", "text": "The mast is on the forecastle.", "es": "El mástil está en el castillo de proa."},
+
+    "p-called":     {"voice": "model", "text": "What's that called?", "es": "¿Cómo se llama eso?"},
+    "p-itscalled":  {"voice": "model", "text": "It's called the funnel.", "es": "Se llama funnel."},
+    "p-howsay":     {"voice": "model", "text": "How do you say it?", "es": "¿Cómo se dice?"},
+    "p-isthat":     {"voice": "model", "text": "Is that the bridge?", "es": "¿Eso es el puente?"},
+
+    "c-show-fcsle":  {"voice": "rolando", "text": "Show me the forecastle."},
+    "c-show-mast":   {"voice": "rolando", "text": "Where's the mast?"},
+    "c-show-accom":  {"voice": "rolando", "text": "Show me the accommodation."},
+    "c-what-bow":    {"voice": "rolando", "text": "What's that, at the bow?"},
+    "c-what-white":  {"voice": "rolando", "text": "What's that tall white building?"},
+    "c-what-top":    {"voice": "rolando", "text": "What's on top of the accommodation?"},
+    "c-show-funnel": {"voice": "tanya",   "text": "Show me the funnel."},
+    "c-where-hull":  {"voice": "tanya",   "text": "Where's the hull?"},
+    "c-mast-fcsle":  {"voice": "tanya",   "text": "The mast is on the forecastle."},
+    "c-how-many":    {"voice": "tanya",   "text": "How many cargo tanks are there?"},
+    "c-smoke":       {"voice": "tanya",   "text": "There's black smoke from the funnel."},
+
+    "m-fcsle":      {"voice": "model", "text": "That's the forecastle.", "es": "Es el castillo de proa."},
+    "m-accom":      {"voice": "model", "text": "That's the accommodation.", "es": "Es la acomodación."},
+    "m-four":       {"voice": "model", "text": "There are four cargo tanks.", "es": "Hay cuatro tanques de carga."},
+    "m-bridgetop":  {"voice": "model", "text": "The bridge is on top of the accommodation.", "es": "El puente está arriba de la acomodación."},
+    "m-calledfcsle":{"voice": "model", "text": "It's called the forecastle.", "es": "Se llama castillo de proa."}
+  },
+
+  "dialogue": ["l02-01","l02-02","l02-03","l02-04","l02-05","l02-06","l02-07","l02-08","l02-09","l02-10","l02-11","l02-12","l02-13"],
+
+  "words": {
+    "hull":       {"en": "hull",          "ipa": "/hʌl/",            "es": "casco",                     "audio": "w-hull",       "ex": "x-hull"},
+    "maindeck":   {"en": "main deck",     "ipa": "/meɪn dek/",       "es": "cubierta principal",        "audio": "w-maindeck",   "ex": "x-maindeck"},
+    "tank":       {"en": "cargo tank",    "ipa": "/ˈkɑːɡəʊ tæŋk/",   "es": "tanque de carga",           "audio": "w-tank",       "ex": "x-tank"},
+    "accom":      {"en": "accommodation", "ipa": "/əˌkɒməˈdeɪʃn/",   "es": "acomodación (habilitación)","audio": "w-accom",      "ex": "x-accom"},
+    "bridge":     {"en": "bridge",        "ipa": "/brɪdʒ/",          "es": "puente",                    "audio": "w-bridge",     "ex": "x-bridge"},
+    "funnel":     {"en": "funnel",        "ipa": "/ˈfʌnl/",          "es": "chimenea",                  "audio": "w-funnel",     "ex": "x-funnel"},
+    "forecastle": {"en": "forecastle",    "ipa": "/ˈfəʊksl/",        "es": "castillo de proa",          "audio": "w-forecastle", "ex": "x-forecastle"},
+    "mast":       {"en": "mast",          "ipa": "/mɑːst/",          "es": "mástil",                    "audio": "w-mast",       "ex": "x-mast"}
+  },
+
+  "plate": {
+    "svg": "img/l02/plate.svg",
+    "pins": [
+      {"word": "hull",       "x": 200, "y": 146},
+      {"word": "maindeck",   "x": 105, "y": 121},
+      {"word": "tank",       "x": 244, "y": 96},
+      {"word": "accom",      "x": 73,  "y": 92},
+      {"word": "bridge",     "x": 92,  "y": 57},
+      {"word": "funnel",     "x": 37,  "y": 82},
+      {"word": "forecastle", "x": 340, "y": 116},
+      {"word": "mast",       "x": 366, "y": 62}
+    ]
+  },
+
+  "docs": {
+    "particulars": {
+      "kind": "form",
+      "title": "SHIP'S PARTICULARS",
+      "subtitle": "M/V LNG HORIZON",
+      "cells": [
+        ["SHIP TYPE", "LNG carrier"],
+        ["CARGO TANKS", "4, spherical (Moss)"],
+        ["LENGTH OVERALL", "289 m"],
+        ["BREADTH", "49 m"],
+        ["ACCOMMODATION", "Aft, 6 decks"],
+        ["BRIDGE", "Top of accommodation"],
+        ["FORECASTLE", "Mooring winches, foremast"],
+        ["CREW", "34"]
+      ]
+    }
+  },
+
+  "sessions": [
+    {"id": "listen", "title": "Listen: the main deck", "skill": "Listening", "min": 4, "screens": [
+      {"type": "intro", "image": "img/l02/scene.jpg", "kicker": "Day 1 · 09:00 · Houston", "title": "On the main deck",
+       "body": "Diego is on board now. Before they go inside, Rolando shows him the ship from the main deck. Listen first, one piece at a time.",
+       "es": "Escuchá primero. El texto está escondido a propósito."},
+      {"type": "listen", "audio": ["l02-01","l02-02","l02-03"], "q": "How many cargo tanks does the ship have?",
+       "opts": ["Four", "Two", "Six"], "a": 0, "why": "\"Yes, four cargo tanks.\""},
+      {"type": "listen", "audio": ["l02-04","l02-05"], "q": "What is the hull?",
+       "opts": ["The body of the ship", "The top of the ship", "The front of the ship"], "a": 0, "why": "\"The hull is the body of the ship.\""},
+      {"type": "listen", "audio": ["l02-06","l02-07"], "q": "Where is the bridge?",
+       "opts": ["On top of the accommodation", "At the bow", "Under the main deck"], "a": 0, "why": "\"…and the bridge is on top.\""},
+      {"type": "listen", "audio": ["l02-08","l02-09"], "q": "Diego says \"chimney\". What's the right word on a ship?",
+       "opts": ["Funnel", "Mast", "Hull"], "a": 0, "why": "\"On a ship it's called the funnel.\""},
+      {"type": "listen", "audio": ["l02-10","l02-11"], "q": "What is at the bow?",
+       "opts": ["The forecastle", "The accommodation", "The funnel"], "a": 0, "why": "\"That's the forecastle.\""},
+      {"type": "listen", "audio": ["l02-12","l02-13"], "q": "Why does Diego ask again?",
+       "opts": ["He wants to hear how to say it", "He wants to go inside", "He can't see the mast"], "a": 0},
+      {"type": "dialogue", "title": "Now the whole tour", "body": "Play it again. Open the text and the Spanish if you want them."}
+    ]},
+
+    {"id": "words", "title": "Name the parts", "skill": "Vocabulary", "min": 5, "screens": [
+      {"type": "plate", "title": "Tap every number", "body": "The ship from the side. The bow is on the right."},
+      {"type": "card", "word": "hull"},
+      {"type": "card", "word": "maindeck"},
+      {"type": "card", "word": "tank"},
+      {"type": "card", "word": "accom"},
+      {"type": "card", "word": "bridge"},
+      {"type": "card", "word": "funnel"},
+      {"type": "tip", "tag": "Spanish speaker alert", "title": "Chimenea is funnel, not chimney",
+       "paras": ["A <b>chimney</b> is on a house. On a ship it's always the <b>funnel</b>.",
+                 "And <b>bridge</b> sounds like /brɪdʒ/, with a short <i>i</i>. Not <i>brich</i>, not <i>briyi</i>."]},
+      {"type": "card", "word": "forecastle"},
+      {"type": "card", "word": "mast"},
+      {"type": "tap", "audio": "c-show-fcsle", "a": "forecastle"},
+      {"type": "tap", "audio": "c-show-mast", "a": "mast"},
+      {"type": "tap", "audio": "c-show-accom", "a": "accom"},
+      {"type": "match", "title": "Match the pairs", "pairs": [["hull","casco"],["funnel","chimenea"],["bridge","puente"],["cargo tank","tanque de carga"],["forecastle","castillo de proa"]]}
+    ]},
+
+    {"id": "phrases", "title": "What's that called?", "skill": "Phrases", "min": 4, "screens": [
+      {"type": "tip", "tag": "Useful language", "title": "When you don't know the word",
+       "list": [["What's that called?","¿Cómo se llama eso?","p-called"],["It's called the funnel.","Se llama funnel.","p-itscalled"],["How do you say it?","¿Cómo se dice?","p-howsay"],["Is that the bridge?","¿Eso es el puente?","p-isthat"]]},
+      {"type": "build", "situation": "You see something and you don't know its name.", "q": "Ask Rolando.",
+       "a": ["What's","that","called?"], "extra": ["how","name","is"]},
+      {"type": "build", "cue": "c-what-white", "q": "Answer Rolando.",
+       "a": ["It's","called","the","accommodation."], "extra": ["is","a"]},
+      {"type": "tip", "tag": "Language focus", "title": "Two words, one thing",
+       "paras": ["In English, the <b>last word is the thing</b>. The first word says what kind.",
+                 "Spanish goes the other way: <i>tanque de carga</i> → <b>cargo tank</b>."],
+       "steps": [["cargo tank","a tank for cargo"],["main deck","the main one of the decks"],["tank dome","the dome of a tank"]],
+       "avoid": "tank cargo · tank of cargo"},
+      {"type": "choice", "q": "\"tanque de carga\" in English:", "opts": ["cargo tank","tank cargo","tank of cargo"], "a": 0, "why": "The last word is the thing: a tank."},
+      {"type": "tip", "tag": "Language focus", "title": "Plural only at the end",
+       "paras": ["Only the last word takes the <b>-s</b>. The first word stays the same."],
+       "good": "four cargo tanks", "avoid": "four cargos tanks"},
+      {"type": "choice", "q": "The ship has four ___.", "opts": ["cargo tanks","cargos tanks","cargos tank"], "a": 0},
+      {"type": "choice", "cue": "c-smoke", "q": "Where is the smoke?", "opts": ["The funnel","The mast","The hull"], "a": 0}
+    ]},
+
+    {"id": "read", "title": "Read the ship's particulars", "skill": "Reading", "min": 3, "screens": [
+      {"type": "doc", "doc": "particulars", "q": "How many cargo tanks are there?", "opts": ["4","6","34"], "a": 0, "why": "CARGO TANKS: 4."},
+      {"type": "doc", "doc": "particulars", "q": "Where is the bridge?", "opts": ["On top of the accommodation","On the forecastle","Amidships"], "a": 0},
+      {"type": "doc", "doc": "particulars", "q": "\"Length overall\" means…", "opts": ["how long the ship is","how wide the ship is","how deep the ship is"], "a": 0, "why": "Length = how long. Breadth = how wide."},
+      {"type": "doc", "doc": "particulars", "q": "What is on the forecastle?", "opts": ["Mooring winches and the foremast","The funnel","The cargo tanks"], "a": 0}
+    ]},
+
+    {"id": "speak", "title": "Name it out loud", "skill": "Speaking", "min": 4, "screens": [
+      {"type": "intro", "kicker": "Speaking", "title": "Say the names",
+       "body": "Listen, say it, check it. Watch out for forecastle: it's short when you say it.",
+       "es": "Ojo con forecastle: se dice FOKE-sl.", "button": "Start"},
+      {"type": "shadow", "model": "m-calledfcsle"},
+      {"type": "shadow", "model": "p-called"},
+      {"type": "shadow", "model": "m-bridgetop"},
+      {"type": "role", "cue": "c-what-bow", "task": "Tell him: the forecastle.", "model": "m-fcsle",
+       "accept": ["It's the forecastle.","It's called the forecastle.","The forecastle."]},
+      {"type": "role", "cue": "c-what-white", "task": "Tell him: the accommodation.", "model": "m-accom",
+       "accept": ["It's the accommodation.","It's called the accommodation.","The accommodation."]},
+      {"type": "role", "cue": "c-how-many", "task": "Answer: four.", "model": "m-four",
+       "accept": ["Four cargo tanks.","Four.","Four tanks."]},
+      {"type": "role", "situation": "You point at something on deck. You don't know its name.", "task": "Ask what it's called.", "model": "p-called",
+       "accept": ["What is that called?","What do you call that?","What's this called?"]}
+    ]},
+
+    {"id": "check", "title": "Lesson check", "skill": "Review", "min": 4, "screens": [
+      {"type": "type", "audio": "w-funnel", "q": "Type what you hear.", "accept": ["funnel"]},
+      {"type": "type", "audio": "w-hull", "q": "Type what you hear.", "accept": ["hull"]},
+      {"type": "tap", "audio": "c-show-funnel", "a": "funnel"},
+      {"type": "tap", "audio": "c-where-hull", "a": "hull"},
+      {"type": "listen", "audio": ["c-mast-fcsle"], "q": "Where is the mast?", "opts": ["On the forecastle","On the bridge","On the funnel"], "a": 0},
+      {"type": "choice", "q": "\"la chimenea\" of a ship in English:", "opts": ["the funnel","the chimney","the mast"], "a": 0},
+      {"type": "choice", "q": "Which one is correct?", "opts": ["two cargo tanks","two cargos tanks","two tanks cargo"], "a": 0},
+      {"type": "build", "cue": "c-what-top", "q": "Answer: the bridge.", "a": ["It's","the","bridge."], "extra": ["a","funnel"]},
+      {"type": "type", "q": "Write it in English: casco", "accept": ["hull","the hull"]}
+    ]}
+  ]
+}

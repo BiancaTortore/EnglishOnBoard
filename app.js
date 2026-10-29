@@ -21,7 +21,7 @@ const VOICES = {
   model:   {name:"Model",   langs:["en-GB"],         rate:.92, pitch:1.0}
 };
 /* words the phone's voices tend to mispronounce */
-const RESPELL = {starboard:"starbuhd", bosun:"bohsun", forecastle:"fohksul", amidships:"amid-ships"};
+const RESPELL = {starboard:"starbuhd", bosun:"bohsun", forecastle:"fohksul", "fo'c'sle":"fohksul", amidships:"amid-ships"};
 
 /* =========================================================
    STATE
