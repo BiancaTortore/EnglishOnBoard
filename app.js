@@ -573,12 +573,18 @@ const RENDER = {
 function speakScreen(sc, st, retry, isRole){
   const model = clip(sc.model);
   const cue = isRole && sc.cue ? clip(sc.cue) : null;
+  const canCheck = !!SR && !srOffline;
   st.innerHTML = `${retry}<span class="mono kicker">${isRole ? "Role-play" : "Shadowing"}</span>
     ${!isRole || cue ? playerHTML(cue ? (cue.radio ? (L.radioChannel || "VHF") : voiceName(cue.voice)) : "") : ""}
     ${sc.situation ? `<p class="sub">${esc(sc.situation)}</p>` : ""}
     <h2 class="prompt">${esc(isRole ? sc.task : "Listen, then say it out loud.")}</h2>
     ${!isRole ? `<p class="say">${esc(model.text)}</p><p class="sub">${esc(model.es || "")}</p>` : ""}
-    <div class="mic-row"><button class="mic" id="mic" aria-label="Record yourself">${I.mic}</button><div id="micInfo" class="note">Tap to record yourself.</div></div>
+    <div class="mic-row">
+      <button class="mic" id="mic" aria-label="${canCheck ? "Speak and check" : "Record yourself"}">${I.mic}</button>
+      <div class="mic-side"><div id="micInfo" class="note">${canCheck ? "Tap and speak. The app checks your answer." : "Tap to record yourself."}</div>
+        ${canCheck ? `<button class="chip-btn" id="recAlt">⏺ Record and compare instead</button>` : ""}</div>
+    </div>
+    <div class="panel sr-result" id="srRes" hidden aria-live="polite"></div>
     <div class="reveal" id="rev" hidden><span class="mono kicker">Model answer</span><p class="say" style="font-size:24px">${esc(model.text)}</p>
       <div class="play-row"><button class="chip-btn" id="hearModel">${I.spk} Hear the model</button><button class="chip-btn" id="hearMe" hidden>${I.spk} Hear yourself</button></div>
       <p class="sub">${esc(model.es || "")}</p></div>`;
@@ -586,7 +592,100 @@ function speakScreen(sc, st, retry, isRole){
   else if (cue) wirePlayer(rate => playClip(sc.cue, {rate}))(1);
   $("#hearModel").onclick = () => playClip(sc.model);
   setBar(`<button class="cta" disabled>Say it first</button>`);
-  setupMic(() => { $("#rev").hidden = false; selfRate(sc); });
+  const recordMode = msg => {
+    const alt = $("#recAlt"); if (alt) alt.remove();
+    $("#mic").setAttribute("aria-label", "Record yourself");
+    $("#micInfo").textContent = msg || "Tap to record yourself.";
+    setupMic(() => { $("#rev").hidden = false; selfRate(sc); });
+  };
+  if (!canCheck) { recordMode(); return; }
+  $("#recAlt").onclick = () => recordMode("Tap to record. Then compare with the model.");
+  setupCheck(sc, model, recordMode);
+}
+
+/* ---------- speech recognition: "Check my answer" ---------- */
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+let srOffline = false;
+const CONTRACT = {"it's":"it is","that's":"that is","what's":"what is","where's":"where is","who's":"who is","there's":"there is",
+  "i'm":"i am","you're":"you are","we're":"we are","they're":"they are","he's":"he is","she's":"she is",
+  "can't":"can not","cannot":"can not","don't":"do not","doesn't":"does not","isn't":"is not","aren't":"are not","won't":"will not",
+  "i've":"i have","we've":"we have","i'll":"i will","we'll":"we will","let's":"let us","ok":"okay"};
+const DIGIT = ["zero","one","two","three","four","five","six","seven","eight","nine"];
+function words(s){
+  let t = String(s).toLowerCase().replace(/[’`]/g, "'").replace(/\d/g, d => " " + DIGIT[d] + " ").replace(/\bniner\b/g, "nine");
+  t = t.replace(/[^a-z'\s]/g, " ").split(/\s+/).filter(Boolean).map(w => CONTRACT[w] || w.replace(/'/g, "")).join(" ");
+  return t.split(/\s+/).filter(Boolean);
+}
+/* which target words appear in order in what was heard (longest common subsequence) */
+function matchWords(target, heard){
+  const n = target.length, m = heard.length, dp = Array.from({length: n + 1}, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
+    dp[i][j] = target[i] === heard[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const ok = new Array(n).fill(false); let i = 0, j = 0;
+  while (i < n && j < m) { if (target[i] === heard[j]) { ok[i] = true; i++; j++; } else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++; }
+  return ok;
+}
+function bestMatch(targets, alternatives){
+  let best = null;
+  for (const t of targets) {
+    const tw = words(t);
+    for (const h of alternatives) {
+      const hw = words(h), ok = matchWords(tw, hw);
+      const hits = ok.filter(Boolean).length, extra = Math.max(0, hw.length - hits);
+      const score = hits / tw.length - extra * 0.02;
+      if (!best || score > best.score) best = {target: t, tw, ok, heard: h, score, hits, extra};
+    }
+  }
+  return best;
+}
+function setupCheck(sc, model, recordMode){
+  const mic = $("#mic"), info = $("#micInfo"), res = $("#srRes");
+  const targets = [model.text].concat(sc.accept || []);
+  let rec = null, listening = false, gotResult = false;
+  const stopUI = () => { listening = false; mic.classList.remove("rec"); mic.innerHTML = I.mic; };
+  mic.onclick = () => {
+    if (listening) { try { rec.stop(); } catch (e) {} return; }
+    stopAll();
+    rec = new SR(); rec.lang = "en-GB"; rec.interimResults = true; rec.maxAlternatives = 5; rec.continuous = false;
+    gotResult = false; listening = true;
+    mic.classList.add("rec"); mic.innerHTML = I.stop; info.textContent = "Listening… speak now.";
+    res.hidden = false; res.innerHTML = `<span class="note">…</span>`;
+    rec.onresult = e => {
+      const r = e.results[e.results.length - 1];
+      if (!r.isFinal) { res.innerHTML = `<span class="mono kicker">Hearing</span><p class="heard">${esc(r[0].transcript)}</p>`; return; }
+      gotResult = true;
+      const alts = Array.from(r).map(a => a.transcript);
+      showCheck(sc, bestMatch(targets, alts));
+    };
+    rec.onerror = e => {
+      stopUI();
+      if (e.error === "no-speech" || e.error === "aborted") { info.textContent = "I didn't hear anything. Tap and try again."; res.hidden = true; return; }
+      if (e.error === "network") { srOffline = true; res.hidden = true; recordMode("Checking needs internet. Record yourself and compare instead."); return; }
+      if (e.error === "not-allowed" || e.error === "service-not-allowed") { res.hidden = true; recordMode("Microphone not allowed. Say it out loud, then tap."); return; }
+      info.textContent = "Something went wrong. Tap and try again.";
+    };
+    rec.onend = () => { if (listening && !gotResult) { info.textContent = "I didn't catch that. Tap and try again."; if (res.innerHTML.includes("…")) res.hidden = true; } stopUI(); };
+    try { rec.start(); } catch (e) { stopUI(); recordMode(); }
+  };
+}
+function showCheck(sc, m){
+  const res = $("#srRes"), info = $("#micInfo");
+  const missing = m.tw.filter((w, i) => !m.ok[i]);
+  const level = m.hits === m.tw.length && m.extra <= 2 ? "ok" : m.score >= .6 ? "almost" : "no";
+  res.innerHTML = `<span class="mono kicker">We heard</span><p class="heard">"${esc(m.heard)}"</p>
+    <span class="mono kicker">Target</span><p class="target">${m.tw.map((w, i) => `<span class="${m.ok[i] ? "w-ok" : "w-miss"}">${esc(w)}</span>`).join(" ")}</p>`;
+  $("#rev").hidden = false;
+  info.textContent = "Tap to try again.";
+  if (level === "ok") {
+    setBar(`<div class="verdict" role="status"><b>Clear and correct.</b><span>That's what a listener on board would hear.</span></div><button class="cta" id="go">Continue</button>`, "ok");
+    $("#go").onclick = next;
+  } else {
+    const msg = level === "almost" ? `Missing: <strong>${esc(missing.join(", "))}</strong>` : "Not clear yet. Listen to the model and try again.";
+    setBar(`<div class="verdict" role="status"><b>${level === "almost" ? "Almost." : "Try again."}</b><span>${msg}</span></div>
+      <div class="self"><button class="opt" id="later">Continue</button><button class="cta" id="retryNow" style="flex:1">Try again</button></div>`, "bad");
+    $("#retryNow").onclick = () => { setBar(`<button class="cta" disabled>Say it again</button>`); $("#mic").click(); };
+    $("#later").onclick = () => { if (!sc.retry) S.queue.push({...sc, retry: true}); next(); };
+  }
 }
 
 /* Microphone: works on the published app (https). Elsewhere: "say it, then compare". */

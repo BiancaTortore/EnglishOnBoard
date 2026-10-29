@@ -176,10 +176,10 @@
       {"type": "shadow", "model": "m-port-aft"},
       {"type": "shadow", "model": "m-starboard"},
       {"type": "shadow", "model": "p-again"},
-      {"type": "role", "cue": "c-where-gangway", "task": "Tell him: port side, aft.", "model": "m-gangway"},
-      {"type": "role", "cue": "c-fwd-or-aft", "task": "Answer: it's aft.", "model": "m-its-aft"},
-      {"type": "role", "cue": "c-cabin", "task": "You didn't catch it. Ask him to repeat.", "model": "p-again"},
-      {"type": "role", "situation": "You're back in the taxi tomorrow. The driver asks where to stop.", "task": "Tell the driver to stop at the stern.", "model": "m-stern"}
+      {"type": "role", "cue": "c-where-gangway", "task": "Tell him: port side, aft.", "model": "m-gangway", "accept": ["On the port side, aft.", "Port side, aft.", "The gangway is on the port side, aft."]},
+      {"type": "role", "cue": "c-fwd-or-aft", "task": "Answer: it's aft.", "model": "m-its-aft", "accept": ["Aft.", "The gangway is aft."]},
+      {"type": "role", "cue": "c-cabin", "task": "You didn't catch it. Ask him to repeat.", "model": "p-again", "accept": ["Can you say that again?", "Could you say that again, please?", "Say again, please."]},
+      {"type": "role", "situation": "You're back in the taxi tomorrow. The driver asks where to stop.", "task": "Tell the driver to stop at the stern.", "model": "m-stern", "accept": ["Stop at the stern, please.", "Stop at the stern."]}
     ]},
 
     {"id": "check", "title": "Lesson check", "skill": "Review", "min": 4, "screens": [

@@ -236,3 +236,12 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 .result{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .score{font-family:var(--f-display);font-size:72px;font-weight:700;line-height:1;color:var(--accent)}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+/* speech check */
+.mic-side{display:flex;flex-direction:column;gap:8px;align-items:flex-start;min-width:0;flex:1}
+.sr-result{display:flex;flex-direction:column;gap:6px}
+.sr-result p{margin:0}
+.heard{font-family:var(--f-mono);font-size:15px}
+.target{font-family:var(--f-display);font-size:24px;font-weight:700;line-height:1.2}
+.w-ok{color:var(--ok)}
+.w-miss{color:var(--bad);text-decoration:underline wavy;text-underline-offset:4px}

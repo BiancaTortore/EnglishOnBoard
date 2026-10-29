@@ -142,6 +142,7 @@ Cada lección tiene **6 sesiones de 3 a 5 minutos**, siempre en este orden:
 7. Los diálogos suenan reales: nunca se fuerza una línea para meter vocabulario.
 8. Los documentos enseñan a leer etiquetas y datos, no procedimientos.
 9. Cada lección recicla algo de las anteriores.
+10. En los role-play, agregar en `accept` las otras respuestas válidas (ej. "It's aft" / "Aft"). La app las usa para corregir lo que el alumno dice en voz alta.
 
 ---
 
