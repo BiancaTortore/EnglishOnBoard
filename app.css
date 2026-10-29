@@ -65,7 +65,8 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 /* ---------- Lesson ---------- */
 .lesson{display:flex;flex-direction:column;gap:18px;padding-block:0 40px}
 .hero{background:var(--sea);color:var(--sea-ink);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:16px max(16px,env(safe-area-inset-left,0px)) 22px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;min-height:220px;justify-content:flex-end}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;max-width:none}
+.hero.has-img{min-height:min(400px,62vh);padding-top:56px}
 .hero.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,22,.88),rgba(5,15,22,.15) 70%)}
 .hero > *:not(img){position:relative;z-index:1}
 .hero.has-img{color:#fff}
