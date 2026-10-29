@@ -1,0 +1,34 @@
+// Builds the ElevenLabs recording script for one lesson.
+// Usage: node tools/audio-script.mjs 1   → writes audio/l01/script.csv
+import fs from "node:fs";
+
+const n = Number(process.argv[2]);
+if (!n) { console.error("Usage: node tools/audio-script.mjs <lesson number>"); process.exit(1); }
+const pad = String(n).padStart(2, "0");
+const lesson = JSON.parse(fs.readFileSync(`lessons/lesson-${pad}.json`, "utf8"));
+
+const VOICE = {
+  diego: "Diego Martínez", lars: "Lars Andersen", tanya: "Tanya Williams", james: "James O'Connor",
+  marek: "Marek Novak", rolando: "Rolando Reyes", mario: "Mario Dela Cruz", chen: "Lt Amy Chen",
+  pilot: "Capt Laurent Dubois", agent: "Port agent", model: "Model voice (neutral British)"
+};
+// Only used if ElevenLabs gets the word wrong
+const RESPELL = {starboard: "starb'd", bosun: "bo'sun", forecastle: "fo'c'sle", leeward: "loo-ard", gunwale: "gunnel"};
+
+const csv = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
+const rows = [["file", "voice", "text", "say", "note"]];
+for (const [id, c] of Object.entries(lesson.audio)) {
+  const parts = String(c.text).split("|");
+  parts.forEach((t, i) => {
+    const file = parts.length > 1 ? `${id}-${"ab"[i]}.mp3` : `${id}.mp3`;
+    let say = "";
+    for (const [w, r] of Object.entries(RESPELL)) if (new RegExp(`\\b${w}\\b`, "i").test(t)) say = (say || t).replace(new RegExp(`\\b${w}\\b`, "gi"), r);
+    let note = c.note || "";
+    if (parts.length > 1) note = (note ? note + " · " : "") + (i === 0 ? "first half" : "second half");
+    if (c.radio) note = (note ? note + " · " : "") + "record clean, the app adds the radio";
+    rows.push([file, VOICE[c.voice] || c.voice, t.trim(), say, note]);
+  });
+}
+fs.mkdirSync(`audio/l${pad}`, {recursive: true});
+fs.writeFileSync(`audio/l${pad}/script.csv`, "﻿" + rows.map(r => r.map(csv).join(",")).join("\n") + "\n");
+console.log(`audio/l${pad}/script.csv · ${rows.length - 1} files`);

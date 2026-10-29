@@ -1,0 +1,47 @@
+{
+  "title": "English on Board",
+  "subtitle": "Maritime English for deck officers",
+  "modules": [
+    {"n": 1, "title": "Ship basics", "where": "Houston · Day 1", "lessons": [
+      {"n": 1, "title": "Bow, stern, port & starboard", "ready": true},
+      {"n": 2, "title": "Parts of the ship"},
+      {"n": 3, "title": "Decks & spaces"},
+      {"n": 4, "title": "Crew & ranks"},
+      {"n": 5, "title": "Letters & numbers"}
+    ]},
+    {"n": 2, "title": "First days on board", "where": "Houston · Days 1–2", "lessons": [
+      {"n": 6, "title": "Joining the ship"},
+      {"n": 7, "title": "Cabin & safety kit"},
+      {"n": 8, "title": "Life on board"},
+      {"n": 9, "title": "Alarms & emergency instructions"}
+    ]},
+    {"n": 3, "title": "Deck work", "where": "Houston · Galveston", "lessons": [
+      {"n": 10, "title": "Tools, PPE & deck work"},
+      {"n": 11, "title": "Mooring & letting go"},
+      {"n": 12, "title": "Anchoring"}
+    ]},
+    {"n": 4, "title": "On the bridge", "where": "Gulf of Mexico", "lessons": [
+      {"n": 13, "title": "Bridge equipment"},
+      {"n": 14, "title": "Watch handover"},
+      {"n": 15, "title": "Weather & sea"},
+      {"n": 16, "title": "Course, position & traffic"}
+    ]},
+    {"n": 5, "title": "Reporting", "where": "Florida · Port Everglades", "lessons": [
+      {"n": 17, "title": "Speaking up about safety"},
+      {"n": 18, "title": "Faults & defects"},
+      {"n": 19, "title": "Cargo & documents"},
+      {"n": 20, "title": "Bunkering & pollution"}
+    ]},
+    {"n": 6, "title": "Emergencies", "where": "Atlantic Ocean", "lessons": [
+      {"n": 21, "title": "Life-saving appliances"},
+      {"n": 22, "title": "Muster & man overboard"},
+      {"n": 23, "title": "Firefighting equipment"},
+      {"n": 24, "title": "Fire party communication"}
+    ]},
+    {"n": 7, "title": "Radio & outside parties", "where": "Gibraltar · Marseille", "lessons": [
+      {"n": 25, "title": "Distress, urgency & safety"},
+      {"n": 26, "title": "Medical & TMAS"},
+      {"n": 27, "title": "Pilot boarding & helm orders"}
+    ]}
+  ]
+}
