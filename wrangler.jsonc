@@ -1,0 +1,9 @@
+// Cloudflare deploy config: the whole repo is a static site (no build step).
+{
+  "name": "englishonboard",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./",
+    "html_handling": "auto-trailing-slash"
+  }
+}

@@ -1,0 +1,10 @@
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+node_modules
+tools
+BIBLE.md
+README.md
+img/**/*.md
+audio/**/*.csv
