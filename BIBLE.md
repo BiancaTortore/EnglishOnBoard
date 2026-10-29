@@ -41,6 +41,8 @@ Diego Martínez sube como Tercer Oficial al **M/V LNG Horizon**, su primer buque
 | `pilot` | Capt. Laurent Dubois | Práctico de Marsella | Francés, 55 | Canoso, campera de práctico roja con reflectivos, casco | Hombre, acento francés marcado |
 | `model` | — | Voz modelo | — | — | **Inglés británico neutro, sin acento marcado.** Es la voz que el alumno imita: palabras sueltas y respuestas modelo |
 
+**Amarre en las fotos:** mientras está en Houston el buque está atracado **por babor**. Visto desde el muelle, **la proa queda a la izquierda** de la imagen. Todo cabo termina en una bita del muelle; ninguno sale hacia el agua.
+
 **Ropa de trabajo:** oficiales con mameluco **azul marino**, ratings (Rolando y los marineros) con mameluco **naranja**. Mario, en la cocina, con chaqueta blanca de cocinero.
 
 Cuando se elija cada voz en ElevenLabs, anotar acá su **voice ID** para usar siempre la misma.
