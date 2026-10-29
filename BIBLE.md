@@ -39,7 +39,7 @@ Diego Martínez sube como Tercer Oficial al **M/V LNG Horizon**, su primer buque
 | `mario` | Mario Dela Cruz | Chief Cook | Filipino, 50 | Bajo, sonriente, chaqueta blanca de cocinero, gorro negro | Hombre, acento filipino, alegre |
 | `chen` | Lt. Amy Chen | Inspectora de PSC, US Coast Guard | Estadounidense, 36 | Pelo negro atado, uniforme azul de la USCG, carpeta en mano | Mujer, inglés americano, directa |
 | `pilot` | Capt. Laurent Dubois | Práctico de Marsella | Francés, 55 | Canoso, campera de práctico roja con reflectivos, casco | Hombre, acento francés marcado |
-| `model` | — | Voz modelo | — | — | **Inglés británico neutro, sin acento marcado.** Es la voz que el alumno imita: palabras sueltas y respuestas modelo |
+| `model` | — | Voz modelo | — | — | Palabras sueltas, ejemplos y respuestas modelo. **No se graba:** la genera la voz del celular |
 
 **Amarre en las fotos:** mientras está en Houston el buque está atracado **por babor**. Visto desde el muelle, **la proa queda a la izquierda** de la imagen. Todo cabo termina en una bita del muelle; ninguno sale hacia el agua.
 
@@ -162,6 +162,7 @@ Cada lección tiene **6 sesiones de 3 a 5 minutos**, siempre en este orden:
 
 ## 7. Audios (ElevenLabs)
 
+- **Con ElevenLabs se graban solo los personajes:** diálogos y lo que dicen en los ejercicios. Todo lo de la voz modelo (palabras, ejemplos, frases, respuestas modelo) lo dice la voz del celular.
 - Cada lección trae `audio/lNN/script.csv`: columnas `file`, `voice`, `text`, `say` (escritura para pronunciar, si hace falta) y `note`.
 - Se genera cada fila con la voz del personaje (sección 3) y se guarda con el nombre exacto de la columna `file` en `audio/lNN/`.
 - **Todo se graba limpio.** El efecto de radio lo pone la app.

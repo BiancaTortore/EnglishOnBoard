@@ -145,6 +145,8 @@ function playFile(file, {radio, rate}, tok){
 }
 
 async function playPart(id, text, voice, radio, rate, tok){
+  /* the model voice (words, examples, model answers) always uses the phone's voice */
+  if (voice === "model") { await speakTTS(text, voice, rate); return; }
   const file = `audio/${lessonDir()}/${id}.mp3`;
   const ok = await playFile(file, {radio, rate}, tok);
   if (!ok && tok === playToken) await speakTTS(text, voice, rate);
