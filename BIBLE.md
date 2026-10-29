@@ -43,6 +43,8 @@ Diego Martínez sube como Tercer Oficial al **M/V LNG Horizon**, su primer buque
 
 **Amarre en las fotos:** mientras está en Houston el buque está atracado **por babor**. Visto desde el muelle, **la proa queda a la izquierda** de la imagen. Todo cabo termina en una bita del muelle; ninguno sale hacia el agua.
 
+**Patrón de amarre (para fotos y láminas):** en cada extremo, unos 3 largos (head lines a proa / stern lines a popa), 1 través y 2 esprines. Los largos van hacia afuera del buque (los de proa hacia proa), los esprines hacia el centro del buque. La gaza se apoya sobre la bita, nunca se enrosca.
+
 **Ropa de trabajo:** oficiales con mameluco **azul marino**, ratings (Rolando y los marineros) con mameluco **naranja**. Mario, en la cocina, con chaqueta blanca de cocinero.
 
 Cuando se elija cada voz en ElevenLabs, anotar acá su **voice ID** para usar siempre la misma.
