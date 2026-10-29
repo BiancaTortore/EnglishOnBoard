@@ -4,7 +4,7 @@
   --bg:#EDF1F3; --surface:#FFFFFF; --ink:#0D1F2D; --muted:#566874; --rule:#D3DCE2;
   --accent:#D9480F; --accent-ink:#FFFFFF;
   --sea:#17506A; --sea-ink:#FFFFFF; --sea-soft:#DCE9EF; --water:#CFE1E9; --quay:#B9C3C9;
-  --hull:#22303A; --deck:#8E9BA4; --super:#FFFFFF;
+  --hull:#22303A; --deck:#8FA597; --super:#FFFFFF;
   --ok:#1C7C4E; --ok-soft:#DCF2E4; --bad:#B8322A; --bad-soft:#FADFDC;
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -14,13 +14,13 @@
   --bg:#09131A; --surface:#112029; --ink:#E3EBF0; --muted:#93A6B3; --rule:#22394A;
   --accent:#FF6B35; --accent-ink:#1A0A03;
   --sea:#0F3446; --sea-ink:#E3EBF0; --sea-soft:#16384A; --water:#0F2E3D; --quay:#3A4A55;
-  --hull:#05090C; --deck:#5B6B76; --super:#C9D4DB;
+  --hull:#05090C; --deck:#4D6156; --super:#C9D4DB;
   --ok:#52C48C; --ok-soft:#123426; --bad:#F2776C; --bad-soft:#3A1D1B; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#09131A; --surface:#112029; --ink:#E3EBF0; --muted:#93A6B3; --rule:#22394A;
   --accent:#FF6B35; --accent-ink:#1A0A03;
   --sea:#0F3446; --sea-ink:#E3EBF0; --sea-soft:#16384A; --water:#0F2E3D; --quay:#3A4A55;
-  --hull:#05090C; --deck:#5B6B76; --super:#C9D4DB;
+  --hull:#05090C; --deck:#4D6156; --super:#C9D4DB;
   --ok:#52C48C; --ok-soft:#123426; --bad:#F2776C; --bad-soft:#3A1D1B; color-scheme:dark}
 
 [hidden]{display:none!important}

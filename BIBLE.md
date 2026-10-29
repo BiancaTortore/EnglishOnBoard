@@ -20,7 +20,7 @@ Diego Martínez sube como Tercer Oficial al **M/V LNG Horizon**, su primer buque
 
 **El arco:** en la Lesson 1 Diego está nervioso y le pide a Rolando que repita todo. En la Lesson 27 es el práctico de Marsella quien le dice "say again", y Diego repite con calma. El alumno hace el mismo recorrido.
 
-**El buque:** metanero de membrana, unos 290 m de eslora, casco negro con fondo rojo, superestructura blanca a popa, cubierta (trunk deck) gris con las cúpulas de los tanques en línea por crujía. Ninguna imagen muestra texto legible.
+**El buque:** metanero tipo **Moss**, unos 290 m de eslora, con **cuatro tanques esféricos gigantes** que sobresalen de la cubierta, cubiertos por domos blancos. Casco negro con fondo rojo, superestructura blanca a popa, cubierta verde con tuberías entre las esferas. Ninguna imagen muestra texto legible.
 
 > Nota de realismo: dentro del canal de Houston no hay terminal de LNG (Freeport LNG queda cerca). Mantenemos "Houston" por simplicidad; si en algún momento se quiere precisión, se cambia a Freeport sin tocar nada más.
 
@@ -30,16 +30,18 @@ Diego Martínez sube como Tercer Oficial al **M/V LNG Horizon**, su primer buque
 
 | Clave | Nombre | Cargo | Origen | Cómo se ve | Voz (ElevenLabs) |
 |---|---|---|---|---|---|
-| `diego` | Diego Martínez | 3rd Officer | Argentino, 27 | Pelo oscuro corto, barba de pocos días, delgado. Mameluco azul marino del buque o camisa blanca con charreteras de 1 galón | Hombre joven, acento latino **suave**, claro |
+| `diego` | Diego Martínez | 3rd Officer | Argentino, 27 | Pelo oscuro corto, barba de pocos días, delgado. Mameluco azul marino o camisa blanca con charreteras de 1 galón | Hombre joven, acento latino **suave**, claro |
 | `lars` | Lars Andersen | Master | Danés, 58 | Alto, pelo blanco corto, barba gris recortada, anteojos de marco fino. Camisa blanca, 4 galones | Hombre mayor, acento escandinavo, calmo y grave |
-| `tanya` | Tanya Williams | Chief Officer | Británica, 41 | Pelo castaño recogido, pecas. Mameluco naranja o camisa blanca, 3 galones | Mujer, inglés británico estándar, firme y clara |
+| `tanya` | Tanya Williams | Chief Officer | Británica, 41 | Pelo castaño recogido, pecas. Mameluco azul marino o camisa blanca con 3 galones | Mujer, inglés británico estándar, firme y clara |
 | `james` | James O'Connor | 2nd Officer | Irlandés, 33 | Pelirrojo, barba corta, sonriente. Polar azul del buque | Hombre, acento irlandés, relajado |
-| `marek` | Marek Novak | Chief Engineer | Checo, 52 | Robusto, cabeza rapada, bigote gris. Mameluco blanco de máquinas con manchas | Hombre, acento centroeuropeo, seco |
+| `marek` | Marek Novak | Chief Engineer | Checo, 52 | Robusto, cabeza rapada, bigote gris. Mameluco azul marino de máquinas con manchas de aceite | Hombre, acento centroeuropeo, seco |
 | `rolando` | Rolando Reyes | Bosun | Filipino, 46 | Moreno, pelo canoso corto, casco blanco, mameluco naranja muy usado, guantes en el bolsillo | Hombre, acento filipino, cálido y rápido |
 | `mario` | Mario Dela Cruz | Chief Cook | Filipino, 50 | Bajo, sonriente, chaqueta blanca de cocinero, gorro negro | Hombre, acento filipino, alegre |
 | `chen` | Lt. Amy Chen | Inspectora de PSC, US Coast Guard | Estadounidense, 36 | Pelo negro atado, uniforme azul de la USCG, carpeta en mano | Mujer, inglés americano, directa |
 | `pilot` | Capt. Laurent Dubois | Práctico de Marsella | Francés, 55 | Canoso, campera de práctico roja con reflectivos, casco | Hombre, acento francés marcado |
 | `model` | — | Voz modelo | — | — | **Inglés británico neutro, sin acento marcado.** Es la voz que el alumno imita: palabras sueltas y respuestas modelo |
+
+**Ropa de trabajo:** oficiales con mameluco **azul marino**, ratings (Rolando y los marineros) con mameluco **naranja**. Mario, en la cocina, con chaqueta blanca de cocinero.
 
 Cuando se elija cada voz en ElevenLabs, anotar acá su **voice ID** para usar siempre la misma.
 
