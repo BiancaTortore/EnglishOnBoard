@@ -96,4 +96,4 @@ Generá una sola vez la ficha de cada personaje y usala como imagen de referenci
 
 ## `model` · Voz modelo
 
-> A clear, neutral British English voice, a woman in her thirties. Calm, warm and measured, like a good language teacher. Every word easy to hear. Studio quality, no accent quirks.
+No se graba: la dice la voz del celular.
