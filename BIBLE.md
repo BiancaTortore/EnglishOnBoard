@@ -16,9 +16,9 @@ Inglés marítimo para oficiales de cubierta hispanohablantes, en formato app de
 
 ## 2. La historia
 
-Diego Martínez sube como Tercer Oficial al **M/V LNG Horizon**, su primer buque con tripulación internacional. El viaje dura 14 días: Houston → Golfo de México → Port Everglades → Atlántico → Marsella.
+Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horizon**: es su primer embarque y su primer buque con tripulación internacional. El viaje dura 14 días: Houston → Golfo de México → Port Everglades → Atlántico → Marsella.
 
-**El arco:** en la Lesson 1 Diego está nervioso y le pide a Rolando que repita todo. En la Lesson 27 es el práctico de Marsella quien le dice "say again", y Diego repite con calma. El alumno hace el mismo recorrido.
+**El arco:** en la Lesson 1 Diego está nervioso y le pide a Rolando que repita todo. En la Lesson 27, al timón, es el práctico de Marsella quien le dice "say again", y Diego repite la orden con calma. Al final el Capitán le dice: *"Well done, cadet. You'll make a good officer."* El alumno hace el mismo recorrido.
 
 **El buque:** metanero tipo **Moss**, unos 290 m de eslora, con **cuatro tanques esféricos gigantes** que sobresalen de la cubierta, cubiertos por domos blancos. Casco negro con fondo rojo, superestructura blanca a popa, cubierta verde con tuberías entre las esferas. Ninguna imagen muestra texto legible.
 
@@ -30,7 +30,7 @@ Diego Martínez sube como Tercer Oficial al **M/V LNG Horizon**, su primer buque
 
 | Clave | Nombre | Cargo | Origen | Cómo se ve | Voz (ElevenLabs) |
 |---|---|---|---|---|---|
-| `diego` | Diego Martínez | 3rd Officer | Argentino, 27 | Pelo oscuro corto, barba de pocos días, delgado. Mameluco azul marino o camisa blanca con charreteras de 1 galón | Hombre joven, acento latino **suave**, claro |
+| `diego` | Diego Martínez | Deck cadet | Argentino, 22 | Pelo oscuro corto, barba muy leve, delgado, cara joven. Mameluco azul marino |  Hombre joven, acento latino **suave**, claro |
 | `lars` | Lars Andersen | Master | Danés, 58 | Alto, pelo blanco corto, barba gris recortada, anteojos de marco fino. Camisa blanca, 4 galones | Hombre mayor, acento escandinavo, calmo y grave |
 | `tanya` | Tanya Williams | Chief Officer | Británica, 41 | Pelo castaño recogido, pecas. Mameluco azul marino o camisa blanca con 3 galones | Mujer, inglés británico estándar, firme y clara |
 | `james` | James O'Connor | 2nd Officer | Irlandés, 33 | Pelirrojo, barba corta, sonriente. Polar azul del buque | Hombre, acento irlandés, relajado |
@@ -45,7 +45,7 @@ Diego Martínez sube como Tercer Oficial al **M/V LNG Horizon**, su primer buque
 
 **Patrón de amarre (para fotos y láminas):** en cada extremo, unos 3 largos (head lines a proa / stern lines a popa), 1 través y 2 esprines. Los largos van hacia afuera del buque (los de proa hacia proa), los esprines hacia el centro del buque. La gaza se apoya sobre la bita, nunca se enrosca.
 
-**Ropa de trabajo:** oficiales con mameluco **azul marino**, ratings (Rolando y los marineros) con mameluco **naranja**. Mario, en la cocina, con chaqueta blanca de cocinero.
+**Ropa de trabajo:** oficiales y cadetes con mameluco **azul marino**, ratings (Rolando y los marineros) con mameluco **naranja**. Mario, en la cocina, con chaqueta blanca de cocinero.
 
 Cuando se elija cada voz en ElevenLabs, anotar acá su **voice ID** para usar siempre la misma.
 
@@ -71,8 +71,8 @@ Cuando se elija cada voz en ElevenLabs, anotar acá su **voice ID** para usar si
 | 11 | Mooring & letting go | Día 2 · 17:20 · estación de popa | La zarpada |
 | 12 | Anchoring | Día 3 · 02:00 · frente a Galveston | Niebla; el buque fondea a esperar, Diego en la proa |
 | **Módulo 4 · On the bridge** ||||
-| 13 | Bridge equipment | Día 3 · 12:00 · puente | Primera guardia de mar con James |
-| 14 | Watch handover | Día 3 · 23:45 · puente | Primer relevo de Diego |
+| 13 | Bridge equipment | Día 3 · 12:00 · puente | Primera guardia de mar de Diego, junto a James |
+| 14 | Watch handover | Día 3 · 23:45 · puente | Diego hace guardia con James y escucha el relevo con Tanya |
 | 15 | Weather & sea | Día 4 · Golfo de México | Entra un frente; lo registra en el log |
 | 16 | Course, position & traffic | Día 4 · Estrecho de Florida | Tráfico intenso; reporta rumbos, marcaciones y distancias |
 | **Módulo 5 · Reporting** ||||
@@ -84,11 +84,11 @@ Cuando se elija cada voz en ElevenLabs, anotar acá su **voice ID** para usar si
 | 21 | Life-saving appliances | Día 7 · Atlántico | Inspección semanal con Tanya |
 | 22 | Muster & man overboard | Día 8 · Atlántico | Simulacro de hombre al agua; Diego recibe un rol nuevo |
 | 23 | Firefighting equipment | Día 9 · Atlántico | Preparación del simulacro de incendio |
-| 24 | Fire party communication | Día 10 · Atlántico | Incendio real en la cocina de Mario; Diego lleva el tablero de BA |
+| 24 | Fire party communication | Día 10 · Atlántico | Incendio real en la cocina de Mario; Diego asiste a James con el tablero de BA |
 | **Módulo 7 · Radio & outside parties** ||||
 | 25 | Distress, urgency & safety | Día 12 · cerca de Gibraltar | Escuchan el MAYDAY del pesquero francés *Cap Béar* |
 | 26 | Medical & TMAS | Día 13 · Mediterráneo | Un marinero se lastima la mano; llaman a TMAS |
-| 27 | Pilot boarding & helm orders | Día 14 · Marsella | Recibe al práctico Dubois y repite las órdenes de timón. "Well done, Third Officer." |
+| 27 | Pilot boarding & helm orders | Día 14 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
 
 ### Foco de idioma por lección (borrador, no repetir)
 

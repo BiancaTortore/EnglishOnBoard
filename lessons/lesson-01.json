@@ -8,7 +8,7 @@
   "radioChannel": "VHF",
 
   "audio": {
-    "l01-01": {"voice": "rolando", "text": "Good morning! Are you the new Third Officer?", "es": "¡Buen día! ¿Usted es el nuevo Tercer Oficial?"},
+    "l01-01": {"voice": "rolando", "text": "Good morning! Are you the new deck cadet?", "es": "¡Buen día! ¿Vos sos el nuevo cadete de cubierta?"},
     "l01-02": {"voice": "diego",   "text": "Yes, good morning. I'm Diego Martínez.", "es": "Sí, buen día. Soy Diego Martínez."},
     "l01-03": {"voice": "rolando", "text": "I'm Rolando, the bosun. Welcome! This is the bow. The gangway is at the other end, so we have a little walk.", "es": "Soy Rolando, el contramaestre. ¡Bienvenido! Esta es la proa. La planchada está en la otra punta, así que nos toca caminar un poco."},
     "l01-04": {"voice": "rolando", "text": "The gangway is on the port side, aft.", "es": "La planchada está por babor, a popa."},

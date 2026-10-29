@@ -4,15 +4,15 @@ Generá una sola vez la ficha de cada personaje y usala como imagen de referenci
 
 **Ropa:** oficiales con mameluco azul marino, ratings con mameluco naranja.
 
-## `diego` · Diego Martínez · 3rd Officer · argentino, 27
+## `diego` · Diego Martínez · Deck cadet · argentino, 22
 
 **Ficha de cara**
 
-> Character reference sheet of one single person shown four times on a plain light-grey studio background: front view head and shoulders, three-quarter view head and shoulders, side profile, and a waist-up front view. Identical face, hair and clothes in all four views, soft even studio light. A 27-year-old Argentine man, short dark brown hair, a few days of stubble, slim face, brown eyes, friendly but slightly nervous expression. Wearing a plain navy-blue officer's boiler suit. Photorealistic, Documentary photograph, natural light, realistic skin texture, real worn workwear, no logos, no visible text, no watermark.
+> Character reference sheet of one single person shown four times on a plain light-grey studio background: front view head and shoulders, three-quarter view head and shoulders, side profile, and a waist-up front view. Identical face, hair and clothes in all four views, soft even studio light. A 22-year-old Argentine young man, short dark brown hair, very light stubble, slim youthful face, brown eyes, friendly but slightly nervous expression. Wearing a plain navy-blue boiler suit. Photorealistic, Documentary photograph, natural light, realistic skin texture, real worn workwear, no logos, no visible text, no watermark.
 
 **Voz (ElevenLabs Voice Design)**
 
-> A young Argentine man in his late twenties speaking fluent English with a light Argentine Spanish accent. Clear, polite and a little nervous. Medium pitch, natural pace.
+> A young Argentine man in his early twenties speaking good English with a light Argentine Spanish accent. Clear, polite and a little nervous, a student on his first ship. Medium pitch, natural pace.
 
 ## `rolando` · Rolando Reyes · Bosun · filipino, 46
 
