@@ -10,7 +10,7 @@
   "audio": {
     "l01-01": {"voice": "rolando", "text": "Good morning! Are you the new Third Officer?", "es": "¡Buen día! ¿Usted es el nuevo Tercer Oficial?"},
     "l01-02": {"voice": "diego",   "text": "Yes, good morning. I'm Diego Martínez.", "es": "Sí, buen día. Soy Diego Martínez."},
-    "l01-03": {"voice": "rolando", "text": "I'm Rolando, the bosun. Welcome! The taxi stopped at the bow, so we have a little walk.", "es": "Soy Rolando, el contramaestre. ¡Bienvenido! El taxi paró en la proa, así que nos toca caminar un poco."},
+    "l01-03": {"voice": "rolando", "text": "I'm Rolando, the bosun. Welcome! This is the bow. The gangway is at the other end, so we have a little walk.", "es": "Soy Rolando, el contramaestre. ¡Bienvenido! Esta es la proa. La planchada está en la otra punta, así que nos toca caminar un poco."},
     "l01-04": {"voice": "rolando", "text": "The gangway is on the port side, aft.", "es": "La planchada está por babor, a popa."},
     "l01-05": {"voice": "diego",   "text": "Sorry, can you say that again?", "es": "Perdón, ¿puede repetirlo?"},
     "l01-06": {"voice": "rolando", "text": "Port side. Aft. Near the stern. We're port side alongside, so this side is port.", "es": "Babor. A popa. Cerca de la popa. Estamos atracados por babor, así que este costado es babor."},
@@ -30,7 +30,7 @@
     "w-amidships": {"voice": "model", "text": "amidships"},
     "w-alongside": {"voice": "model", "text": "alongside"},
 
-    "x-bow":       {"voice": "model", "text": "The taxi stopped at the bow.", "es": "El taxi paró en la proa."},
+    "x-bow":       {"voice": "model", "text": "We're at the bow.", "es": "Estamos en la proa."},
     "x-stern":     {"voice": "model", "text": "The accommodation is at the stern.", "es": "La acomodación está en la popa."},
     "x-port":      {"voice": "model", "text": "The gangway is on the port side.", "es": "La planchada está por babor."},
     "x-starboard": {"voice": "model", "text": "The starboard side is facing the water.", "es": "El costado de estribor da al agua."},
@@ -50,7 +50,7 @@
     "c-show-stern":     {"voice": "tanya",   "text": "Show me the stern."},
     "c-show-port":      {"voice": "tanya",   "text": "Where's the port side?"},
     "c-where-gangway":  {"voice": "rolando", "text": "Where's the gangway?"},
-    "c-where-taxi":     {"voice": "rolando", "text": "Where is the taxi?"},
+    "c-where-now":      {"voice": "rolando", "text": "Where are we now?"},
     "c-cabin":          {"voice": "rolando", "text": "Your cabin is on| deck, port side.", "note": "Two halves: the middle word is lost"},
     "c-fwd-or-aft":     {"voice": "rolando", "text": "Is the gangway forward or aft?"},
     "c-go-bow":         {"voice": "tanya",   "text": "Bosun, go forward to the bow, please."},
@@ -107,10 +107,10 @@
   "sessions": [
     {"id": "listen", "title": "Listen: on the quay", "skill": "Listening", "min": 4, "screens": [
       {"type": "intro", "image": "img/l01/scene.jpg", "kicker": "Day 1 · 08:40 · Houston", "title": "Arriving at the ship",
-       "body": "Diego's taxi stops on the quay, next to a very long ship. Rolando, the bosun, comes to meet him. Listen first, one piece at a time.",
+       "body": "Diego's taxi leaves him on the quay, next to the bow of a very long ship. Rolando, the bosun, walks over from the gangway to meet him. Listen first, one piece at a time.",
        "es": "Escuchá primero. El texto está escondido a propósito."},
-      {"type": "listen", "audio": ["l01-01","l01-02","l01-03"], "q": "Where did the taxi stop?",
-       "opts": ["At the bow", "At the stern", "At the gangway"], "a": 0, "why": "\"The taxi stopped at the bow.\""},
+      {"type": "listen", "audio": ["l01-01","l01-02","l01-03"], "q": "Where are Diego and Rolando now?",
+       "opts": ["At the bow", "At the stern", "At the gangway"], "a": 0, "why": "\"This is the bow.\""},
       {"type": "listen", "audio": ["l01-04"], "q": "Where is the gangway?",
        "opts": ["On the port side, aft", "On the starboard side, aft", "On the port side, forward"], "a": 0, "why": "\"On the port side, aft.\""},
       {"type": "listen", "audio": ["l01-05","l01-06"], "q": "What does Diego ask Rolando to do?",
@@ -150,7 +150,7 @@
        "steps": [["Sides","on the port side · on the starboard side"],["Ends","at the bow · at the stern"],["Middle","amidships (no word before it)"]],
        "avoid": "in the port side"},
       {"type": "choice", "q": "The gangway is ___ the port side.", "opts": ["on","in","at"], "a": 0, "why": "Sides take on."},
-      {"type": "choice", "q": "The taxi is waiting ___ the bow.", "opts": ["at","on","in"], "a": 0, "why": "Ends take at."},
+      {"type": "choice", "q": "Diego is standing ___ the bow.", "opts": ["at","on","in"], "a": 0, "why": "Ends take at."},
       {"type": "tip", "tag": "Language focus", "title": "Aft and forward: no \"the\", no \"to\"",
        "paras": ["Aft and forward are directions, like <i>up</i> and <i>down</i>. They go straight after the verb."],
        "good": "Go aft. The gangway is aft.", "avoid": "Go to the aft. The gangway is in the aft."},
@@ -190,7 +190,7 @@
       {"type": "listen", "audio": ["c-go-bow"], "q": "Where does the bosun go?", "opts": ["To the bow","To the stern","To the gangway"], "a": 0},
       {"type": "choice", "q": "\"estribor\" in English:", "opts": ["starboard","port","stern"], "a": 0},
       {"type": "choice", "q": "Mike is waiting ___ the stern.", "opts": ["at","on","in"], "a": 0},
-      {"type": "build", "cue": "c-where-taxi", "q": "Answer: it's at the bow.", "a": ["It's","at","the","bow."], "extra": ["on","forward","in"]},
+      {"type": "build", "cue": "c-where-now", "q": "Answer: we're at the bow.", "a": ["We're","at","the","bow."], "extra": ["on","forward","in"]},
       {"type": "type", "q": "Write it in English: babor", "accept": ["port","port side"]}
     ]}
   ]
