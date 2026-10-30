@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 236" role="img" aria-label="Crew chart: the Master and three departments">
+  <!-- Lesson 4 plate: crew chart. Officers in blue with gold stripes, ratings in orange. -->
+  <rect class="p-soft" x="0" y="0" width="400" height="236"/>
+  <g class="p-stroke" stroke-width="1.4" opacity=".5"><path d="M200 46 V62 M80 62 H330 M80 62 V72 M215 62 V72 M330 62 V72"/>
+    <path d="M80 98 V206 M215 98 V168 M330 98 V130"/></g>
+  <g class="p-label" text-anchor="middle"><text x="80" y="86">DECK</text><text x="215" y="86">ENGINE</text><text x="330" y="86">CATERING</text></g>
+  <g class="p-stroke" stroke-width="1" opacity=".5"><rect x="50" y="74" width="60" height="18" rx="9"/><rect x="185" y="74" width="60" height="18" rx="9"/><rect x="295" y="74" width="70" height="18" rx="9"/></g>
+<g transform="translate(200,22)"><path class="p-blue" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/><rect class="p-gold" x="15" y="4.0" width="9" height="2.2"/><rect class="p-gold" x="15" y="7.4" width="9" height="2.2"/><rect class="p-gold" x="15" y="10.8" width="9" height="2.2"/><rect class="p-gold" x="15" y="14.2" width="9" height="2.2"/></g>
+<g transform="translate(80,112)"><path class="p-blue" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/><rect class="p-gold" x="15" y="4.0" width="9" height="2.2"/><rect class="p-gold" x="15" y="7.4" width="9" height="2.2"/><rect class="p-gold" x="15" y="10.8" width="9" height="2.2"/></g>
+<g transform="translate(80,150)"><path class="p-blue" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/><rect class="p-gold" x="15" y="4.0" width="9" height="2.2"/><rect class="p-gold" x="15" y="7.4" width="9" height="2.2"/></g>
+<g transform="translate(80,188)"><path class="p-orange" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/></g>
+<g transform="translate(52,216)"><path class="p-orange" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/></g>
+<g transform="translate(80,216)"><path class="p-orange" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/></g>
+<g transform="translate(108,216)"><path class="p-orange" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/></g>
+<g transform="translate(215,112)"><path class="p-blue" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/><rect class="p-gold" x="15" y="4.0" width="9" height="2.2"/><rect class="p-gold" x="15" y="7.4" width="9" height="2.2"/><rect class="p-gold" x="15" y="10.8" width="9" height="2.2"/><rect class="p-gold" x="15" y="14.2" width="9" height="2.2"/></g>
+<g transform="translate(215,150)"><path class="p-blue" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/><rect class="p-gold" x="15" y="4.0" width="9" height="2.2"/><rect class="p-gold" x="15" y="7.4" width="9" height="2.2"/><rect class="p-gold" x="15" y="10.8" width="9" height="2.2"/></g>
+<g transform="translate(215,188)"><path class="p-orange" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/></g>
+<g transform="translate(330,112)"><path class="p-white" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/><rect class="p-white" x="-6" y="-17" width="12" height="7" rx="3"/></g>
+<g transform="translate(330,150)"><path class="p-orange" d="M-13 16 Q-13 3 0 3 Q13 3 13 16 Z"/><circle class="p-white" cx="0" cy="-5" r="7"/></g>
+</svg>

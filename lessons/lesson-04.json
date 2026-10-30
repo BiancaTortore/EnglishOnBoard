@@ -1,0 +1,207 @@
+{
+  "n": 4,
+  "module": 1,
+  "title": "Crew & ranks",
+  "place": "Day 1 · 12:00 · Houston, officers' mess",
+  "goal": "Say who is who on board and find out who to ask about something.",
+  "images": {"hero": "img/l04/hero.jpg", "scene": "img/l04/scene.jpg"},
+
+  "audio": {
+    "l04-01": {"voice": "tanya", "text": "Diego, come and sit with us. Welcome on board. I'm Tanya, the Chief Officer.", "es": "Diego, vení a sentarte con nosotros. Bienvenido a bordo. Soy Tanya, la Primera Oficial."},
+    "l04-02": {"voice": "diego", "text": "Nice to meet you. So you're in charge of the deck department?", "es": "Mucho gusto. ¿Entonces usted está a cargo del departamento de cubierta?"},
+    "l04-03": {"voice": "tanya", "text": "That's right. And this is James, the Second Officer.", "es": "Así es. Y él es James, el Segundo Oficial."},
+    "l04-04": {"voice": "james", "text": "Hi Diego. I do the navigation, so you'll spend a lot of time with me on the bridge.", "es": "Hola Diego. Yo hago la navegación, así que vas a pasar mucho tiempo conmigo en el puente."},
+    "l04-05": {"voice": "diego", "text": "And who's that, at the end of the table?", "es": "¿Y quién es ese, en la punta de la mesa?"},
+    "l04-06": {"voice": "tanya", "text": "That's Marek, the Chief Engineer. He runs the engine department.", "es": "Es Marek, el Jefe de Máquinas. Él dirige el departamento de máquinas."},
+    "l04-07": {"voice": "marek", "text": "Hello. If something breaks, you call me.", "es": "Hola. Si algo se rompe, me llamás a mí."},
+    "l04-08": {"voice": "diego", "text": "Does the Captain eat here too?", "es": "¿El Capitán también come acá?"},
+    "l04-09": {"voice": "tanya", "text": "Captain Andersen? Yes, but he usually comes later. You meet him this afternoon.", "es": "¿El Capitán Andersen? Sí, pero normalmente viene más tarde. Lo conocés esta tarde."},
+    "l04-10": {"voice": "diego", "text": "Who should I ask about my work clothes?", "es": "¿A quién le pregunto por mi ropa de trabajo?"},
+    "l04-11": {"voice": "tanya", "text": "Ask the bosun, Rolando. He's in charge of the ratings on deck.", "es": "Preguntale al contramaestre, Rolando. Él está a cargo de los marineros en cubierta."},
+    "l04-12": {"voice": "mario", "text": "Soup for the cadet? Chicken soup today!", "es": "¿Sopa para el cadete? ¡Hoy hay sopa de pollo!"},
+    "l04-13": {"voice": "diego", "text": "Yes, please. Thank you!", "es": "Sí, por favor. ¡Gracias!"},
+
+    "w-master":  {"voice": "model", "text": "Master"},
+    "w-co":      {"voice": "model", "text": "Chief Officer"},
+    "w-2o":      {"voice": "model", "text": "Second Officer"},
+    "w-ce":      {"voice": "model", "text": "Chief Engineer"},
+    "w-bosun":   {"voice": "model", "text": "bosun"},
+    "w-rating":  {"voice": "model", "text": "rating"},
+    "w-cook":    {"voice": "model", "text": "cook"},
+    "w-dept":    {"voice": "model", "text": "department"},
+
+    "x-master":  {"voice": "model", "text": "The Master is the Captain of the ship.", "es": "El Master es el Capitán del buque."},
+    "x-co":      {"voice": "model", "text": "The Chief Officer is in charge of the deck department.", "es": "La Primera Oficial está a cargo del departamento de cubierta."},
+    "x-2o":      {"voice": "model", "text": "The Second Officer does the navigation.", "es": "El Segundo Oficial hace la navegación."},
+    "x-ce":      {"voice": "model", "text": "The Chief Engineer runs the engine department.", "es": "El Jefe de Máquinas dirige el departamento de máquinas."},
+    "x-bosun":   {"voice": "model", "text": "The bosun is in charge of the ratings on deck.", "es": "El contramaestre está a cargo de los marineros en cubierta."},
+    "x-rating":  {"voice": "model", "text": "Ratings wear orange boiler suits.", "es": "Los marineros usan mameluco naranja."},
+    "x-cook":    {"voice": "model", "text": "The cook works in the galley.", "es": "El cocinero trabaja en la cocina."},
+    "x-dept":    {"voice": "model", "text": "There are three departments: deck, engine and catering.", "es": "Hay tres departamentos: cubierta, máquinas y fonda."},
+
+    "p-incharge": {"voice": "model", "text": "Who's in charge of the galley?", "es": "¿Quién está a cargo de la cocina?"},
+    "p-ask":      {"voice": "model", "text": "Who should I ask about my cabin?", "es": "¿A quién le pregunto por mi camarote?"},
+    "p-job":      {"voice": "model", "text": "That's the bosun's job.", "es": "Eso le corresponde al contramaestre."},
+    "p-nice":     {"voice": "model", "text": "Nice to meet you.", "es": "Mucho gusto."},
+
+    "c-show-ce":     {"voice": "tanya", "text": "Show me the Chief Engineer."},
+    "c-show-bosun":  {"voice": "tanya", "text": "Where's the bosun?"},
+    "c-show-cook":   {"voice": "james", "text": "Show me the cook."},
+    "c-show-master": {"voice": "james", "text": "Where's the Master?"},
+    "c-show-2o":     {"voice": "marek", "text": "Show me the Second Officer."},
+    "c-rank":        {"voice": "james", "text": "What's your rank, Diego?"},
+    "c-engine-who":  {"voice": "tanya", "text": "Who's in charge of the engine department?"},
+    "c-who-bosun":   {"voice": "marek", "text": "Who's the bosun on this ship?"},
+    "c-deck-who":    {"voice": "marek", "text": "Who's in charge of the deck department?"},
+    "c-cook-galley": {"voice": "tanya", "text": "The cook works in the galley, on the main deck."},
+    "c-james-nav":   {"voice": "tanya", "text": "James does the navigation."},
+
+    "m-cadet":   {"voice": "model", "text": "I'm the deck cadet.", "es": "Soy el cadete de cubierta."},
+    "m-ce":      {"voice": "model", "text": "The Chief Engineer.", "es": "El Jefe de Máquinas."},
+    "m-rolando": {"voice": "model", "text": "Rolando is the bosun.", "es": "Rolando es el contramaestre."},
+    "m-runs":    {"voice": "model", "text": "Marek runs the engine department.", "es": "Marek dirige el departamento de máquinas."},
+    "m-eats":    {"voice": "model", "text": "Does the Captain eat here too?", "es": "¿El Capitán también come acá?"}
+  },
+
+  "dialogue": ["l04-01","l04-02","l04-03","l04-04","l04-05","l04-06","l04-07","l04-08","l04-09","l04-10","l04-11","l04-12","l04-13"],
+
+  "words": {
+    "master":  {"en": "Master",         "ipa": "/ˈmɑːstə/",        "es": "Capitán",                         "audio": "w-master", "ex": "x-master"},
+    "co":      {"en": "Chief Officer",  "ipa": "/tʃiːf ˈɒfɪsə/",   "es": "Primer Oficial",                  "audio": "w-co",     "ex": "x-co"},
+    "2o":      {"en": "Second Officer", "ipa": "/ˈsekənd ˈɒfɪsə/", "es": "Segundo Oficial",                 "audio": "w-2o",     "ex": "x-2o"},
+    "ce":      {"en": "Chief Engineer", "ipa": "/tʃiːf ˌendʒɪˈnɪə/","es": "Jefe de Máquinas",               "audio": "w-ce",     "ex": "x-ce"},
+    "bosun":   {"en": "bosun",          "ipa": "/ˈbəʊsn/",         "es": "contramaestre",                   "audio": "w-bosun",  "ex": "x-bosun"},
+    "rating":  {"en": "rating",         "ipa": "/ˈreɪtɪŋ/",        "es": "marinero / personal subalterno",  "audio": "w-rating", "ex": "x-rating"},
+    "cook":    {"en": "cook",           "ipa": "/kʊk/",            "es": "cocinero",                        "audio": "w-cook",   "ex": "x-cook"},
+    "dept":    {"en": "department",     "ipa": "/dɪˈpɑːtmənt/",    "es": "departamento (cubierta, máquinas…)", "audio": "w-dept", "ex": "x-dept"}
+  },
+
+  "plate": {
+    "svg": "img/l04/plate.svg",
+    "pins": [
+      {"word": "master", "x": 170, "y": 22},
+      {"word": "co",     "x": 50,  "y": 112},
+      {"word": "2o",     "x": 50,  "y": 150},
+      {"word": "bosun",  "x": 110, "y": 188},
+      {"word": "rating", "x": 136, "y": 216},
+      {"word": "ce",     "x": 185, "y": 112},
+      {"word": "cook",   "x": 300, "y": 112},
+      {"word": "dept",   "x": 262, "y": 83}
+    ]
+  },
+
+  "docs": {
+    "crewlist": {
+      "kind": "form",
+      "title": "CREW LIST (EXTRACT)",
+      "subtitle": "M/V LNG HORIZON",
+      "table": {
+        "head": ["NAME", "RANK", "NATIONALITY"],
+        "rows": [
+          ["Lars Andersen", "Master", "Danish"],
+          ["Tanya Williams", "Chief Officer", "British"],
+          ["James O'Connor", "Second Officer", "Irish"],
+          ["Diego Martínez", "Deck Cadet", "Argentine"],
+          ["Marek Novak", "Chief Engineer", "Czech"],
+          ["Rolando Reyes", "Bosun", "Filipino"],
+          ["Mario Dela Cruz", "Chief Cook", "Filipino"]
+        ]
+      }
+    }
+  },
+
+  "sessions": [
+    {"id": "listen", "title": "Listen: lunch in the mess", "skill": "Listening", "min": 4, "screens": [
+      {"type": "intro", "image": "img/l04/scene.jpg", "kicker": "Day 1 · 12:00 · Houston", "title": "Lunch with the officers",
+       "body": "It's lunchtime. Tanya, the Chief Officer, invites Diego to her table in the officers' mess. He meets the people he will work with. Listen first, one piece at a time.",
+       "es": "Escuchá primero. El texto está escondido a propósito."},
+      {"type": "listen", "audio": ["l04-01","l04-02"], "q": "What is Tanya's rank?",
+       "opts": ["Chief Officer", "Second Officer", "Master"], "a": 0, "why": "\"I'm Tanya, the Chief Officer.\""},
+      {"type": "listen", "audio": ["l04-03","l04-04"], "q": "What does James do?",
+       "opts": ["The navigation", "The cooking", "The engines"], "a": 0, "why": "\"I do the navigation.\""},
+      {"type": "listen", "audio": ["l04-05","l04-06","l04-07"], "q": "Who runs the engine department?",
+       "opts": ["Marek, the Chief Engineer", "James, the Second Officer", "The Captain"], "a": 0},
+      {"type": "listen", "audio": ["l04-08","l04-09"], "q": "When does Diego meet the Captain?",
+       "opts": ["This afternoon", "Now, at lunch", "Tomorrow"], "a": 0, "why": "\"You meet him this afternoon.\""},
+      {"type": "listen", "audio": ["l04-10","l04-11"], "q": "Who should Diego ask about his work clothes?",
+       "opts": ["The bosun", "The Chief Engineer", "The cook"], "a": 0, "why": "\"Ask the bosun, Rolando.\""},
+      {"type": "listen", "audio": ["l04-12","l04-13"], "q": "What does Mario offer Diego?",
+       "opts": ["Chicken soup", "Coffee", "His work clothes"], "a": 0},
+      {"type": "dialogue", "title": "Now the whole lunch", "body": "Play it again. Open the text and the Spanish if you want them."}
+    ]},
+
+    {"id": "words", "title": "Who's who", "skill": "Vocabulary", "min": 5, "screens": [
+      {"type": "plate", "title": "Tap every number", "body": "The crew of the LNG Horizon. Officers in blue with gold stripes, ratings in orange."},
+      {"type": "card", "word": "master"},
+      {"type": "card", "word": "co"},
+      {"type": "card", "word": "2o"},
+      {"type": "card", "word": "ce"},
+      {"type": "tip", "tag": "Pronunciation", "title": "The stress comes first",
+       "paras": ["Most ranks have the stress at the start: <b>CAP</b>tain, <b>MAS</b>ter, <b>OF</b>ficer, <b>BO</b>sun.",
+                 "One exception: engi<b>NEER</b>. The stress is at the end."],
+       "list": [["Chief Officer","tʃiːf OF-fi-sə","w-co"],["Chief Engineer","tʃiːf en-dʒi-NEER","w-ce"]]},
+      {"type": "card", "word": "bosun"},
+      {"type": "card", "word": "rating"},
+      {"type": "card", "word": "cook"},
+      {"type": "card", "word": "dept"},
+      {"type": "tap", "audio": "c-show-ce", "a": "ce"},
+      {"type": "tap", "audio": "c-show-bosun", "a": "bosun"},
+      {"type": "tap", "audio": "c-show-cook", "a": "cook"},
+      {"type": "match", "title": "Match the pairs", "pairs": [["Master","Capitán"],["Chief Officer","Primer Oficial"],["Chief Engineer","Jefe de Máquinas"],["bosun","contramaestre"],["rating","marinero"]]}
+    ]},
+
+    {"id": "phrases", "title": "Who should I ask?", "skill": "Phrases", "min": 4, "screens": [
+      {"type": "tip", "tag": "Useful language", "title": "Finding the right person",
+       "list": [["Who's in charge of the galley?","¿Quién está a cargo de la cocina?","p-incharge"],["Who should I ask about my cabin?","¿A quién le pregunto por mi camarote?","p-ask"],["That's the bosun's job.","Eso le corresponde al contramaestre.","p-job"],["Nice to meet you.","Mucho gusto.","p-nice"]]},
+      {"type": "tip", "tag": "Language focus", "title": "He works, she runs: the -s",
+       "paras": ["With <b>he</b>, <b>she</b> and one person, the verb takes <b>-s</b>.",
+                 "In questions and with <i>not</i>, the -s moves to <b>does</b>, and the verb loses it."],
+       "steps": [["He / she","Marek runs the engine department."],["Question","Does the Captain eat here?"],["Not","James doesn't work in the engine room."]],
+       "avoid": "He work on the bridge. · Does he eats here?"},
+      {"type": "choice", "q": "James ___ the navigation.", "opts": ["does","do","doing"], "a": 0, "why": "One person: does."},
+      {"type": "choice", "q": "Does Tanya ___ in the officers' mess?", "opts": ["eat","eats","eating"], "a": 0, "why": "After does, no -s."},
+      {"type": "choice", "q": "Marek ___ work on the bridge.", "opts": ["doesn't","don't","isn't"], "a": 0},
+      {"type": "build", "situation": "You need new gloves and you don't know who to ask.", "q": "Ask Tanya.",
+       "a": ["Who","should","I","ask","about","gloves?"], "extra": ["can","to"]},
+      {"type": "build", "cue": "c-deck-who", "q": "Answer Marek.",
+       "a": ["The","Chief","Officer."], "extra": ["Engineer","Master"]},
+      {"type": "choice", "cue": "c-james-nav", "q": "Who does the navigation?", "opts": ["James","Tanya","Marek"], "a": 0}
+    ]},
+
+    {"id": "read", "title": "Read the crew list", "skill": "Reading", "min": 3, "screens": [
+      {"type": "doc", "doc": "crewlist", "q": "What is Diego's rank?", "opts": ["Deck Cadet","Bosun","Second Officer"], "a": 0},
+      {"type": "doc", "doc": "crewlist", "q": "Who is the Master?", "opts": ["Lars Andersen","Marek Novak","James O'Connor"], "a": 0},
+      {"type": "doc", "doc": "crewlist", "q": "Where is the Chief Engineer from?", "opts": ["The Czech Republic","Denmark","Ireland"], "a": 0, "why": "NATIONALITY: Czech."},
+      {"type": "doc", "doc": "crewlist", "q": "Two people on the list are Filipino. Who?", "opts": ["The bosun and the Chief Cook","The Master and the bosun","The Chief Officer and the cook"], "a": 0}
+    ]},
+
+    {"id": "speak", "title": "Introduce yourself", "skill": "Speaking", "min": 4, "screens": [
+      {"type": "intro", "kicker": "Speaking", "title": "Meet the crew",
+       "body": "Listen, say it, check it. Put the stress at the start: CAPtain, OFFicer.",
+       "es": "Acento al principio: CAPtain, OFFicer. Pero engiNEER.", "button": "Start"},
+      {"type": "shadow", "model": "p-nice"},
+      {"type": "shadow", "model": "m-runs"},
+      {"type": "shadow", "model": "m-eats"},
+      {"type": "role", "cue": "c-rank", "task": "Tell him your rank: deck cadet.", "model": "m-cadet",
+       "accept": ["I'm a deck cadet.","Deck cadet.","I am the deck cadet.","I'm the new deck cadet."]},
+      {"type": "role", "cue": "c-engine-who", "task": "Answer: the Chief Engineer.", "model": "m-ce",
+       "accept": ["The Chief Engineer is.","Marek, the Chief Engineer.","The Chief Engineer, Marek."]},
+      {"type": "role", "cue": "c-who-bosun", "task": "Answer: Rolando.", "model": "m-rolando",
+       "accept": ["Rolando.","It's Rolando.","The bosun is Rolando."]},
+      {"type": "role", "situation": "You want to know who is the boss of the galley.", "task": "Ask who is in charge of the galley.", "model": "p-incharge",
+       "accept": ["Who is in charge of the galley?"]}
+    ]},
+
+    {"id": "check", "title": "Lesson check", "skill": "Review", "min": 4, "screens": [
+      {"type": "type", "audio": "w-bosun", "q": "Type what you hear.", "accept": ["bosun","boatswain","bo'sun"]},
+      {"type": "type", "audio": "w-rating", "q": "Type what you hear.", "accept": ["rating"]},
+      {"type": "tap", "audio": "c-show-master", "a": "master"},
+      {"type": "tap", "audio": "c-show-2o", "a": "2o"},
+      {"type": "listen", "audio": ["c-cook-galley"], "q": "Where does the cook work?", "opts": ["In the galley","On the bridge","In the engine room"], "a": 0},
+      {"type": "choice", "q": "\"Jefe de Máquinas\" in English:", "opts": ["Chief Engineer","Chief Officer","Master"], "a": 0},
+      {"type": "choice", "q": "Rolando ___ in charge of the ratings on deck.", "opts": ["is","are","does"], "a": 0},
+      {"type": "build", "cue": "c-rank", "q": "Answer: I'm the deck cadet.", "a": ["I'm","the","deck","cadet."], "extra": ["is","officer"]},
+      {"type": "type", "q": "Write it in English: contramaestre", "accept": ["bosun","boatswain","the bosun"]}
+    ]}
+  ]
+}

@@ -6,7 +6,7 @@
       {"n": 1, "title": "Bow, stern, port & starboard", "ready": true},
       {"n": 2, "title": "Parts of the ship", "ready": true},
       {"n": 3, "title": "Decks & spaces", "ready": true},
-      {"n": 4, "title": "Crew & ranks"},
+      {"n": 4, "title": "Crew & ranks", "ready": true},
       {"n": 5, "title": "Letters & numbers"}
     ]},
     {"n": 2, "title": "First days on board", "where": "Houston · Days 1–2", "lessons": [
