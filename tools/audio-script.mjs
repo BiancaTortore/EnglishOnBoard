@@ -10,7 +10,7 @@ const lesson = JSON.parse(fs.readFileSync(`lessons/lesson-${pad}.json`, "utf8"))
 const VOICE = {
   diego: "Diego Martínez", lars: "Lars Andersen", tanya: "Tanya Williams", james: "James O'Connor",
   marek: "Marek Novak", rolando: "Rolando Reyes", mario: "Mario Dela Cruz", chen: "Lt Amy Chen",
-  pilot: "Capt Laurent Dubois", agent: "Port agent", model: "Model voice (neutral British)"
+  pilot: "Capt Laurent Dubois", agent: "Port agent", terminal: "Houston Terminal (radio operator)", model: "Model voice (neutral British)"
 };
 // Only used if ElevenLabs gets the word wrong
 const RESPELL = {starboard: "starb'd", bosun: "bo'sun", forecastle: "fo'c'sle", leeward: "loo-ard", gunwale: "gunnel"};

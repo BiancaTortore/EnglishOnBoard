@@ -39,6 +39,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | `mario` | Mario Dela Cruz | Chief Cook | Filipino, 50 | Bajo, sonriente, chaqueta blanca de cocinero, gorro negro | Hombre, acento filipino, alegre |
 | `chen` | Lt. Amy Chen | Inspectora de PSC, US Coast Guard | Estadounidense, 36 | Pelo negro atado, uniforme azul de la USCG, carpeta en mano | Mujer, inglés americano, directa |
 | `pilot` | Capt. Laurent Dubois | Práctico de Marsella | Francés, 55 | Canoso, campera de práctico roja con reflectivos, casco | Hombre, acento francés marcado |
+| `terminal` | Houston Terminal | Operador de radio de la terminal | Estadounidense | No aparece en fotos | Hombre, inglés americano del sur, rápido y rutinario, como quien hace la misma llamada todos los días |
 | `model` | — | Voz modelo | — | — | Palabras sueltas, ejemplos y respuestas modelo. **No se graba:** la genera la voz del celular |
 
 **Amarre en las fotos:** mientras está en Houston el buque está atracado **por babor**. Visto desde el muelle, **la proa queda a la izquierda** de la imagen. Todo cabo termina en una bita del muelle; ninguno sale hacia el agua.

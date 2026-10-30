@@ -18,6 +18,7 @@ const VOICES = {
   chen:    {name:"Lt Chen", langs:["en-US"],         rate:1.0, pitch:1.1},
   pilot:   {name:"Pilot",   langs:["en-GB","en-US"], rate:1.0, pitch:.9},
   agent:   {name:"Agent",   langs:["en-US"],         rate:1.0, pitch:1.0},
+  terminal:{name:"Terminal",langs:["en-US"],         rate:1.05, pitch:.95},
   model:   {name:"Model",   langs:["en-GB"],         rate:.92, pitch:1.0}
 };
 /* words the phone's voices tend to mispronounce */
@@ -611,7 +612,7 @@ let srOffline = false;
 const CONTRACT = {"it's":"it is","that's":"that is","what's":"what is","where's":"where is","who's":"who is","there's":"there is",
   "i'm":"i am","you're":"you are","we're":"we are","they're":"they are","he's":"he is","she's":"she is",
   "can't":"can not","cannot":"can not","don't":"do not","doesn't":"does not","isn't":"is not","aren't":"are not","won't":"will not",
-  "i've":"i have","we've":"we have","i'll":"i will","we'll":"we will","let's":"let us","ok":"okay"};
+  "i've":"i have","we've":"we have","i'll":"i will","we'll":"we will","let's":"let us","ok":"okay","alfa":"alpha","juliett":"juliet","xray":"x ray"};
 const DIGIT = ["zero","one","two","three","four","five","six","seven","eight","nine"];
 function words(s){
   let t = String(s).toLowerCase().replace(/[’`]/g, "'").replace(/\d/g, d => " " + DIGIT[d] + " ").replace(/\bniner\b/g, "nine");

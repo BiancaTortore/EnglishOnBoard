@@ -1,0 +1,1198 @@
+{
+ "n": 5,
+ "module": 1,
+ "title": "Letters & numbers",
+ "place": "Day 1 · 14:00 · Houston, bridge",
+ "goal": "Spell names with the phonetic alphabet and say numbers on the radio.",
+ "images": {
+  "hero": "img/l05/hero.jpg",
+  "scene": "img/l05/scene.jpg"
+ },
+ "radioChannel": "VHF ch 12",
+ "audio": {
+  "l05-01": {
+   "voice": "james",
+   "text": "This is the VHF. In port we listen on channel twelve. Can you take a message for me? I need to go down to the deck.",
+   "es": "Este es el VHF. En puerto escuchamos el canal doce. ¿Me tomás un mensaje? Tengo que bajar a cubierta."
+  },
+  "l05-02": {
+   "voice": "diego",
+   "text": "Sure. What do I write?",
+   "es": "Claro. ¿Qué anoto?"
+  },
+  "l05-03": {
+   "voice": "james",
+   "text": "Who calls, the time and the message. If you need to spell, use the phonetic alphabet. Back in five minutes.",
+   "es": "Quién llama, la hora y el mensaje. Si tenés que deletrear, usá el alfabeto fonético. Vuelvo en cinco minutos."
+  },
+  "l05-04": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "LNG Horizon, LNG Horizon, this is Houston Terminal. Over.",
+   "es": "LNG Horizon, LNG Horizon, aquí Houston Terminal. Cambio."
+  },
+  "l05-05": {
+   "voice": "diego",
+   "text": "Houston Terminal, this is LNG Horizon. Go ahead. Over.",
+   "es": "Houston Terminal, aquí LNG Horizon. Adelante. Cambio."
+  },
+  "l05-06": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "LNG Horizon, confirm your call sign. Over.",
+   "es": "LNG Horizon, confirme su distintivo de llamada. Cambio."
+  },
+  "l05-07": {
+   "voice": "diego",
+   "text": "Our call sign is Charlie Six X-ray Yankee Seven. Over.",
+   "es": "Nuestro distintivo es Charlie Six X-ray Yankee Seven. Cambio."
+  },
+  "l05-08": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "Thank you. The pilot boards tomorrow at one seven zero zero. I say again, one seven zero zero. Over.",
+   "es": "Gracias. El práctico sube mañana a las diecisiete horas. Repito, uno siete cero cero. Cambio."
+  },
+  "l05-09": {
+   "voice": "diego",
+   "text": "One seven zero zero. Received. Over.",
+   "es": "Uno siete cero cero. Recibido. Cambio."
+  },
+  "l05-10": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "Also, call the gas inspector, Mister Kowalski. I spell: Kilo, Oscar, Whiskey, Alfa,| Lima, Sierra, Kilo, India. Over.",
+   "es": "Además, llamen al inspector de gas, el señor Kowalski. Deletreo: K-O-W-A-L-S-K-I. Cambio."
+  },
+  "l05-11": {
+   "voice": "diego",
+   "text": "Say again the last part, please. Over.",
+   "es": "Repita la última parte, por favor. Cambio."
+  },
+  "l05-12": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "Lima, Sierra, Kilo, India. Kowalski. Over.",
+   "es": "L-S-K-I. Kowalski. Cambio."
+  },
+  "l05-13": {
+   "voice": "diego",
+   "text": "Kowalski. Received. LNG Horizon, out.",
+   "es": "Kowalski. Recibido. LNG Horizon, corto."
+  },
+  "l05-14": {
+   "voice": "james",
+   "text": "I'm back. Any calls?",
+   "es": "Volví. ¿Alguna llamada?"
+  },
+  "l05-15": {
+   "voice": "diego",
+   "text": "Yes. Houston Terminal, at fourteen ten. The pilot boards tomorrow at seventeen hundred, and please call Mister Kowalski, the gas inspector.",
+   "es": "Sí. Houston Terminal, a las catorce y diez. El práctico sube mañana a las diecisiete, y por favor llamen al señor Kowalski, el inspector de gas."
+  },
+  "l05-16": {
+   "voice": "james",
+   "text": "Perfect. You're a radio operator already!",
+   "es": "Perfecto. ¡Ya sos un operador de radio!"
+  },
+  "w-vhf": {
+   "voice": "model",
+   "text": "VHF radio"
+  },
+  "w-handset": {
+   "voice": "model",
+   "text": "handset"
+  },
+  "w-channel": {
+   "voice": "model",
+   "text": "channel"
+  },
+  "w-callsign": {
+   "voice": "model",
+   "text": "call sign"
+  },
+  "w-ptt": {
+   "voice": "model",
+   "text": "press-to-talk button"
+  },
+  "w-volume": {
+   "voice": "model",
+   "text": "volume knob"
+  },
+  "w-spell": {
+   "voice": "model",
+   "text": "to spell"
+  },
+  "w-digit": {
+   "voice": "model",
+   "text": "digit"
+  },
+  "x-vhf": {
+   "voice": "model",
+   "text": "In port we listen on the VHF radio.",
+   "es": "En puerto escuchamos el VHF."
+  },
+  "x-handset": {
+   "voice": "model",
+   "text": "Pick up the handset.",
+   "es": "Levantá el micrófono."
+  },
+  "x-channel": {
+   "voice": "model",
+   "text": "We listen on channel twelve.",
+   "es": "Escuchamos el canal doce."
+  },
+  "x-callsign": {
+   "voice": "model",
+   "text": "Our call sign is Charlie Six X-ray Yankee Seven.",
+   "es": "Nuestro distintivo es C6XY7."
+  },
+  "x-ptt": {
+   "voice": "model",
+   "text": "Press the button, then talk.",
+   "es": "Apretá el botón y después hablá."
+  },
+  "x-volume": {
+   "voice": "model",
+   "text": "Turn up the volume.",
+   "es": "Subí el volumen."
+  },
+  "x-spell": {
+   "voice": "model",
+   "text": "How do you spell that?",
+   "es": "¿Cómo se deletrea?"
+  },
+  "x-digit": {
+   "voice": "model",
+   "text": "Say the numbers digit by digit.",
+   "es": "Decí los números dígito por dígito."
+  },
+  "p-spell": {
+   "voice": "model",
+   "text": "How do you spell that?",
+   "es": "¿Cómo se deletrea?"
+  },
+  "p-ispell": {
+   "voice": "model",
+   "text": "I spell: Delta, India, Echo, Golf, Oscar.",
+   "es": "Deletreo: D-I-E-G-O."
+  },
+  "p-received": {
+   "voice": "model",
+   "text": "Received.",
+   "es": "Recibido."
+  },
+  "p-over": {
+   "voice": "model",
+   "text": "Over.",
+   "es": "Cambio."
+  },
+  "c-show-handset": {
+   "voice": "james",
+   "text": "Show me the handset."
+  },
+  "c-show-channel": {
+   "voice": "james",
+   "text": "Where can you see the channel?"
+  },
+  "c-show-ptt": {
+   "voice": "james",
+   "text": "Show me the press-to-talk button."
+  },
+  "c-show-callsign": {
+   "voice": "tanya",
+   "text": "Where's our call sign?"
+  },
+  "c-show-volume": {
+   "voice": "tanya",
+   "text": "Show me the volume knob."
+  },
+  "c-confirm-cs": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "LNG Horizon, confirm your call sign. Over."
+  },
+  "c-pilot-time": {
+   "voice": "james",
+   "text": "What time does the pilot board?"
+  },
+  "c-name": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "The surveyor's name is Mister Szczepański. Over."
+  },
+  "c-garble": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "The pilot boards at one|zero. Over."
+  },
+  "c-berth": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "LNG Horizon, your new berth is berth niner. Over."
+  },
+  "c-spell-diego": {
+   "voice": "tanya",
+   "text": "Delta, India, Echo, Golf, Oscar."
+  },
+  "c-time-1410": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "One four one zero."
+  },
+  "c-cs-other": {
+   "voice": "terminal",
+   "radio": true,
+   "text": "Call sign: Victor Romeo Bravo Kilo Four. Over."
+  },
+  "m-callsign": {
+   "voice": "model",
+   "text": "Our call sign is Charlie Six X-ray Yankee Seven.",
+   "es": "Nuestro distintivo es C6XY7."
+  },
+  "m-1700": {
+   "voice": "model",
+   "text": "One seven zero zero.",
+   "es": "Uno siete cero cero."
+  },
+  "m-seventeen": {
+   "voice": "model",
+   "text": "At seventeen hundred.",
+   "es": "A las diecisiete."
+  },
+  "m-sayagain": {
+   "voice": "model",
+   "text": "Say again, please. Over.",
+   "es": "Repita, por favor. Cambio."
+  },
+  "a-a": {
+   "voice": "model",
+   "text": "Alfa"
+  },
+  "a-b": {
+   "voice": "model",
+   "text": "Bravo"
+  },
+  "a-c": {
+   "voice": "model",
+   "text": "Charlie"
+  },
+  "a-d": {
+   "voice": "model",
+   "text": "Delta"
+  },
+  "a-e": {
+   "voice": "model",
+   "text": "Echo"
+  },
+  "a-f": {
+   "voice": "model",
+   "text": "Foxtrot"
+  },
+  "a-g": {
+   "voice": "model",
+   "text": "Golf"
+  },
+  "a-h": {
+   "voice": "model",
+   "text": "Hotel"
+  },
+  "a-i": {
+   "voice": "model",
+   "text": "India"
+  },
+  "a-j": {
+   "voice": "model",
+   "text": "Juliett"
+  },
+  "a-k": {
+   "voice": "model",
+   "text": "Kilo"
+  },
+  "a-l": {
+   "voice": "model",
+   "text": "Lima"
+  },
+  "a-m": {
+   "voice": "model",
+   "text": "Mike"
+  },
+  "a-n": {
+   "voice": "model",
+   "text": "November"
+  },
+  "a-o": {
+   "voice": "model",
+   "text": "Oscar"
+  },
+  "a-p": {
+   "voice": "model",
+   "text": "Papa"
+  },
+  "a-q": {
+   "voice": "model",
+   "text": "Quebec"
+  },
+  "a-r": {
+   "voice": "model",
+   "text": "Romeo"
+  },
+  "a-s": {
+   "voice": "model",
+   "text": "Sierra"
+  },
+  "a-t": {
+   "voice": "model",
+   "text": "Tango"
+  },
+  "a-u": {
+   "voice": "model",
+   "text": "Uniform"
+  },
+  "a-v": {
+   "voice": "model",
+   "text": "Victor"
+  },
+  "a-w": {
+   "voice": "model",
+   "text": "Whiskey"
+  },
+  "a-x": {
+   "voice": "model",
+   "text": "X-ray"
+  },
+  "a-y": {
+   "voice": "model",
+   "text": "Yankee"
+  },
+  "a-z": {
+   "voice": "model",
+   "text": "Zulu"
+  }
+ },
+ "dialogue": [
+  "l05-01",
+  "l05-02",
+  "l05-03",
+  "l05-04",
+  "l05-05",
+  "l05-06",
+  "l05-07",
+  "l05-08",
+  "l05-09",
+  "l05-10",
+  "l05-11",
+  "l05-12",
+  "l05-13",
+  "l05-14",
+  "l05-15",
+  "l05-16"
+ ],
+ "words": {
+  "vhf": {
+   "en": "VHF radio",
+   "ipa": "/ˌviː eɪtʃ ˈef/",
+   "es": "radio VHF",
+   "audio": "w-vhf",
+   "ex": "x-vhf"
+  },
+  "handset": {
+   "en": "handset",
+   "ipa": "/ˈhændset/",
+   "es": "micrófono (del VHF)",
+   "audio": "w-handset",
+   "ex": "x-handset"
+  },
+  "channel": {
+   "en": "channel",
+   "ipa": "/ˈtʃænl/",
+   "es": "canal",
+   "audio": "w-channel",
+   "ex": "x-channel"
+  },
+  "callsign": {
+   "en": "call sign",
+   "ipa": "/ˈkɔːl saɪn/",
+   "es": "distintivo de llamada",
+   "audio": "w-callsign",
+   "ex": "x-callsign"
+  },
+  "ptt": {
+   "en": "press-to-talk button",
+   "ipa": "/ˌpres tə ˈtɔːk/",
+   "es": "botón para hablar",
+   "audio": "w-ptt",
+   "ex": "x-ptt"
+  },
+  "volume": {
+   "en": "volume knob",
+   "ipa": "/ˈvɒljuːm nɒb/",
+   "es": "perilla de volumen",
+   "audio": "w-volume",
+   "ex": "x-volume"
+  },
+  "spell": {
+   "en": "to spell",
+   "ipa": "/spel/",
+   "es": "deletrear",
+   "audio": "w-spell",
+   "ex": "x-spell"
+  },
+  "digit": {
+   "en": "digit",
+   "ipa": "/ˈdɪdʒɪt/",
+   "es": "dígito",
+   "audio": "w-digit",
+   "ex": "x-digit"
+  }
+ },
+ "plate": {
+  "svg": "img/l05/plate.svg",
+  "pins": [
+   {
+    "word": "callsign",
+    "x": 176,
+    "y": 33
+   },
+   {
+    "word": "channel",
+    "x": 146,
+    "y": 80
+   },
+   {
+    "word": "vhf",
+    "x": 60,
+    "y": 154
+   },
+   {
+    "word": "volume",
+    "x": 266,
+    "y": 86
+   },
+   {
+    "word": "handset",
+    "x": 344,
+    "y": 110
+   },
+   {
+    "word": "ptt",
+    "x": 276,
+    "y": 142
+   }
+  ]
+ },
+ "docs": {
+  "log": {
+   "kind": "form",
+   "title": "VHF LOG",
+   "subtitle": "M/V LNG HORIZON · DAY 1",
+   "table": {
+    "head": [
+     "TIME",
+     "STATION",
+     "MESSAGE"
+    ],
+    "rows": [
+     [
+      "1320",
+      "Port agent",
+      "Crew change: deck cadet D. Martínez on board"
+     ],
+     [
+      "1410",
+      "Houston Terminal",
+      "Pilot on board tomorrow 1700"
+     ],
+     [
+      "1412",
+      "Houston Terminal",
+      "Call gas inspector Mr KOWALSKI"
+     ],
+     [
+      "1530",
+      "Houston Pilots",
+      "Pilot boarding: starboard side"
+     ]
+    ]
+   }
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: a message on the VHF",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l05/scene.jpg",
+     "kicker": "Day 1 · 14:00 · Houston",
+     "title": "Diego on the radio",
+     "body": "James shows Diego the VHF on the bridge, then leaves him alone with it for five minutes. Of course, someone calls. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l05-01",
+      "l05-02",
+      "l05-03"
+     ],
+     "q": "Which channel do they listen to in port?",
+     "opts": [
+      "Twelve",
+      "Sixteen",
+      "Two"
+     ],
+     "a": 0,
+     "why": "\"In port we listen on channel twelve.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l05-04",
+      "l05-05",
+      "l05-06",
+      "l05-07"
+     ],
+     "q": "What is the ship's call sign?",
+     "opts": [
+      "C6XY7",
+      "C6XJ7",
+      "G6XY7"
+     ],
+     "a": 0,
+     "why": "Charlie Six X-ray Yankee Seven."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l05-08",
+      "l05-09"
+     ],
+     "q": "When does the pilot board?",
+     "opts": [
+      "Tomorrow at 1700",
+      "Today at 1700",
+      "Tomorrow at 0700"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l05-10",
+      "l05-11",
+      "l05-12"
+     ],
+     "q": "How do you write the inspector's name?",
+     "opts": [
+      "Kowalski",
+      "Kovalsky",
+      "Kowalsky"
+     ],
+     "a": 0,
+     "why": "K-O-W-A-L-S-K-I."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l05-13",
+      "l05-14",
+      "l05-15",
+      "l05-16"
+     ],
+     "q": "What time did Houston Terminal call?",
+     "opts": [
+      "1410",
+      "1400",
+      "1700"
+     ],
+     "a": 0,
+     "why": "\"At fourteen ten.\""
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole call",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "The VHF",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The VHF radio on the bridge."
+    },
+    {
+     "type": "card",
+     "word": "vhf"
+    },
+    {
+     "type": "card",
+     "word": "channel"
+    },
+    {
+     "type": "card",
+     "word": "callsign"
+    },
+    {
+     "type": "card",
+     "word": "handset"
+    },
+    {
+     "type": "card",
+     "word": "ptt"
+    },
+    {
+     "type": "card",
+     "word": "volume"
+    },
+    {
+     "type": "card",
+     "word": "spell"
+    },
+    {
+     "type": "card",
+     "word": "digit"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-handset",
+     "a": "handset"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-callsign",
+     "a": "callsign"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-ptt",
+     "a": "ptt"
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "channel",
+       "canal"
+      ],
+      [
+       "call sign",
+       "distintivo de llamada"
+      ],
+      [
+       "handset",
+       "micrófono"
+      ],
+      [
+       "to spell",
+       "deletrear"
+      ],
+      [
+       "digit",
+       "dígito"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Spell it, say it",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Why a phonetic alphabet?",
+     "paras": [
+      "On the radio, B, D, P, T and V sound the same. And Spanish speakers mix <b>E</b> and <b>I</b>: English <b>E</b> sounds like Spanish <i>i</i>.",
+      "So on board you never say letters. You say words: <b>Echo</b>, <b>India</b>."
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Phonetic alphabet",
+     "title": "A to I",
+     "list": [
+      [
+       "A · Alfa",
+       "AL-fah",
+       "a-a"
+      ],
+      [
+       "B · Bravo",
+       "BRAH-voh",
+       "a-b"
+      ],
+      [
+       "C · Charlie",
+       "CHAR-lee",
+       "a-c"
+      ],
+      [
+       "D · Delta",
+       "DELL-tah",
+       "a-d"
+      ],
+      [
+       "E · Echo",
+       "ECK-oh",
+       "a-e"
+      ],
+      [
+       "F · Foxtrot",
+       "FOKS-trot",
+       "a-f"
+      ],
+      [
+       "G · Golf",
+       "GOLF",
+       "a-g"
+      ],
+      [
+       "H · Hotel",
+       "hoh-TELL",
+       "a-h"
+      ],
+      [
+       "I · India",
+       "IN-dee-ah",
+       "a-i"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Phonetic alphabet",
+     "title": "J to R",
+     "list": [
+      [
+       "J · Juliett",
+       "JEW-lee-ett",
+       "a-j"
+      ],
+      [
+       "K · Kilo",
+       "KEY-loh",
+       "a-k"
+      ],
+      [
+       "L · Lima",
+       "LEE-mah",
+       "a-l"
+      ],
+      [
+       "M · Mike",
+       "MIKE",
+       "a-m"
+      ],
+      [
+       "N · November",
+       "no-VEM-ber",
+       "a-n"
+      ],
+      [
+       "O · Oscar",
+       "OSS-car",
+       "a-o"
+      ],
+      [
+       "P · Papa",
+       "pah-PAH",
+       "a-p"
+      ],
+      [
+       "Q · Quebec",
+       "keh-BECK",
+       "a-q"
+      ],
+      [
+       "R · Romeo",
+       "ROW-me-oh",
+       "a-r"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Phonetic alphabet",
+     "title": "S to Z",
+     "list": [
+      [
+       "S · Sierra",
+       "see-AIR-rah",
+       "a-s"
+      ],
+      [
+       "T · Tango",
+       "TANG-go",
+       "a-t"
+      ],
+      [
+       "U · Uniform",
+       "YOU-nee-form",
+       "a-u"
+      ],
+      [
+       "V · Victor",
+       "VIK-tah",
+       "a-v"
+      ],
+      [
+       "W · Whiskey",
+       "WISS-key",
+       "a-w"
+      ],
+      [
+       "X · X-ray",
+       "ECKS-ray",
+       "a-x"
+      ],
+      [
+       "Y · Yankee",
+       "YANG-key",
+       "a-y"
+      ],
+      [
+       "Z · Zulu",
+       "ZOO-loo",
+       "a-z"
+      ]
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-spell-diego",
+     "q": "Write the name you hear.",
+     "accept": [
+      "diego"
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "How do you say the letter E?",
+     "opts": [
+      "Echo",
+      "India",
+      "Eagle"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "How do you say the letter I?",
+     "opts": [
+      "India",
+      "Echo",
+      "Italy"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Numbers on the radio: one digit at a time",
+     "steps": [
+      [
+       "Time",
+       "1700 → one seven zero zero"
+      ],
+      [
+       "Channel",
+       "12 → one two"
+      ],
+      [
+       "Berth",
+       "9 → niner"
+      ]
+     ],
+     "paras": [
+      "On the radio, say every digit. <b>Zero</b>, never <i>oh</i>. Nine is often <b>niner</b>.",
+      "Talking normally, a time is <b>seventeen hundred</b> or <b>fourteen ten</b>."
+     ],
+     "avoid": "one thousand seven hundred · seventeen zero zero on the radio"
+    },
+    {
+     "type": "choice",
+     "q": "On the radio, how do you say the time 0730?",
+     "opts": [
+      "zero seven three zero",
+      "seven thirty",
+      "oh seven thirty"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "audio": "c-time-1410",
+     "q": "Write the time you hear, in numbers.",
+     "accept": [
+      "1410"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Radio words",
+     "list": [
+      [
+       "How do you spell that?",
+       "¿Cómo se deletrea?",
+       "p-spell"
+      ],
+      [
+       "I spell: Delta, India, Echo, Golf, Oscar.",
+       "Deletreo: D-I-E-G-O.",
+       "p-ispell"
+      ],
+      [
+       "Received.",
+       "Recibido.",
+       "p-received"
+      ],
+      [
+       "Over.",
+       "Cambio (terminé, te toca).",
+       "p-over"
+      ]
+     ]
+    },
+    {
+     "type": "choice",
+     "cue": "c-berth",
+     "q": "Which berth?",
+     "opts": [
+      "9",
+      "5",
+      "1"
+     ],
+     "a": 0,
+     "why": "Niner = nine."
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the VHF log",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "log",
+     "q": "What time did Houston Terminal call about the pilot?",
+     "opts": [
+      "1410",
+      "1320",
+      "1530"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "log",
+     "q": "Who called at 1530?",
+     "opts": [
+      "Houston Pilots",
+      "The port agent",
+      "Houston Terminal"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "log",
+     "q": "Which side does the pilot board?",
+     "opts": [
+      "Starboard",
+      "Port",
+      "Aft"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "log",
+     "q": "In the log, \"station\" means…",
+     "opts": [
+      "who called",
+      "where the ship is",
+      "which channel"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Talk on the radio",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Press, talk, release",
+     "body": "Listen, say it, check it. Say every digit, and spell with the phonetic alphabet.",
+     "es": "Cada dígito por separado, y deletreá con el alfabeto fonético.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "m-callsign"
+    },
+    {
+     "type": "shadow",
+     "model": "m-1700"
+    },
+    {
+     "type": "shadow",
+     "model": "p-ispell"
+    },
+    {
+     "type": "role",
+     "cue": "c-confirm-cs",
+     "task": "Give the call sign: C6XY7.",
+     "model": "m-callsign",
+     "accept": [
+      "Charlie Six X-ray Yankee Seven.",
+      "Charlie Six X-ray Yankee Seven. Over.",
+      "Our call sign is Charlie Six X-ray Yankee Seven. Over."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-pilot-time",
+     "task": "Answer: at 1700.",
+     "model": "m-seventeen",
+     "accept": [
+      "Seventeen hundred.",
+      "At one seven zero zero.",
+      "One seven zero zero.",
+      "The pilot boards at seventeen hundred."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-name",
+     "task": "You can't write that name. Ask how to spell it.",
+     "model": "p-spell",
+     "accept": [
+      "How do you spell it?",
+      "Can you spell that, please?",
+      "Please spell. Over.",
+      "How do you spell that? Over."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-garble",
+     "task": "You didn't catch it. Ask him to repeat.",
+     "model": "m-sayagain",
+     "accept": [
+      "Say again, please.",
+      "Say again. Over.",
+      "Say again."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "c-cs-other",
+     "q": "Write the call sign you hear.",
+     "accept": [
+      "vrbk4"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "w-handset",
+     "q": "Type what you hear.",
+     "accept": [
+      "handset"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-channel",
+     "a": "channel"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-volume",
+     "a": "volume"
+    },
+    {
+     "type": "choice",
+     "q": "The letter W is…",
+     "opts": [
+      "Whiskey",
+      "Water",
+      "Wilson"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "On the radio, 160 is…",
+     "opts": [
+      "one six zero",
+      "one hundred sixty",
+      "sixteen oh"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "cue": "c-pilot-time",
+     "q": "Answer: at seventeen hundred.",
+     "a": [
+      "At",
+      "seventeen",
+      "hundred."
+     ],
+     "extra": [
+      "one",
+      "thousand"
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "You finished talking and wait for an answer. You say…",
+     "opts": [
+      "Over.",
+      "Out.",
+      "Received."
+     ],
+     "a": 0,
+     "why": "Over = your turn. Out = the call is finished."
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: canal (del VHF)",
+     "accept": [
+      "channel"
+     ]
+    }
+   ]
+  }
+ ]
+}
