@@ -553,7 +553,7 @@ const RENDER = {
   },
 
   doc(sc, st, retry){
-    st.innerHTML = `${retry}<span class="mono kicker">Read</span>${docHTML(sc.doc)}<h2 class="prompt" style="font-size:24px">${esc(sc.q)}</h2>${optsHTML(sc.opts, false)}`;
+    st.innerHTML = `${retry}<span class="mono kicker">Read</span>${docHTML(sc.doc)}<h2 class="prompt" style="font-size:24px">${esc(sc.q)}</h2>${optsHTML(sc.opts)}`;
     wireOpts(sc);
   },
 
