@@ -1,207 +1,979 @@
 {
-  "n": 3,
-  "module": 1,
-  "title": "Decks & spaces",
-  "place": "Day 1 · 09:30 · Houston, accommodation",
-  "goal": "Say where the spaces are: which deck, up or down.",
-  "images": {"hero": "img/l03/hero.jpg", "scene": "img/l03/scene.jpg"},
-
-  "audio": {
-    "l03-01": {"voice": "rolando", "text": "OK, let's go inside. This is the main deck level. The galley is here, and the laundry is next to it.", "es": "Bueno, entremos. Este es el nivel de la cubierta principal. La cocina está acá, y la lavandería al lado."},
-    "l03-02": {"voice": "diego",   "text": "Where's the mess room?", "es": "¿Dónde está el comedor?"},
-    "l03-03": {"voice": "rolando", "text": "One deck up, on A-deck. There are two mess rooms: one for the officers and one for the crew.", "es": "Una cubierta más arriba, en la cubierta A. Hay dos comedores: uno para los oficiales y uno para la tripulación."},
-    "l03-04": {"voice": "diego",   "text": "And my cabin?", "es": "¿Y mi camarote?"},
-    "l03-05": {"voice": "rolando", "text": "Your cabin is on C-deck. That's three decks up.", "es": "Tu camarote está en la cubierta C. Son tres cubiertas más arriba."},
-    "l03-06": {"voice": "diego",   "text": "Three decks with this bag! Is there a lift?", "es": "¡Tres cubiertas con este bolso! ¿Hay ascensor?"},
-    "l03-07": {"voice": "rolando", "text": "Yes, there's a lift. But we usually take the stairs. Good exercise!", "es": "Sí, hay ascensor. Pero normalmente usamos las escaleras. ¡Buen ejercicio!"},
-    "l03-08": {"voice": "diego",   "text": "And the engine room? Is it down there?", "es": "¿Y la sala de máquinas? ¿Está ahí abajo?"},
-    "l03-09": {"voice": "rolando", "text": "Yes. The engine room is below the main deck. That's Marek's world, the Chief Engineer.", "es": "Sí. La sala de máquinas está debajo de la cubierta principal. Es el mundo de Marek, el Jefe de Máquinas."},
-    "l03-10": {"voice": "diego",   "text": "So the bridge is at the very top.", "es": "Entonces el puente está arriba de todo."},
-    "l03-11": {"voice": "rolando", "text": "That's right. Five decks up. Come on, let's take your bag to your cabin.", "es": "Así es. Cinco cubiertas más arriba. Vamos, llevemos tu bolso al camarote."},
-
-    "w-deck":    {"voice": "model", "text": "deck"},
-    "w-cabin":   {"voice": "model", "text": "cabin"},
-    "w-mess":    {"voice": "model", "text": "mess room"},
-    "w-galley":  {"voice": "model", "text": "galley"},
-    "w-laundry": {"voice": "model", "text": "laundry"},
-    "w-engine":  {"voice": "model", "text": "engine room"},
-    "w-stairs":  {"voice": "model", "text": "stairs"},
-    "w-lift":    {"voice": "model", "text": "lift"},
-
-    "x-deck":    {"voice": "model", "text": "My cabin is on C-deck.", "es": "Mi camarote está en la cubierta C."},
-    "x-cabin":   {"voice": "model", "text": "Your cabin is three decks up.", "es": "Tu camarote está tres cubiertas más arriba."},
-    "x-mess":    {"voice": "model", "text": "We eat in the mess room.", "es": "Comemos en el comedor."},
-    "x-galley":  {"voice": "model", "text": "The cook is in the galley.", "es": "El cocinero está en la cocina."},
-    "x-laundry": {"voice": "model", "text": "The laundry is next to the galley.", "es": "La lavandería está al lado de la cocina."},
-    "x-engine":  {"voice": "model", "text": "The engine room is below the main deck.", "es": "La sala de máquinas está debajo de la cubierta principal."},
-    "x-stairs":  {"voice": "model", "text": "Take the stairs.", "es": "Tomá las escaleras."},
-    "x-lift":    {"voice": "model", "text": "There's a lift.", "es": "Hay un ascensor."},
-
-    "p-where":   {"voice": "model", "text": "Where's the mess room?", "es": "¿Dónde está el comedor?"},
-    "p-up":      {"voice": "model", "text": "It's one deck up.", "es": "Está una cubierta más arriba."},
-    "p-down":    {"voice": "model", "text": "It's two decks down.", "es": "Está dos cubiertas más abajo."},
-    "p-lift":    {"voice": "model", "text": "Is there a lift?", "es": "¿Hay ascensor?"},
-
-    "c-show-laundry": {"voice": "rolando", "text": "Show me the laundry."},
-    "c-where-galley": {"voice": "rolando", "text": "Where's the galley?"},
-    "c-show-engine":  {"voice": "rolando", "text": "Show me the engine room."},
-    "c-where-mess":   {"voice": "rolando", "text": "Where's the mess room?"},
-    "c-where-cabin":  {"voice": "rolando", "text": "Where's your cabin?"},
-    "c-office":       {"voice": "tanya",   "text": "The ship's office is on A-deck."},
-    "c-show-lift":    {"voice": "tanya",   "text": "Show me the lift."},
-    "c-show-stairs":  {"voice": "tanya",   "text": "Where are the stairs?"},
-    "c-how-up":       {"voice": "tanya",   "text": "How many decks up is the bridge?"},
-    "c-where-er":     {"voice": "tanya",   "text": "Where's the engine room?"},
-    "c-hospital":     {"voice": "tanya",   "text": "The hospital is on B-deck, two decks up."},
-
-    "m-two-mess":   {"voice": "model", "text": "There are two mess rooms.", "es": "Hay dos comedores."},
-    "m-three-up":   {"voice": "model", "text": "My cabin is three decks up.", "es": "Mi camarote está tres cubiertas más arriba."},
-    "m-cdeck":      {"voice": "model", "text": "It's on C-deck.", "es": "Está en la cubierta C."},
-    "m-below":      {"voice": "model", "text": "It's below the main deck.", "es": "Está debajo de la cubierta principal."},
-    "m-five-up":    {"voice": "model", "text": "It's five decks up.", "es": "Está cinco cubiertas más arriba."},
-    "m-galley-md":  {"voice": "model", "text": "It's on the main deck.", "es": "Está en la cubierta principal."}
+ "n": 3,
+ "module": 1,
+ "title": "Decks & spaces",
+ "place": "Day 1 · 09:30 · Houston, accommodation",
+ "goal": "Say where the spaces are: which deck, up or down.",
+ "images": {
+  "hero": "img/l03/hero.jpg",
+  "scene": "img/l03/scene.jpg"
+ },
+ "audio": {
+  "l03-01": {
+   "voice": "rolando",
+   "text": "OK, let's go inside. This is the main deck level. The galley is here, and the laundry is next to it.",
+   "es": "Bueno, entremos. Este es el nivel de la cubierta principal. La cocina está acá, y la lavandería al lado."
   },
-
-  "dialogue": ["l03-01","l03-02","l03-03","l03-04","l03-05","l03-06","l03-07","l03-08","l03-09","l03-10","l03-11"],
-
-  "words": {
-    "deck":    {"en": "deck",        "ipa": "/dek/",          "es": "cubierta (cada piso del buque)", "audio": "w-deck",    "ex": "x-deck"},
-    "cabin":   {"en": "cabin",       "ipa": "/ˈkæbɪn/",       "es": "camarote",                       "audio": "w-cabin",   "ex": "x-cabin"},
-    "mess":    {"en": "mess room",   "ipa": "/ˈmes ruːm/",    "es": "comedor",                        "audio": "w-mess",    "ex": "x-mess"},
-    "galley":  {"en": "galley",      "ipa": "/ˈɡæli/",        "es": "cocina (del buque)",             "audio": "w-galley",  "ex": "x-galley"},
-    "laundry": {"en": "laundry",     "ipa": "/ˈlɔːndri/",     "es": "lavandería",                     "audio": "w-laundry", "ex": "x-laundry"},
-    "engine":  {"en": "engine room", "ipa": "/ˈendʒɪn ruːm/", "es": "sala de máquinas",               "audio": "w-engine",  "ex": "x-engine"},
-    "stairs":  {"en": "stairs",      "ipa": "/steəz/",        "es": "escaleras",                      "audio": "w-stairs",  "ex": "x-stairs"},
-    "lift":    {"en": "lift",        "ipa": "/lɪft/",         "es": "ascensor",                       "audio": "w-lift",    "ex": "x-lift"}
+  "l03-02": {
+   "voice": "diego",
+   "text": "Where's the mess room?",
+   "es": "¿Dónde está el comedor?"
   },
-
-  "plate": {
-    "svg": "img/l03/plate.svg",
-    "pins": [
-      {"word": "galley",  "x": 136, "y": 165},
-      {"word": "laundry", "x": 214, "y": 165},
-      {"word": "mess",    "x": 205, "y": 136},
-      {"word": "cabin",   "x": 130, "y": 87},
-      {"word": "engine",  "x": 220, "y": 204},
-      {"word": "lift",    "x": 231, "y": 113},
-      {"word": "stairs",  "x": 280, "y": 139}
-    ]
+  "l03-03": {
+   "voice": "rolando",
+   "text": "One deck up, on A-deck. There are two mess rooms: one for the officers and one for the crew.",
+   "es": "Una cubierta más arriba, en la cubierta A. Hay dos comedores: uno para los oficiales y uno para la tripulación."
   },
-
-  "docs": {
-    "directory": {
-      "kind": "form",
-      "title": "ACCOMMODATION PLAN",
-      "subtitle": "M/V LNG HORIZON",
-      "table": {
-        "head": ["DECK", "SPACES"],
-        "rows": [
-          ["BRIDGE", "Wheelhouse, chart area"],
-          ["D-DECK", "Master, Chief Engineer, Chief Officer"],
-          ["C-DECK", "Officers' cabins, cadet cabin"],
-          ["B-DECK", "Crew cabins, hospital"],
-          ["A-DECK", "Officers' mess, crew mess, ship's office"],
-          ["MAIN DECK", "Galley, laundry, changing room"],
-          ["BELOW MAIN DECK", "Engine room, engine control room"]
-        ]
-      }
-    }
+  "l03-04": {
+   "voice": "diego",
+   "text": "And my cabin?",
+   "es": "¿Y mi camarote?"
   },
-
-  "sessions": [
-    {"id": "listen", "title": "Listen: going inside", "skill": "Listening", "min": 4, "screens": [
-      {"type": "intro", "image": "img/l03/scene.jpg", "kicker": "Day 1 · 09:30 · Houston", "title": "Inside the accommodation",
-       "body": "Rolando takes Diego inside. Diego wants to know where everything is, and how far he has to carry his bag. Listen first, one piece at a time.",
-       "es": "Escuchá primero. El texto está escondido a propósito."},
-      {"type": "listen", "audio": ["l03-01"], "q": "What is next to the galley?",
-       "opts": ["The laundry", "The mess room", "The engine room"], "a": 0, "why": "\"…and the laundry is next to it.\""},
-      {"type": "listen", "audio": ["l03-02","l03-03"], "q": "How many mess rooms are there?",
-       "opts": ["Two", "One", "Three"], "a": 0, "why": "\"There are two mess rooms.\""},
-      {"type": "listen", "audio": ["l03-04","l03-05"], "q": "Where is Diego's cabin?",
-       "opts": ["On C-deck, three decks up", "On A-deck, one deck up", "On the main deck"], "a": 0},
-      {"type": "listen", "audio": ["l03-06","l03-07"], "q": "Is there a lift?",
-       "opts": ["Yes, but they usually take the stairs", "No, only stairs", "Yes, and they always use it"], "a": 0},
-      {"type": "listen", "audio": ["l03-08","l03-09"], "q": "Where is the engine room?",
-       "opts": ["Below the main deck", "Next to the galley", "On A-deck"], "a": 0},
-      {"type": "listen", "audio": ["l03-10","l03-11"], "q": "How many decks up is the bridge?",
-       "opts": ["Five", "Three", "Two"], "a": 0, "why": "\"Five decks up.\""},
-      {"type": "dialogue", "title": "Now the whole walk", "body": "Play it again. Open the text and the Spanish if you want them."}
-    ]},
-
-    {"id": "words", "title": "Find the spaces", "skill": "Vocabulary", "min": 5, "screens": [
-      {"type": "plate", "title": "Tap every number", "body": "The accommodation, cut open. The main deck is at the bottom."},
-      {"type": "card", "word": "deck"},
-      {"type": "card", "word": "cabin"},
-      {"type": "card", "word": "mess"},
-      {"type": "card", "word": "galley"},
-      {"type": "tip", "tag": "Spanish speaker alert", "title": "On a ship, a floor is a deck",
-       "paras": ["The levels of a ship are <b>decks</b>, not floors. Say <b>on C-deck</b>, <b>two decks up</b>.",
-                 "And the kitchen is the <b>galley</b>. Kitchen is for houses."],
-       "avoid": "my cabin is on the third floor"},
-      {"type": "card", "word": "laundry"},
-      {"type": "card", "word": "engine"},
-      {"type": "card", "word": "stairs"},
-      {"type": "card", "word": "lift"},
-      {"type": "tap", "audio": "c-show-laundry", "a": "laundry"},
-      {"type": "tap", "audio": "c-show-engine", "a": "engine"},
-      {"type": "tap", "audio": "c-show-stairs", "a": "stairs"},
-      {"type": "match", "title": "Match the pairs", "pairs": [["galley","cocina"],["mess room","comedor"],["cabin","camarote"],["engine room","sala de máquinas"],["lift","ascensor"]]}
-    ]},
-
-    {"id": "phrases", "title": "One deck up", "skill": "Phrases", "min": 4, "screens": [
-      {"type": "tip", "tag": "Useful language", "title": "Asking where things are",
-       "list": [["Where's the mess room?","¿Dónde está el comedor?","p-where"],["It's one deck up.","Está una cubierta más arriba.","p-up"],["It's two decks down.","Está dos cubiertas más abajo.","p-down"],["Is there a lift?","¿Hay ascensor?","p-lift"]]},
-      {"type": "tip", "tag": "Language focus", "title": "\"Hay\" is there is / there are",
-       "steps": [["One","There's a lift. · Is there a lift?"],["More","There are two mess rooms."],["No","There isn't a gym."]],
-       "avoid": "Have a lift? · There is two mess rooms."},
-      {"type": "choice", "q": "There ___ two mess rooms.", "opts": ["are","is","have"], "a": 0, "why": "Two = there are."},
-      {"type": "choice", "q": "___ there a lift?", "opts": ["Is","Are","Have"], "a": 0, "why": "One lift = is there."},
-      {"type": "tip", "tag": "Language focus", "title": "Up, down and below",
-       "steps": [["Up","one deck up · three decks up"],["Down","two decks down"],["Under","below the main deck"]],
-       "paras": ["The number comes first, then <b>deck</b> or <b>decks</b>, then <b>up</b> or <b>down</b>."],
-       "avoid": "three deck up · up three decks"},
-      {"type": "choice", "q": "My cabin is three ___ up.", "opts": ["decks","deck","floors"], "a": 0},
-      {"type": "build", "cue": "c-where-mess", "q": "Answer Rolando.",
-       "a": ["It's","one","deck","up."], "extra": ["floor","decks","is"]},
-      {"type": "build", "situation": "You have a heavy bag and you're on the main deck.", "q": "Ask if there's a lift.",
-       "a": ["Is","there","a","lift?"], "extra": ["have","are","the"]},
-      {"type": "choice", "cue": "c-office", "q": "Which deck is the ship's office on?", "opts": ["A-deck","C-deck","The main deck"], "a": 0}
-    ]},
-
-    {"id": "read", "title": "Read the accommodation plan", "skill": "Reading", "min": 3, "screens": [
-      {"type": "doc", "doc": "directory", "q": "Where is the hospital?", "opts": ["B-deck","D-deck","Main deck"], "a": 0},
-      {"type": "doc", "doc": "directory", "q": "Which deck is the Master's cabin on?", "opts": ["D-deck","C-deck","A-deck"], "a": 0},
-      {"type": "doc", "doc": "directory", "q": "Where can Diego eat?", "opts": ["A-deck","B-deck","The bridge"], "a": 0, "why": "The mess rooms are on A-deck."},
-      {"type": "doc", "doc": "directory", "q": "The engine control room is…", "opts": ["below the main deck","on the bridge","next to the hospital"], "a": 0}
-    ]},
-
-    {"id": "speak", "title": "Say where it is", "skill": "Speaking", "min": 4, "screens": [
-      {"type": "intro", "kicker": "Speaking", "title": "Up and down, out loud",
-       "body": "Listen, say it, check it. Remember: deck, not floor.",
-       "es": "Acordate: deck, no floor.", "button": "Start"},
-      {"type": "shadow", "model": "m-two-mess"},
-      {"type": "shadow", "model": "m-three-up"},
-      {"type": "shadow", "model": "p-lift"},
-      {"type": "role", "cue": "c-where-cabin", "task": "Answer: on C-deck.", "model": "m-cdeck",
-       "accept": ["On C-deck.","It's on C deck.","My cabin is on C-deck.","It's three decks up."]},
-      {"type": "role", "cue": "c-where-er", "task": "Answer: below the main deck.", "model": "m-below",
-       "accept": ["Below the main deck.","The engine room is below the main deck."]},
-      {"type": "role", "cue": "c-how-up", "task": "Answer: five.", "model": "m-five-up",
-       "accept": ["Five decks up.","Five.","The bridge is five decks up."]},
-      {"type": "role", "situation": "You want to know where everyone eats.", "task": "Ask where the mess room is.", "model": "p-where",
-       "accept": ["Where is the mess room?","Where's the mess room, please?"]}
-    ]},
-
-    {"id": "check", "title": "Lesson check", "skill": "Review", "min": 4, "screens": [
-      {"type": "type", "audio": "w-galley", "q": "Type what you hear.", "accept": ["galley"]},
-      {"type": "type", "audio": "w-stairs", "q": "Type what you hear.", "accept": ["stairs"]},
-      {"type": "tap", "audio": "c-show-lift", "a": "lift"},
-      {"type": "tap", "audio": "c-show-laundry", "a": "laundry"},
-      {"type": "listen", "audio": ["c-hospital"], "q": "Where is the hospital?", "opts": ["B-deck","A-deck","D-deck"], "a": 0},
-      {"type": "choice", "q": "\"la cocina\" of a ship in English:", "opts": ["the galley","the kitchen","the mess room"], "a": 0},
-      {"type": "choice", "q": "The bridge is five ___ up.", "opts": ["decks","floors","deck"], "a": 0},
-      {"type": "build", "cue": "c-where-galley", "q": "Answer: on the main deck.", "a": ["It's","on","the","main","deck."], "extra": ["in","floor"]},
-      {"type": "type", "q": "Write it in English: sala de máquinas", "accept": ["engine room","the engine room"]}
-    ]}
+  "l03-05": {
+   "voice": "rolando",
+   "text": "Your cabin is on C-deck. That's three decks up.",
+   "es": "Tu camarote está en la cubierta C. Son tres cubiertas más arriba."
+  },
+  "l03-06": {
+   "voice": "diego",
+   "text": "Three decks with this bag! Is there a lift?",
+   "es": "¡Tres cubiertas con este bolso! ¿Hay ascensor?"
+  },
+  "l03-07": {
+   "voice": "rolando",
+   "text": "Yes, there's a lift. But we usually take the stairs. Good exercise!",
+   "es": "Sí, hay ascensor. Pero normalmente usamos las escaleras. ¡Buen ejercicio!"
+  },
+  "l03-08": {
+   "voice": "diego",
+   "text": "And the engine room? Is it down there?",
+   "es": "¿Y la sala de máquinas? ¿Está ahí abajo?"
+  },
+  "l03-09": {
+   "voice": "rolando",
+   "text": "Yes. The engine room is below the main deck. That's Marek's world, the Chief Engineer.",
+   "es": "Sí. La sala de máquinas está debajo de la cubierta principal. Es el mundo de Marek, el Jefe de Máquinas."
+  },
+  "l03-10": {
+   "voice": "diego",
+   "text": "So the bridge is at the very top.",
+   "es": "Entonces el puente está arriba de todo."
+  },
+  "l03-11": {
+   "voice": "rolando",
+   "text": "That's right. Five decks up. Come on, let's take your bag to your cabin.",
+   "es": "Así es. Cinco cubiertas más arriba. Vamos, llevemos tu bolso al camarote."
+  },
+  "w-deck": {
+   "voice": "model",
+   "text": "deck"
+  },
+  "w-cabin": {
+   "voice": "model",
+   "text": "cabin"
+  },
+  "w-mess": {
+   "voice": "model",
+   "text": "mess room"
+  },
+  "w-galley": {
+   "voice": "model",
+   "text": "galley"
+  },
+  "w-laundry": {
+   "voice": "model",
+   "text": "laundry"
+  },
+  "w-engine": {
+   "voice": "model",
+   "text": "engine room"
+  },
+  "w-stairs": {
+   "voice": "model",
+   "text": "stairs"
+  },
+  "w-lift": {
+   "voice": "model",
+   "text": "lift"
+  },
+  "x-deck": {
+   "voice": "model",
+   "text": "My cabin is on C-deck.",
+   "es": "Mi camarote está en la cubierta C."
+  },
+  "x-cabin": {
+   "voice": "model",
+   "text": "Your cabin is three decks up.",
+   "es": "Tu camarote está tres cubiertas más arriba."
+  },
+  "x-mess": {
+   "voice": "model",
+   "text": "We eat in the mess room.",
+   "es": "Comemos en el comedor."
+  },
+  "x-galley": {
+   "voice": "model",
+   "text": "The cook is in the galley.",
+   "es": "El cocinero está en la cocina."
+  },
+  "x-laundry": {
+   "voice": "model",
+   "text": "The laundry is next to the galley.",
+   "es": "La lavandería está al lado de la cocina."
+  },
+  "x-engine": {
+   "voice": "model",
+   "text": "The engine room is below the main deck.",
+   "es": "La sala de máquinas está debajo de la cubierta principal."
+  },
+  "x-stairs": {
+   "voice": "model",
+   "text": "Take the stairs.",
+   "es": "Tomá las escaleras."
+  },
+  "x-lift": {
+   "voice": "model",
+   "text": "There's a lift.",
+   "es": "Hay un ascensor."
+  },
+  "p-where": {
+   "voice": "model",
+   "text": "Where's the mess room?",
+   "es": "¿Dónde está el comedor?"
+  },
+  "p-up": {
+   "voice": "model",
+   "text": "It's one deck up.",
+   "es": "Está una cubierta más arriba."
+  },
+  "p-down": {
+   "voice": "model",
+   "text": "It's two decks down.",
+   "es": "Está dos cubiertas más abajo."
+  },
+  "p-lift": {
+   "voice": "model",
+   "text": "Is there a lift?",
+   "es": "¿Hay ascensor?"
+  },
+  "c-show-laundry": {
+   "voice": "rolando",
+   "text": "Show me the laundry."
+  },
+  "c-where-galley": {
+   "voice": "rolando",
+   "text": "Where's the galley?"
+  },
+  "c-show-engine": {
+   "voice": "rolando",
+   "text": "Show me the engine room."
+  },
+  "c-where-mess": {
+   "voice": "rolando",
+   "text": "Where's the mess room?"
+  },
+  "c-where-cabin": {
+   "voice": "rolando",
+   "text": "Where's your cabin?"
+  },
+  "c-office": {
+   "voice": "tanya",
+   "text": "The ship's office is on A-deck."
+  },
+  "c-show-lift": {
+   "voice": "tanya",
+   "text": "Show me the lift."
+  },
+  "c-show-stairs": {
+   "voice": "tanya",
+   "text": "Where are the stairs?"
+  },
+  "c-how-up": {
+   "voice": "tanya",
+   "text": "How many decks up is the bridge?"
+  },
+  "c-where-er": {
+   "voice": "tanya",
+   "text": "Where's the engine room?"
+  },
+  "c-hospital": {
+   "voice": "tanya",
+   "text": "The hospital is on B-deck, two decks up."
+  },
+  "m-two-mess": {
+   "voice": "model",
+   "text": "There are two mess rooms.",
+   "es": "Hay dos comedores."
+  },
+  "m-three-up": {
+   "voice": "model",
+   "text": "My cabin is three decks up.",
+   "es": "Mi camarote está tres cubiertas más arriba."
+  },
+  "m-cdeck": {
+   "voice": "model",
+   "text": "It's on C-deck.",
+   "es": "Está en la cubierta C."
+  },
+  "m-below": {
+   "voice": "model",
+   "text": "It's below the main deck.",
+   "es": "Está debajo de la cubierta principal."
+  },
+  "m-five-up": {
+   "voice": "model",
+   "text": "It's five decks up.",
+   "es": "Está cinco cubiertas más arriba."
+  },
+  "m-galley-md": {
+   "voice": "model",
+   "text": "It's on the main deck.",
+   "es": "Está en la cubierta principal."
+  }
+ },
+ "dialogue": [
+  "l03-01",
+  "l03-02",
+  "l03-03",
+  "l03-04",
+  "l03-05",
+  "l03-06",
+  "l03-07",
+  "l03-08",
+  "l03-09",
+  "l03-10",
+  "l03-11"
+ ],
+ "words": {
+  "deck": {
+   "en": "deck",
+   "ipa": "/dek/",
+   "es": "cubierta (cada piso del buque)",
+   "audio": "w-deck",
+   "ex": "x-deck"
+  },
+  "cabin": {
+   "en": "cabin",
+   "ipa": "/ˈkæbɪn/",
+   "es": "camarote",
+   "audio": "w-cabin",
+   "ex": "x-cabin"
+  },
+  "mess": {
+   "en": "mess room",
+   "ipa": "/ˈmes ruːm/",
+   "es": "comedor",
+   "audio": "w-mess",
+   "ex": "x-mess"
+  },
+  "galley": {
+   "en": "galley",
+   "ipa": "/ˈɡæli/",
+   "es": "cocina (del buque)",
+   "audio": "w-galley",
+   "ex": "x-galley"
+  },
+  "laundry": {
+   "en": "laundry",
+   "ipa": "/ˈlɔːndri/",
+   "es": "lavandería",
+   "audio": "w-laundry",
+   "ex": "x-laundry"
+  },
+  "engine": {
+   "en": "engine room",
+   "ipa": "/ˈendʒɪn ruːm/",
+   "es": "sala de máquinas",
+   "audio": "w-engine",
+   "ex": "x-engine"
+  },
+  "stairs": {
+   "en": "stairs",
+   "ipa": "/steəz/",
+   "es": "escaleras",
+   "audio": "w-stairs",
+   "ex": "x-stairs"
+  },
+  "lift": {
+   "en": "lift",
+   "ipa": "/lɪft/",
+   "es": "ascensor",
+   "audio": "w-lift",
+   "ex": "x-lift"
+  }
+ },
+ "plate": {
+  "svg": "img/l03/plate.svg",
+  "pins": [
+   {
+    "word": "galley",
+    "x": 136,
+    "y": 165
+   },
+   {
+    "word": "laundry",
+    "x": 214,
+    "y": 165
+   },
+   {
+    "word": "mess",
+    "x": 205,
+    "y": 136
+   },
+   {
+    "word": "cabin",
+    "x": 130,
+    "y": 87
+   },
+   {
+    "word": "engine",
+    "x": 220,
+    "y": 204
+   },
+   {
+    "word": "lift",
+    "x": 231,
+    "y": 113
+   },
+   {
+    "word": "stairs",
+    "x": 280,
+    "y": 139
+   }
   ]
+ },
+ "docs": {
+  "directory": {
+   "kind": "form",
+   "title": "ACCOMMODATION PLAN",
+   "subtitle": "M/V LNG HORIZON",
+   "table": {
+    "head": [
+     "DECK",
+     "SPACES"
+    ],
+    "rows": [
+     [
+      "BRIDGE",
+      "Wheelhouse, chart area"
+     ],
+     [
+      "D-DECK",
+      "Master, Chief Engineer, Chief Officer"
+     ],
+     [
+      "C-DECK",
+      "Officers' cabins, cadet cabin"
+     ],
+     [
+      "B-DECK",
+      "Crew cabins, hospital"
+     ],
+     [
+      "A-DECK",
+      "Officers' mess, crew mess, ship's office"
+     ],
+     [
+      "MAIN DECK",
+      "Galley, laundry, changing room"
+     ],
+     [
+      "BELOW MAIN DECK",
+      "Engine room, engine control room"
+     ]
+    ]
+   }
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: going inside",
+   "skill": "Listening",
+   "min": 4,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l03/scene.jpg",
+     "kicker": "Day 1 · 09:30 · Houston",
+     "title": "Inside the accommodation",
+     "body": "Rolando takes Diego inside. Diego wants to know where everything is, and how far he has to carry his bag. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l03-01"
+     ],
+     "q": "What is next to the galley?",
+     "opts": [
+      "The laundry",
+      "The mess room",
+      "The engine room"
+     ],
+     "a": 0,
+     "why": "\"…and the laundry is next to it.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l03-02",
+      "l03-03"
+     ],
+     "q": "How many mess rooms are there?",
+     "opts": [
+      "Two",
+      "One",
+      "Three"
+     ],
+     "a": 0,
+     "why": "\"There are two mess rooms.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l03-04",
+      "l03-05"
+     ],
+     "q": "Where is Diego's cabin?",
+     "opts": [
+      "On C-deck, three decks up",
+      "On A-deck, one deck up",
+      "On D-deck, four decks up"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l03-06",
+      "l03-07"
+     ],
+     "q": "Is there a lift?",
+     "opts": [
+      "Yes, but they usually take the stairs",
+      "No, so they always take the stairs",
+      "Yes, and they always take the lift"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l03-08",
+      "l03-09"
+     ],
+     "q": "Where is the engine room?",
+     "opts": [
+      "Below the main deck",
+      "Next to the galley",
+      "On A-deck"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l03-10",
+      "l03-11"
+     ],
+     "q": "How many decks up is the bridge?",
+     "opts": [
+      "Five",
+      "Three",
+      "Two"
+     ],
+     "a": 0,
+     "why": "\"Five decks up.\""
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole walk",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Find the spaces",
+   "skill": "Vocabulary",
+   "min": 5,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The accommodation, cut open. The main deck is at the bottom."
+    },
+    {
+     "type": "card",
+     "word": "deck"
+    },
+    {
+     "type": "card",
+     "word": "cabin"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"camarote\" in English:",
+     "opts": [
+      "cabin",
+      "deck",
+      "lift"
+     ],
+     "a": 0
+    },
+    {
+     "type": "card",
+     "word": "mess"
+    },
+    {
+     "type": "card",
+     "word": "galley"
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "On a ship, a floor is a deck",
+     "paras": [
+      "The levels of a ship are <b>decks</b>, not floors. Say <b>on C-deck</b>, <b>two decks up</b>.",
+      "And the kitchen is the <b>galley</b>. Kitchen is for houses."
+     ],
+     "avoid": "my cabin is on the third floor"
+    },
+    {
+     "type": "card",
+     "word": "laundry"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-laundry",
+     "a": "laundry"
+    },
+    {
+     "type": "card",
+     "word": "engine"
+    },
+    {
+     "type": "card",
+     "word": "stairs"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-engine",
+     "a": "engine"
+    },
+    {
+     "type": "card",
+     "word": "lift"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-stairs",
+     "a": "stairs"
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "galley",
+       "cocina"
+      ],
+      [
+       "mess room",
+       "comedor"
+      ],
+      [
+       "cabin",
+       "camarote"
+      ],
+      [
+       "engine room",
+       "sala de máquinas"
+      ],
+      [
+       "lift",
+       "ascensor"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "One deck up",
+   "skill": "Phrases",
+   "min": 4,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Asking where things are",
+     "list": [
+      [
+       "Where's the mess room?",
+       "¿Dónde está el comedor?",
+       "p-where"
+      ],
+      [
+       "It's one deck up.",
+       "Está una cubierta más arriba.",
+       "p-up"
+      ],
+      [
+       "It's two decks down.",
+       "Está dos cubiertas más abajo.",
+       "p-down"
+      ],
+      [
+       "Is there a lift?",
+       "¿Hay ascensor?",
+       "p-lift"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "\"Hay\" is there is / there are",
+     "steps": [
+      [
+       "One",
+       "There's a lift. · Is there a lift?"
+      ],
+      [
+       "More",
+       "There are two mess rooms."
+      ],
+      [
+       "No",
+       "There isn't a gym."
+      ]
+     ],
+     "avoid": "Have a lift? · There is two mess rooms."
+    },
+    {
+     "type": "choice",
+     "q": "There ___ two mess rooms.",
+     "opts": [
+      "are",
+      "is",
+      "have"
+     ],
+     "a": 0,
+     "why": "Two = there are."
+    },
+    {
+     "type": "choice",
+     "q": "___ there a lift?",
+     "opts": [
+      "Is",
+      "Are",
+      "Have"
+     ],
+     "a": 0,
+     "why": "One lift = is there."
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Up, down and below",
+     "steps": [
+      [
+       "Up",
+       "one deck up · three decks up"
+      ],
+      [
+       "Down",
+       "two decks down"
+      ],
+      [
+       "Under",
+       "below the main deck"
+      ]
+     ],
+     "paras": [
+      "The number comes first, then <b>deck</b> or <b>decks</b>, then <b>up</b> or <b>down</b>."
+     ],
+     "avoid": "three deck up · up three decks"
+    },
+    {
+     "type": "choice",
+     "q": "My cabin is three ___ up.",
+     "opts": [
+      "decks",
+      "deck",
+      "floors"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "cue": "c-where-mess",
+     "q": "Answer Rolando.",
+     "a": [
+      "It's",
+      "one",
+      "deck",
+      "up."
+     ],
+     "extra": [
+      "floor",
+      "decks",
+      "is"
+     ]
+    },
+    {
+     "type": "build",
+     "situation": "You have a heavy bag and you're on the main deck.",
+     "q": "Ask if there's a lift.",
+     "a": [
+      "Is",
+      "there",
+      "a",
+      "lift?"
+     ],
+     "extra": [
+      "have",
+      "are",
+      "the"
+     ]
+    },
+    {
+     "type": "choice",
+     "cue": "c-office",
+     "q": "Which deck is the ship's office on?",
+     "opts": [
+      "A-deck",
+      "C-deck",
+      "The main deck"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the accommodation plan",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "directory",
+     "q": "Where is the hospital?",
+     "opts": [
+      "B-deck",
+      "D-deck",
+      "Main deck"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "directory",
+     "q": "Which deck is the Master's cabin on?",
+     "opts": [
+      "D-deck",
+      "C-deck",
+      "A-deck"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "directory",
+     "q": "Tap the deck where Diego's cabin is.",
+     "a": 2,
+     "why": "The cadet cabin is on C-deck."
+    },
+    {
+     "type": "doc",
+     "doc": "directory",
+     "q": "Where can Diego eat?",
+     "opts": [
+      "A-deck",
+      "B-deck",
+      "The bridge"
+     ],
+     "a": 0,
+     "why": "The mess rooms are on A-deck."
+    },
+    {
+     "type": "doc",
+     "doc": "directory",
+     "q": "The engine control room is…",
+     "opts": [
+      "below the main deck",
+      "on the bridge",
+      "next to the hospital"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Say where it is",
+   "skill": "Speaking",
+   "min": 4,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Up and down, out loud",
+     "body": "Listen, say it, check it. Remember: deck, not floor.",
+     "es": "Acordate: deck, no floor.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "m-two-mess"
+    },
+    {
+     "type": "shadow",
+     "model": "m-three-up"
+    },
+    {
+     "type": "shadow",
+     "model": "p-lift"
+    },
+    {
+     "type": "role",
+     "cue": "c-where-cabin",
+     "task": "Answer: on C-deck.",
+     "model": "m-cdeck",
+     "accept": [
+      "On C-deck.",
+      "It's on C deck.",
+      "My cabin is on C-deck.",
+      "It's three decks up."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-where-er",
+     "task": "Answer: below the main deck.",
+     "model": "m-below",
+     "accept": [
+      "Below the main deck.",
+      "The engine room is below the main deck."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-how-up",
+     "task": "Answer: five.",
+     "model": "m-five-up",
+     "accept": [
+      "Five decks up.",
+      "Five.",
+      "The bridge is five decks up."
+     ]
+    },
+    {
+     "type": "role",
+     "situation": "You want to know where everyone eats.",
+     "task": "Ask where the mess room is.",
+     "model": "p-where",
+     "accept": [
+      "Where is the mess room?",
+      "Where's the mess room, please?"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-galley",
+     "q": "Type what you hear.",
+     "accept": [
+      "galley"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "w-stairs",
+     "q": "Type what you hear.",
+     "accept": [
+      "stairs"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-lift",
+     "a": "lift"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-laundry",
+     "a": "laundry"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-hospital"
+     ],
+     "q": "Where is the hospital?",
+     "opts": [
+      "B-deck",
+      "A-deck",
+      "D-deck"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "\"la cocina\" of a ship in English:",
+     "opts": [
+      "the galley",
+      "the kitchen",
+      "the mess room"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The bridge is five ___ up.",
+     "opts": [
+      "decks",
+      "floors",
+      "deck"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "cue": "c-where-galley",
+     "q": "Answer: on the main deck.",
+     "a": [
+      "It's",
+      "on",
+      "the",
+      "main",
+      "deck."
+     ],
+     "extra": [
+      "in",
+      "floor"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: sala de máquinas",
+     "accept": [
+      "engine room",
+      "the engine room"
+     ]
+    }
+   ]
+  }
+ ]
 }

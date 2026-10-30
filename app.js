@@ -384,19 +384,20 @@ function addPins(onPin){
 }
 
 /* ---------- docs ---------- */
-function docHTML(key){
-  const d = L.docs[key];
+function docHTML(key, tap){
+  const d = L.docs[key]; let t = 0;
+  const T = () => tap ? ` data-t="${t++}" tabindex="0" role="button"` : "";
   if (d.kind === "message") {
-    return `<div class="msg" role="figure" aria-label="Message from ${esc(d.from)}">
+    return `<div class="msg ${tap ? "tapdoc" : ""}" role="figure" aria-label="Message from ${esc(d.from)}">
       <div class="msg-from"><span class="msg-av">${esc(d.from.trim()[0])}</span><div><b>${esc(d.from)}</b><span>${esc(d.role || "")}</span></div></div>
-      <div class="bubble">${d.text.map(p => `<p>${esc(p)}</p>`).join("")}<time>${esc(d.time || "")}</time></div></div>`;
+      <div class="bubble">${d.text.map(p => `<p${T()}>${esc(p)}</p>`).join("")}<time>${esc(d.time || "")}</time></div></div>`;
   }
   /* kind: form */
-  return `<div class="doc" role="figure" aria-label="${esc(d.title)}">
+  return `<div class="doc ${tap ? "tapdoc" : ""}" role="figure" aria-label="${esc(d.title)}">
     <div class="doc-head"><b>${esc(d.title)}</b><span>${esc(d.subtitle || "")}</span></div>
-    ${d.cells ? `<div class="doc-grid">${d.cells.map(([k, v]) => `<div class="doc-cell"><small>${esc(k)}</small>${esc(v)}</div>`).join("")}</div>` : ""}
+    ${d.cells ? `<div class="doc-grid">${d.cells.map(([k, v]) => `<div class="doc-cell"${T()}><small>${esc(k)}</small>${esc(v)}</div>`).join("")}</div>` : ""}
     ${d.table ? `<div style="overflow-x:auto"><table><thead><tr>${d.table.head.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead>
-      <tbody>${d.table.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}
+      <tbody>${d.table.rows.map(r => `<tr${T()}>${r.map(c => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}
   </div>`;
 }
 
@@ -550,6 +551,23 @@ const RENDER = {
       <h2 class="prompt">${esc(sc.q)}</h2>${optsHTML(sc.opts)}`;
     if (cue) { $("#cuePlay").onclick = () => playClip(sc.cue); playClip(sc.cue); }
     wireOpts(sc);
+  },
+
+  docfind(sc, st, retry){
+    st.innerHTML = `${retry}<span class="mono kicker">Read and tap</span><h2 class="prompt" style="font-size:24px">${esc(sc.q)}</h2>${docHTML(sc.doc, true)}`;
+    setBar(`<button class="cta" disabled>Tap the document</button>`);
+    let locked = false;
+    $$("[data-t]").forEach(el => {
+      const go = () => {
+        if (locked) return; locked = true;
+        const ok = +el.dataset.t === sc.a;
+        el.classList.add(ok ? "t-right" : "t-wrong");
+        const right = document.querySelector(`[data-t="${sc.a}"]`); if (!ok && right) right.classList.add("t-right");
+        verdict(ok, ok ? "" : (right.querySelector("td, small") || right).textContent.replace(/\s+/g, " ").trim(), sc.why || (ok ? "" : "The right one is in green."));
+      };
+      el.addEventListener("click", go);
+      el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+    });
   },
 
   doc(sc, st, retry){

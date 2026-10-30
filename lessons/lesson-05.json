@@ -639,8 +639,24 @@
      "word": "channel"
     },
     {
+     "type": "choice",
+     "quick": true,
+     "q": "\"canal\" in English:",
+     "opts": [
+      "channel",
+      "VHF radio",
+      "digit"
+     ],
+     "a": 0
+    },
+    {
      "type": "card",
      "word": "callsign"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-callsign",
+     "a": "callsign"
     },
     {
      "type": "card",
@@ -651,6 +667,11 @@
      "word": "ptt"
     },
     {
+     "type": "tap",
+     "audio": "c-show-handset",
+     "a": "handset"
+    },
+    {
      "type": "card",
      "word": "volume"
     },
@@ -659,23 +680,13 @@
      "word": "spell"
     },
     {
-     "type": "card",
-     "word": "digit"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-handset",
-     "a": "handset"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-callsign",
-     "a": "callsign"
-    },
-    {
      "type": "tap",
      "audio": "c-show-ptt",
      "a": "ptt"
+    },
+    {
+     "type": "card",
+     "word": "digit"
     },
     {
      "type": "match",
@@ -928,8 +939,8 @@
      "q": "On the radio, how do you say the time 0730?",
      "opts": [
       "zero seven three zero",
-      "seven thirty",
-      "oh seven thirty"
+      "seven thirty in the morning",
+      "oh seven three oh"
      ],
      "a": 0
     },
@@ -1011,13 +1022,19 @@
      "a": 0
     },
     {
+     "type": "docfind",
+     "doc": "log",
+     "q": "Tap the message about the gas inspector.",
+     "a": 2
+    },
+    {
      "type": "doc",
      "doc": "log",
      "q": "Which side does the pilot board?",
      "opts": [
       "Starboard",
-      "Port",
-      "Aft"
+      "Port side",
+      "Aft, near the stern"
      ],
      "a": 0
     },

@@ -2,7 +2,7 @@
    Shell files are cached on install. Everything else (lessons, audio, images) is cached the
    first time it loads, so a lesson opened once with signal works later without signal.
    Bump VERSION whenever app.js / app.css / index.html change. */
-const VERSION = "eob-v10";
+const VERSION = "eob-v11";
 const SHELL = ["./", "index.html", "app.js", "app.css", "course.json", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", e => {

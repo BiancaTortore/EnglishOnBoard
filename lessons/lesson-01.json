@@ -1,197 +1,955 @@
 {
-  "n": 1,
-  "module": 1,
-  "title": "Bow, stern, port & starboard",
-  "place": "Day 1 · 08:40 · Houston, Berth 7",
-  "goal": "Say where things are on a ship: bow, stern, port, starboard, forward, aft.",
-  "images": {"hero": "img/l01/hero.jpg", "scene": "img/l01/scene.jpg"},
-  "radioChannel": "VHF",
-
-  "audio": {
-    "l01-01": {"voice": "rolando", "text": "Good morning! Are you the new deck cadet?", "es": "¡Buen día! ¿Vos sos el nuevo cadete de cubierta?"},
-    "l01-02": {"voice": "diego",   "text": "Yes, good morning. I'm Diego Martínez.", "es": "Sí, buen día. Soy Diego Martínez."},
-    "l01-03": {"voice": "rolando", "text": "I'm Rolando, the bosun. Welcome! This is the bow. The gangway is at the other end, so we have a little walk.", "es": "Soy Rolando, el contramaestre. ¡Bienvenido! Esta es la proa. La planchada está en la otra punta, así que nos toca caminar un poco."},
-    "l01-04": {"voice": "rolando", "text": "The gangway is on the port side, aft.", "es": "La planchada está por babor, a popa."},
-    "l01-05": {"voice": "diego",   "text": "Sorry, can you say that again?", "es": "Perdón, ¿puede repetirlo?"},
-    "l01-06": {"voice": "rolando", "text": "Port side. Aft. Near the stern. We're port side alongside, so this side is port.", "es": "Babor. A popa. Cerca de la popa. Estamos atracados por babor, así que este costado es babor."},
-    "l01-07": {"voice": "diego",   "text": "OK. So aft is towards the stern, and forward is towards the bow?", "es": "OK. ¿Entonces aft es hacia la popa y forward es hacia la proa?"},
-    "l01-08": {"voice": "rolando", "text": "Exactly. Bow is forward, stern is aft.", "es": "Exacto. La proa está hacia forward, la popa hacia aft."},
-    "l01-09": {"voice": "diego",   "text": "She's very long. What's that, in the middle?", "es": "Es muy largo. ¿Qué es eso, en el medio?"},
-    "l01-10": {"voice": "rolando", "text": "Amidships? That's the manifold. You'll see it a lot.", "es": "¿En el medio del buque? Es el manifold. Lo vas a ver mucho."},
-    "l01-11": {"voice": "diego",   "text": "And the starboard side is the other side, facing the water.", "es": "Y estribor es el otro costado, el que da al agua."},
-    "l01-12": {"voice": "rolando", "text": "That's right. Here we are. The gangway. Watch your step!", "es": "Así es. Llegamos. La planchada. ¡Cuidado al subir!"},
-
-    "w-bow":       {"voice": "model", "text": "bow"},
-    "w-stern":     {"voice": "model", "text": "stern"},
-    "w-port":      {"voice": "model", "text": "port side"},
-    "w-starboard": {"voice": "model", "text": "starboard side", "note": "STAR-bəd: the 'board' is weak, never 'board'"},
-    "w-forward":   {"voice": "model", "text": "forward"},
-    "w-aft":       {"voice": "model", "text": "aft", "note": "British: /ɑːft/"},
-    "w-amidships": {"voice": "model", "text": "amidships"},
-    "w-alongside": {"voice": "model", "text": "alongside"},
-
-    "x-bow":       {"voice": "model", "text": "We're at the bow.", "es": "Estamos en la proa."},
-    "x-stern":     {"voice": "model", "text": "The accommodation is at the stern.", "es": "La acomodación está en la popa."},
-    "x-port":      {"voice": "model", "text": "The gangway is on the port side.", "es": "La planchada está por babor."},
-    "x-starboard": {"voice": "model", "text": "The starboard side is facing the water.", "es": "El costado de estribor da al agua."},
-    "x-forward":   {"voice": "model", "text": "Walk forward, towards the bow.", "es": "Caminá hacia proa, hacia la proa del buque."},
-    "x-aft":       {"voice": "model", "text": "The gangway is aft.", "es": "La planchada está a popa."},
-    "x-amidships": {"voice": "model", "text": "The manifold is amidships.", "es": "El manifold está en el medio del buque."},
-    "x-alongside": {"voice": "model", "text": "We're port side alongside.", "es": "Estamos atracados por babor."},
-
-    "p-which":     {"voice": "model", "text": "Which side?", "es": "¿De qué banda?"},
-    "p-onport":    {"voice": "model", "text": "On the port side.", "es": "Por babor."},
-    "p-goaft":     {"voice": "model", "text": "Go aft. Go forward.", "es": "Vaya a popa. Vaya a proa."},
-    "p-again":     {"voice": "model", "text": "Sorry, can you say that again?", "es": "Perdón, ¿puede repetirlo?"},
-
-    "c-show-starboard": {"voice": "rolando", "text": "Show me the starboard side."},
-    "c-show-amidships": {"voice": "rolando", "text": "Where's amidships?"},
-    "c-show-aft":       {"voice": "rolando", "text": "Which way is aft?"},
-    "c-show-stern":     {"voice": "tanya",   "text": "Show me the stern."},
-    "c-show-port":      {"voice": "tanya",   "text": "Where's the port side?"},
-    "c-where-gangway":  {"voice": "rolando", "text": "Where's the gangway?"},
-    "c-where-now":      {"voice": "rolando", "text": "Where are we now?"},
-    "c-cabin":          {"voice": "rolando", "text": "Your cabin is on| deck, port side.", "note": "Two halves: the middle word is lost"},
-    "c-fwd-or-aft":     {"voice": "rolando", "text": "Is the gangway forward or aft?"},
-    "c-go-bow":         {"voice": "tanya",   "text": "Bosun, go forward to the bow, please."},
-    "c-pilot":          {"voice": "tanya",   "text": "The pilot ladder is on the starboard side."},
-
-    "m-port-aft":  {"voice": "model", "text": "Port side, aft.", "es": "Por babor, a popa."},
-    "m-starboard": {"voice": "model", "text": "The starboard side is facing the water.", "es": "El costado de estribor da al agua."},
-    "m-gangway":   {"voice": "model", "text": "It's on the port side, aft.", "es": "Está por babor, a popa."},
-    "m-its-aft":   {"voice": "model", "text": "It's aft.", "es": "Está a popa."},
-    "m-stern":     {"voice": "model", "text": "Please stop at the stern.", "es": "Por favor, pare en la popa."}
+ "n": 1,
+ "module": 1,
+ "title": "Bow, stern, port & starboard",
+ "place": "Day 1 · 08:40 · Houston, Berth 7",
+ "goal": "Say where things are on a ship: bow, stern, port, starboard, forward, aft.",
+ "images": {
+  "hero": "img/l01/hero.jpg",
+  "scene": "img/l01/scene.jpg"
+ },
+ "radioChannel": "VHF",
+ "audio": {
+  "l01-01": {
+   "voice": "rolando",
+   "text": "Good morning! Are you the new deck cadet?",
+   "es": "¡Buen día! ¿Vos sos el nuevo cadete de cubierta?"
   },
-
-  "dialogue": ["l01-01","l01-02","l01-03","l01-04","l01-05","l01-06","l01-07","l01-08","l01-09","l01-10","l01-11","l01-12"],
-
-  "words": {
-    "bow":       {"en": "bow",            "ipa": "/baʊ/",          "es": "proa",                       "audio": "w-bow",       "ex": "x-bow"},
-    "stern":     {"en": "stern",          "ipa": "/stɜːn/",        "es": "popa",                       "audio": "w-stern",     "ex": "x-stern"},
-    "port":      {"en": "port side",      "ipa": "/ˈpɔːt saɪd/",   "es": "babor",                      "audio": "w-port",      "ex": "x-port"},
-    "starboard": {"en": "starboard side", "ipa": "/ˈstɑːbəd saɪd/","es": "estribor",                   "audio": "w-starboard", "ex": "x-starboard"},
-    "amidships": {"en": "amidships",      "ipa": "/əˈmɪdʃɪps/",    "es": "en el medio del buque",      "audio": "w-amidships", "ex": "x-amidships"},
-    "forward":   {"en": "forward",        "ipa": "/ˈfɔːwəd/",      "es": "hacia proa",                 "audio": "w-forward",   "ex": "x-forward"},
-    "aft":       {"en": "aft",            "ipa": "/ɑːft/",         "es": "hacia popa",                 "audio": "w-aft",       "ex": "x-aft"},
-    "alongside": {"en": "alongside",      "ipa": "/əˌlɒŋˈsaɪd/",   "es": "atracado, con el costado al muelle", "audio": "w-alongside", "ex": "x-alongside"}
+  "l01-02": {
+   "voice": "diego",
+   "text": "Yes, good morning. I'm Diego Martínez.",
+   "es": "Sí, buen día. Soy Diego Martínez."
   },
-
-  "plate": {
-    "svg": "img/l01/plate.svg",
-    "pins": [
-      {"word": "bow",       "x": 384, "y": 113},
-      {"word": "stern",     "x": 22,  "y": 113},
-      {"word": "port",      "x": 160, "y": 66},
-      {"word": "starboard", "x": 160, "y": 160},
-      {"word": "amidships", "x": 211, "y": 113},
-      {"word": "forward",   "x": 308, "y": 205},
-      {"word": "aft",       "x": 112, "y": 205}
-    ]
+  "l01-03": {
+   "voice": "rolando",
+   "text": "I'm Rolando, the bosun. Welcome! This is the bow. The gangway is at the other end, so we have a little walk.",
+   "es": "Soy Rolando, el contramaestre. ¡Bienvenido! Esta es la proa. La planchada está en la otra punta, así que nos toca caminar un poco."
   },
-
-  "docs": {
-    "agent": {
-      "kind": "message",
-      "from": "Mike Harris",
-      "role": "Port agent · Houston",
-      "time": "07:52",
-      "text": [
-        "Good morning Diego. The taxi will take you to the terminal gate and drive along the quay.",
-        "The LNG Horizon is at Berth 7, port side alongside.",
-        "The gangway is on the port side, aft, near the stern.",
-        "The bosun will meet you on the quay. Have a good trip!"
-      ]
-    }
+  "l01-04": {
+   "voice": "rolando",
+   "text": "The gangway is on the port side, aft.",
+   "es": "La planchada está por babor, a popa."
   },
-
-  "sessions": [
-    {"id": "listen", "title": "Listen: on the quay", "skill": "Listening", "min": 4, "screens": [
-      {"type": "intro", "image": "img/l01/scene.jpg", "kicker": "Day 1 · 08:40 · Houston", "title": "Arriving at the ship",
-       "body": "Diego's taxi leaves him on the quay, next to the bow of a very long ship. Rolando, the bosun, walks over from the gangway to meet him. Listen first, one piece at a time.",
-       "es": "Escuchá primero. El texto está escondido a propósito."},
-      {"type": "listen", "audio": ["l01-01","l01-02","l01-03"], "q": "Where are Diego and Rolando now?",
-       "opts": ["At the bow", "At the stern", "At the gangway"], "a": 0, "why": "\"This is the bow.\""},
-      {"type": "listen", "audio": ["l01-04"], "q": "Where is the gangway?",
-       "opts": ["On the port side, aft", "On the starboard side, aft", "On the port side, forward"], "a": 0, "why": "\"On the port side, aft.\""},
-      {"type": "listen", "audio": ["l01-05","l01-06"], "q": "What does Diego ask Rolando to do?",
-       "opts": ["Say it again", "Carry his bag", "Walk faster"], "a": 0, "why": "\"Sorry, can you say that again?\" asks for a repeat."},
-      {"type": "listen", "audio": ["l01-07","l01-08"], "q": "Aft means…",
-       "opts": ["towards the stern", "towards the bow", "in the middle"], "a": 0, "why": "Bow is forward, stern is aft."},
-      {"type": "listen", "audio": ["l01-09","l01-10"], "q": "Amidships is…",
-       "opts": ["the middle of the ship", "the front of the ship", "the back of the ship"], "a": 0, "why": "Amidships = en el medio del buque."},
-      {"type": "listen", "audio": ["l01-11","l01-12"], "q": "Today the starboard side is…",
-       "opts": ["facing the water", "against the quay", "at the stern"], "a": 0, "why": "The ship is port side alongside, so starboard faces the water."},
-      {"type": "dialogue", "title": "Now the whole walk", "body": "Play it again. Open the text and the Spanish if you want them."}
-    ]},
-
-    {"id": "words", "title": "Find your way around the ship", "skill": "Vocabulary", "min": 5, "screens": [
-      {"type": "plate", "title": "Tap every number", "body": "The ship from above. The quay is at the top."},
-      {"type": "card", "word": "bow"},
-      {"type": "card", "word": "stern"},
-      {"type": "card", "word": "port"},
-      {"type": "card", "word": "starboard"},
-      {"type": "tip", "tag": "Spanish speaker alert", "title": "Port is babor. Starboard is estribor.",
-       "paras": ["Easy trick: <b>port</b> and <b>left</b> both have four letters. Looking forward, port is on your left.",
-                 "Say <b>STAR-bəd</b>. The second part is weak. Never <i>star-board</i>."]},
-      {"type": "card", "word": "forward"},
-      {"type": "card", "word": "aft"},
-      {"type": "card", "word": "amidships"},
-      {"type": "card", "word": "alongside"},
-      {"type": "tap", "audio": "c-show-starboard", "a": "starboard"},
-      {"type": "tap", "audio": "c-show-amidships", "a": "amidships"},
-      {"type": "tap", "audio": "c-show-aft", "a": "aft"},
-      {"type": "match", "title": "Match the pairs", "pairs": [["bow","proa"],["stern","popa"],["port side","babor"],["starboard side","estribor"],["amidships","en el medio del buque"]]}
-    ]},
-
-    {"id": "phrases", "title": "Which side?", "skill": "Phrases", "min": 4, "screens": [
-      {"type": "tip", "tag": "Useful language", "title": "Four things you say every day",
-       "list": [["Which side?","¿De qué banda?","p-which"],["On the port side.","Por babor.","p-onport"],["Go aft. Go forward.","Vaya a popa. Vaya a proa.","p-goaft"],["Sorry, can you say that again?","Perdón, ¿puede repetirlo?","p-again"]]},
-      {"type": "tip", "tag": "Language focus", "title": "On a side, at an end",
-       "steps": [["Sides","on the port side · on the starboard side"],["Ends","at the bow · at the stern"],["Middle","amidships (no word before it)"]],
-       "avoid": "in the port side"},
-      {"type": "choice", "q": "The gangway is ___ the port side.", "opts": ["on","in","at"], "a": 0, "why": "Sides take on."},
-      {"type": "choice", "q": "Diego is standing ___ the bow.", "opts": ["at","on","in"], "a": 0, "why": "Ends take at."},
-      {"type": "tip", "tag": "Language focus", "title": "Aft and forward: no \"the\", no \"to\"",
-       "paras": ["Aft and forward are directions, like <i>up</i> and <i>down</i>. They go straight after the verb."],
-       "good": "Go aft. The gangway is aft.", "avoid": "Go to the aft. The gangway is in the aft."},
-      {"type": "choice", "q": "Which one is correct?", "opts": ["Go aft.","Go to the aft.","Go in aft."], "a": 0},
-      {"type": "build", "cue": "c-where-gangway", "q": "Answer Rolando.",
-       "a": ["It's","on","the","port","side,","aft."], "extra": ["in","to"]},
-      {"type": "build", "situation": "Rolando speaks fast and you miss it.", "q": "Ask him to repeat.",
-       "a": ["Sorry,","can","you","say","that","again?"], "extra": ["what","repeat"]},
-      {"type": "choice", "cue": "c-pilot", "q": "Which side is the pilot ladder on?", "opts": ["Starboard","Port","Aft"], "a": 0, "why": "\"…on the starboard side.\""}
-    ]},
-
-    {"id": "read", "title": "Read the agent's message", "skill": "Reading", "min": 3, "screens": [
-      {"type": "doc", "doc": "agent", "q": "Which side of the ship is alongside the quay?", "opts": ["Port","Starboard","Both"], "a": 0, "why": "\"…port side alongside.\""},
-      {"type": "doc", "doc": "agent", "q": "Where is the gangway?", "opts": ["Aft, near the stern","Forward, near the bow","Amidships"], "a": 0, "why": "\"…on the port side, aft, near the stern.\""},
-      {"type": "doc", "doc": "agent", "q": "Who will meet Diego?", "opts": ["The bosun","The Captain","The agent"], "a": 0},
-      {"type": "doc", "doc": "agent", "q": "\"Port side alongside\" means…", "opts": ["the port side is against the quay","the ship is in port","the ship is at anchor"], "a": 0}
-    ]},
-
-    {"id": "speak", "title": "Say where it is", "skill": "Speaking", "min": 4, "screens": [
-      {"type": "intro", "kicker": "Speaking", "title": "Out loud, every time",
-       "body": "Listen, say it, then compare with the model. Your voice learns this, not your thumbs.",
-       "es": "Hablá en voz alta, aunque estés solo.", "button": "Start"},
-      {"type": "shadow", "model": "m-port-aft"},
-      {"type": "shadow", "model": "m-starboard"},
-      {"type": "shadow", "model": "p-again"},
-      {"type": "role", "cue": "c-where-gangway", "task": "Tell him: port side, aft.", "model": "m-gangway", "accept": ["On the port side, aft.", "Port side, aft.", "The gangway is on the port side, aft."]},
-      {"type": "role", "cue": "c-fwd-or-aft", "task": "Answer: it's aft.", "model": "m-its-aft", "accept": ["Aft.", "The gangway is aft."]},
-      {"type": "role", "cue": "c-cabin", "task": "You didn't catch it. Ask him to repeat.", "model": "p-again", "accept": ["Can you say that again?", "Could you say that again, please?", "Say again, please."]},
-      {"type": "role", "situation": "You're back in the taxi tomorrow. The driver asks where to stop.", "task": "Tell the driver to stop at the stern.", "model": "m-stern", "accept": ["Stop at the stern, please.", "Stop at the stern."]}
-    ]},
-
-    {"id": "check", "title": "Lesson check", "skill": "Review", "min": 4, "screens": [
-      {"type": "type", "audio": "w-starboard", "q": "Type what you hear.", "accept": ["starboard side","starboard"]},
-      {"type": "type", "audio": "w-amidships", "q": "Type what you hear.", "accept": ["amidships"]},
-      {"type": "tap", "audio": "c-show-stern", "a": "stern"},
-      {"type": "tap", "audio": "c-show-port", "a": "port"},
-      {"type": "listen", "audio": ["c-go-bow"], "q": "Where does the bosun go?", "opts": ["To the bow","To the stern","To the gangway"], "a": 0},
-      {"type": "choice", "q": "\"estribor\" in English:", "opts": ["starboard","port","stern"], "a": 0},
-      {"type": "choice", "q": "Mike is waiting ___ the stern.", "opts": ["at","on","in"], "a": 0},
-      {"type": "build", "cue": "c-where-now", "q": "Answer: we're at the bow.", "a": ["We're","at","the","bow."], "extra": ["on","forward","in"]},
-      {"type": "type", "q": "Write it in English: babor", "accept": ["port","port side"]}
-    ]}
+  "l01-05": {
+   "voice": "diego",
+   "text": "Sorry, can you say that again?",
+   "es": "Perdón, ¿puede repetirlo?"
+  },
+  "l01-06": {
+   "voice": "rolando",
+   "text": "Port side. Aft. Near the stern. We're port side alongside, so this side is port.",
+   "es": "Babor. A popa. Cerca de la popa. Estamos atracados por babor, así que este costado es babor."
+  },
+  "l01-07": {
+   "voice": "diego",
+   "text": "OK. So aft is towards the stern, and forward is towards the bow?",
+   "es": "OK. ¿Entonces aft es hacia la popa y forward es hacia la proa?"
+  },
+  "l01-08": {
+   "voice": "rolando",
+   "text": "Exactly. Bow is forward, stern is aft.",
+   "es": "Exacto. La proa está hacia forward, la popa hacia aft."
+  },
+  "l01-09": {
+   "voice": "diego",
+   "text": "She's very long. What's that, in the middle?",
+   "es": "Es muy largo. ¿Qué es eso, en el medio?"
+  },
+  "l01-10": {
+   "voice": "rolando",
+   "text": "Amidships? That's the manifold. You'll see it a lot.",
+   "es": "¿En el medio del buque? Es el manifold. Lo vas a ver mucho."
+  },
+  "l01-11": {
+   "voice": "diego",
+   "text": "And the starboard side is the other side, facing the water.",
+   "es": "Y estribor es el otro costado, el que da al agua."
+  },
+  "l01-12": {
+   "voice": "rolando",
+   "text": "That's right. Here we are. The gangway. Watch your step!",
+   "es": "Así es. Llegamos. La planchada. ¡Cuidado al subir!"
+  },
+  "w-bow": {
+   "voice": "model",
+   "text": "bow"
+  },
+  "w-stern": {
+   "voice": "model",
+   "text": "stern"
+  },
+  "w-port": {
+   "voice": "model",
+   "text": "port side"
+  },
+  "w-starboard": {
+   "voice": "model",
+   "text": "starboard side",
+   "note": "STAR-bəd: the 'board' is weak, never 'board'"
+  },
+  "w-forward": {
+   "voice": "model",
+   "text": "forward"
+  },
+  "w-aft": {
+   "voice": "model",
+   "text": "aft",
+   "note": "British: /ɑːft/"
+  },
+  "w-amidships": {
+   "voice": "model",
+   "text": "amidships"
+  },
+  "w-alongside": {
+   "voice": "model",
+   "text": "alongside"
+  },
+  "x-bow": {
+   "voice": "model",
+   "text": "We're at the bow.",
+   "es": "Estamos en la proa."
+  },
+  "x-stern": {
+   "voice": "model",
+   "text": "The accommodation is at the stern.",
+   "es": "La acomodación está en la popa."
+  },
+  "x-port": {
+   "voice": "model",
+   "text": "The gangway is on the port side.",
+   "es": "La planchada está por babor."
+  },
+  "x-starboard": {
+   "voice": "model",
+   "text": "The starboard side is facing the water.",
+   "es": "El costado de estribor da al agua."
+  },
+  "x-forward": {
+   "voice": "model",
+   "text": "Walk forward, towards the bow.",
+   "es": "Caminá hacia proa, hacia la proa del buque."
+  },
+  "x-aft": {
+   "voice": "model",
+   "text": "The gangway is aft.",
+   "es": "La planchada está a popa."
+  },
+  "x-amidships": {
+   "voice": "model",
+   "text": "The manifold is amidships.",
+   "es": "El manifold está en el medio del buque."
+  },
+  "x-alongside": {
+   "voice": "model",
+   "text": "We're port side alongside.",
+   "es": "Estamos atracados por babor."
+  },
+  "p-which": {
+   "voice": "model",
+   "text": "Which side?",
+   "es": "¿De qué banda?"
+  },
+  "p-onport": {
+   "voice": "model",
+   "text": "On the port side.",
+   "es": "Por babor."
+  },
+  "p-goaft": {
+   "voice": "model",
+   "text": "Go aft. Go forward.",
+   "es": "Vaya a popa. Vaya a proa."
+  },
+  "p-again": {
+   "voice": "model",
+   "text": "Sorry, can you say that again?",
+   "es": "Perdón, ¿puede repetirlo?"
+  },
+  "c-show-starboard": {
+   "voice": "rolando",
+   "text": "Show me the starboard side."
+  },
+  "c-show-amidships": {
+   "voice": "rolando",
+   "text": "Where's amidships?"
+  },
+  "c-show-aft": {
+   "voice": "rolando",
+   "text": "Which way is aft?"
+  },
+  "c-show-stern": {
+   "voice": "tanya",
+   "text": "Show me the stern."
+  },
+  "c-show-port": {
+   "voice": "tanya",
+   "text": "Where's the port side?"
+  },
+  "c-where-gangway": {
+   "voice": "rolando",
+   "text": "Where's the gangway?"
+  },
+  "c-where-now": {
+   "voice": "rolando",
+   "text": "Where are we now?"
+  },
+  "c-cabin": {
+   "voice": "rolando",
+   "text": "Your cabin is on| deck, port side.",
+   "note": "Two halves: the middle word is lost"
+  },
+  "c-fwd-or-aft": {
+   "voice": "rolando",
+   "text": "Is the gangway forward or aft?"
+  },
+  "c-go-bow": {
+   "voice": "tanya",
+   "text": "Bosun, go forward to the bow, please."
+  },
+  "c-pilot": {
+   "voice": "tanya",
+   "text": "The pilot ladder is on the starboard side."
+  },
+  "m-port-aft": {
+   "voice": "model",
+   "text": "Port side, aft.",
+   "es": "Por babor, a popa."
+  },
+  "m-starboard": {
+   "voice": "model",
+   "text": "The starboard side is facing the water.",
+   "es": "El costado de estribor da al agua."
+  },
+  "m-gangway": {
+   "voice": "model",
+   "text": "It's on the port side, aft.",
+   "es": "Está por babor, a popa."
+  },
+  "m-its-aft": {
+   "voice": "model",
+   "text": "It's aft.",
+   "es": "Está a popa."
+  },
+  "m-stern": {
+   "voice": "model",
+   "text": "Please stop at the stern.",
+   "es": "Por favor, pare en la popa."
+  },
+  "l01-13": {
+   "voice": "rolando",
+   "text": "The Captain is busy with the terminal this morning. You sign on with him this afternoon.",
+   "es": "El Capitán está ocupado con la terminal esta mañana. Firmás el embarque con él esta tarde."
+  }
+ },
+ "dialogue": [
+  "l01-01",
+  "l01-02",
+  "l01-03",
+  "l01-04",
+  "l01-05",
+  "l01-06",
+  "l01-07",
+  "l01-08",
+  "l01-09",
+  "l01-10",
+  "l01-11",
+  "l01-12",
+  "l01-13"
+ ],
+ "words": {
+  "bow": {
+   "en": "bow",
+   "ipa": "/baʊ/",
+   "es": "proa",
+   "audio": "w-bow",
+   "ex": "x-bow"
+  },
+  "stern": {
+   "en": "stern",
+   "ipa": "/stɜːn/",
+   "es": "popa",
+   "audio": "w-stern",
+   "ex": "x-stern"
+  },
+  "port": {
+   "en": "port side",
+   "ipa": "/ˈpɔːt saɪd/",
+   "es": "babor",
+   "audio": "w-port",
+   "ex": "x-port"
+  },
+  "starboard": {
+   "en": "starboard side",
+   "ipa": "/ˈstɑːbəd saɪd/",
+   "es": "estribor",
+   "audio": "w-starboard",
+   "ex": "x-starboard"
+  },
+  "amidships": {
+   "en": "amidships",
+   "ipa": "/əˈmɪdʃɪps/",
+   "es": "en el medio del buque",
+   "audio": "w-amidships",
+   "ex": "x-amidships"
+  },
+  "forward": {
+   "en": "forward",
+   "ipa": "/ˈfɔːwəd/",
+   "es": "hacia proa",
+   "audio": "w-forward",
+   "ex": "x-forward"
+  },
+  "aft": {
+   "en": "aft",
+   "ipa": "/ɑːft/",
+   "es": "hacia popa",
+   "audio": "w-aft",
+   "ex": "x-aft"
+  },
+  "alongside": {
+   "en": "alongside",
+   "ipa": "/əˌlɒŋˈsaɪd/",
+   "es": "atracado, con el costado al muelle",
+   "audio": "w-alongside",
+   "ex": "x-alongside"
+  }
+ },
+ "plate": {
+  "svg": "img/l01/plate.svg",
+  "pins": [
+   {
+    "word": "bow",
+    "x": 384,
+    "y": 113
+   },
+   {
+    "word": "stern",
+    "x": 22,
+    "y": 113
+   },
+   {
+    "word": "port",
+    "x": 160,
+    "y": 66
+   },
+   {
+    "word": "starboard",
+    "x": 160,
+    "y": 160
+   },
+   {
+    "word": "amidships",
+    "x": 211,
+    "y": 113
+   },
+   {
+    "word": "forward",
+    "x": 308,
+    "y": 205
+   },
+   {
+    "word": "aft",
+    "x": 112,
+    "y": 205
+   }
   ]
+ },
+ "docs": {
+  "agent": {
+   "kind": "message",
+   "from": "Mike Harris",
+   "role": "Port agent · Houston",
+   "time": "07:52",
+   "text": [
+    "Good morning Diego. The taxi will take you to the terminal gate and drive along the quay.",
+    "The LNG Horizon is at Berth 7, port side alongside.",
+    "The gangway is on the port side, aft, near the stern.",
+    "The bosun will meet you on the quay. Have a good trip!"
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: on the quay",
+   "skill": "Listening",
+   "min": 4,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l01/scene.jpg",
+     "kicker": "Day 1 · 08:40 · Houston",
+     "title": "Arriving at the ship",
+     "body": "Diego's taxi leaves him on the quay, next to the bow of a very long ship. Rolando, the bosun, walks over from the gangway to meet him. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l01-01",
+      "l01-02",
+      "l01-03"
+     ],
+     "q": "Where are Diego and Rolando now?",
+     "opts": [
+      "At the bow",
+      "At the stern",
+      "At the gangway"
+     ],
+     "a": 0,
+     "why": "\"This is the bow.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l01-04"
+     ],
+     "q": "Where is the gangway?",
+     "opts": [
+      "On the port side, aft",
+      "On the starboard side, aft",
+      "On the port side, forward"
+     ],
+     "a": 0,
+     "why": "\"On the port side, aft.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l01-05",
+      "l01-06"
+     ],
+     "q": "What does Diego ask Rolando to do?",
+     "opts": [
+      "Say it again",
+      "Carry his bag",
+      "Walk faster"
+     ],
+     "a": 0,
+     "why": "\"Sorry, can you say that again?\" asks for a repeat."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l01-07",
+      "l01-08"
+     ],
+     "q": "Aft means…",
+     "opts": [
+      "towards the stern",
+      "towards the bow",
+      "in the middle"
+     ],
+     "a": 0,
+     "why": "Bow is forward, stern is aft."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l01-09",
+      "l01-10"
+     ],
+     "q": "Amidships is…",
+     "opts": [
+      "the middle of the ship",
+      "the front of the ship",
+      "the back of the ship"
+     ],
+     "a": 0,
+     "why": "Amidships = en el medio del buque."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l01-11",
+      "l01-12",
+      "l01-13"
+     ],
+     "q": "Today the starboard side is…",
+     "opts": [
+      "facing the water",
+      "against the quay",
+      "at the stern"
+     ],
+     "a": 0,
+     "why": "The ship is port side alongside, so starboard faces the water."
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole walk",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Find your way around the ship",
+   "skill": "Vocabulary",
+   "min": 5,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The ship from above. The quay is at the top."
+    },
+    {
+     "type": "card",
+     "word": "bow"
+    },
+    {
+     "type": "card",
+     "word": "stern"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"popa\" in English:",
+     "opts": [
+      "stern",
+      "bow",
+      "alongside"
+     ],
+     "a": 0
+    },
+    {
+     "type": "card",
+     "word": "port"
+    },
+    {
+     "type": "card",
+     "word": "starboard"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-starboard",
+     "a": "starboard"
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Port is babor. Starboard is estribor.",
+     "paras": [
+      "Easy trick: <b>port</b> and <b>left</b> both have four letters. Looking forward, port is on your left.",
+      "Say <b>STAR-bəd</b>. The second part is weak. Never <i>star-board</i>."
+     ]
+    },
+    {
+     "type": "card",
+     "word": "forward"
+    },
+    {
+     "type": "card",
+     "word": "aft"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-aft",
+     "a": "aft"
+    },
+    {
+     "type": "card",
+     "word": "amidships"
+    },
+    {
+     "type": "card",
+     "word": "alongside"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-amidships",
+     "a": "amidships"
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "bow",
+       "proa"
+      ],
+      [
+       "stern",
+       "popa"
+      ],
+      [
+       "port side",
+       "babor"
+      ],
+      [
+       "starboard side",
+       "estribor"
+      ],
+      [
+       "amidships",
+       "en el medio del buque"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Which side?",
+   "skill": "Phrases",
+   "min": 4,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Four things you say every day",
+     "list": [
+      [
+       "Which side?",
+       "¿De qué banda?",
+       "p-which"
+      ],
+      [
+       "On the port side.",
+       "Por babor.",
+       "p-onport"
+      ],
+      [
+       "Go aft. Go forward.",
+       "Vaya a popa. Vaya a proa.",
+       "p-goaft"
+      ],
+      [
+       "Sorry, can you say that again?",
+       "Perdón, ¿puede repetirlo?",
+       "p-again"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "On a side, at an end",
+     "steps": [
+      [
+       "Sides",
+       "on the port side · on the starboard side"
+      ],
+      [
+       "Ends",
+       "at the bow · at the stern"
+      ],
+      [
+       "Middle",
+       "amidships (no word before it)"
+      ]
+     ],
+     "avoid": "in the port side"
+    },
+    {
+     "type": "choice",
+     "q": "The gangway is ___ the port side.",
+     "opts": [
+      "on",
+      "in",
+      "at"
+     ],
+     "a": 0,
+     "why": "Sides take on."
+    },
+    {
+     "type": "choice",
+     "q": "Diego is standing ___ the bow.",
+     "opts": [
+      "at",
+      "on",
+      "in"
+     ],
+     "a": 0,
+     "why": "Ends take at."
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Aft and forward: no \"the\", no \"to\"",
+     "paras": [
+      "Aft and forward are directions, like <i>up</i> and <i>down</i>. They go straight after the verb."
+     ],
+     "good": "Go aft. The gangway is aft.",
+     "avoid": "Go to the aft. The gangway is in the aft."
+    },
+    {
+     "type": "choice",
+     "q": "Which one is correct?",
+     "opts": [
+      "Go aft.",
+      "Go to the aft.",
+      "Go in aft."
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "cue": "c-where-gangway",
+     "q": "Answer Rolando.",
+     "a": [
+      "It's",
+      "on",
+      "the",
+      "port",
+      "side,",
+      "aft."
+     ],
+     "extra": [
+      "in",
+      "to"
+     ]
+    },
+    {
+     "type": "build",
+     "situation": "Rolando speaks fast and you miss it.",
+     "q": "Ask him to repeat.",
+     "a": [
+      "Sorry,",
+      "can",
+      "you",
+      "say",
+      "that",
+      "again?"
+     ],
+     "extra": [
+      "what",
+      "repeat"
+     ]
+    },
+    {
+     "type": "choice",
+     "cue": "c-pilot",
+     "q": "Which side is the pilot ladder on?",
+     "opts": [
+      "Starboard",
+      "Port side",
+      "Aft"
+     ],
+     "a": 0,
+     "why": "\"…on the starboard side.\""
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the agent's message",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "agent",
+     "q": "Which side of the ship is alongside the quay?",
+     "opts": [
+      "Port",
+      "Starboard",
+      "Both"
+     ],
+     "a": 0,
+     "why": "\"…port side alongside.\""
+    },
+    {
+     "type": "doc",
+     "doc": "agent",
+     "q": "Where is the gangway?",
+     "opts": [
+      "Aft, near the stern",
+      "Forward, near the bow",
+      "Amidships"
+     ],
+     "a": 0,
+     "why": "\"…on the port side, aft, near the stern.\""
+    },
+    {
+     "type": "docfind",
+     "doc": "agent",
+     "q": "Tap the sentence that tells you where the gangway is.",
+     "a": 2
+    },
+    {
+     "type": "doc",
+     "doc": "agent",
+     "q": "Who will meet Diego?",
+     "opts": [
+      "The bosun",
+      "The Captain",
+      "The agent"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "agent",
+     "q": "\"Port side alongside\" means…",
+     "opts": [
+      "the port side is against the quay",
+      "the ship is waiting in the port",
+      "the ship is at anchor near port"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Say where it is",
+   "skill": "Speaking",
+   "min": 4,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Out loud, every time",
+     "body": "Listen, say it, then compare with the model. Your voice learns this, not your thumbs.",
+     "es": "Hablá en voz alta, aunque estés solo.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "m-port-aft"
+    },
+    {
+     "type": "shadow",
+     "model": "m-starboard"
+    },
+    {
+     "type": "shadow",
+     "model": "p-again"
+    },
+    {
+     "type": "role",
+     "cue": "c-where-gangway",
+     "task": "Tell him: port side, aft.",
+     "model": "m-gangway",
+     "accept": [
+      "On the port side, aft.",
+      "Port side, aft.",
+      "The gangway is on the port side, aft."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-fwd-or-aft",
+     "task": "Answer: it's aft.",
+     "model": "m-its-aft",
+     "accept": [
+      "Aft.",
+      "The gangway is aft."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-cabin",
+     "task": "You didn't catch it. Ask him to repeat.",
+     "model": "p-again",
+     "accept": [
+      "Can you say that again?",
+      "Could you say that again, please?",
+      "Say again, please."
+     ]
+    },
+    {
+     "type": "role",
+     "situation": "You're back in the taxi tomorrow. The driver asks where to stop.",
+     "task": "Tell the driver to stop at the stern.",
+     "model": "m-stern",
+     "accept": [
+      "Stop at the stern, please.",
+      "Stop at the stern."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-starboard",
+     "q": "Type what you hear.",
+     "accept": [
+      "starboard side",
+      "starboard"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "w-amidships",
+     "q": "Type what you hear.",
+     "accept": [
+      "amidships"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-stern",
+     "a": "stern"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-port",
+     "a": "port"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-go-bow"
+     ],
+     "q": "Where does the bosun go?",
+     "opts": [
+      "To the bow",
+      "To the stern",
+      "To the gangway"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "\"estribor\" in English:",
+     "opts": [
+      "starboard",
+      "port side",
+      "the stern"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Mike is waiting ___ the stern.",
+     "opts": [
+      "at",
+      "on",
+      "in"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "cue": "c-where-now",
+     "q": "Answer: we're at the bow.",
+     "a": [
+      "We're",
+      "at",
+      "the",
+      "bow."
+     ],
+     "extra": [
+      "on",
+      "forward",
+      "in"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: babor",
+     "accept": [
+      "port",
+      "port side"
+     ]
+    }
+   ]
+  }
+ ]
 }
