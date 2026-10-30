@@ -84,6 +84,14 @@ Generá una sola vez la ficha de cada personaje y usala como imagen de referenci
 
 > An American woman in her mid-thirties with a General American accent. Direct, professional and crisp.
 
+## `terminal` · Houston Terminal · Operador de radio · estadounidense
+
+Solo voz.
+
+**Voz (ElevenLabs Voice Design)**
+
+> An American man in his forties with a Southern US accent, a port radio operator. Fast, routine and clear, like someone who makes the same call every day.
+
 ## `pilot` · Capt. Laurent Dubois · Práctico de Marsella · francés, 55
 
 **Ficha de cara**
