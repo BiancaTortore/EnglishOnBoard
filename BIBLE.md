@@ -16,7 +16,7 @@ Inglés marítimo para oficiales de cubierta hispanohablantes, en formato app de
 
 ## 2. La historia
 
-Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horizon**: es su primer embarque y su primer buque con tripulación internacional. El viaje dura 14 días: Houston → Golfo de México → Port Everglades → Atlántico → Marsella.
+Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horizon**: es su primer embarque y su primer buque con tripulación internacional. El viaje dura 14 días: Houston → Golfo de México → Port Everglades → Atlántico → Marsella. **El Día 1 es el 14 de marzo de 2026** (Día N = 14 de marzo + N − 1); es la fecha de embarque que figura en el crew agreement de la Lesson 6. Datos de Diego que ya salen en documentos: nacido el 12 AUG 2003, seaman's book AR047926, pasaporte AAB512304.
 
 **El arco:** en la Lesson 1 Diego está nervioso y le pide a Rolando que repita todo. En la Lesson 27, al timón, es el práctico de Marsella quien le dice "say again", y Diego repite la orden con calma. Al final el Capitán le dice: *"Well done, cadet. You'll make a good officer."* El alumno hace el mismo recorrido.
 

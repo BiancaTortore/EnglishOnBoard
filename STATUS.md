@@ -1,7 +1,7 @@
 # English on Board — estado del trabajo
 
 Leer junto con `BIBLE.md` (historia, personajes, temario de las 27 lecciones, reglas de imagen y audio).
-Actualizado: 31 oct 2026.
+Actualizado: 31 oct 2026 (Lesson 6).
 
 ## Qué es
 Web app para celular (PWA, funciona sin conexión) de inglés marítimo para oficiales de cubierta hispanohablantes.
@@ -21,12 +21,14 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 ## Hecho
 - Módulo 1 completo (L1–L5), con fotos y audios. Revisión de contenido aplicada (opciones parejas, ejercicio "Read and tap").
 - App: bienvenida, resumen de lección y de módulo, repaso de errores, ajustes (velocidad, reinicio de progreso).
+- Lesson 6 (Joining the ship) publicada: JSON, lámina, prompts y kit. **Faltan sus 2 fotos (`scene.jpg`, `hero.jpg`) y sus 29 audios** (`audio/l06/script.csv`). Mientras tanto la app usa la voz del celular.
+- `tools/kit-build.py` lee cada prompt por su encabezado (`## \`scene.jpg\``, `## \`hero.jpg\``) y las referencias de la línea "Referencias:" de `prompts.md`; la escena va primero.
 
 ## Pendiente
 1. Audio `l01-13` (Rolando: "The Captain is busy with the terminal this morning. You sign on with him this afternoon.").
 2. Test y certificado al cerrar cada módulo.
 3. Probar en iPhone/Safari.
-4. Lecciones 6–27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
+4. Lecciones 7–27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
 5. Venta: cuentas y pagos (Cloudflare D1 + Stripe, Módulo 1 gratis), landing, chequeo de marca, aclarar que no es un curso aprobado por la OMI ni certifica STCW.
 
 ## Cómo trabaja Bianca

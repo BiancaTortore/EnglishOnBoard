@@ -1,0 +1,1030 @@
+{
+ "n": 6,
+ "module": 2,
+ "title": "Joining the ship",
+ "place": "Day 1 · 15:30 · Houston, Captain's office",
+ "goal": "Introduce yourself when you join, spell your name and give your details.",
+ "images": {
+  "hero": "img/l06/hero.jpg",
+  "scene": "img/l06/scene.jpg"
+ },
+ "audio": {
+  "l06-01": {
+   "voice": "diego",
+   "text": "Good afternoon, Captain. I'm Diego Martínez, the new deck cadet.",
+   "es": "Buenas tardes, Capitán. Soy Diego Martínez, el nuevo cadete de cubierta."
+  },
+  "l06-02": {
+   "voice": "lars",
+   "text": "Ah, the cadet! Come in, sit down. Welcome on board.",
+   "es": "¡Ah, el cadete! Pasá, sentate. Bienvenido a bordo."
+  },
+  "l06-03": {
+   "voice": "diego",
+   "text": "Thank you, sir. The bosun said I sign on with you this afternoon.",
+   "es": "Gracias, señor. El contramaestre me dijo que firmo el embarque con usted esta tarde."
+  },
+  "l06-04": {
+   "voice": "lars",
+   "text": "That's right. Is this your first ship?",
+   "es": "Así es. ¿Es tu primer barco?"
+  },
+  "l06-05": {
+   "voice": "diego",
+   "text": "Yes, it's my first ship.",
+   "es": "Sí, es mi primer barco."
+  },
+  "l06-06": {
+   "voice": "lars",
+   "text": "Everybody has a first ship. OK, this is the crew agreement. Your passport and your seaman's book, please.",
+   "es": "Todos tienen un primer barco. Bueno, este es el rol. Tu pasaporte y tu libreta de embarco, por favor."
+  },
+  "l06-07": {
+   "voice": "diego",
+   "text": "Here you are.",
+   "es": "Acá tiene."
+  },
+  "l06-08": {
+   "voice": "lars",
+   "text": "So, you're joining as deck cadet. Your surname… how do you spell it?",
+   "es": "Entonces embarcás como cadete de cubierta. Tu apellido… ¿cómo se deletrea?"
+  },
+  "l06-09": {
+   "voice": "diego",
+   "text": "Mike, Alfa, Romeo, Tango, India, November, Echo, Zulu. Martínez.",
+   "es": "M-A-R-T-I-N-E-Z. Martínez."
+  },
+  "l06-10": {
+   "voice": "lars",
+   "text": "With a Z. Good. Nationality, Argentine. Date of birth… the twelfth of August, two thousand and four.",
+   "es": "Con Z. Bien. Nacionalidad, argentina. Fecha de nacimiento… doce de agosto de dos mil cuatro."
+  },
+  "l06-11": {
+   "voice": "diego",
+   "text": "Sorry, Captain. Two thousand and three.",
+   "es": "Perdón, Capitán. Dos mil tres.",
+   "note": "Stress on THREE: he is correcting the Captain."
+  },
+  "l06-12": {
+   "voice": "lars",
+   "text": "Three. You're right, I need new glasses. Now, your seaman's book number. Read it to me, please.",
+   "es": "Tres. Tenés razón, necesito anteojos nuevos. Ahora, el número de tu libreta. Leémelo, por favor."
+  },
+  "l06-13": {
+   "voice": "diego",
+   "text": "Alfa Romeo, zero, four, seven, nine, two, six.",
+   "es": "A-R, cero, cuatro, siete, nueve, dos, seis."
+  },
+  "l06-14": {
+   "voice": "lars",
+   "text": "AR zero four seven nine two six. Good. Sign here, please.",
+   "es": "AR cero cuatro siete nueve dos seis. Bien. Firmá acá, por favor."
+  },
+  "l06-15": {
+   "voice": "diego",
+   "text": "Here?",
+   "es": "¿Acá?"
+  },
+  "l06-16": {
+   "voice": "lars",
+   "text": "Yes, next to your name. Right, you're signed on. The Chief Officer will meet you in your cabin later, for your safety kit.",
+   "es": "Sí, al lado de tu nombre. Listo, ya estás enrolado. La Primera Oficial te va a ver en tu camarote más tarde, por tu equipo de seguridad."
+  },
+  "l06-17": {
+   "voice": "diego",
+   "text": "Thank you, Captain.",
+   "es": "Gracias, Capitán."
+  },
+  "w-crew": {
+   "voice": "model",
+   "text": "crew agreement"
+  },
+  "x-crew": {
+   "voice": "model",
+   "text": "This is the crew agreement.",
+   "es": "Este es el rol."
+  },
+  "w-signon": {
+   "voice": "model",
+   "text": "to sign on"
+  },
+  "x-signon": {
+   "voice": "model",
+   "text": "I sign on this afternoon.",
+   "es": "Firmo el embarque esta tarde."
+  },
+  "w-surname": {
+   "voice": "model",
+   "text": "surname"
+  },
+  "x-surname": {
+   "voice": "model",
+   "text": "My surname is Martínez.",
+   "es": "Mi apellido es Martínez."
+  },
+  "w-dob": {
+   "voice": "model",
+   "text": "date of birth"
+  },
+  "x-dob": {
+   "voice": "model",
+   "text": "What's your date of birth?",
+   "es": "¿Cuál es tu fecha de nacimiento?"
+  },
+  "w-nationality": {
+   "voice": "model",
+   "text": "nationality"
+  },
+  "x-nationality": {
+   "voice": "model",
+   "text": "Nationality: Argentine.",
+   "es": "Nacionalidad: argentina."
+  },
+  "w-passport": {
+   "voice": "model",
+   "text": "passport"
+  },
+  "x-passport": {
+   "voice": "model",
+   "text": "Your passport, please.",
+   "es": "Tu pasaporte, por favor."
+  },
+  "w-book": {
+   "voice": "model",
+   "text": "seaman's book"
+  },
+  "x-book": {
+   "voice": "model",
+   "text": "My seaman's book is in my bag.",
+   "es": "Mi libreta está en mi bolso."
+  },
+  "w-signature": {
+   "voice": "model",
+   "text": "signature"
+  },
+  "x-signature": {
+   "voice": "model",
+   "text": "Your signature goes here.",
+   "es": "Tu firma va acá."
+  },
+  "p-new": {
+   "voice": "model",
+   "text": "I'm the new deck cadet.",
+   "es": "Soy el nuevo cadete de cubierta."
+  },
+  "p-joining": {
+   "voice": "model",
+   "text": "I'm joining as deck cadet.",
+   "es": "Embarco como cadete de cubierta."
+  },
+  "p-here": {
+   "voice": "model",
+   "text": "Here you are.",
+   "es": "Acá tiene."
+  },
+  "p-signhere": {
+   "voice": "model",
+   "text": "Sign here, please.",
+   "es": "Firmá acá, por favor."
+  },
+  "m-intro": {
+   "voice": "model",
+   "text": "I'm Diego Martínez, the new deck cadet.",
+   "es": "Soy Diego Martínez, el nuevo cadete de cubierta."
+  },
+  "m-spell": {
+   "voice": "model",
+   "text": "Mike, Alfa, Romeo, Tango, India, November, Echo, Zulu.",
+   "es": "M-A-R-T-I-N-E-Z."
+  },
+  "m-three": {
+   "voice": "model",
+   "text": "No, two thousand and three.",
+   "es": "No, dos mil tres."
+  },
+  "m-joining-no": {
+   "voice": "model",
+   "text": "No, I'm joining as deck cadet.",
+   "es": "No, embarco como cadete de cubierta."
+  },
+  "c-show-surname": {
+   "voice": "lars",
+   "text": "Show me your surname."
+  },
+  "c-show-dob": {
+   "voice": "tanya",
+   "text": "Where's your date of birth?"
+  },
+  "c-show-book": {
+   "voice": "lars",
+   "text": "Show me your seaman's book."
+  },
+  "c-show-passport": {
+   "voice": "tanya",
+   "text": "Where's your passport?"
+  },
+  "c-show-nationality": {
+   "voice": "lars",
+   "text": "Show me your nationality."
+  },
+  "c-book-other": {
+   "voice": "tanya",
+   "text": "My seaman's book number is Golf Bravo, three, one, eight, five, zero, four."
+  },
+  "c-andyou": {
+   "voice": "lars",
+   "text": "Come in. And you are…?"
+  },
+  "c-spell-surname": {
+   "voice": "lars",
+   "text": "How do you spell your surname?"
+  },
+  "c-dob-wrong": {
+   "voice": "lars",
+   "text": "Date of birth: the twelfth of August, two thousand and four."
+  },
+  "c-thirdoff": {
+   "voice": "tanya",
+   "text": "Hello! Are you the new Third Officer?"
+  },
+  "c-job": {
+   "voice": "tanya",
+   "text": "So, what's your job on board?"
+  },
+  "c-passport-other": {
+   "voice": "james",
+   "text": "My passport number is Papa Kilo, four, eight, one, three, six, two."
+  }
+ },
+ "dialogue": [
+  "l06-01",
+  "l06-02",
+  "l06-03",
+  "l06-04",
+  "l06-05",
+  "l06-06",
+  "l06-07",
+  "l06-08",
+  "l06-09",
+  "l06-10",
+  "l06-11",
+  "l06-12",
+  "l06-13",
+  "l06-14",
+  "l06-15",
+  "l06-16",
+  "l06-17"
+ ],
+ "words": {
+  "crew": {
+   "en": "crew agreement",
+   "ipa": "/ˈkruː əˌɡriːmənt/",
+   "es": "rol, contrato de enrolamiento",
+   "audio": "w-crew",
+   "ex": "x-crew"
+  },
+  "signon": {
+   "en": "to sign on",
+   "ipa": "/ˌsaɪn ˈɒn/",
+   "es": "firmar el embarque, enrolarse",
+   "audio": "w-signon",
+   "ex": "x-signon"
+  },
+  "surname": {
+   "en": "surname",
+   "ipa": "/ˈsɜːneɪm/",
+   "es": "apellido",
+   "audio": "w-surname",
+   "ex": "x-surname"
+  },
+  "dob": {
+   "en": "date of birth",
+   "ipa": "/ˌdeɪt əv ˈbɜːθ/",
+   "es": "fecha de nacimiento",
+   "audio": "w-dob",
+   "ex": "x-dob"
+  },
+  "nationality": {
+   "en": "nationality",
+   "ipa": "/ˌnæʃəˈnæləti/",
+   "es": "nacionalidad",
+   "audio": "w-nationality",
+   "ex": "x-nationality"
+  },
+  "passport": {
+   "en": "passport",
+   "ipa": "/ˈpɑːspɔːt/",
+   "es": "pasaporte",
+   "audio": "w-passport",
+   "ex": "x-passport"
+  },
+  "book": {
+   "en": "seaman's book",
+   "ipa": "/ˈsiːmənz bʊk/",
+   "es": "libreta de embarco (libreta marítima)",
+   "audio": "w-book",
+   "ex": "x-book"
+  },
+  "signature": {
+   "en": "signature",
+   "ipa": "/ˈsɪɡnətʃə/",
+   "es": "firma",
+   "audio": "w-signature",
+   "ex": "x-signature"
+  }
+ },
+ "plate": {
+  "svg": "img/l06/plate.svg",
+  "pins": [
+   {
+    "word": "crew",
+    "x": 270,
+    "y": 24
+   },
+   {
+    "word": "surname",
+    "x": 272,
+    "y": 54
+   },
+   {
+    "word": "nationality",
+    "x": 272,
+    "y": 120
+   },
+   {
+    "word": "dob",
+    "x": 272,
+    "y": 149
+   },
+   {
+    "word": "signature",
+    "x": 248,
+    "y": 192
+   },
+   {
+    "word": "passport",
+    "x": 80,
+    "y": 44
+   },
+   {
+    "word": "book",
+    "x": 84,
+    "y": 150
+   }
+  ]
+ },
+ "docs": {
+  "agreement": {
+   "kind": "form",
+   "title": "CREW AGREEMENT",
+   "subtitle": "M/V LNG HORIZON · SIGN-ON",
+   "cells": [
+    [
+     "SURNAME",
+     "Martínez"
+    ],
+    [
+     "FIRST NAME",
+     "Diego"
+    ],
+    [
+     "CAPACITY",
+     "Deck cadet"
+    ],
+    [
+     "NATIONALITY",
+     "Argentine"
+    ],
+    [
+     "DATE OF BIRTH",
+     "12 AUG 2003"
+    ],
+    [
+     "SEAMAN'S BOOK No.",
+     "AR047926"
+    ],
+    [
+     "PASSPORT No.",
+     "AAB512304"
+    ],
+    [
+     "PORT OF ENGAGEMENT",
+     "Houston"
+    ],
+    [
+     "DATE OF ENGAGEMENT",
+     "14 MAR 2026"
+    ],
+    [
+     "SIGNATURE",
+     "D. Martínez"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: signing on",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l06/scene.jpg",
+     "kicker": "Day 1 · 15:30 · Houston",
+     "title": "Diego meets the Captain",
+     "body": "At half past three Diego knocks on the Captain's door. It's time to sign on. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l06-01",
+      "l06-02",
+      "l06-03"
+     ],
+     "q": "Why is Diego in the Captain's office?",
+     "opts": [
+      "To sign on",
+      "To find his cabin",
+      "To take a message"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l06-04",
+      "l06-05",
+      "l06-06",
+      "l06-07"
+     ],
+     "q": "What does the Captain ask for?",
+     "opts": [
+      "His passport and seaman's book",
+      "His passport and his certificates",
+      "His seaman's book and a photo"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l06-08",
+      "l06-09"
+     ],
+     "q": "How do you write Diego's surname?",
+     "opts": [
+      "MARTÍNEZ",
+      "MARTÍNES",
+      "MARTÍNEX"
+     ],
+     "a": 0,
+     "why": "Echo, Zulu: with a Z."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l06-10",
+      "l06-11"
+     ],
+     "q": "What was wrong?",
+     "opts": [
+      "The year of birth",
+      "The nationality",
+      "The month of birth"
+     ],
+     "a": 0,
+     "why": "\"Two thousand and three\", not four."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l06-12",
+      "l06-13",
+      "l06-14"
+     ],
+     "q": "What is Diego's seaman's book number?",
+     "opts": [
+      "AR047926",
+      "AR047962",
+      "AR074926"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l06-15",
+      "l06-16",
+      "l06-17"
+     ],
+     "q": "Who will see Diego later?",
+     "opts": [
+      "The Chief Officer",
+      "The Second Officer",
+      "The Captain"
+     ],
+     "a": 0,
+     "why": "\"The Chief Officer will meet you in your cabin later.\""
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole meeting",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "On the Captain's desk",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The Captain's desk, seen from above."
+    },
+    {
+     "type": "card",
+     "word": "crew"
+    },
+    {
+     "type": "card",
+     "word": "signon"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"firmar el embarque\" in English:",
+     "opts": [
+      "to sign on",
+      "to sign in",
+      "to sign up"
+     ],
+     "a": 0
+    },
+    {
+     "type": "card",
+     "word": "surname"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-surname",
+     "a": "surname"
+    },
+    {
+     "type": "card",
+     "word": "dob"
+    },
+    {
+     "type": "card",
+     "word": "nationality"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-dob",
+     "a": "dob"
+    },
+    {
+     "type": "card",
+     "word": "passport"
+    },
+    {
+     "type": "card",
+     "word": "book"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-book",
+     "a": "book"
+    },
+    {
+     "type": "card",
+     "word": "signature"
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "surname",
+       "apellido"
+      ],
+      [
+       "date of birth",
+       "fecha de nacimiento"
+      ],
+      [
+       "signature",
+       "firma"
+      ],
+      [
+       "seaman's book",
+       "libreta de embarco"
+      ],
+      [
+       "to sign on",
+       "firmar el embarque"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "I'm joining as…",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Joining the ship",
+     "list": [
+      [
+       "I'm the new deck cadet.",
+       "Soy el nuevo cadete de cubierta.",
+       "p-new"
+      ],
+      [
+       "I'm joining as deck cadet.",
+       "Embarco como cadete de cubierta.",
+       "p-joining"
+      ],
+      [
+       "Here you are.",
+       "Acá tiene (al dar algo).",
+       "p-here"
+      ],
+      [
+       "Sign here, please.",
+       "Firmá acá, por favor.",
+       "p-signhere"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Say who you are",
+     "steps": [
+      [
+       "Name",
+       "I'm Diego Martínez."
+      ],
+      [
+       "The new…",
+       "I'm the new deck cadet."
+      ],
+      [
+       "Joining as…",
+       "I'm joining as deck cadet."
+      ]
+     ],
+     "paras": [
+      "When you join a ship, say your name and your job.",
+      "After <b>I'm</b>, the rank takes <b>a</b> or <b>the</b>. After <b>as</b>, the rank can go alone."
+     ],
+     "avoid": "I'm deck cadet. · I'm new deck cadet. · I'm joining like deck cadet."
+    },
+    {
+     "type": "choice",
+     "q": "I'm joining ___ Third Officer.",
+     "opts": [
+      "as",
+      "like",
+      "for"
+     ],
+     "a": 0,
+     "why": "Joining as + rank."
+    },
+    {
+     "type": "choice",
+     "q": "Which one is correct?",
+     "opts": [
+      "I'm the new bosun.",
+      "I'm new the bosun.",
+      "I'm the bosun new."
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "You are the new Third Officer. You arrive at the gangway.",
+     "q": "Introduce yourself.",
+     "a": [
+      "I'm",
+      "the",
+      "new",
+      "Third",
+      "Officer."
+     ],
+     "extra": [
+      "like",
+      "is"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Soy cadete ≠ I'm cadet",
+     "paras": [
+      "In Spanish you say <i>soy cadete</i>, with no article. In English the article stays: <b>I'm a cadet</b>, <b>I'm the new cadet</b>.",
+      "Nationality is not the country: <b>I'm Argentine</b>, or <b>I'm from Argentina</b>."
+     ],
+     "avoid": "I'm cadet. · I'm Argentina. · I'm from Argentine."
+    },
+    {
+     "type": "choice",
+     "q": "Diego is from Argentina. He's ___.",
+     "opts": [
+      "Argentine",
+      "Argentina",
+      "from Argentine"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Sentence stress",
+     "paras": [
+      "In a sentence, the words with the information are <b>strong and long</b>. Small words like <i>I'm, the, as, of</i> are quick.",
+      "To correct someone, stress the word that changes."
+     ],
+     "list": [
+      [
+       "I'm the NEW deck CAdet.",
+       "Soy el nuevo cadete de cubierta.",
+       "p-new"
+      ],
+      [
+       "I'm JOINing as deck CAdet.",
+       "Embarco como cadete de cubierta.",
+       "p-joining"
+      ],
+      [
+       "No, two thousand and THREE.",
+       "No, dos mil tres (no cuatro).",
+       "m-three"
+      ]
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "The Captain says \"the fourteenth of August\". It's the twelfth. You say…",
+     "opts": [
+      "No, the TWELFTH of August.",
+      "No, the twelfth of AUGUST.",
+      "NO, the twelfth of August."
+     ],
+     "a": 0,
+     "why": "Stress the word that changes: twelfth."
+    },
+    {
+     "type": "type",
+     "audio": "c-book-other",
+     "q": "Write the seaman's book number you hear.",
+     "accept": [
+      "gb318504",
+      "gb 318504"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the crew agreement",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "agreement",
+     "q": "What is Diego's surname?",
+     "opts": [
+      "Martínez",
+      "Diego",
+      "Argentine"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "agreement",
+     "q": "Where did Diego sign on?",
+     "opts": [
+      "Houston",
+      "Buenos Aires",
+      "Marseille"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "agreement",
+     "q": "Tap Diego's date of birth.",
+     "a": 4
+    },
+    {
+     "type": "doc",
+     "doc": "agreement",
+     "q": "In the form, \"capacity\" means…",
+     "opts": [
+      "his rank on board",
+      "the number of people",
+      "his cabin number"
+     ],
+     "a": 0,
+     "why": "Capacity = the job he joins as."
+    },
+    {
+     "type": "doc",
+     "doc": "agreement",
+     "q": "Which is the seaman's book number?",
+     "opts": [
+      "AR047926",
+      "AAB512304",
+      "AR047962"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Introduce yourself",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Say who you are",
+     "body": "Listen, say it, check it. Make the important words strong: the NEW deck CAdet.",
+     "es": "Las palabras importantes, fuertes. Las chiquitas, rápidas.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-new"
+    },
+    {
+     "type": "shadow",
+     "model": "p-joining"
+    },
+    {
+     "type": "shadow",
+     "model": "m-spell"
+    },
+    {
+     "type": "role",
+     "cue": "c-andyou",
+     "task": "Introduce yourself: your name and your new rank (deck cadet).",
+     "model": "m-intro",
+     "accept": [
+      "I'm Diego Martínez, the new deck cadet.",
+      "Diego Martínez, the new deck cadet.",
+      "I'm Diego Martínez. I'm the new deck cadet.",
+      "I'm Diego Martínez. I'm joining as deck cadet.",
+      "Good afternoon. I'm Diego Martínez, the new deck cadet."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-spell-surname",
+     "task": "Spell MARTÍNEZ with the phonetic alphabet.",
+     "model": "m-spell",
+     "accept": [
+      "Mike Alfa Romeo Tango India November Echo Zulu.",
+      "Mike, Alfa, Romeo, Tango, India, November, Echo, Zulu. Martínez.",
+      "Martínez. Mike, Alfa, Romeo, Tango, India, November, Echo, Zulu."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-dob-wrong",
+     "task": "It's 2003, not 2004. Correct him.",
+     "model": "m-three",
+     "accept": [
+      "No, two thousand and three.",
+      "Two thousand and three.",
+      "Sorry, two thousand and three.",
+      "Sorry, Captain. Two thousand and three.",
+      "No, it's two thousand and three."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-thirdoff",
+     "task": "No. Say you're joining as deck cadet.",
+     "model": "m-joining-no",
+     "accept": [
+      "No, I'm joining as deck cadet.",
+      "No, I'm joining as a deck cadet.",
+      "No, I'm the new deck cadet.",
+      "No, deck cadet.",
+      "No, I'm a deck cadet."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-surname",
+     "q": "Type what you hear.",
+     "accept": [
+      "surname"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-passport",
+     "a": "passport"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-nationality",
+     "a": "nationality"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l06-14",
+      "l06-15",
+      "l06-16"
+     ],
+     "q": "Where does Diego sign?",
+     "opts": [
+      "Next to his name",
+      "At the top of the page",
+      "Under the date"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Tanya asks what you do on board. You say…",
+     "opts": [
+      "I'm a deck cadet.",
+      "I'm deck cadet.",
+      "I'm cadet of deck."
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Lars is from Denmark. He's ___.",
+     "opts": [
+      "Danish",
+      "Denmark",
+      "from Danish"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "cue": "c-job",
+     "q": "Answer: deck cadet.",
+     "a": [
+      "I'm",
+      "joining",
+      "as",
+      "deck",
+      "cadet."
+     ],
+     "extra": [
+      "like",
+      "the"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-passport-other",
+     "q": "Write the passport number you hear.",
+     "accept": [
+      "pk481362",
+      "pk 481362"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: firma",
+     "accept": [
+      "signature",
+      "a signature"
+     ]
+    }
+   ]
+  }
+ ]
+}

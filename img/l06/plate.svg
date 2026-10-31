@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="The Captain's desk: crew agreement, passport and seaman's book">
+  <!-- Lesson 6 plate: the Captain's desk seen from above. Colours come from app.css (.p-*).
+       The form shows Diego's data without field labels, so the student has to recognise each item. -->
+  <rect class="p-quay" x="0" y="0" width="400" height="230"/>
+  <!-- desk edge -->
+  <rect class="p-soft" x="0" y="0" width="400" height="8" opacity=".6"/>
+
+  <!-- PASSPORT (navy cover, gold emblem) -->
+  <g transform="rotate(-6 56 76)">
+    <rect x="22" y="30" width="68" height="94" rx="4" class="p-blue"/>
+    <circle cx="56" cy="74" r="15" fill="none" style="stroke:var(--gold)" stroke-width="2"/>
+    <circle cx="56" cy="74" r="6" class="p-gold"/>
+    <rect x="38" y="46" width="36" height="3" rx="1.5" class="p-gold"/>
+    <rect x="42" y="100" width="28" height="3" rx="1.5" class="p-gold"/>
+    <rect x="46" y="107" width="20" height="2.5" rx="1.2" class="p-gold" opacity=".8"/>
+  </g>
+
+  <!-- SEAMAN'S BOOK (maroon cover, gold anchor) -->
+  <g transform="rotate(5 60 178)">
+    <rect x="22" y="136" width="76" height="80" rx="4" class="p-red"/>
+    <g fill="none" style="stroke:var(--gold)" stroke-width="2.4" stroke-linecap="round">
+      <circle cx="60" cy="158" r="4"/>
+      <path d="M60 162 V196 M50 170 H70 M46 186 Q48 198 60 198 Q72 198 74 186"/>
+    </g>
+    <rect x="40" y="205" width="40" height="3" rx="1.5" class="p-gold"/>
+  </g>
+
+  <!-- CREW AGREEMENT (paper sheet) -->
+  <rect x="122" y="16" width="168" height="208" rx="2" class="p-hull" opacity=".25"/>
+  <rect x="118" y="12" width="168" height="208" rx="2" class="p-white"/>
+  <text x="202" y="28" text-anchor="middle" style="font:600 8px var(--f-mono);letter-spacing:.14em;fill:var(--hull)">M/V LNG HORIZON</text>
+  <rect x="130" y="34" width="144" height="1.6" style="fill:var(--hull)"/>
+  <rect x="130" y="37" width="144" height=".8" style="fill:var(--hull)"/>
+  <!-- rows: grey label stubs (unreadable) + Diego's data -->
+  <g style="fill:var(--hull)" opacity=".22">
+    <rect x="130" y="52" width="28" height="4" rx="2"/>
+    <rect x="130" y="74" width="24" height="4" rx="2"/>
+    <rect x="130" y="96" width="30" height="4" rx="2"/>
+    <rect x="130" y="118" width="26" height="4" rx="2"/>
+    <rect x="130" y="140" width="30" height="4" rx="2"/>
+    <rect x="130" y="162" width="22" height="4" rx="2"/>
+    <rect x="130" y="196" width="26" height="4" rx="2"/>
+  </g>
+  <g style="stroke:var(--hull)" stroke-width=".6" opacity=".35">
+    <path d="M166 60 H262 M166 82 H262 M166 104 H262 M166 126 H262 M166 148 H262 M166 170 H262 M166 204 H262"/>
+  </g>
+  <g style="font:600 10px var(--f-mono);fill:var(--hull);letter-spacing:.04em">
+    <text x="168" y="57">MARTÍNEZ</text>
+    <text x="168" y="79">DIEGO</text>
+    <text x="168" y="101">DECK CADET</text>
+    <text x="168" y="123">ARGENTINE</text>
+    <text x="168" y="145">12 AUG 2003</text>
+    <text x="168" y="167">AR047926</text>
+  </g>
+  <!-- signature in blue ink -->
+  <path d="M170 200 c4 -12 8 -12 8 -2 c0 6 4 -10 9 -8 c4 2 -2 10 3 9 c5 -1 6 -9 11 -8 c3 1 1 6 5 5 c6 -2 10 -6 18 -4"
+        fill="none" style="stroke:var(--suit-blue)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- PEN -->
+  <g transform="rotate(32 330 150)">
+    <rect class="p-hull" x="322" y="96" width="9" height="96" rx="4"/>
+    <rect x="323" y="104" width="3" height="28" rx="1.5" class="p-gold"/>
+    <path d="M322 192 L326.5 204 L331 192 Z" class="p-gold"/>
+  </g>
+
+  <!-- the Captain's glasses -->
+  <g class="p-stroke" stroke-width="2">
+    <circle cx="322" cy="40" r="13"/><circle cx="358" cy="40" r="13"/>
+    <path d="M335 38 Q340 33 345 38 M309 36 L298 30 M371 36 L382 30"/>
+  </g>
+</svg>

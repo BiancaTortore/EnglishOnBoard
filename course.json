@@ -10,7 +10,7 @@
       {"n": 5, "title": "Letters & numbers", "ready": true}
     ]},
     {"n": 2, "title": "First days on board", "where": "Houston · Days 1–2", "lessons": [
-      {"n": 6, "title": "Joining the ship"},
+      {"n": 6, "title": "Joining the ship", "ready": true},
       {"n": 7, "title": "Cabin & safety kit"},
       {"n": 8, "title": "Life on board"},
       {"n": 9, "title": "Alarms & emergency instructions"}
