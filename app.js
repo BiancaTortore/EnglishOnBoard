@@ -31,7 +31,28 @@ const KEY = "eob-progress-v1";
 let progress = {};
 try { progress = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) {}
 function saveProgress(){ try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch (e) {} }
-function lessonProgress(n){ return progress["l"+n] || (progress["l"+n] = {done:[]}); }
+function lessonProgress(n){ return progress["l"+n] || (progress["l"+n] = {done:[], scores:{}}); }
+
+/* settings (speed) — per device */
+const SETKEY = "eob-settings-v1";
+let settings = {speed: "normal"};
+try { settings = {...settings, ...(JSON.parse(localStorage.getItem(SETKEY) || "{}") || {})}; } catch (e) {}
+function saveSettings(){ try { localStorage.setItem(SETKEY, JSON.stringify(settings)); } catch (e) {} }
+const defRate = () => settings.speed === "slow" ? .75 : 1;
+
+/* review queue: screens the learner got wrong. key = lesson|session|screen position */
+const WELCOME_KEY = "eob-welcome-v1";
+function reviewList(){ return Array.isArray(progress.review) ? progress.review : (progress.review = []); }
+function addReview(rk, type){
+  if (!rk) return; const r = reviewList();
+  if (!r.some(x => x.k === rk)) { r.push({k: rk, t: type}); saveProgress(); }
+}
+function clearReview(rk){
+  if (!rk || !Array.isArray(progress.review)) return;
+  const before = progress.review.length;
+  progress.review = progress.review.filter(x => x.k !== rk);
+  if (progress.review.length !== before) saveProgress();
+}
 
 let COURSE = null, L = null, PLATE_SVG = "";
 const pad = n => String(n).padStart(2, "0");
@@ -196,7 +217,8 @@ const I = {
   chat:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>',
   doc:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7"/></svg>',
   check:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
-  wheel:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>'
+  wheel:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>',
+  gear:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>'
 };
 const SKILL_ICON = {Listening:"ear", Vocabulary:"tag", Phrases:"chat", Reading:"doc", Speaking:"mic", Review:"check"};
 
@@ -222,8 +244,14 @@ function viewHome(){
   const isDone = l => { const p = progress["l"+l.n]; return p && p.done.length >= 6; };
   const current = all.find(l => l.ready && !isDone(l)) || all.filter(l => l.ready).pop();
   const cp = current ? lessonProgress(current.n) : null;
+  const rc = reviewList().length;
   app.innerHTML = `<div class="home">
-    <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>${esc(COURSE.title)}</h1><p>${esc(COURSE.subtitle)}</p></div></div>
+    <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>${esc(COURSE.title)}</h1><p>${esc(COURSE.subtitle)}</p></div>
+      <button class="gear" id="gear" aria-label="Settings">${I.gear}</button></div>
+    ${rc ? `<button class="review-card" id="reviewBtn">
+      <span class="mono">Review · ${rc} to fix</span>
+      <h2>Words and answers you missed</h2>
+      <span class="go">START REVIEW</span></button>` : ""}
     ${current ? `<button class="continue" data-n="${current.n}">
       <span class="mono">${cp.done.length ? "Continue" : "Start here"} · Lesson ${current.n}</span>
       <h2>${esc(current.title)}</h2>
@@ -239,9 +267,11 @@ function viewHome(){
             <span class="stop-dot">${d ? I.check : l.n}</span>
             <span class="stop-body"><span class="stop-title">${esc(l.title)}</span><span class="stop-meta">${meta}</span></span></button></li>`;
       }).join("")}</ol></section>`).join("")}
-    <p class="note">Prototype build. Progress is saved on this device.</p>
+    <p class="note">Progress is saved on this device.</p>
   </div>`;
   $$("[data-n]").forEach(b => b.onclick = () => openLesson(+b.dataset.n));
+  $("#gear").onclick = viewSettings;
+  const rb = $("#reviewBtn"); if (rb) rb.onclick = startReview;
   window.scrollTo(0, 0);
 }
 
@@ -249,7 +279,7 @@ function viewHome(){
    LESSON
    ========================================================= */
 async function openLesson(n){
-  stopAll(); clearBar();
+  stopAll(); clearBar(); markWelcomeSeen();
   app.innerHTML = `<p class="loading">Loading lesson ${n}…</p>`;
   try {
     L = await getJSON(`lessons/lesson-${pad(n)}.json`);
@@ -298,10 +328,14 @@ function viewLesson(){
 let S = null;
 function startSession(i){
   const sess = L.sessions[i];
-  S = {i, sess, queue: sess.screens.map(s => ({...s})), pos: 0, graded: 0, firstRight: 0, missed: 0};
-  app.innerHTML = `<div class="player"><div class="topbar"><button class="x" id="quit" aria-label="Close session">${I.x}</button><div class="bar"><i id="prog"></i></div></div><div class="stage" id="stage"></div></div>`;
-  $("#quit").onclick = () => { stopAll(); viewLesson(); };
+  S = {i, sess, review: false, pos: 0, graded: 0, firstRight: 0, missed: 0,
+    queue: sess.screens.map((s, j) => ({...s, ln: L.n, rk: `${L.n}|${sess.id}|${j}`}))};
+  openPlayer();
   render();
+}
+function openPlayer(){
+  app.innerHTML = `<div class="player"><div class="topbar"><button class="x" id="quit" aria-label="Close session">${I.x}</button><div class="bar"><i id="prog"></i></div></div><div class="stage" id="stage"></div></div>`;
+  $("#quit").onclick = () => { stopAll(); if (S.review) viewHome(); else viewLesson(); };
 }
 function showProgress(){ $("#prog").style.width = Math.round(S.pos / S.queue.length * 100) + "%"; }
 function next(){ stopAll(); S.pos++; if (S.pos >= S.queue.length) finish(); else render(); }
@@ -319,6 +353,7 @@ function verdict(ok, answer, why){
   const sc = S.queue[S.pos];
   if (!sc.retry) { S.graded++; if (ok) S.firstRight++; }
   if (!ok && !sc.retry) { S.queue.push({...sc, retry: true}); S.missed++; }
+  if (ok) clearReview(sc.rk); else addReview(sc.rk, sc.type);
   setBar(`<div class="verdict" role="status"><b>${ok ? "Good." : "Not quite."}</b>
     ${!ok && answer ? `<span>Answer: <strong>${esc(answer)}</strong></span>` : ""}
     ${why ? `<span>${esc(why)}</span>` : ""}
@@ -338,7 +373,7 @@ function wirePlayer(fn){
     await fn(rate);
     if (pl.isConnected) { pl.classList.remove("playing"); pl.innerHTML = I.play; pl.setAttribute("aria-label", "Play"); }
   };
-  pl.onclick = () => { if (pl.classList.contains("playing")) { stopAll(); pl.classList.remove("playing"); pl.innerHTML = I.play; } else run(1); };
+  pl.onclick = () => { if (pl.classList.contains("playing")) { stopAll(); pl.classList.remove("playing"); pl.innerHTML = I.play; } else run(defRate()); };
   $("#slow").onclick = () => { stopAll(); run(.75); };
   return run;
 }
@@ -403,6 +438,13 @@ function docHTML(key, tap){
 
 /* ---------- screens ---------- */
 function render(){
+  const sc = S.queue[S.pos];
+  if (L && L.n === sc.ln) { draw(); return; }
+  /* review mixes lessons: load the lesson this screen belongs to first */
+  const st = $("#stage"); if (st) st.innerHTML = `<p class="loading">Loading…</p>`;
+  loadLesson(sc.ln).then(draw, () => { if ($("#stage")) $("#stage").innerHTML = `<p>This lesson could not be loaded. Check your connection.</p>`; cont("Skip"); });
+}
+function draw(){
   showProgress();
   const sc = S.queue[S.pos], st = $("#stage");
   window.scrollTo(0, 0);
@@ -427,7 +469,7 @@ const RENDER = {
       <details class="hidden-text" ${canSpeak ? "" : "open"}><summary>Can't hear it? Show the text</summary><div class="transcript" style="margin-top:8px">${text}</div></details>
       <h2 class="prompt">${esc(sc.q)}</h2>${optsHTML(sc.opts)}`;
     const run = wirePlayer(rate => playSeq(ids, {rate}));
-    wireOpts(sc); run(1);
+    wireOpts(sc); run(defRate());
   },
 
   dialogue(sc, st){
@@ -501,7 +543,7 @@ const RENDER = {
       const idx = L.plate.pins.findIndex(x => x.word === sc.a) + 1;
       verdict(ok, `${idx} · ${L.words[sc.a].en}`);
     });
-    run(1);
+    run(defRate());
   },
 
   match(sc, st){
@@ -584,7 +626,7 @@ const RENDER = {
     checkBtn(() => sc.accept.some(a => norm(a) === norm($("#tf").value)), {answer: sc.accept[0], why: sc.why});
     $("#tf").oninput = () => enableCheck(!!$("#tf").value.trim());
     $("#tf").onkeydown = e => { if (e.key === "Enter" && !$("#go").disabled) $("#go").click(); };
-    if (run) run(1);
+    if (run) run(defRate());
   },
 
   shadow(sc, st, retry){ speakScreen(sc, st, retry, false); },
@@ -609,8 +651,8 @@ function speakScreen(sc, st, retry, isRole){
     <div class="reveal" id="rev" hidden><span class="mono kicker">Model answer</span><p class="say" style="font-size:24px">${esc(model.text)}</p>
       <div class="play-row"><button class="chip-btn" id="hearModel">${I.spk} Hear the model</button><button class="chip-btn" id="hearMe" hidden>${I.spk} Hear yourself</button></div>
       <p class="sub">${esc(model.es || "")}</p></div>`;
-  if (!isRole) wirePlayer(rate => playClip(sc.model, {rate}))(1);
-  else if (cue) wirePlayer(rate => playClip(sc.cue, {rate}))(1);
+  if (!isRole) wirePlayer(rate => playClip(sc.model, {rate}))(defRate());
+  else if (cue) wirePlayer(rate => playClip(sc.cue, {rate}))(defRate());
   $("#hearModel").onclick = () => playClip(sc.model);
   setBar(`<button class="cta" disabled>Say it first</button>`);
   const recordMode = msg => {
@@ -698,6 +740,7 @@ function showCheck(sc, m){
   $("#rev").hidden = false;
   info.textContent = "Tap to try again.";
   if (level === "ok") {
+    clearReview(sc.rk);
     setBar(`<div class="verdict" role="status"><b>Clear and correct.</b><span>That's what a listener on board would hear.</span></div><button class="cta" id="go">Continue</button>`, "ok");
     $("#go").onclick = next;
   } else {
@@ -705,7 +748,7 @@ function showCheck(sc, m){
     setBar(`<div class="verdict" role="status"><b>${level === "almost" ? "Almost." : "Try again."}</b><span>${msg}</span></div>
       <div class="self"><button class="opt" id="later">Continue</button><button class="cta" id="retryNow" style="flex:1">Try again</button></div>`, "bad");
     $("#retryNow").onclick = () => { setBar(`<button class="cta" disabled>Say it again</button>`); $("#mic").click(); };
-    $("#later").onclick = () => { if (!sc.retry) S.queue.push({...sc, retry: true}); next(); };
+    $("#later").onclick = () => { addReview(sc.rk, sc.type); if (!sc.retry) S.queue.push({...sc, retry: true}); next(); };
   }
 }
 
@@ -739,23 +782,159 @@ function setupMic(onDone){
 function selfRate(sc){
   setBar(`<div class="verdict"><b style="color:var(--ink)">How did it go?</b><span>Compare your version with the model.</span></div>
     <div class="self"><button class="opt" id="again">Not yet</button><button class="cta" id="gotit" style="flex:1">Got it</button></div>`);
-  $("#gotit").onclick = next;
-  $("#again").onclick = () => { if (!sc.retry) S.queue.push({...sc, retry: true}); next(); };
+  $("#gotit").onclick = () => { clearReview(sc.rk); next(); };
+  $("#again").onclick = () => { addReview(sc.rk, sc.type); if (!sc.retry) S.queue.push({...sc, retry: true}); next(); };
 }
 
 function finish(){
   stopAll();
+  if (S.review) { finishReview(); return; }
   const s = S.sess, p = lessonProgress(L.n);
   if (!p.done.includes(s.id)) p.done.push(s.id);
+  const pct = S.graded ? Math.round(S.firstRight / S.graded * 100) : null;
+  p.scores = p.scores || {};
+  if (pct !== null) p.scores[s.id] = pct;
   saveProgress();
   $("#prog").style.width = "100%";
-  const pct = S.graded ? Math.round(S.firstRight / S.graded * 100) : null;
   const nextIdx = L.sessions.findIndex(x => !p.done.includes(x.id));
   $("#stage").innerHTML = `<div class="result"><span class="mono kicker">${esc(s.skill)} · done</span>
     ${pct !== null ? `<div class="score">${pct}%</div><p style="margin:0">${S.firstRight} of ${S.graded} right the first time.${S.missed ? " The ones you missed came back once." : ""}</p>` : `<h2 class="prompt" style="font-size:40px">Session done</h2>`}
     <h2 class="prompt">${esc(s.title)}</h2></div>`;
-  setBar(`<button class="cta" id="go">${nextIdx > -1 ? "Next: " + esc(L.sessions[nextIdx].title) : "Back to the lesson"}</button>`, "ok");
-  $("#go").onclick = () => { if (nextIdx > -1) startSession(nextIdx); else viewLesson(); };
+  setBar(`<button class="cta" id="go">${nextIdx > -1 ? "Next: " + esc(L.sessions[nextIdx].title) : "Lesson summary"}</button>`, "ok");
+  $("#go").onclick = () => { if (nextIdx > -1) startSession(nextIdx); else viewLessonDone(); };
+}
+
+/* =========================================================
+   LESSON LOADING (shared by lessons and review)
+   ========================================================= */
+const LESSON_CACHE = {};
+async function loadLesson(n){
+  if (L && L.n === n) return;
+  if (!LESSON_CACHE[n]) LESSON_CACHE[n] = await getJSON(`lessons/lesson-${pad(n)}.json`);
+  L = LESSON_CACHE[n];
+  PLATE_SVG = "";
+  if (L.plate && L.plate.svg) { try { const r = await fetch(L.plate.svg); if (r.ok) PLATE_SVG = await r.text(); } catch (e) {} }
+}
+
+/* =========================================================
+   REVIEW — the screens the learner got wrong, across lessons
+   ========================================================= */
+async function startReview(){
+  stopAll(); clearBar();
+  app.innerHTML = `<p class="loading">Preparing your review…</p>`;
+  const items = [];
+  try {
+    for (const {k, t} of reviewList().slice()) {
+      const [n, sid, i] = k.split("|");
+      await loadLesson(+n);
+      const sess = L.sessions.find(x => x.id === sid), scr = sess && sess.screens[+i];
+      if (!scr || scr.type !== t) { clearReview(k); continue; }   /* the lesson changed since the miss */
+      items.push({...scr, ln: +n, rk: k});
+    }
+  } catch (e) {
+    app.innerHTML = `<div class="home"><p>The review could not be loaded. Check your connection and try again.</p><button class="cta" id="home">Back</button></div>`;
+    $("#home").onclick = viewHome; return;
+  }
+  if (!items.length) { viewHome(); return; }
+  S = {review: true, i: -1, sess: null, pos: 0, graded: 0, firstRight: 0, missed: 0, queue: items};
+  openPlayer();
+  render();
+}
+function finishReview(){
+  $("#prog").style.width = "100%";
+  const left = reviewList().length, n = new Set(S.queue.map(x => x.rk)).size;
+  $("#stage").innerHTML = `<div class="result"><span class="mono kicker">Review · done</span>
+    <h2 class="prompt" style="font-size:40px">${n} ${n === 1 ? "item" : "items"} checked</h2>
+    <p style="margin:0">${left ? `${left} still to fix. They come back next time.` : "Nothing left to fix. Well done."}</p></div>`;
+  setBar(`<button class="cta" id="go">Back to home</button>`, "ok");
+  $("#go").onclick = viewHome;
+}
+
+/* =========================================================
+   LESSON SUMMARY — after the last session of a lesson
+   ========================================================= */
+function viewLessonDone(){
+  stopAll(); clearBar(); location.hash = "l" + L.n;
+  const p = lessonProgress(L.n), scores = Object.values(p.scores || {});
+  const avg = scores.length ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null;
+  const mod = COURSE.modules.find(m => m.lessons.some(l => l.n === L.n));
+  const all = COURSE.modules.flatMap(m => m.lessons);
+  const nxt = all[all.findIndex(l => l.n === L.n) + 1];
+  const modDone = mod.lessons.every(l => { const q = progress["l" + l.n]; return q && q.done.length >= 6; });
+  const toReview = reviewList().filter(r => r.k.startsWith(L.n + "|")).length;
+  const words = Object.keys(L.words || {}).length;
+  app.innerHTML = `<div class="home lesson-done">
+    <span class="mono kicker">Lesson ${L.n} · complete</span>
+    <h2 class="done-title">${esc(L.title)}</h2>
+    <div class="done-stats">
+      <div><b>${avg !== null ? avg + "%" : "–"}</b><span>right the first time</span></div>
+      <div><b>${words}</b><span>words</span></div>
+      <div><b>${toReview}</b><span>to review</span></div>
+    </div>
+    ${modDone ? `<div class="panel module-done"><span class="mono kicker">Module ${mod.n} · complete</span><h3>${esc(mod.title)}</h3></div>` : ""}
+    ${nxt && nxt.ready ? `<button class="cta" id="nextL">Next: Lesson ${nxt.n} · ${esc(nxt.title)}</button>` : nxt ? `<p class="note">Lesson ${nxt.n} is coming soon.</p>` : ""}
+    <button class="chip-btn" id="allL" style="align-self:center">All lessons</button>
+  </div>`;
+  if ($("#nextL")) $("#nextL").onclick = () => openLesson(nxt.n);
+  $("#allL").onclick = viewHome;
+  window.scrollTo(0, 0);
+}
+
+/* =========================================================
+   WELCOME — first time only
+   ========================================================= */
+function markWelcomeSeen(){ try { localStorage.setItem(WELCOME_KEY, "1"); } catch (e) {} }
+function viewWelcome(){
+  stopAll(); clearBar(); location.hash = "";
+  app.innerHTML = `<div class="home welcome">
+    <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>English on Board</h1><p>Maritime English for deck officers</p></div></div>
+    <h2 class="welcome-title">Practice the English you use on the bridge, on deck and on the radio.</h2>
+    <p class="sub">Inglés para oficiales de cubierta: escuchar, hablar y leer lo que pasa a bordo.</p>
+    <ol class="how">
+      <li><span class="mono">Listen</span><p>Clips with the crew, the captain and the VHF. Some have static, like a real radio.</p></li>
+      <li><span class="mono">Speak</span><p>Say the lines out loud. The app checks what it hears.</p></li>
+      <li><span class="mono">Read</span><p>Find the right line in a log, a message or a crew list.</p></li>
+    </ol>
+    <p class="sub">27 short lessons in 7 modules. Your progress is saved on this phone, and the lessons work offline after the first load.</p>
+    <button class="cta" id="wStart">Start Lesson 1</button>
+    <button class="chip-btn" id="wSkip" style="align-self:center">Go to the lessons</button>
+  </div>`;
+  $("#wStart").onclick = () => { markWelcomeSeen(); openLesson(1); };
+  $("#wSkip").onclick = () => { markWelcomeSeen(); viewHome(); };
+  window.scrollTo(0, 0);
+}
+
+/* =========================================================
+   SETTINGS
+   ========================================================= */
+function viewSettings(){
+  stopAll(); clearBar(); location.hash = "";
+  const seg = (v, label) => `<button class="seg-b" data-speed="${v}" aria-pressed="${settings.speed === v}">${label}</button>`;
+  app.innerHTML = `<div class="home settings">
+    <button class="back-link" id="sBack">${I.back} Home</button>
+    <h2 class="prompt" style="font-size:36px">Settings</h2>
+    <section class="panel setting">
+      <div><b>Listening speed</b><span class="sub">Clips start at this speed. You can always tap Slower on a clip.</span></div>
+      <div class="seg" role="group" aria-label="Listening speed">${seg("normal", "Normal")}${seg("slow", "Slower")}</div>
+    </section>
+    <section class="panel setting">
+      <div><b>Introduction</b><span class="sub">Show the welcome screen again.</span></div>
+      <button class="chip-btn" id="showWelcome">Show intro</button>
+    </section>
+    <section class="panel setting">
+      <div><b>Reset progress</b><span class="sub">Clears lessons, scores and the review list on this device.</span></div>
+      <button class="chip-btn danger" id="reset">Reset progress</button>
+    </section>
+    <p class="note">English on Board · beta</p>
+  </div>`;
+  $("#sBack").onclick = viewHome;
+  $$(".seg-b").forEach(b => b.onclick = () => { settings.speed = b.dataset.speed; saveSettings(); viewSettings(); });
+  $("#showWelcome").onclick = viewWelcome;
+  let armed = false; const reset = $("#reset");
+  reset.onclick = () => {
+    if (!armed) { armed = true; reset.textContent = "Tap again to erase"; reset.classList.add("armed"); return; }
+    progress = {}; saveProgress(); viewHome();
+  };
 }
 
 /* =========================================================
@@ -766,7 +945,11 @@ function finish(){
   catch (e) { app.innerHTML = `<p class="loading">The course could not be loaded. Check your connection and reload.</p>`; return; }
   const m = /^#l(\d+)$/.exec(location.hash);
   const ready = m && COURSE.modules.some(mod => mod.lessons.some(l => l.n === +m[1] && l.ready));
-  if (ready) openLesson(+m[1]); else viewHome();
+  let fresh = false;
+  try { fresh = !localStorage.getItem(WELCOME_KEY) && Object.keys(progress).length === 0; } catch (e) {}
+  if (ready) openLesson(+m[1]);
+  else if (fresh) viewWelcome();
+  else viewHome();
   if ("serviceWorker" in navigator && location.protocol === "https:") {
     try { navigator.serviceWorker.register("sw.js").catch(() => {}); } catch (e) {}
   }
