@@ -6,5 +6,6 @@ node_modules
 tools
 BIBLE.md
 README.md
+STATUS.md
 img/**/*.md
 audio/**/*.csv
