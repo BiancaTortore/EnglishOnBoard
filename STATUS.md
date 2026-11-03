@@ -29,7 +29,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - `tools/kit-build.py` lee cada prompt por su encabezado (`## \`scene.jpg\``, `## \`hero.jpg\``) y las referencias de la línea "Referencias:" de `prompts.md`; la escena va primero.
 
 ## Pendiente
-1. Audio `l01-13` (Rolando: "The Captain is busy with the terminal this morning. You sign on with him this afternoon.").
+1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
 3. Probar en iPhone/Safari.
 4. Lecciones 7–27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
