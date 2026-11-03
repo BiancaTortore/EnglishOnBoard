@@ -382,7 +382,7 @@ function voyageHTML(cur){
     return `<g class="port ${reached ? "reached" : ""}"><circle cx="${x}" cy="${y}" r="2.6"/><text x="${pos === "w" ? tx : anc === "end" ? W - 2 : anc === "start" && pos !== "e" ? Math.max(2, x - 6) : tx}" y="${ty}" text-anchor="${anc}">${name.toUpperCase()}</text></g>`;
   }).join("");
   return `<section class="voyage" aria-label="Training voyage, Houston to Marseille: ${pct}% of the course done. Now in module ${m.n}, ${esc(m.title)}.">
-    <div class="voyage-head"><span class="mono">Houston → Marseille</span><b>${pct}%</b></div>
+    <span class="voyage-tag mono">Module ${m.n} · ${pct}% of the voyage</span>
     <svg viewBox="0 0 ${W} ${H}" role="img" aria-hidden="true">
       <rect class="sea" width="${W}" height="${H}"/>
       <g class="grid">${grid.join("")}</g>
@@ -393,8 +393,6 @@ function voyageHTML(cur){
       ${ports}
       <g class="ship" transform="translate(${sx.toFixed(1)},${sy.toFixed(1)}) rotate(${r.ang.toFixed(0)})"><circle r="9" class="halo"/><path d="M-6,-3 L4,-3 L8,0 L4,3 L-6,3 Z"/></g>
     </svg>
-    <div class="voyage-foot"><span><span class="vlabel">Now · </span>${m.n} · ${esc(m.title)}</span><span class="vcount">${done}/${total}</span></div>
-    <span class="vbar"><i style="width:${Math.max(1, pct)}%"></i></span>
   </section>`;
 }
 
@@ -404,19 +402,17 @@ function viewHome(){
   tabView("home", `
     <header class="home-hero">
       <img src="${cur ? thumb(cur.n) : ""}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
-      <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>${esc(COURSE.title)}</h1><p>${esc(COURSE.subtitle)}</p></div></div>
+      <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>${esc(COURSE.title)}</h1></div></div>
       ${cur ? `<div class="hh-body"><span class="mono">${cp.done.length ? "Current lesson" : "Start here"} · Lesson ${cur.n}</span>
         <h2>${esc(cur.title)}</h2>
         <span class="hh-meta">${esc(m.title)} · ${Math.min(cp.done.length, SESS_PER_LESSON)} of ${SESS_PER_LESSON} sessions done</span>
-        <div class="hh-actions"><button class="cta hh-go" data-n="${cur.n}">${I.play}<span>${cp.done.length ? "Continue" : "Start"}</span></button>
-          <button class="hh-quick" id="quick">${I.t_practice}<span><b>Quick practice</b><small>5 min</small></span></button></div></div>` : ""}
+        <div class="hh-actions"><button class="cta hh-go" data-n="${cur.n}">${I.play}<span>${cp.done.length ? "Continue" : "Start"}</span></button></div></div>` : ""}
     </header>
     ${voyageHTML(cur)}
-    ${rc ? `<button class="review-card" id="reviewBtn"><span class="mono">Review · ${rc} to fix</span><h2>Words and answers you missed</h2><span class="go">START REVIEW</span></button>` : ""}
+    ${rc ? `<button class="review-strip" id="reviewBtn" aria-label="Review: ${rc} to fix. Start review"><span class="mono">Review · ${rc} to fix</span><span class="go">Start review</span></button>` : ""}
     ${moduleSection(m, cur)}
     <button class="chip-btn see-all" id="seeAll">See all 7 modules</button>`);
   wireRows();
-  if ($("#quick")) $("#quick").onclick = () => startDrill("quick");
   const rb = $("#reviewBtn"); if (rb) rb.onclick = startReview;
   $("#seeAll").onclick = viewLessons;
 }

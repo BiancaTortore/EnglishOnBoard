@@ -297,6 +297,7 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
    TABS · home redesign (Nov 2026)
    ========================================================= */
 .tabview{padding-block:0 calc(96px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:20px}
+.tab-home{gap:14px}
 .tabview:not(.tab-home){padding-top:22px}
 .tab-title{font-size:36px}
 .tab-sub{margin:-12px 0 0}
@@ -311,19 +312,20 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 .tab:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
 
 /* home hero: the current lesson over its photo */
-.home-hero{position:relative;overflow:hidden;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:18px max(16px,env(safe-area-inset-left,0px)) 20px;background:var(--sea);color:#fff;display:flex;flex-direction:column;gap:30px}
+.home-hero{position:relative;overflow:hidden;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:16px max(16px,env(safe-area-inset-left,0px)) 16px;background:var(--sea);color:#fff;display:flex;flex-direction:column;gap:18px}
 .home-hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;max-width:none}
 .home-hero.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,15,22,.55),rgba(5,15,22,.35) 35%,rgba(5,15,22,.92))}
 .home-hero > *:not(img){position:relative;z-index:1}
-.home-hero .brand-mark{background:transparent;color:#FF7A45;width:38px;height:38px}
-.home-hero .brand-mark svg{width:30px;height:30px}
+.home-hero .brand-mark{background:transparent;color:#FF7A45;width:28px;height:28px}
+.home-hero .brand-mark svg{width:22px;height:22px}
+.home-hero .brand h1{font-size:22px}
 .home-hero .brand p{color:rgba(255,255,255,.8)}
 .hh-body{display:flex;flex-direction:column;gap:6px}
 .hh-body .mono{opacity:.85}
-.hh-body h2{font-size:34px;text-shadow:0 1px 8px rgba(0,0,0,.35)}
-.hh-meta{font-size:15px;opacity:.9}
+.hh-body h2{font-size:28px;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.hh-meta{font-size:14px;opacity:.9}
 .hh-actions{display:flex;gap:10px;margin-top:10px}
-.hh-go{flex:1.15;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:#FF6B35;color:#1A0A03}
+.hh-go{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:#FF6B35;color:#1A0A03}
 .hh-go svg{width:22px;height:22px}
 .hh-quick{all:unset;box-sizing:border-box;cursor:pointer;flex:1;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.35);background:rgba(8,22,32,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .hh-quick span{display:flex;flex-direction:column;line-height:1.15}
@@ -332,7 +334,8 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 .hh-quick:focus-visible{outline:3px solid #FF6B35;outline-offset:2px}
 
 /* voyage chart — a night chart of the real passage, in both themes */
-.voyage{background:#0C2230;color:#CFE0EA;border:1px solid #1D3B4E;border-radius:16px;padding:12px 12px 12px;display:flex;flex-direction:column;gap:8px}
+.voyage{position:relative;background:#0C2230;color:#CFE0EA;border:1px solid #1D3B4E;border-radius:16px;padding:8px}
+.voyage-tag{position:absolute;top:18px;left:18px;color:#FF7A45;font-size:11px;pointer-events:none}
 .voyage-head,.voyage-foot{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
 .voyage-head .mono{color:#93A6B3}
 .voyage-head b{color:#FF7A45;font-family:var(--f-display);font-size:22px;line-height:1}
@@ -408,3 +411,9 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 
 /* test result */
 .score.low{color:var(--bad)}
+
+/* compact review strip on the home screen */
+.review-strip{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--accent);border-radius:14px;padding:8px 8px 8px 14px}
+.review-strip .mono{color:var(--accent)}
+.review-strip .go{background:var(--accent);color:var(--accent-ink);border-radius:10px;padding:6px 12px;font-family:var(--f-display);font-weight:700;font-size:16px;letter-spacing:.04em;text-transform:uppercase}
+.review-strip:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
