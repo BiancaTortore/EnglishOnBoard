@@ -2,7 +2,7 @@
    Shell files are cached on install. Everything else (lessons, audio, images) is cached the
    first time it loads, so a lesson opened once with signal works later without signal.
    Bump VERSION whenever app.js / app.css / index.html change. */
-const VERSION = "eob-v17";
+const VERSION = "eob-v18";
 const SHELL = ["./", "index.html", "app.js", "app.css", "course.json", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", e => {
@@ -18,6 +18,8 @@ self.addEventListener("fetch", e => {
   const sameOrigin = url.origin === location.origin;
   const isFont = /fonts\.(googleapis|gstatic)\.com$/.test(url.hostname);
   if (!sameOrigin && !isFont) return;
+  /* the server parts are never cached */
+  if (sameOrigin && (url.pathname.startsWith("/api/") || url.pathname.startsWith("/admin"))) return;
   /* audio uses range requests: let the network handle them, fall back to cache */
   const fresh = /\.(json|js|css|html)$/.test(url.pathname) || url.pathname.endsWith("/");
   if (fresh) {

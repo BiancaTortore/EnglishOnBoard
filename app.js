@@ -228,10 +228,96 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
   onLine && onLine(null);
 }
 
+
+/* =========================================================
+   BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
+   ========================================================= */
+const APP_VERSION = "beta-18";
+const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
+const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+const PREVIEW = lsGet(PREVIEW_KEY) === "1";
+function deviceId(){ let id = lsGet(DEVICE_KEY); if (!id) { id = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2) + Date.now().toString(36)); lsSet(DEVICE_KEY, id); } return id; }
+const UA = navigator.userAgent || "";
+const isIOS = /iphone|ipad|ipod/i.test(UA) || (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1);
+const isAndroid = /android/i.test(UA);
+const platform = () => isIOS ? (/ipad/i.test(UA) || /Macintosh/.test(UA) ? "iPad" : "iPhone") : isAndroid ? "Android" : "Computer";
+const isStandalone = () => (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true;
+
+function outbox(){ try { const o = JSON.parse(lsGet(OUTBOX_KEY) || "[]"); return Array.isArray(o) ? o : []; } catch (e) { return []; } }
+function saveOutbox(o){ lsSet(OUTBOX_KEY, JSON.stringify(o.slice(-50))); }
+function enqueue(url, body){
+  let o = outbox();
+  if (url === "/api/progress") o = o.filter(x => x.url !== url);   /* only the latest snapshot matters */
+  o.push({url, body}); saveOutbox(o); flushOutbox();
+}
+let flushing = false;
+async function flushOutbox(){
+  if (flushing || !navigator.onLine || (location.protocol !== "https:" && location.hostname !== "localhost")) return;
+  flushing = true;
+  try {
+    for (const item of outbox()) {
+      let ok = false;
+      try {
+        const r = await fetch(item.url, {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify(item.body), keepalive: true});
+        ok = r.ok || (r.status >= 400 && r.status < 500);   /* a 4xx will never succeed: drop it */
+      } catch (e) {}
+      if (!ok) break;
+      saveOutbox(outbox().filter(x => !(x.url === item.url && JSON.stringify(x.body) === JSON.stringify(item.body))));
+    }
+  } finally { flushing = false; }
+}
+window.addEventListener("online", flushOutbox);
+function syncProgress(open){
+  const lessons = {};
+  Object.keys(progress).forEach(k => { const m = /^l(\d+)$/.exec(k); if (m) lessons[m[1]] = Math.min(6, (progress[k].done || []).length); });
+  const tests = {};
+  Object.entries(progress.tests || {}).forEach(([k, v]) => tests[k] = {best: v.best, passed: v.passed});
+  enqueue("/api/progress", {id: deviceId(), device: platform(), installed: isStandalone(), open: !!open, lessons, tests});
+}
+
+/* ---------- install on the phone ---------- */
+let installEvt = null;
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; $$(".install-card").forEach(c => c.outerHTML = installCardHTML(c.dataset.where)); wireInstall(); });
+window.addEventListener("appinstalled", () => { installEvt = null; $$(".install-card").forEach(c => c.remove()); syncProgress(false); });
+function installCardHTML(where){
+  if (isStandalone()) return "";
+  const head = `<div class="ic-head"><span class="ic-ico">${I.phone}</span><div><b>Install the app</b><small>Open it from your home screen, and use it without signal.</small></div></div>`;
+  if (isIOS) return `<div class="panel install-card" data-where="${where}">${head}
+    <ol class="ic-steps"><li>Tap <b>Share</b> ${I.share} at the bottom of Safari.</li><li>Choose <b>Add to Home Screen</b> ${I.plusbox}.</li><li>Tap <b>Add</b>.</li></ol></div>`;
+  if (installEvt) return `<div class="panel install-card" data-where="${where}">${head}<button class="cta ic-go">Install</button></div>`;
+  return `<div class="panel install-card" data-where="${where}">${head}
+    <ol class="ic-steps"><li>Open the browser menu <b>⋮</b>.</li><li>Choose <b>Install app</b> or <b>Add to Home screen</b>.</li></ol></div>`;
+}
+function wireInstall(){
+  $$(".ic-go").forEach(b => b.onclick = async () => {
+    if (!installEvt) return;
+    installEvt.prompt();
+    try { const r = await installEvt.userChoice; if (r && r.outcome === "accepted") { $$(".install-card").forEach(c => c.remove()); } } catch (e) {}
+    installEvt = null;
+  });
+}
+
+/* ---------- feedback ---------- */
+function sendFeedback(f){
+  enqueue("/api/feedback", {id: (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36)), device: platform(), version: APP_VERSION, ...f});
+}
+function starsHTML(){ return `<div class="stars" role="radiogroup" aria-label="Rating">${[1,2,3,4,5].map(n => `<button class="star" data-v="${n}" role="radio" aria-checked="false" aria-label="${n} of 5">${I.star}</button>`).join("")}</div>`; }
+function wireStars(root, onChange){
+  let v = 0; const bs = root.querySelectorAll(".star");
+  bs.forEach(b => b.onclick = () => { v = +b.dataset.v; bs.forEach(x => { const on = +x.dataset.v <= v; x.classList.toggle("on", on); x.setAttribute("aria-checked", String(+x.dataset.v === v)); }); onChange && onChange(v); });
+  return () => v;
+}
+
 /* =========================================================
    ICONS
    ========================================================= */
 const I = {
+  phone:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>',
+  share:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-3px"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg>',
+  plusbox:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-3px"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg>',
+  star:'<svg width="30" height="30" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-2.9-5.4 2.9 1.1-6-4.5-4.2 6.1-.8z"/></svg>',
+  msg:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>',
   down:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>',
   t_home:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5L12 4l8 6.5V20h-5v-6h-6v6H4z"/></svg>',
   t_lessons:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/></svg>',
@@ -477,6 +563,8 @@ function viewProfile(){
       <div><b>${ld}</b><span>${ld === 1 ? "lesson" : "lessons"} done</span></div><div><b>${sess}</b><span>sessions</span></div>
       <div><b>${avg}</b><span>right first time</span></div><div><b>${passed}</b><span>module ${passed === 1 ? "test" : "tests"} passed</span></div>
     </div>
+    <button class="pcard" id="fbOpen"><span class="pcard-ico">${I.msg}</span><span><b>Send feedback</b><small>Tell us what works and what to improve</small></span>${I.chev}</button>
+    ${installCardHTML("profile")}
     <section class="panel setting">
       <div><b>Listening speed</b><span class="sub">Clips start at this speed. You can always tap Slower on a clip.</span></div>
       <div class="seg" role="group" aria-label="Listening speed">${seg("normal", "Normal")}${seg("slow", "Slower")}</div>
@@ -489,7 +577,11 @@ function viewProfile(){
       <div><b>Reset progress</b><span class="sub">Clears lessons, scores, tests and the review list on this device.</span></div>
       <button class="chip-btn danger" id="reset">Reset progress</button>
     </section>
-    <p class="note">English on Board · beta</p>`);
+    ${betaNoteHTML()}
+    <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>`);
+  wireInstall();
+  $("#fbOpen").onclick = viewFeedback;
+  let taps = 0; $("#ver").onclick = () => { if (++taps >= 5) { lsSet(PREVIEW_KEY, PREVIEW ? "0" : "1"); location.reload(); } };
   $$(".seg-b").forEach(b => b.onclick = () => { settings.speed = b.dataset.speed; saveSettings(); viewProfile(); });
   $("#showWelcome").onclick = viewWelcome;
   let armed = false; const reset = $("#reset");
@@ -499,6 +591,42 @@ function viewProfile(){
   };
 }
 const viewSettings = viewProfile;
+function betaNoteHTML(){
+  return `<div class="beta-note"><span class="mono">Beta</span><p>Module 1 is open and free. The other modules are on the way.
+    English on Board is a language course: it is not approved by the IMO and does not give an STCW certificate.</p></div>`;
+}
+function viewFeedback(){
+  stopAll(); clearBar(); location.hash = "";
+  app.innerHTML = `<div class="home fb-view">
+    <button class="back-link" id="fBack">${I.back} Profile</button>
+    <h2 class="prompt" style="font-size:34px">Send feedback</h2>
+    <p class="sub" style="margin-top:-10px">Puede ser en español. It goes straight to the author.</p>
+    <section class="panel fb-form" id="fbf">
+      <label class="fb-l">Your rating of the app</label>${starsHTML()}
+      <label class="fb-l" for="fbC">Your comment</label>
+      <textarea class="field fb-text" id="fbC" rows="5" placeholder="What did you like? What would you change?"></textarea>
+      <label class="fb-l" for="fbR">Rank <small>(optional)</small></label>
+      <input class="field" id="fbR" placeholder="e.g. 2nd Officer, cadet, AB" autocomplete="organization-title">
+      <label class="fb-l" for="fbN">Name, or e-mail if you want an answer <small>(optional)</small></label>
+      <input class="field" id="fbN" autocomplete="off">
+      <label class="fb-check"><input type="checkbox" id="fbP"> <span>You can publish my comment on chartroomlab.com (with my rank, not my e-mail).</span></label>
+    </section>
+  </div>`;
+  const getV = wireStars($("#fbf"), () => check());
+  setBar(`<button class="cta" id="go" disabled>Send</button>`);
+  const check = () => { $("#go").disabled = !($("#fbC").value.trim() || getV()); };
+  $("#fbC").oninput = check;
+  $("#fBack").onclick = viewProfile;
+  $("#go").onclick = () => {
+    const nm = $("#fbN").value.trim(), isMail = /@/.test(nm);
+    sendFeedback({rating: getV(), comment: $("#fbC").value, rank: $("#fbR").value, name: isMail ? "" : nm, contact: isMail ? nm : "", publish: $("#fbP").checked, where: "Profile"});
+    clearBar();
+    $("#fbf").outerHTML = `<div class="panel"><b>Thank you.</b> <span class="sub">Your feedback was sent${navigator.onLine ? "" : ". It goes out as soon as you have signal"}.</span></div>
+      <button class="cta" id="fDone">Back to profile</button>`;
+    $("#fDone").onclick = viewProfile;
+  };
+  window.scrollTo(0, 0);
+}
 
 /* =========================================================
    DRILLS — Quick practice and the module test
@@ -564,7 +692,7 @@ function finishDrill(){
   if (S.drill === "test") {
     const t = testsState(), key = "m" + S.mod, prev = t[key], pass = pct >= TEST_PASS;
     t[key] = {best: Math.max(pct, prev ? prev.best : 0), passed: pass || !!(prev && prev.passed), last: pct};
-    saveProgress();
+    saveProgress(); syncProgress(false);
     const mod = COURSE.modules.find(m => m.n === S.mod);
     $("#stage").innerHTML = `<div class="result"><span class="mono kicker">Module ${mod.n} test · ${esc(mod.title)}</span>
       <div class="score ${pass ? "" : "low"}">${pct}%</div>
@@ -1102,12 +1230,14 @@ function finish(){
   const pct = S.graded ? Math.round(S.firstRight / S.graded * 100) : null;
   p.scores = p.scores || {};
   if (pct !== null) p.scores[s.id] = pct;
-  saveProgress();
+  saveProgress(); syncProgress(false);
   $("#prog").style.width = "100%";
   const nextIdx = L.sessions.findIndex(x => !p.done.includes(x.id));
   $("#stage").innerHTML = `<div class="result"><span class="mono kicker">${esc(s.skill)} · done</span>
     ${pct !== null ? `<div class="score">${pct}%</div><p style="margin:0">${S.firstRight} of ${S.graded} right the first time.${S.missed ? " The ones you missed came back once." : ""}</p>` : `<h2 class="prompt" style="font-size:40px">Session done</h2>`}
-    <h2 class="prompt">${esc(s.title)}</h2></div>`;
+    <h2 class="prompt">${esc(s.title)}</h2></div>
+    ${!isStandalone() && !lsGet(INSTALL_ASKED_KEY) ? installCardHTML("session") : ""}`;
+  if (!isStandalone() && !lsGet(INSTALL_ASKED_KEY)) { lsSet(INSTALL_ASKED_KEY, "1"); wireInstall(); }
   setBar(`<button class="cta" id="go">${nextIdx > -1 ? "Next: " + esc(L.sessions[nextIdx].title) : "Lesson summary"}</button>`, "ok");
   $("#go").onclick = () => { if (nextIdx > -1) startSession(nextIdx); else viewLessonDone(); };
 }
@@ -1182,8 +1312,16 @@ function viewLessonDone(){
     ${modDone ? `<div class="panel module-done"><span class="mono kicker">Module ${mod.n} · complete</span><h3>${esc(mod.title)}</h3>
       <p class="sub" style="margin:6px 0 10px">Check what you learned: 15 questions, 80% to pass.</p><button class="chip-btn" id="modTest">Take the Module ${mod.n} test</button></div>` : ""}
     ${nxt && nxt.ready ? `<button class="cta" id="nextL">Next: Lesson ${nxt.n} · ${esc(nxt.title)}</button>` : nxt ? `<p class="note">Lesson ${nxt.n} is coming soon.</p>` : ""}
+    <section class="panel fb-quick" id="fbq"><b>How was this lesson?</b><span class="sub">Your opinion helps make the course better.</span>
+      ${starsHTML()}<textarea class="field fb-text" id="fbqText" rows="3" placeholder="Anything to improve? (optional)" hidden></textarea>
+      <button class="chip-btn" id="fbqSend" hidden>Send</button></section>
     <button class="chip-btn" id="allL" style="align-self:center">All lessons</button>
   </div>`;
+  const getV = wireStars($("#fbq"), () => { $("#fbqText").hidden = false; $("#fbqSend").hidden = false; });
+  $("#fbqSend").onclick = () => {
+    sendFeedback({rating: getV(), comment: $("#fbqText").value, where: `Lesson ${L.n} · ${L.title}`});
+    $("#fbq").innerHTML = `<b>Thank you.</b><span class="sub">Your opinion was sent${navigator.onLine ? "" : " (it goes out when you have signal)"}.</span>`;
+  };
   if ($("#nextL")) $("#nextL").onclick = () => openLesson(nxt.n);
   $("#allL").onclick = viewLessons;
   if ($("#modTest")) $("#modTest").onclick = () => startDrill("test", mod.n);
@@ -1206,9 +1344,12 @@ function viewWelcome(){
       <li><span class="mono">Read</span><p>Find the right line in a log, a message or a crew list.</p></li>
     </ol>
     <p class="sub">27 short lessons in 7 modules. Your progress is saved on this phone, and the lessons work offline after the first load.</p>
+    ${betaNoteHTML()}
+    ${installCardHTML("welcome")}
     <button class="cta" id="wStart">Start Lesson 1</button>
     <button class="chip-btn" id="wSkip" style="align-self:center">Go to the lessons</button>
   </div>`;
+  wireInstall();
   $("#wStart").onclick = () => { markWelcomeSeen(); openLesson(1); };
   $("#wSkip").onclick = () => { markWelcomeSeen(); viewHome(); };
   window.scrollTo(0, 0);
@@ -1220,6 +1361,10 @@ function viewWelcome(){
 (async function boot(){
   try { COURSE = await getJSON("course.json"); }
   catch (e) { app.innerHTML = `<p class="loading">The course could not be loaded. Check your connection and reload.</p>`; return; }
+  /* beta: only the open modules can be used; preview mode (for the author) opens everything ready */
+  const open = COURSE.beta && COURSE.beta.openModules;
+  if (open && !PREVIEW) COURSE.modules.forEach(m => { if (!open.includes(m.n)) m.lessons.forEach(l => { l.ready = false; }); });
+  syncProgress(true); flushOutbox();
   const m = /^#l(\d+)$/.exec(location.hash);
   const ready = m && COURSE.modules.some(mod => mod.lessons.some(l => l.n === +m[1] && l.ready));
   let fresh = false;

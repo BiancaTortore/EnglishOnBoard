@@ -29,12 +29,22 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - Audio de diálogos: se precargan todas las líneas antes de reproducir y la pausa entre líneas es de 0,16 s (cambia el que habla) o 0,06 s (mismo personaje); 0,25 s con radio. Antes cada línea se cargaba recién al terminar la anterior.
 - `tools/kit-build.py` lee cada prompt por su encabezado (`## \`scene.jpg\``, `## \`hero.jpg\``) y las referencias de la línea "Referencias:" de `prompts.md`; la escena va primero.
 
+## Beta pública (nov 2026)
+- Solo el **Módulo 1** está abierto (`"beta": {"openModules": [1]}` en `course.json`); el resto aparece con candado. **Modo vista previa** para Bianca: en Profile, tocar 5 veces la línea de versión (abre todo lo que está `ready`, por ejemplo la L6). Es un bloqueo de pantalla, no de seguridad.
+- Franja "Beta" con la aclaración de que no es un curso aprobado por la OMI ni certifica STCW (bienvenida y Profile).
+- Instalar en el celular: tarjeta en bienvenida, Profile y una sola vez al terminar la primera sesión. Android: botón nativo; iPhone: pasos Compartir → Agregar a inicio.
+- Opiniones: estrellas + comentario al terminar cada lección, y "Send feedback" en Profile (valoración, comentario, cargo, nombre o mail, permiso para publicar). Salen por `/api/feedback`; sin señal quedan en cola y se mandan solas después.
+- Datos anónimos de uso: cada celular manda su avance (sesiones por lección, tests, instalado o no, Android/iPhone) a `/api/progress`, con un id al azar, sin nombres.
+- `worker.js`: recibe todo eso, lo guarda en KV (`DATA`) y manda el mail desde english@chartroomlab.com a `FEEDBACK_TO`. Panel en **/admin** (PIN `ADMIN_PIN`): personas, activas, instaladas, embudo por lección, comentarios y CSV.
+- Configuración en Cloudflare (no va en el repo, que es público): secretos `FEEDBACK_TO` y `ADMIN_PIN`, namespace KV para `DATA` (su id va en `wrangler.jsonc`), dominio english.chartroomlab.com.
+
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
 3. Probar en iPhone/Safari.
 4. Lecciones 7–27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
-5. Venta: cuentas y pagos (Cloudflare D1 + Stripe, Módulo 1 gratis), landing, chequeo de marca, aclarar que no es un curso aprobado por la OMI ni certifica STCW.
+5. Tarjeta "English on Board · Beta" en la landing chartroomlab.com (necesita el código de la landing).
+6. Venta: cuentas y pagos (Cloudflare D1 + Stripe, Módulo 1 gratis), landing, chequeo de marca, aclarar que no es un curso aprobado por la OMI ni certifica STCW.
 
 ## Cómo trabaja Bianca
 - Aprueba cada cambio antes de aplicarlo y quiere opinión antes de modificar el curso.

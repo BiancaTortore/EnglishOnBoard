@@ -427,3 +427,33 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 .tab-home{gap:28px}
 .scroll-hint{all:unset;cursor:pointer;align-self:center;display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:13px;padding:6px 10px;margin-top:auto}
 .scroll-hint:focus-visible{outline:3px solid var(--accent);border-radius:8px}
+
+/* beta note */
+.beta-note{display:flex;gap:10px;align-items:flex-start;border:1px dashed var(--rule);border-radius:14px;padding:10px 12px}
+.beta-note .mono{color:var(--accent);flex:none;padding-top:2px}
+.beta-note p{margin:0;font-size:14px;color:var(--muted)}
+
+/* install card */
+.install-card{display:flex;flex-direction:column;gap:12px}
+.ic-head{display:flex;gap:12px;align-items:center}
+.ic-head b{display:block;font-size:18px;font-weight:600}
+.ic-head small{display:block;font-size:14px;color:var(--muted)}
+.ic-ico{width:46px;height:46px;flex:none;border-radius:12px;background:var(--sea-soft);display:grid;place-items:center;color:var(--accent)}
+.ic-steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.result .install-card{align-self:stretch;margin-top:8px}
+
+/* feedback */
+.stars{display:flex;gap:4px}
+.star{all:unset;cursor:pointer;width:44px;height:44px;display:grid;place-items:center;color:var(--muted);fill:transparent;border-radius:10px}
+.star.on{color:var(--gold);fill:var(--gold)}
+.star:focus-visible{outline:3px solid var(--accent)}
+.fb-quick{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.fb-quick b{font-size:18px;font-weight:600}
+.fb-text{font-size:17px;resize:vertical;min-height:80px}
+.fb-form{display:flex;flex-direction:column;gap:8px}
+.fb-form .field{font-size:17px;padding:12px 14px}
+.fb-l{font-weight:600;margin-top:8px}
+.fb-l small{font-weight:400;color:var(--muted)}
+.fb-check{display:flex;gap:10px;align-items:flex-start;font-size:15px;margin-top:10px;cursor:pointer}
+.fb-check input{width:22px;height:22px;flex:none;margin:1px 0 0;accent-color:var(--accent)}
+.fb-view{padding-bottom:120px}
