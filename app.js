@@ -232,6 +232,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
    ICONS
    ========================================================= */
 const I = {
+  down:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>',
   t_home:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5L12 4l8 6.5V20h-5v-6h-6v6H4z"/></svg>',
   t_lessons:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/></svg>',
   t_practice:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>',
@@ -400,6 +401,7 @@ function viewHome(){
   const cur = currentLesson(), cp = cur ? lessonProgress(cur.n) : null, rc = reviewList().length;
   const m = cur ? moduleOf(cur.n) : COURSE.modules[0];
   tabView("home", `
+    <div class="home-first">
     <header class="home-hero">
       <img src="${cur ? thumb(cur.n) : ""}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
       <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>${esc(COURSE.title)}</h1></div></div>
@@ -410,11 +412,14 @@ function viewHome(){
     </header>
     ${voyageHTML(cur)}
     ${rc ? `<button class="review-strip" id="reviewBtn" aria-label="Review: ${rc} to fix. Start review"><span class="mono">Review · ${rc} to fix</span><span class="go">Start review</span></button>` : ""}
+    <button class="scroll-hint" id="toLessons">${esc(m.title)} · lessons ${I.down}</button>
+    </div>
     ${moduleSection(m, cur)}
     <button class="chip-btn see-all" id="seeAll">See all 7 modules</button>`);
   wireRows();
   const rb = $("#reviewBtn"); if (rb) rb.onclick = startReview;
   $("#seeAll").onclick = viewLessons;
+  $("#toLessons").onclick = () => $(".tab-home .module").scrollIntoView({behavior: "smooth"});
 }
 
 function viewLessons(){
