@@ -2,7 +2,7 @@
   "title": "English on Board",
   "subtitle": "Maritime English for deck officers",
   "modules": [
-    {"n": 1, "title": "Ship basics", "where": "Houston · Day 1", "lessons": [
+    {"n": 1, "title": "Ship basics", "where": "Houston · Day 1", "hero": "img/m01/hero.jpg", "lessons": [
       {"n": 1, "title": "Bow, stern, port & starboard", "ready": true},
       {"n": 2, "title": "Parts of the ship", "ready": true},
       {"n": 3, "title": "Decks & spaces", "ready": true},

@@ -403,7 +403,7 @@ function viewHome(){
   tabView("home", `
     <div class="home-first">
     <header class="home-hero">
-      <img src="${cur ? thumb(cur.n) : ""}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+      <img src="${m.hero || (cur ? thumb(cur.n) : "")}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
       <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>${esc(COURSE.title)}</h1></div></div>
       ${cur ? `<div class="hh-body"><span class="mono">${cp.done.length ? "Current lesson" : "Start here"} · Lesson ${cur.n}</span>
         <h2>${esc(cur.title)}</h2>

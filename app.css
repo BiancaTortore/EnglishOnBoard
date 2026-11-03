@@ -313,7 +313,7 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 
 /* home hero: the current lesson over its photo */
 .home-hero{position:relative;overflow:hidden;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:16px max(16px,env(safe-area-inset-left,0px)) 16px;background:var(--sea);color:#fff;display:flex;flex-direction:column;gap:18px}
-.home-hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;max-width:none}
+.home-hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;max-width:none}
 .home-hero.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,15,22,.55),rgba(5,15,22,.35) 35%,rgba(5,15,22,.92))}
 .home-hero > *:not(img){position:relative;z-index:1}
 .home-hero .brand-mark{background:transparent;color:#FF7A45;width:28px;height:28px}
