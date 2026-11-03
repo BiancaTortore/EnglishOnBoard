@@ -133,19 +133,37 @@ function speakTTS(text, voice, rate){
   });
 }
 
+/* Preloaded audio elements, so the lines of a conversation follow each other
+   without waiting for each file to load. Each element is used once. */
+const prepared = new Map();
+function prepFile(file){
+  if (missing.has(file) || prepared.has(file)) return;
+  const el = new Audio(); el.preload = "auto";
+  el.addEventListener("error", () => { missing.add(file); prepared.delete(file); });
+  el.src = file; el.load();
+  prepared.set(file, el);
+}
+function clipFiles(id){
+  const c = clip(id); if (c.voice === "model") return [];
+  const parts = String(c.text).split("|");
+  return parts.map((p, i) => `audio/${lessonDir()}/${parts.length > 1 ? `${id}-${"ab"[i]}` : id}.mp3`);
+}
+
 /* Try the recorded file; resolve false if it doesn't exist */
 function playFile(file, {radio, rate}, tok){
   return new Promise(res => {
     if (missing.has(file)) { res(false); return; }
-    const el = new Audio(); let started = false, settled = false;
+    const pre = prepared.get(file); prepared.delete(file);
+    const el = pre || new Audio(); let started = false, settled = false;
     const end = ok => { if (!settled) { settled = true; res(ok); } };
-    el.preload = "auto"; el.src = file;
+    if (!pre) { el.preload = "auto"; el.src = file; }
     if ("preservesPitch" in el) el.preservesPitch = true;
     el.playbackRate = rate || 1;
     el.onerror = () => { if (!started) missing.add(file); end(started); };
     el.onended = () => end(true);
     el.onpause = () => { if (started && el.currentTime < el.duration - .05) end(true); };
     const timer = setTimeout(() => { if (!started) { missing.add(file); end(false); } }, 5000);
+    if (pre && pre.error) { clearTimeout(timer); missing.add(file); end(false); return; }
     el.oncanplay = () => {
       if (started || tok !== playToken) return;
       started = true; clearTimeout(timer);
@@ -163,6 +181,7 @@ function playFile(file, {radio, rate}, tok){
       currentEl = el;
       el.play().catch(() => end(false));
     };
+    if (pre && pre.readyState >= 3) el.oncanplay();
   });
 }
 
@@ -192,11 +211,19 @@ async function playClip(id, {rate = 1, garble = false} = {}, tokIn){
 async function playSeq(ids, {rate = 1, onLine} = {}){
   const tok = ++playToken;
   if (canSpeak) speechSynthesis.cancel();
-  for (const id of ids) {
+  /* load the whole conversation first, then play it line after line
+     with a short, natural gap: a little longer when the speaker changes */
+  ids.forEach(id => clipFiles(id).forEach(prepFile));
+  for (let k = 0; k < ids.length; k++) {
+    const id = ids[k];
     if (tok !== playToken) return;
     onLine && onLine(id);
     await playClip(id, {rate}, tok);
-    await wait(250);
+    const nx = ids[k + 1];
+    if (nx && tok === playToken) {
+      const a = clip(id), b = clip(nx);
+      await wait(a.radio || b.radio ? 250 : a.voice === b.voice ? 60 : 160);
+    }
   }
   onLine && onLine(null);
 }
@@ -205,6 +232,14 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
    ICONS
    ========================================================= */
 const I = {
+  t_home:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5L12 4l8 6.5V20h-5v-6h-6v6H4z"/></svg>',
+  t_lessons:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/></svg>',
+  t_practice:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>',
+  t_logbook:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M13 4H5v16h14v-8"/><path d="M17.5 3.5l3 3L12 15l-4 1 1-4z"/></svg>',
+  t_profile:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>',
+  chev:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+  lock:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
+  flag:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
   play:'<svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>',
   stop:'<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>',
   spk:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></svg>',
@@ -233,46 +268,276 @@ function setBar(html, cls){
   b.innerHTML = `<div class="checkbar-in">${html}</div>`;
   return b;
 }
-function clearBar(){ const b = $("#checkbar"); if (b) b.remove(); }
+function clearBar(){ const b = $("#checkbar"); if (b) b.remove(); const t = $("#tabbar"); if (t) t.remove(); }
 
 /* =========================================================
-   HOME
+   HOME · TABS (Home, Lessons, Practice, Logbook, Profile)
    ========================================================= */
-function viewHome(){
+const SESS_PER_LESSON = 6;
+const allLessons = () => COURSE.modules.flatMap(m => m.lessons);
+const isDone = l => { const p = progress["l" + l.n]; return !!p && p.done.length >= SESS_PER_LESSON; };
+const doneCount = n => Math.min(SESS_PER_LESSON, ((progress["l" + n] || {}).done || []).length);
+const started = l => l.ready && doneCount(l.n) > 0;
+const moduleOf = n => COURSE.modules.find(m => m.lessons.some(l => l.n === n));
+const moduleDone = m => m.lessons.every(l => l.ready && isDone(l));
+function currentLesson(){ const all = allLessons(); return all.find(l => l.ready && !isDone(l)) || all.filter(l => l.ready).pop(); }
+const thumb = n => `img/l${pad(n)}/hero.jpg`;
+function testsState(){ return progress.tests && typeof progress.tests === "object" ? progress.tests : (progress.tests = {}); }
+
+function setTabs(active){
+  const tabs = [["home", "Home", viewHome], ["lessons", "Lessons", viewLessons], ["practice", "Practice", viewPractice], ["logbook", "Logbook", viewLogbook], ["profile", "Profile", viewProfile]];
+  let t = $("#tabbar");
+  if (!t) { t = document.createElement("nav"); t.id = "tabbar"; t.className = "tabbar"; t.setAttribute("aria-label", "Main"); document.body.appendChild(t); }
+  t.innerHTML = `<div class="tabbar-in">${tabs.map(([k, label]) => `<button class="tab" data-tab="${k}" ${k === active ? 'aria-current="page"' : ""}>${I["t_" + k]}<span>${label}</span></button>`).join("")}</div>`;
+  tabs.forEach(([k, , fn]) => { t.querySelector(`[data-tab="${k}"]`).onclick = fn; });
+}
+function clearTabs(){ const t = $("#tabbar"); if (t) t.remove(); }
+function tabView(active, html){
   stopAll(); clearBar(); location.hash = "";
-  const all = COURSE.modules.flatMap(m => m.lessons);
-  const isDone = l => { const p = progress["l"+l.n]; return p && p.done.length >= 6; };
-  const current = all.find(l => l.ready && !isDone(l)) || all.filter(l => l.ready).pop();
-  const cp = current ? lessonProgress(current.n) : null;
-  const rc = reviewList().length;
-  app.innerHTML = `<div class="home">
-    <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>${esc(COURSE.title)}</h1><p>${esc(COURSE.subtitle)}</p></div>
-      <button class="gear" id="gear" aria-label="Settings">${I.gear}</button></div>
-    ${rc ? `<button class="review-card" id="reviewBtn">
-      <span class="mono">Review · ${rc} to fix</span>
-      <h2>Words and answers you missed</h2>
-      <span class="go">START REVIEW</span></button>` : ""}
-    ${current ? `<button class="continue" data-n="${current.n}">
-      <span class="mono">${cp.done.length ? "Continue" : "Start here"} · Lesson ${current.n}</span>
-      <h2>${esc(current.title)}</h2>
-      <span class="note" style="color:inherit;opacity:.85">${cp.done.length} of 6 sessions done</span>
-      <span class="go">${cp.done.length ? "CONTINUE" : "START"}</span></button>` : ""}
-    ${COURSE.modules.map(m => `<section class="module">
-      <div class="module-head"><h3>${m.n} · ${esc(m.title)}</h3><span class="mono">${esc(m.where || "")}</span></div>
-      <ol class="route">${m.lessons.map(l => {
-        const d = isDone(l), cur = current && l.n === current.n;
-        const meta = !l.ready ? "Coming soon" : d ? "Done" : `${lessonProgress(l.n).done.length} of 6 sessions`;
-        return `<li class="stop ${l.ready ? "ready" : ""} ${cur ? "current" : ""} ${d ? "complete" : ""}">
-          <button class="stop-btn" ${l.ready ? `data-n="${l.n}"` : "disabled"}>
-            <span class="stop-dot">${d ? I.check : l.n}</span>
-            <span class="stop-body"><span class="stop-title">${esc(l.title)}</span><span class="stop-meta">${meta}</span></span></button></li>`;
-      }).join("")}</ol></section>`).join("")}
-    <p class="note">Progress is saved on this device.</p>
-  </div>`;
-  $$("[data-n]").forEach(b => b.onclick = () => openLesson(+b.dataset.n));
-  $("#gear").onclick = viewSettings;
-  const rb = $("#reviewBtn"); if (rb) rb.onclick = startReview;
+  app.innerHTML = `<div class="tabview tab-${active}">${html}</div>`;
+  setTabs(active);
   window.scrollTo(0, 0);
+}
+
+function lessonRow(l, cur){
+  const d = isDone(l), dc = doneCount(l.n);
+  const meta = !l.ready ? "Coming soon" : d ? "Done" : `${dc} of ${SESS_PER_LESSON} sessions`;
+  return `<li class="lrow ${l.ready ? "ready" : "locked"} ${cur ? "current" : ""} ${d ? "complete" : ""}">
+    <button class="lrow-btn" ${l.ready ? `data-n="${l.n}"` : "disabled"}>
+      <span class="lrow-num">${d ? I.check : l.n}</span>
+      <span class="lrow-thumb"><img src="${thumb(l.n)}" alt="" loading="lazy" onerror="this.remove()"><i>${l.n}</i></span>
+      <span class="lrow-body"><span class="lrow-title">${esc(l.title)}</span><span class="lrow-meta">${meta}</span>
+        ${l.ready ? `<span class="lbar"><i style="width:${Math.round(dc / SESS_PER_LESSON * 100)}%"></i></span>` : ""}</span>
+      <span class="lrow-end">${l.ready ? I.chev : I.lock}</span></button></li>`;
+}
+function moduleTestRow(m){
+  const open = moduleDone(m), t = testsState()["m" + m.n];
+  const meta = !open ? "Finish the lessons of this module first" : t ? `Best: ${t.best}%${t.passed ? " · passed" : ""}` : "15 questions · about 8 min";
+  return `<li class="lrow test ${open ? "ready" : "locked"} ${t && t.passed ? "complete" : ""}">
+    <button class="lrow-btn" ${open ? `data-test="${m.n}"` : "disabled"}>
+      <span class="lrow-num">${t && t.passed ? I.check : I.flag}</span>
+      <span class="lrow-body"><span class="lrow-title">Module ${m.n} test</span><span class="lrow-meta">${meta}</span></span>
+      <span class="lrow-end">${open ? I.chev : I.lock}</span></button></li>`;
+}
+function moduleSection(m, cur){
+  return `<section class="module">
+    <div class="module-head"><h3>${m.n} · ${esc(m.title)}</h3><span class="mono">${esc(m.where || "")}</span></div>
+    <ol class="lrows">${m.lessons.map(l => lessonRow(l, cur && l.n === cur.n)).join("")}${m.lessons.some(l => l.ready) ? moduleTestRow(m) : ""}</ol></section>`;
+}
+function wireRows(){
+  $$("[data-n]").forEach(b => b.onclick = () => openLesson(+b.dataset.n));
+  $$("[data-test]").forEach(b => b.onclick = () => startDrill("test", +b.dataset.test));
+}
+
+/* the voyage chart: the 7 modules as waypoints of the ship's route */
+function voyageHTML(cur){
+  const mods = COURSE.modules, total = allLessons().length * SESS_PER_LESSON;
+  const done = allLessons().reduce((a, l) => a + doneCount(l.n), 0);
+  const pct = Math.round(done / total * 100);
+  const curM = cur ? moduleOf(cur.n).n : 1;
+  const W = 340, x0 = 30, step = (W - 2 * x0) / (mods.length - 1);
+  const P = mods.map((m, i) => [x0 + i * step, i % 2 ? 62 : 128]);
+  let d = `M${P[0][0]},${P[0][1]}`;
+  for (let i = 1; i < P.length; i++) { const [ax, ay] = P[i - 1], [bx, by] = P[i], mx = (ax + bx) / 2; d += ` C${mx},${ay} ${mx},${by} ${bx},${by}`; }
+  let sail = `M${P[0][0]},${P[0][1]}`;
+  for (let i = 1; i < curM; i++) { const [ax, ay] = P[i - 1], [bx, by] = P[i], mx = (ax + bx) / 2; sail += ` C${mx},${ay} ${mx},${by} ${bx},${by}`; }
+  const label = (t) => { const w = t.split(" "); if (t.length <= 12) return [t]; const mid = Math.ceil(w.length / 2); let a = w.slice(0, mid).join(" "), b = w.slice(mid).join(" "); if (w.length > 2 && a.length > 13) { a = w.slice(0, mid - 1).join(" "); b = w.slice(mid - 1).join(" "); } return [a, b]; };
+  const pts = mods.map((m, i) => {
+    const [x, y] = P[i], up = i % 2 === 1, st = moduleDone(m) ? "done" : m.n === curM ? "cur" : "next";
+    const ls = label(m.title), anchor = i === 0 ? "start" : i === mods.length - 1 ? "end" : "middle", lx = i === 0 ? x - 14 : i === mods.length - 1 ? x + 14 : x;
+    const gap = st === "cur" ? 6 : 0, ty = up ? y - 24 - gap - (ls.length - 1) * 12 : y + 30 + gap;
+    return `<g class="wp ${st}"><circle cx="${x}" cy="${y}" r="${st === "cur" ? 13 : 9}"/>${st === "done" ? `<path d="M${x - 4},${y} l3,3 l5,-6" class="tick"/>` : st === "cur" ? `<path class="ship" d="M${x - 6},${y + 1} h12 l-2.5,4 h-7 z M${x - 1},${y + 1} v-7 l5,6 z"/>` : ""}
+      <text x="${lx}" y="${ty}" text-anchor="${anchor}"><tspan class="n" x="${lx}">${m.n}</tspan>${ls.map((t, k) => `<tspan x="${lx}" dy="${k ? 12 : 13}">${esc(t)}</tspan>`).join("")}</text></g>`;
+  }).join("");
+  return `<section class="voyage" aria-label="Training voyage: ${pct}% of the course done">
+    <div class="voyage-head"><span class="mono">Training voyage</span><span class="vbar"><i style="width:${Math.max(2, pct)}%"></i></span><span class="vcount">${done} of ${total} sessions</span><b>${pct}%</b></div>
+    <svg viewBox="0 0 ${W} 190" role="img" aria-label="Route through the 7 modules">
+      <g class="chart-lines"><path d="M0,40 C80,20 160,60 340,30"/><path d="M0,100 C90,80 200,120 340,92"/><path d="M0,165 C100,150 220,185 340,160"/></g>
+      <g class="compass" transform="translate(322,26)"><circle r="12"/><path d="M0,-11 L3,0 L0,11 L-3,0 Z"/><text y="-15" text-anchor="middle">N</text></g>
+      <path class="route-ahead" d="${d}"/><path class="route-sailed" d="${sail}"/>${pts}</svg></section>`;
+}
+
+function viewHome(){
+  const cur = currentLesson(), cp = cur ? lessonProgress(cur.n) : null, rc = reviewList().length;
+  const m = cur ? moduleOf(cur.n) : COURSE.modules[0];
+  tabView("home", `
+    <header class="home-hero">
+      <img src="${cur ? thumb(cur.n) : ""}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+      <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>${esc(COURSE.title)}</h1><p>${esc(COURSE.subtitle)}</p></div></div>
+      ${cur ? `<div class="hh-body"><span class="mono">${cp.done.length ? "Current lesson" : "Start here"} · Lesson ${cur.n}</span>
+        <h2>${esc(cur.title)}</h2>
+        <span class="hh-meta">${esc(m.title)} · ${Math.min(cp.done.length, SESS_PER_LESSON)} of ${SESS_PER_LESSON} sessions done</span>
+        <div class="hh-actions"><button class="cta hh-go" data-n="${cur.n}">${I.play}<span>${cp.done.length ? "Continue" : "Start"}</span></button>
+          <button class="hh-quick" id="quick">${I.t_practice}<span><b>Quick practice</b><small>5 min</small></span></button></div></div>` : ""}
+    </header>
+    ${voyageHTML(cur)}
+    ${rc ? `<button class="review-card" id="reviewBtn"><span class="mono">Review · ${rc} to fix</span><h2>Words and answers you missed</h2><span class="go">START REVIEW</span></button>` : ""}
+    ${moduleSection(m, cur)}
+    <button class="chip-btn see-all" id="seeAll">See all 7 modules</button>`);
+  wireRows();
+  if ($("#quick")) $("#quick").onclick = () => startDrill("quick");
+  const rb = $("#reviewBtn"); if (rb) rb.onclick = startReview;
+  $("#seeAll").onclick = viewLessons;
+}
+
+function viewLessons(){
+  const cur = currentLesson();
+  tabView("lessons", `<h2 class="tab-title">Lessons</h2><p class="sub tab-sub">27 lessons in 7 modules, from the first walk on deck to the radio.</p>
+    ${COURSE.modules.map(m => moduleSection(m, cur)).join("")}
+    <p class="note">Progress is saved on this device.</p>`);
+  wireRows();
+}
+
+function viewPractice(){
+  const rc = reviewList().length, any = allLessons().some(started);
+  const mods = COURSE.modules.filter(m => m.lessons.some(l => l.ready));
+  tabView("practice", `<h2 class="tab-title">Practice</h2><p class="sub tab-sub">Short rounds with what you have already learned.</p>
+    <button class="pcard" id="quick"><span class="pcard-ico">${I.t_practice}</span><span><b>Quick practice</b><small>${any ? "8 questions from your lessons · about 5 min" : "8 questions from Lesson 1 · about 5 min"}</small></span>${I.chev}</button>
+    <button class="pcard" id="reviewBtn" ${rc ? "" : "disabled"}><span class="pcard-ico">${I.check}</span><span><b>Review your mistakes</b><small>${rc ? `${rc} to fix` : "Nothing to fix right now"}</small></span>${I.chev}</button>
+    <section class="module"><div class="module-head"><h3>Module tests</h3><span class="mono">80% to pass</span></div>
+      <ol class="lrows">${mods.map(moduleTestRow).join("")}</ol></section>
+    <p class="note">One certificate at the end of the course, when you pass the final test.</p>`);
+  $("#quick").onclick = () => startDrill("quick");
+  if (rc) $("#reviewBtn").onclick = startReview;
+  wireRows();
+}
+
+async function viewLogbook(){
+  const ls = allLessons().filter(started);
+  tabView("logbook", `<h2 class="tab-title">Logbook</h2><p class="sub tab-sub">Every word and phrase from the lessons you have started.</p><div id="lb"><p class="loading">Opening the logbook…</p></div>`);
+  if (!ls.length) { $("#lb").innerHTML = `<div class="panel"><b>Your logbook is empty.</b> <span class="sub">Finish a session and its words appear here.</span></div>`; return; }
+  const groups = [];
+  try { for (const l of ls) { await loadLesson(l.n); groups.push({l, words: Object.entries(L.words || {})}); } }
+  catch (e) { if ($("#lb")) $("#lb").innerHTML = `<p>The logbook could not be loaded. Check your connection.</p>`; return; }
+  if (!$("#lb")) return;
+  const total = groups.reduce((a, g) => a + g.words.length, 0);
+  $("#lb").innerHTML = `<input class="field lb-search" id="lbq" placeholder="Search ${total} words · English or Spanish" autocomplete="off" aria-label="Search the logbook">
+    ${groups.map(g => `<section class="lb-group" data-g><div class="module-head"><h3>${g.l.n} · ${esc(g.l.title)}</h3></div>
+      <ul class="lb-list">${g.words.map(([k, w]) => `<li data-s="${esc(norm(w.en + " " + w.es))}"><button class="small-play" data-ln="${g.l.n}" data-a="${esc(w.audio)}" aria-label="Hear: ${esc(w.en)}">${I.spk}</button>
+        <div><b>${esc(w.en)}</b> <span class="ipa">${esc(w.ipa || "")}</span><small>${esc(w.es)}</small></div></li>`).join("")}</ul></section>`).join("")}`;
+  $$(".lb-list [data-a]").forEach(b => b.onclick = async () => { await loadLesson(+b.dataset.ln); playClip(b.dataset.a); });
+  $("#lbq").oninput = e => {
+    const q = norm(e.target.value);
+    $$(".lb-list li").forEach(li => li.hidden = !!q && !li.dataset.s.includes(q));
+    $$("[data-g]").forEach(g => g.hidden = !g.querySelector("li:not([hidden])"));
+  };
+}
+
+function viewProfile(){
+  const all = allLessons(), ld = all.filter(isDone).length;
+  const sess = all.reduce((a, l) => a + doneCount(l.n), 0);
+  const sc = Object.keys(progress).filter(k => /^l\d+$/.test(k)).flatMap(k => Object.values(progress[k].scores || {}));
+  const avg = sc.length ? Math.round(sc.reduce((a, b) => a + b, 0) / sc.length) + "%" : "–";
+  const tests = testsState(), passed = Object.values(tests).filter(t => t.passed).length;
+  const seg = (v, label) => `<button class="seg-b" data-speed="${v}" aria-pressed="${settings.speed === v}">${label}</button>`;
+  tabView("profile", `<h2 class="tab-title">Profile</h2>
+    <div class="stats4">
+      <div><b>${ld}</b><span>${ld === 1 ? "lesson" : "lessons"} done</span></div><div><b>${sess}</b><span>sessions</span></div>
+      <div><b>${avg}</b><span>right first time</span></div><div><b>${passed}</b><span>module ${passed === 1 ? "test" : "tests"} passed</span></div>
+    </div>
+    <section class="panel setting">
+      <div><b>Listening speed</b><span class="sub">Clips start at this speed. You can always tap Slower on a clip.</span></div>
+      <div class="seg" role="group" aria-label="Listening speed">${seg("normal", "Normal")}${seg("slow", "Slower")}</div>
+    </section>
+    <section class="panel setting">
+      <div><b>Introduction</b><span class="sub">Show the welcome screen again.</span></div>
+      <button class="chip-btn" id="showWelcome">Show intro</button>
+    </section>
+    <section class="panel setting">
+      <div><b>Reset progress</b><span class="sub">Clears lessons, scores, tests and the review list on this device.</span></div>
+      <button class="chip-btn danger" id="reset">Reset progress</button>
+    </section>
+    <p class="note">English on Board · beta</p>`);
+  $$(".seg-b").forEach(b => b.onclick = () => { settings.speed = b.dataset.speed; saveSettings(); viewProfile(); });
+  $("#showWelcome").onclick = viewWelcome;
+  let armed = false; const reset = $("#reset");
+  reset.onclick = () => {
+    if (!armed) { armed = true; reset.textContent = "Tap again to erase"; reset.classList.add("armed"); return; }
+    progress = {}; saveProgress(); viewHome();
+  };
+}
+const viewSettings = viewProfile;
+
+/* =========================================================
+   DRILLS — Quick practice and the module test
+   Both are built from the graded screens of the lessons, plus word questions.
+   ========================================================= */
+const TEST_N = 15, TEST_PASS = 80, QUICK_N = 8;
+async function screenPools(ns){
+  const pools = {listen: [], read: [], complete: [], vocab: []};
+  for (const n of ns) {
+    await loadLesson(n);
+    L.sessions.forEach(se => se.screens.forEach((s, j) => {
+      const it = {...s, ln: n, rk: `${n}|${se.id}|${j}`};
+      if (s.type === "listen" || s.type === "tap") pools.listen.push(it);
+      else if (s.type === "doc" || s.type === "docfind") pools.read.push(it);
+      else if (s.type === "build" || (s.type === "type" && !s.audio) || (s.type === "choice" && !s.quick && /_{3}/.test(s.q))) pools.complete.push(it);
+    }));
+    const ws = Object.values(L.words || {});
+    ws.forEach(w => {
+      const others = shuffle(ws.filter(o => o.en !== w.en)).slice(0, 2).map(o => o.en);
+      if (others.length === 2) pools.vocab.push({type: "choice", q: `"${w.es}" in English:`, opts: [w.en, ...others], a: 0, ln: n, rk: null, kind: "choice"});
+      pools.vocab.push({type: "type", audio: w.audio, q: "Type what you hear.", accept: [w.en], ln: n, rk: null, kind: "type"});
+    });
+  }
+  /* spread each pool across the lessons */
+  for (const k in pools) pools[k] = shuffle(pools[k]);
+  return pools;
+}
+function takeSpread(pool, k, ns){
+  const out = [], byL = ns.map(n => pool.filter(x => x.ln === n));
+  for (let r = 0; out.length < k && byL.some(b => b.length); r++) byL.forEach(b => { if (out.length < k && b.length) out.push(b.shift()); });
+  return out;
+}
+
+async function startDrill(kind, modN){
+  stopAll(); clearBar(); clearTabs();
+  app.innerHTML = `<p class="loading">${kind === "test" ? "Preparing the test…" : "Preparing your practice…"}</p>`;
+  let ns, items = [];
+  try {
+    if (kind === "test") {
+      ns = COURSE.modules.find(m => m.n === modN).lessons.filter(l => l.ready).map(l => l.n);
+      const p = await screenPools(ns);
+      const voc = [...takeSpread(p.vocab.filter(x => x.kind === "choice"), 2, ns), ...takeSpread(p.vocab.filter(x => x.kind === "type"), 2, ns)];
+      items = [...takeSpread(p.listen, 5, ns), ...voc, ...takeSpread(p.read, 3, ns), ...takeSpread(p.complete, 3, ns)];
+    } else {
+      const st = allLessons().filter(started);
+      ns = (st.length ? st : allLessons().filter(l => l.ready).slice(0, 1)).map(l => l.n);
+      const p = await screenPools(ns), all = shuffle([...p.listen, ...p.vocab, ...p.read, ...p.complete]);
+      items = takeSpread(all, QUICK_N, ns);
+    }
+  } catch (e) {
+    app.innerHTML = `<div class="home"><p>This could not be loaded. Check your connection and try again.</p><button class="cta" id="home">Back</button></div>`;
+    $("#home").onclick = viewHome; return;
+  }
+  if (!items.length) { viewHome(); return; }
+  if (kind === "quick") items = shuffle(items);
+  S = {drill: kind, mod: modN, review: false, i: -1, sess: null, pos: 0, graded: 0, firstRight: 0, missed: 0, queue: items};
+  openPlayer();
+  render();
+}
+function finishDrill(){
+  $("#prog").style.width = "100%";
+  const pct = S.graded ? Math.round(S.firstRight / S.graded * 100) : 0;
+  if (S.drill === "test") {
+    const t = testsState(), key = "m" + S.mod, prev = t[key], pass = pct >= TEST_PASS;
+    t[key] = {best: Math.max(pct, prev ? prev.best : 0), passed: pass || !!(prev && prev.passed), last: pct};
+    saveProgress();
+    const mod = COURSE.modules.find(m => m.n === S.mod);
+    $("#stage").innerHTML = `<div class="result"><span class="mono kicker">Module ${mod.n} test · ${esc(mod.title)}</span>
+      <div class="score ${pass ? "" : "low"}">${pct}%</div>
+      <h2 class="prompt">${pass ? "Passed." : "Not yet."}</h2>
+      <p style="margin:0">${S.firstRight} of ${S.graded} right. ${pass ? "Well done." : `You need ${TEST_PASS}% to pass. Practise a little and try again.`}</p>
+      ${S.missed ? `<p class="sub" style="margin:0">The questions you missed are in your review.</p>` : ""}</div>`;
+    setBar(pass ? `<button class="cta" id="go">Back to home</button>` : `<div class="self"><button class="opt" id="home2">Back</button><button class="cta" id="go" style="flex:1">Try again</button></div>`, pass ? "ok" : "bad");
+    if (pass) $("#go").onclick = viewHome;
+    else { $("#go").onclick = () => startDrill("test", S.mod); $("#home2").onclick = viewPractice; }
+  } else {
+    $("#stage").innerHTML = `<div class="result"><span class="mono kicker">Quick practice · done</span>
+      <div class="score">${pct}%</div><p style="margin:0">${S.firstRight} of ${S.graded} right.${S.missed ? " The ones you missed are in your review." : ""}</p></div>`;
+    setBar(`<div class="self"><button class="opt" id="home2">Home</button><button class="cta" id="go" style="flex:1">Another round</button></div>`, pct >= TEST_PASS ? "ok" : "");
+    $("#go").onclick = () => startDrill("quick"); $("#home2").onclick = viewHome;
+  }
 }
 
 /* =========================================================
@@ -303,7 +568,7 @@ function viewLesson(){
   app.innerHTML = `<div class="lesson">
     <header class="hero" id="hero">
       ${hero ? `<img src="${esc(hero)}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">` : ""}
-      <button class="back" id="back">${I.back} All lessons</button>
+      <button class="back" id="back">${I.back} Home</button>
       <span class="mono">${esc(L.place)}</span>
       <h2>${L.n} · ${esc(L.title)}</h2>
       <p>${esc(L.goal)}</p>
@@ -328,14 +593,14 @@ function viewLesson(){
 let S = null;
 function startSession(i){
   const sess = L.sessions[i];
-  S = {i, sess, review: false, pos: 0, graded: 0, firstRight: 0, missed: 0,
+  S = {i, sess, review: false, drill: null, pos: 0, graded: 0, firstRight: 0, missed: 0,
     queue: sess.screens.map((s, j) => ({...s, ln: L.n, rk: `${L.n}|${sess.id}|${j}`}))};
   openPlayer();
   render();
 }
 function openPlayer(){
   app.innerHTML = `<div class="player"><div class="topbar"><button class="x" id="quit" aria-label="Close session">${I.x}</button><div class="bar"><i id="prog"></i></div></div><div class="stage" id="stage"></div></div>`;
-  $("#quit").onclick = () => { stopAll(); if (S.review) viewHome(); else viewLesson(); };
+  $("#quit").onclick = () => { stopAll(); if (S.drill === "test") viewPractice(); else if (S.review || S.drill) viewHome(); else viewLesson(); };
 }
 function showProgress(){ $("#prog").style.width = Math.round(S.pos / S.queue.length * 100) + "%"; }
 function next(){ stopAll(); S.pos++; if (S.pos >= S.queue.length) finish(); else render(); }
@@ -352,12 +617,12 @@ function enableCheck(on = true){ const g = $("#go"); if (g) g.disabled = !on; }
 function verdict(ok, answer, why){
   const sc = S.queue[S.pos];
   if (!sc.retry) { S.graded++; if (ok) S.firstRight++; }
-  if (!ok && !sc.retry) { S.queue.push({...sc, retry: true}); S.missed++; }
+  if (!ok && !sc.retry) { if (S.drill !== "test") S.queue.push({...sc, retry: true}); S.missed++; }
   if (ok) clearReview(sc.rk); else addReview(sc.rk, sc.type);
   setBar(`<div class="verdict" role="status"><b>${ok ? "Good." : "Not quite."}</b>
     ${!ok && answer ? `<span>Answer: <strong>${esc(answer)}</strong></span>` : ""}
     ${why ? `<span>${esc(why)}</span>` : ""}
-    ${!ok && !sc.retry ? `<span class="note">It comes back at the end.</span>` : ""}</div>
+    ${!ok && !sc.retry && S.drill !== "test" ? `<span class="note">It comes back at the end.</span>` : ""}</div>
     <button class="cta" id="go">Continue</button>`, ok ? "ok" : "bad");
   $("#go").onclick = next; $("#go").focus();
 }
@@ -788,6 +1053,7 @@ function selfRate(sc){
 
 function finish(){
   stopAll();
+  if (S.drill) { finishDrill(); return; }
   if (S.review) { finishReview(); return; }
   const s = S.sess, p = lessonProgress(L.n);
   if (!p.done.includes(s.id)) p.done.push(s.id);
@@ -836,7 +1102,7 @@ async function startReview(){
     $("#home").onclick = viewHome; return;
   }
   if (!items.length) { viewHome(); return; }
-  S = {review: true, i: -1, sess: null, pos: 0, graded: 0, firstRight: 0, missed: 0, queue: items};
+  S = {review: true, drill: null, i: -1, sess: null, pos: 0, graded: 0, firstRight: 0, missed: 0, queue: items};
   openPlayer();
   render();
 }
@@ -871,12 +1137,14 @@ function viewLessonDone(){
       <div><b>${words}</b><span>words</span></div>
       <div><b>${toReview}</b><span>to review</span></div>
     </div>
-    ${modDone ? `<div class="panel module-done"><span class="mono kicker">Module ${mod.n} · complete</span><h3>${esc(mod.title)}</h3></div>` : ""}
+    ${modDone ? `<div class="panel module-done"><span class="mono kicker">Module ${mod.n} · complete</span><h3>${esc(mod.title)}</h3>
+      <p class="sub" style="margin:6px 0 10px">Check what you learned: 15 questions, 80% to pass.</p><button class="chip-btn" id="modTest">Take the Module ${mod.n} test</button></div>` : ""}
     ${nxt && nxt.ready ? `<button class="cta" id="nextL">Next: Lesson ${nxt.n} · ${esc(nxt.title)}</button>` : nxt ? `<p class="note">Lesson ${nxt.n} is coming soon.</p>` : ""}
     <button class="chip-btn" id="allL" style="align-self:center">All lessons</button>
   </div>`;
   if ($("#nextL")) $("#nextL").onclick = () => openLesson(nxt.n);
-  $("#allL").onclick = viewHome;
+  $("#allL").onclick = viewLessons;
+  if ($("#modTest")) $("#modTest").onclick = () => startDrill("test", mod.n);
   window.scrollTo(0, 0);
 }
 
@@ -902,39 +1170,6 @@ function viewWelcome(){
   $("#wStart").onclick = () => { markWelcomeSeen(); openLesson(1); };
   $("#wSkip").onclick = () => { markWelcomeSeen(); viewHome(); };
   window.scrollTo(0, 0);
-}
-
-/* =========================================================
-   SETTINGS
-   ========================================================= */
-function viewSettings(){
-  stopAll(); clearBar(); location.hash = "";
-  const seg = (v, label) => `<button class="seg-b" data-speed="${v}" aria-pressed="${settings.speed === v}">${label}</button>`;
-  app.innerHTML = `<div class="home settings">
-    <button class="back-link" id="sBack">${I.back} Home</button>
-    <h2 class="prompt" style="font-size:36px">Settings</h2>
-    <section class="panel setting">
-      <div><b>Listening speed</b><span class="sub">Clips start at this speed. You can always tap Slower on a clip.</span></div>
-      <div class="seg" role="group" aria-label="Listening speed">${seg("normal", "Normal")}${seg("slow", "Slower")}</div>
-    </section>
-    <section class="panel setting">
-      <div><b>Introduction</b><span class="sub">Show the welcome screen again.</span></div>
-      <button class="chip-btn" id="showWelcome">Show intro</button>
-    </section>
-    <section class="panel setting">
-      <div><b>Reset progress</b><span class="sub">Clears lessons, scores and the review list on this device.</span></div>
-      <button class="chip-btn danger" id="reset">Reset progress</button>
-    </section>
-    <p class="note">English on Board · beta</p>
-  </div>`;
-  $("#sBack").onclick = viewHome;
-  $$(".seg-b").forEach(b => b.onclick = () => { settings.speed = b.dataset.speed; saveSettings(); viewSettings(); });
-  $("#showWelcome").onclick = viewWelcome;
-  let armed = false; const reset = $("#reset");
-  reset.onclick = () => {
-    if (!armed) { armed = true; reset.textContent = "Tap again to erase"; reset.classList.add("armed"); return; }
-    progress = {}; saveProgress(); viewHome();
-  };
 }
 
 /* =========================================================
