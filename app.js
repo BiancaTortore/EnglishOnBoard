@@ -329,32 +329,73 @@ function wireRows(){
   $$("[data-test]").forEach(b => b.onclick = () => startDrill("test", +b.dataset.test));
 }
 
-/* the voyage chart: the 7 modules as waypoints of the ship's route */
+/* the voyage chart: Diego's real passage, Houston → Marseille.
+   Simplified coastlines in lon/lat, projected (equirectangular, standard parallel 35°N). */
+const MAP = {lon0: -100, lon1: 10, lat0: 52, lat1: 18, W: 340};
+MAP.sx = MAP.W / (MAP.lon1 - MAP.lon0); MAP.sy = MAP.sx / Math.cos(35 * Math.PI / 180); MAP.H = Math.round((MAP.lat0 - MAP.lat1) * MAP.sy);
+const prj = ([lon, lat]) => [+((lon - MAP.lon0) * MAP.sx).toFixed(1), +((MAP.lat0 - lat) * MAP.sy).toFixed(1)];
+const LAND = [
+  /* North America */
+  [[-100,52],[-56,52],[-53,47.5],[-59.5,46],[-66,45],[-70,42.2],[-74,40.5],[-76,37.2],[-75.5,35.2],[-78,33.8],[-81,31.5],[-80.6,28.5],[-80.1,26],[-80.6,25.2],[-81.8,26.5],[-82.7,28],[-84,30],[-86,30.4],[-89,30.2],[-89.4,29],[-91,29.5],[-94,29.6],[-95,29.3],[-97.2,27.8],[-97.4,25.9],[-97.7,22],[-97,20],[-96,19],[-94,18.3],[-91,18.6],[-90.5,21],[-87,21.5],[-87.5,19],[-88,18],[-100,18]],
+  /* Cuba */
+  [[-85,21.8],[-82,23.1],[-80,23.1],[-77,21.8],[-74.2,20.2],[-77.7,19.9],[-80,21.7],[-83,22]],
+  /* Hispaniola */
+  [[-74.4,19.8],[-71,19.9],[-68.4,18.6],[-71.4,17.9],[-74.4,18.4]],
+  /* Great Britain (cut at the top) */
+  [[-5.7,50],[-3,50.6],[1.3,51.2],[1.8,52],[-4.5,52],[-4.3,51.6]],
+  /* Europe */
+  [[4,52],[3,51.3],[1.5,50.6],[-1.5,49.7],[-4.7,48.4],[-1.5,46.5],[-1.5,43.4],[-8,43.7],[-9.3,43],[-8.8,41],[-9.5,38.7],[-8.9,37],[-6.3,36.8],[-5.6,36.05],[-4.4,36.7],[-2,36.8],[-0.5,38.3],[0.2,39.8],[0.9,41],[3.2,41.9],[3.1,43],[4.5,43.4],[5.4,43.3],[7,43.6],[8.8,44.3],[10,44],[10,52]],
+  /* Africa */
+  [[-5.9,35.8],[-6.8,34],[-9.6,30.4],[-13,27.7],[-16.5,22],[-17,20],[-17,18],[10,18],[10,37],[8,37],[3,36.8],[-1,35.3],[-5.3,35.9]]
+];
+const ROUTE = [[-95,29.1],[-94.4,28.6],[-92,27],[-89,25.6],[-85.5,24.4],[-82,24.2],[-80.6,24.9],[-79.9,26.1],[-79.4,27.6],[-76,30.5],[-68,33.5],[-58,35.3],[-45,36.2],[-30,36.6],[-18,36.5],[-10.5,36.2],[-7,35.9],[-5.6,35.95],[-3,36.3],[0.5,37.6],[3,39.8],[4.6,42],[5.3,43.1]];
+/* where each module starts along the route (fraction of its length) */
+const LEG = [0, .006, .02, .05, .25, .38, .9, 1];
+const PORTS = [["Houston", [-95,29.1], "s"], ["Port Everglades", [-79.9,26.1], "e"], ["Gibraltar", [-5.6,35.95], "s"], ["Marseille", [5.3,43.1], "w"]];
+
+function routeAt(f){
+  const P = ROUTE.map(prj), L = [0];
+  for (let i = 1; i < P.length; i++) L.push(L[i - 1] + Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]));
+  const target = Math.max(0, Math.min(1, f)) * L[L.length - 1];
+  let i = 1; while (i < P.length - 1 && L[i] < target) i++;
+  const t = (target - L[i - 1]) / ((L[i] - L[i - 1]) || 1);
+  const pt = [P[i - 1][0] + (P[i][0] - P[i - 1][0]) * t, P[i - 1][1] + (P[i][1] - P[i - 1][1]) * t];
+  const ang = Math.atan2(P[i][1] - P[i - 1][1], P[i][0] - P[i - 1][0]) * 180 / Math.PI;
+  return {pt, ang, sailed: P.slice(0, i).concat([pt]), all: P};
+}
 function voyageHTML(cur){
   const mods = COURSE.modules, total = allLessons().length * SESS_PER_LESSON;
   const done = allLessons().reduce((a, l) => a + doneCount(l.n), 0);
   const pct = Math.round(done / total * 100);
-  const curM = cur ? moduleOf(cur.n).n : 1;
-  const W = 340, x0 = 30, step = (W - 2 * x0) / (mods.length - 1);
-  const P = mods.map((m, i) => [x0 + i * step, i % 2 ? 62 : 128]);
-  let d = `M${P[0][0]},${P[0][1]}`;
-  for (let i = 1; i < P.length; i++) { const [ax, ay] = P[i - 1], [bx, by] = P[i], mx = (ax + bx) / 2; d += ` C${mx},${ay} ${mx},${by} ${bx},${by}`; }
-  let sail = `M${P[0][0]},${P[0][1]}`;
-  for (let i = 1; i < curM; i++) { const [ax, ay] = P[i - 1], [bx, by] = P[i], mx = (ax + bx) / 2; sail += ` C${mx},${ay} ${mx},${by} ${bx},${by}`; }
-  const label = (t) => { const w = t.split(" "); if (t.length <= 12) return [t]; const mid = Math.ceil(w.length / 2); let a = w.slice(0, mid).join(" "), b = w.slice(mid).join(" "); if (w.length > 2 && a.length > 13) { a = w.slice(0, mid - 1).join(" "); b = w.slice(mid - 1).join(" "); } return [a, b]; };
-  const pts = mods.map((m, i) => {
-    const [x, y] = P[i], up = i % 2 === 1, st = moduleDone(m) ? "done" : m.n === curM ? "cur" : "next";
-    const ls = label(m.title), anchor = i === 0 ? "start" : i === mods.length - 1 ? "end" : "middle", lx = i === 0 ? x - 14 : i === mods.length - 1 ? x + 14 : x;
-    const gap = st === "cur" ? 6 : 0, ty = up ? y - 24 - gap - (ls.length - 1) * 12 : y + 30 + gap;
-    return `<g class="wp ${st}"><circle cx="${x}" cy="${y}" r="${st === "cur" ? 13 : 9}"/>${st === "done" ? `<path d="M${x - 4},${y} l3,3 l5,-6" class="tick"/>` : st === "cur" ? `<path class="ship" d="M${x - 6},${y + 1} h12 l-2.5,4 h-7 z M${x - 1},${y + 1} v-7 l5,6 z"/>` : ""}
-      <text x="${lx}" y="${ty}" text-anchor="${anchor}"><tspan class="n" x="${lx}">${m.n}</tspan>${ls.map((t, k) => `<tspan x="${lx}" dy="${k ? 12 : 13}">${esc(t)}</tspan>`).join("")}</text></g>`;
+  const m = cur ? moduleOf(cur.n) : mods[0], mi = mods.indexOf(m);
+  const mTot = m.lessons.length * SESS_PER_LESSON, mDone = m.lessons.reduce((a, l) => a + doneCount(l.n), 0);
+  const allDone = allLessons().every(isDone);
+  const f = allDone ? 1 : LEG[mi] + (LEG[mi + 1] - LEG[mi]) * (mDone / mTot);
+  const r = routeAt(f), pts = a => a.map(p => p.join(",")).join(" ");
+  const [sx, sy] = r.pt, W = MAP.W, H = MAP.H;
+  const grid = [];
+  for (let lon = -90; lon <= 0; lon += 15) { const x = prj([lon, 0])[0]; grid.push(`<path d="M${x},0V${H}"/>`); }
+  for (let lat = 20; lat <= 50; lat += 10) { const y = prj([0, lat])[1]; grid.push(`<path d="M0,${y}H${W}"/>`); }
+  const ports = PORTS.map(([name, ll, pos]) => {
+    const [x, y] = prj(ll), reached = f >= ROUTE.findIndex(p => p[0] === ll[0] && p[1] === ll[1]) / (ROUTE.length - 1) - .001;
+    const tx = pos === "e" ? x + 7 : pos === "w" ? x - 12 : x, ty = pos === "s" ? y + 13 : pos === "n" ? y - 7 : y + 3, anc = pos === "e" ? "start" : pos === "w" ? "end" : x > W - 30 ? "end" : x < 30 ? "start" : "middle";
+    return `<g class="port ${reached ? "reached" : ""}"><circle cx="${x}" cy="${y}" r="2.6"/><text x="${pos === "w" ? tx : anc === "end" ? W - 2 : anc === "start" && pos !== "e" ? Math.max(2, x - 6) : tx}" y="${ty}" text-anchor="${anc}">${name.toUpperCase()}</text></g>`;
   }).join("");
-  return `<section class="voyage" aria-label="Training voyage: ${pct}% of the course done">
-    <div class="voyage-head"><span class="mono">Training voyage</span><span class="vbar"><i style="width:${Math.max(2, pct)}%"></i></span><span class="vcount">${done} of ${total} sessions</span><b>${pct}%</b></div>
-    <svg viewBox="0 0 ${W} 190" role="img" aria-label="Route through the 7 modules">
-      <g class="chart-lines"><path d="M0,40 C80,20 160,60 340,30"/><path d="M0,100 C90,80 200,120 340,92"/><path d="M0,165 C100,150 220,185 340,160"/></g>
-      <g class="compass" transform="translate(322,26)"><circle r="12"/><path d="M0,-11 L3,0 L0,11 L-3,0 Z"/><text y="-15" text-anchor="middle">N</text></g>
-      <path class="route-ahead" d="${d}"/><path class="route-sailed" d="${sail}"/>${pts}</svg></section>`;
+  return `<section class="voyage" aria-label="Training voyage, Houston to Marseille: ${pct}% of the course done. Now in module ${m.n}, ${esc(m.title)}.">
+    <div class="voyage-head"><span class="mono">Houston → Marseille</span><b>${pct}%</b></div>
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-hidden="true">
+      <rect class="sea" width="${W}" height="${H}"/>
+      <g class="grid">${grid.join("")}</g>
+      <g class="land">${LAND.map(poly => `<polygon points="${pts(poly.map(prj))}"/>`).join("")}</g>
+      <text class="ocean" x="${prj([-42,30])[0]}" y="${prj([-42,30])[1]}" text-anchor="middle">North Atlantic Ocean</text>
+      <polyline class="route-ahead" points="${pts(r.all)}"/>
+      <polyline class="route-sailed" points="${pts(r.sailed)}"/>
+      ${ports}
+      <g class="ship" transform="translate(${sx.toFixed(1)},${sy.toFixed(1)}) rotate(${r.ang.toFixed(0)})"><circle r="9" class="halo"/><path d="M-6,-3 L4,-3 L8,0 L4,3 L-6,3 Z"/></g>
+    </svg>
+    <div class="voyage-foot"><span><span class="vlabel">Now · </span>${m.n} · ${esc(m.title)}</span><span class="vcount">${done}/${total}</span></div>
+    <span class="vbar"><i style="width:${Math.max(1, pct)}%"></i></span>
+  </section>`;
 }
 
 function viewHome(){
