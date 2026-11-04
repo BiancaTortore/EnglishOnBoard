@@ -38,6 +38,9 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - `worker.js`: recibe todo eso, lo guarda en KV (`DATA`) y manda el mail desde english@chartroomlab.com a `FEEDBACK_TO`. Panel en **/admin** (PIN `ADMIN_PIN`): personas, activas, instaladas, embudo por lección, comentarios y CSV.
 - Configuración en Cloudflare (no va en el repo, que es público): secretos `FEEDBACK_TO` y `ADMIN_PIN`, namespace KV `englishonboard-data` conectado como `DATA` en `wrangler.jsonc`, dominio english.chartroomlab.com.
 
+## Portadas de las lecciones 7–27 (4 nov)
+- Prompts de `hero.jpg` escritos en `img/l07…l27/prompts.md` (solo la portada; la escena se agrega al escribir cada lección). Cuando llega una portada, la lista la muestra sola junto al "Coming soon" (la miniatura usa `img/lNN/hero.jpg`).
+
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
