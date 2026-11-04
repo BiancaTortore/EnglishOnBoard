@@ -13,7 +13,9 @@
   },
   "send_email": [
     { "name": "EMAIL" }
+  ],
+  // KV namespace "englishonboard-data": comments and anonymous usage
+  "kv_namespaces": [
+    { "binding": "DATA", "id": "8bb14d2108d84b769844d50507be255d" }
   ]
-  // KV for comments and usage: add once the namespace exists in the dashboard
-  // "kv_namespaces": [ { "binding": "DATA", "id": "<namespace id>" } ]
 }
