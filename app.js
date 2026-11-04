@@ -232,7 +232,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-18";
+const APP_VERSION = "beta-19";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -358,6 +358,48 @@ function setBar(html, cls){
 function clearBar(){ const b = $("#checkbar"); if (b) b.remove(); const t = $("#tabbar"); if (t) t.remove(); }
 
 /* =========================================================
+   NAVIGATION — every screen is a step in the phone's history,
+   so the phone's back button goes back one screen, like any app.
+   Depth 0 is Home (or the welcome screen); back from there leaves the app.
+   ========================================================= */
+const PATH = () => location.pathname + location.search;
+const navState = () => history.state || {v: "home", d: 0};
+function navPush(st, hash){ history.pushState({...st, d: (navState().d || 0) + 1}, "", hash ? PATH() + hash : PATH()); }
+function navReplace(st, hash){ history.replaceState({...st, d: navState().d || 0}, "", hash ? PATH() + hash : PATH()); }
+function navBack(){ if ((navState().d || 0) > 0) history.back(); else goHome(); }
+let afterRoot = null;
+function goHome(then){
+  const d = navState().d || 0;
+  if (d > 0) { afterRoot = then || null; history.go(-d); return; }
+  navReplace({v: "home"}); viewHome(); if (then) then();
+}
+function tabNav(k){
+  if (k === "home") { goHome(); return; }
+  const fn = TAB_VIEWS[k];
+  if ((navState().d || 0) === 0) navPush({v: k}); else navReplace({v: k});
+  fn();
+}
+function openLessonNav(n){ navPush({v: "lesson", n}, "#l" + n); openLesson(n); }
+function drillNav(kind, mod){ navPush({v: "drill"}); startDrill(kind, mod); }
+function reviewNav(){ navPush({v: "review"}); startReview(); }
+window.addEventListener("popstate", e => {
+  const st = e.state || {v: "home", d: 0};
+  if ((st.d || 0) === 0 && afterRoot) { const f = afterRoot; afterRoot = null; showState(st); f(); return; }
+  showState(st);
+});
+function showState(st){
+  stopAll(); clearBar();
+  if (st.v === "lesson") { openLesson(st.n); return; }
+  if (st.v === "session") { navReplace({v: "lesson", n: st.n}, "#l" + st.n); openLesson(st.n); return; }  /* a session can't be resumed halfway */
+  if (st.v === "done") { loadLesson(st.n).then(viewLessonDone, () => openLesson(st.n)); return; }
+  if (st.v === "feedback") { viewFeedback(); return; }
+  if (st.v === "welcome") { viewWelcome(); return; }
+  if (TAB_VIEWS[st.v]) { TAB_VIEWS[st.v](); return; }
+  /* drills and reviews can't be resumed: land on the screen below */
+  if ((st.d || 0) > 0) history.back(); else { navReplace({v: "home"}); viewHome(); }
+}
+
+/* =========================================================
    HOME · TABS (Home, Lessons, Practice, Logbook, Profile)
    ========================================================= */
 const SESS_PER_LESSON = 6;
@@ -376,11 +418,11 @@ function setTabs(active){
   let t = $("#tabbar");
   if (!t) { t = document.createElement("nav"); t.id = "tabbar"; t.className = "tabbar"; t.setAttribute("aria-label", "Main"); document.body.appendChild(t); }
   t.innerHTML = `<div class="tabbar-in">${tabs.map(([k, label]) => `<button class="tab" data-tab="${k}" ${k === active ? 'aria-current="page"' : ""}>${I["t_" + k]}<span>${label}</span></button>`).join("")}</div>`;
-  tabs.forEach(([k, , fn]) => { t.querySelector(`[data-tab="${k}"]`).onclick = fn; });
+  tabs.forEach(([k]) => { t.querySelector(`[data-tab="${k}"]`).onclick = () => { if (k !== active) tabNav(k); else window.scrollTo({top: 0, behavior: "smooth"}); }; });
 }
 function clearTabs(){ const t = $("#tabbar"); if (t) t.remove(); }
 function tabView(active, html){
-  stopAll(); clearBar(); location.hash = "";
+  stopAll(); clearBar();
   app.innerHTML = `<div class="tabview tab-${active}">${html}</div>`;
   setTabs(active);
   window.scrollTo(0, 0);
@@ -412,8 +454,8 @@ function moduleSection(m, cur){
     <ol class="lrows">${m.lessons.map(l => lessonRow(l, cur && l.n === cur.n)).join("")}${m.lessons.some(l => l.ready) ? moduleTestRow(m) : ""}</ol></section>`;
 }
 function wireRows(){
-  $$("[data-n]").forEach(b => b.onclick = () => openLesson(+b.dataset.n));
-  $$("[data-test]").forEach(b => b.onclick = () => startDrill("test", +b.dataset.test));
+  $$("[data-n]").forEach(b => b.onclick = () => openLessonNav(+b.dataset.n));
+  $$("[data-test]").forEach(b => b.onclick = () => drillNav("test", +b.dataset.test));
 }
 
 /* the voyage chart: Diego's real passage, Houston → Marseille.
@@ -503,8 +545,8 @@ function viewHome(){
     ${moduleSection(m, cur)}
     <button class="chip-btn see-all" id="seeAll">See all 7 modules</button>`);
   wireRows();
-  const rb = $("#reviewBtn"); if (rb) rb.onclick = startReview;
-  $("#seeAll").onclick = viewLessons;
+  const rb = $("#reviewBtn"); if (rb) rb.onclick = reviewNav;
+  $("#seeAll").onclick = () => tabNav("lessons");
   $("#toLessons").onclick = () => $(".tab-home .module").scrollIntoView({behavior: "smooth"});
 }
 
@@ -525,8 +567,8 @@ function viewPractice(){
     <section class="module"><div class="module-head"><h3>Module tests</h3><span class="mono">80% to pass</span></div>
       <ol class="lrows">${mods.map(moduleTestRow).join("")}</ol></section>
     <p class="note">One certificate at the end of the course, when you pass the final test.</p>`);
-  $("#quick").onclick = () => startDrill("quick");
-  if (rc) $("#reviewBtn").onclick = startReview;
+  $("#quick").onclick = () => drillNav("quick");
+  if (rc) $("#reviewBtn").onclick = reviewNav;
   wireRows();
 }
 
@@ -580,23 +622,24 @@ function viewProfile(){
     ${betaNoteHTML()}
     <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>`);
   wireInstall();
-  $("#fbOpen").onclick = viewFeedback;
+  $("#fbOpen").onclick = () => { navPush({v: "feedback"}); viewFeedback(); };
   let taps = 0; $("#ver").onclick = () => { if (++taps >= 5) { lsSet(PREVIEW_KEY, PREVIEW ? "0" : "1"); location.reload(); } };
   $$(".seg-b").forEach(b => b.onclick = () => { settings.speed = b.dataset.speed; saveSettings(); viewProfile(); });
-  $("#showWelcome").onclick = viewWelcome;
+  $("#showWelcome").onclick = () => { navPush({v: "welcome"}); viewWelcome(); };
   let armed = false; const reset = $("#reset");
   reset.onclick = () => {
     if (!armed) { armed = true; reset.textContent = "Tap again to erase"; reset.classList.add("armed"); return; }
-    progress = {}; saveProgress(); viewHome();
+    progress = {}; saveProgress(); goHome();
   };
 }
 const viewSettings = viewProfile;
+const TAB_VIEWS = {home: viewHome, lessons: viewLessons, practice: viewPractice, logbook: viewLogbook, profile: viewProfile};
 function betaNoteHTML(){
   return `<div class="beta-note"><span class="mono">Beta</span><p>Module 1 is open and free. The other modules are on the way.
     English on Board is a language course: it is not approved by the IMO and does not give an STCW certificate.</p></div>`;
 }
 function viewFeedback(){
-  stopAll(); clearBar(); location.hash = "";
+  stopAll(); clearBar();
   app.innerHTML = `<div class="home fb-view">
     <button class="back-link" id="fBack">${I.back} Profile</button>
     <h2 class="prompt" style="font-size:34px">Send feedback</h2>
@@ -616,14 +659,14 @@ function viewFeedback(){
   setBar(`<button class="cta" id="go" disabled>Send</button>`);
   const check = () => { $("#go").disabled = !($("#fbC").value.trim() || getV()); };
   $("#fbC").oninput = check;
-  $("#fBack").onclick = viewProfile;
+  $("#fBack").onclick = navBack;
   $("#go").onclick = () => {
     const nm = $("#fbN").value.trim(), isMail = /@/.test(nm);
     sendFeedback({rating: getV(), comment: $("#fbC").value, rank: $("#fbR").value, name: isMail ? "" : nm, contact: isMail ? nm : "", publish: $("#fbP").checked, where: "Profile"});
     clearBar();
     $("#fbf").outerHTML = `<div class="panel"><b>Thank you.</b> <span class="sub">Your feedback was sent${navigator.onLine ? "" : ". It goes out as soon as you have signal"}.</span></div>
       <button class="cta" id="fDone">Back to profile</button>`;
-    $("#fDone").onclick = viewProfile;
+    $("#fDone").onclick = navBack;
   };
   window.scrollTo(0, 0);
 }
@@ -678,9 +721,9 @@ async function startDrill(kind, modN){
     }
   } catch (e) {
     app.innerHTML = `<div class="home"><p>This could not be loaded. Check your connection and try again.</p><button class="cta" id="home">Back</button></div>`;
-    $("#home").onclick = viewHome; return;
+    $("#home").onclick = navBack; return;
   }
-  if (!items.length) { viewHome(); return; }
+  if (!items.length) { navBack(); return; }
   if (kind === "quick") items = shuffle(items);
   S = {drill: kind, mod: modN, review: false, i: -1, sess: null, pos: 0, graded: 0, firstRight: 0, missed: 0, queue: items};
   openPlayer();
@@ -700,13 +743,13 @@ function finishDrill(){
       <p style="margin:0">${S.firstRight} of ${S.graded} right. ${pass ? "Well done." : `You need ${TEST_PASS}% to pass. Practise a little and try again.`}</p>
       ${S.missed ? `<p class="sub" style="margin:0">The questions you missed are in your review.</p>` : ""}</div>`;
     setBar(pass ? `<button class="cta" id="go">Back to home</button>` : `<div class="self"><button class="opt" id="home2">Back</button><button class="cta" id="go" style="flex:1">Try again</button></div>`, pass ? "ok" : "bad");
-    if (pass) $("#go").onclick = viewHome;
-    else { $("#go").onclick = () => startDrill("test", S.mod); $("#home2").onclick = viewPractice; }
+    if (pass) $("#go").onclick = () => goHome();
+    else { $("#go").onclick = () => startDrill("test", S.mod); $("#home2").onclick = navBack; }
   } else {
     $("#stage").innerHTML = `<div class="result"><span class="mono kicker">Quick practice · done</span>
       <div class="score">${pct}%</div><p style="margin:0">${S.firstRight} of ${S.graded} right.${S.missed ? " The ones you missed are in your review." : ""}</p></div>`;
     setBar(`<div class="self"><button class="opt" id="home2">Home</button><button class="cta" id="go" style="flex:1">Another round</button></div>`, pct >= TEST_PASS ? "ok" : "");
-    $("#go").onclick = () => startDrill("quick"); $("#home2").onclick = viewHome;
+    $("#go").onclick = () => startDrill("quick"); $("#home2").onclick = () => goHome();
   }
 }
 
@@ -724,9 +767,8 @@ async function openLesson(n){
     }
   } catch (e) {
     app.innerHTML = `<div class="home"><p>Lesson ${n} could not be loaded. Check your connection and try again.</p><button class="cta" id="home">Back</button></div>`;
-    $("#home").onclick = viewHome; return;
+    $("#home").onclick = navBack; return;
   }
-  location.hash = "l" + n;
   viewLesson();
 }
 
@@ -738,7 +780,7 @@ function viewLesson(){
   app.innerHTML = `<div class="lesson">
     <header class="hero" id="hero">
       ${hero ? `<img src="${esc(hero)}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">` : ""}
-      <button class="back" id="back">${I.back} Home</button>
+      <button class="back" id="back">${I.back} Back</button>
       <span class="mono">${esc(L.place)}</span>
       <h2>${L.n} · ${esc(L.title)}</h2>
       <p>${esc(L.goal)}</p>
@@ -752,8 +794,8 @@ function viewLesson(){
     }).join("")}</ol>
     ${nextIdx === -1 ? `<div class="panel"><b>Lesson complete.</b> <span class="sub">The words from this lesson go into your daily review.</span></div>` : ""}
   </div>`;
-  $("#back").onclick = viewHome;
-  $$(".sess").forEach(b => b.onclick = () => startSession(+b.dataset.i));
+  $("#back").onclick = navBack;
+  $$(".sess").forEach(b => b.onclick = () => { navPush({v: "session", n: L.n}, "#l" + L.n); startSession(+b.dataset.i); });
   window.scrollTo(0, 0);
 }
 
@@ -770,7 +812,7 @@ function startSession(i){
 }
 function openPlayer(){
   app.innerHTML = `<div class="player"><div class="topbar"><button class="x" id="quit" aria-label="Close session">${I.x}</button><div class="bar"><i id="prog"></i></div></div><div class="stage" id="stage"></div></div>`;
-  $("#quit").onclick = () => { stopAll(); if (S.drill === "test") viewPractice(); else if (S.review || S.drill) viewHome(); else viewLesson(); };
+  $("#quit").onclick = () => { stopAll(); navBack(); };
 }
 function showProgress(){ $("#prog").style.width = Math.round(S.pos / S.queue.length * 100) + "%"; }
 function next(){ stopAll(); S.pos++; if (S.pos >= S.queue.length) finish(); else render(); }
@@ -1239,7 +1281,7 @@ function finish(){
     ${!isStandalone() && !lsGet(INSTALL_ASKED_KEY) ? installCardHTML("session") : ""}`;
   if (!isStandalone() && !lsGet(INSTALL_ASKED_KEY)) { lsSet(INSTALL_ASKED_KEY, "1"); wireInstall(); }
   setBar(`<button class="cta" id="go">${nextIdx > -1 ? "Next: " + esc(L.sessions[nextIdx].title) : "Lesson summary"}</button>`, "ok");
-  $("#go").onclick = () => { if (nextIdx > -1) startSession(nextIdx); else viewLessonDone(); };
+  $("#go").onclick = () => { if (nextIdx > -1) startSession(nextIdx); else { navReplace({v: "done", n: L.n}, "#l" + L.n); viewLessonDone(); } };
 }
 
 /* =========================================================
@@ -1271,9 +1313,9 @@ async function startReview(){
     }
   } catch (e) {
     app.innerHTML = `<div class="home"><p>The review could not be loaded. Check your connection and try again.</p><button class="cta" id="home">Back</button></div>`;
-    $("#home").onclick = viewHome; return;
+    $("#home").onclick = navBack; return;
   }
-  if (!items.length) { viewHome(); return; }
+  if (!items.length) { navBack(); return; }
   S = {review: true, drill: null, i: -1, sess: null, pos: 0, graded: 0, firstRight: 0, missed: 0, queue: items};
   openPlayer();
   render();
@@ -1285,14 +1327,14 @@ function finishReview(){
     <h2 class="prompt" style="font-size:40px">${n} ${n === 1 ? "item" : "items"} checked</h2>
     <p style="margin:0">${left ? `${left} still to fix. They come back next time.` : "Nothing left to fix. Well done."}</p></div>`;
   setBar(`<button class="cta" id="go">Back to home</button>`, "ok");
-  $("#go").onclick = viewHome;
+  $("#go").onclick = () => goHome();
 }
 
 /* =========================================================
    LESSON SUMMARY — after the last session of a lesson
    ========================================================= */
 function viewLessonDone(){
-  stopAll(); clearBar(); location.hash = "l" + L.n;
+  stopAll(); clearBar();
   const p = lessonProgress(L.n), scores = Object.values(p.scores || {});
   const avg = scores.length ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null;
   const mod = COURSE.modules.find(m => m.lessons.some(l => l.n === L.n));
@@ -1322,9 +1364,9 @@ function viewLessonDone(){
     sendFeedback({rating: getV(), comment: $("#fbqText").value, where: `Lesson ${L.n} · ${L.title}`});
     $("#fbq").innerHTML = `<b>Thank you.</b><span class="sub">Your opinion was sent${navigator.onLine ? "" : " (it goes out when you have signal)"}.</span>`;
   };
-  if ($("#nextL")) $("#nextL").onclick = () => openLesson(nxt.n);
-  $("#allL").onclick = viewLessons;
-  if ($("#modTest")) $("#modTest").onclick = () => startDrill("test", mod.n);
+  if ($("#nextL")) $("#nextL").onclick = () => goHome(() => openLessonNav(nxt.n));
+  $("#allL").onclick = () => goHome(() => tabNav("lessons"));
+  if ($("#modTest")) $("#modTest").onclick = () => { navReplace({v: "drill"}); startDrill("test", mod.n); };
   window.scrollTo(0, 0);
 }
 
@@ -1333,7 +1375,7 @@ function viewLessonDone(){
    ========================================================= */
 function markWelcomeSeen(){ try { localStorage.setItem(WELCOME_KEY, "1"); } catch (e) {} }
 function viewWelcome(){
-  stopAll(); clearBar(); location.hash = "";
+  stopAll(); clearBar();
   app.innerHTML = `<div class="home welcome">
     <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>English on Board</h1><p>Maritime English for deck officers</p></div></div>
     <h2 class="welcome-title">Practice the English you use on the bridge, on deck and on the radio.</h2>
@@ -1350,8 +1392,8 @@ function viewWelcome(){
     <button class="chip-btn" id="wSkip" style="align-self:center">Go to the lessons</button>
   </div>`;
   wireInstall();
-  $("#wStart").onclick = () => { markWelcomeSeen(); openLesson(1); };
-  $("#wSkip").onclick = () => { markWelcomeSeen(); viewHome(); };
+  $("#wStart").onclick = () => { markWelcomeSeen(); goHome(() => openLessonNav(1)); };
+  $("#wSkip").onclick = () => { markWelcomeSeen(); goHome(); };
   window.scrollTo(0, 0);
 }
 
@@ -1369,9 +1411,9 @@ function viewWelcome(){
   const ready = m && COURSE.modules.some(mod => mod.lessons.some(l => l.n === +m[1] && l.ready));
   let fresh = false;
   try { fresh = !localStorage.getItem(WELCOME_KEY) && Object.keys(progress).length === 0; } catch (e) {}
-  if (ready) openLesson(+m[1]);
-  else if (fresh) viewWelcome();
-  else viewHome();
+  if (ready) { history.replaceState({v: "home", d: 0}, "", PATH()); openLessonNav(+m[1]); }
+  else if (fresh) { history.replaceState({v: "welcome", d: 0}, "", PATH()); viewWelcome(); }
+  else { history.replaceState({v: "home", d: 0}, "", PATH()); viewHome(); }
   if ("serviceWorker" in navigator && location.protocol === "https:") {
     try { navigator.serviceWorker.register("sw.js").catch(() => {}); } catch (e) {}
   }
