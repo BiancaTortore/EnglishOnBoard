@@ -39,6 +39,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - Configuración en Cloudflare (no va en el repo, que es público): secretos `FEEDBACK_TO` y `ADMIN_PIN`, namespace KV `englishonboard-data` conectado como `DATA` en `wrangler.jsonc`, dominio english.chartroomlab.com.
 
 ## Portadas de las lecciones 7–27 (4 nov)
+- (5 nov) Portadas cargadas de la L6 a la L25. **Faltan L26 y L27.**
 - Prompts de `hero.jpg` escritos en `img/l07…l27/prompts.md` (solo la portada; la escena se agrega al escribir cada lección). Cuando llega una portada, la lista la muestra sola junto al "Coming soon" (la miniatura usa `img/lNN/hero.jpg`).
 
 ## Pendiente
