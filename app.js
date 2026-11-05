@@ -232,7 +232,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-20";
+const APP_VERSION = "beta-21";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -418,7 +418,8 @@ function setTabs(active){
   let t = $("#tabbar");
   if (!t) { t = document.createElement("nav"); t.id = "tabbar"; t.className = "tabbar"; t.setAttribute("aria-label", "Main"); document.body.appendChild(t); }
   t.innerHTML = `<div class="tabbar-in">${tabs.map(([k, label]) => `<button class="tab" data-tab="${k}" ${k === active ? 'aria-current="page"' : ""}>${I["t_" + k]}<span>${label}</span></button>`).join("")}</div>`;
-  tabs.forEach(([k]) => { t.querySelector(`[data-tab="${k}"]`).onclick = () => { if (k !== active) tabNav(k); else window.scrollTo({top: 0, behavior: "smooth"}); }; });
+  const onTab = TAB_VIEWS && document.querySelector(".tabview");
+  tabs.forEach(([k]) => { t.querySelector(`[data-tab="${k}"]`).onclick = () => { if (k !== active || !onTab) tabNav(k); else window.scrollTo({top: 0, behavior: "smooth"}); }; });
 }
 function clearTabs(){ const t = $("#tabbar"); if (t) t.remove(); }
 function tabView(active, html){
@@ -796,6 +797,7 @@ function viewLesson(){
   </div>`;
   $("#back").onclick = navBack;
   $$(".sess").forEach(b => b.onclick = () => { navPush({v: "session", n: L.n}, "#l" + L.n); startSession(+b.dataset.i); });
+  setTabs("lessons");
   window.scrollTo(0, 0);
 }
 
@@ -811,6 +813,7 @@ function startSession(i){
   render();
 }
 function openPlayer(){
+  clearTabs();
   app.innerHTML = `<div class="player"><div class="topbar"><button class="x" id="quit" aria-label="Close session">${I.x}</button><div class="bar"><i id="prog"></i></div></div><div class="stage" id="stage"></div></div>`;
   $("#quit").onclick = () => { stopAll(); navBack(); };
 }
@@ -1367,6 +1370,7 @@ function viewLessonDone(){
   if ($("#nextL")) $("#nextL").onclick = () => goHome(() => openLessonNav(nxt.n));
   $("#allL").onclick = () => goHome(() => tabNav("lessons"));
   if ($("#modTest")) $("#modTest").onclick = () => { navReplace({v: "drill"}); startDrill("test", mod.n); };
+  setTabs("lessons");
   window.scrollTo(0, 0);
 }
 

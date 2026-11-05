@@ -495,3 +495,6 @@ html.dark-page body{background:#0A1620}
 .w-meta{margin:0;text-align:center;color:var(--muted)}
 .checkbar.w-bar{background:#0A1620;border-top-color:#22394A}
 .w-go{margin-top:0}
+
+/* lesson screens show the tab bar too: keep their content clear of it */
+.lesson,.lesson-done{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
