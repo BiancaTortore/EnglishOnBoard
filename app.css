@@ -457,3 +457,41 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 .fb-check{display:flex;gap:10px;align-items:flex-start;font-size:15px;margin-top:10px;cursor:pointer}
 .fb-check input{width:22px;height:22px;flex:none;margin:1px 0 0;accent-color:var(--accent)}
 .fb-view{padding-bottom:120px}
+
+/* welcome — a night screen in both themes, photo on top, Diego's voyage in three stops */
+html.dark-page{color-scheme:dark}
+html.dark-page body{background:#0A1620}
+.welcome2{--bg:#0A1620;--surface:#112029;--ink:#E3EBF0;--muted:#93A6B3;--rule:#22394A;--accent:#FF6B35;--accent-ink:#1A0A03;--sea-soft:#16384A;--sea:#0F3446;
+  background:var(--bg);color:var(--ink);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+.w-hero{position:relative;height:min(37vh,320px);min-height:240px;display:flex;flex-direction:column;justify-content:space-between;padding:18px max(20px,env(safe-area-inset-left,0px)) 18px;color:#fff;overflow:hidden}
+.w-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;max-width:none}
+.w-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,15,22,.55),rgba(5,15,22,0) 28%,rgba(10,22,32,.25) 58%,#0A1620)}
+.w-hero > *:not(img){position:relative;z-index:1}
+.w-brand{display:flex;align-items:center;gap:8px;font:700 21px var(--f-display);letter-spacing:.01em}
+.w-brand svg{color:#FF7A45;width:22px;height:22px}
+.w-hero h1{font-size:clamp(32px,9.4vw,40px);line-height:1.02;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.w-body{display:flex;flex-direction:column;gap:14px;padding:4px max(20px,env(safe-area-inset-right,0px)) 120px max(20px,env(safe-area-inset-left,0px))}
+.w-lede{margin:0;font-size:16.5px;line-height:1.5;color:#D3DEE5}
+.w-lede b{color:#fff}
+.w-es{margin:-6px 0 0;font-size:14px;color:var(--muted)}
+.w-voyage{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;position:relative}
+.w-voyage::before{content:"";position:absolute;left:6px;top:14px;bottom:14px;border-left:2px dashed #3C627A}
+.w-voyage li{position:relative;padding-left:28px;display:flex;flex-direction:column;gap:2px}
+.w-voyage li::before{content:"";position:absolute;left:0;top:3px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid #8FB1C6}
+.w-voyage li.on::before{background:#FF6B35;border-color:#FFB08F}
+.w-voyage .mono{color:#9DB6C6}
+.w-voyage li.on .mono{color:#FF9A70}
+.w-voyage p{margin:0;font-size:15.5px;color:#C9D6DF}
+.w-voyage li.on p{color:#fff}
+.w-voyage q{font-style:italic;quotes:"“" "”"}
+.w-skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.w-skills div{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:10px 8px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.w-skills b{font:700 18px var(--f-display);letter-spacing:.02em;color:#fff}
+.w-skills span{font-size:12.5px;line-height:1.3;color:var(--muted)}
+.w-go{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px;background:#FF6B35;color:#1A0A03}
+.w-go svg{width:22px;height:22px}
+.w-skip{all:unset;cursor:pointer;align-self:center;margin-top:0;padding:8px 12px;font-size:15px;color:#C9D6DF;border-radius:8px}
+.w-skip:focus-visible{outline:3px solid #FF6B35}
+.w-meta{margin:0;text-align:center;color:var(--muted)}
+.checkbar.w-bar{background:#0A1620;border-top-color:#22394A}
+.w-go{margin-top:0}

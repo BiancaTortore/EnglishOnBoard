@@ -232,7 +232,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-19";
+const APP_VERSION = "beta-20";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -355,7 +355,7 @@ function setBar(html, cls){
   b.innerHTML = `<div class="checkbar-in">${html}</div>`;
   return b;
 }
-function clearBar(){ const b = $("#checkbar"); if (b) b.remove(); const t = $("#tabbar"); if (t) t.remove(); }
+function clearBar(){ const b = $("#checkbar"); if (b) b.remove(); const t = $("#tabbar"); if (t) t.remove(); document.documentElement.classList.remove("dark-page"); }
 
 /* =========================================================
    NAVIGATION — every screen is a step in the phone's history,
@@ -1376,22 +1376,34 @@ function viewLessonDone(){
 function markWelcomeSeen(){ try { localStorage.setItem(WELCOME_KEY, "1"); } catch (e) {} }
 function viewWelcome(){
   stopAll(); clearBar();
-  app.innerHTML = `<div class="home welcome">
-    <div class="brand"><div class="brand-mark">${I.wheel}</div><div><h1>English on Board</h1><p>Maritime English for deck officers</p></div></div>
-    <h2 class="welcome-title">Practice the English you use on the bridge, on deck and on the radio.</h2>
-    <p class="sub">Inglés para oficiales de cubierta: escuchar, hablar y leer lo que pasa a bordo.</p>
-    <ol class="how">
-      <li><span class="mono">Listen</span><p>Clips with the crew, the captain and the VHF. Some have static, like a real radio.</p></li>
-      <li><span class="mono">Speak</span><p>Say the lines out loud. The app checks what it hears.</p></li>
-      <li><span class="mono">Read</span><p>Find the right line in a log, a message or a crew list.</p></li>
-    </ol>
-    <p class="sub">27 short lessons in 7 modules. Your progress is saved on this phone, and the lessons work offline after the first load.</p>
-    ${betaNoteHTML()}
-    ${installCardHTML("welcome")}
-    <button class="cta" id="wStart">Start Lesson 1</button>
-    <button class="chip-btn" id="wSkip" style="align-self:center">Go to the lessons</button>
+  document.documentElement.classList.add("dark-page");
+  app.innerHTML = `<div class="welcome2">
+    <header class="w-hero">
+      <img src="img/l01/hero.jpg" alt="" onerror="this.remove()">
+      <div class="w-brand">${I.wheel}<span>English on Board</span></div>
+      <h1>Sail with Diego.<br>Learn the English on board.</h1>
+    </header>
+    <div class="w-body">
+      <p class="w-lede">A 14-day voyage on the LNG carrier <b>Horizon</b>, from Houston to Marseille. Every lesson is one moment of Diego's first ship.</p>
+      <p class="w-es">El inglés que se escucha y se habla a bordo, en el primer viaje de Diego.</p>
+      <ol class="w-voyage" aria-label="Diego's voyage">
+        <li class="on"><span class="mono">Day 1 · Houston</span><p>Diego joins the ship, nervous. <q>Sorry, can you say that again?</q></p></li>
+        <li><span class="mono">Day 8 · Atlantic</span><p>Drills, watches on the bridge, reports on the radio.</p></li>
+        <li><span class="mono">Day 14 · Marseille</span><p>At the helm with the pilot. <q>Well done, cadet.</q></p></li>
+      </ol>
+      <div class="w-skills">
+        <div><b>Listen</b><span>crew, Captain, VHF</span></div>
+        <div><b>Speak</b><span>the phone checks you</span></div>
+        <div><b>Read</b><span>logs and lists</span></div>
+      </div>
+      <button class="w-skip" id="wSkip">Already started? Go to the lessons</button>
+      <p class="w-meta mono">Module 1 free · 27 lessons in 7 modules · works offline</p>
+      ${betaNoteHTML()}
+      ${installCardHTML("welcome")}
+    </div>
   </div>`;
   wireInstall();
+  setBar(`<button class="cta w-go" id="wStart">${I.play}<span>Start Lesson 1</span></button>`, "w-bar");
   $("#wStart").onclick = () => { markWelcomeSeen(); goHome(() => openLessonNav(1)); };
   $("#wSkip").onclick = () => { markWelcomeSeen(); goHome(); };
   window.scrollTo(0, 0);
