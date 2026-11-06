@@ -45,7 +45,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 ## Sin conexión (6 nov)
 - Las voces grabadas (ElevenLabs), las fotos y las láminas viven en una caché aparte (`eob-media-v1`) que **no se borra al publicar versiones nuevas**.
 - Al abrir la app con señal, se descargan solas en segundo plano todas las lecciones abiertas: texto, audios e imágenes (Módulo 1 ≈ 5 MB). Profile → "Offline" muestra si ya están guardadas.
-- El celular pide el audio por partes; el service worker las corta del archivo guardado, así suena igual con o sin señal. La voz "model" sigue siendo la del celular, por diseño.
+- El celular pide el audio por partes; el service worker las corta del archivo guardado, así suena igual con o sin señal. La voz "model" (palabras, ejemplos y respuestas modelo) se graba con ElevenLabs usando `tools/model-voice.mjs` en la Mac de Bianca; cuando una lección tiene sus grabaciones se marca con `"modelAudio": true` en su JSON y la app las usa (y las descarga para usar sin conexión). Sin esa marca, o si falta un archivo, habla el celular.
 
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.

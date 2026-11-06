@@ -186,8 +186,9 @@ function playFile(file, {radio, rate}, tok){
 }
 
 async function playPart(id, text, voice, radio, rate, tok){
-  /* the model voice (words, examples, model answers) always uses the phone's voice */
-  if (voice === "model") { await speakTTS(text, voice, rate); return; }
+  /* the model voice (words, examples, model answers) uses its recording once the lesson has
+     them ("modelAudio": true in the lesson file); otherwise, or if one is missing, the phone's voice */
+  if (voice === "model" && !L.modelAudio) { await speakTTS(text, voice, rate); return; }
   const file = `audio/${lessonDir()}/${id}.mp3`;
   const ok = await playFile(file, {radio, rate}, tok);
   if (!ok && tok === playToken) await speakTTS(text, voice, rate);
@@ -319,7 +320,7 @@ function lessonMediaFiles(Ln){
   const dir = "l" + pad(Ln.n), files = new Set();
   JSON.stringify(Ln).replace(/"(img\/[^"]+\.(?:jpe?g|png|webp|svg))"/g, (_, f) => files.add(f));
   Object.entries(Ln.audio || {}).forEach(([id, c]) => {
-    if (c.voice === "model") return;   /* the model voice is the phone's own voice, never recorded */
+    if (c.voice === "model" && !Ln.modelAudio) return;   /* model voice not recorded yet for this lesson */
     const parts = String(c.text).split("|");
     parts.forEach((p, i) => files.add(`audio/${dir}/${parts.length > 1 ? `${id}-${"ab"[i]}` : id}.mp3`));
   });
