@@ -5,7 +5,7 @@
      background (see saveForOffline in app.js), so lessons work later without signal.
    - Audio is requested in byte ranges; ranges are answered from the cached full file.
    Bump VERSION whenever app.js / app.css / index.html change. */
-const VERSION = "eob-v26";
+const VERSION = "eob-v27";
 const MEDIA = "eob-media-v1";
 const SHELL = ["./", "index.html", "app.js", "app.css", "course.json", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 const IS_MEDIA = /\.(mp3|m4a|wav|ogg|jpe?g|png|webp|svg)$/i;
@@ -25,8 +25,8 @@ self.addEventListener("fetch", e => {
   if (!sameOrigin && !isFont) return;
   /* the server parts are never cached */
   if (sameOrigin && (url.pathname.startsWith("/api/") || url.pathname.startsWith("/admin"))) return;
-  if (sameOrigin && IS_MEDIA.test(url.pathname)) { e.respondWith(media(req, url)); return; }
-  const fresh = /\.(json|js|css|html)$/.test(url.pathname) || url.pathname.endsWith("/");
+  if (sameOrigin && IS_MEDIA.test(url.pathname) && !url.pathname.includes("/icons/")) { e.respondWith(media(req, url)); return; }
+  const fresh = /\.(json|js|css|html|webmanifest)$/.test(url.pathname) || url.pathname.endsWith("/") || url.pathname.includes("/icons/");
   if (fresh) {
     /* network first, so content updates show up; cache when offline */
     e.respondWith(fetch(req).then(r => { if (r.ok) { const copy = r.clone(); caches.open(VERSION).then(c => c.put(req, copy)); } return r; })
@@ -40,12 +40,22 @@ self.addEventListener("fetch", e => {
   }
 });
 
+/* A file replaced with the same name (a new photo, a re-recorded line) must reach phones that
+   already have the old one: once per session, ask the server quietly whether it changed. */
+const checked = new Set();
+function revalidate(cache, key){
+  if (checked.has(key)) return;
+  checked.add(key);
+  fetch(key, {cache: "no-cache"}).then(r => { if (r.ok && r.status === 200) return cache.put(key, r); }).catch(() => {});
+}
+
 /* Media: cache first. The full file is fetched once (without a Range header) and kept;
    a range request is then cut from it, so audio plays the same with or without signal. */
 async function media(req, url){
   const key = url.origin + url.pathname;
   const cache = await caches.open(MEDIA);
   let hit = await cache.match(key);
+  if (hit) revalidate(cache, key);
   if (!hit) {
     let r;
     try { r = await fetch(key); } catch (e) { return Response.error(); }
