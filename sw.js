@@ -5,7 +5,7 @@
      background (see saveForOffline in app.js), so lessons work later without signal.
    - Audio is requested in byte ranges; ranges are answered from the cached full file.
    Bump VERSION whenever app.js / app.css / index.html change. */
-const VERSION = "eob-v30";
+const VERSION = "eob-v31";
 const MEDIA = "eob-media-v1";
 const SHELL = ["./", "index.html", "app.js", "app.css", "course.json", "manifest.webmanifest", "icons/app-icon-192.png", "icons/app-icon-512.png"];
 const IS_MEDIA = /\.(mp3|m4a|wav|ogg|jpe?g|png|webp|svg)$/i;

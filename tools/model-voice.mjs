@@ -12,6 +12,7 @@
      --out      output folder (default: a folder "model-voice" on your Desktop)
      --us       American spellings for the recording (starboard → "STAR-berd" instead of the British "STAR-bud")
      --speed    0.8 to 1.2 (default 0.92: a little slower than normal, easier to follow)
+     --only     re-record only these lines, even if their files exist, e.g. --only a-l or --only a-l,w-bow
      --sample   only 6 test lines per voice, to compare voices before recording everything;
                 use it with several voices: --sample --voice "George, Daniel"
 
@@ -134,7 +135,12 @@ for (const n of lessons) {
     jobs.push({n, id, text: c.text, file: path.join(dir, `${id}.mp3`)});
   }
 }
-const todo = jobs.filter(j => !fs.existsSync(j.file));
+const ONLY = args.only ? args.only.split(",").map(x => x.trim()).filter(Boolean) : null;
+if (ONLY) {
+  const unknown = ONLY.filter(id => !jobs.some(j => j.id === id));
+  if (unknown.length) { console.error(`\nNo model line called: ${unknown.join(", ")}. Check the name (for example a-l, w-bow).\n`); process.exit(1); }
+}
+const todo = ONLY ? jobs.filter(j => ONLY.includes(j.id)) : jobs.filter(j => !fs.existsSync(j.file));
 const chars = todo.reduce((a, j) => a + sayText(j.text).length, 0);
 console.log(`${jobs.length} model lines · ${jobs.length - todo.length} already done · ${todo.length} to make (about ${chars} characters of credit)\n`);
 
