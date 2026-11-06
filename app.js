@@ -232,7 +232,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-21";
+const APP_VERSION = "beta-24";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -307,6 +307,70 @@ function wireStars(root, onChange){
   let v = 0; const bs = root.querySelectorAll(".star");
   bs.forEach(b => b.onclick = () => { v = +b.dataset.v; bs.forEach(x => { const on = +x.dataset.v <= v; x.classList.toggle("on", on); x.setAttribute("aria-checked", String(+x.dataset.v === v)); }); onChange && onChange(v); });
   return () => v;
+}
+
+
+/* =========================================================
+   OFFLINE — download the open lessons' recorded voices and pictures
+   into the same cache the service worker uses, so they play without signal.
+   ========================================================= */
+const MEDIA_CACHE = "eob-media-v1";
+function lessonMediaFiles(Ln){
+  const dir = "l" + pad(Ln.n), files = new Set();
+  JSON.stringify(Ln).replace(/"(img\/[^"]+\.(?:jpe?g|png|webp|svg))"/g, (_, f) => files.add(f));
+  Object.entries(Ln.audio || {}).forEach(([id, c]) => {
+    if (c.voice === "model") return;   /* the model voice is the phone's own voice, never recorded */
+    const parts = String(c.text).split("|");
+    parts.forEach((p, i) => files.add(`audio/${dir}/${parts.length > 1 ? `${id}-${"ab"[i]}` : id}.mp3`));
+  });
+  return [...files];
+}
+let offlineState = {done: 0, total: 0, lessons: [], running: false};
+async function saveForOffline(){
+  if (offlineState.running || !("caches" in window) || !navigator.onLine) return;
+  offlineState.running = true;
+  try {
+    const cache = await caches.open(MEDIA_CACHE);
+    const ready = COURSE.modules.flatMap(m => m.lessons).filter(l => l.ready);
+    const jobs = [];
+    for (const l of ready) {
+      let Ln;
+      const jf = `lessons/lesson-${pad(l.n)}.json`;
+      try {
+        const r = await fetch(jf, {cache: "no-cache"});
+        if (!r.ok) continue;
+        await cache.put(new URL(jf, location.href).href, r.clone());   /* the lesson text, for opening it without signal */
+        Ln = LESSON_CACHE[l.n] || (LESSON_CACHE[l.n] = await r.json());
+      } catch (e) { continue; }
+      lessonMediaFiles(Ln).forEach(f => jobs.push(f));
+    }
+    if (COURSE.modules.some(m => m.hero)) COURSE.modules.forEach(m => { if (m.hero) jobs.push(m.hero); });
+    offlineState.total = jobs.length; offlineState.done = 0;
+    const abs = f => new URL(f, location.href).href;
+    let i = 0;
+    const worker = async () => {
+      while (i < jobs.length) {
+        const f = jobs[i++];
+        try {
+          if (!(await cache.match(abs(f)))) {
+            const r = await fetch(f);
+            if (r.ok && r.status === 200) await cache.put(abs(f), r);
+          }
+        } catch (e) {}
+        offlineState.done++;
+      }
+    };
+    await Promise.all([worker(), worker(), worker()]);
+    offlineState.lessons = ready.map(l => l.n);
+  } finally { offlineState.running = false; }
+}
+async function offlineSummary(){
+  if (!("caches" in window)) return null;
+  try {
+    const cache = await caches.open(MEDIA_CACHE), keys = await cache.keys();
+    const audio = keys.filter(k => /\/audio\//.test(k.url)).length;
+    return {audio};
+  } catch (e) { return null; }
 }
 
 /* =========================================================
@@ -609,6 +673,9 @@ function viewProfile(){
     <button class="pcard" id="fbOpen"><span class="pcard-ico">${I.msg}</span><span><b>Send feedback</b><small>Tell us what works and what to improve</small></span>${I.chev}</button>
     ${installCardHTML("profile")}
     <section class="panel setting">
+      <div><b>Offline</b><span class="sub" id="offState">Checking what is saved on this phone…</span></div>
+    </section>
+    <section class="panel setting">
       <div><b>Listening speed</b><span class="sub">Clips start at this speed. You can always tap Slower on a clip.</span></div>
       <div class="seg" role="group" aria-label="Listening speed">${seg("normal", "Normal")}${seg("slow", "Slower")}</div>
     </section>
@@ -624,6 +691,14 @@ function viewProfile(){
     <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>`);
   wireInstall();
   $("#fbOpen").onclick = () => { navPush({v: "feedback"}); viewFeedback(); };
+  offlineSummary().then(r => {
+    const el = $("#offState"); if (!el) return;
+    const ready = allLessons().filter(l => l.ready).map(l => l.n);
+    if (!r) { el.textContent = "This browser can't save lessons for offline use."; return; }
+    if (offlineState.running) el.textContent = `Downloading voices and pictures… ${offlineState.done} of ${offlineState.total}`;
+    else if (r.audio) el.textContent = `Lessons ${ready[0]}–${ready[ready.length - 1]} are saved on this phone, with the recorded voices (${r.audio} clips). They work without signal.`;
+    else el.textContent = navigator.onLine ? "Downloading now. Open this page again in a minute." : "Connect once to download the lessons for offline use.";
+  });
   let taps = 0; $("#ver").onclick = () => { if (++taps >= 5) { lsSet(PREVIEW_KEY, PREVIEW ? "0" : "1"); location.reload(); } };
   $$(".seg-b").forEach(b => b.onclick = () => { settings.speed = b.dataset.speed; saveSettings(); viewProfile(); });
   $("#showWelcome").onclick = () => { navPush({v: "welcome"}); viewWelcome(); };
@@ -1423,6 +1498,8 @@ function viewWelcome(){
   const open = COURSE.beta && COURSE.beta.openModules;
   if (open && !PREVIEW) COURSE.modules.forEach(m => { if (!open.includes(m.n)) m.lessons.forEach(l => { l.ready = false; }); });
   syncProgress(true); flushOutbox();
+  setTimeout(saveForOffline, 2500);
+  window.addEventListener("online", () => setTimeout(saveForOffline, 1500));
   const m = /^#l(\d+)$/.exec(location.hash);
   const ready = m && COURSE.modules.some(mod => mod.lessons.some(l => l.n === +m[1] && l.ready));
   let fresh = false;
@@ -1430,7 +1507,7 @@ function viewWelcome(){
   if (ready) { history.replaceState({v: "home", d: 0}, "", PATH()); openLessonNav(+m[1]); }
   else if (fresh) { history.replaceState({v: "welcome", d: 0}, "", PATH()); viewWelcome(); }
   else { history.replaceState({v: "home", d: 0}, "", PATH()); viewHome(); }
-  if ("serviceWorker" in navigator && location.protocol === "https:") {
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
     try { navigator.serviceWorker.register("sw.js").catch(() => {}); } catch (e) {}
   }
 })();

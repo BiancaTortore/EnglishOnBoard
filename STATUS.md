@@ -42,6 +42,11 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - (5 nov) Portadas cargadas de la L6 a la L27: todas las lecciones tienen portada.
 - Prompts de `hero.jpg` en `img/l07…l27/prompts.md` (solo la portada; la escena se agrega al escribir cada lección). Cuando llega una portada, la lista la muestra sola junto al "Coming soon" (la miniatura usa `img/lNN/hero.jpg`).
 
+## Sin conexión (6 nov)
+- Las voces grabadas (ElevenLabs), las fotos y las láminas viven en una caché aparte (`eob-media-v1`) que **no se borra al publicar versiones nuevas**.
+- Al abrir la app con señal, se descargan solas en segundo plano todas las lecciones abiertas: texto, audios e imágenes (Módulo 1 ≈ 5 MB). Profile → "Offline" muestra si ya están guardadas.
+- El celular pide el audio por partes; el service worker las corta del archivo guardado, así suena igual con o sin señal. La voz "model" sigue siendo la del celular, por diseño.
+
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
