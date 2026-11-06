@@ -12,6 +12,8 @@
      --out      output folder (default: a folder "model-voice" on your Desktop)
      --us       American spellings for the recording (starboard → "STAR-berd" instead of the British "STAR-bud")
      --speed    0.8 to 1.2 (default 0.92: a little slower than normal, easier to follow)
+     --new      skip lines whose recording is already published in the course (on GitHub),
+                so only what the course is missing gets recorded and paid for
      --only     re-record only these lines, even if their files exist, e.g. --only a-l or --only a-l,w-bow
      --sample   only 6 test lines per voice, to compare voices before recording everything;
                 use it with several voices: --sample --voice "George, Daniel"
@@ -140,7 +142,17 @@ if (ONLY) {
   const unknown = ONLY.filter(id => !jobs.some(j => j.id === id));
   if (unknown.length) { console.error(`\nNo model line called: ${unknown.join(", ")}. Check the name (for example a-l, w-bow).\n`); process.exit(1); }
 }
-const todo = ONLY ? jobs.filter(j => ONLY.includes(j.id)) : jobs.filter(j => !fs.existsSync(j.file));
+let pending = ONLY ? jobs.filter(j => ONLY.includes(j.id)) : jobs.filter(j => !fs.existsSync(j.file));
+if ("new" in args && !ONLY) {
+  /* ask GitHub which recordings the course already has; never pay twice for a published line */
+  const published = new Set();
+  await Promise.all(pending.map(async j => {
+    try { const r = await fetch(`${RAW}/audio/l${pad(j.n)}/${j.id}.mp3`, {method: "HEAD"}); if (r.ok) published.add(j); } catch (e) {}
+  }));
+  pending = pending.filter(j => !published.has(j));
+  console.log(`${published.size} lines are already recorded in the course and will be skipped.`);
+}
+const todo = pending;
 const chars = todo.reduce((a, j) => a + sayText(j.text).length, 0);
 console.log(`${jobs.length} model lines · ${jobs.length - todo.length} already done · ${todo.length} to make (about ${chars} characters of credit)\n`);
 
