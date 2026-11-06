@@ -85,7 +85,7 @@
   "w-starboard": {
    "voice": "model",
    "text": "starboard side",
-   "note": "STAR-bəd: the 'board' is weak, never 'board'"
+   "note": "STAR-berd: the second part is weak, never 'board'"
   },
   "w-forward": {
    "voice": "model",
@@ -279,7 +279,7 @@
   },
   "starboard": {
    "en": "starboard side",
-   "ipa": "/ˈstɑːbəd saɪd/",
+   "ipa": "/ˈstɑːrbərd saɪd/",
    "es": "estribor",
    "audio": "w-starboard",
    "ex": "x-starboard"
@@ -529,7 +529,7 @@
      "title": "Port is babor. Starboard is estribor.",
      "paras": [
       "Easy trick: <b>port</b> and <b>left</b> both have four letters. Looking forward, port is on your left.",
-      "Say <b>STAR-bəd</b>. The second part is weak. Never <i>star-board</i>."
+      "Say <b>STAR-berd</b>. The second part is weak. Never <i>star-board</i>."
      ]
     },
     {

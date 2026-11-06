@@ -13,7 +13,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - `course.json`: módulos y lecciones (`"ready": true` = publicada).
 - `lessons/lesson-NN.json`: contenido de cada lección.
 - `img/lNN/`: `plate.svg` (lámina técnica dibujada), `hero.jpg`, `scene.jpg`, `prompts.md`.
-- `audio/lNN/<id>.mp3`: voces de personajes (ElevenLabs). La voz "model" la dice el celular, no se graba.
+- `audio/lNN/<id>.mp3`: voces de personajes (ElevenLabs). La voz "model" se graba con ElevenLabs ("Brian") con `tools/model-voice.mjs`.
 - `tools/audio-script.mjs N`: guion CSV de audios de personajes de la lección N.
 - `tools/kit-build.py N`: kit HTML de producción (fichas de cara, voces, guion, prompts de fotos) → `tools/out/`.
 - `sw.js`: subir `VERSION` cada vez que cambian app.js, app.css o index.html.
@@ -45,7 +45,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 ## Sin conexión (6 nov)
 - Las voces grabadas (ElevenLabs), las fotos y las láminas viven en una caché aparte (`eob-media-v1`) que **no se borra al publicar versiones nuevas**.
 - Al abrir la app con señal, se descargan solas en segundo plano todas las lecciones abiertas: texto, audios e imágenes (Módulo 1 ≈ 5 MB). Profile → "Offline" muestra si ya están guardadas.
-- El celular pide el audio por partes; el service worker las corta del archivo guardado, así suena igual con o sin señal. La voz "model" (palabras, ejemplos y respuestas modelo) se graba con ElevenLabs usando `tools/model-voice.mjs` en la Mac de Bianca; cuando una lección tiene sus grabaciones se marca con `"modelAudio": true` en su JSON y la app las usa (y las descarga para usar sin conexión). Sin esa marca, o si falta un archivo, habla el celular. **Hecho para L1–L6 (6 nov): 175 grabaciones, voz "Alice", niveladas a −17,5 LUFS como los personajes.**
+- El celular pide el audio por partes; el service worker las corta del archivo guardado, así suena igual con o sin señal. La voz "model" (palabras, ejemplos y respuestas modelo) se graba con ElevenLabs usando `tools/model-voice.mjs` en la Mac de Bianca; cuando una lección tiene sus grabaciones se marca con `"modelAudio": true` en su JSON y la app las usa (y las descarga para usar sin conexión). Sin esa marca, o si falta un archivo, habla el celular. **Hecho para L1–L6: 175 grabaciones con la voz "Brian" (americano, `--us`), niveladas a −17,5 LUFS como los personajes. Reemplazó a "Alice" el 6 nov.**
 
 ## Logo (5 nov)
 - Timón blanco con el centro naranja (como la rosa de ChartroomLab con su centro de color), sobre azul `#17506A`. Fuente: `icons/icon.svg`; exportados `icon-192/512.png`, `apple-touch-icon.png`, `favicon-32.png`. En la app el mismo timón (`I.wheel`), blanco con centro naranja. También en la tarjeta de la landing de ChartroomLab.

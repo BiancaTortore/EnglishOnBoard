@@ -104,4 +104,4 @@ Solo voz.
 
 ## `model` · Voz modelo
 
-No se graba: la dice la voz del celular.
+ElevenLabs, voz prediseñada **"Brian"** (americano, claro). Se genera con `tools/model-voice.mjs --us --voice "Brian"` (ver STATUS.md).
