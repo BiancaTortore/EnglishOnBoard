@@ -10,6 +10,8 @@
      --voice    name of an ElevenLabs voice in your account (default "Alice")
      --lessons  which lessons, e.g. 1-5 or 1,2,6 (default: every lesson marked ready)
      --out      output folder (default: a folder "model-voice" on your Desktop)
+     --sample   only 6 test lines per voice, to compare voices before recording everything;
+                use it with several voices: --sample --voice "George, Daniel"
 
    It downloads the lesson texts from GitHub, creates one mp3 per model line with the right
    file name, and skips files that already exist, so you can stop it and run it again.
@@ -30,7 +32,8 @@ const args = Object.fromEntries(process.argv.slice(2).join(" ").split(/\s+(?=--)
 const KEY = process.env.ELEVENLABS_API_KEY;
 if (!KEY) { console.error("\nMissing your ElevenLabs key. Run it like this:\n  ELEVENLABS_API_KEY=your_key node model-voice.mjs\n"); process.exit(1); }
 if (typeof fetch !== "function") { console.error("\nThis needs Node 18 or newer. Check with: node -v\n"); process.exit(1); }
-const OUT = args.out || path.join(os.homedir(), "Desktop", "model-voice");
+const SAMPLE = "sample" in args;
+const OUT = args.out || path.join(os.homedir(), "Desktop", SAMPLE ? "voice-samples" : "model-voice");
 const VOICE_NAME = args.voice || "Alice";
 const pad = n => String(n).padStart(2, "0");
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -84,6 +87,24 @@ async function tts(voiceId, text, file){
     throw new Error(`${r.status} ${msg.slice(0, 200)}`);
   }
   throw new Error("ElevenLabs is busy; try again in a few minutes");
+}
+
+const SAMPLE_LINES = ["bow", "starboard", "amidships", "The gangway is on the port side.", "Stand by. Say again, please.", "I'm the new deck cadet."];
+if (SAMPLE) {
+  const names = VOICE_NAME.split(",").map(v => v.trim()).filter(Boolean);
+  console.log(`\nSamples: ${names.join(", ")} · saving to ${OUT}\n`);
+  for (const name of names) {
+    const v = await findVoice(name);
+    const dir = path.join(OUT, v.name.split(/\s+[-–]\s+/)[0].replace(/[^\w ]/g, "").trim() || name);
+    fs.mkdirSync(dir, {recursive: true});
+    for (const [i, t] of SAMPLE_LINES.entries()) {
+      const f = path.join(dir, `${i + 1} ${t.replace(/[^\w ]/g, "").slice(0, 30)}.mp3`);
+      if (!fs.existsSync(f)) { await tts(v.voice_id, sayText(t), f); }
+      console.log(`  ✓ ${v.name.split(/\s+[-–]\s+/)[0]}  "${t}"`);
+    }
+  }
+  console.log(`\nListen to the folders in "${path.basename(OUT)}" on your Desktop and pick a voice.\n`);
+  process.exit(0);
 }
 
 const course = await getJSON(`${RAW}/course.json`);
