@@ -47,6 +47,9 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - Al abrir la app con señal, se descargan solas en segundo plano todas las lecciones abiertas: texto, audios e imágenes (Módulo 1 ≈ 5 MB). Profile → "Offline" muestra si ya están guardadas.
 - El celular pide el audio por partes; el service worker las corta del archivo guardado, así suena igual con o sin señal. La voz "model" (palabras, ejemplos y respuestas modelo) se graba con ElevenLabs usando `tools/model-voice.mjs` en la Mac de Bianca; cuando una lección tiene sus grabaciones se marca con `"modelAudio": true` en su JSON y la app las usa (y las descarga para usar sin conexión). Sin esa marca, o si falta un archivo, habla el celular.
 
+## Logo (5 nov)
+- Timón blanco con el centro naranja (como la rosa de ChartroomLab con su centro de color), sobre azul `#17506A`. Fuente: `icons/icon.svg`; exportados `icon-192/512.png`, `apple-touch-icon.png`, `favicon-32.png`. En la app el mismo timón (`I.wheel`), blanco con centro naranja. También en la tarjeta de la landing de ChartroomLab.
+
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).

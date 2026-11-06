@@ -316,8 +316,8 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0
 .home-hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;max-width:none}
 .home-hero.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,15,22,.55),rgba(5,15,22,.35) 35%,rgba(5,15,22,.92))}
 .home-hero > *:not(img){position:relative;z-index:1}
-.home-hero .brand-mark{background:transparent;color:#FF7A45;width:28px;height:28px}
-.home-hero .brand-mark svg{width:22px;height:22px}
+.home-hero .brand-mark{background:transparent;color:#FFFFFF;width:28px;height:28px}
+.home-hero .brand-mark svg{width:26px;height:26px}
 .home-hero .brand h1{font-size:22px}
 .home-hero .brand p{color:rgba(255,255,255,.8)}
 .hh-body{display:flex;flex-direction:column;gap:6px}
@@ -468,7 +468,7 @@ html.dark-page body{background:#0A1620}
 .w-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,15,22,.55),rgba(5,15,22,0) 28%,rgba(10,22,32,.25) 58%,#0A1620)}
 .w-hero > *:not(img){position:relative;z-index:1}
 .w-brand{display:flex;align-items:center;gap:8px;font:700 21px var(--f-display);letter-spacing:.01em}
-.w-brand svg{color:#FF7A45;width:22px;height:22px}
+.w-brand svg{color:#FFFFFF;width:26px;height:26px}
 .w-hero h1{font-size:clamp(32px,9.4vw,40px);line-height:1.02;text-shadow:0 2px 14px rgba(0,0,0,.45)}
 .w-body{display:flex;flex-direction:column;gap:14px;padding:4px max(20px,env(safe-area-inset-right,0px)) 120px max(20px,env(safe-area-inset-left,0px))}
 .w-lede{margin:0;font-size:16.5px;line-height:1.5;color:#D3DEE5}
