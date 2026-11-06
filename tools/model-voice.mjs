@@ -56,7 +56,12 @@ async function getJSON(url){ const r = await fetch(url); if (!r.ok) throw new Er
 
 async function findVoice(name){
   const r = await fetch(`${API}/voices`, {headers: {"xi-api-key": KEY}});
-  if (r.status === 401) { console.error("\nElevenLabs did not accept the key. Copy it again from your ElevenLabs profile.\n"); process.exit(1); }
+  if (r.status === 401 || r.status === 403) {
+    const body = await r.text();
+    if (/permission/i.test(body)) console.error("\nThe key works, but it is missing a permission. In ElevenLabs → Developers → API Keys, edit the key and set\n  Text to Speech: Access\n  Voices: Read\nthen run this again.\n\nElevenLabs said: " + body.slice(0, 300) + "\n");
+    else console.error("\nElevenLabs did not accept the key. Copy it again from ElevenLabs → Developers → API Keys.\n\nElevenLabs said: " + body.slice(0, 300) + "\n");
+    process.exit(1);
+  }
   if (!r.ok) throw new Error(`voices → ${r.status}`);
   const {voices} = await r.json();
   const v = voices.find(v => v.voice_id === name) || voices.find(v => v.name.toLowerCase() === name.toLowerCase())
@@ -74,6 +79,7 @@ async function tts(voiceId, text, file){
     if (r.ok) { fs.writeFileSync(file, Buffer.from(await r.arrayBuffer())); return; }
     const msg = await r.text();
     if (r.status === 429 || r.status >= 500) { await sleep(2000 * attempt); continue; }
+    if (r.status === 401 || r.status === 403) { console.error(`\nElevenLabs refused to record (${r.status}). If it mentions a permission, edit the key and set "Text to Speech: Access".\n\nElevenLabs said: ${msg.slice(0, 300)}\n`); process.exit(1); }
     if (/quota|credits/i.test(msg)) { console.error("\nYour ElevenLabs credits ran out. Files made so far are kept; run again after topping up.\n"); process.exit(1); }
     throw new Error(`${r.status} ${msg.slice(0, 200)}`);
   }
