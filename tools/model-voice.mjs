@@ -10,6 +10,8 @@
      --voice    name of an ElevenLabs voice in your account (default "Alice")
      --lessons  which lessons, e.g. 1-5 or 1,2,6 (default: every lesson marked ready)
      --out      output folder (default: a folder "model-voice" on your Desktop)
+     --us       American spellings for the recording (starboard → "STAR-berd" instead of the British "STAR-bud")
+     --speed    0.8 to 1.2 (default 0.92: a little slower than normal, easier to follow)
      --sample   only 6 test lines per voice, to compare voices before recording everything;
                 use it with several voices: --sample --voice "George, Daniel"
 
@@ -24,7 +26,9 @@ const RAW = "https://raw.githubusercontent.com/BiancaTortore/EnglishOnBoard/main
 const API = process.env.ELEVENLABS_API_BASE || "https://api.elevenlabs.io/v1";
 const MODEL_ID = "eleven_multilingual_v2";
 /* only for the recording: spellings that make the voice say the nautical word right */
-const RESPELL = {bow: "bough", starboard: "starb'd", bosun: "bo'sun", boatswain: "bo'sun", forecastle: "fo'c'sle", "fo'c'sle": "fo'c'sle", leeward: "loo-ard", gunwale: "gunnel"};
+const US = "us" in args;
+const SPEED = Math.min(1.2, Math.max(0.7, parseFloat(args.speed) || 0.92));
+const RESPELL = {bow: "bough", starboard: US ? "starberd" : "starb'd", bosun: "bo'sun", boatswain: "bo'sun", forecastle: "fo'c'sle", "fo'c'sle": "fo'c'sle", leeward: "loo-ard", gunwale: "gunnel"};
 
 const args = Object.fromEntries(process.argv.slice(2).join(" ").split(/\s+(?=--)/).filter(Boolean).map(a => {
   const m = /^--(\w+)\s*(.*)$/.exec(a.trim()); return m ? [m[1], m[2].replace(/^["']|["']$/g, "")] : [a, ""];
@@ -77,7 +81,7 @@ async function tts(voiceId, text, file){
     const r = await fetch(`${API}/text-to-speech/${voiceId}?output_format=mp3_44100_128`, {
       method: "POST",
       headers: {"xi-api-key": KEY, "content-type": "application/json", accept: "audio/mpeg"},
-      body: JSON.stringify({text, model_id: MODEL_ID, voice_settings: {stability: 0.6, similarity_boost: 0.8, style: 0, use_speaker_boost: true}})
+      body: JSON.stringify({text, model_id: MODEL_ID, voice_settings: {stability: 0.6, similarity_boost: 0.8, style: 0, use_speaker_boost: true, speed: SPEED}})
     });
     if (r.ok) { fs.writeFileSync(file, Buffer.from(await r.arrayBuffer())); return; }
     const msg = await r.text();
@@ -92,10 +96,10 @@ async function tts(voiceId, text, file){
 const SAMPLE_LINES = ["bow", "starboard", "amidships", "The gangway is on the port side.", "Stand by. Say again, please.", "I'm the new deck cadet."];
 if (SAMPLE) {
   const names = VOICE_NAME.split(",").map(v => v.trim()).filter(Boolean);
-  console.log(`\nSamples: ${names.join(", ")} · saving to ${OUT}\n`);
+  console.log(`\nSamples: ${names.join(", ")}${US ? " · American spellings" : ""} · speed ${SPEED} · saving to ${OUT}\n`);
   for (const name of names) {
     const v = await findVoice(name);
-    const dir = path.join(OUT, v.name.split(/\s+[-–]\s+/)[0].replace(/[^\w ]/g, "").trim() || name);
+    const dir = path.join(OUT, (v.name.split(/\s+[-–]\s+/)[0].replace(/[^\w ]/g, "").trim() || name) + (US ? " US" : ""));
     fs.mkdirSync(dir, {recursive: true});
     for (const [i, t] of SAMPLE_LINES.entries()) {
       const f = path.join(dir, `${i + 1} ${t.replace(/[^\w ]/g, "").slice(0, 30)}.mp3`);
