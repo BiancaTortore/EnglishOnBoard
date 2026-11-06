@@ -26,14 +26,15 @@ const RAW = "https://raw.githubusercontent.com/BiancaTortore/EnglishOnBoard/main
 const API = process.env.ELEVENLABS_API_BASE || "https://api.elevenlabs.io/v1";
 const MODEL_ID = "eleven_multilingual_v2";
 /* only for the recording: spellings that make the voice say the nautical word right */
-const US = "us" in args;
-const SPEED = Math.min(1.2, Math.max(0.7, parseFloat(args.speed) || 0.92));
-const RESPELL = {bow: "bough", starboard: US ? "starberd" : "starb'd", bosun: "bo'sun", boatswain: "bo'sun", forecastle: "fo'c'sle", "fo'c'sle": "fo'c'sle", leeward: "loo-ard", gunwale: "gunnel"};
+const RESPELL_BASE = {bow: "bough", starboard: "starb'd", bosun: "bo'sun", boatswain: "bo'sun", forecastle: "fo'c'sle", "fo'c'sle": "fo'c'sle", leeward: "loo-ard", gunwale: "gunnel"};
 
 const args = Object.fromEntries(process.argv.slice(2).join(" ").split(/\s+(?=--)/).filter(Boolean).map(a => {
   const m = /^--(\w+)\s*(.*)$/.exec(a.trim()); return m ? [m[1], m[2].replace(/^["']|["']$/g, "")] : [a, ""];
 }));
+const US = "us" in args;
+const SPEED = Math.min(1.2, Math.max(0.7, parseFloat(args.speed) || 0.92));
 const KEY = process.env.ELEVENLABS_API_KEY;
+const RESPELL = {...RESPELL_BASE, ...(US ? {starboard: "starberd"} : {})};
 if (!KEY) { console.error("\nMissing your ElevenLabs key. Run it like this:\n  ELEVENLABS_API_KEY=your_key node model-voice.mjs\n"); process.exit(1); }
 if (typeof fetch !== "function") { console.error("\nThis needs Node 18 or newer. Check with: node -v\n"); process.exit(1); }
 const SAMPLE = "sample" in args;
