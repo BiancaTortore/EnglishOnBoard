@@ -3,8 +3,8 @@
    Runs on your computer with Node 18 or newer. No installs needed.
 
    Usage (Terminal):
-     ELEVENLABS_API_KEY=your_key node model-voice.mjs
-     ELEVENLABS_API_KEY=your_key node model-voice.mjs --voice "Alice" --lessons 1-5
+     node model-voice.mjs --us --voice "Brian"
+   It asks for your ElevenLabs key (or set ELEVENLABS_API_KEY).
 
    Options
      --voice    name of an ElevenLabs voice in your account (default "Alice")
@@ -33,9 +33,15 @@ const args = Object.fromEntries(process.argv.slice(2).join(" ").split(/\s+(?=--)
 }));
 const US = "us" in args;
 const SPEED = Math.min(1.2, Math.max(0.7, parseFloat(args.speed) || 0.92));
-const KEY = process.env.ELEVENLABS_API_KEY;
+import readline from "node:readline/promises";
+let KEY = (process.env.ELEVENLABS_API_KEY || "").trim();
+if (!KEY) {
+  const rl = readline.createInterface({input: process.stdin, output: process.stdout});
+  KEY = (await rl.question("\nPaste your ElevenLabs key (it starts with sk_) and press Enter: ")).trim();
+  rl.close();
+}
 const RESPELL = {...RESPELL_BASE, ...(US ? {starboard: "starberd"} : {})};
-if (!KEY) { console.error("\nMissing your ElevenLabs key. Run it like this:\n  ELEVENLABS_API_KEY=your_key node model-voice.mjs\n"); process.exit(1); }
+if (!/^sk_\w{10,}$/.test(KEY)) { console.error("\nThat doesn't look like an ElevenLabs key (it should start with sk_). Run the program again and paste the key.\n"); process.exit(1); }
 if (typeof fetch !== "function") { console.error("\nThis needs Node 18 or newer. Check with: node -v\n"); process.exit(1); }
 const SAMPLE = "sample" in args;
 const OUT = args.out || path.join(os.homedir(), "Desktop", SAMPLE ? "voice-samples" : "model-voice");
