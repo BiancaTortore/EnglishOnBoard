@@ -244,6 +244,6 @@ md = ["# Personajes · fichas de cara y voces", "",
  "**Ropa:** oficiales con mameluco azul marino, ratings con mameluco naranja.", ""]
 for key, name, role, inL1, look, voice in CHARS:
     md += [f"## `{key}` · {name} · {role}", ""] + (["**Ficha de cara**", "", "> " + SHEET.format(d=look), ""] if look else ["Solo voz.", ""]) + ["**Voz (ElevenLabs Voice Design)**", "", "> " + voice, ""]
-md += ["## `model` · Voz modelo", "", "No se graba: la dice la voz del celular.", ""]
+md += ["## `model` · Voz modelo", "", "ElevenLabs, voz prediseñada **\"Brian\"** (americano, claro). Se genera con `tools/model-voice.mjs --us --voice \"Brian\"` (ver STATUS.md).", ""]
 open(f'{ROOT}/img/characters.md','w').write("\n".join(md))
 print("ok", total)
