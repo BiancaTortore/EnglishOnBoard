@@ -83,7 +83,7 @@ async function findVoice(name){
   if (r.status === 401 || r.status === 403) {
     const body = await r.text();
     if (/permission/i.test(body)) console.error("\nThe key works, but it is missing a permission. In ElevenLabs → Developers → API Keys, edit the key and set\n  Text to Speech: Access\n  Voices: Read\nthen run this again.\n\nElevenLabs said: " + body.slice(0, 300) + "\n");
-    else console.error("\nElevenLabs did not accept the key. Copy it again from ElevenLabs → Developers → API Keys.\n\nElevenLabs said: " + body.slice(0, 300) + "\n");
+    else { console.error("\nElevenLabs no aceptó la clave guardada (vieja o borrada). La olvido: abrí el programa de nuevo y pegá la clave nueva.\n"); process.exit(3); }
     process.exit(1);
   }
   if (!r.ok) throw new Error(`voices → ${r.status}`);

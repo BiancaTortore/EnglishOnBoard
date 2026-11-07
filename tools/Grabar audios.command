@@ -30,6 +30,8 @@ OUT="$HOME/Desktop/audios-nuevos"
 rm -rf "$OUT"
 ELEVENLABS_API_KEY="$KEY" node model-voice.mjs --new --cast --us --voice "Brian" --out "$OUT"
 STATUS=$?
+# the saved key was rejected: forget it so the next run asks for the new one
+[[ $STATUS -eq 3 ]] && security delete-generic-password -s "eob-elevenlabs" >/dev/null 2>&1
 
 if [[ $STATUS -eq 0 ]]; then
   COUNT=$(find "$OUT" -name "*.mp3" 2>/dev/null | wc -l | tr -d ' ')
