@@ -94,7 +94,7 @@
   "w-aft": {
    "voice": "model",
    "text": "aft",
-   "note": "British: /ɑːft/"
+   "note": "American: /æft/"
   },
   "w-amidships": {
    "voice": "model",
@@ -300,7 +300,7 @@
   },
   "aft": {
    "en": "aft",
-   "ipa": "/ɑːft/",
+   "ipa": "/æft/",
    "es": "hacia popa",
    "audio": "w-aft",
    "ex": "x-aft"
