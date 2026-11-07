@@ -13,7 +13,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - `course.json`: módulos y lecciones (`"ready": true` = publicada).
 - `lessons/lesson-NN.json`: contenido de cada lección.
 - `img/lNN/`: `plate.svg` (lámina técnica dibujada), `hero.jpg`, `scene.jpg`, `prompts.md`.
-- `audio/lNN/<id>.mp3`: voces de personajes (ElevenLabs). La voz "model" se graba con ElevenLabs ("Brian") con `tools/model-voice.mjs`.
+- `audio/lNN/<id>.mp3`: voces de personajes (ElevenLabs). La voz "model" se graba con ElevenLabs ("Brian") con `tools/model-voice.mjs`. Bianca graba todo lo que falta (modelo y personajes) con doble clic en `tools/Grabar audios.command` (usa `--new --cast`; las voces de cada personaje están en `CAST`).
 - `tools/audio-script.mjs N`: guion CSV de audios de personajes de la lección N.
 - `tools/kit-build.py N`: kit HTML de producción (fichas de cara, voces, guion, prompts de fotos) → `tools/out/`.
 - `sw.js`: subir `VERSION` cada vez que cambian app.js, app.css o index.html.

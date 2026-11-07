@@ -15,6 +15,7 @@
      --new      skip lines whose recording is already published in the course (on GitHub),
                 so only what the course is missing gets recorded and paid for
      --only     re-record only these lines, even if their files exist, e.g. --only a-l or --only a-l,w-bow
+     --cast     also record the characters' lines (Diego, Rolando…) with their own voices (see CAST)
      --sample   only 6 test lines per voice, to compare voices before recording everything;
                 use it with several voices: --sample --voice "George, Daniel"
 
@@ -30,6 +31,12 @@ const API = process.env.ELEVENLABS_API_BASE || "https://api.elevenlabs.io/v1";
 const MODEL_ID = "eleven_multilingual_v2";
 /* only for the recording: spellings that make the voice say the nautical word right */
 const RESPELL_BASE = {bow: "bough", starboard: "starb'd", bosun: "bo'sun", boatswain: "bo'sun", forecastle: "fo'c'sle", "fo'c'sle": "fo'c'sle", leeward: "loo-ard", gunwale: "gunnel"};
+
+/* character → name of their voice in the ElevenLabs account ("My Voices"); null = not chosen yet */
+const CAST = {
+  diego: "Matias", rolando: "Juan Tamad", tanya: "Joanna", james: "Andrew",
+  marek: "Oliver", mario: "Pochology", lars: null, chen: null, pilot: null, agent: null, terminal: null
+};
 
 const args = Object.fromEntries(process.argv.slice(2).join(" ").split(/\s+(?=--)/).filter(Boolean).map(a => {
   const m = /^--(\w+)\s*(.*)$/.exec(a.trim()); return m ? [m[1], m[2].replace(/^["']|["']$/g, "")] : [a, ""];
@@ -58,9 +65,9 @@ function parseLessons(s, ready){
   s.split(",").forEach(p => { const [a, b] = p.split("-").map(Number); for (let i = a; i <= (b || a); i++) out.add(i); });
   return [...out].sort((x, y) => x - y);
 }
-function sayText(t){
+function sayText(t, us = US){
   let s = String(t).trim();
-  for (const [w, r] of Object.entries(RESPELL)) s = s.replace(new RegExp(`(^|[^\\w'])${w.replace(/'/g, "'")}(?![\\w'])`, "gi"), `$1${r}`);
+  for (const [w, r] of Object.entries(us ? RESPELL : RESPELL_BASE)) s = s.replace(new RegExp(`(^|[^\\w'])${w.replace(/'/g, "'")}(?![\\w'])`, "gi"), `$1${r}`);
   if (!/[.!?]$/.test(s)) s += ".";   /* a full stop gives single words a natural, finished intonation */
   return s;
 }
@@ -86,12 +93,14 @@ async function findVoice(name){
   if (!v) { console.error(`\nNo voice called "${name}" in your account. Available:\n  ${voices.map(v => v.name).join(", ")}\n\nRun again with --voice "Name".\n`); process.exit(1); }
   return v;
 }
-async function tts(voiceId, text, file){
+async function tts(voiceId, text, file, cast){
+  const vs = cast ? {stability: 0.5, similarity_boost: 0.75, style: 0.05, use_speaker_boost: true, speed: 0.95}
+                  : {stability: 0.6, similarity_boost: 0.8, style: 0, use_speaker_boost: true, speed: SPEED};
   for (let attempt = 1; attempt <= 5; attempt++) {
     const r = await fetch(`${API}/text-to-speech/${voiceId}?output_format=mp3_44100_128`, {
       method: "POST",
       headers: {"xi-api-key": KEY, "content-type": "application/json", accept: "audio/mpeg"},
-      body: JSON.stringify({text, model_id: MODEL_ID, voice_settings: {stability: 0.6, similarity_boost: 0.8, style: 0, use_speaker_boost: true, speed: SPEED}})
+      body: JSON.stringify({text, model_id: MODEL_ID, voice_settings: vs})
     });
     if (r.ok) { fs.writeFileSync(file, Buffer.from(await r.arrayBuffer())); return; }
     const msg = await r.text();
@@ -124,19 +133,27 @@ if (SAMPLE) {
 const course = await getJSON(`${RAW}/course.json`);
 const ready = course.modules.flatMap(m => m.lessons).filter(l => l.ready).map(l => l.n);
 const lessons = parseLessons(args.lessons, ready);
+const CASTING = "cast" in args;
 const voice = await findVoice(VOICE_NAME);
-console.log(`\nVoice: ${voice.name} · lessons ${lessons.join(", ")} · saving to ${OUT}\n`);
+console.log(`\nVoice: ${voice.name}${CASTING ? " + characters" : ""} · lessons ${lessons.join(", ")} · saving to ${OUT}\n`);
 
-const jobs = [];
+const jobs = [], noVoice = new Set();
 for (const n of lessons) {
   const L = await getJSON(`${RAW}/lessons/lesson-${pad(n)}.json`);
   const dir = path.join(OUT, `l${pad(n)}`);
-  fs.mkdirSync(dir, {recursive: true});
   for (const [id, c] of Object.entries(L.audio || {})) {
-    if (c.voice !== "model") continue;
-    jobs.push({n, id, text: c.text, file: path.join(dir, `${id}.mp3`)});
+    if (c.voice === "model") { jobs.push({n, id, text: c.text, file: path.join(dir, `${id}.mp3`), voice: voice.voice_id, us: US}); continue; }
+    if (!CASTING) continue;
+    if (!CAST[c.voice]) { noVoice.add(c.voice); continue; }
+    const parts = String(c.text).split("|");
+    parts.forEach((t, i) => jobs.push({n, id: parts.length > 1 ? `${id}-${"ab"[i]}` : id, text: t.trim(),
+      file: path.join(dir, `${parts.length > 1 ? `${id}-${"ab"[i]}` : id}.mp3`), cast: c.voice}));
   }
 }
+/* look up each character's voice once */
+const castIds = {};
+for (const who of new Set(jobs.filter(j => j.cast).map(j => j.cast))) castIds[who] = (await findVoice(CAST[who])).voice_id;
+jobs.forEach(j => { if (j.cast) { j.voice = castIds[j.cast]; j.us = false; } });
 const ONLY = args.only ? args.only.split(",").map(x => x.trim()).filter(Boolean) : null;
 if (ONLY) {
   const unknown = ONLY.filter(id => !jobs.some(j => j.id === id));
@@ -153,14 +170,16 @@ if ("new" in args && !ONLY) {
   console.log(`${published.size} lines are already recorded in the course and will be skipped.`);
 }
 const todo = pending;
-const chars = todo.reduce((a, j) => a + sayText(j.text).length, 0);
-console.log(`${jobs.length} model lines · ${jobs.length - todo.length} already done · ${todo.length} to make (about ${chars} characters of credit)\n`);
+todo.forEach(j => fs.mkdirSync(path.dirname(j.file), {recursive: true}));
+if (noVoice.size) console.log(`No voice chosen yet for: ${[...noVoice].join(", ")} · their lines are skipped for now.`);
+const chars = todo.reduce((a, j) => a + sayText(j.text, j.us).length, 0);
+console.log(`${jobs.length} lines · ${jobs.length - todo.length} already done · ${todo.length} to make (about ${chars} characters of credit)\n`);
 
 let done = 0, failed = [];
 async function worker(){
   while (todo.length) {
     const j = todo.shift();
-    try { await tts(voice.voice_id, sayText(j.text), j.file); done++; process.stdout.write(`  ✓ L${j.n} ${j.id}  "${j.text}"\n`); }
+    try { await tts(j.voice, sayText(j.text, j.us), j.file, j.cast); done++; process.stdout.write(`  ✓ L${j.n} ${j.id}${j.cast ? ` (${j.cast})` : ""}  "${j.text}"\n`); }
     catch (e) { failed.push(j); process.stdout.write(`  ✗ L${j.n} ${j.id}  ${e.message}\n`); }
   }
 }

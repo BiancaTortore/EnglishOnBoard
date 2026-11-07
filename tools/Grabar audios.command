@@ -1,9 +1,9 @@
 #!/bin/zsh
-# English on Board · record the model voice (Brian) for whatever the course is missing.
+# English on Board · record every audio the course is missing: model voice (Brian) and the characters' voices.
 # Double-click this file. The first time it asks for your ElevenLabs key and keeps it in the Keychain.
 cd "$HOME/Downloads" || exit 1
 clear
-echo "English on Board · grabar voz modelo (Brian)"
+echo "English on Board · grabar los audios que faltan"
 echo
 
 if ! command -v node >/dev/null 2>&1; then
@@ -26,23 +26,23 @@ if [[ -z "$KEY" ]]; then
   echo
 fi
 
-OUT="$HOME/Desktop/voz-modelo-nueva"
+OUT="$HOME/Desktop/audios-nuevos"
 rm -rf "$OUT"
-ELEVENLABS_API_KEY="$KEY" node model-voice.mjs --new --us --voice "Brian" --out "$OUT"
+ELEVENLABS_API_KEY="$KEY" node model-voice.mjs --new --cast --us --voice "Brian" --out "$OUT"
 STATUS=$?
 
 if [[ $STATUS -eq 0 ]]; then
   COUNT=$(find "$OUT" -name "*.mp3" 2>/dev/null | wc -l | tr -d ' ')
   if [[ "$COUNT" -gt 0 ]]; then
-    ZIP="$HOME/Desktop/voz-modelo-nueva.zip"
+    ZIP="$HOME/Desktop/audios-nuevos.zip"
     rm -f "$ZIP"
-    (cd "$HOME/Desktop" && zip -qr "voz-modelo-nueva.zip" "voz-modelo-nueva")
+    (cd "$HOME/Desktop" && zip -qr "audios-nuevos.zip" "audios-nuevos")
     echo
-    echo "Listo: $COUNT audios nuevos en voz-modelo-nueva.zip, en el Escritorio. Mandáselo a Claude."
+    echo "Listo: $COUNT audios nuevos en audios-nuevos.zip, en el Escritorio. Mandáselo a Claude."
     open -R "$ZIP"
   else
     echo
-    echo "No falta nada: el curso ya tiene todas las grabaciones de la voz modelo."
+    echo "No falta nada: el curso ya tiene todas las grabaciones."
     rm -rf "$OUT"
   fi
 fi
