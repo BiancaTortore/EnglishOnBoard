@@ -233,7 +233,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-32";
+const APP_VERSION = "beta-33";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -507,7 +507,7 @@ function lessonRow(l, cur){
   return `<li class="lrow ${l.ready ? "ready" : "locked"} ${cur ? "current" : ""} ${d ? "complete" : ""}">
     <button class="lrow-btn" ${l.ready ? `data-n="${l.n}"` : "disabled"}>
       <span class="lrow-num">${d ? I.check : l.n}</span>
-      <span class="lrow-thumb"><img src="${thumb(l.n)}" alt="" loading="lazy" onerror="this.remove()"><i>${l.n}</i></span>
+      <span class="lrow-thumb"><img src="img/l${pad(l.n)}/thumb.jpg" alt="" loading="lazy" onerror="this.remove()"><i>${l.n}</i></span>
       <span class="lrow-body"><span class="lrow-title">${esc(l.title)}</span><span class="lrow-meta">${meta}</span>
         ${l.ready ? `<span class="lbar"><i style="width:${Math.round(dc / SESS_PER_LESSON * 100)}%"></i></span>` : ""}</span>
       <span class="lrow-end">${l.ready ? I.chev : I.lock}</span></button></li>`;
