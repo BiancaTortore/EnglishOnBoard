@@ -93,14 +93,14 @@ async function findVoice(name){
   if (!v) { console.error(`\nNo voice called "${name}" in your account. Available:\n  ${voices.map(v => v.name).join(", ")}\n\nRun again with --voice "Name".\n`); process.exit(1); }
   return v;
 }
-async function tts(voiceId, text, file, cast){
+async function tts(voiceId, text, file, cast, model = MODEL_ID){
   const vs = cast ? {stability: 0.5, similarity_boost: 0.75, style: 0.05, use_speaker_boost: true, speed: 0.95}
                   : {stability: 0.6, similarity_boost: 0.8, style: 0, use_speaker_boost: true, speed: SPEED};
   for (let attempt = 1; attempt <= 5; attempt++) {
     const r = await fetch(`${API}/text-to-speech/${voiceId}?output_format=mp3_44100_128`, {
       method: "POST",
       headers: {"xi-api-key": KEY, "content-type": "application/json", accept: "audio/mpeg"},
-      body: JSON.stringify({text, model_id: MODEL_ID, voice_settings: vs})
+      body: JSON.stringify({text, model_id: model, voice_settings: vs})
     });
     if (r.ok) { fs.writeFileSync(file, Buffer.from(await r.arrayBuffer())); return; }
     const msg = await r.text();
@@ -152,11 +152,14 @@ for (const n of lessons) {
 }
 /* look up each character's voice once */
 const castIds = {};
+const castModel = {};
+/* professional voices from the library only sound like themselves on the models they were trained for */
+const pickModel = v => { const ok = v.high_quality_base_model_ids || []; return !ok.length || ok.includes(MODEL_ID) ? MODEL_ID : ok[0]; };
 for (const who of new Set(jobs.filter(j => j.cast).map(j => j.cast))) {
-  const v = await findVoice(CAST[who]); castIds[who] = v.voice_id;
-  console.log(`  ${who.padEnd(8)} → ${v.name}${v.labels && v.labels.gender ? ` (${v.labels.gender})` : ""}`);
+  const v = await findVoice(CAST[who]); castIds[who] = v.voice_id; castModel[who] = pickModel(v);
+  console.log(`  ${who.padEnd(8)} → ${v.name}${v.labels && v.labels.gender ? ` (${v.labels.gender})` : ""} · ${castModel[who]}`);
 }
-jobs.forEach(j => { if (j.cast) { j.voice = castIds[j.cast]; j.us = false; } });
+jobs.forEach(j => { if (j.cast) { j.voice = castIds[j.cast]; j.model = castModel[j.cast]; j.us = false; } });
 const ONLY = args.only ? args.only.split(",").map(x => x.trim()).filter(Boolean) : null;
 if (ONLY) {
   const unknown = ONLY.filter(id => !jobs.some(j => j.id === id));
@@ -173,6 +176,12 @@ if ("new" in args && !ONLY) {
   console.log(`${published.size} lines are already recorded in the course and will be skipped.`);
 }
 const todo = pending;
+if (todo.some(j => j.cast) && process.stdin.isTTY && !("yes" in args)) {
+  const rl = readline.createInterface({input: process.stdin, output: process.stdout});
+  const a = (await rl.question("\n¿Cada personaje tiene la voz correcta? Enter para grabar · N y Enter para cancelar: ")).trim().toLowerCase();
+  rl.close();
+  if (a.startsWith("n")) { console.log("\nCancelado. No se gastó nada.\n"); process.exit(4); }
+}
 todo.forEach(j => fs.mkdirSync(path.dirname(j.file), {recursive: true}));
 if (noVoice.size) console.log(`No voice chosen yet for: ${[...noVoice].join(", ")} · their lines are skipped for now.`);
 const chars = todo.reduce((a, j) => a + sayText(j.text, j.us).length, 0);
@@ -182,7 +191,7 @@ let done = 0, failed = [];
 async function worker(){
   while (todo.length) {
     const j = todo.shift();
-    try { await tts(j.voice, sayText(j.text, j.us), j.file, j.cast); done++; process.stdout.write(`  ✓ L${j.n} ${j.id}${j.cast ? ` (${j.cast})` : ""}  "${j.text}"\n`); }
+    try { await tts(j.voice, sayText(j.text, j.us), j.file, j.cast, j.model); done++; process.stdout.write(`  ✓ L${j.n} ${j.id}${j.cast ? ` (${j.cast})` : ""}  "${j.text}"\n`); }
     catch (e) { failed.push(j); process.stdout.write(`  ✗ L${j.n} ${j.id}  ${e.message}\n`); }
   }
 }
