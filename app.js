@@ -233,7 +233,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-24";
+const APP_VERSION = "beta-32";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -341,8 +341,15 @@ async function saveForOffline(){
         const r = await fetch(jf, {cache: "no-cache"});
         if (!r.ok) continue;
         await cache.put(new URL(jf, location.href).href, r.clone());   /* the lesson text, for opening it without signal */
-        Ln = LESSON_CACHE[l.n] || (LESSON_CACHE[l.n] = await r.json());
+        Ln = LESSON_CACHE[l.n] = await r.json();
       } catch (e) { continue; }
+      /* "mediaRev" in a lesson goes up when its recordings or pictures are replaced:
+         throw away this phone's old copies so the new ones are downloaded and played */
+      const revKey = "eob-mediarev-" + l.n, rev = String(Ln.mediaRev || 1);
+      if (lsGet(revKey) !== rev) {
+        await Promise.all(lessonMediaFiles(Ln).map(f => cache.delete(new URL(f, location.href).href)));
+        lsSet(revKey, rev);
+      }
       lessonMediaFiles(Ln).forEach(f => jobs.push(f));
     }
     if (COURSE.modules.some(m => m.hero)) COURSE.modules.forEach(m => { if (m.hero) jobs.push(m.hero); });
@@ -1499,7 +1506,7 @@ function viewWelcome(){
   const open = COURSE.beta && COURSE.beta.openModules;
   if (open && !PREVIEW) COURSE.modules.forEach(m => { if (!open.includes(m.n)) m.lessons.forEach(l => { l.ready = false; }); });
   syncProgress(true); flushOutbox();
-  setTimeout(saveForOffline, 2500);
+  setTimeout(saveForOffline, 300);
   window.addEventListener("online", () => setTimeout(saveForOffline, 1500));
   const m = /^#l(\d+)$/.exec(location.hash);
   const ready = m && COURSE.modules.some(mod => mod.lessons.some(l => l.n === +m[1] && l.ready));
