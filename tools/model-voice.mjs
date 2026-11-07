@@ -152,7 +152,10 @@ for (const n of lessons) {
 }
 /* look up each character's voice once */
 const castIds = {};
-for (const who of new Set(jobs.filter(j => j.cast).map(j => j.cast))) castIds[who] = (await findVoice(CAST[who])).voice_id;
+for (const who of new Set(jobs.filter(j => j.cast).map(j => j.cast))) {
+  const v = await findVoice(CAST[who]); castIds[who] = v.voice_id;
+  console.log(`  ${who.padEnd(8)} → ${v.name}${v.labels && v.labels.gender ? ` (${v.labels.gender})` : ""}`);
+}
 jobs.forEach(j => { if (j.cast) { j.voice = castIds[j.cast]; j.us = false; } });
 const ONLY = args.only ? args.only.split(",").map(x => x.trim()).filter(Boolean) : null;
 if (ONLY) {
