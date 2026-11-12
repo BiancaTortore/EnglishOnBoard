@@ -35,7 +35,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - Instalar en el celular: tarjeta en bienvenida, Profile y una sola vez al terminar la primera sesión. Android: botón nativo; iPhone: pasos Compartir → Agregar a inicio.
 - Opiniones: estrellas + comentario al terminar cada lección, y "Send feedback" en Profile (valoración, comentario, cargo, nombre o mail, permiso para publicar). Salen por `/api/feedback`; sin señal quedan en cola y se mandan solas después.
 - Datos anónimos de uso: cada celular manda su avance (sesiones por lección, tests, instalado o no, Android/iPhone) a `/api/progress`, con un id al azar, sin nombres.
-- `worker.js`: recibe todo eso, lo guarda en KV (`DATA`) y manda el mail desde english@chartroomlab.com a `FEEDBACK_TO`. Panel en **/admin** (PIN `ADMIN_PIN`): personas, activas, instaladas, embudo por lección, comentarios y CSV.
+- `worker.js`: recibe todo eso, lo guarda en KV (`DATA`) y manda el mail desde english@chartroomlab.com a `FEEDBACK_TO`. Panel en **/admin** (PIN `ADMIN_PIN`): personas, activas, instaladas, embudo por lección, comentarios y CSV. El mismo panel tiene pestañas para BlackLog, CertWatch y Onboarding: esas apps mandan a `POST /api/ping` (con CORS solo para *.chartroomlab.com y *.bianca-tortore.workers.dev) un resumen anónimo por celular (aperturas, instalada y totales: notas / certificados / misiones y quiz), guardado en KV como `u:<app>:<id>`.
 - Configuración en Cloudflare (no va en el repo, que es público): secretos `FEEDBACK_TO` y `ADMIN_PIN`, namespace KV `englishonboard-data` conectado como `DATA` en `wrangler.jsonc`, dominio english.chartroomlab.com.
 
 ## Portadas de las lecciones 7–27 (4 nov)
