@@ -21,7 +21,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 ## Hecho
 - Módulo 1 completo (L1–L5), con fotos y audios. Revisión de contenido aplicada (opciones parejas, ejercicio "Read and tap").
 - App: bienvenida, resumen de lección y de módulo, repaso de errores, ajustes (velocidad, reinicio de progreso).
-- Lesson 6 (Joining the ship) publicada: JSON, lámina, prompts y kit. **Faltan sus 2 fotos (`scene.jpg`, `hero.jpg`) y sus 29 audios** (`audio/l06/script.csv`). Mientras tanto la app usa la voz del celular.
+- Lesson 6 (Joining the ship) completa (7 nov): JSON, lámina, fotos (`scene.jpg`, `hero.jpg`), 29 audios de personajes y voz modelo. Sigue con candado en la beta (solo se ve en modo vista previa). Diego lo grabó Bianca a mano; Lars, Tanya y James salieron de `Grabar audios.command`.
 - Inicio rediseñado (nov 2026, opción A "aligerada"): foto de la lección actual con un solo botón Continue, carta náutica de la derrota real Houston → Marsella con el barco según el avance (una sola línea: "Module N · X% of the voyage"), franja finita de repaso si hay errores, lista del módulo actual con foto y barra de progreso, y barra de pestañas abajo: Home, Lessons, Practice, Logbook (todas las palabras de las lecciones empezadas, con audio y buscador) y Profile (estadísticas + ajustes).
 - Portada por módulo en el inicio: `img/mNN/hero.jpg` (9:16, Diego en la mitad de arriba, abajo cubierta oscura para el texto), declarada como `"hero"` en el módulo de `course.json`. Si un módulo no la tiene, el inicio usa la foto de la lección actual. Hecha: Módulo 1.
 - Quick practice (en la pestaña Practice): 8 preguntas al azar de las lecciones empezadas. Test por módulo: 15 preguntas (5 escuchar, 4 vocabulario, 3 lectura, 3 completar), 80 % para aprobar, opcional (no bloquea el módulo siguiente), se habilita al terminar todas las lecciones del módulo. Los errores van al repaso.
@@ -46,7 +46,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - Las voces grabadas (ElevenLabs), las fotos y las láminas viven en una caché aparte (`eob-media-v1`) que **no se borra al publicar versiones nuevas**.
 - Al abrir la app con señal, se descargan solas en segundo plano todas las lecciones abiertas: texto, audios e imágenes (Módulo 1 ≈ 5 MB). Profile → "Offline" muestra si ya están guardadas.
 - **Peso (7 nov):** audios a 64 kbps mono (para voz no se nota; 7,4 → 5,2 MB). La lista de lecciones usa miniaturas `img/lNN/thumb.jpg` de 260 px: **al agregar o cambiar una portada, correr `python3 tools/make-thumbs.py`**. Los audios nuevos se suben también a 64 kbps.
-- **Cuando se reemplazan audios o fotos de una lección, subir `"mediaRev"` en su JSON** (hoy L1–L6 = 3: Brian y después los audios a 64 kbps). La app compara ese número con el que guardó, borra las copias viejas de esa lección y baja las nuevas al abrirse.
+- **Cuando se reemplazan audios o fotos de una lección, subir `"mediaRev"` en su JSON** (hoy L1–L5 = 3 o 4, L6 = 5). La app compara ese número con el que guardó, borra las copias viejas de esa lección y baja las nuevas al abrirse.
 - El celular pide el audio por partes; el service worker las corta del archivo guardado, así suena igual con o sin señal. La voz "model" (palabras, ejemplos y respuestas modelo) se graba con ElevenLabs usando `tools/model-voice.mjs` en la Mac de Bianca; cuando una lección tiene sus grabaciones se marca con `"modelAudio": true` en su JSON y la app las usa (y las descarga para usar sin conexión). Sin esa marca, o si falta un archivo, habla el celular. **Hecho para L1–L6: 175 grabaciones con la voz "Brian" (americano, `--us`), niveladas a −17,5 LUFS como los personajes. Reemplazó a "Alice" el 6 nov.**
 
 ## Logo (5 nov)
@@ -56,12 +56,14 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
 3. Probar en iPhone/Safari.
-4. Lecciones 7–27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
+4. **Siguiente:** Lessons 7–9 para cerrar el Módulo 2 (proponer primero, esperar aprobación). Después lecciones 10–27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
 5. (hecho, 4 nov) Tarjeta "APP 04 · English on Board · Public beta" en la landing chartroomlab.com, con captura del inicio; se sube a mano como zip al proyecto de la landing en Cloudflare.
 6. Venta: cuentas y pagos (Cloudflare D1 + Stripe, Módulo 1 gratis), landing, chequeo de marca, aclarar que no es un curso aprobado por la OMI ni certifica STCW.
 
 ## Cómo trabaja Bianca
 - Aprueba cada cambio antes de aplicarlo y quiere opinión antes de modificar el curso.
 - Manda fotos y audios como adjuntos (máx. 20 por mensaje). Audios llegan como `<hash>-<id>.mp3`:
-  normalizar con ffmpeg (silenceremove + loudnorm I=-16, mono 44.1k 96k) a `audio/lNN/<id>.mp3`.
+  normalizar con ffmpeg (silenceremove al principio y al final + loudnorm I=-17.5 TP=-1.5, mono 44.1k 64k) a `audio/lNN/<id>.mp3`; después subir `mediaRev` y `VERSION` de `sw.js`.
+- Antes de subir audios de personajes, medir el tono (F0) de cada archivo para confirmar voz de hombre o de mujer según el personaje.
+- Producción de cada lección: `python3 tools/kit-build.py N` (kit, publicar como artifact) y `node tools/audio-script.mjs N`. Bianca graba los audios faltantes con doble clic en `tools/Grabar audios.command` en su Mac (clave en el Llavero) y manda `audios-nuevos.zip`.
 - Probar con Playwright a 390×844 en claro y oscuro antes de subir.
