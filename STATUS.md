@@ -59,7 +59,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
 3. Probar en iPhone/Safari.
-4. **Siguiente:** recibir escenas de L11 y L12 (Módulo 3: audios completos y escena de L10 el 19 nov). Después Módulo 4, lecciones 13–16 (proponer primero, esperar aprobación), y así hasta la 27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
+4. **Siguiente:** recibir la escena de L12 (Módulo 3: audios completos, escenas de L10 y L11). Después Módulo 4, lecciones 13–16 (proponer primero, esperar aprobación), y así hasta la 27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
 5. (hecho, 4 nov) Tarjeta "APP 04 · English on Board · Public beta" en la landing chartroomlab.com, con captura del inicio; se sube a mano como zip al proyecto de la landing en Cloudflare.
 6. Venta: cuentas y pagos (Cloudflare D1 + Stripe, Módulo 1 gratis), landing, chequeo de marca, aclarar que no es un curso aprobado por la OMI ni certifica STCW.
 
