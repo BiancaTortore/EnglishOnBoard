@@ -96,7 +96,7 @@ def photo_prompt(name):
     if not m: sys.exit(f"img/l{NN}/prompts.md: missing a '## `{name}`' section with a '> prompt' line")
     return m.group(1)
 hero_p, scene_p = photo_prompt("hero.jpg"), photo_prompt("scene.jpg")
-HERO_DONE = os.path.exists(f"{ROOT}/img/l{NN}/hero.jpg")
+HERO_DONE = os.path.exists(f"{ROOT}/img/l{NN}/hero.jpg") and "--redo-hero" not in sys.argv
 m = re.search(r"^Referencias:\s*(.+)$", HERO, re.M)
 REFS = re.sub(r"[*.]", "", m.group(1)).strip() if m else "los personajes de la escena"
 
