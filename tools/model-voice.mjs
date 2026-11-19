@@ -38,6 +38,12 @@ const CAST = {
   marek: "Oliver", mario: "Pochology", lars: "Wolf Spencer", chen: null, pilot: null, agent: null, terminal: null
 };
 
+const REDO_LIST = [
+  ...["l07-01", "l07-02", "l07-03", "l07-04", "l07-05", "l07-06", "l07-07", "l07-08", "l07-09", "l07-10", "l07-11", "l07-12", "l07-13", "l07-14", "c-show-lifejacket", "c-show-suit", "c-show-card", "c-show-porthole", "c-show-escape", "c-show-bunk", "c-where-lifejacket", "c-where-suit", "c-where-card", "c-where-station", "c-station-other", "c-cabin-other"].map(id => "l07/" + id),
+  ...["l08-01", "l08-02", "l08-03", "l08-04", "l08-05", "l08-06", "l08-07", "l08-08", "l08-09", "l08-10", "l08-11", "l08-12", "l08-13", "l08-14", "c-show-breakfast", "c-show-lunch", "c-show-dinner", "c-show-coffee", "c-show-watch", "c-show-off", "c-ask-lunch", "c-need", "c-time", "c-dinner-late", "c-coffee-other", "c-thirteen"].map(id => "l08/" + id),
+  ...["l09-01", "l09-02", "l09-03", "l09-04", "l09-05", "l09-06", "l09-07", "l09-08", "l09-09", "l09-10", "l09-11", "l09-12", "l09-13", "l09-14", "l09-15", "l09-16", "c-show-speaker", "c-show-lifeboat", "c-show-general", "c-show-fire", "c-roll", "c-report", "c-lift", "c-where-kumar", "c-not1", "c-not2", "c-not3", "c-not4", "c-count-other"].map(id => "l09/" + id),
+];
+
 /* the characters: the same model and settings Bianca uses on the ElevenLabs website
    (Eleven v4, Stability 50 %, Similarity 75 %, Clone strength 0; v4 has no Speed or Style) */
 const CHAR_MODEL = "eleven_v4";
@@ -171,9 +177,9 @@ if (ONLY) {
   if (unknown.length) { console.error(`\nNo model line called: ${unknown.join(", ")}. Check the name (for example a-l, w-bow).\n`); process.exit(1); }
 }
 let pending = ONLY ? jobs.filter(j => ONLY.includes(j.id)) : jobs.filter(j => !fs.existsSync(j.file));
-/* tools/redo.json (on GitHub) lists published lines to record again, e.g. after changing the voice settings */
-let REDO = new Set();
-try { const r = await fetch(`${RAW}/tools/redo.json?t=${Date.now()}`); if (r.ok) REDO = new Set((await r.json()).redo || []); } catch (e) {}
+/* published lines to record again (e.g. after changing the voice settings). Empty it once they are in. */
+const REDO = new Set(REDO_LIST);
+if (REDO.size) console.log(`${REDO.size} published lines are marked to be recorded again.`);
 if ("new" in args && !ONLY) {
   /* ask GitHub which recordings the course already has; never pay twice for a published line */
   const published = new Set();
