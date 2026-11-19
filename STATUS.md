@@ -22,7 +22,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - Módulo 1 completo (L1–L5), con fotos y audios. Revisión de contenido aplicada (opciones parejas, ejercicio "Read and tap").
 - App: bienvenida, resumen de lección y de módulo, repaso de errores, ajustes (velocidad, reinicio de progreso).
 - Lesson 6 (Joining the ship) completa (7 nov): JSON, lámina, fotos (`scene.jpg`, `hero.jpg`), 29 audios de personajes y voz modelo. Sigue con candado en la beta (solo se ve en modo vista previa). Diego lo grabó Bianca a mano; Lars, Tanya y James salieron de `Grabar audios.command`.
-- Lessons 7, 8 y 9 escritas (19 nov): JSON, láminas, prompts de la escena y kits. Las portadas ya estaban. Audios completos (19 nov): personajes con Eleven v4 (como Bianca en la web), voz modelo Brian. L7 con escena y portada nuevas (mismo camarote). **Faltan las escenas de L8 y L9.** Siguen con candado en la beta (modo vista previa).
+- Lessons 7, 8 y 9 escritas (19 nov): JSON, láminas, prompts de la escena y kits. Las portadas ya estaban. Audios completos (19 nov): personajes con Eleven v4 (como Bianca en la web), voz modelo Brian. L7 con escena y portada nuevas (mismo camarote). L8 con escena. **Falta la escena de L9.** Siguen con candado en la beta (modo vista previa).
 - `tools/model-voice.mjs`: los personajes van con `CHAR_MODEL` = Eleven v4, Stability 0.5, Similarity 0.75 (los ajustes de Bianca en la web; v4 no tiene Speed ni Style). Para regrabar líneas ya publicadas, ponerlas en `REDO_LIST` y vaciarla cuando lleguen.
 - La app tiene efecto de altavoz del buque para los anuncios: `"pa": true` en el audio (L9).
 - Inicio rediseñado (nov 2026, opción A "aligerada"): foto de la lección actual con un solo botón Continue, carta náutica de la derrota real Houston → Marsella con el barco según el avance (una sola línea: "Module N · X% of the voyage"), franja finita de repaso si hay errores, lista del módulo actual con foto y barra de progreso, y barra de pestañas abajo: Home, Lessons, Practice, Logbook (todas las palabras de las lecciones empezadas, con audio y buscador) y Profile (estadísticas + ajustes).
@@ -59,7 +59,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
 3. Probar en iPhone/Safari.
-4. **Siguiente:** recibir las escenas de L8 y L9 (subir `mediaRev`). Después Módulo 3, lecciones 10–12 (proponer primero, esperar aprobación), y así hasta la 27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
+4. **Siguiente:** recibir la escena de L9 (subir `mediaRev`). Después Módulo 3, lecciones 10–12 (proponer primero, esperar aprobación), y así hasta la 27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
 5. (hecho, 4 nov) Tarjeta "APP 04 · English on Board · Public beta" en la landing chartroomlab.com, con captura del inicio; se sube a mano como zip al proyecto de la landing en Cloudflare.
 6. Venta: cuentas y pagos (Cloudflare D1 + Stripe, Módulo 1 gratis), landing, chequeo de marca, aclarar que no es un curso aprobado por la OMI ni certifica STCW.
 
