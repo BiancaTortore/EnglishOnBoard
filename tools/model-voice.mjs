@@ -38,8 +38,10 @@ const CAST = {
   marek: "Oliver", mario: "Pochology", lars: "Wolf Spencer", chen: null, pilot: null, agent: null, terminal: null
 };
 
-/* the characters' voice settings: the same ones Bianca uses on the ElevenLabs website */
-const CHAR_SETTINGS = {stability: 0.5, similarity_boost: 0.75, style: 0.05, use_speaker_boost: true, speed: 0.95};
+/* the characters: the same model and settings Bianca uses on the ElevenLabs website
+   (Eleven v4, Stability 50 %, Similarity 75 %, Clone strength 0; v4 has no Speed or Style) */
+const CHAR_MODEL = "eleven_v4";
+const CHAR_SETTINGS = {stability: 0.5, similarity_boost: 0.75};
 
 const args = Object.fromEntries(process.argv.slice(2).join(" ").split(/\s+(?=--)/).filter(Boolean).map(a => {
   const m = /^--(\w+)\s*(.*)$/.exec(a.trim()); return m ? [m[1], m[2].replace(/^["']|["']$/g, "")] : [a, ""];
@@ -156,8 +158,8 @@ for (const n of lessons) {
 /* look up each character's voice once */
 const castIds = {};
 const castModel = {};
-/* professional voices from the library only sound like themselves on the models they were trained for */
-const pickModel = v => { const ok = v.high_quality_base_model_ids || []; return !ok.length || ok.includes(MODEL_ID) ? MODEL_ID : ok[0]; };
+/* every character uses the same model as on the website (CHAR_MODEL) */
+const pickModel = () => CHAR_MODEL;
 for (const who of new Set(jobs.filter(j => j.cast).map(j => j.cast))) {
   const v = await findVoice(CAST[who]); castIds[who] = v.voice_id; castModel[who] = pickModel(v);
   console.log(`  ${who.padEnd(8)} → ${v.name}${v.labels && v.labels.gender ? ` (${v.labels.gender})` : ""} · ${castModel[who]}`);
