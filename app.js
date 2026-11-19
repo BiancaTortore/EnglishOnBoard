@@ -245,7 +245,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-34";
+const APP_VERSION = "beta-35";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -1249,8 +1249,26 @@ const CONTRACT = {"it's":"it is","that's":"that is","what's":"what is","where's"
   "can't":"can not","cannot":"can not","don't":"do not","doesn't":"does not","isn't":"is not","aren't":"are not","won't":"will not",
   "i've":"i have","we've":"we have","i'll":"i will","we'll":"we will","let's":"let us","ok":"okay","alfa":"alpha","juliett":"juliet","xray":"x ray"};
 const DIGIT = ["zero","one","two","three","four","five","six","seven","eight","nine"];
-function words(s){
-  let t = String(s).toLowerCase().replace(/[’`]/g, "'").replace(/\d/g, d => " " + DIGIT[d] + " ").replace(/\bniner\b/g, "nine");
+const TEENS = ["ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+const TENS = ["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
+const num2 = n => n < 10 ? DIGIT[n] : n < 20 ? TEENS[n - 10] : TENS[Math.floor(n / 10)] + (n % 10 ? " " + DIGIT[n % 10] : "");
+/* numbers the way they are said: 18 → eighteen, 1130 / 11:30 → eleven thirty, 1400 → fourteen hundred,
+   0730 → zero seven thirty, 2003 → two thousand and three */
+function sayNumbers(t, years){
+  return t.replace(/\b(\d{1,2}):?(\d{2})\b|\b\d+\b/g, (m, h, mm) => {
+    if (years && /^20\d\d$/.test(m)) return ` two thousand ${+m.slice(2) ? "and " + num2(+m.slice(2)) : ""} `;
+    if (h == null && m.length <= 2) return ` ${num2(+m)} `;
+    if (h == null && m.length === 4) { h = m.slice(0, 2); mm = m.slice(2); }
+    if (h == null) return m;
+    const hh = h.length === 2 && h[0] === "0" ? "zero " + DIGIT[+h[1]] : num2(+h);
+    const mi = mm === "00" ? "hundred" : mm[0] === "0" ? "zero " + DIGIT[+mm[1]] : num2(+mm);
+    return ` ${hh} ${mi} `;
+  });
+}
+function words(s, spoken){
+  let t = String(s).toLowerCase().replace(/[’`]/g, "'");
+  if (spoken) t = sayNumbers(t, spoken === "y");
+  t = t.replace(/\d/g, d => " " + DIGIT[d] + " ").replace(/\bniner\b/g, "nine");
   t = t.replace(/[^a-z'\s]/g, " ").split(/\s+/).filter(Boolean).map(w => CONTRACT[w] || w.replace(/'/g, "")).join(" ");
   return t.split(/\s+/).filter(Boolean);
 }
@@ -1263,15 +1281,29 @@ function matchWords(target, heard){
   while (i < n && j < m) { if (target[i] === heard[j]) { ok[i] = true; i++; j++; } else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++; }
   return ok;
 }
+/* "portside" or "port side", "lifejacket" or "life jacket": the recogniser writes compounds either way,
+   and they sound the same. Rewrite what was heard so it is split the way the target is. */
+function joinLikeTarget(tw, hw){
+  const tset = new Set(tw), pairs = new Map();
+  for (let i = 0; i < tw.length - 1; i++) pairs.set(tw[i] + tw[i + 1], [tw[i], tw[i + 1]]);
+  const out = [];
+  for (let j = 0; j < hw.length; j++) {
+    const two = j < hw.length - 1 ? hw[j] + hw[j + 1] : "";
+    if (two && tset.has(two) && !tset.has(hw[j])) { out.push(two); j++; continue; }
+    if (pairs.has(hw[j]) && !tset.has(hw[j])) { out.push(...pairs.get(hw[j])); continue; }
+    out.push(hw[j]);
+  }
+  return out;
+}
 function bestMatch(targets, alternatives){
   let best = null;
   for (const t of targets) {
     const tw = words(t);
-    for (const h of alternatives) {
-      const hw = words(h), ok = matchWords(tw, hw);
+    for (const h of alternatives.flatMap(a => /\d/.test(a) ? [[a, false], [a, "t"], [a, "y"]] : [[a, false]])) {
+      const hw = joinLikeTarget(tw, words(h[0], h[1])), ok = matchWords(tw, hw);
       const hits = ok.filter(Boolean).length, extra = Math.max(0, hw.length - hits);
       const score = hits / tw.length - extra * 0.02;
-      if (!best || score > best.score) best = {target: t, tw, ok, heard: h, score, hits, extra};
+      if (!best || score > best.score) best = {target: t, tw, ok, heard: h[0], score, hits, extra};
     }
   }
   return best;
