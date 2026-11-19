@@ -168,6 +168,7 @@ Cada lección tiene **6 sesiones de 3 a 5 minutos**, siempre en este orden:
 - **Todo se graba con ElevenLabs:** los personajes (diálogos y lo que dicen en los ejercicios) y la voz modelo "Brian" (palabras, ejemplos, frases, respuestas modelo). Bianca graba lo que falta con doble clic en `tools/Grabar audios.command`. Cuando una lección tiene la voz modelo grabada se marca `"modelAudio": true`; mientras tanto la dice el celular.
 - Cada lección trae `audio/lNN/script.csv`: columnas `file`, `voice`, `text`, `say` (escritura para pronunciar, si hace falta) y `note`.
 - Se genera cada fila con la voz del personaje (sección 3) y se guarda con el nombre exacto de la columna `file` en `audio/lNN/`.
+- **Silencios en los diálogos:** entre líneas la app deja una pausa corta y natural. Cuando la escena se mueve (alguien entra o se va, después de un anuncio, al tomar la radio, al llegar a otro lugar) la línea lleva `"pause": ms` con el silencio que va antes. Revisarlo en cada diálogo nuevo.
 - **Todo se graba limpio.** El efecto de radio (`"radio": true`) y el del altavoz del buque (`"pa": true`, anuncios del Capitán) los pone la app.
 - Las filas cuyo `file` termina en `-a` y `-b` son las dos mitades de un mensaje cortado por estática: se graban por separado.
 - Mientras un audio no exista, la app usa la voz sintética del celular.

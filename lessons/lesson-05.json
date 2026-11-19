@@ -26,6 +26,7 @@
    "es": "Quién llama, la hora y el mensaje. Si tenés que deletrear, usá el alfabeto fonético. Vuelvo en cinco minutos."
   },
   "l05-04": {
+   "pause": 1500,
    "voice": "terminal",
    "radio": true,
    "text": "LNG Horizon, LNG Horizon, this is Houston Terminal. Over.",
@@ -81,6 +82,7 @@
    "es": "Kowalski. Recibido. LNG Horizon, corto."
   },
   "l05-14": {
+   "pause": 1500,
    "voice": "james",
    "text": "I'm back. Any calls?",
    "es": "Volví. ¿Alguna llamada?"

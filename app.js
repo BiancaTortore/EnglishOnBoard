@@ -224,8 +224,9 @@ async function playClip(id, {rate = 1, garble = false} = {}, tokIn){
 async function playSeq(ids, {rate = 1, onLine} = {}){
   const tok = ++playToken;
   if (canSpeak) speechSynthesis.cancel();
-  /* load the whole conversation first, then play it line after line
-     with a short, natural gap: a little longer when the speaker changes */
+  /* load the whole conversation first, then play it line after line with a short, natural gap.
+     A line can ask for a longer silence before it ("pause", in ms): someone walks in, the scene moves on,
+     people react after an announcement */
   ids.forEach(id => clipFiles(id).forEach(prepFile));
   for (let k = 0; k < ids.length; k++) {
     const id = ids[k];
@@ -235,7 +236,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
     const nx = ids[k + 1];
     if (nx && tok === playToken) {
       const a = clip(id), b = clip(nx);
-      await wait(a.radio || b.radio || a.pa || b.pa ? 250 : a.voice === b.voice ? 60 : 160);
+      await wait(b.pause || (a.pa ? 900 : a.radio || b.radio || b.pa ? 350 : a.voice === b.voice ? 250 : 180));
     }
   }
   onLine && onLine(null);
@@ -245,7 +246,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-35";
+const APP_VERSION = "beta-36";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };

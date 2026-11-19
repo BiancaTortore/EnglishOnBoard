@@ -17,12 +17,14 @@
    "pa": true
   },
   "l09-02": {
+   "pause": 700,
    "voice": "lars",
    "text": "General alarm. All crew, go to your muster stations. Do not use the lift.",
    "es": "Alarma general. Toda la tripulación, a sus estaciones de reunión. No usen el ascensor.",
    "pa": true
   },
   "l09-03": {
+   "pause": 1300,
    "voice": "rolando",
    "text": "Come on, cadet! The stairs, not the lift.",
    "es": "¡Vamos, cadete! La escalera, no el ascensor."
@@ -33,6 +35,7 @@
    "es": "Cubierta de botes, babor. ¡Estación B!"
   },
   "l09-05": {
+   "pause": 1600,
    "voice": "tanya",
    "text": "Diego! Don't run on the stairs. Walk.",
    "es": "¡Diego! No corras en la escalera. Caminá."
@@ -43,6 +46,7 @@
    "es": "¡Perdón!"
   },
   "l09-07": {
+   "pause": 900,
    "voice": "tanya",
    "text": "OK, headcount. Rolando?",
    "es": "Bueno, conteo. ¿Rolando?"
@@ -73,11 +77,13 @@
    "es": "Kumar no está, jefa."
   },
   "l09-13": {
+   "pause": 700,
    "voice": "tanya",
    "text": "Bridge, muster station B. Seventeen present, one missing: Kumar. Over.",
    "es": "Puente, estación B. Diecisiete presentes, uno falta: Kumar. Cambio."
   },
   "l09-14": {
+   "pause": 800,
    "voice": "lars",
    "text": "Received. Kumar is in the engine room with the Chief Engineer. He's OK. Over.",
    "es": "Recibido. Kumar está en la sala de máquinas con el Jefe de Máquinas. Está bien. Cambio.",
@@ -89,6 +95,7 @@
    "es": "Recibido. Toda la tripulación verificada. Cambio."
   },
   "l09-16": {
+   "pause": 1800,
    "voice": "lars",
    "text": "This is the Captain. The drill is over. Thank you, all crew.",
    "es": "Habla el Capitán. El simulacro terminó. Gracias a toda la tripulación.",

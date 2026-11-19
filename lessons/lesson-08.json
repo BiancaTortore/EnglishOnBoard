@@ -65,6 +65,7 @@
    "es": "Acá tenés."
   },
   "l08-12": {
+   "pause": 500,
    "voice": "mario",
    "text": "And if you're on watch at dinner time, tell me. I keep a plate for you.",
    "es": "Y si estás de guardia a la hora de la cena, avisame. Te guardo un plato."

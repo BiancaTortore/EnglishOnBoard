@@ -235,6 +235,7 @@
    "es": "Por favor, pare en la popa."
   },
   "l01-13": {
+   "pause": 800,
    "voice": "rolando",
    "text": "The Captain is busy with the terminal this morning. You sign on with him this afternoon.",
    "es": "El Capitán está ocupado con la terminal esta mañana. Firmás el embarque con él esta tarde."

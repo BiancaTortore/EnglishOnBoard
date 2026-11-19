@@ -65,6 +65,7 @@
    "es": "Preguntale al contramaestre, Rolando. Él está a cargo de los marineros en cubierta."
   },
   "l04-12": {
+   "pause": 600,
    "voice": "mario",
    "text": "Soup for the cadet? Chicken soup today!",
    "es": "¿Sopa para el cadete? ¡Hoy hay sopa de pollo!"

@@ -55,6 +55,7 @@
    "es": "Traje de inmersión. Para el agua fría. Ahora, detrás de la puerta está tu tarjeta de zafarrancho. Leémela."
   },
   "l07-10": {
+   "pause": 700,
    "voice": "diego",
    "text": "Muster station B. Boat deck, port side. Lifeboat number two.",
    "es": "Estación de reunión B. Cubierta de botes, babor. Bote salvavidas número dos."
