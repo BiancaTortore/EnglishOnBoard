@@ -116,6 +116,21 @@ function stopAll(){
   if (canSpeak) speechSynthesis.cancel();
   if (currentEl) { try { currentEl.pause(); } catch (e) {} currentEl = null; }
   staticOff();
+  releaseMic();
+}
+
+/* While the microphone is open, phones switch to "call" audio: louder, processed, sometimes distorted,
+   and it stays that way while anything keeps the mic or the audio graph made during it alive.
+   So: never keep the mic open between recordings, stop speech recognition when leaving a screen,
+   and rebuild the audio graph once the mic is closed. */
+let liveSR = null, micUsed = false;
+function releaseMic(){
+  if (liveSR) { try { liveSR.abort(); } catch (e) {} liveSR = null; }
+  if (micStream) { micStream.getTracks().forEach(t => { try { t.stop(); } catch (e) {} }); micStream = null; }
+  if (micUsed) {
+    micUsed = false;
+    if (actx) { const old = actx; actx = null; noiseSrc = null; noiseGain = null; try { old.close(); } catch (e) {} }
+  }
 }
 
 function speakTTS(text, voice, rate){
@@ -246,7 +261,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-36";
+const APP_VERSION = "beta-37";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -1318,6 +1333,7 @@ function setupCheck(sc, model, recordMode){
     if (listening) { try { rec.stop(); } catch (e) {} return; }
     stopAll();
     rec = new SR(); rec.lang = "en-GB"; rec.interimResults = true; rec.maxAlternatives = 5; rec.continuous = false;
+    liveSR = rec; micUsed = true;
     gotResult = false; listening = true;
     mic.classList.add("rec"); mic.innerHTML = I.stop; info.textContent = "Listening… speak now.";
     res.hidden = false; res.innerHTML = `<span class="note">…</span>`;
@@ -1335,7 +1351,7 @@ function setupCheck(sc, model, recordMode){
       if (e.error === "not-allowed" || e.error === "service-not-allowed") { res.hidden = true; recordMode("Microphone not allowed. Say it out loud, then tap."); return; }
       info.textContent = "Something went wrong. Tap and try again.";
     };
-    rec.onend = () => { if (listening && !gotResult) { info.textContent = "I didn't catch that. Tap and try again."; if (res.innerHTML.includes("…")) res.hidden = true; } stopUI(); };
+    rec.onend = () => { if (liveSR === rec) { liveSR = null; releaseMic(); } if (listening && !gotResult) { info.textContent = "I didn't catch that. Tap and try again."; if (res.innerHTML.includes("…")) res.hidden = true; } stopUI(); };
     try { rec.start(); } catch (e) { stopUI(); recordMode(); }
   };
 }
@@ -1372,12 +1388,15 @@ function setupMic(onDone){
   if (micBlocked || !navigator.mediaDevices || !window.MediaRecorder) { fallback(); return; }
   mic.onclick = async () => {
     if (rec && rec.state === "recording") { rec.stop(); return; }
-    try { micStream = micStream || await navigator.mediaDevices.getUserMedia({audio: true}); }
+    stopAll();
+    try { micStream = await navigator.mediaDevices.getUserMedia({audio: {echoCancellation: false, noiseSuppression: false, autoGainControl: false}}); }
     catch (e) { micBlocked = true; fallback("Microphone not available here. Say it out loud, then tap."); return; }
-    stopAll(); chunks = [];
+    micUsed = true; chunks = [];
     rec = new MediaRecorder(micStream);
     rec.ondataavailable = e => chunks.push(e.data);
     rec.onstop = () => {
+      releaseMic();
+      if (!mic.isConnected) return;   /* left the screen while recording */
       mic.classList.remove("rec"); mic.innerHTML = I.mic; info.textContent = "Tap to record again.";
       if (url) URL.revokeObjectURL(url);
       url = URL.createObjectURL(new Blob(chunks, {type: rec.mimeType}));
