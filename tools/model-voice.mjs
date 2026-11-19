@@ -38,6 +38,9 @@ const CAST = {
   marek: "Oliver", mario: "Pochology", lars: "Wolf Spencer", chen: null, pilot: null, agent: null, terminal: null
 };
 
+/* the characters' voice settings: the same ones Bianca uses on the ElevenLabs website */
+const CHAR_SETTINGS = {stability: 0.5, similarity_boost: 0.75, style: 0.05, use_speaker_boost: true, speed: 0.95};
+
 const args = Object.fromEntries(process.argv.slice(2).join(" ").split(/\s+(?=--)/).filter(Boolean).map(a => {
   const m = /^--(\w+)\s*(.*)$/.exec(a.trim()); return m ? [m[1], m[2].replace(/^["']|["']$/g, "")] : [a, ""];
 }));
@@ -94,7 +97,7 @@ async function findVoice(name){
   return v;
 }
 async function tts(voiceId, text, file, cast, model = MODEL_ID){
-  const vs = cast ? {stability: 0.5, similarity_boost: 0.75, style: 0.05, use_speaker_boost: true, speed: 0.95}
+  const vs = cast ? CHAR_SETTINGS
                   : {stability: 0.6, similarity_boost: 0.8, style: 0, use_speaker_boost: true, speed: SPEED};
   for (let attempt = 1; attempt <= 5; attempt++) {
     const r = await fetch(`${API}/text-to-speech/${voiceId}?output_format=mp3_44100_128`, {
@@ -166,10 +169,14 @@ if (ONLY) {
   if (unknown.length) { console.error(`\nNo model line called: ${unknown.join(", ")}. Check the name (for example a-l, w-bow).\n`); process.exit(1); }
 }
 let pending = ONLY ? jobs.filter(j => ONLY.includes(j.id)) : jobs.filter(j => !fs.existsSync(j.file));
+/* tools/redo.json (on GitHub) lists published lines to record again, e.g. after changing the voice settings */
+let REDO = new Set();
+try { const r = await fetch(`${RAW}/tools/redo.json?t=${Date.now()}`); if (r.ok) REDO = new Set((await r.json()).redo || []); } catch (e) {}
 if ("new" in args && !ONLY) {
   /* ask GitHub which recordings the course already has; never pay twice for a published line */
   const published = new Set();
   await Promise.all(pending.map(async j => {
+    if (REDO.has(`l${pad(j.n)}/${j.id}`)) return;   /* published, but marked to be recorded again */
     try { const r = await fetch(`${RAW}/audio/l${pad(j.n)}/${j.id}.mp3`, {method: "HEAD"}); if (r.ok) published.add(j); } catch (e) {}
   }));
   pending = pending.filter(j => !published.has(j));
