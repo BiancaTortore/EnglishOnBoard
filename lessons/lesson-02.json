@@ -15,6 +15,7 @@
    "es": "Bueno, esta es la cubierta principal. Dejá tu bolso acá un minuto."
   },
   "l02-02": {
+   "pause": 700,
    "voice": "diego",
    "text": "It's huge! Are those white spheres the cargo tanks?",
    "es": "¡Es enorme! ¿Esas esferas blancas son los tanques de carga?"

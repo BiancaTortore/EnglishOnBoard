@@ -40,6 +40,7 @@
    "es": "Es Marek, el Jefe de Máquinas. Él dirige el departamento de máquinas."
   },
   "l04-07": {
+   "pause": 500,
    "voice": "marek",
    "text": "Hello. If something breaks, you call me.",
    "es": "Hola. Si algo se rompe, me llamás a mí."

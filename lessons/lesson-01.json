@@ -26,6 +26,7 @@
    "es": "Soy Rolando, el contramaestre. ¡Bienvenido! Esta es la proa. La planchada está en la otra punta, así que nos toca caminar un poco."
   },
   "l01-04": {
+   "pause": 900,
    "voice": "rolando",
    "text": "The gangway is on the port side, aft.",
    "es": "La planchada está por babor, a popa."
@@ -66,6 +67,7 @@
    "es": "Y estribor es el otro costado, el que da al agua."
   },
   "l01-12": {
+   "pause": 900,
    "voice": "rolando",
    "text": "That's right. Here we are. The gangway. Watch your step!",
    "es": "Así es. Llegamos. La planchada. ¡Cuidado al subir!"

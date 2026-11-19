@@ -33,6 +33,7 @@
    "es": "LNG Horizon, LNG Horizon, aquí Houston Terminal. Cambio."
   },
   "l05-05": {
+   "pause": 800,
    "voice": "diego",
    "text": "Houston Terminal, this is LNG Horizon. Go ahead. Over.",
    "es": "Houston Terminal, aquí LNG Horizon. Adelante. Cambio."
@@ -44,6 +45,7 @@
    "es": "LNG Horizon, confirme su distintivo de llamada. Cambio."
   },
   "l05-07": {
+   "pause": 700,
    "voice": "diego",
    "text": "Our call sign is Charlie Six X-ray Yankee Seven. Over.",
    "es": "Nuestro distintivo es Charlie Six X-ray Yankee Seven. Cambio."
@@ -55,6 +57,7 @@
    "es": "Gracias. El práctico sube mañana a las diecisiete horas. Repito, uno siete cero cero. Cambio."
   },
   "l05-09": {
+   "pause": 600,
    "voice": "diego",
    "text": "One seven zero zero. Received. Over.",
    "es": "Uno siete cero cero. Recibido. Cambio."
@@ -88,6 +91,7 @@
    "es": "Volví. ¿Alguna llamada?"
   },
   "l05-15": {
+   "pause": 800,
    "voice": "diego",
    "text": "Yes. Houston Terminal, at fourteen ten. The pilot boards tomorrow at seventeen hundred, and please call Mister Kowalski, the gas inspector.",
    "es": "Sí. Houston Terminal, a las catorce y diez. El práctico sube mañana a las diecisiete, y por favor llamen al señor Kowalski, el inspector de gas."

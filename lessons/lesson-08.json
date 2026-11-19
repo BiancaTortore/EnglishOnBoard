@@ -60,6 +60,7 @@
    "es": "¿Me pasás la sal, por favor?"
   },
   "l08-11": {
+   "pause": 700,
    "voice": "rolando",
    "text": "Here you are.",
    "es": "Acá tenés."

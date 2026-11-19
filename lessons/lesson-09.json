@@ -67,11 +67,13 @@
    "es": "Presente."
   },
   "l09-11": {
+   "pause": 700,
    "voice": "tanya",
    "text": "Kumar? … Kumar?",
    "es": "¿Kumar? … ¿Kumar?"
   },
   "l09-12": {
+   "pause": 1300,
    "voice": "rolando",
    "text": "Kumar isn't here, Chief.",
    "es": "Kumar no está, jefa."

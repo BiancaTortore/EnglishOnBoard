@@ -30,6 +30,7 @@
    "es": "Eh… ¿sobre el placard?"
   },
   "l07-05": {
+   "pause": 600,
    "voice": "tanya",
    "text": "Not on the wardrobe. In the wardrobe. Look, here, on the top shelf.",
    "es": "Sobre el placard no. Adentro del placard. Mirá, acá, en el estante de arriba."
@@ -40,6 +41,7 @@
    "es": "Adentro del placard. Entendido."
   },
   "l07-07": {
+   "pause": 700,
    "voice": "tanya",
    "text": "And this orange bag, under the bunk, is your immersion suit.",
    "es": "Y este bolso naranja, debajo de la cucheta, es tu traje de inmersión."
@@ -55,7 +57,7 @@
    "es": "Traje de inmersión. Para el agua fría. Ahora, detrás de la puerta está tu tarjeta de zafarrancho. Leémela."
   },
   "l07-10": {
-   "pause": 700,
+   "pause": 1300,
    "voice": "diego",
    "text": "Muster station B. Boat deck, port side. Lifeboat number two.",
    "es": "Estación de reunión B. Cubierta de botes, babor. Bote salvavidas número dos."

@@ -40,6 +40,7 @@
    "es": "Todos tienen un primer barco. Bueno, este es el rol. Tu pasaporte y tu libreta de embarco, por favor."
   },
   "l06-07": {
+   "pause": 900,
    "voice": "diego",
    "text": "Here you are.",
    "es": "Acá tiene."
@@ -50,6 +51,7 @@
    "es": "Entonces embarcás como cadete de cubierta. Tu apellido… ¿cómo se deletrea?"
   },
   "l06-09": {
+   "pause": 700,
    "voice": "diego",
    "text": "Mike, Alfa, Romeo, Tango, India, November, Echo, Zulu. Martínez.",
    "es": "M-A-R-T-I-N-E-Z. Martínez."
@@ -71,16 +73,19 @@
    "es": "Tres. Tenés razón, necesito anteojos nuevos. Ahora, el número de tu libreta. Leémelo, por favor."
   },
   "l06-13": {
+   "pause": 1100,
    "voice": "diego",
    "text": "Alfa Romeo, zero, four, seven, nine, two, six.",
    "es": "A-R, cero, cuatro, siete, nueve, dos, seis."
   },
   "l06-14": {
+   "pause": 700,
    "voice": "lars",
    "text": "AR zero four seven nine two six. Good. Sign here, please.",
    "es": "AR cero cuatro siete nueve dos seis. Bien. Firmá acá, por favor."
   },
   "l06-15": {
+   "pause": 700,
    "voice": "diego",
    "text": "Here?",
    "es": "¿Acá?"

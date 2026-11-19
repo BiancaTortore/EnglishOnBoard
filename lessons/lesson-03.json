@@ -15,6 +15,7 @@
    "es": "Bueno, entremos. Este es el nivel de la cubierta principal. La cocina está acá, y la lavandería al lado."
   },
   "l03-02": {
+   "pause": 600,
    "voice": "diego",
    "text": "Where's the mess room?",
    "es": "¿Dónde está el comedor?"
