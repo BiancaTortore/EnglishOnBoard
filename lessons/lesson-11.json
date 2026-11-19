@@ -1,0 +1,1050 @@
+{
+ "n": 11,
+ "module": 3,
+ "title": "Mooring & letting go",
+ "place": "Day 2 · 17:20 · Houston, aft mooring station",
+ "goal": "Understand mooring orders on the radio, read them back and report the lines.",
+ "images": {
+  "hero": "img/l11/hero.jpg",
+  "scene": "img/l11/scene.jpg"
+ },
+ "radioChannel": "UHF",
+ "audio": {
+  "l11-01": {
+   "voice": "lars",
+   "text": "Aft station, bridge. Single up to one and one. Over.",
+   "es": "Estación de popa, puente. Queden con uno y uno. Cambio.",
+   "radio": true
+  },
+  "l11-02": {
+   "voice": "james",
+   "text": "Single up to one and one. Aft, roger. Over.",
+   "es": "Quedar con uno y uno. Popa, recibido. Cambio."
+  },
+  "l11-03": {
+   "pause": 500,
+   "voice": "james",
+   "text": "Rolando, single up. Keep one stern line and one spring.",
+   "es": "Rolando, largá los demás. Dejá un largo y un esprín."
+  },
+  "l11-04": {
+   "voice": "rolando",
+   "text": "One and one, OK. Diego, watch the lines. Tell me when they're clear of the water.",
+   "es": "Uno y uno, okey. Diego, mirá los cabos. Avisame cuando estén fuera del agua."
+  },
+  "l11-05": {
+   "voice": "diego",
+   "text": "OK!",
+   "es": "¡Okey!"
+  },
+  "l11-06": {
+   "pause": 1500,
+   "voice": "diego",
+   "text": "Two stern lines and the breast line are clear of the water!",
+   "es": "¡Dos largos y el través están fuera del agua!"
+  },
+  "l11-07": {
+   "voice": "james",
+   "text": "Bridge, aft. Singled up to one and one. Over.",
+   "es": "Puente, popa. Quedamos con uno y uno. Cambio."
+  },
+  "l11-08": {
+   "pause": 800,
+   "voice": "lars",
+   "text": "Aft, bridge. Thank you. Let go aft. The tug is standing by. Over.",
+   "es": "Popa, puente. Gracias. Larguen a popa. El remolcador está listo. Cambio.",
+   "radio": true
+  },
+  "l11-09": {
+   "voice": "james",
+   "text": "Let go aft. Rolando, let go!",
+   "es": "Largar a popa. ¡Rolando, largá!"
+  },
+  "l11-10": {
+   "pause": 900,
+   "voice": "rolando",
+   "text": "Stern line slack… Heave in!",
+   "es": "Largo en banda… ¡Virá!"
+  },
+  "l11-11": {
+   "pause": 1500,
+   "voice": "diego",
+   "text": "The spring is out of the water… The stern line is out of the water!",
+   "es": "El esprín está fuera del agua… ¡El largo está fuera del agua!"
+  },
+  "l11-12": {
+   "voice": "james",
+   "text": "Bridge, aft. All lines let go. Propeller clear. Over.",
+   "es": "Puente, popa. Todos los cabos largados. Hélice libre. Cambio."
+  },
+  "l11-13": {
+   "pause": 700,
+   "voice": "lars",
+   "text": "All lines let go aft, propeller clear. Thank you. Over.",
+   "es": "Todos los cabos largados a popa, hélice libre. Gracias. Cambio.",
+   "radio": true
+  },
+  "l11-14": {
+   "pause": 1000,
+   "voice": "rolando",
+   "text": "Good job, cadet. Now we sail.",
+   "es": "Buen trabajo, cadete. Ahora sí navegamos."
+  },
+  "l11-15": {
+   "voice": "diego",
+   "text": "My first departure!",
+   "es": "¡Mi primera zarpada!"
+  },
+  "w-mooring": {
+   "voice": "model",
+   "text": "mooring line"
+  },
+  "x-mooring": {
+   "voice": "model",
+   "text": "Each mooring line goes to a bollard.",
+   "es": "Cada cabo de amarre va a una bita."
+  },
+  "w-stern": {
+   "voice": "model",
+   "text": "stern line"
+  },
+  "x-stern": {
+   "voice": "model",
+   "text": "Keep one stern line.",
+   "es": "Dejá un largo de popa."
+  },
+  "w-spring": {
+   "voice": "model",
+   "text": "spring"
+  },
+  "x-spring": {
+   "voice": "model",
+   "text": "The spring goes forward.",
+   "es": "El esprín va hacia proa."
+  },
+  "w-bollard": {
+   "voice": "model",
+   "text": "bollard"
+  },
+  "x-bollard": {
+   "voice": "model",
+   "text": "The line is on the bollard.",
+   "es": "El cabo está en la bita."
+  },
+  "w-fairlead": {
+   "voice": "model",
+   "text": "fairlead"
+  },
+  "x-fairlead": {
+   "voice": "model",
+   "text": "The line goes through the fairlead.",
+   "es": "El cabo pasa por la guía."
+  },
+  "w-tug": {
+   "voice": "model",
+   "text": "tug"
+  },
+  "x-tug": {
+   "voice": "model",
+   "text": "The tug is standing by.",
+   "es": "El remolcador está listo."
+  },
+  "w-slack": {
+   "voice": "model",
+   "text": "slack"
+  },
+  "x-slack": {
+   "voice": "model",
+   "text": "The stern line is slack.",
+   "es": "El largo está en banda."
+  },
+  "w-heave": {
+   "voice": "model",
+   "text": "heave in"
+  },
+  "x-heave": {
+   "voice": "model",
+   "text": "Heave in the spring.",
+   "es": "Virá el esprín."
+  },
+  "p-singleup": {
+   "voice": "model",
+   "text": "Single up to one and one.",
+   "es": "Quedar con uno y uno."
+  },
+  "p-letgo": {
+   "voice": "model",
+   "text": "Let go aft.",
+   "es": "Largar a popa."
+  },
+  "p-clear": {
+   "voice": "model",
+   "text": "The stern line is clear of the water.",
+   "es": "El largo está fuera del agua."
+  },
+  "p-allgone": {
+   "voice": "model",
+   "text": "All lines let go. Propeller clear.",
+   "es": "Todos los cabos largados. Hélice libre."
+  },
+  "p-roger": {
+   "voice": "model",
+   "text": "Aft, roger.",
+   "es": "Popa, recibido."
+  },
+  "m-letgo-rb": {
+   "voice": "model",
+   "text": "Let go aft.",
+   "es": "Largar a popa."
+  },
+  "m-single-rb": {
+   "voice": "model",
+   "text": "Single up to one and one.",
+   "es": "Quedar con uno y uno."
+  },
+  "m-springclear": {
+   "voice": "model",
+   "text": "The spring is clear of the water.",
+   "es": "El esprín está fuera del agua."
+  },
+  "m-report": {
+   "voice": "model",
+   "text": "All lines let go. Propeller clear.",
+   "es": "Todos los cabos largados. Hélice libre."
+  },
+  "m-letgo": {
+   "voice": "model",
+   "text": "let go",
+   "es": "largar"
+  },
+  "m-letsgo": {
+   "voice": "model",
+   "text": "let's go",
+   "es": "vamos"
+  },
+  "c-show-tug": {
+   "voice": "james",
+   "text": "Where's the tug?"
+  },
+  "c-show-stern": {
+   "voice": "rolando",
+   "text": "Show me a stern line."
+  },
+  "c-show-spring": {
+   "voice": "rolando",
+   "text": "Show me the spring."
+  },
+  "c-show-bollard": {
+   "voice": "james",
+   "text": "Where's the bollard?"
+  },
+  "c-show-fairlead": {
+   "voice": "rolando",
+   "text": "Show me the fairlead."
+  },
+  "c-show-slack": {
+   "voice": "rolando",
+   "text": "Which line is slack?"
+  },
+  "c-show-heave": {
+   "voice": "rolando",
+   "text": "Where do we heave in?"
+  },
+  "c-rb-letgo": {
+   "voice": "lars",
+   "text": "Aft, bridge. Let go aft. Over.",
+   "radio": true
+  },
+  "c-rb-single": {
+   "voice": "lars",
+   "text": "Aft, bridge. Single up to one and one. Over.",
+   "radio": true
+  },
+  "c-isclear": {
+   "voice": "rolando",
+   "text": "Diego! Is the spring clear of the water?"
+  },
+  "c-report": {
+   "voice": "lars",
+   "text": "Aft, bridge. Report. Over.",
+   "radio": true
+  },
+  "c-letgo-not": {
+   "voice": "james",
+   "text": "Don't let go the spring yet. Only the stern line."
+  },
+  "c-howmany": {
+   "voice": "james",
+   "text": "We have three stern lines, one breast line and two springs."
+  }
+ },
+ "dialogue": [
+  "l11-01",
+  "l11-02",
+  "l11-03",
+  "l11-04",
+  "l11-05",
+  "l11-06",
+  "l11-07",
+  "l11-08",
+  "l11-09",
+  "l11-10",
+  "l11-11",
+  "l11-12",
+  "l11-13",
+  "l11-14",
+  "l11-15"
+ ],
+ "words": {
+  "mooring": {
+   "en": "mooring line",
+   "ipa": "/ˈmʊərɪŋ laɪn/",
+   "es": "cabo de amarre",
+   "audio": "w-mooring",
+   "ex": "x-mooring"
+  },
+  "stern": {
+   "en": "stern line",
+   "ipa": "/ˈstɜːn laɪn/",
+   "es": "largo de popa",
+   "audio": "w-stern",
+   "ex": "x-stern"
+  },
+  "spring": {
+   "en": "spring",
+   "ipa": "/sprɪŋ/",
+   "es": "esprín",
+   "audio": "w-spring",
+   "ex": "x-spring"
+  },
+  "bollard": {
+   "en": "bollard",
+   "ipa": "/ˈbɒlɑːd/",
+   "es": "bita",
+   "audio": "w-bollard",
+   "ex": "x-bollard"
+  },
+  "fairlead": {
+   "en": "fairlead",
+   "ipa": "/ˈfeəliːd/",
+   "es": "guía, gatera",
+   "audio": "w-fairlead",
+   "ex": "x-fairlead"
+  },
+  "tug": {
+   "en": "tug",
+   "ipa": "/tʌɡ/",
+   "es": "remolcador",
+   "audio": "w-tug",
+   "ex": "x-tug"
+  },
+  "slack": {
+   "en": "slack",
+   "ipa": "/slæk/",
+   "es": "en banda, flojo",
+   "audio": "w-slack",
+   "ex": "x-slack"
+  },
+  "heave": {
+   "en": "heave in",
+   "ipa": "/hiːv ˈɪn/",
+   "es": "virar, cobrar",
+   "audio": "w-heave",
+   "ex": "x-heave"
+  }
+ },
+ "plate": {
+  "svg": "img/l11/plate.svg",
+  "pins": [
+   {
+    "word": "stern",
+    "x": 317,
+    "y": 178
+   },
+   {
+    "word": "spring",
+    "x": 150,
+    "y": 180
+   },
+   {
+    "word": "bollard",
+    "x": 232,
+    "y": 200
+   },
+   {
+    "word": "fairlead",
+    "x": 192,
+    "y": 148
+   },
+   {
+    "word": "tug",
+    "x": 368,
+    "y": 82
+   },
+   {
+    "word": "mooring",
+    "x": 242,
+    "y": 172
+   },
+   {
+    "word": "slack",
+    "x": 372,
+    "y": 184
+   },
+   {
+    "word": "heave",
+    "x": 244,
+    "y": 92
+   }
+  ]
+ },
+ "docs": {
+  "plan": {
+   "kind": "form",
+   "title": "MOORING PLAN · AFT",
+   "subtitle": "M/V LNG HORIZON · HOUSTON · 15 MAR 2026",
+   "cells": [
+    [
+     "STATION",
+     "Aft · Officer in charge: 2/O J. O'Connor"
+    ],
+    [
+     "SIDE ALONGSIDE",
+     "Port side"
+    ],
+    [
+     "STERN LINES",
+     "3"
+    ],
+    [
+     "BREAST LINE",
+     "1"
+    ],
+    [
+     "SPRINGS",
+     "2"
+    ],
+    [
+     "TUG",
+     "Centre lead aft"
+    ],
+    [
+     "SINGLE UP TO",
+     "1 stern line + 1 spring"
+    ],
+    [
+     "REPORT TO BRIDGE",
+     "All lines let go · Propeller clear"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: letting go",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l11/scene.jpg",
+     "kicker": "Day 2 · 17:20 · Houston",
+     "title": "Departure from the stern",
+     "body": "The pilot is on the bridge. Diego is at the stern with James and Rolando. The orders come on the radio. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l11-01",
+      "l11-02"
+     ],
+     "q": "What is the first order from the bridge?",
+     "opts": [
+      "Single up to one and one",
+      "Let go everything",
+      "Make fast the tug"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l11-03",
+      "l11-04",
+      "l11-05"
+     ],
+     "q": "What is Diego's job?",
+     "opts": [
+      "Watch the lines and say when they're clear of the water",
+      "Call the bridge",
+      "Drive the winch"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l11-06",
+      "l11-07"
+     ],
+     "q": "What does James report to the bridge?",
+     "opts": [
+      "Singled up to one and one",
+      "All lines let go",
+      "The tug is fast"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l11-08",
+      "l11-09"
+     ],
+     "q": "What is the next order?",
+     "opts": [
+      "Let go aft",
+      "Single up",
+      "Stop"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l11-10",
+      "l11-11"
+     ],
+     "q": "Which line comes out of the water first?",
+     "opts": [
+      "The spring",
+      "The stern line",
+      "The breast line"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l11-12",
+      "l11-13"
+     ],
+     "q": "\"Propeller clear\" means…",
+     "opts": [
+      "no lines near the propeller",
+      "the propeller is clean",
+      "the propeller is stopped"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole departure",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "At the stern",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The stern from above. Port side alongside, quay at the bottom."
+    },
+    {
+     "type": "card",
+     "word": "mooring"
+    },
+    {
+     "type": "card",
+     "word": "stern"
+    },
+    {
+     "type": "card",
+     "word": "spring"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-spring",
+     "a": "spring"
+    },
+    {
+     "type": "card",
+     "word": "bollard"
+    },
+    {
+     "type": "card",
+     "word": "fairlead"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-fairlead",
+     "a": "fairlead"
+    },
+    {
+     "type": "card",
+     "word": "tug"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-tug",
+     "a": "tug"
+    },
+    {
+     "type": "card",
+     "word": "slack"
+    },
+    {
+     "type": "card",
+     "word": "heave"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-slack",
+     "a": "slack"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"bita\" in English:",
+     "opts": [
+      "bollard",
+      "bit",
+      "post"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "stern line",
+       "largo de popa"
+      ],
+      [
+       "spring",
+       "esprín"
+      ],
+      [
+       "bollard",
+       "bita"
+      ],
+      [
+       "tug",
+       "remolcador"
+      ],
+      [
+       "heave in",
+       "virar"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Orders and reports",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "At the mooring station",
+     "list": [
+      [
+       "Single up to one and one.",
+       "Quedar con uno y uno.",
+       "p-singleup"
+      ],
+      [
+       "Let go aft.",
+       "Largar a popa.",
+       "p-letgo"
+      ],
+      [
+       "The stern line is clear of the water.",
+       "El largo está fuera del agua.",
+       "p-clear"
+      ],
+      [
+       "All lines let go. Propeller clear.",
+       "Todos los cabos largados. Hélice libre.",
+       "p-allgone"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Order, read back, report",
+     "steps": [
+      [
+       "Order",
+       "Let go aft."
+      ],
+      [
+       "Read back",
+       "Let go aft."
+      ],
+      [
+       "Report",
+       "All lines let go."
+      ]
+     ],
+     "paras": [
+      "On the radio you <b>read back</b> the order: repeat it, the same words. Then the bridge knows you heard it right.",
+      "Reports are short. No <i>is</i>, no <i>are</i>: <b>All lines let go. Propeller clear. Singled up.</b>",
+      "<i>One and one</i> = one stern line and one spring."
+     ],
+     "avoid": "OK, OK! (as the only answer) · The lines are been let go."
+    },
+    {
+     "type": "choice",
+     "q": "The bridge says: \"Let go aft.\" You read back…",
+     "opts": [
+      "Let go aft.",
+      "OK.",
+      "Yes, I go."
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "All the lines are on board and away from the propeller. You report…",
+     "opts": [
+      "All lines let go. Propeller clear.",
+      "Lines are going.",
+      "All lines are let going."
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "The spring is out of the water.",
+     "q": "Tell Rolando.",
+     "a": [
+      "The",
+      "spring",
+      "is",
+      "clear",
+      "of",
+      "the",
+      "water."
+     ],
+     "extra": [
+      "off",
+      "on"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-letgo-not"
+     ],
+     "q": "What can Rolando let go now?",
+     "opts": [
+      "Only the stern line",
+      "Only the spring",
+      "Both lines"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "\"Let go\" is not \"let's go\"",
+     "paras": [
+      "<b>Let go</b> = largar, soltar un cabo. <b>Let's go</b> = vamos.",
+      "On deck this mistake is dangerous: say <b>let go</b> only for lines."
+     ],
+     "list": [
+      [
+       "let go",
+       "largar",
+       "m-letgo"
+      ],
+      [
+       "let's go",
+       "vamos",
+       "m-letsgo"
+      ]
+     ],
+     "avoid": "Let's go the stern line."
+    },
+    {
+     "type": "choice",
+     "q": "Which one is an order for a line?",
+     "opts": [
+      "Let go the stern line.",
+      "Let's go the stern line.",
+      "Go let the stern line."
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Clear words on deck",
+     "paras": [
+      "At a mooring station it's noisy. Say the important word loud and clear: <b>let GO</b>, <b>CLEAR</b>, <b>SLACK</b>, <b>HEAVE</b>.",
+      "<b>heave</b> has a long <i>ee</i>: /hiːv/, like <i>leave</i>."
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-howmany",
+     "q": "How many springs? Write the number.",
+     "accept": [
+      "2",
+      "two"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the mooring plan",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "plan",
+     "q": "Which side is alongside?",
+     "opts": [
+      "Port side",
+      "Starboard side",
+      "The stern"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "plan",
+     "q": "How many lines are there aft in total?",
+     "opts": [
+      "Six",
+      "Three",
+      "Five"
+     ],
+     "a": 0,
+     "why": "3 stern lines + 1 breast line + 2 springs."
+    },
+    {
+     "type": "docfind",
+     "doc": "plan",
+     "q": "Tap where the tug is made fast.",
+     "a": 5
+    },
+    {
+     "type": "doc",
+     "doc": "plan",
+     "q": "Who is in charge aft?",
+     "opts": [
+      "The Second Officer",
+      "The bosun",
+      "The Chief Officer"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "plan",
+     "q": "Single up to…",
+     "opts": [
+      "one stern line and one spring",
+      "one line",
+      "two stern lines"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Read back and report",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Read back, then report",
+     "body": "Listen, say it, check it. On the radio: the same words, slow and clear.",
+     "es": "Por radio: las mismas palabras, lento y claro.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-singleup"
+    },
+    {
+     "type": "shadow",
+     "model": "p-allgone"
+    },
+    {
+     "type": "shadow",
+     "model": "p-roger"
+    },
+    {
+     "type": "role",
+     "cue": "c-rb-single",
+     "task": "Read back the order.",
+     "model": "m-single-rb",
+     "accept": [
+      "Single up to one and one.",
+      "Single up to one and one. Over.",
+      "Single up, one and one.",
+      "Aft, single up to one and one."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-rb-letgo",
+     "task": "Read back the order.",
+     "model": "m-letgo-rb",
+     "accept": [
+      "Let go aft.",
+      "Let go aft. Over.",
+      "Aft, let go aft.",
+      "Let go aft, roger."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-isclear",
+     "task": "Yes, it's out of the water. Tell him.",
+     "model": "m-springclear",
+     "accept": [
+      "The spring is clear of the water.",
+      "Yes, the spring is clear.",
+      "Spring is clear.",
+      "Yes, clear of the water.",
+      "The spring is clear.",
+      "Yes, it's clear."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-report",
+     "task": "All lines are on board, away from the propeller. Report.",
+     "model": "m-report",
+     "accept": [
+      "All lines let go. Propeller clear.",
+      "All lines let go, propeller clear. Over.",
+      "All lines let go.",
+      "All clear aft. Propeller clear.",
+      "All lines let go. Propeller clear. Over."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-tug",
+     "q": "Type what you hear.",
+     "accept": [
+      "tug",
+      "a tug",
+      "the tug"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-bollard",
+     "a": "bollard"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-stern",
+     "a": "stern"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l11-08"
+     ],
+     "q": "Where is the tug?",
+     "opts": [
+      "Standing by",
+      "Made fast forward",
+      "Going away"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The stern line is loose, not tight. It's…",
+     "opts": [
+      "slack",
+      "heave",
+      "clear"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The ship is port side alongside. The quay is on the ___ side.",
+     "opts": [
+      "port",
+      "starboard",
+      "aft"
+     ],
+     "a": 0,
+     "why": "From Lesson 1."
+    },
+    {
+     "type": "build",
+     "q": "Report to the bridge.",
+     "a": [
+      "All",
+      "lines",
+      "let",
+      "go."
+     ],
+     "extra": [
+      "are",
+      "lets"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-show-heave"
+     ],
+     "q": "Rolando asks where we…",
+     "opts": [
+      "heave in",
+      "let go",
+      "make fast"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: remolcador",
+     "accept": [
+      "tug",
+      "a tug",
+      "tugboat",
+      "the tug"
+     ]
+    }
+   ]
+  }
+ ]
+}

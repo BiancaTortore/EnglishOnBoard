@@ -1,0 +1,1035 @@
+{
+ "n": 10,
+ "module": 3,
+ "title": "Tools, PPE & deck work",
+ "place": "Day 2 · 13:00 · Houston, main deck",
+ "goal": "Name your PPE and tools, and say what you're doing now.",
+ "images": {
+  "hero": "img/l10/hero.jpg",
+  "scene": "img/l10/scene.jpg"
+ },
+ "audio": {
+  "l10-01": {
+   "voice": "rolando",
+   "text": "OK, cadet. We sail this afternoon, so we secure the deck for sea.",
+   "es": "Bueno, cadete. Zarpamos esta tarde, así que trincamos la cubierta para navegar."
+  },
+  "l10-02": {
+   "voice": "diego",
+   "text": "Great. What are you doing?",
+   "es": "Genial. ¿Qué estás haciendo?"
+  },
+  "l10-03": {
+   "voice": "rolando",
+   "text": "I'm lashing these drums. When the ship rolls, nothing moves. But first, your PPE. Here, take these gloves.",
+   "es": "Estoy trincando estos tambores. Cuando el buque rola, no se mueve nada. Pero primero, tu equipo de protección. Tomá, estos guantes."
+  },
+  "l10-04": {
+   "voice": "diego",
+   "text": "Thanks. Can I help? I can finish the chipping here, with the hammer.",
+   "es": "Gracias. ¿Te ayudo? Puedo terminar de picar acá, con el martillo."
+  },
+  "l10-05": {
+   "pause": 700,
+   "voice": "rolando",
+   "text": "Stop! Where are your safety glasses?",
+   "es": "¡Pará! ¿Dónde están tus antiparras?"
+  },
+  "l10-06": {
+   "voice": "diego",
+   "text": "Sorry. They're on my helmet.",
+   "es": "Perdón. Están en el casco."
+  },
+  "l10-07": {
+   "voice": "rolando",
+   "text": "On your helmet they don't protect your eyes. Put them on. And your ear defenders. Chipping is very loud.",
+   "es": "En el casco no te protegen los ojos. Ponételas. Y los protectores auditivos. Picar hace mucho ruido."
+  },
+  "l10-08": {
+   "pause": 1000,
+   "voice": "diego",
+   "text": "OK. Glasses on, ear defenders on.",
+   "es": "Listo. Antiparras puestas, protectores puestos."
+  },
+  "l10-09": {
+   "voice": "rolando",
+   "text": "Good. Now help me with the lashing. Can you pass me the spanner, please?",
+   "es": "Bien. Ahora ayudame con la trinca. ¿Me pasás la llave, por favor?"
+  },
+  "l10-10": {
+   "pause": 700,
+   "voice": "diego",
+   "text": "Here you are.",
+   "es": "Acá tenés."
+  },
+  "l10-11": {
+   "pause": 600,
+   "voice": "rolando",
+   "text": "Thanks. Not too tight… Good. Tomorrow we paint the mast. You come with me. For that you need a harness.",
+   "es": "Gracias. No muy fuerte… Bien. Mañana pintamos el palo. Venís conmigo. Para eso necesitás un arnés."
+  },
+  "l10-12": {
+   "voice": "diego",
+   "text": "A harness? And a permit?",
+   "es": "¿Un arnés? ¿Y un permiso?"
+  },
+  "l10-13": {
+   "voice": "rolando",
+   "text": "Yes. A work permit from the Chief Officer. No permit, no work.",
+   "es": "Sí. Un permiso de trabajo de la Primer Oficial. Sin permiso, no se trabaja."
+  },
+  "l10-14": {
+   "voice": "diego",
+   "text": "No permit, no work. Got it.",
+   "es": "Sin permiso, no se trabaja. Entendido."
+  },
+  "w-helmet": {
+   "voice": "model",
+   "text": "helmet"
+  },
+  "x-helmet": {
+   "voice": "model",
+   "text": "Put on your helmet.",
+   "es": "Ponete el casco."
+  },
+  "w-glasses": {
+   "voice": "model",
+   "text": "safety glasses"
+  },
+  "x-glasses": {
+   "voice": "model",
+   "text": "Where are your safety glasses?",
+   "es": "¿Dónde están tus antiparras?"
+  },
+  "w-gloves": {
+   "voice": "model",
+   "text": "gloves"
+  },
+  "x-gloves": {
+   "voice": "model",
+   "text": "Take these gloves.",
+   "es": "Tomá estos guantes."
+  },
+  "w-shoes": {
+   "voice": "model",
+   "text": "safety shoes"
+  },
+  "x-shoes": {
+   "voice": "model",
+   "text": "Safety shoes, always.",
+   "es": "Calzado de seguridad, siempre."
+  },
+  "w-ear": {
+   "voice": "model",
+   "text": "ear defenders"
+  },
+  "x-ear": {
+   "voice": "model",
+   "text": "Chipping is loud. Wear ear defenders.",
+   "es": "Picar hace ruido. Usá protectores auditivos."
+  },
+  "w-harness": {
+   "voice": "model",
+   "text": "harness"
+  },
+  "x-harness": {
+   "voice": "model",
+   "text": "You need a harness on the mast.",
+   "es": "En el palo necesitás un arnés."
+  },
+  "w-hammer": {
+   "voice": "model",
+   "text": "hammer"
+  },
+  "x-hammer": {
+   "voice": "model",
+   "text": "I'm chipping with the hammer.",
+   "es": "Estoy picando con el martillo."
+  },
+  "w-spanner": {
+   "voice": "model",
+   "text": "spanner"
+  },
+  "x-spanner": {
+   "voice": "model",
+   "text": "Can you pass me the spanner?",
+   "es": "¿Me pasás la llave?"
+  },
+  "p-whatdoing": {
+   "voice": "model",
+   "text": "What are you doing?",
+   "es": "¿Qué estás haciendo?"
+  },
+  "p-lashing": {
+   "voice": "model",
+   "text": "I'm lashing the drums.",
+   "es": "Estoy trincando los tambores."
+  },
+  "p-puton": {
+   "voice": "model",
+   "text": "Put on your safety glasses.",
+   "es": "Ponete las antiparras."
+  },
+  "p-pass": {
+   "voice": "model",
+   "text": "Can you pass me the spanner, please?",
+   "es": "¿Me pasás la llave, por favor?"
+  },
+  "p-nopermit": {
+   "voice": "model",
+   "text": "No permit, no work.",
+   "es": "Sin permiso, no se trabaja."
+  },
+  "m-chipping": {
+   "voice": "model",
+   "text": "I'm chipping.",
+   "es": "Estoy picando."
+  },
+  "m-painting": {
+   "voice": "model",
+   "text": "I'm painting the rail.",
+   "es": "Estoy pintando la baranda."
+  },
+  "m-hammer": {
+   "voice": "model",
+   "text": "Can you pass me the hammer, please?",
+   "es": "¿Me pasás el martillo, por favor?"
+  },
+  "m-ing": {
+   "voice": "model",
+   "text": "chipping, painting, lashing",
+   "es": "picando, pintando, trincando"
+  },
+  "m-permit": {
+   "voice": "model",
+   "text": "Do I need a harness and a permit?",
+   "es": "¿Necesito un arnés y un permiso?"
+  },
+  "c-show-helmet": {
+   "voice": "rolando",
+   "text": "Show me the helmet."
+  },
+  "c-show-glasses": {
+   "voice": "rolando",
+   "text": "Where are the safety glasses?"
+  },
+  "c-show-ear": {
+   "voice": "rolando",
+   "text": "Show me the ear defenders."
+  },
+  "c-show-harness": {
+   "voice": "tanya",
+   "text": "Where's the harness?"
+  },
+  "c-show-hammer": {
+   "voice": "rolando",
+   "text": "Show me the hammer."
+  },
+  "c-show-spanner": {
+   "voice": "james",
+   "text": "Where's the spanner?"
+  },
+  "c-whatdoing": {
+   "voice": "tanya",
+   "text": "Diego, what are you doing?"
+  },
+  "c-whatdoing2": {
+   "voice": "james",
+   "text": "Hey Diego, what are you doing?"
+  },
+  "c-needtool": {
+   "voice": "rolando",
+   "text": "You need something, cadet?"
+  },
+  "c-goaloft": {
+   "voice": "rolando",
+   "text": "Come on, we go up the mast now."
+  },
+  "c-doing-other": {
+   "voice": "tanya",
+   "text": "I'm checking the work permits."
+  },
+  "c-doing-other2": {
+   "voice": "rolando",
+   "text": "We're painting the mast tomorrow."
+  },
+  "c-permitno": {
+   "voice": "tanya",
+   "text": "Your permit number is four one two."
+  }
+ },
+ "dialogue": [
+  "l10-01",
+  "l10-02",
+  "l10-03",
+  "l10-04",
+  "l10-05",
+  "l10-06",
+  "l10-07",
+  "l10-08",
+  "l10-09",
+  "l10-10",
+  "l10-11",
+  "l10-12",
+  "l10-13",
+  "l10-14"
+ ],
+ "words": {
+  "helmet": {
+   "en": "helmet",
+   "ipa": "/ˈhelmɪt/",
+   "es": "casco",
+   "audio": "w-helmet",
+   "ex": "x-helmet"
+  },
+  "glasses": {
+   "en": "safety glasses",
+   "ipa": "/ˈseɪfti ˌɡlɑːsɪz/",
+   "es": "antiparras, lentes de seguridad",
+   "audio": "w-glasses",
+   "ex": "x-glasses"
+  },
+  "gloves": {
+   "en": "gloves",
+   "ipa": "/ɡlʌvz/",
+   "es": "guantes",
+   "audio": "w-gloves",
+   "ex": "x-gloves"
+  },
+  "shoes": {
+   "en": "safety shoes",
+   "ipa": "/ˈseɪfti ʃuːz/",
+   "es": "calzado de seguridad, botines",
+   "audio": "w-shoes",
+   "ex": "x-shoes"
+  },
+  "ear": {
+   "en": "ear defenders",
+   "ipa": "/ˈɪə dɪˌfendəz/",
+   "es": "protectores auditivos",
+   "audio": "w-ear",
+   "ex": "x-ear"
+  },
+  "harness": {
+   "en": "harness",
+   "ipa": "/ˈhɑːnɪs/",
+   "es": "arnés",
+   "audio": "w-harness",
+   "ex": "x-harness"
+  },
+  "hammer": {
+   "en": "hammer",
+   "ipa": "/ˈhæmə/",
+   "es": "martillo",
+   "audio": "w-hammer",
+   "ex": "x-hammer"
+  },
+  "spanner": {
+   "en": "spanner",
+   "ipa": "/ˈspænə/",
+   "es": "llave (de boca)",
+   "audio": "w-spanner",
+   "ex": "x-spanner"
+  }
+ },
+ "plate": {
+  "svg": "img/l10/plate.svg",
+  "pins": [
+   {
+    "word": "helmet",
+    "x": 140,
+    "y": 12
+   },
+   {
+    "word": "glasses",
+    "x": 140,
+    "y": 43
+   },
+   {
+    "word": "ear",
+    "x": 172,
+    "y": 49
+   },
+   {
+    "word": "harness",
+    "x": 160,
+    "y": 95
+   },
+   {
+    "word": "gloves",
+    "x": 182,
+    "y": 130
+   },
+   {
+    "word": "shoes",
+    "x": 170,
+    "y": 210
+   },
+   {
+    "word": "hammer",
+    "x": 336,
+    "y": 214
+   },
+   {
+    "word": "spanner",
+    "x": 340,
+    "y": 140
+   }
+  ]
+ },
+ "docs": {
+  "permit": {
+   "kind": "form",
+   "title": "PERMIT TO WORK",
+   "subtitle": "M/V LNG HORIZON · No. 0412",
+   "cells": [
+    [
+     "TYPE OF WORK",
+     "Work aloft · painting"
+    ],
+    [
+     "LOCATION",
+     "Foremast"
+    ],
+    [
+     "DATE · TIME",
+     "16 MAR 2026 · 0800–1200"
+    ],
+    [
+     "WORKERS",
+     "Bosun R. Reyes · Cadet D. Martínez"
+    ],
+    [
+     "PPE",
+     "Helmet, safety glasses, gloves, safety shoes, harness"
+    ],
+    [
+     "WEATHER LIMIT",
+     "No work if wind is over 25 knots"
+    ],
+    [
+     "ISSUED BY",
+     "Chief Officer T. Williams"
+    ],
+    [
+     "CLOSED",
+     "Bosun signs when work is finished"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: securing the deck",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l10/scene.jpg",
+     "kicker": "Day 2 · 13:00 · Houston",
+     "title": "Deck work with the bosun",
+     "body": "After the drill, Rolando gets the deck ready for sea. Diego wants to help. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l10-01",
+      "l10-02",
+      "l10-03"
+     ],
+     "q": "What is Rolando doing?",
+     "opts": [
+      "Lashing the drums",
+      "Painting the mast",
+      "Chipping rust"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l10-04"
+     ],
+     "q": "What does Diego want to do?",
+     "opts": [
+      "Finish the chipping with the hammer",
+      "Paint the deck",
+      "Go up the mast"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l10-05",
+      "l10-06"
+     ],
+     "q": "Where are Diego's safety glasses?",
+     "opts": [
+      "On his helmet",
+      "On his eyes",
+      "In his cabin"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l10-07",
+      "l10-08"
+     ],
+     "q": "Why does Diego need ear defenders?",
+     "opts": [
+      "Chipping is very loud",
+      "The engine is on",
+      "It's very cold"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l10-09",
+      "l10-10"
+     ],
+     "q": "What does Rolando ask for?",
+     "opts": [
+      "The spanner",
+      "The hammer",
+      "The gloves"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l10-11",
+      "l10-12",
+      "l10-13",
+      "l10-14"
+     ],
+     "q": "To paint the mast tomorrow, Diego needs…",
+     "opts": [
+      "a harness and a work permit",
+      "only a helmet",
+      "nothing"
+     ],
+     "a": 0,
+     "why": "\"No permit, no work.\""
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole scene",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "PPE and tools",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "Diego, ready for deck work, and the tools on the deck."
+    },
+    {
+     "type": "card",
+     "word": "helmet"
+    },
+    {
+     "type": "card",
+     "word": "glasses"
+    },
+    {
+     "type": "card",
+     "word": "gloves"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-glasses",
+     "a": "glasses"
+    },
+    {
+     "type": "card",
+     "word": "shoes"
+    },
+    {
+     "type": "card",
+     "word": "ear"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-ear",
+     "a": "ear"
+    },
+    {
+     "type": "card",
+     "word": "harness"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-harness",
+     "a": "harness"
+    },
+    {
+     "type": "card",
+     "word": "hammer"
+    },
+    {
+     "type": "card",
+     "word": "spanner"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-spanner",
+     "a": "spanner"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"antiparras\" in English:",
+     "opts": [
+      "safety glasses",
+      "security glasses",
+      "safety lenses"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "helmet",
+       "casco"
+      ],
+      [
+       "gloves",
+       "guantes"
+      ],
+      [
+       "harness",
+       "arnés"
+      ],
+      [
+       "hammer",
+       "martillo"
+      ],
+      [
+       "spanner",
+       "llave"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "What are you doing?",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Work talk",
+     "list": [
+      [
+       "What are you doing?",
+       "¿Qué estás haciendo?",
+       "p-whatdoing"
+      ],
+      [
+       "I'm lashing the drums.",
+       "Estoy trincando los tambores.",
+       "p-lashing"
+      ],
+      [
+       "Put on your safety glasses.",
+       "Ponete las antiparras.",
+       "p-puton"
+      ],
+      [
+       "Can you pass me the spanner, please?",
+       "¿Me pasás la llave, por favor?",
+       "p-pass"
+      ],
+      [
+       "No permit, no work.",
+       "Sin permiso, no se trabaja.",
+       "p-nopermit"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Now: am / is / are + -ing",
+     "steps": [
+      [
+       "I",
+       "I'm chipping."
+      ],
+      [
+       "You / we / they",
+       "We're lashing the drums."
+      ],
+      [
+       "He / she / it",
+       "She's checking the permits."
+      ],
+      [
+       "Question",
+       "What are you doing?"
+      ]
+     ],
+     "paras": [
+      "For what is happening <b>now</b>, at this moment: <b>am / is / are</b> + verb<b>-ing</b>.",
+      "Short answers on deck are fine: <i>Chipping.</i> <i>Lashing the drums.</i>"
+     ],
+     "avoid": "I chipping. · I am chip. · What you are doing?"
+    },
+    {
+     "type": "choice",
+     "q": "Tanya asks what you're doing. You're painting. You say…",
+     "opts": [
+      "I'm painting.",
+      "I paint.",
+      "I painting."
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Rolando ___ lashing the drums.",
+     "opts": [
+      "is",
+      "are",
+      "am"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "Rolando sees you with the hammer.",
+     "q": "Tell him what you're doing.",
+     "a": [
+      "I'm",
+      "chipping",
+      "the",
+      "rust."
+     ],
+     "extra": [
+      "chip",
+      "am"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-doing-other",
+     "q": "What is Tanya checking? Write one word.",
+     "accept": [
+      "permits",
+      "the permits",
+      "work permits",
+      "the work permits"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "\"¿Qué hacés?\" is not \"What do you do?\"",
+     "paras": [
+      "<b>What do you do?</b> asks about your job: <i>I'm a deck cadet.</i>",
+      "<b>What are you doing?</b> asks about now: <i>I'm lashing the drums.</i>",
+      "On deck, people almost always mean <b>now</b>."
+     ],
+     "avoid": "What do you do? (when you mean right now)"
+    },
+    {
+     "type": "choice",
+     "q": "Rolando sees you on the mast and wants to know your task now. He asks…",
+     "opts": [
+      "What are you doing?",
+      "What do you do?",
+      "What you do?"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "British or American?",
+     "title": "Spanner or wrench?",
+     "paras": [
+      "British English says <b>spanner</b>, American English says <b>wrench</b>. On board you'll hear both. They're the same tool.",
+      "<b>Safety glasses</b> are also called <i>goggles</i> when they close around the eyes."
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "The -ing ending",
+     "paras": [
+      "<i>-ing</i> is one sound: /ɪŋ/. The tongue goes back, like the end of <i>sing</i>. No hard <i>g</i> after it: not <i>lashin-g</i>.",
+      "In fast talk it often sounds like <i>-in</i>: <i>chippin', lashin'</i>. You'll hear that from Rolando."
+     ],
+     "list": [
+      [
+       "chipping, painting, lashing",
+       "picando, pintando, trincando",
+       "m-ing"
+      ]
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "Which one is correct?",
+     "opts": [
+      "They're on my helmet.",
+      "They is on my helmet.",
+      "It are on my helmet."
+     ],
+     "a": 0,
+     "why": "Glasses are plural: they ARE."
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the work permit",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "permit",
+     "q": "What is the work?",
+     "opts": [
+      "Painting the foremast",
+      "Chipping the deck",
+      "Lashing drums"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "permit",
+     "q": "When can they work?",
+     "opts": [
+      "From 0800 to 1200",
+      "All day",
+      "From 1200 to 1600"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "permit",
+     "q": "Tap the PPE they need.",
+     "a": 4
+    },
+    {
+     "type": "doc",
+     "doc": "permit",
+     "q": "The wind is 30 knots. Can they work?",
+     "opts": [
+      "No",
+      "Yes",
+      "Only with a harness"
+     ],
+     "a": 0,
+     "why": "No work if wind is over 25 knots."
+    },
+    {
+     "type": "doc",
+     "doc": "permit",
+     "q": "Who gives the permit?",
+     "opts": [
+      "The Chief Officer",
+      "The bosun",
+      "The Captain"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Talk about the work",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Say what you're doing",
+     "body": "Listen, say it, check it. The verb is the strong word: I'm CHIPping.",
+     "es": "El verbo es la palabra fuerte.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-whatdoing"
+    },
+    {
+     "type": "shadow",
+     "model": "p-pass"
+    },
+    {
+     "type": "shadow",
+     "model": "p-nopermit"
+    },
+    {
+     "type": "role",
+     "cue": "c-whatdoing",
+     "task": "You're chipping. Tell her.",
+     "model": "m-chipping",
+     "accept": [
+      "I'm chipping.",
+      "Chipping.",
+      "I am chipping.",
+      "I'm chipping the rust.",
+      "I'm chipping rust."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-whatdoing2",
+     "task": "You're painting the rail. Tell him.",
+     "model": "m-painting",
+     "accept": [
+      "I'm painting the rail.",
+      "Painting the rail.",
+      "I am painting the rail.",
+      "I'm painting."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-needtool",
+     "task": "Ask him for the hammer. Be polite.",
+     "model": "m-hammer",
+     "accept": [
+      "Can you pass me the hammer, please?",
+      "Could you pass me the hammer, please?",
+      "The hammer, please.",
+      "Can you pass me the hammer?",
+      "Could you pass the hammer, please?"
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-goaloft",
+     "task": "Ask if you need a harness and a permit.",
+     "model": "m-permit",
+     "accept": [
+      "Do I need a harness and a permit?",
+      "Do I need a harness?",
+      "A harness and a permit?",
+      "Do we need a harness and a permit?",
+      "Do I need a permit?"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-gloves",
+     "q": "Type what you hear.",
+     "accept": [
+      "gloves"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-helmet",
+     "a": "helmet"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-hammer",
+     "a": "hammer"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-doing-other2"
+     ],
+     "q": "What are they doing tomorrow?",
+     "opts": [
+      "Painting the mast",
+      "Painting the deck",
+      "Lashing the drums"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Where are your safety glasses? On my helmet. → They're ___ my helmet.",
+     "opts": [
+      "on",
+      "in",
+      "under"
+     ],
+     "a": 0,
+     "why": "From Lesson 7."
+    },
+    {
+     "type": "choice",
+     "q": "You need the spanner. Rolando has it. You say…",
+     "opts": [
+      "Can you pass me the spanner, please?",
+      "Give me spanner.",
+      "I want the spanner."
+     ],
+     "a": 0,
+     "why": "From Lesson 8: no \"I want\"."
+    },
+    {
+     "type": "build",
+     "q": "Ask Diego what he's doing.",
+     "a": [
+      "What",
+      "are",
+      "you",
+      "doing?"
+     ],
+     "extra": [
+      "do",
+      "is"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-permitno",
+     "q": "Write the permit number.",
+     "accept": [
+      "412",
+      "four one two",
+      "0412"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: arnés",
+     "accept": [
+      "harness",
+      "a harness"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The bow from above in fog, with the windlass, the chain leading two o'clock, the anchor holding and the fog bell">
+  <!-- Lesson 12 plate: the bow seen from above, at anchor in fog. A clock is laid over the bow: 12 = straight ahead,
+       3 = starboard beam, 9 = port beam. The starboard chain leads two o'clock to the anchor, which is holding (dug in);
+       the port anchor is still in its pocket. Windlass with brake wheels, fog bell on the foremast.
+       Colours come from app.css (.p-*). Generated with a small script. -->
+  <rect class="p-water" x="0" y="0" width="400" height="240"/>
+  <circle cx="200" cy="112" r="92" fill="none" class="p-stroke" stroke-width="1.2" stroke-dasharray="3 4" opacity=".6"/><circle cx="246.0" cy="32.3" r="2" class="p-ink" opacity=".6"/><text x="290.1" y="64.0" text-anchor="middle" class="p-label">2</text><circle cx="279.7" cy="66.0" r="2" class="p-ink" opacity=".6"/><text x="304.0" y="116.0" text-anchor="middle" class="p-label">3</text><circle cx="292.0" cy="112.0" r="2" class="p-ink" opacity=".6"/><circle cx="279.7" cy="158.0" r="2" class="p-ink" opacity=".6"/><circle cx="246.0" cy="191.7" r="2" class="p-ink" opacity=".6"/><text x="200.0" y="220.0" text-anchor="middle" class="p-label">6</text><circle cx="200.0" cy="204.0" r="2" class="p-ink" opacity=".6"/><circle cx="154.0" cy="191.7" r="2" class="p-ink" opacity=".6"/><circle cx="120.3" cy="158.0" r="2" class="p-ink" opacity=".6"/><text x="96.0" y="116.0" text-anchor="middle" class="p-label">9</text><circle cx="108.0" cy="112.0" r="2" class="p-ink" opacity=".6"/><text x="109.9" y="64.0" text-anchor="middle" class="p-label">10</text><circle cx="120.3" cy="66.0" r="2" class="p-ink" opacity=".6"/><circle cx="154.0" cy="32.3" r="2" class="p-ink" opacity=".6"/><text x="200.0" y="12.0" text-anchor="middle" class="p-label">12</text><circle cx="200.0" cy="20.0" r="2" class="p-ink" opacity=".6"/>
+  <!-- BOW (pointing up) -->
+  <path d="M120 240 L120 150 Q122 92 200 26 Q278 92 280 150 L280 240 Z" class="p-hull"/>
+  <path d="M130 240 L130 152 Q132 100 200 40 Q268 100 270 152 L270 240 Z" class="p-deck"/>
+  <!-- port anchor still stowed in the hawse pocket -->
+  <g transform="translate(180 64) rotate(-30)"><path d="M0 -7 V8 M-7 3 Q0 12 7 3" fill="none" style="stroke:#8A97A4" stroke-width="2.6" stroke-linecap="round"/></g>
+  <!-- WINDLASS: two gypsies, brake wheels outboard -->
+  <g>
+    <rect x="160" y="118" width="80" height="18" rx="4" class="p-white"/>
+    <circle cx="180" cy="127" r="11" class="p-hull" opacity=".7"/><circle cx="220" cy="127" r="11" class="p-hull" opacity=".7"/>
+    <circle cx="148" cy="127" r="9" fill="none" style="stroke:var(--antifoul)" stroke-width="3"/>
+    <circle cx="252" cy="127" r="9" fill="none" style="stroke:var(--antifoul)" stroke-width="3"/>
+  </g>
+  <!-- chain on deck: gypsy to hawse -->
+  <line x1="220" y1="116" x2="214" y2="62" style="stroke:#8A97A4" stroke-width="3.2" stroke-dasharray="5 2"/>
+  <line x1="214" y1="62" x2="329.9" y2="37.0" style="stroke:#8A97A4" stroke-width="3.2" stroke-dasharray="5 2"/><line x1="258.0" y1="52.5" x2="267.3" y2="50.5" style="stroke:#fff" stroke-width="4.2"/><g transform="translate(329.9 37.0) rotate(258)">
+  <path d="M0 -10 V12 M-10 4 Q0 18 10 4 M-5 -6 H5" fill="none" style="stroke:#5E6B78" stroke-width="3.4" stroke-linecap="round"/><circle cy="-12" r="3" fill="none" style="stroke:#5E6B78" stroke-width="2.2"/>
+  <path d="M-14 14 Q0 26 14 14" fill="none" style="stroke:#B98A5A" stroke-width="2.4" stroke-dasharray="3 3" opacity=".9"/></g>
+  <!-- FOREMAST with the fog BELL -->
+  <circle cx="200" cy="178" r="6" class="p-hull"/>
+  <path d="M190 206 Q190 192 200 190 Q210 192 210 206 Z" class="p-gold"/><rect x="186" y="205" width="28" height="3" rx="1.5" class="p-gold"/>
+  <!-- FOG banks -->
+  <g style="fill:#fff">
+    <ellipse cx="70" cy="40" rx="90" ry="20" opacity=".35"/><ellipse cx="330" cy="150" rx="90" ry="22" opacity=".35"/>
+    <ellipse cx="60" cy="190" rx="80" ry="18" opacity=".3"/><ellipse cx="360" cy="40" rx="60" ry="14" opacity=".25"/>
+  </g>
+</svg>

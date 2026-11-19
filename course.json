@@ -17,9 +17,9 @@
       {"n": 9, "title": "Alarms & emergency instructions", "ready": true}
     ]},
     {"n": 3, "title": "Deck work", "where": "Houston · Galveston", "lessons": [
-      {"n": 10, "title": "Tools, PPE & deck work"},
-      {"n": 11, "title": "Mooring & letting go"},
-      {"n": 12, "title": "Anchoring"}
+      {"n": 10, "title": "Tools, PPE & deck work", "ready": true},
+      {"n": 11, "title": "Mooring & letting go", "ready": true},
+      {"n": 12, "title": "Anchoring", "ready": true}
     ]},
     {"n": 4, "title": "On the bridge", "where": "Gulf of Mexico", "lessons": [
       {"n": 13, "title": "Bridge equipment"},

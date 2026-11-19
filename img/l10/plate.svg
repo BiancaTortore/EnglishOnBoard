@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Diego in full PPE, and a hammer and a spanner on the deck">
+  <!-- Lesson 10 plate: Diego dressed for deck work (helmet, safety glasses, ear defenders, harness, gloves, safety shoes)
+       and, on the deck to the right, a lashed drum, a chipping hammer and a spanner. Colours come from app.css (.p-*). -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <path class="p-deck" d="M0 206 H400 V240 H0 Z"/>
+  <line class="p-line" x1="0" y1="206" x2="400" y2="206" stroke-width="1" opacity=".5"/>
+
+  <!-- DIEGO -->
+  <g transform="translate(140 0)">
+    <!-- legs -->
+    <path d="M-22 128 L-26 198 H-8 L-2 140 L4 140 L10 198 H28 L24 128 Z" class="p-blue"/>
+    <!-- safety shoes -->
+    <path d="M-30 196 H-6 Q-4 206 -8 207 H-32 Q-36 202 -30 196 Z" class="p-hull"/>
+    <path d="M8 196 H32 Q38 202 34 207 H10 Q6 206 8 196 Z" class="p-hull"/>
+    <rect x="-33" y="203" width="10" height="4" rx="1" class="p-gold"/><rect x="25" y="203" width="10" height="4" rx="1" class="p-gold"/>
+    <!-- torso -->
+    <path d="M-26 70 Q0 62 26 70 L28 132 H-28 Z" class="p-blue"/>
+    <!-- arms -->
+    <path d="M-26 72 L-40 118 L-30 122 L-18 84 Z" class="p-blue"/>
+    <path d="M26 72 L40 118 L30 122 L18 84 Z" class="p-blue"/>
+    <!-- gloves -->
+    <path d="M-42 116 Q-46 132 -36 134 Q-28 134 -28 122 Z" class="p-gold"/>
+    <path d="M42 116 Q46 132 36 134 Q28 134 28 122 Z" class="p-gold"/>
+    <!-- harness: shoulder straps, chest strap, waist belt, leg loops, D-ring -->
+    <g class="p-red">
+      <path d="M-16 66 L-10 66 L-6 126 L-12 126 Z"/><path d="M16 66 L10 66 L6 126 L12 126 Z"/>
+      <rect x="-20" y="90" width="40" height="5"/>
+      <rect x="-28" y="120" width="56" height="7"/>
+      <path d="M-24 132 Q-12 142 -2 134 L-2 140 Q-12 148 -24 138 Z"/><path d="M24 132 Q12 142 2 134 L2 140 Q12 148 24 138 Z"/>
+    </g>
+    <circle cx="0" cy="80" r="4" fill="none" style="stroke:var(--gold)" stroke-width="2"/>
+    <!-- neck and head -->
+    <rect x="-6" y="56" width="12" height="10" style="fill:#C99A74"/>
+    <ellipse cx="0" cy="44" rx="15" ry="17" style="fill:#C99A74"/>
+    <!-- safety glasses -->
+    <rect x="-15" y="38" width="30" height="9" rx="4" class="p-hull" opacity=".85"/>
+    <rect x="-12" y="40" width="9" height="3" rx="1.5" style="fill:#fff" opacity=".5"/>
+    <!-- helmet -->
+    <path d="M-18 34 Q-18 14 0 13 Q18 14 18 34 Z" class="p-super" style="stroke:var(--hull)" stroke-width="1.4"/>
+    <rect x="-22" y="32" width="44" height="5" rx="2" class="p-super" style="stroke:var(--hull)" stroke-width="1.2"/>
+    <!-- ear defenders (helmet-mounted) -->
+    <path d="M-19 36 L-22 44 M19 36 L22 44" style="stroke:var(--hull)" stroke-width="2"/>
+    <ellipse cx="-20" cy="49" rx="5" ry="7" class="p-orange"/>
+    <ellipse cx="20" cy="49" rx="5" ry="7" class="p-orange"/>
+  </g>
+
+  <!-- A LASHED DRUM -->
+  <rect x="236" y="140" width="40" height="66" rx="3" class="p-blue" opacity=".8"/>
+  <g class="p-super" opacity=".5"><rect x="236" y="158" width="40" height="2"/><rect x="236" y="186" width="40" height="2"/></g>
+  <path d="M230 206 L256 150 L282 206" fill="none" style="stroke:#8A97A4" stroke-width="2.2"/>
+  <circle cx="256" cy="150" r="3" style="fill:#8A97A4"/>
+
+  <!-- CHIPPING HAMMER on the deck -->
+  <g transform="translate(300 200) rotate(-8)">
+    <rect x="0" y="-3" width="56" height="6" rx="2" style="fill:#B98A5A"/>
+    <path d="M52 -14 L66 -14 L70 -8 L66 -2 H62 V2 H66 L70 8 L66 14 H52 Z" style="fill:#5E6B78"/>
+  </g>
+  <!-- SPANNER on the deck -->
+  <g transform="translate(306 150) rotate(-4)">
+    <rect x="10" y="-3" width="50" height="6" rx="3" style="fill:#8A97A4"/>
+    <path d="M4 -9 A10 10 0 1 0 4 9 L10 4 V-4 Z M0 -4 H6 V4 H0 Z" style="fill:#8A97A4" fill-rule="evenodd"/>
+    <circle cx="64" cy="0" r="8" style="fill:#8A97A4"/><circle cx="64" cy="0" r="4" class="p-soft"/>
+  </g>
+</svg>
