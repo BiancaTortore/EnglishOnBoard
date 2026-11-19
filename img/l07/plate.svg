@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Diego's cabin: bunk, wardrobe, porthole, door and corridor">
+  <!-- Lesson 7 plate: Diego's cabin seen from inside. Colours come from app.css (.p-*).
+       Left: the door, open, with the muster card on its back; through it, the corridor with the green escape-route sign.
+       Middle: bunk with the orange immersion-suit bag under it. Back wall: porthole over the desk. Right: open wardrobe with the lifejacket on the top shelf. -->
+  <rect class="p-soft" x="0" y="0" width="400" height="230"/>
+  <!-- floor -->
+  <path class="p-quay" d="M0 196 H400 V230 H0 Z"/>
+  <line class="p-line" x1="0" y1="196" x2="400" y2="196" stroke-width="1" opacity=".5"/>
+
+  <!-- DOORWAY to the corridor -->
+  <rect x="14" y="44" width="54" height="152" class="p-hull" opacity=".9"/>
+  <!-- corridor: far wall and floor -->
+  <rect x="20" y="58" width="42" height="120" class="p-super" opacity=".18"/>
+  <path d="M14 196 L26 178 H56 L68 196 Z" class="p-super" opacity=".12"/>
+  <!-- stairs at the end of the corridor -->
+  <g class="p-super" opacity=".35">
+    <rect x="30" y="160" width="22" height="4"/><rect x="33" y="152" width="19" height="4"/>
+    <rect x="36" y="144" width="16" height="4"/><rect x="39" y="136" width="13" height="4"/>
+  </g>
+  <!-- green escape-route sign: running figure + arrow -->
+  <rect x="24" y="72" width="34" height="18" rx="2" style="fill:#1E8A4C"/>
+  <g style="stroke:#fff;fill:none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="33" cy="76" r="1.6" style="fill:#fff;stroke:none"/>
+    <path d="M33 79 L31.5 83.5 L28.5 86 M31.5 83.5 L34.5 86.5 M32.6 80.5 L29.5 81 M33 80.5 L36 82"/>
+    <path d="M41 81 H53 M49 77.5 L53 81 L49 84.5"/>
+  </g>
+  <rect x="12" y="42" width="58" height="156" fill="none" class="p-stroke" stroke-width="2"/>
+
+  <!-- DOOR LEAF, open into the cabin, showing its back -->
+  <path d="M70 42 L104 52 L104 190 L70 198 Z" class="p-white"/>
+  <circle cx="99" cy="124" r="2.4" class="p-ink"/>
+  <!-- muster card on the back of the door -->
+  <path d="M78 76 L96 81 L96 106 L78 102 Z" class="p-super" style="stroke:var(--antifoul)" stroke-width="1.4"/>
+  <g style="fill:var(--antifoul)" opacity=".75">
+    <path d="M81 82 L93 85.4 L93 87.4 L81 84 Z"/>
+  </g>
+  <g class="p-ink" opacity=".35">
+    <path d="M81 88 L93 91.3 L93 92.6 L81 89.3 Z"/><path d="M81 92.5 L91 95.3 L91 96.6 L81 93.8 Z"/><path d="M81 97 L93 100.3 L93 101.6 L81 98.3 Z"/>
+  </g>
+
+  <!-- PORTHOLE on the back wall -->
+  <circle cx="246" cy="66" r="21" class="p-hull"/>
+  <circle cx="246" cy="66" r="15.5" class="p-water"/>
+  <!-- quay and a crane, far away -->
+  <path d="M231 70 H261 V78 Q246 84 231 78 Z" class="p-quay"/>
+  <path d="M250 70 V55 L240 52 M250 55 H258" class="p-stroke" stroke-width="1.2" opacity=".7"/>
+  <g class="p-gold"><circle cx="246" cy="44" r="1.6"/><circle cx="268" cy="66" r="1.6"/><circle cx="246" cy="88" r="1.6"/><circle cx="224" cy="66" r="1.6"/></g>
+
+  <!-- DESK under the porthole -->
+  <rect x="220" y="126" width="62" height="6" class="p-white"/>
+  <rect x="224" y="132" width="6" height="64" class="p-white"/>
+  <rect x="254" y="132" width="24" height="34" class="p-white"/>
+  <line class="p-line" x1="257" y1="149" x2="275" y2="149" stroke-width="1"/>
+  <!-- a cap and a mug on the desk -->
+  <rect x="262" y="116" width="9" height="10" rx="1.5" class="p-blue"/>
+
+  <!-- BUNK -->
+  <rect x="112" y="128" width="98" height="10" rx="2" class="p-white"/>
+  <rect x="112" y="118" width="98" height="10" rx="3" class="p-super" style="stroke:var(--ink)" stroke-width="1"/>
+  <rect x="142" y="114" width="68" height="14" rx="4" class="p-blue"/>
+  <rect x="116" y="110" width="26" height="12" rx="5" class="p-super" style="stroke:var(--ink)" stroke-width="1"/>
+  <rect x="108" y="96" width="6" height="100" class="p-white"/>
+  <rect x="208" y="112" width="6" height="84" class="p-white"/>
+  <rect x="112" y="138" width="98" height="4" class="p-ink" opacity=".25"/>
+  <!-- IMMERSION SUIT bag under the bunk -->
+  <rect x="128" y="164" width="58" height="30" rx="6" class="p-orange"/>
+  <path d="M134 170 H180" stroke="#fff" stroke-width="1.6" opacity=".7"/>
+  <rect x="152" y="160" width="10" height="6" rx="2" class="p-orange"/>
+
+  <!-- WARDROBE, door open -->
+  <rect x="298" y="34" width="78" height="162" class="p-white"/>
+  <rect x="304" y="40" width="66" height="150" class="p-ink" opacity=".12"/>
+  <!-- top shelf with the lifejacket -->
+  <rect x="304" y="74" width="66" height="4" class="p-white"/>
+  <path d="M312 74 L314 52 Q322 46 330 52 L332 74 Z" class="p-orange"/>
+  <path d="M340 74 L342 52 Q350 46 358 52 L360 74 Z" class="p-orange"/>
+  <path d="M330 52 Q336 60 342 52" class="p-orange"/>
+  <rect x="312" y="64" width="48" height="3" style="fill:#fff" opacity=".75"/>
+  <!-- hanging rail and a navy boiler suit -->
+  <line class="p-line" x1="306" y1="90" x2="368" y2="90" stroke-width="2"/>
+  <path d="M322 90 L314 100 L316 146 L324 146 L326 118 L330 118 L332 146 L340 146 L342 100 L334 90 Z" class="p-blue"/>
+  <!-- open wardrobe door -->
+  <path d="M376 34 L396 40 L396 190 L376 196 Z" class="p-white"/>
+  <circle cx="380" cy="116" r="2" class="p-ink"/>
+</svg>

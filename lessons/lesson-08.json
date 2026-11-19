@@ -1,0 +1,1044 @@
+{
+ "n": 8,
+ "module": 2,
+ "title": "Life on board",
+ "place": "Day 1 · 19:00 · Houston, mess room",
+ "goal": "Say times the way they're said on board and ask for things at the table.",
+ "images": {
+  "hero": "img/l08/hero.jpg",
+  "scene": "img/l08/scene.jpg"
+ },
+ "audio": {
+  "l08-01": {
+   "voice": "mario",
+   "text": "Ah, the new cadet! Come, come. Sit down.",
+   "es": "¡Ah, el cadete nuevo! Vení, vení. Sentate."
+  },
+  "l08-02": {
+   "voice": "diego",
+   "text": "Good evening. Sorry, am I late?",
+   "es": "Buenas noches. Perdón, ¿llego tarde?"
+  },
+  "l08-03": {
+   "voice": "mario",
+   "text": "A little! Dinner is from seventeen thirty to eighteen fifteen. But I kept a plate for you. Chicken adobo.",
+   "es": "¡Un poco! La cena es de diecisiete treinta a dieciocho quince. Pero te guardé un plato. Pollo adobo."
+  },
+  "l08-04": {
+   "voice": "diego",
+   "text": "Thank you very much. What time is breakfast?",
+   "es": "Muchas gracias. ¿A qué hora es el desayuno?"
+  },
+  "l08-05": {
+   "voice": "mario",
+   "text": "Breakfast is from zero seven thirty to zero eight fifteen.",
+   "es": "El desayuno es de cero siete treinta a cero ocho quince."
+  },
+  "l08-06": {
+   "voice": "diego",
+   "text": "Seven and a half?",
+   "es": "¿Siete y media?"
+  },
+  "l08-07": {
+   "voice": "rolando",
+   "text": "Zero seven thirty, cadet! On board we use the twenty-four-hour clock.",
+   "es": "¡Cero siete treinta, cadete! A bordo usamos el reloj de veinticuatro horas."
+  },
+  "l08-08": {
+   "voice": "diego",
+   "text": "Zero seven thirty. Got it. And lunch?",
+   "es": "Cero siete treinta. Entendido. ¿Y el almuerzo?"
+  },
+  "l08-09": {
+   "voice": "mario",
+   "text": "Lunch is at eleven thirty. And coffee break is at ten hundred and fifteen hundred.",
+   "es": "El almuerzo es a las once treinta. Y el café es a las diez cero cero y a las quince cero cero."
+  },
+  "l08-10": {
+   "voice": "diego",
+   "text": "Could you pass the salt, please?",
+   "es": "¿Me pasás la sal, por favor?"
+  },
+  "l08-11": {
+   "voice": "rolando",
+   "text": "Here you are.",
+   "es": "Acá tenés."
+  },
+  "l08-12": {
+   "voice": "mario",
+   "text": "And if you're on watch at dinner time, tell me. I keep a plate for you.",
+   "es": "Y si estás de guardia a la hora de la cena, avisame. Te guardo un plato."
+  },
+  "l08-13": {
+   "voice": "diego",
+   "text": "Thanks, Mario. Can I have some more rice?",
+   "es": "Gracias, Mario. ¿Me das un poco más de arroz?"
+  },
+  "l08-14": {
+   "voice": "mario",
+   "text": "Of course! And all the times are on the notice board, next to the door.",
+   "es": "¡Claro! Y todos los horarios están en la cartelera, al lado de la puerta."
+  },
+  "w-breakfast": {
+   "voice": "model",
+   "text": "breakfast"
+  },
+  "x-breakfast": {
+   "voice": "model",
+   "text": "Breakfast is at zero seven thirty.",
+   "es": "El desayuno es a las cero siete treinta."
+  },
+  "w-lunch": {
+   "voice": "model",
+   "text": "lunch"
+  },
+  "x-lunch": {
+   "voice": "model",
+   "text": "Lunch is at eleven thirty.",
+   "es": "El almuerzo es a las once treinta."
+  },
+  "w-dinner": {
+   "voice": "model",
+   "text": "dinner"
+  },
+  "x-dinner": {
+   "voice": "model",
+   "text": "Dinner is at seventeen thirty.",
+   "es": "La cena es a las diecisiete treinta."
+  },
+  "w-coffee": {
+   "voice": "model",
+   "text": "coffee break"
+  },
+  "x-coffee": {
+   "voice": "model",
+   "text": "Coffee break is at ten hundred.",
+   "es": "El café es a las diez cero cero."
+  },
+  "w-meal": {
+   "voice": "model",
+   "text": "meal times"
+  },
+  "x-meal": {
+   "voice": "model",
+   "text": "The meal times are on the notice board.",
+   "es": "Los horarios de las comidas están en la cartelera."
+  },
+  "w-board": {
+   "voice": "model",
+   "text": "notice board"
+  },
+  "x-board": {
+   "voice": "model",
+   "text": "Look at the notice board.",
+   "es": "Mirá la cartelera."
+  },
+  "w-watch": {
+   "voice": "model",
+   "text": "on watch"
+  },
+  "x-watch": {
+   "voice": "model",
+   "text": "I'm on watch from zero eight hundred.",
+   "es": "Estoy de guardia desde las cero ocho cero cero."
+  },
+  "w-off": {
+   "voice": "model",
+   "text": "off duty"
+  },
+  "x-off": {
+   "voice": "model",
+   "text": "I'm off duty this afternoon.",
+   "es": "Estoy franco esta tarde."
+  },
+  "p-whattime": {
+   "voice": "model",
+   "text": "What time is lunch?",
+   "es": "¿A qué hora es el almuerzo?"
+  },
+  "p-canhave": {
+   "voice": "model",
+   "text": "Can I have some more rice, please?",
+   "es": "¿Me das un poco más de arroz, por favor?"
+  },
+  "p-couldpass": {
+   "voice": "model",
+   "text": "Could you pass the salt, please?",
+   "es": "¿Me pasás la sal, por favor?"
+  },
+  "p-0730": {
+   "voice": "model",
+   "text": "Zero seven thirty.",
+   "es": "07:30."
+  },
+  "p-1400": {
+   "voice": "model",
+   "text": "Fourteen hundred.",
+   "es": "14:00."
+  },
+  "p-1215": {
+   "voice": "model",
+   "text": "Twelve fifteen.",
+   "es": "12:15."
+  },
+  "m-lunch": {
+   "voice": "model",
+   "text": "Lunch is at eleven thirty.",
+   "es": "El almuerzo es a las once treinta."
+  },
+  "m-water": {
+   "voice": "model",
+   "text": "Can I have some water, please?",
+   "es": "¿Me das un poco de agua, por favor?"
+  },
+  "m-onwatch": {
+   "voice": "model",
+   "text": "I'm on watch at dinner time.",
+   "es": "Estoy de guardia a la hora de la cena."
+  },
+  "m-1400": {
+   "voice": "model",
+   "text": "It's fourteen hundred.",
+   "es": "Son las catorce cero cero."
+  },
+  "m-thirteen": {
+   "voice": "model",
+   "text": "Thirteen.",
+   "es": "Trece."
+  },
+  "m-thirty": {
+   "voice": "model",
+   "text": "Thirty.",
+   "es": "Treinta."
+  },
+  "c-show-breakfast": {
+   "voice": "mario",
+   "text": "When is breakfast? Show me."
+  },
+  "c-show-lunch": {
+   "voice": "mario",
+   "text": "Show me lunch."
+  },
+  "c-show-dinner": {
+   "voice": "rolando",
+   "text": "Where's dinner?"
+  },
+  "c-show-coffee": {
+   "voice": "rolando",
+   "text": "Show me the coffee break."
+  },
+  "c-show-watch": {
+   "voice": "james",
+   "text": "I'm on watch from twelve hundred to sixteen hundred. Show me."
+  },
+  "c-show-off": {
+   "voice": "james",
+   "text": "Show me when I'm off duty."
+  },
+  "c-ask-lunch": {
+   "voice": "rolando",
+   "text": "Hey cadet, what time is lunch?"
+  },
+  "c-need": {
+   "voice": "mario",
+   "text": "Everything OK, cadet? You need anything?"
+  },
+  "c-time": {
+   "voice": "james",
+   "text": "Diego, what time is it?"
+  },
+  "c-dinner-late": {
+   "voice": "mario",
+   "text": "Dinner is at seventeen thirty. You come?"
+  },
+  "c-coffee-other": {
+   "voice": "rolando",
+   "text": "Today coffee break is at fifteen thirty."
+  },
+  "c-thirteen": {
+   "voice": "james",
+   "text": "The pilot comes at thirteen hundred."
+  }
+ },
+ "dialogue": [
+  "l08-01",
+  "l08-02",
+  "l08-03",
+  "l08-04",
+  "l08-05",
+  "l08-06",
+  "l08-07",
+  "l08-08",
+  "l08-09",
+  "l08-10",
+  "l08-11",
+  "l08-12",
+  "l08-13",
+  "l08-14"
+ ],
+ "words": {
+  "breakfast": {
+   "en": "breakfast",
+   "ipa": "/ˈbrekfəst/",
+   "es": "desayuno",
+   "audio": "w-breakfast",
+   "ex": "x-breakfast"
+  },
+  "lunch": {
+   "en": "lunch",
+   "ipa": "/lʌntʃ/",
+   "es": "almuerzo",
+   "audio": "w-lunch",
+   "ex": "x-lunch"
+  },
+  "dinner": {
+   "en": "dinner",
+   "ipa": "/ˈdɪnə/",
+   "es": "cena",
+   "audio": "w-dinner",
+   "ex": "x-dinner"
+  },
+  "coffee": {
+   "en": "coffee break",
+   "ipa": "/ˈkɒfi breɪk/",
+   "es": "pausa para el café",
+   "audio": "w-coffee",
+   "ex": "x-coffee"
+  },
+  "meal": {
+   "en": "meal times",
+   "ipa": "/ˈmiːl taɪmz/",
+   "es": "horarios de las comidas",
+   "audio": "w-meal",
+   "ex": "x-meal"
+  },
+  "board": {
+   "en": "notice board",
+   "ipa": "/ˈnəʊtɪs bɔːd/",
+   "es": "cartelera, pizarra de avisos",
+   "audio": "w-board",
+   "ex": "x-board"
+  },
+  "watch": {
+   "en": "on watch",
+   "ipa": "/ɒn ˈwɒtʃ/",
+   "es": "de guardia",
+   "audio": "w-watch",
+   "ex": "x-watch"
+  },
+  "off": {
+   "en": "off duty",
+   "ipa": "/ˌɒf ˈdjuːti/",
+   "es": "franco, fuera de servicio",
+   "audio": "w-off",
+   "ex": "x-off"
+  }
+ },
+ "plate": {
+  "svg": "img/l08/plate.svg",
+  "pins": [
+   {
+    "word": "breakfast",
+    "x": 146,
+    "y": 53
+   },
+   {
+    "word": "coffee",
+    "x": 180,
+    "y": 29
+   },
+   {
+    "word": "lunch",
+    "x": 208,
+    "y": 53
+   },
+   {
+    "word": "dinner",
+    "x": 296,
+    "y": 53
+   },
+   {
+    "word": "watch",
+    "x": 252,
+    "y": 169
+   },
+   {
+    "word": "off",
+    "x": 340,
+    "y": 169
+   }
+  ]
+ },
+ "docs": {
+  "notice": {
+   "kind": "form",
+   "title": "MESS ROOM · MEAL TIMES",
+   "subtitle": "M/V LNG HORIZON · NOTICE BOARD",
+   "cells": [
+    [
+     "BREAKFAST",
+     "0730 – 0815"
+    ],
+    [
+     "COFFEE BREAK",
+     "1000 – 1015"
+    ],
+    [
+     "LUNCH",
+     "1130 – 1215"
+    ],
+    [
+     "COFFEE BREAK",
+     "1500 – 1515"
+    ],
+    [
+     "DINNER",
+     "1730 – 1815"
+    ],
+    [
+     "ON WATCH AT MEAL TIME?",
+     "Tell the cook"
+    ],
+    [
+     "LAUNDRY · DECK",
+     "Tue · Thu · Sat"
+    ],
+    [
+     "COOK",
+     "Mario Dela Cruz"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: dinner in the mess",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l08/scene.jpg",
+     "kicker": "Day 1 · 19:00 · Houston",
+     "title": "Diego's first dinner on board",
+     "body": "It's seven in the evening and Diego is hungry. He goes down to the mess room. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l08-01",
+      "l08-02",
+      "l08-03"
+     ],
+     "q": "Is Diego on time for dinner?",
+     "opts": [
+      "No, he's late",
+      "Yes, he's early",
+      "Yes, dinner is now"
+     ],
+     "a": 0,
+     "why": "Dinner is from 1730 to 1815. It's 1900."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l08-04",
+      "l08-05"
+     ],
+     "q": "What time is breakfast?",
+     "opts": [
+      "0730 to 0815",
+      "0700 to 0830",
+      "0830 to 0915"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l08-06",
+      "l08-07",
+      "l08-08"
+     ],
+     "q": "Why does Rolando laugh?",
+     "opts": [
+      "Diego doesn't use the 24-hour clock",
+      "Diego is late",
+      "Diego asks for lunch"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l08-09"
+     ],
+     "q": "When is the coffee break?",
+     "opts": [
+      "1000 and 1500",
+      "1100 and 1600",
+      "1000 and 1300"
+     ],
+     "a": 0,
+     "why": "\"Ten hundred and fifteen hundred.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l08-10",
+      "l08-11",
+      "l08-12"
+     ],
+     "q": "What does Mario do if you're on watch at dinner time?",
+     "opts": [
+      "He keeps a plate for you",
+      "He calls you on the radio",
+      "He closes the galley"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l08-13",
+      "l08-14"
+     ],
+     "q": "Where are the meal times?",
+     "opts": [
+      "On the notice board",
+      "Behind the door",
+      "On the bridge"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole dinner",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "A day on board",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "One day on board, from 0000 to 2400."
+    },
+    {
+     "type": "card",
+     "word": "breakfast"
+    },
+    {
+     "type": "card",
+     "word": "lunch"
+    },
+    {
+     "type": "card",
+     "word": "dinner"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-lunch",
+     "a": "lunch"
+    },
+    {
+     "type": "card",
+     "word": "coffee"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-coffee",
+     "a": "coffee"
+    },
+    {
+     "type": "card",
+     "word": "meal"
+    },
+    {
+     "type": "card",
+     "word": "board"
+    },
+    {
+     "type": "card",
+     "word": "watch"
+    },
+    {
+     "type": "card",
+     "word": "off"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-watch",
+     "a": "watch"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-off",
+     "a": "off"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"estar de guardia\" in English:",
+     "opts": [
+      "to be on watch",
+      "to be in guard",
+      "to be on guard"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "breakfast",
+       "desayuno"
+      ],
+      [
+       "lunch",
+       "almuerzo"
+      ],
+      [
+       "dinner",
+       "cena"
+      ],
+      [
+       "notice board",
+       "cartelera"
+      ],
+      [
+       "off duty",
+       "franco"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Zero seven thirty",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "At the table",
+     "list": [
+      [
+       "What time is lunch?",
+       "¿A qué hora es el almuerzo?",
+       "p-whattime"
+      ],
+      [
+       "Could you pass the salt, please?",
+       "¿Me pasás la sal, por favor?",
+       "p-couldpass"
+      ],
+      [
+       "Can I have some more rice, please?",
+       "¿Me das un poco más de arroz, por favor?",
+       "p-canhave"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "The 24-hour clock",
+     "steps": [
+      [
+       "0730",
+       "zero seven thirty"
+      ],
+      [
+       "1215",
+       "twelve fifteen"
+      ],
+      [
+       "1400",
+       "fourteen hundred"
+      ],
+      [
+       "1000",
+       "ten hundred"
+      ],
+      [
+       "0800",
+       "zero eight hundred"
+      ]
+     ],
+     "paras": [
+      "On board, times have four digits. Say them in <b>two pairs</b>: 07 | 30 → <i>zero seven thirty</i>.",
+      "When the minutes are 00, say <b>hundred</b>: 1400 → <i>fourteen hundred</i>. No <i>o'clock</i>, no <i>a.m./p.m.</i>"
+     ],
+     "list": [
+      [
+       "Zero seven thirty.",
+       "07:30",
+       "p-0730"
+      ],
+      [
+       "Fourteen hundred.",
+       "14:00",
+       "p-1400"
+      ],
+      [
+       "Twelve fifteen.",
+       "12:15",
+       "p-1215"
+      ]
+     ],
+     "avoid": "seven and a half · two p.m. · fourteen o'clock"
+    },
+    {
+     "type": "choice",
+     "q": "1630 is…",
+     "opts": [
+      "sixteen thirty",
+      "six thirty",
+      "sixteen and a half"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "0800 is…",
+     "opts": [
+      "zero eight hundred",
+      "eight o'clock zero",
+      "zero eight zero zero hundred"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "audio": "c-coffee-other",
+     "q": "Write the time you hear, with four digits.",
+     "accept": [
+      "1530",
+      "15:30"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Can I have… / Could you…",
+     "paras": [
+      "To ask for something for you: <b>Can I have</b> some water, please?",
+      "To ask someone to do something: <b>Could you</b> pass the salt, please? <i>Could</i> is a little more polite.",
+      "Always add <b>please</b>."
+     ],
+     "avoid": "I want more rice. · Give me the salt. · Can you pass me the salt?"
+    },
+    {
+     "type": "choice",
+     "q": "You want more rice. You say…",
+     "opts": [
+      "Can I have some more rice, please?",
+      "I want more rice.",
+      "Give me more rice, please."
+     ],
+     "a": 0,
+     "why": "\"I want\" sounds rude in English."
+    },
+    {
+     "type": "build",
+     "situation": "The bread is next to Rolando.",
+     "q": "Ask him for it.",
+     "a": [
+      "Could",
+      "you",
+      "pass",
+      "the",
+      "bread,",
+      "please?"
+     ],
+     "extra": [
+      "me",
+      "give"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "\"Quiero\" is not polite",
+     "paras": [
+      "In Spanish, <i>quiero más arroz</i> is normal at the table. In English, <b>I want</b> sounds like a child or a boss.",
+      "Use <b>Can I have…?</b> or <b>Could I have…?</b>"
+     ],
+     "avoid": "I want the salt. · I want coffee."
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Thirteen or thirty?",
+     "paras": [
+      "<b>thirTEEN</b> (13) has the stress at the end and a long <i>ee</i>. <b>THIRty</b> (30) has the stress at the start.",
+      "On board this is important: <i>thirteen hundred</i> is 1300, <i>zero seven thirty</i> is 0730."
+     ],
+     "list": [
+      [
+       "Thirteen.",
+       "13",
+       "m-thirteen"
+      ],
+      [
+       "Thirty.",
+       "30",
+       "m-thirty"
+      ]
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-thirteen"
+     ],
+     "q": "When does the pilot come?",
+     "opts": [
+      "1300",
+      "1330",
+      "0330"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the notice board",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "notice",
+     "q": "When does lunch finish?",
+     "opts": [
+      "1215",
+      "1130",
+      "1230"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "notice",
+     "q": "How many coffee breaks are there?",
+     "opts": [
+      "Two",
+      "One",
+      "Three"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "notice",
+     "q": "Tap what to do if you're on watch at meal time.",
+     "a": 5
+    },
+    {
+     "type": "doc",
+     "doc": "notice",
+     "q": "Diego is deck. When can he use the laundry?",
+     "opts": [
+      "Tuesday, Thursday and Saturday",
+      "Every day",
+      "Monday and Friday"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "notice",
+     "q": "It's 1745. What meal is it?",
+     "opts": [
+      "Dinner",
+      "Lunch",
+      "Breakfast"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Ask at the table",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Times and polite questions",
+     "body": "Listen, say it, check it. Say times in two pairs: zero seven | thirty.",
+     "es": "Las horas, en dos pares de números.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-0730"
+    },
+    {
+     "type": "shadow",
+     "model": "p-couldpass"
+    },
+    {
+     "type": "shadow",
+     "model": "p-canhave"
+    },
+    {
+     "type": "role",
+     "cue": "c-ask-lunch",
+     "task": "Lunch is at 1130. Tell him.",
+     "model": "m-lunch",
+     "accept": [
+      "Lunch is at eleven thirty.",
+      "At eleven thirty.",
+      "Eleven thirty.",
+      "It's at eleven thirty."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-need",
+     "task": "Ask Mario for some water. Be polite.",
+     "model": "m-water",
+     "accept": [
+      "Can I have some water, please?",
+      "Could I have some water, please?",
+      "Can I have water, please?",
+      "Some water, please.",
+      "Could I have some water please?"
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-time",
+     "task": "It's 14:00. Tell him.",
+     "model": "m-1400",
+     "accept": [
+      "It's fourteen hundred.",
+      "Fourteen hundred.",
+      "It is fourteen hundred."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-dinner-late",
+     "task": "Tell Mario you're on watch at dinner time.",
+     "model": "m-onwatch",
+     "accept": [
+      "I'm on watch at dinner time.",
+      "Sorry, I'm on watch at dinner time.",
+      "I'm on watch.",
+      "Sorry, I'm on watch."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-breakfast",
+     "q": "Type what you hear.",
+     "accept": [
+      "breakfast"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-breakfast",
+     "a": "breakfast"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-dinner",
+     "a": "dinner"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l08-07",
+      "l08-08"
+     ],
+     "q": "What does \"twenty-four-hour clock\" mean?",
+     "opts": [
+      "Times from 0000 to 2359",
+      "A clock on the bridge",
+      "Working 24 hours"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "1900 is…",
+     "opts": [
+      "nineteen hundred",
+      "nine hundred",
+      "nineteen o'clock"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Rolando has the salt. You say…",
+     "opts": [
+      "Could you pass the salt, please?",
+      "I want the salt.",
+      "Pass me salt."
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Ask what time breakfast is.",
+     "a": [
+      "What",
+      "time",
+      "is",
+      "breakfast?"
+     ],
+     "extra": [
+      "hour",
+      "at"
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "The notice board is beside the door. It's ___ the door.",
+     "opts": [
+      "next to",
+      "in",
+      "under"
+     ],
+     "a": 0,
+     "why": "From Lesson 7."
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: cena",
+     "accept": [
+      "dinner",
+      "the dinner"
+     ]
+    }
+   ]
+  }
+ ]
+}

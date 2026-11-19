@@ -27,6 +27,7 @@ for (const [id, c] of Object.entries(lesson.audio)) {
     let note = c.note || "";
     if (parts.length > 1) note = (note ? note + " · " : "") + (i === 0 ? "first half" : "second half");
     if (c.radio) note = (note ? note + " · " : "") + "record clean, the app adds the radio";
+    if (c.pa) note = (note ? note + " · " : "") + "ship's loudspeaker: record clean and slow, the app adds the effect";
     rows.push([file, VOICE[c.voice] || c.voice, t.trim(), say, note]);
   });
 }

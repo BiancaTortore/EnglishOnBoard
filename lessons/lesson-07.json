@@ -1,0 +1,1013 @@
+{
+ "n": 7,
+ "module": 2,
+ "title": "Cabin & safety kit",
+ "place": "Day 1 · 16:30 · Houston, Diego's cabin",
+ "goal": "Say where things are in your cabin and find your safety kit.",
+ "images": {
+  "hero": "img/l07/hero.jpg",
+  "scene": "img/l07/scene.jpg"
+ },
+ "audio": {
+  "l07-01": {
+   "voice": "tanya",
+   "text": "Hello, Diego? I'm Tanya, the Chief Officer. Can I come in?",
+   "es": "Hola, ¿Diego? Soy Tanya, la Primer Oficial. ¿Puedo pasar?"
+  },
+  "l07-02": {
+   "voice": "diego",
+   "text": "Yes, of course. Nice to meet you.",
+   "es": "Sí, claro. Mucho gusto."
+  },
+  "l07-03": {
+   "voice": "tanya",
+   "text": "Nice to meet you too. OK, your safety kit. First, your lifejacket. Where is it?",
+   "es": "Igualmente. Bueno, tu equipo de seguridad. Primero, tu chaleco salvavidas. ¿Dónde está?"
+  },
+  "l07-04": {
+   "voice": "diego",
+   "text": "Er… on the wardrobe?",
+   "es": "Eh… ¿sobre el placard?"
+  },
+  "l07-05": {
+   "voice": "tanya",
+   "text": "Not on the wardrobe. In the wardrobe. Look, here, on the top shelf.",
+   "es": "Sobre el placard no. Adentro del placard. Mirá, acá, en el estante de arriba."
+  },
+  "l07-06": {
+   "voice": "diego",
+   "text": "In the wardrobe. Got it.",
+   "es": "Adentro del placard. Entendido."
+  },
+  "l07-07": {
+   "voice": "tanya",
+   "text": "And this orange bag, under the bunk, is your immersion suit.",
+   "es": "Y este bolso naranja, debajo de la cucheta, es tu traje de inmersión."
+  },
+  "l07-08": {
+   "voice": "diego",
+   "text": "Sorry, can you say that again? Immersion…?",
+   "es": "Perdón, ¿lo podés repetir? ¿Inmersión…?"
+  },
+  "l07-09": {
+   "voice": "tanya",
+   "text": "Immersion suit. For cold water. Now, behind the door, there's your muster card. Read it to me.",
+   "es": "Traje de inmersión. Para el agua fría. Ahora, detrás de la puerta está tu tarjeta de zafarrancho. Leémela."
+  },
+  "l07-10": {
+   "voice": "diego",
+   "text": "Muster station B. Boat deck, port side. Lifeboat number two.",
+   "es": "Estación de reunión B. Cubierta de botes, babor. Bote salvavidas número dos."
+  },
+  "l07-11": {
+   "voice": "tanya",
+   "text": "Good. And your escape route is the stairs next to the laundry. Not the lift.",
+   "es": "Bien. Y tu vía de escape es la escalera al lado del lavadero. No el ascensor."
+  },
+  "l07-12": {
+   "voice": "diego",
+   "text": "The stairs next to the laundry. OK.",
+   "es": "La escalera al lado del lavadero. Okey."
+  },
+  "l07-13": {
+   "voice": "tanya",
+   "text": "Perfect. Tomorrow morning we have a drill. See you at your muster station.",
+   "es": "Perfecto. Mañana a la mañana tenemos un simulacro. Nos vemos en tu estación de reunión."
+  },
+  "l07-14": {
+   "voice": "diego",
+   "text": "Thank you. See you tomorrow.",
+   "es": "Gracias. Hasta mañana."
+  },
+  "w-bunk": {
+   "voice": "model",
+   "text": "bunk"
+  },
+  "x-bunk": {
+   "voice": "model",
+   "text": "Your bag is on the bunk.",
+   "es": "Tu bolso está sobre la cucheta."
+  },
+  "w-wardrobe": {
+   "voice": "model",
+   "text": "wardrobe"
+  },
+  "x-wardrobe": {
+   "voice": "model",
+   "text": "Your lifejacket is in the wardrobe.",
+   "es": "Tu chaleco está en el placard."
+  },
+  "w-porthole": {
+   "voice": "model",
+   "text": "porthole"
+  },
+  "x-porthole": {
+   "voice": "model",
+   "text": "There's a porthole above the desk.",
+   "es": "Hay un ojo de buey arriba del escritorio."
+  },
+  "w-lifejacket": {
+   "voice": "model",
+   "text": "lifejacket"
+  },
+  "x-lifejacket": {
+   "voice": "model",
+   "text": "Where's your lifejacket?",
+   "es": "¿Dónde está tu chaleco salvavidas?"
+  },
+  "w-suit": {
+   "voice": "model",
+   "text": "immersion suit"
+  },
+  "x-suit": {
+   "voice": "model",
+   "text": "The immersion suit is under the bunk.",
+   "es": "El traje de inmersión está debajo de la cucheta."
+  },
+  "w-card": {
+   "voice": "model",
+   "text": "muster card"
+  },
+  "x-card": {
+   "voice": "model",
+   "text": "Your muster card is behind the door.",
+   "es": "Tu tarjeta de zafarrancho está detrás de la puerta."
+  },
+  "w-station": {
+   "voice": "model",
+   "text": "muster station"
+  },
+  "x-station": {
+   "voice": "model",
+   "text": "My muster station is on the boat deck.",
+   "es": "Mi punto de reunión está en la cubierta de botes."
+  },
+  "w-escape": {
+   "voice": "model",
+   "text": "escape route"
+  },
+  "x-escape": {
+   "voice": "model",
+   "text": "The escape route is the stairs.",
+   "es": "La vía de escape es la escalera."
+  },
+  "p-where": {
+   "voice": "model",
+   "text": "Where's my lifejacket?",
+   "es": "¿Dónde está mi chaleco salvavidas?"
+  },
+  "p-in": {
+   "voice": "model",
+   "text": "It's in the wardrobe.",
+   "es": "Está en el placard."
+  },
+  "p-under": {
+   "voice": "model",
+   "text": "It's under the bunk.",
+   "es": "Está debajo de la cucheta."
+  },
+  "p-gotit": {
+   "voice": "model",
+   "text": "Got it.",
+   "es": "Entendido."
+  },
+  "m-behind": {
+   "voice": "model",
+   "text": "It's behind the door.",
+   "es": "Está detrás de la puerta."
+  },
+  "m-station": {
+   "voice": "model",
+   "text": "Boat deck, port side.",
+   "es": "Cubierta de botes, babor."
+  },
+  "m-escape": {
+   "voice": "model",
+   "text": "The stairs next to the laundry.",
+   "es": "La escalera al lado del lavadero."
+  },
+  "c-show-lifejacket": {
+   "voice": "tanya",
+   "text": "Show me your lifejacket."
+  },
+  "c-show-suit": {
+   "voice": "tanya",
+   "text": "Where's the immersion suit?"
+  },
+  "c-show-card": {
+   "voice": "james",
+   "text": "Where's your muster card?"
+  },
+  "c-show-porthole": {
+   "voice": "tanya",
+   "text": "Show me the porthole."
+  },
+  "c-show-escape": {
+   "voice": "tanya",
+   "text": "Show me the escape route."
+  },
+  "c-show-bunk": {
+   "voice": "james",
+   "text": "Where's the bunk?"
+  },
+  "c-where-lifejacket": {
+   "voice": "tanya",
+   "text": "Diego, where's your lifejacket?"
+  },
+  "c-where-suit": {
+   "voice": "tanya",
+   "text": "And the immersion suit?"
+  },
+  "c-where-card": {
+   "voice": "james",
+   "text": "Hey Diego, where's your muster card?"
+  },
+  "c-where-station": {
+   "voice": "james",
+   "text": "Where's your muster station?"
+  },
+  "c-station-other": {
+   "voice": "james",
+   "text": "My muster station is C. Boat deck, starboard side."
+  },
+  "c-cabin-other": {
+   "voice": "tanya",
+   "text": "My cabin is on D-deck. Cabin four."
+  }
+ },
+ "dialogue": [
+  "l07-01",
+  "l07-02",
+  "l07-03",
+  "l07-04",
+  "l07-05",
+  "l07-06",
+  "l07-07",
+  "l07-08",
+  "l07-09",
+  "l07-10",
+  "l07-11",
+  "l07-12",
+  "l07-13",
+  "l07-14"
+ ],
+ "words": {
+  "bunk": {
+   "en": "bunk",
+   "ipa": "/bʌŋk/",
+   "es": "cucheta, litera",
+   "audio": "w-bunk",
+   "ex": "x-bunk"
+  },
+  "wardrobe": {
+   "en": "wardrobe",
+   "ipa": "/ˈwɔːdrəʊb/",
+   "es": "placard, ropero",
+   "audio": "w-wardrobe",
+   "ex": "x-wardrobe"
+  },
+  "porthole": {
+   "en": "porthole",
+   "ipa": "/ˈpɔːthəʊl/",
+   "es": "ojo de buey",
+   "audio": "w-porthole",
+   "ex": "x-porthole"
+  },
+  "lifejacket": {
+   "en": "lifejacket",
+   "ipa": "/ˈlaɪfˌdʒækɪt/",
+   "es": "chaleco salvavidas",
+   "audio": "w-lifejacket",
+   "ex": "x-lifejacket"
+  },
+  "suit": {
+   "en": "immersion suit",
+   "ipa": "/ɪˈmɜːʃn suːt/",
+   "es": "traje de inmersión",
+   "audio": "w-suit",
+   "ex": "x-suit"
+  },
+  "card": {
+   "en": "muster card",
+   "ipa": "/ˈmʌstə kɑːd/",
+   "es": "tarjeta de zafarrancho",
+   "audio": "w-card",
+   "ex": "x-card"
+  },
+  "station": {
+   "en": "muster station",
+   "ipa": "/ˈmʌstə ˌsteɪʃn/",
+   "es": "estación de reunión, punto de reunión",
+   "audio": "w-station",
+   "ex": "x-station"
+  },
+  "escape": {
+   "en": "escape route",
+   "ipa": "/ɪˈskeɪp ruːt/",
+   "es": "vía de escape",
+   "audio": "w-escape",
+   "ex": "x-escape"
+  }
+ },
+ "plate": {
+  "svg": "img/l07/plate.svg",
+  "pins": [
+   {
+    "word": "card",
+    "x": 90,
+    "y": 90
+   },
+   {
+    "word": "escape",
+    "x": 41,
+    "y": 66
+   },
+   {
+    "word": "porthole",
+    "x": 246,
+    "y": 40
+   },
+   {
+    "word": "bunk",
+    "x": 160,
+    "y": 104
+   },
+   {
+    "word": "suit",
+    "x": 157,
+    "y": 179
+   },
+   {
+    "word": "lifejacket",
+    "x": 336,
+    "y": 60
+   },
+   {
+    "word": "wardrobe",
+    "x": 386,
+    "y": 112
+   }
+  ]
+ },
+ "docs": {
+  "card": {
+   "kind": "form",
+   "title": "MUSTER CARD",
+   "subtitle": "M/V LNG HORIZON · CABIN C-12",
+   "cells": [
+    [
+     "NAME",
+     "D. Martínez"
+    ],
+    [
+     "RANK",
+     "Deck cadet"
+    ],
+    [
+     "MUSTER STATION",
+     "B · Boat deck, port side"
+    ],
+    [
+     "LIFEBOAT",
+     "No. 2 (port)"
+    ],
+    [
+     "EMERGENCY DUTY",
+     "Messenger to the bridge"
+    ],
+    [
+     "LIFEJACKET",
+     "In the wardrobe"
+    ],
+    [
+     "IMMERSION SUIT",
+     "Under the bunk"
+    ],
+    [
+     "ESCAPE ROUTE",
+     "Stairs next to the laundry"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: your safety kit",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l07/scene.jpg",
+     "kicker": "Day 1 · 16:30 · Houston",
+     "title": "The Chief Officer comes to Diego's cabin",
+     "body": "After signing on, Diego is in his cabin. Someone knocks on the door. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l07-01",
+      "l07-02",
+      "l07-03"
+     ],
+     "q": "Who is at the door?",
+     "opts": [
+      "The Chief Officer",
+      "The Second Officer",
+      "The Chief Cook"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l07-04",
+      "l07-05",
+      "l07-06"
+     ],
+     "q": "Where is the lifejacket?",
+     "opts": [
+      "In the wardrobe",
+      "On the wardrobe",
+      "Under the bunk"
+     ],
+     "a": 0,
+     "why": "\"Not on the wardrobe. In the wardrobe.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l07-07",
+      "l07-08"
+     ],
+     "q": "What is under the bunk?",
+     "opts": [
+      "The immersion suit",
+      "The lifejacket",
+      "The muster card"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l07-09",
+      "l07-10"
+     ],
+     "q": "Where is Diego's muster station?",
+     "opts": [
+      "Boat deck, port side",
+      "Boat deck, starboard side",
+      "Main deck, port side"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l07-11",
+      "l07-12"
+     ],
+     "q": "What is Diego's escape route?",
+     "opts": [
+      "The stairs next to the laundry",
+      "The lift next to the laundry",
+      "The stairs next to the mess room"
+     ],
+     "a": 0,
+     "why": "\"Not the lift.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l07-13",
+      "l07-14"
+     ],
+     "q": "What happens tomorrow morning?",
+     "opts": [
+      "A drill",
+      "They sail",
+      "An inspection"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole visit",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "In Diego's cabin",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "Diego's cabin, with the door open to the corridor."
+    },
+    {
+     "type": "card",
+     "word": "bunk"
+    },
+    {
+     "type": "card",
+     "word": "wardrobe"
+    },
+    {
+     "type": "card",
+     "word": "porthole"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-porthole",
+     "a": "porthole"
+    },
+    {
+     "type": "card",
+     "word": "lifejacket"
+    },
+    {
+     "type": "card",
+     "word": "suit"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-suit",
+     "a": "suit"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"chaleco salvavidas\" in English:",
+     "opts": [
+      "lifejacket",
+      "life vest jacket",
+      "safety jacket"
+     ],
+     "a": 0
+    },
+    {
+     "type": "card",
+     "word": "card"
+    },
+    {
+     "type": "card",
+     "word": "station"
+    },
+    {
+     "type": "card",
+     "word": "escape"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-escape",
+     "a": "escape"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-lifejacket",
+     "a": "lifejacket"
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "bunk",
+       "cucheta"
+      ],
+      [
+       "wardrobe",
+       "placard"
+      ],
+      [
+       "porthole",
+       "ojo de buey"
+      ],
+      [
+       "immersion suit",
+       "traje de inmersión"
+      ],
+      [
+       "escape route",
+       "vía de escape"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Where is it?",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Where is it?",
+     "list": [
+      [
+       "Where's my lifejacket?",
+       "¿Dónde está mi chaleco salvavidas?",
+       "p-where"
+      ],
+      [
+       "It's in the wardrobe.",
+       "Está en el placard.",
+       "p-in"
+      ],
+      [
+       "It's under the bunk.",
+       "Está debajo de la cucheta.",
+       "p-under"
+      ],
+      [
+       "Got it.",
+       "Entendido.",
+       "p-gotit"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Six little words for place",
+     "steps": [
+      [
+       "in",
+       "in the wardrobe · in the bag"
+      ],
+      [
+       "on",
+       "on the bunk · on the desk"
+      ],
+      [
+       "under",
+       "under the bunk"
+      ],
+      [
+       "behind",
+       "behind the door"
+      ],
+      [
+       "next to",
+       "next to the laundry"
+      ],
+      [
+       "above",
+       "above the desk"
+      ]
+     ],
+     "paras": [
+      "To say where something is: <b>It's</b> + place word + <b>the</b> + thing.",
+      "<b>In</b> = inside. <b>On</b> = on top, touching. <b>Above</b> = higher, not touching."
+     ],
+     "avoid": "It's in under the bunk. · It's next the door. · It's on the wardrobe (if it's inside)."
+    },
+    {
+     "type": "choice",
+     "q": "The lifejacket is inside the wardrobe. It's ___ the wardrobe.",
+     "opts": [
+      "in",
+      "on",
+      "above"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The muster card is on the back of the door. It's ___ the door.",
+     "opts": [
+      "behind",
+      "under",
+      "next"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Which one is correct?",
+     "opts": [
+      "The stairs are next to the laundry.",
+      "The stairs are next the laundry.",
+      "The stairs are next of the laundry."
+     ],
+     "a": 0,
+     "why": "Always next TO."
+    },
+    {
+     "type": "build",
+     "situation": "Tanya asks: \"Where's the immersion suit?\"",
+     "q": "Answer her.",
+     "a": [
+      "It's",
+      "under",
+      "the",
+      "bunk."
+     ],
+     "extra": [
+      "in",
+      "on"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "\"En\" is not always \"in\"",
+     "paras": [
+      "In Spanish, <i>en</i> works for everything: <i>en el placard, en la cucheta, en la cubierta</i>. In English you choose: <b>in</b> the wardrobe (inside), <b>on</b> the bunk (on top), <b>on</b> the boat deck (a deck is a surface).",
+      "<i>Arriba de</i> can be <b>on</b> (touching) or <b>above</b> (not touching)."
+     ],
+     "avoid": "in the bunk (if it's on top) · in the boat deck · on the wardrobe (if it's inside)"
+    },
+    {
+     "type": "choice",
+     "q": "My muster station is ___ the boat deck.",
+     "opts": [
+      "on",
+      "in",
+      "at the"
+     ],
+     "a": 0,
+     "why": "A deck is a surface: ON the boat deck."
+    },
+    {
+     "type": "choice",
+     "q": "The porthole is higher than the desk, not touching it. It's ___ the desk.",
+     "opts": [
+      "above",
+      "on",
+      "in"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Small words go fast",
+     "paras": [
+      "In <i>It's in the wardrobe</i>, the strong word is <b>WARDrobe</b>. <i>It's in the</i> is quick and soft: <i>itsinthe</i>.",
+      "When you correct, the place word becomes strong: <i>Not ON the wardrobe. IN the wardrobe.</i>"
+     ],
+     "list": [
+      [
+       "It's in the WARDrobe.",
+       "Está en el placard.",
+       "p-in"
+      ],
+      [
+       "It's UNder the BUNK.",
+       "Está debajo de la cucheta.",
+       "p-under"
+      ]
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-station-other",
+     "q": "Write James's muster station letter.",
+     "accept": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the muster card",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "card",
+     "q": "Which lifeboat is Diego's?",
+     "opts": [
+      "No. 2, port side",
+      "No. 1, starboard side",
+      "No. 2, starboard side"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "card",
+     "q": "What is Diego's cabin?",
+     "opts": [
+      "C-12",
+      "B-12",
+      "C-2"
+     ],
+     "a": 0,
+     "why": "Look at the top: CABIN C-12."
+    },
+    {
+     "type": "docfind",
+     "doc": "card",
+     "q": "Tap Diego's job in an emergency.",
+     "a": 4
+    },
+    {
+     "type": "doc",
+     "doc": "card",
+     "q": "\"Messenger to the bridge\" means Diego…",
+     "opts": [
+      "takes messages to the bridge",
+      "steers the ship",
+      "stays in his cabin"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "card",
+     "q": "Where is the immersion suit?",
+     "opts": [
+      "Under the bunk",
+      "In the wardrobe",
+      "Behind the door"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Say where it is",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Say where it is",
+     "body": "Listen, say it, check it. The place word and the thing are strong: It's UNder the BUNK.",
+     "es": "La palabra de lugar y el objeto, fuertes.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-where"
+    },
+    {
+     "type": "shadow",
+     "model": "p-in"
+    },
+    {
+     "type": "shadow",
+     "model": "m-escape"
+    },
+    {
+     "type": "role",
+     "cue": "c-where-lifejacket",
+     "task": "It's inside the wardrobe. Tell her.",
+     "model": "p-in",
+     "accept": [
+      "It's in the wardrobe.",
+      "In the wardrobe.",
+      "It is in the wardrobe.",
+      "My lifejacket is in the wardrobe."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-where-suit",
+     "task": "It's under the bunk. Tell her.",
+     "model": "p-under",
+     "accept": [
+      "It's under the bunk.",
+      "Under the bunk.",
+      "It is under the bunk.",
+      "The immersion suit is under the bunk."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-where-card",
+     "task": "It's on the back of the door. Tell him.",
+     "model": "m-behind",
+     "accept": [
+      "It's behind the door.",
+      "Behind the door.",
+      "It is behind the door.",
+      "My muster card is behind the door."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-where-station",
+     "task": "Say your muster station: boat deck, port side.",
+     "model": "m-station",
+     "accept": [
+      "Boat deck, port side.",
+      "It's on the boat deck, port side.",
+      "On the boat deck, port side.",
+      "Muster station B. Boat deck, port side.",
+      "My muster station is on the boat deck, port side."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-bunk",
+     "q": "Type what you hear.",
+     "accept": [
+      "bunk"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-card",
+     "a": "card"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-bunk",
+     "a": "bunk"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l07-09",
+      "l07-10"
+     ],
+     "q": "Where is the muster card?",
+     "opts": [
+      "Behind the door",
+      "Under the bunk",
+      "In the wardrobe"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Your helmet is on top of the wardrobe. It's ___ the wardrobe.",
+     "opts": [
+      "on",
+      "in",
+      "under"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Tanya says something you don't understand. You say…",
+     "opts": [
+      "Sorry, can you say that again?",
+      "Sorry, repeat.",
+      "What you say?"
+     ],
+     "a": 0,
+     "why": "From Lesson 1."
+    },
+    {
+     "type": "build",
+     "q": "Say where your escape route is.",
+     "a": [
+      "The",
+      "stairs",
+      "next",
+      "to",
+      "the",
+      "laundry."
+     ],
+     "extra": [
+      "of",
+      "in"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-cabin-other",
+     "q": "Which deck is Tanya's cabin on? Write the letter.",
+     "accept": [
+      "d"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: chaleco salvavidas",
+     "accept": [
+      "lifejacket",
+      "a lifejacket",
+      "life jacket"
+     ]
+    }
+   ]
+  }
+ ]
+}

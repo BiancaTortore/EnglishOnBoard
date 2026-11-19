@@ -96,6 +96,7 @@ def photo_prompt(name):
     if not m: sys.exit(f"img/l{NN}/prompts.md: missing a '## `{name}`' section with a '> prompt' line")
     return m.group(1)
 hero_p, scene_p = photo_prompt("hero.jpg"), photo_prompt("scene.jpg")
+HERO_DONE = os.path.exists(f"{ROOT}/img/l{NN}/hero.jpg")
 m = re.search(r"^Referencias:\s*(.+)$", HERO, re.M)
 REFS = re.sub(r"[*.]", "", m.group(1)).strip() if m else "los personajes de la escena"
 
@@ -205,9 +206,9 @@ ul.plain{{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 
 <section class="part" id="fotos">
   <span class="num">04</span><h2>Las 2 fotos de la Lesson {N}</h2>
-  <p class="sub">Solo personas y ambiente: planos cerrados, el buque de fondo y nada técnico a la vista (cabos, bitas, planchada). Lo técnico va en las láminas que dibujo yo. Generá primero la escena y usala de referencia para la portada. Fichas a adjuntar: {e(REFS)}.</p>
-  <article class="photo"><h3>1 · Escena del diálogo · <code>scene.jpg</code></h3><div class="meta"><span>Horizontal 4:3</span><span>mín. 1440 × 1080</span><span>Referencias: {e(REFS)}</span></div><p class="prompt">{e(scene_p)}</p>{copybtn(scene_p)}</article>
-  <article class="photo"><h3>2 · Portada · <code>hero.jpg</code></h3><div class="meta"><span>Vertical 4:5</span><span>mín. 1080 × 1350</span><span>Adjuntá <code>scene.jpg</code> como referencia</span></div><p class="prompt">{e(hero_p)}</p>{copybtn(hero_p)}</article>
+  <p class="sub">Solo personas y ambiente: planos cerrados, el buque de fondo y nada técnico a la vista (cabos, bitas, planchada). Lo técnico va en las láminas que dibujo yo. {"<b>La portada ya está hecha:</b> generá solo la escena y adjuntá la portada como referencia." if HERO_DONE else "Generá primero la escena y usala de referencia para la portada."} Fichas a adjuntar: {e(REFS)}.</p>
+  <article class="photo"><h3>1 · Escena del diálogo · <code>scene.jpg</code></h3><div class="meta"><span>Horizontal 4:3</span><span>mín. 1440 × 1080</span><span>Referencias: {e(REFS)}</span>{"<span>Adjuntá <code>hero.jpg</code></span>" if HERO_DONE else ""}</div><p class="prompt">{e(scene_p)}</p>{copybtn(scene_p)}</article>
+  {"" if HERO_DONE else f'<article class="photo"><h3>2 · Portada · <code>hero.jpg</code></h3><div class="meta"><span>Vertical 4:5</span><span>mín. 1080 × 1350</span><span>Adjuntá <code>scene.jpg</code> como referencia</span></div><p class="prompt">{e(hero_p)}</p>{copybtn(hero_p)}</article>'}
 </section>
 
 <section class="part" id="enviar">

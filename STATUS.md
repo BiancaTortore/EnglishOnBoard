@@ -22,6 +22,8 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - Módulo 1 completo (L1–L5), con fotos y audios. Revisión de contenido aplicada (opciones parejas, ejercicio "Read and tap").
 - App: bienvenida, resumen de lección y de módulo, repaso de errores, ajustes (velocidad, reinicio de progreso).
 - Lesson 6 (Joining the ship) completa (7 nov): JSON, lámina, fotos (`scene.jpg`, `hero.jpg`), 29 audios de personajes y voz modelo. Sigue con candado en la beta (solo se ve en modo vista previa). Diego lo grabó Bianca a mano; Lars, Tanya y James salieron de `Grabar audios.command`.
+- Lessons 7, 8 y 9 escritas (19 nov): JSON, láminas, prompts de la escena y kits. Las portadas ya estaban. **Faltan sus 3 escenas (`scene.jpg`) y los audios** (personajes y voz modelo: Bianca los graba con `Grabar audios.command`). Mientras tanto habla el celular. Siguen con candado en la beta (modo vista previa).
+- La app tiene efecto de altavoz del buque para los anuncios: `"pa": true` en el audio (L9).
 - Inicio rediseñado (nov 2026, opción A "aligerada"): foto de la lección actual con un solo botón Continue, carta náutica de la derrota real Houston → Marsella con el barco según el avance (una sola línea: "Module N · X% of the voyage"), franja finita de repaso si hay errores, lista del módulo actual con foto y barra de progreso, y barra de pestañas abajo: Home, Lessons, Practice, Logbook (todas las palabras de las lecciones empezadas, con audio y buscador) y Profile (estadísticas + ajustes).
 - Portada por módulo en el inicio: `img/mNN/hero.jpg` (9:16, Diego en la mitad de arriba, abajo cubierta oscura para el texto), declarada como `"hero"` en el módulo de `course.json`. Si un módulo no la tiene, el inicio usa la foto de la lección actual. Hecha: Módulo 1.
 - Quick practice (en la pestaña Practice): 8 preguntas al azar de las lecciones empezadas. Test por módulo: 15 preguntas (5 escuchar, 4 vocabulario, 3 lectura, 3 completar), 80 % para aprobar, opcional (no bloquea el módulo siguiente), se habilita al terminar todas las lecciones del módulo. Los errores van al repaso.
@@ -56,7 +58,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
 3. Probar en iPhone/Safari.
-4. **Siguiente:** Lessons 7–9 para cerrar el Módulo 2 (proponer primero, esperar aprobación). Después lecciones 10–27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
+4. **Siguiente:** recibir escenas y audios de L7–L9 (cuando lleguen: `"modelAudio": true` y `mediaRev` en cada JSON). Después Módulo 3, lecciones 10–12 (proponer primero, esperar aprobación), y así hasta la 27 (temario e historia en BIBLE.md). Por cada lección: JSON, lámina SVG, prompts de fotos, kit, después recibir fotos y audios.
 5. (hecho, 4 nov) Tarjeta "APP 04 · English on Board · Public beta" en la landing chartroomlab.com, con captura del inicio; se sube a mano como zip al proyecto de la landing en Cloudflare.
 6. Venta: cuentas y pagos (Cloudflare D1 + Stripe, Módulo 1 gratis), landing, chequeo de marca, aclarar que no es un curso aprobado por la OMI ni certifica STCW.
 

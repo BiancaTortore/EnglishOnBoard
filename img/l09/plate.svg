@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-label="Muster station B on the boat deck: loudspeaker, alarm bell, fire alarm and lifeboat">
+  <!-- Lesson 9 plate: muster station B, boat deck, port side, seen from the deck looking aft-outboard.
+       Left: the white bulkhead of the accommodation with the loudspeaker, the general alarm bell, the red fire alarm
+       call point and the green muster-station sign. Right: the lifeboat in its davit over the ship's side.
+       Colours come from app.css (.p-*). -->
+  <rect class="p-water" x="0" y="0" width="400" height="230"/>
+  <!-- quay and cranes far away (in port) -->
+  <rect class="p-quay" x="0" y="118" width="400" height="16" opacity=".8"/>
+  <path d="M176 118 V70 L162 64 M176 70 H188 M184 70 V118" class="p-stroke" stroke-width="2" opacity=".35"/>
+  <!-- deck -->
+  <path class="p-deck" d="M0 176 H400 V230 H0 Z"/>
+  <!-- railing -->
+  <g class="p-stroke" stroke-width="2" opacity=".75">
+    <line x1="150" y1="150" x2="400" y2="150"/><line x1="150" y1="163" x2="400" y2="163"/>
+    <line x1="170" y1="150" x2="170" y2="176"/><line x1="230" y1="150" x2="230" y2="176"/><line x1="290" y1="150" x2="290" y2="176"/><line x1="350" y1="150" x2="350" y2="176"/>
+  </g>
+
+  <!-- ACCOMMODATION BULKHEAD -->
+  <rect class="p-super" x="0" y="10" width="150" height="166"/>
+  <line class="p-line" x1="150" y1="10" x2="150" y2="176" stroke-width="1.5"/>
+  <!-- door -->
+  <rect x="96" y="92" width="40" height="84" rx="6" class="p-white"/>
+  <circle cx="128" cy="134" r="2.2" class="p-hull"/>
+  <!-- LOUDSPEAKER (horn) -->
+  <g transform="translate(40 30)">
+    <rect x="-3" y="-4" width="10" height="12" rx="2" class="p-hull"/>
+    <path d="M7 -2 L30 -12 L30 18 L7 8 Z" class="p-hull"/>
+    <path d="M36 -6 Q42 3 36 12 M42 -10 Q50 3 42 16" fill="none" style="stroke:var(--hull)" stroke-width="1.6" opacity=".6"/>
+  </g>
+  <!-- GENERAL ALARM BELL -->
+  <g transform="translate(116 46)">
+    <circle r="14" class="p-red"/>
+    <circle r="9" fill="none" stroke="#fff" stroke-width="1.4" opacity=".6"/>
+    <circle r="3" class="p-hull"/>
+  </g>
+  <!-- FIRE ALARM call point -->
+  <rect x="30" y="98" width="24" height="24" rx="3" class="p-red"/>
+  <rect x="35" y="103" width="14" height="14" rx="1" style="fill:#fff" opacity=".9"/>
+  <circle cx="42" cy="110" r="3.5" class="p-red"/>
+  <!-- muster station sign: people + letter -->
+  <rect x="26" y="58" width="44" height="26" rx="2" style="fill:#1E8A4C"/>
+  <g style="fill:#fff">
+    <circle cx="36" cy="66" r="2.4"/><circle cx="44" cy="66" r="2.4"/><circle cx="52" cy="66" r="2.4"/>
+    <path d="M32.5 77 Q36 69.5 39.5 77 Z M40.5 77 Q44 69.5 47.5 77 Z M48.5 77 Q52 69.5 55.5 77 Z"/>
+    <text x="63" y="76" text-anchor="middle" style="font:700 11px var(--f-mono)">B</text>
+  </g>
+
+  <!-- DAVIT and LIFEBOAT -->
+  <g style="stroke:var(--hull)" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M196 176 V60 Q196 46 210 46 H246"/>
+    <path d="M356 176 V60 Q356 46 342 46 H306"/>
+  </g>
+  <g style="stroke:var(--hull)" stroke-width="1.3"><line x1="244" y1="46" x2="244" y2="78"/><line x1="308" y1="46" x2="308" y2="78"/></g>
+  <!-- boat: orange hull, white canopy -->
+  <path d="M210 104 Q212 128 238 132 H316 Q340 128 344 104 Z" class="p-orange"/>
+  <path d="M214 104 Q216 80 250 78 H304 Q338 80 340 104 Z" class="p-super" style="stroke:var(--hull)" stroke-width="1.2"/>
+  <g class="p-hull" opacity=".55">
+    <rect x="236" y="88" width="10" height="7" rx="2"/><rect x="256" y="88" width="10" height="7" rx="2"/><rect x="288" y="88" width="10" height="7" rx="2"/><rect x="308" y="88" width="10" height="7" rx="2"/>
+  </g>
+  <rect x="270" y="72" width="14" height="10" rx="2" class="p-orange"/>
+  <line x1="214" y1="104" x2="340" y2="104" style="stroke:var(--hull)" stroke-width="1.2"/>
+</svg>

@@ -1,0 +1,1043 @@
+{
+ "n": 9,
+ "module": 2,
+ "title": "Alarms & emergency instructions",
+ "place": "Day 2 · 10:00 · Houston, boat deck",
+ "goal": "Understand alarms and announcements, and answer at the muster station.",
+ "images": {
+  "hero": "img/l09/hero.jpg",
+  "scene": "img/l09/scene.jpg"
+ },
+ "radioChannel": "UHF",
+ "audio": {
+  "l09-01": {
+   "voice": "lars",
+   "text": "Attention, all crew. This is the Captain speaking. This is a drill. This is a drill.",
+   "es": "Atención, toda la tripulación. Habla el Capitán. Esto es un simulacro. Esto es un simulacro.",
+   "pa": true
+  },
+  "l09-02": {
+   "voice": "lars",
+   "text": "General alarm. All crew, go to your muster stations. Do not use the lift.",
+   "es": "Alarma general. Toda la tripulación, a sus estaciones de reunión. No usen el ascensor.",
+   "pa": true
+  },
+  "l09-03": {
+   "voice": "rolando",
+   "text": "Come on, cadet! The stairs, not the lift.",
+   "es": "¡Vamos, cadete! La escalera, no el ascensor."
+  },
+  "l09-04": {
+   "voice": "diego",
+   "text": "Boat deck, port side. Muster station B!",
+   "es": "Cubierta de botes, babor. ¡Estación B!"
+  },
+  "l09-05": {
+   "voice": "tanya",
+   "text": "Diego! Don't run on the stairs. Walk.",
+   "es": "¡Diego! No corras en la escalera. Caminá."
+  },
+  "l09-06": {
+   "voice": "diego",
+   "text": "Sorry!",
+   "es": "¡Perdón!"
+  },
+  "l09-07": {
+   "voice": "tanya",
+   "text": "OK, headcount. Rolando?",
+   "es": "Bueno, conteo. ¿Rolando?"
+  },
+  "l09-08": {
+   "voice": "rolando",
+   "text": "Present.",
+   "es": "Presente."
+  },
+  "l09-09": {
+   "voice": "tanya",
+   "text": "Diego?",
+   "es": "¿Diego?"
+  },
+  "l09-10": {
+   "voice": "diego",
+   "text": "Present.",
+   "es": "Presente."
+  },
+  "l09-11": {
+   "voice": "tanya",
+   "text": "Kumar? … Kumar?",
+   "es": "¿Kumar? … ¿Kumar?"
+  },
+  "l09-12": {
+   "voice": "rolando",
+   "text": "Kumar isn't here, Chief.",
+   "es": "Kumar no está, jefa."
+  },
+  "l09-13": {
+   "voice": "tanya",
+   "text": "Bridge, muster station B. Seventeen present, one missing: Kumar. Over.",
+   "es": "Puente, estación B. Diecisiete presentes, uno falta: Kumar. Cambio."
+  },
+  "l09-14": {
+   "voice": "lars",
+   "text": "Received. Kumar is in the engine room with the Chief Engineer. He's OK. Over.",
+   "es": "Recibido. Kumar está en la sala de máquinas con el Jefe de Máquinas. Está bien. Cambio.",
+   "radio": true
+  },
+  "l09-15": {
+   "voice": "tanya",
+   "text": "Received. All crew accounted for. Over.",
+   "es": "Recibido. Toda la tripulación verificada. Cambio."
+  },
+  "l09-16": {
+   "voice": "lars",
+   "text": "This is the Captain. The drill is over. Thank you, all crew.",
+   "es": "Habla el Capitán. El simulacro terminó. Gracias a toda la tripulación.",
+   "pa": true
+  },
+  "w-drill": {
+   "voice": "model",
+   "text": "drill"
+  },
+  "x-drill": {
+   "voice": "model",
+   "text": "This is a drill.",
+   "es": "Esto es un simulacro."
+  },
+  "w-general": {
+   "voice": "model",
+   "text": "general alarm"
+  },
+  "x-general": {
+   "voice": "model",
+   "text": "The general alarm is seven short and one long.",
+   "es": "La alarma general son siete cortas y una larga."
+  },
+  "w-fire": {
+   "voice": "model",
+   "text": "fire alarm"
+  },
+  "x-fire": {
+   "voice": "model",
+   "text": "Press the fire alarm.",
+   "es": "Apretá la alarma de incendio."
+  },
+  "w-announcement": {
+   "voice": "model",
+   "text": "announcement"
+  },
+  "x-announcement": {
+   "voice": "model",
+   "text": "Listen to the announcement.",
+   "es": "Escuchá el anuncio."
+  },
+  "w-speaker": {
+   "voice": "model",
+   "text": "loudspeaker"
+  },
+  "x-speaker": {
+   "voice": "model",
+   "text": "The loudspeaker is above the door.",
+   "es": "El parlante está arriba de la puerta."
+  },
+  "w-lifeboat": {
+   "voice": "model",
+   "text": "lifeboat"
+  },
+  "x-lifeboat": {
+   "voice": "model",
+   "text": "My lifeboat is number two.",
+   "es": "Mi bote salvavidas es el número dos."
+  },
+  "w-headcount": {
+   "voice": "model",
+   "text": "headcount"
+  },
+  "x-headcount": {
+   "voice": "model",
+   "text": "The Chief Officer does the headcount.",
+   "es": "La Primer Oficial hace el conteo."
+  },
+  "w-missing": {
+   "voice": "model",
+   "text": "missing"
+  },
+  "x-missing": {
+   "voice": "model",
+   "text": "One person is missing.",
+   "es": "Falta una persona."
+  },
+  "p-drill": {
+   "voice": "model",
+   "text": "This is a drill.",
+   "es": "Esto es un simulacro."
+  },
+  "p-present": {
+   "voice": "model",
+   "text": "Present.",
+   "es": "Presente."
+  },
+  "p-missing": {
+   "voice": "model",
+   "text": "One missing.",
+   "es": "Falta uno."
+  },
+  "p-allpresent": {
+   "voice": "model",
+   "text": "All present.",
+   "es": "Todos presentes."
+  },
+  "p-donot": {
+   "voice": "model",
+   "text": "Do not use the lift.",
+   "es": "No usen el ascensor."
+  },
+  "p-dont": {
+   "voice": "model",
+   "text": "Don't run on the stairs.",
+   "es": "No corras en la escalera."
+  },
+  "m-report": {
+   "voice": "model",
+   "text": "Eighteen present, none missing.",
+   "es": "Dieciocho presentes, no falta nadie."
+  },
+  "m-nolift": {
+   "voice": "model",
+   "text": "No, don't use the lift.",
+   "es": "No, no uses el ascensor."
+  },
+  "m-isnt": {
+   "voice": "model",
+   "text": "He isn't here.",
+   "es": "No está."
+  },
+  "c-show-speaker": {
+   "voice": "tanya",
+   "text": "Where's the loudspeaker?"
+  },
+  "c-show-lifeboat": {
+   "voice": "rolando",
+   "text": "Show me the lifeboat."
+  },
+  "c-show-general": {
+   "voice": "tanya",
+   "text": "Show me the general alarm bell."
+  },
+  "c-show-fire": {
+   "voice": "james",
+   "text": "Where's the fire alarm?"
+  },
+  "c-roll": {
+   "voice": "tanya",
+   "text": "Diego?"
+  },
+  "c-report": {
+   "voice": "lars",
+   "text": "Muster station B, report. Over.",
+   "radio": true
+  },
+  "c-lift": {
+   "voice": "james",
+   "text": "Can I use the lift?"
+  },
+  "c-where-kumar": {
+   "voice": "tanya",
+   "text": "Where's Kumar? Is he here?"
+  },
+  "c-not1": {
+   "voice": "lars",
+   "text": "Do not use the lift.",
+   "pa": true
+  },
+  "c-not2": {
+   "voice": "lars",
+   "text": "Go to your muster stations now.",
+   "pa": true
+  },
+  "c-not3": {
+   "voice": "tanya",
+   "text": "The lifeboat isn't ready."
+  },
+  "c-not4": {
+   "voice": "tanya",
+   "text": "The lifeboat is ready."
+  },
+  "c-count-other": {
+   "voice": "tanya",
+   "text": "Muster station A: twenty-one present."
+  }
+ },
+ "dialogue": [
+  "l09-01",
+  "l09-02",
+  "l09-03",
+  "l09-04",
+  "l09-05",
+  "l09-06",
+  "l09-07",
+  "l09-08",
+  "l09-09",
+  "l09-10",
+  "l09-11",
+  "l09-12",
+  "l09-13",
+  "l09-14",
+  "l09-15",
+  "l09-16"
+ ],
+ "words": {
+  "drill": {
+   "en": "drill",
+   "ipa": "/drɪl/",
+   "es": "simulacro, ejercicio",
+   "audio": "w-drill",
+   "ex": "x-drill"
+  },
+  "general": {
+   "en": "general alarm",
+   "ipa": "/ˌdʒenrəl əˈlɑːm/",
+   "es": "alarma general",
+   "audio": "w-general",
+   "ex": "x-general"
+  },
+  "fire": {
+   "en": "fire alarm",
+   "ipa": "/ˈfaɪər əˌlɑːm/",
+   "es": "alarma de incendio",
+   "audio": "w-fire",
+   "ex": "x-fire"
+  },
+  "announcement": {
+   "en": "announcement",
+   "ipa": "/əˈnaʊnsmənt/",
+   "es": "anuncio (por altavoz)",
+   "audio": "w-announcement",
+   "ex": "x-announcement"
+  },
+  "speaker": {
+   "en": "loudspeaker",
+   "ipa": "/ˌlaʊdˈspiːkə/",
+   "es": "altavoz, parlante",
+   "audio": "w-speaker",
+   "ex": "x-speaker"
+  },
+  "lifeboat": {
+   "en": "lifeboat",
+   "ipa": "/ˈlaɪfbəʊt/",
+   "es": "bote salvavidas",
+   "audio": "w-lifeboat",
+   "ex": "x-lifeboat"
+  },
+  "headcount": {
+   "en": "headcount",
+   "ipa": "/ˈhedkaʊnt/",
+   "es": "conteo de personas",
+   "audio": "w-headcount",
+   "ex": "x-headcount"
+  },
+  "missing": {
+   "en": "missing",
+   "ipa": "/ˈmɪsɪŋ/",
+   "es": "que falta, desaparecido",
+   "audio": "w-missing",
+   "ex": "x-missing"
+  }
+ },
+ "plate": {
+  "svg": "img/l09/plate.svg",
+  "pins": [
+   {
+    "word": "speaker",
+    "x": 62,
+    "y": 26
+   },
+   {
+    "word": "general",
+    "x": 128,
+    "y": 34
+   },
+   {
+    "word": "fire",
+    "x": 56,
+    "y": 96
+   },
+   {
+    "word": "lifeboat",
+    "x": 296,
+    "y": 70
+   }
+  ]
+ },
+ "docs": {
+  "poster": {
+   "kind": "form",
+   "title": "EMERGENCY INSTRUCTIONS",
+   "subtitle": "M/V LNG HORIZON · POSTED IN EVERY CABIN",
+   "cells": [
+    [
+     "GENERAL ALARM",
+     "7 short + 1 long blasts"
+    ],
+    [
+     "ON GENERAL ALARM",
+     "Go to your muster station"
+    ],
+    [
+     "FIRE ALARM",
+     "Continuous bell"
+    ],
+    [
+     "ON FIRE ALARM",
+     "Go to your fire station"
+    ],
+    [
+     "BRING",
+     "Lifejacket, helmet, warm clothes"
+    ],
+    [
+     "DO NOT",
+     "Use the lift"
+    ],
+    [
+     "ABANDON SHIP",
+     "Order by the Master only"
+    ],
+    [
+     "HEADCOUNT",
+     "By the Chief Officer at each muster station"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: the drill",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l09/scene.jpg",
+     "kicker": "Day 2 · 10:00 · Houston",
+     "title": "The alarm rings",
+     "body": "The next morning, before sailing, the alarm rings in the whole ship. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l09-01"
+     ],
+     "q": "Is it a real emergency?",
+     "opts": [
+      "No, it's a drill",
+      "Yes, it's a fire",
+      "We don't know"
+     ],
+     "a": 0,
+     "why": "\"This is a drill. This is a drill.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l09-02",
+      "l09-03"
+     ],
+     "q": "What must the crew NOT use?",
+     "opts": [
+      "The lift",
+      "The stairs",
+      "The radio"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l09-04",
+      "l09-05",
+      "l09-06"
+     ],
+     "q": "What does Tanya tell Diego?",
+     "opts": [
+      "Don't run on the stairs",
+      "Don't use the stairs",
+      "Run to the boat deck"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l09-07",
+      "l09-08",
+      "l09-09",
+      "l09-10",
+      "l09-11",
+      "l09-12"
+     ],
+     "q": "Who is missing?",
+     "opts": [
+      "Kumar",
+      "Rolando",
+      "Diego"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l09-13",
+      "l09-14"
+     ],
+     "q": "Where is Kumar?",
+     "opts": [
+      "In the engine room",
+      "In the galley",
+      "In his cabin"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l09-15",
+      "l09-16"
+     ],
+     "q": "At the end…",
+     "opts": [
+      "The drill is over",
+      "They go to the lifeboat",
+      "They start a fire drill"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole drill",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "At the muster station",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "Muster station B on the boat deck, port side."
+    },
+    {
+     "type": "card",
+     "word": "drill"
+    },
+    {
+     "type": "card",
+     "word": "general"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-general",
+     "a": "general"
+    },
+    {
+     "type": "card",
+     "word": "fire"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-fire",
+     "a": "fire"
+    },
+    {
+     "type": "card",
+     "word": "announcement"
+    },
+    {
+     "type": "card",
+     "word": "speaker"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-speaker",
+     "a": "speaker"
+    },
+    {
+     "type": "card",
+     "word": "lifeboat"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-lifeboat",
+     "a": "lifeboat"
+    },
+    {
+     "type": "card",
+     "word": "headcount"
+    },
+    {
+     "type": "card",
+     "word": "missing"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"simulacro\" in English:",
+     "opts": [
+      "drill",
+      "simulation",
+      "exercise alarm"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "drill",
+       "simulacro"
+      ],
+      [
+       "headcount",
+       "conteo"
+      ],
+      [
+       "missing",
+       "que falta"
+      ],
+      [
+       "loudspeaker",
+       "parlante"
+      ],
+      [
+       "lifeboat",
+       "bote salvavidas"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Do not / Don't",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "At the muster station",
+     "list": [
+      [
+       "This is a drill.",
+       "Esto es un simulacro.",
+       "p-drill"
+      ],
+      [
+       "Present.",
+       "Presente.",
+       "p-present"
+      ],
+      [
+       "One missing.",
+       "Falta uno.",
+       "p-missing"
+      ],
+      [
+       "All present.",
+       "Todos presentes.",
+       "p-allpresent"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Do not or Don't?",
+     "steps": [
+      [
+       "Announcement",
+       "Do not use the lift."
+      ],
+      [
+       "Person to person",
+       "Don't run on the stairs."
+      ],
+      [
+       "Report",
+       "Kumar isn't here."
+      ]
+     ],
+     "paras": [
+      "Announcements and signs use the full form: <b>Do not</b>. It's slow and clear.",
+      "People talking use the short form: <b>don't</b>, <b>isn't</b>, <b>aren't</b>. The meaning is the same."
+     ],
+     "avoid": "Not use the lift. · No run. · Kumar no is here."
+    },
+    {
+     "type": "choice",
+     "q": "Tanya to Diego: \"___ run on the stairs!\"",
+     "opts": [
+      "Don't",
+      "No",
+      "Not"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "A sign on the lift door says…",
+     "opts": [
+      "DO NOT USE IN AN EMERGENCY",
+      "NO USE IN EMERGENCY",
+      "NOT USE IN EMERGENCY"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "Kumar is not at the muster station.",
+     "q": "Tell the Chief Officer.",
+     "a": [
+      "Kumar",
+      "isn't",
+      "here."
+     ],
+     "extra": [
+      "no",
+      "don't"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "\"No\" is not \"not\"",
+     "paras": [
+      "In Spanish, <i>no</i> goes before the verb: <i>no corras</i>, <i>no está</i>. In English you need <b>don't</b> or <b>isn't</b>: <b>Don't run.</b> <b>He isn't here.</b>",
+      "<b>No</b> alone is only the answer: <i>Can I use the lift? — No.</i>"
+     ],
+     "avoid": "No run. · He no is here. · No use the lift."
+    },
+    {
+     "type": "choice",
+     "q": "Which one is correct?",
+     "opts": [
+      "He isn't here.",
+      "He no is here.",
+      "He not here."
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Catch the NOT",
+     "paras": [
+      "In fast English, <i>isn't</i> and <i>don't</i> are short. Listen for the <b>t</b> at the end, or for <b>not</b>, stressed.",
+      "In an announcement the speaker says <b>NOT</b> slowly, so nobody misses it."
+     ],
+     "list": [
+      [
+       "Do NOT use the lift.",
+       "No usen el ascensor.",
+       "p-donot"
+      ],
+      [
+       "DON'T run on the stairs.",
+       "No corras en la escalera.",
+       "p-dont"
+      ]
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-not3"
+     ],
+     "q": "Is the lifeboat ready?",
+     "opts": [
+      "No",
+      "Yes"
+     ],
+     "a": 0,
+     "why": "\"isn't ready\"."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-not4"
+     ],
+     "q": "Is the lifeboat ready?",
+     "opts": [
+      "Yes",
+      "No"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-not2"
+     ],
+     "q": "Does the Captain say NOT?",
+     "opts": [
+      "No, it's an order to go",
+      "Yes, \"do not go\""
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "audio": "c-count-other",
+     "q": "How many people are present at muster station A? Write the number.",
+     "accept": [
+      "21",
+      "twenty one",
+      "twentyone"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the emergency instructions",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "poster",
+     "q": "What is the general alarm signal?",
+     "opts": [
+      "7 short + 1 long",
+      "A continuous bell",
+      "1 long + 7 short"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "poster",
+     "q": "What do you bring to the muster station?",
+     "opts": [
+      "Lifejacket, helmet, warm clothes",
+      "Passport and seaman's book",
+      "Nothing"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "poster",
+     "q": "Tap who gives the order to abandon ship.",
+     "a": 6
+    },
+    {
+     "type": "doc",
+     "doc": "poster",
+     "q": "Who does the headcount?",
+     "opts": [
+      "The Chief Officer",
+      "The Captain",
+      "The bosun"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "poster",
+     "q": "The fire alarm sounds…",
+     "opts": [
+      "like a continuous bell",
+      "7 short and 1 long",
+      "only on the bridge"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Report at the muster station",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Short and clear",
+     "body": "Listen, say it, check it. At a muster station, answers are short and loud.",
+     "es": "En el zafarrancho: respuestas cortas y claras.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-drill"
+    },
+    {
+     "type": "shadow",
+     "model": "p-dont"
+    },
+    {
+     "type": "shadow",
+     "model": "p-allpresent"
+    },
+    {
+     "type": "role",
+     "cue": "c-roll",
+     "task": "Answer the headcount.",
+     "model": "p-present",
+     "accept": [
+      "Present.",
+      "Present!",
+      "Here.",
+      "Present, Chief.",
+      "Present, Chief Officer."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-report",
+     "task": "You count 18 people. Nobody is missing. Report.",
+     "model": "m-report",
+     "accept": [
+      "Eighteen present, none missing.",
+      "Eighteen present. None missing.",
+      "All present. Eighteen.",
+      "Eighteen present, all present.",
+      "Muster station B, eighteen present, none missing.",
+      "Eighteen present, none missing. Over."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-lift",
+     "task": "No. Tell him not to use the lift.",
+     "model": "m-nolift",
+     "accept": [
+      "No, don't use the lift.",
+      "Don't use the lift.",
+      "No. Don't use the lift.",
+      "No, use the stairs.",
+      "No, don't use the lift. Use the stairs."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-where-kumar",
+     "task": "Kumar is not here. Tell her.",
+     "model": "m-isnt",
+     "accept": [
+      "He isn't here.",
+      "He's not here.",
+      "Kumar isn't here.",
+      "Kumar's not here.",
+      "No, he isn't here.",
+      "No, he's not here."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-drill",
+     "q": "Type what you hear.",
+     "accept": [
+      "drill",
+      "a drill"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-lifeboat",
+     "a": "lifeboat"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-speaker",
+     "a": "speaker"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l09-02"
+     ],
+     "q": "Where do all crew go?",
+     "opts": [
+      "To their muster stations",
+      "To the bridge",
+      "To the mess room"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-not1"
+     ],
+     "q": "Can you use the lift?",
+     "opts": [
+      "No",
+      "Yes"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Everybody is at the muster station. You report…",
+     "opts": [
+      "All present.",
+      "All here are.",
+      "Everybody present is."
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Your muster station is on the boat deck, ___ side.",
+     "opts": [
+      "port",
+      "left",
+      "porter"
+     ],
+     "a": 0,
+     "why": "From Lessons 1 and 7."
+    },
+    {
+     "type": "build",
+     "q": "Tell a new crew member: no running on the stairs.",
+     "a": [
+      "Don't",
+      "run",
+      "on",
+      "the",
+      "stairs."
+     ],
+     "extra": [
+      "No",
+      "not"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: simulacro",
+     "accept": [
+      "drill",
+      "a drill"
+     ]
+    }
+   ]
+  }
+ ]
+}

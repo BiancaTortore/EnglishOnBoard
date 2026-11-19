@@ -150,7 +150,7 @@ function clipFiles(id){
 }
 
 /* Try the recorded file; resolve false if it doesn't exist */
-function playFile(file, {radio, rate}, tok){
+function playFile(file, {radio, pa, rate}, tok){
   return new Promise(res => {
     if (missing.has(file)) { res(false); return; }
     const pre = prepared.get(file); prepared.delete(file);
@@ -167,6 +167,18 @@ function playFile(file, {radio, rate}, tok){
     el.oncanplay = () => {
       if (started || tok !== playToken) return;
       started = true; clearTimeout(timer);
+      if (pa && !radio && ctx()) {
+        /* ship's loudspeaker: narrow band and a short echo off the steel, no static */
+        try {
+          const c = actx, src = c.createMediaElementSource(el);
+          const hp = c.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 300;
+          const lp = c.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 3600;
+          const dl = c.createDelay(1); dl.delayTime.value = .11;
+          const fb = c.createGain(); fb.gain.value = .28;
+          src.connect(hp).connect(lp);
+          lp.connect(c.destination); lp.connect(dl); dl.connect(fb).connect(dl); fb.connect(c.destination);
+        } catch (e) {}
+      }
       if (radio && ctx()) {
         try {
           const c = actx, src = c.createMediaElementSource(el);
@@ -185,12 +197,12 @@ function playFile(file, {radio, rate}, tok){
   });
 }
 
-async function playPart(id, text, voice, radio, rate, tok){
+async function playPart(id, text, voice, radio, rate, tok, pa){
   /* the model voice (words, examples, model answers) uses its recording once the lesson has
      them ("modelAudio": true in the lesson file); otherwise, or if one is missing, the phone's voice */
   if (voice === "model" && !L.modelAudio) { await speakTTS(text, voice, rate); return; }
   const file = `audio/${lessonDir()}/${id}.mp3`;
-  const ok = await playFile(file, {radio, rate}, tok);
+  const ok = await playFile(file, {radio, pa, rate}, tok);
   if (!ok && tok === playToken) await speakTTS(text, voice, rate);
 }
 
@@ -204,7 +216,7 @@ async function playClip(id, {rate = 1, garble = false} = {}, tokIn){
   for (let i = 0; i < parts.length; i++) {
     if (tok !== playToken) return;
     const pid = parts.length > 1 ? `${id}-${"ab"[i]}` : id;
-    if (parts[i].trim()) await playPart(pid, parts[i], c.voice, radio, rate, tok);
+    if (parts[i].trim()) await playPart(pid, parts[i], c.voice, radio, rate, tok, !!c.pa);
     if (i < parts.length - 1) { staticLevel(.32); await wait(c.garble || garble ? 900 : 400); staticLevel(.035); }
   }
   if (radio && tok === playToken) { await squelch(); staticOff(); }
@@ -223,7 +235,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
     const nx = ids[k + 1];
     if (nx && tok === playToken) {
       const a = clip(id), b = clip(nx);
-      await wait(a.radio || b.radio ? 250 : a.voice === b.voice ? 60 : 160);
+      await wait(a.radio || b.radio || a.pa || b.pa ? 250 : a.voice === b.voice ? 60 : 160);
     }
   }
   onLine && onLine(null);
@@ -233,7 +245,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-33";
+const APP_VERSION = "beta-34";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -940,7 +952,7 @@ function wirePlayer(fn){
   $("#slow").onclick = () => { stopAll(); run(.75); };
   return run;
 }
-const radioLabel = ids => ids.some(id => clip(id).radio) ? (L.radioChannel || "VHF") : "";
+const radioLabel = ids => ids.some(id => clip(id).radio) ? (L.radioChannel || "VHF") : ids.some(id => clip(id).pa) ? "PA" : "";
 
 function optsHTML(opts, mix = true){
   const order = mix ? shuffle(opts.map((o, i) => i)) : opts.map((o, i) => i);
