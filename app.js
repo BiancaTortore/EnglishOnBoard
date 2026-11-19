@@ -1244,7 +1244,7 @@ function speakScreen(sc, st, retry, isRole){
 /* ---------- speech recognition: "Check my answer" ---------- */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition || null;
 let srOffline = false;
-const CONTRACT = {"it's":"it is","that's":"that is","what's":"what is","where's":"where is","who's":"who is","there's":"there is",
+const CONTRACT = {"it's":"it is","its":"it is","whats":"what is","wheres":"where is","thats":"that is","theres":"there is","that's":"that is","what's":"what is","where's":"where is","who's":"who is","there's":"there is",
   "i'm":"i am","you're":"you are","we're":"we are","they're":"they are","he's":"he is","she's":"she is",
   "can't":"can not","cannot":"can not","don't":"do not","doesn't":"does not","isn't":"is not","aren't":"are not","won't":"will not",
   "i've":"i have","we've":"we have","i'll":"i will","we'll":"we will","let's":"let us","ok":"okay","alfa":"alpha","juliett":"juliet","xray":"x ray"};
