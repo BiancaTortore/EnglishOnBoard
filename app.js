@@ -261,7 +261,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-39";
+const APP_VERSION = "beta-40";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -493,6 +493,7 @@ function showState(st){
   if (st.v === "session") { navReplace({v: "lesson", n: st.n}, "#l" + st.n); openLesson(st.n); return; }  /* a session can't be resumed halfway */
   if (st.v === "done") { loadLesson(st.n).then(viewLessonDone, () => openLesson(st.n)); return; }
   if (st.v === "feedback") { viewFeedback(); return; }
+  if (st.v === "vocab") { viewVocab(st.m); return; }
   if (st.v === "welcome") { viewWelcome(); return; }
   if (TAB_VIEWS[st.v]) { TAB_VIEWS[st.v](); return; }
   /* drills and reviews can't be resumed: land on the screen below */
@@ -552,11 +553,43 @@ function moduleTestRow(m){
 function moduleSection(m, cur){
   return `<section class="module">
     <div class="module-head"><h3>${m.n} · ${esc(m.title)}</h3><span class="mono">${esc(m.where || "")}</span></div>
-    <ol class="lrows">${m.lessons.map(l => lessonRow(l, cur && l.n === cur.n)).join("")}${m.lessons.some(l => l.ready) ? moduleTestRow(m) : ""}</ol></section>`;
+    <ol class="lrows">${m.lessons.map(l => lessonRow(l, cur && l.n === cur.n)).join("")}${m.lessons.some(l => l.ready) ? moduleTestRow(m) : ""}${PREVIEW && m.lessons.some(l => l.ready) ? vocabRow(m) : ""}</ol></section>`;
+}
+/* preview only: the author's list of every word and phrase in a module, to check and correct */
+function vocabRow(m){
+  return `<li class="lrow test ready"><button class="lrow-btn" data-vocab="${m.n}">
+      <span class="lrow-num">${I.t_lessons}</span>
+      <span class="lrow-body"><span class="lrow-title">Module ${m.n} vocabulary</span><span class="lrow-meta">Preview · every word and phrase</span></span>
+      <span class="lrow-end">${I.chev}</span></button></li>`;
+}
+async function viewVocab(modN){
+  stopAll(); clearBar(); clearTabs();
+  const mod = COURSE.modules.find(m => m.n === modN);
+  app.innerHTML = `<p class="loading">Loading the vocabulary…</p>`;
+  const blocks = [];
+  for (const l of mod.lessons.filter(l => l.ready)) {
+    try { await loadLesson(l.n); } catch (e) { continue; }
+    const Ln = L, rows = Object.values(Ln.words || {}).map(w => {
+      const ex = Ln.audio[w.ex] || {};
+      return `<li class="vrow"><button class="vplay" data-l="${Ln.n}" data-a="${w.audio}" aria-label="Play ${esc(w.en)}">${I.spk}</button>
+        <div><b>${esc(w.en)}</b> <span class="vipa">${esc(w.ipa || "")}</span> · <span>${esc(w.es)}</span>
+        ${ex.text ? `<div class="vex"><button class="vplay sm" data-l="${Ln.n}" data-a="${w.ex}" aria-label="Play example">${I.spk}</button> ${esc(ex.text)} <span class="sub">${esc(ex.es || "")}</span></div>` : ""}</div></li>`;
+    }).join("");
+    const phrases = Ln.sessions.flatMap(se => se.screens).filter(sc => sc.type === "tip" && sc.list).flatMap(sc => sc.list)
+      .map(([en, es, a]) => `<li class="vrow"><button class="vplay" data-l="${Ln.n}" data-a="${a}" aria-label="Play">${I.spk}</button><div>${esc(en)} <span class="sub">${esc(es)}</span></div></li>`).join("");
+    blocks.push(`<section class="module"><div class="module-head"><h3>${Ln.n} · ${esc(Ln.title)}</h3><span class="mono">lesson-${pad(Ln.n)}.json</span></div>
+      <ol class="vlist">${rows}</ol><p class="mono kicker" style="margin:14px 0 6px">Phrases</p><ol class="vlist">${phrases}</ol></section>`);
+  }
+  app.innerHTML = `<div class="tabview vocabview"><button class="back" id="back">${I.back} Back</button>
+    <h2 class="tab-title">Module ${mod.n} vocabulary</h2><p class="sub tab-sub">${esc(mod.title)} · preview only. Tap a speaker to hear it.</p>${blocks.join("")}</div>`;
+  $("#back").onclick = navBack;
+  $$(".vplay").forEach(b => b.onclick = async () => { await loadLesson(+b.dataset.l); playClip(b.dataset.a); });
+  window.scrollTo(0, 0);
 }
 function wireRows(){
   $$("[data-n]").forEach(b => b.onclick = () => openLessonNav(+b.dataset.n));
   $$("[data-test]").forEach(b => b.onclick = () => drillNav("test", +b.dataset.test));
+  $$("[data-vocab]").forEach(b => b.onclick = () => { navPush({v: "vocab", m: +b.dataset.vocab}); viewVocab(+b.dataset.vocab); });
 }
 
 /* the voyage chart: Diego's real passage, Houston → Marseille.

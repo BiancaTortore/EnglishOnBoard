@@ -498,3 +498,13 @@ html.dark-page body{background:#0A1620}
 
 /* lesson screens show the tab bar too: keep their content clear of it */
 .lesson,.lesson-done{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+
+/* preview: module vocabulary list */
+.vlist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.vrow{display:flex;gap:10px;align-items:flex-start;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:10px 12px;line-height:1.4}
+.vipa{font-family:var(--f-mono);font-size:12px;color:var(--muted);text-transform:none;letter-spacing:0}
+.vocabview .back{position:static!important;display:inline-flex;margin:0 0 10px;color:var(--muted)}
+.vex{margin-top:4px;font-size:14px}
+.vplay{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--rule);background:var(--bg);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.vplay.sm{width:24px;height:24px;display:inline-grid;vertical-align:middle}
+.vplay svg{width:16px;height:16px}
