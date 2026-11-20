@@ -28,10 +28,10 @@
       {"n": 16, "title": "Course, position & traffic", "ready": true}
     ]},
     {"n": 5, "title": "Reporting", "where": "Florida · Port Everglades", "lessons": [
-      {"n": 17, "title": "Speaking up about safety"},
-      {"n": 18, "title": "Faults & defects"},
-      {"n": 19, "title": "Cargo & documents"},
-      {"n": 20, "title": "Bunkering & pollution"}
+      {"n": 17, "title": "Speaking up about safety", "ready": true},
+      {"n": 18, "title": "Faults & defects", "ready": true},
+      {"n": 19, "title": "Cargo & documents", "ready": true},
+      {"n": 20, "title": "Bunkering & pollution", "ready": true}
     ]},
     {"n": 6, "title": "Emergencies", "where": "Atlantic Ocean", "lessons": [
       {"n": 21, "title": "Life-saving appliances"},

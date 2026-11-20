@@ -80,10 +80,10 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 15 | Weather & sea | Día 4 · 06:30 · Golfo de México | Guardia de Tanya: entra un frente, Diego lo reporta desde el alerón y lo registra en el log |
 | 16 | Course, position & traffic | Día 5 · 17:00 · Estrecho de Florida | Guardia de Tanya: tráfico intenso; Diego de vigía reporta buques, marcaciones y distancias |
 | **Módulo 5 · Reporting** ||||
-| 17 | Speaking up about safety | Día 5 · cubierta | Ve una plancha rajada y lo dice |
-| 18 | Faults & defects | Día 5 · puente | Falla una alarma del radar; reporta y habla con Marek |
-| 19 | Cargo & documents | Día 5 · cargo control room | Cifras de carga con Tanya; aparece una discrepancia |
-| 20 | Bunkering & pollution | Día 6 · fondeadero de Port Everglades | Barcaza de combustible; sube la inspectora Chen |
+| 17 | Speaking up about safety | Día 6 · 05:30 · cubierta, fondeados frente a Port Everglades | En la ronda de fondeo ve una rejilla rajada; Rolando dice que no importa y Diego se anima a decir que no es seguro |
+| 18 | Faults & defects | Día 6 · 07:30 · puente | Se congela el radar 1 y salta la alarma; Diego llama a Marek, que cambia un fusible |
+| 19 | Cargo & documents | Día 6 · 10:00 · cargo control room | Reporte diario de carga con Tanya; Diego encuentra una discrepancia en el tanque 3 (error de tipeo) |
+| 20 | Bunkering & pollution | Día 6 · 14:00 · fondeadero de Port Everglades | Bunker desde una barcaza; la inspectora Chen le pregunta a Diego qué hacer ante un derrame |
 | **Módulo 6 · Emergencies** ||||
 | 21 | Life-saving appliances | Día 7 · Atlántico | Inspección semanal con Tanya |
 | 22 | Muster & man overboard | Día 8 · Atlántico | Simulacro de hombre al agua; Diego recibe un rol nuevo |

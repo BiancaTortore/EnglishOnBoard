@@ -1,0 +1,1007 @@
+{
+ "n": 20,
+ "module": 5,
+ "title": "Bunkering & pollution",
+ "place": "Day 6 · 14:00 · Port Everglades anchorage",
+ "goal": "Use must, mustn't and have to, and answer an inspector short and clear.",
+ "images": {
+  "hero": "img/l20/hero.jpg",
+  "scene": "img/l20/scene.jpg"
+ },
+ "audio": {
+  "l20-01": {
+   "voice": "tanya",
+   "text": "The bunker barge is alongside and the hose is connected. Diego, before we start: scuppers?",
+   "es": "La barcaza de combustible está abarloada y la manguera conectada. Diego, antes de empezar: ¿imbornales?"
+  },
+  "l20-02": {
+   "voice": "diego",
+   "text": "All scuppers are plugged, Chief.",
+   "es": "Todos los imbornales están tapados, jefa."
+  },
+  "l20-03": {
+   "voice": "tanya",
+   "text": "Good. And the SOPEP locker is open and ready. We mustn't spill a drop.",
+   "es": "Bien. Y el pañol del SOPEP está abierto y listo. No se puede derramar ni una gota."
+  },
+  "l20-04": {
+   "pause": 1500,
+   "voice": "chen",
+   "text": "Good afternoon. Lieutenant Chen, US Coast Guard. I'd like to watch the bunkering.",
+   "es": "Buenas tardes. Teniente Chen, Guardia Costera de los Estados Unidos. Quisiera presenciar el bunker."
+  },
+  "l20-05": {
+   "voice": "tanya",
+   "text": "Of course, Lieutenant. Welcome on board.",
+   "es": "Por supuesto, teniente. Bienvenida a bordo."
+  },
+  "l20-06": {
+   "pause": 600,
+   "voice": "chen",
+   "text": "Cadet, a few questions for you. Where is the SOPEP locker?",
+   "es": "Cadete, unas preguntas para usted. ¿Dónde está el pañol del SOPEP?"
+  },
+  "l20-07": {
+   "pause": 700,
+   "voice": "diego",
+   "text": "Next to the bunker station, on the port side.",
+   "es": "Al lado de la estación de bunker, por babor."
+  },
+  "l20-08": {
+   "voice": "chen",
+   "text": "What must you do if there's a spill on deck?",
+   "es": "¿Qué tiene que hacer si hay un derrame en cubierta?"
+  },
+  "l20-09": {
+   "voice": "diego",
+   "text": "Stop the bunkering, report to the Chief Officer, and contain the oil with the spill kit.",
+   "es": "Parar el bunker, avisar a la Primer Oficial y contener el combustible con el kit de derrames."
+  },
+  "l20-10": {
+   "voice": "chen",
+   "text": "And what mustn't you do?",
+   "es": "¿Y qué no tiene que hacer?"
+  },
+  "l20-11": {
+   "voice": "diego",
+   "text": "We mustn't wash it overboard.",
+   "es": "No se puede tirar al agua."
+  },
+  "l20-12": {
+   "pause": 800,
+   "voice": "chen",
+   "text": "Correct. Short and clear. Who has to sign the bunker checklist?",
+   "es": "Correcto. Corto y claro. ¿Quién tiene que firmar la lista de verificación de bunker?"
+  },
+  "l20-13": {
+   "voice": "diego",
+   "text": "The Chief Officer and the barge master.",
+   "es": "La Primer Oficial y el patrón de la barcaza."
+  },
+  "l20-14": {
+   "voice": "chen",
+   "text": "Good. Carry on.",
+   "es": "Bien. Continúen."
+  },
+  "l20-15": {
+   "pause": 1000,
+   "voice": "tanya",
+   "text": "Well done, Diego. You answered like an officer.",
+   "es": "Bien hecho, Diego. Contestaste como un oficial."
+  },
+  "w-bunkers": {
+   "voice": "model",
+   "text": "bunkers"
+  },
+  "x-bunkers": {
+   "voice": "model",
+   "text": "We take bunkers at anchor.",
+   "es": "Tomamos combustible fondeados."
+  },
+  "w-barge": {
+   "voice": "model",
+   "text": "barge"
+  },
+  "x-barge": {
+   "voice": "model",
+   "text": "The barge is alongside.",
+   "es": "La barcaza está abarloada."
+  },
+  "w-hose": {
+   "voice": "model",
+   "text": "hose"
+  },
+  "x-hose": {
+   "voice": "model",
+   "text": "The hose is connected.",
+   "es": "La manguera está conectada."
+  },
+  "w-spill": {
+   "voice": "model",
+   "text": "spill"
+  },
+  "x-spill": {
+   "voice": "model",
+   "text": "We mustn't spill a drop.",
+   "es": "No se puede derramar ni una gota."
+  },
+  "w-scupper": {
+   "voice": "model",
+   "text": "scupper"
+  },
+  "x-scupper": {
+   "voice": "model",
+   "text": "All scuppers are plugged.",
+   "es": "Todos los imbornales están tapados."
+  },
+  "w-sopep": {
+   "voice": "model",
+   "text": "SOPEP locker"
+  },
+  "x-sopep": {
+   "voice": "model",
+   "text": "The SOPEP locker is open.",
+   "es": "El pañol del SOPEP está abierto."
+  },
+  "w-boom": {
+   "voice": "model",
+   "text": "oil boom"
+  },
+  "x-boom": {
+   "voice": "model",
+   "text": "The oil boom is around the barge.",
+   "es": "La barrera de contención está alrededor de la barcaza."
+  },
+  "w-inspector": {
+   "voice": "model",
+   "text": "inspector"
+  },
+  "x-inspector": {
+   "voice": "model",
+   "text": "The inspector asks the cadet.",
+   "es": "La inspectora le pregunta al cadete."
+  },
+  "p-must": {
+   "voice": "model",
+   "text": "We must plug the scuppers.",
+   "es": "Tenemos que tapar los imbornales."
+  },
+  "p-mustnt": {
+   "voice": "model",
+   "text": "We mustn't wash it overboard.",
+   "es": "No se puede tirar al agua."
+  },
+  "p-hasto": {
+   "voice": "model",
+   "text": "The Chief Officer has to sign the checklist.",
+   "es": "La Primer Oficial tiene que firmar la lista."
+  },
+  "p-where": {
+   "voice": "model",
+   "text": "Next to the bunker station, on the port side.",
+   "es": "Al lado de la estación de bunker, por babor."
+  },
+  "m-sopep": {
+   "voice": "model",
+   "text": "Next to the bunker station, on the port side.",
+   "es": "Al lado de la estación de bunker, por babor."
+  },
+  "m-spill": {
+   "voice": "model",
+   "text": "Stop the bunkering and report to the Chief Officer.",
+   "es": "Parar el bunker y avisar a la Primer Oficial."
+  },
+  "m-smoke": {
+   "voice": "model",
+   "text": "No. You mustn't smoke on deck.",
+   "es": "No. No se puede fumar en cubierta."
+  },
+  "m-sign": {
+   "voice": "model",
+   "text": "The Chief Officer and the barge master.",
+   "es": "La Primer Oficial y el patrón de la barcaza."
+  },
+  "m-mustnt": {
+   "voice": "model",
+   "text": "mustn't",
+   "es": "no se puede"
+  },
+  "c-show-barge": {
+   "voice": "tanya",
+   "text": "Show me the barge."
+  },
+  "c-show-hose": {
+   "voice": "chen",
+   "text": "Where's the hose?"
+  },
+  "c-show-scupper": {
+   "voice": "chen",
+   "text": "Show me a scupper."
+  },
+  "c-show-sopep": {
+   "voice": "chen",
+   "text": "Where's the SOPEP locker?"
+  },
+  "c-show-boom": {
+   "voice": "tanya",
+   "text": "Where's the oil boom?"
+  },
+  "c-show-spill": {
+   "voice": "tanya",
+   "text": "Show me the spill."
+  },
+  "c-show-bunkers": {
+   "voice": "rolando",
+   "text": "Where do the bunkers go in?"
+  },
+  "c-q-sopep": {
+   "voice": "chen",
+   "text": "Cadet, where is the SOPEP locker?"
+  },
+  "c-q-spill": {
+   "voice": "chen",
+   "text": "There's a spill on deck. What must you do?"
+  },
+  "c-q-smoke": {
+   "voice": "rolando",
+   "text": "Can I smoke here? Just one."
+  },
+  "c-q-sign": {
+   "voice": "chen",
+   "text": "Who has to sign the bunker checklist?"
+  },
+  "c-rate": {
+   "voice": "tanya",
+   "text": "Maximum rate: three hundred cubic metres per hour."
+  },
+  "c-dont-have": {
+   "voice": "tanya",
+   "text": "You don't have to wear the lifejacket here, but you must wear your helmet."
+  }
+ },
+ "dialogue": [
+  "l20-01",
+  "l20-02",
+  "l20-03",
+  "l20-04",
+  "l20-05",
+  "l20-06",
+  "l20-07",
+  "l20-08",
+  "l20-09",
+  "l20-10",
+  "l20-11",
+  "l20-12",
+  "l20-13",
+  "l20-14",
+  "l20-15"
+ ],
+ "words": {
+  "bunkers": {
+   "en": "bunkers",
+   "ipa": "/ˈbʌŋkəz/",
+   "es": "combustible (bunker)",
+   "audio": "w-bunkers",
+   "ex": "x-bunkers"
+  },
+  "barge": {
+   "en": "barge",
+   "ipa": "/bɑːdʒ/",
+   "es": "barcaza",
+   "audio": "w-barge",
+   "ex": "x-barge"
+  },
+  "hose": {
+   "en": "hose",
+   "ipa": "/həʊz/",
+   "es": "manguera",
+   "audio": "w-hose",
+   "ex": "x-hose"
+  },
+  "spill": {
+   "en": "spill",
+   "ipa": "/spɪl/",
+   "es": "derrame, derramar",
+   "audio": "w-spill",
+   "ex": "x-spill"
+  },
+  "scupper": {
+   "en": "scupper",
+   "ipa": "/ˈskʌpə/",
+   "es": "imbornal",
+   "audio": "w-scupper",
+   "ex": "x-scupper"
+  },
+  "sopep": {
+   "en": "SOPEP locker",
+   "ipa": "/ˈsəʊpep ˌlɒkə/",
+   "es": "pañol del SOPEP (equipo antiderrames)",
+   "audio": "w-sopep",
+   "ex": "x-sopep"
+  },
+  "boom": {
+   "en": "oil boom",
+   "ipa": "/ˈɔɪl buːm/",
+   "es": "barrera de contención",
+   "audio": "w-boom",
+   "ex": "x-boom"
+  },
+  "inspector": {
+   "en": "inspector",
+   "ipa": "/ɪnˈspektə/",
+   "es": "inspector, inspectora",
+   "audio": "w-inspector",
+   "ex": "x-inspector"
+  }
+ },
+ "plate": {
+  "svg": "img/l20/plate.svg",
+  "pins": [
+   {
+    "word": "barge",
+    "x": 120,
+    "y": 158
+   },
+   {
+    "word": "hose",
+    "x": 196,
+    "y": 110
+   },
+   {
+    "word": "scupper",
+    "x": 120,
+    "y": 66
+   },
+   {
+    "word": "boom",
+    "x": 382,
+    "y": 160
+   },
+   {
+    "word": "sopep",
+    "x": 264,
+    "y": 22
+   },
+   {
+    "word": "spill",
+    "x": 184,
+    "y": 54
+   },
+   {
+    "word": "bunkers",
+    "x": 236,
+    "y": 100
+   }
+  ]
+ },
+ "docs": {
+  "check": {
+   "kind": "form",
+   "title": "BUNKER CHECKLIST",
+   "subtitle": "M/V LNG HORIZON · PORT EVERGLADES ANCHORAGE · 19 MAR 2026",
+   "cells": [
+    [
+     "FUEL",
+     "Very low sulphur fuel oil · 1,200 tonnes"
+    ],
+    [
+     "MAXIMUM RATE",
+     "300 m³ per hour"
+    ],
+    [
+     "SCUPPERS",
+     "All plugged"
+    ],
+    [
+     "SOPEP LOCKER",
+     "Open and ready · port side"
+    ],
+    [
+     "OIL BOOM",
+     "Around the barge"
+    ],
+    [
+     "NO SMOKING",
+     "Signs posted · no hot work"
+    ],
+    [
+     "IF A SPILL",
+     "Stop, report, contain. Never wash overboard"
+    ],
+    [
+     "SIGNED BY",
+     "C/O T. Williams · barge master"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: bunkering",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l20/scene.jpg",
+     "kicker": "Day 6 · 14:00 · Port Everglades anchorage",
+     "title": "Fuel, and a visitor",
+     "body": "A bunker barge comes alongside to give the ship fuel. Then the US Coast Guard comes on board. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l20-01",
+      "l20-02"
+     ],
+     "q": "What has Diego done to the scuppers?",
+     "opts": [
+      "Plugged them",
+      "Opened them",
+      "Cleaned them"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l20-03"
+     ],
+     "q": "What is open and ready?",
+     "opts": [
+      "The SOPEP locker",
+      "The engine room",
+      "The hose"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l20-04",
+      "l20-05"
+     ],
+     "q": "Who comes on board?",
+     "opts": [
+      "An inspector from the US Coast Guard",
+      "A new cadet",
+      "The barge master"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l20-06",
+      "l20-07"
+     ],
+     "q": "Where is the SOPEP locker?",
+     "opts": [
+      "Next to the bunker station, port side",
+      "On the bridge",
+      "In the engine room"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l20-08",
+      "l20-09"
+     ],
+     "q": "First thing to do if there's a spill?",
+     "opts": [
+      "Stop the bunkering",
+      "Wash it overboard",
+      "Call the barge"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l20-10",
+      "l20-11"
+     ],
+     "q": "What mustn't you do with a spill?",
+     "opts": [
+      "Wash it overboard",
+      "Report it",
+      "Use the spill kit"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole scene",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "At the bunker station",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The barge alongside, port side, during bunkering."
+    },
+    {
+     "type": "card",
+     "word": "bunkers"
+    },
+    {
+     "type": "card",
+     "word": "barge"
+    },
+    {
+     "type": "card",
+     "word": "hose"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-hose",
+     "a": "hose"
+    },
+    {
+     "type": "card",
+     "word": "scupper"
+    },
+    {
+     "type": "card",
+     "word": "sopep"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-scupper",
+     "a": "scupper"
+    },
+    {
+     "type": "card",
+     "word": "spill"
+    },
+    {
+     "type": "card",
+     "word": "boom"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-boom",
+     "a": "boom"
+    },
+    {
+     "type": "card",
+     "word": "inspector"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-sopep",
+     "a": "sopep"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"imbornal\" in English:",
+     "opts": [
+      "scupper",
+      "drain hole",
+      "bilge"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "barge",
+       "barcaza"
+      ],
+      [
+       "hose",
+       "manguera"
+      ],
+      [
+       "spill",
+       "derrame"
+      ],
+      [
+       "scupper",
+       "imbornal"
+      ],
+      [
+       "oil boom",
+       "barrera de contención"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Must, mustn't, have to",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Rules and answers",
+     "list": [
+      [
+       "We must plug the scuppers.",
+       "Tenemos que tapar los imbornales.",
+       "p-must"
+      ],
+      [
+       "We mustn't wash it overboard.",
+       "No se puede tirar al agua.",
+       "p-mustnt"
+      ],
+      [
+       "The Chief Officer has to sign the checklist.",
+       "La Primer Oficial tiene que firmar la lista.",
+       "p-hasto"
+      ],
+      [
+       "Next to the bunker station, on the port side.",
+       "Al lado de la estación de bunker, por babor.",
+       "p-where"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "must · mustn't · have to · don't have to",
+     "steps": [
+      [
+       "must",
+       "necessary: We <b>must</b> plug the scuppers."
+      ],
+      [
+       "have to",
+       "necessary (a rule): She <b>has to</b> sign."
+      ],
+      [
+       "mustn't",
+       "forbidden: You <b>mustn't</b> smoke."
+      ],
+      [
+       "don't have to",
+       "not necessary: You <b>don't have to</b> wait."
+      ]
+     ],
+     "paras": [
+      "<b>must</b> and <b>have to</b> mean almost the same. After <i>he / she</i>: <b>has to</b>.",
+      "But the negatives are very different: <b>mustn't</b> = prohibido; <b>don't have to</b> = no hace falta."
+     ],
+     "avoid": "You don't have to smoke (when you mean it's forbidden). · She must to sign. · She have to sign."
+    },
+    {
+     "type": "choice",
+     "q": "Smoking on deck during bunkering is forbidden. You ___ smoke.",
+     "opts": [
+      "mustn't",
+      "don't have to",
+      "must"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The Chief Officer ___ sign the checklist.",
+     "opts": [
+      "has to",
+      "have to",
+      "must to"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-dont-have"
+     ],
+     "q": "Is the life jacket necessary there?",
+     "opts": [
+      "No, but the helmet is",
+      "Yes, and the helmet too",
+      "No, nothing is necessary"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "Rolando wants to wash the oil into the sea.",
+     "q": "Stop him.",
+     "a": [
+      "We",
+      "mustn't",
+      "wash",
+      "it",
+      "overboard."
+     ],
+     "extra": [
+      "don't",
+      "to"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Short answers to an inspector",
+     "paras": [
+      "An inspector wants <b>short, direct answers</b>: the place, the action, the person. No long stories, no <i>I think maybe…</i>",
+      "If you don't know: <b>I don't know, but I'll check with the Chief Officer.</b> Never invent."
+     ],
+     "avoid": "Well, normally, in my opinion, maybe the locker is… · Yes, yes (without answering)"
+    },
+    {
+     "type": "type",
+     "audio": "c-rate",
+     "q": "What is the maximum rate? Write the number.",
+     "accept": [
+      "300",
+      "three hundred"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "mustn't: no T in the middle",
+     "paras": [
+      "<b>mustn't</b> = /ˈmʌsnt/: <i>MUS-nt</i>. The first <i>t</i> is silent.",
+      "In fast speech it's short; listen for the <b>n't</b> at the end. It changes everything: <i>must</i> or <i>mustn't</i>."
+     ],
+     "list": [
+      [
+       "mustn't",
+       "no se puede",
+       "m-mustnt"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the bunker checklist",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "check",
+     "q": "How much fuel do they take?",
+     "opts": [
+      "1,200 tonnes",
+      "300 tonnes",
+      "12,000 tonnes"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "check",
+     "q": "Where is the oil boom?",
+     "opts": [
+      "Around the barge",
+      "In the SOPEP locker",
+      "On the bridge"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "check",
+     "q": "Tap what to do if there's a spill.",
+     "a": 6
+    },
+    {
+     "type": "doc",
+     "doc": "check",
+     "q": "What is forbidden?",
+     "opts": [
+      "Smoking and hot work",
+      "Talking on the radio",
+      "Using the hose"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "check",
+     "q": "Who signs the checklist?",
+     "opts": [
+      "The Chief Officer and the barge master",
+      "The inspector",
+      "The cadet"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Answer the inspector",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Short and clear",
+     "body": "Listen, say it, check it. Answer the question, nothing more.",
+     "es": "Contestá lo que te preguntan, nada más.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-must"
+    },
+    {
+     "type": "shadow",
+     "model": "p-mustnt"
+    },
+    {
+     "type": "shadow",
+     "model": "p-hasto"
+    },
+    {
+     "type": "role",
+     "cue": "c-q-sopep",
+     "task": "It's next to the bunker station, port side.",
+     "model": "m-sopep",
+     "accept": [
+      "Next to the bunker station, on the port side.",
+      "Next to the bunker station, port side.",
+      "It's next to the bunker station, on the port side.",
+      "Port side, next to the bunker station."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-q-spill",
+     "task": "Stop the bunkering and report to the Chief Officer.",
+     "model": "m-spill",
+     "accept": [
+      "Stop the bunkering and report to the Chief Officer.",
+      "Stop the bunkering, report to the Chief Officer.",
+      "Stop bunkering and report to the Chief Officer.",
+      "We must stop the bunkering and report to the Chief Officer."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-q-smoke",
+     "task": "No! It's forbidden on deck.",
+     "model": "m-smoke",
+     "accept": [
+      "No. You mustn't smoke on deck.",
+      "No, you mustn't smoke on deck.",
+      "You mustn't smoke on deck.",
+      "No, you mustn't smoke here.",
+      "No smoking on deck."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-q-sign",
+     "task": "The Chief Officer and the barge master.",
+     "model": "m-sign",
+     "accept": [
+      "The Chief Officer and the barge master.",
+      "The Chief Officer and the barge master sign it.",
+      "Chief Officer and barge master."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-hose",
+     "q": "Type what you hear.",
+     "accept": [
+      "hose",
+      "a hose",
+      "the hose"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-barge",
+     "a": "barge"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-spill",
+     "a": "spill"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l20-14",
+      "l20-15"
+     ],
+     "q": "How did Diego answer?",
+     "opts": [
+      "Like an officer",
+      "Too slowly",
+      "In Spanish"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "It's not necessary to wait. You ___ wait.",
+     "opts": [
+      "don't have to",
+      "mustn't",
+      "must"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The SOPEP locker is on the port side. Port is…",
+     "opts": [
+      "left, looking forward",
+      "right, looking forward",
+      "at the back"
+     ],
+     "a": 0,
+     "why": "From Lesson 1."
+    },
+    {
+     "type": "build",
+     "q": "Say a rule: plug the scuppers.",
+     "a": [
+      "We",
+      "must",
+      "plug",
+      "the",
+      "scuppers."
+     ],
+     "extra": [
+      "to",
+      "mustn't"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-show-bunkers"
+     ],
+     "q": "Rolando asks about the…",
+     "opts": [
+      "bunkers",
+      "barge",
+      "boom"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: manguera",
+     "accept": [
+      "hose",
+      "a hose",
+      "the hose"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1026 @@
+{
+ "n": 18,
+ "module": 5,
+ "title": "Faults & defects",
+ "place": "Day 6 · 07:30 · off Port Everglades, bridge",
+ "goal": "Report a fault: what has stopped, what isn't working, and when it happened.",
+ "images": {
+  "hero": "img/l18/hero.jpg",
+  "scene": "img/l18/scene.jpg"
+ },
+ "radioChannel": "PHONE",
+ "audio": {
+  "l18-01": {
+   "voice": "diego",
+   "text": "Chief Officer, there's an alarm on radar one.",
+   "es": "Primer Oficial, hay una alarma en el radar uno."
+  },
+  "l18-02": {
+   "voice": "tanya",
+   "text": "Let me see. The display has frozen. It isn't working.",
+   "es": "A ver. La pantalla se congeló. No funciona."
+  },
+  "l18-03": {
+   "voice": "diego",
+   "text": "Shall I reset it?",
+   "es": "¿Lo reinicio?"
+  },
+  "l18-04": {
+   "voice": "tanya",
+   "text": "No, don't touch it. Radar two is working, and we're at anchor. Call the Chief Engineer, please.",
+   "es": "No, no lo toques. El radar dos funciona, y estamos fondeados. Llamá al Jefe de Máquinas, por favor."
+  },
+  "l18-05": {
+   "pause": 900,
+   "voice": "diego",
+   "text": "Chief Engineer, this is the cadet on the bridge. Radar one has stopped. The display has frozen and the alarm has gone off.",
+   "es": "Jefe, habla el cadete desde el puente. El radar uno se paró. La pantalla se congeló y saltó la alarma."
+  },
+  "l18-06": {
+   "pause": 600,
+   "voice": "marek",
+   "text": "Radar one. OK. I'm coming.",
+   "es": "Radar uno. Okey. Ya voy.",
+   "radio": true
+  },
+  "l18-07": {
+   "pause": 1800,
+   "voice": "marek",
+   "text": "So. What happened?",
+   "es": "Bueno. ¿Qué pasó?"
+  },
+  "l18-08": {
+   "voice": "diego",
+   "text": "The alarm went off at zero seven twenty-five. Then the display froze.",
+   "es": "La alarma saltó a las cero siete veinticinco. Después se congeló la pantalla."
+  },
+  "l18-09": {
+   "voice": "marek",
+   "text": "Hmm. Has anybody touched it?",
+   "es": "Mmm. ¿Alguien lo tocó?"
+  },
+  "l18-10": {
+   "voice": "tanya",
+   "text": "No. Nobody has touched it.",
+   "es": "No. Nadie lo tocó."
+  },
+  "l18-11": {
+   "pause": 1500,
+   "voice": "marek",
+   "text": "A fuse has blown. I have a spare.",
+   "es": "Se quemó un fusible. Tengo uno de repuesto."
+  },
+  "l18-12": {
+   "pause": 1500,
+   "voice": "marek",
+   "text": "OK. I've changed the fuse. Now reset it, cadet.",
+   "es": "Listo. Cambié el fusible. Ahora reinicialo, cadete."
+  },
+  "l18-13": {
+   "pause": 900,
+   "voice": "diego",
+   "text": "Reset… It's working! The display is back.",
+   "es": "Reinicio… ¡Funciona! Volvió la pantalla."
+  },
+  "l18-14": {
+   "voice": "marek",
+   "text": "Good. Write it in the defect list. Fault, cause, repair. Short.",
+   "es": "Bien. Anotalo en la lista de defectos. Falla, causa, reparación. Corto."
+  },
+  "l18-15": {
+   "voice": "diego",
+   "text": "Fault, cause, repair. Yes, Chief.",
+   "es": "Falla, causa, reparación. Sí, jefe."
+  },
+  "w-fault": {
+   "voice": "model",
+   "text": "fault"
+  },
+  "x-fault": {
+   "voice": "model",
+   "text": "Write the fault in the list.",
+   "es": "Anotá la falla en la lista."
+  },
+  "w-defect": {
+   "voice": "model",
+   "text": "defect"
+  },
+  "x-defect": {
+   "voice": "model",
+   "text": "The defect list is on the bridge.",
+   "es": "La lista de defectos está en el puente."
+  },
+  "w-alarm": {
+   "voice": "model",
+   "text": "alarm"
+  },
+  "x-alarm": {
+   "voice": "model",
+   "text": "The alarm has gone off.",
+   "es": "Saltó la alarma."
+  },
+  "w-frozen": {
+   "voice": "model",
+   "text": "frozen"
+  },
+  "x-frozen": {
+   "voice": "model",
+   "text": "The display has frozen.",
+   "es": "La pantalla se congeló."
+  },
+  "w-reset": {
+   "voice": "model",
+   "text": "reset"
+  },
+  "x-reset": {
+   "voice": "model",
+   "text": "Now reset the radar.",
+   "es": "Ahora reiniciá el radar."
+  },
+  "w-spare": {
+   "voice": "model",
+   "text": "spare"
+  },
+  "x-spare": {
+   "voice": "model",
+   "text": "I have a spare fuse.",
+   "es": "Tengo un fusible de repuesto."
+  },
+  "w-fuse": {
+   "voice": "model",
+   "text": "fuse"
+  },
+  "x-fuse": {
+   "voice": "model",
+   "text": "A fuse has blown.",
+   "es": "Se quemó un fusible."
+  },
+  "w-repair": {
+   "voice": "model",
+   "text": "repair"
+  },
+  "x-repair": {
+   "voice": "model",
+   "text": "Fault, cause, repair.",
+   "es": "Falla, causa, reparación."
+  },
+  "p-stopped": {
+   "voice": "model",
+   "text": "Radar one has stopped.",
+   "es": "El radar uno se paró."
+  },
+  "p-notworking": {
+   "voice": "model",
+   "text": "The display isn't working.",
+   "es": "La pantalla no funciona."
+  },
+  "p-goneoff": {
+   "voice": "model",
+   "text": "The alarm has gone off.",
+   "es": "Saltó la alarma."
+  },
+  "p-fcr": {
+   "voice": "model",
+   "text": "Fault, cause, repair.",
+   "es": "Falla, causa, reparación."
+  },
+  "m-wrong": {
+   "voice": "model",
+   "text": "It has stopped. The display isn't working.",
+   "es": "Se paró. La pantalla no funciona."
+  },
+  "m-happened": {
+   "voice": "model",
+   "text": "The alarm went off at zero seven twenty.",
+   "es": "La alarma saltó a las cero siete veinte."
+  },
+  "m-nobody": {
+   "voice": "model",
+   "text": "No, nobody has touched it.",
+   "es": "No, nadie lo tocó."
+  },
+  "m-working": {
+   "voice": "model",
+   "text": "Yes, it's working now.",
+   "es": "Sí, ya funciona."
+  },
+  "m-t": {
+   "voice": "model",
+   "text": "stopped, fixed, checked",
+   "es": "se paró, arreglado, revisado"
+  },
+  "m-d": {
+   "voice": "model",
+   "text": "changed, failed, frozen",
+   "es": "cambiado, falló, congelado"
+  },
+  "m-id": {
+   "voice": "model",
+   "text": "reported, tested, started",
+   "es": "reportado, probado, arrancó"
+  },
+  "c-show-alarm": {
+   "voice": "tanya",
+   "text": "Show me the alarm."
+  },
+  "c-show-frozen": {
+   "voice": "marek",
+   "text": "Which screen has frozen?"
+  },
+  "c-show-reset": {
+   "voice": "marek",
+   "text": "Where's the reset button?"
+  },
+  "c-show-fuse": {
+   "voice": "marek",
+   "text": "Show me the fuse."
+  },
+  "c-show-spare": {
+   "voice": "marek",
+   "text": "Where's the spare?"
+  },
+  "c-wrong": {
+   "voice": "tanya",
+   "text": "Diego, what's wrong with the radar?"
+  },
+  "c-happened": {
+   "voice": "marek",
+   "text": "So, cadet. What happened? When?"
+  },
+  "c-touched": {
+   "voice": "marek",
+   "text": "Has anybody touched it?"
+  },
+  "c-nowok": {
+   "voice": "tanya",
+   "text": "Is it working now?"
+  },
+  "c-gyro-other": {
+   "voice": "tanya",
+   "text": "The gyro alarm has gone off."
+  },
+  "c-time-other": {
+   "voice": "marek",
+   "text": "The fuse blew at zero six fifty."
+  },
+  "c-printer": {
+   "voice": "james",
+   "text": "The printer isn't working again."
+  }
+ },
+ "dialogue": [
+  "l18-01",
+  "l18-02",
+  "l18-03",
+  "l18-04",
+  "l18-05",
+  "l18-06",
+  "l18-07",
+  "l18-08",
+  "l18-09",
+  "l18-10",
+  "l18-11",
+  "l18-12",
+  "l18-13",
+  "l18-14",
+  "l18-15"
+ ],
+ "words": {
+  "fault": {
+   "en": "fault",
+   "ipa": "/fɔːlt/",
+   "es": "falla",
+   "audio": "w-fault",
+   "ex": "x-fault"
+  },
+  "defect": {
+   "en": "defect",
+   "ipa": "/ˈdiːfekt/",
+   "es": "defecto, avería",
+   "audio": "w-defect",
+   "ex": "x-defect"
+  },
+  "alarm": {
+   "en": "alarm",
+   "ipa": "/əˈlɑːm/",
+   "es": "alarma",
+   "audio": "w-alarm",
+   "ex": "x-alarm"
+  },
+  "frozen": {
+   "en": "frozen",
+   "ipa": "/ˈfrəʊzn/",
+   "es": "congelado (pantalla)",
+   "audio": "w-frozen",
+   "ex": "x-frozen"
+  },
+  "reset": {
+   "en": "reset",
+   "ipa": "/ˌriːˈset/",
+   "es": "reiniciar",
+   "audio": "w-reset",
+   "ex": "x-reset"
+  },
+  "spare": {
+   "en": "spare",
+   "ipa": "/speə/",
+   "es": "repuesto",
+   "audio": "w-spare",
+   "ex": "x-spare"
+  },
+  "fuse": {
+   "en": "fuse",
+   "ipa": "/fjuːz/",
+   "es": "fusible",
+   "audio": "w-fuse",
+   "ex": "x-fuse"
+  },
+  "repair": {
+   "en": "repair",
+   "ipa": "/rɪˈpeə/",
+   "es": "reparación, reparar",
+   "audio": "w-repair",
+   "ex": "x-repair"
+  }
+ },
+ "plate": {
+  "svg": "img/l18/plate.svg",
+  "pins": [
+   {
+    "word": "alarm",
+    "x": 72,
+    "y": 166
+   },
+   {
+    "word": "frozen",
+    "x": 176,
+    "y": 28
+   },
+   {
+    "word": "reset",
+    "x": 200,
+    "y": 150
+   },
+   {
+    "word": "fuse",
+    "x": 321,
+    "y": 52
+   },
+   {
+    "word": "spare",
+    "x": 322,
+    "y": 150
+   }
+  ]
+ },
+ "docs": {
+  "defects": {
+   "kind": "form",
+   "title": "BRIDGE DEFECT LIST",
+   "subtitle": "M/V LNG HORIZON · 19 MAR 2026",
+   "cells": [
+    [
+     "EQUIPMENT",
+     "Radar 1 (X-band)"
+    ],
+    [
+     "FAULT",
+     "Display frozen, alarm at 0725"
+    ],
+    [
+     "CAUSE",
+     "Fuse blown"
+    ],
+    [
+     "REPAIR",
+     "Fuse changed by the Chief Engineer, radar reset"
+    ],
+    [
+     "STATUS",
+     "Working · tested 0750"
+    ],
+    [
+     "SPARE FUSES",
+     "1 left · order more"
+    ],
+    [
+     "REPORTED BY",
+     "Cadet D. Martínez"
+    ],
+    [
+     "CHECKED BY",
+     "C/O T. Williams"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: the radar alarm",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l18/scene.jpg",
+     "kicker": "Day 6 · 07:30 · off Port Everglades",
+     "title": "Radar one stops",
+     "body": "The end of the anchor watch. Suddenly an alarm sounds on the bridge. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l18-01",
+      "l18-02"
+     ],
+     "q": "What's wrong with radar one?",
+     "opts": [
+      "The display has frozen",
+      "It's too loud",
+      "It's switched off"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l18-03",
+      "l18-04"
+     ],
+     "q": "Why doesn't Tanya reset it?",
+     "opts": [
+      "She wants the Chief Engineer to see it",
+      "She doesn't know how",
+      "The Captain is sleeping"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l18-07",
+      "l18-08"
+     ],
+     "q": "When did the alarm go off?",
+     "opts": [
+      "0725",
+      "0752",
+      "0525"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l18-09",
+      "l18-10"
+     ],
+     "q": "Has anybody touched the radar?",
+     "opts": [
+      "No",
+      "Yes, Diego",
+      "Yes, Tanya"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l18-11",
+      "l18-12"
+     ],
+     "q": "What was the cause?",
+     "opts": [
+      "A blown fuse",
+      "Water in the radar",
+      "A software update"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l18-14",
+      "l18-15"
+     ],
+     "q": "What three things go in the defect list?",
+     "opts": [
+      "Fault, cause, repair",
+      "Name, rank, cabin",
+      "Time, course, speed"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole scene",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Faults",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "Radar one with the alarm, and the fuse box under the console."
+    },
+    {
+     "type": "card",
+     "word": "alarm"
+    },
+    {
+     "type": "card",
+     "word": "frozen"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-frozen",
+     "a": "frozen"
+    },
+    {
+     "type": "card",
+     "word": "fault"
+    },
+    {
+     "type": "card",
+     "word": "defect"
+    },
+    {
+     "type": "card",
+     "word": "fuse"
+    },
+    {
+     "type": "card",
+     "word": "spare"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-fuse",
+     "a": "fuse"
+    },
+    {
+     "type": "card",
+     "word": "reset"
+    },
+    {
+     "type": "card",
+     "word": "repair"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-reset",
+     "a": "reset"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-spare",
+     "a": "spare"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"repuesto\" in English:",
+     "opts": [
+      "spare",
+      "replace",
+      "extra piece"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "fault",
+       "falla"
+      ],
+      [
+       "fuse",
+       "fusible"
+      ],
+      [
+       "spare",
+       "repuesto"
+      ],
+      [
+       "reset",
+       "reiniciar"
+      ],
+      [
+       "repair",
+       "reparación"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "It has stopped",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Reporting a fault",
+     "list": [
+      [
+       "Radar one has stopped.",
+       "El radar uno se paró.",
+       "p-stopped"
+      ],
+      [
+       "The display isn't working.",
+       "La pantalla no funciona.",
+       "p-notworking"
+      ],
+      [
+       "The alarm has gone off.",
+       "Saltó la alarma.",
+       "p-goneoff"
+      ],
+      [
+       "Fault, cause, repair.",
+       "Falla, causa, reparación.",
+       "p-fcr"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "has stopped · isn't working · went off at…",
+     "steps": [
+      [
+       "Result now",
+       "The radar <b>has stopped</b>. A fuse <b>has blown</b>."
+      ],
+      [
+       "State now",
+       "The display <b>isn't working</b>."
+      ],
+      [
+       "With a time",
+       "The alarm <b>went off at</b> 0725."
+      ]
+     ],
+     "paras": [
+      "To report a fault you see <b>now</b>: <b>has / have</b> + past participle (<i>stopped, frozen, gone off, blown</i>), or <b>isn't working</b>.",
+      "When you say <b>when</b> it happened, use the simple past: <i>It <b>stopped</b> at 0725.</i> Not <i>has stopped at</i>."
+     ],
+     "avoid": "The radar is stop. · It has stopped at 0725. · It don't work."
+    },
+    {
+     "type": "choice",
+     "q": "You see the screen: nothing moves. You report…",
+     "opts": [
+      "The display has frozen.",
+      "The display is freeze.",
+      "The display froze at."
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "With the time: \"The alarm ___ off at 0725.\"",
+     "opts": [
+      "went",
+      "has gone",
+      "is going"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "Radar two is off and nothing works.",
+     "q": "Report it.",
+     "a": [
+      "Radar",
+      "two",
+      "isn't",
+      "working."
+     ],
+     "extra": [
+      "don't",
+      "no"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-time-other",
+     "q": "What time did the fuse blow? Four digits.",
+     "accept": [
+      "0650",
+      "06:50",
+      "650"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "\"No funciona\" = isn't working",
+     "paras": [
+      "<i>No funciona</i> → <b>It isn't working</b> (or <i>It doesn't work</i>). Not <i>It no works</i>.",
+      "<i>Saltó la alarma</i> → <b>The alarm has gone off</b> / <b>went off</b>. <i>Se quemó el fusible</i> → <b>The fuse has blown</b>."
+     ],
+     "avoid": "It no works. · The alarm jumped. · The fuse burned."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-printer"
+     ],
+     "q": "What's the problem?",
+     "opts": [
+      "The printer isn't working",
+      "The printer is new",
+      "James needs paper"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Three sounds for -ed",
+     "paras": [
+      "After <i>p, k, s, sh, ch, f</i>: a short <b>/t/</b>: <i>stopped, fixed, checked</i>.",
+      "After most other sounds: <b>/d/</b>: <i>changed, failed</i>.",
+      "After <i>t</i> or <i>d</i>: a new syllable <b>/ɪd/</b>: <i>reported, tested, started</i>. Never add a syllable to <i>stopped</i>: it's one beat, <i>stopt</i>."
+     ],
+     "list": [
+      [
+       "stopped, fixed, checked",
+       "/t/",
+       "m-t"
+      ],
+      [
+       "changed, failed, frozen",
+       "/d/",
+       "m-d"
+      ],
+      [
+       "reported, tested, started",
+       "/ɪd/",
+       "m-id"
+      ]
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-gyro-other"
+     ],
+     "q": "Which alarm?",
+     "opts": [
+      "Gyro",
+      "Radar",
+      "Fire"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the defect list",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "defects",
+     "q": "What was the cause?",
+     "opts": [
+      "A blown fuse",
+      "A broken screen",
+      "Bad weather"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "defects",
+     "q": "When was the radar tested?",
+     "opts": [
+      "0750",
+      "0725",
+      "0705"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "defects",
+     "q": "Tap what they must order.",
+     "a": 5
+    },
+    {
+     "type": "doc",
+     "doc": "defects",
+     "q": "Who changed the fuse?",
+     "opts": [
+      "The Chief Engineer",
+      "The cadet",
+      "The Chief Officer"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "defects",
+     "q": "Is the radar working now?",
+     "opts": [
+      "Yes",
+      "No",
+      "Only at night"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Report the fault",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Short fault reports",
+     "body": "Listen, say it, check it. What, then the state: Radar one HAS STOPPED.",
+     "es": "Qué equipo, y qué le pasa.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-stopped"
+    },
+    {
+     "type": "shadow",
+     "model": "p-goneoff"
+    },
+    {
+     "type": "shadow",
+     "model": "p-fcr"
+    },
+    {
+     "type": "role",
+     "cue": "c-wrong",
+     "task": "It stopped and the screen doesn't work. Tell her.",
+     "model": "m-wrong",
+     "accept": [
+      "It has stopped. The display isn't working.",
+      "It has stopped.",
+      "It's stopped. The display isn't working.",
+      "The display isn't working.",
+      "The display has frozen."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-happened",
+     "task": "The alarm went off at 0720.",
+     "model": "m-happened",
+     "accept": [
+      "The alarm went off at zero seven twenty.",
+      "At zero seven twenty.",
+      "The alarm went off at 0720.",
+      "It went off at zero seven twenty."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-touched",
+     "task": "Nobody touched it. Tell him.",
+     "model": "m-nobody",
+     "accept": [
+      "No, nobody has touched it.",
+      "Nobody has touched it.",
+      "No, nobody.",
+      "No, nobody touched it."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-nowok",
+     "task": "Yes, it works now.",
+     "model": "m-working",
+     "accept": [
+      "Yes, it's working now.",
+      "Yes, it's working.",
+      "Yes, it is working now.",
+      "It's working now."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-fuse",
+     "q": "Type what you hear.",
+     "accept": [
+      "fuse",
+      "a fuse",
+      "the fuse"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-alarm",
+     "a": "alarm"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-fuse",
+     "a": "fuse"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l18-05",
+      "l18-06"
+     ],
+     "q": "Who is coming to the bridge?",
+     "opts": [
+      "The Chief Engineer",
+      "The Captain",
+      "The bosun"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "A piece you keep for when the old one breaks is a…",
+     "opts": [
+      "spare",
+      "fault",
+      "reset"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "\"What does the radar do?\" \"It ___ other ships.\"",
+     "opts": [
+      "shows",
+      "show",
+      "is show"
+     ],
+     "a": 0,
+     "why": "From Lessons 4 and 13."
+    },
+    {
+     "type": "build",
+     "q": "Report: the alarm sounded at 0725.",
+     "a": [
+      "The",
+      "alarm",
+      "went",
+      "off",
+      "at",
+      "0725."
+     ],
+     "extra": [
+      "has",
+      "gone"
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "Which -ed ending is one beat, /t/?",
+     "opts": [
+      "stopped",
+      "reported",
+      "tested"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: fusible",
+     "accept": [
+      "fuse",
+      "a fuse",
+      "the fuse"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Radar one with a frozen display and the alarm on, the reset button, and the open fuse box with a blown fuse and a spare">
+  <!-- Lesson 18 plate: left, radar one: the display is frozen (grey, a crossed-out sweep) and the red alarm light is on;
+       the reset button is under the screen. Right, the fuse box under the console is open: one fuse is blown (dark,
+       broken wire) and a spare fuse lies next to it. Colours come from app.css (.p-*). -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <!-- console -->
+  <path d="M0 180 H400 V240 H0 Z" class="p-blue" opacity=".9"/>
+  <!-- RADAR ONE -->
+  <rect x="20" y="16" width="190" height="168" rx="8" class="p-hull"/>
+  <rect x="30" y="26" width="170" height="124" rx="4" style="fill:#3A4651"/>
+  <circle cx="115" cy="88" r="52" style="fill:#4B5865"/>
+  <g fill="none" style="stroke:#7A8794" stroke-width="1"><circle cx="115" cy="88" r="34"/><circle cx="115" cy="88" r="17"/></g>
+  <line x1="115" y1="88" x2="150" y2="50" style="stroke:#9AA6B2" stroke-width="1.6"/>
+  <g style="fill:#9AA6B2"><circle cx="140" cy="70" r="2.4"/><circle cx="92" cy="64" r="2.4"/></g>
+  <!-- frozen: snowflake mark -->
+  <g transform="translate(176 44)" style="stroke:#E9F5EC" stroke-width="2" stroke-linecap="round"><path d="M0 -10 V10 M-8.7 -5 L8.7 5 M-8.7 5 L8.7 -5"/></g>
+  <!-- alarm light -->
+  <circle cx="50" cy="166" r="9" style="fill:#E23D2D"/>
+  <circle cx="50" cy="166" r="14" fill="none" style="stroke:#E23D2D" stroke-width="2" opacity=".5"/>
+  <circle cx="50" cy="166" r="19" fill="none" style="stroke:#E23D2D" stroke-width="1.5" opacity=".25"/>
+  <!-- reset button -->
+  <rect x="150" y="158" width="44" height="18" rx="4" style="fill:#5E6B78"/>
+  <circle cx="162" cy="167" r="4" style="fill:#E9C46A"/>
+  <rect x="170" y="164" width="18" height="5" rx="2" style="fill:#E9F5EC" opacity=".7"/>
+
+  <!-- FUSE BOX -->
+  <rect x="236" y="40" width="148" height="150" rx="6" class="p-white"/>
+  <path d="M236 40 L210 54 L210 176 L236 190 Z" class="p-white" opacity=".9"/>
+  <g transform="translate(256 58)">
+    <!-- row of fuses -->
+    <g>
+      <rect x="0" y="0" width="18" height="44" rx="4" style="fill:#D9E2E8;stroke:var(--hull)" stroke-width="1.2"/><line x1="9" y1="6" x2="9" y2="38" style="stroke:#8A97A4" stroke-width="2"/>
+      <rect x="28" y="0" width="18" height="44" rx="4" style="fill:#D9E2E8;stroke:var(--hull)" stroke-width="1.2"/><line x1="37" y1="6" x2="37" y2="38" style="stroke:#8A97A4" stroke-width="2"/>
+      <!-- blown fuse -->
+      <rect x="56" y="0" width="18" height="44" rx="4" style="fill:#4B5865;stroke:var(--hull)" stroke-width="1.2"/>
+      <path d="M65 6 V18 M65 26 V38" style="stroke:#1B232B" stroke-width="2"/><path d="M62 20 L68 24" style="stroke:#E23D2D" stroke-width="2"/>
+      <rect x="84" y="0" width="18" height="44" rx="4" style="fill:#D9E2E8;stroke:var(--hull)" stroke-width="1.2"/><line x1="93" y1="6" x2="93" y2="38" style="stroke:#8A97A4" stroke-width="2"/>
+    </g>
+  </g>
+  <!-- spare fuse lying in the box -->
+  <g transform="translate(300 150) rotate(-70)">
+    <rect x="-22" y="-8" width="44" height="16" rx="4" style="fill:#F6F8FA;stroke:var(--antifoul)" stroke-width="1.6"/>
+    <line x1="-16" y1="0" x2="16" y2="0" style="stroke:#8A97A4" stroke-width="2"/>
+  </g>
+</svg>
