@@ -51,7 +51,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 
 **Ropa de trabajo:** oficiales y cadetes con mameluco **azul marino**, ratings (Rolando y los marineros) con mameluco **naranja**. Mario, en la cocina, con chaqueta blanca de cocinero.
 
-**Voces en ElevenLabs** (nombre en "Mis Voces" de la cuenta de Bianca; no cambiarlas): Diego = Matias · Rolando = Juan Tamad · Tanya = Joanna · James = Andrew · Marek = Oliver · Mario = Pochology · Lars = Wolf Spencer · Mateo = Alberto Loco · Chen = Sarah (Approachable and Informative) · voz modelo = Brian. el práctico, el agente y Houston Terminal: todavía sin elegir. La lista vive en `CAST`, dentro de `tools/model-voice.mjs`.
+**Voces en ElevenLabs** (nombre en "Mis Voces" de la cuenta de Bianca; no cambiarlas): Diego = Matias · Rolando = Juan Tamad · Tanya = Joanna · James = Andrew · Marek = Oliver · Mario = Pochology · Lars = Wolf Spencer · Mateo = Alberto Loco · Chen = Sarah (Approachable and Informative) · voz modelo = Brian. El práctico, el agente y Houston Terminal: todavía sin elegir. La lista vive en `CAST`, dentro de `tools/model-voice.mjs`.
 
 ---
 
