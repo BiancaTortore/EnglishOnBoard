@@ -35,7 +35,7 @@ const RESPELL_BASE = {bow: "bough", starboard: "starb'd", bosun: "bo'sun", boats
 /* character → name of their voice in the ElevenLabs account ("My Voices"); null = not chosen yet */
 const CAST = {
   diego: "Matias", rolando: "Juan Tamad", tanya: "Joanna", james: "Andrew",
-  marek: "Oliver", mario: "Pochology", lars: "Wolf Spencer", mateo: null, chen: null, pilot: null, agent: null, terminal: null
+  marek: "Oliver", mario: "Pochology", lars: "Wolf Spencer", mateo: "Alberto Loco", chen: null, pilot: null, agent: null, terminal: null
 };
 
 const REDO_LIST = [];
