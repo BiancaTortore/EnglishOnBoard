@@ -34,6 +34,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | `lars` | Lars Andersen | Master | Danés, 58 | Alto, pelo blanco corto, barba gris recortada, anteojos de marco fino. Camisa blanca, 4 galones | Hombre mayor, acento escandinavo, calmo y grave |
 | `tanya` | Tanya Williams | Chief Officer | Británica, 41 | Pelo castaño recogido, pecas. Mameluco azul marino o camisa blanca con 3 galones | Mujer, inglés británico estándar, firme y clara |
 | `james` | James O'Connor | 2nd Officer | Irlandés, 33 | Pelirrojo, barba corta, sonriente. Polar azul del buque | Hombre, acento irlandés, relajado |
+| `mateo` | Mateo Rossi | 3rd Officer | Italiano, 27 | Delgado, pelo castaño ondulado algo largo arriba, barba de pocos días, sonrisa pícara. Mameluco azul marino | Hombre joven, acento italiano claro, cálido, con humor |
 | `marek` | Marek Novak | Chief Engineer | Checo, 52 | Robusto, cabeza rapada, bigote gris. Mameluco azul marino de máquinas con manchas de aceite | Hombre, acento centroeuropeo, seco |
 | `rolando` | Rolando Reyes | Bosun | Filipino, 46 | Moreno, pelo canoso corto, casco blanco, mameluco naranja muy usado, guantes en el bolsillo | Hombre, acento filipino, cálido y rápido |
 | `mario` | Mario Dela Cruz | Chief Cook | Filipino, 50 | Bajo, sonriente, chaqueta blanca de cocinero, gorro negro | Hombre, acento filipino, alegre |
@@ -46,9 +47,11 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 
 **Patrón de amarre (para fotos y láminas):** en cada extremo, unos 3 largos (head lines a proa / stern lines a popa), 1 través y 2 esprines. Los largos van hacia afuera del buque (los de proa hacia proa), los esprines hacia el centro del buque. La gaza se apoya sobre la bita, nunca se enrosca.
 
+**Guardias de mar:** 00–04 y 12–16 James (2/O) · **04–08 y 16–20 Tanya (C/O) con Diego (cadete)** · 08–12 y 20–24 Mateo (3/O). Diego hace guardia siempre con Tanya; con James o Mateo puede estar en el puente de visita, nunca de guardia.
+
 **Ropa de trabajo:** oficiales y cadetes con mameluco **azul marino**, ratings (Rolando y los marineros) con mameluco **naranja**. Mario, en la cocina, con chaqueta blanca de cocinero.
 
-**Voces en ElevenLabs** (nombre en "Mis Voces" de la cuenta de Bianca; no cambiarlas): Diego = Matias · Rolando = Juan Tamad · Tanya = Joanna · James = Andrew · Marek = Oliver · Mario = Pochology · Lars = Wolf Spencer · voz modelo = Brian. Chen, el práctico, el agente y Houston Terminal: todavía sin elegir. La lista vive en `CAST`, dentro de `tools/model-voice.mjs`.
+**Voces en ElevenLabs** (nombre en "Mis Voces" de la cuenta de Bianca; no cambiarlas): Diego = Matias · Rolando = Juan Tamad · Tanya = Joanna · James = Andrew · Marek = Oliver · Mario = Pochology · Lars = Wolf Spencer · voz modelo = Brian. Mateo, Chen, el práctico, el agente y Houston Terminal: todavía sin elegir. La lista vive en `CAST`, dentro de `tools/model-voice.mjs`.
 
 ---
 
@@ -72,10 +75,10 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 11 | Mooring & letting go | Día 2 · 17:20 · estación de popa | La zarpada |
 | 12 | Anchoring | Día 3 · 02:00 · frente a Galveston | Niebla; el buque fondea a esperar, Diego en la proa |
 | **Módulo 4 · On the bridge** ||||
-| 13 | Bridge equipment | Día 3 · 12:00 · puente | Primera guardia de mar de Diego, junto a James |
-| 14 | Watch handover | Día 3 · 23:45 · puente | Diego hace guardia con James y escucha el relevo con Tanya |
-| 15 | Weather & sea | Día 4 · Golfo de México | Entra un frente; lo registra en el log |
-| 16 | Course, position & traffic | Día 4 · Estrecho de Florida | Tráfico intenso; reporta rumbos, marcaciones y distancias |
+| 13 | Bridge equipment | Día 3 · 11:50 · puente | Mateo le entrega la guardia a James; Diego sube de visita y James le muestra los equipos |
+| 14 | Watch handover | Día 4 · 03:45 · puente | James le entrega la guardia a Tanya; primera guardia de mar de Diego, con Tanya |
+| 15 | Weather & sea | Día 4 · 06:30 · Golfo de México | Guardia de Tanya: entra un frente, Diego lo reporta desde el alerón y lo registra en el log |
+| 16 | Course, position & traffic | Día 5 · 17:00 · Estrecho de Florida | Guardia de Tanya: tráfico intenso; Diego de vigía reporta buques, marcaciones y distancias |
 | **Módulo 5 · Reporting** ||||
 | 17 | Speaking up about safety | Día 5 · cubierta | Ve una plancha rajada y lo dice |
 | 18 | Faults & defects | Día 5 · puente | Falla una alarma del radar; reporta y habla con Marek |

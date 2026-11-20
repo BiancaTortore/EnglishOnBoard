@@ -1,5 +1,7 @@
 {
- "n": 12, "modelAudio": true, "mediaRev": 2,
+ "n": 12,
+ "modelAudio": true,
+ "mediaRev": 2,
  "module": 3,
  "title": "Anchoring",
  "place": "Day 3 · 02:00 · off Galveston, in fog",
@@ -438,8 +440,8 @@
      "Bell forward, 5 s every minute"
     ],
     [
-     "WATCH",
-     "2/O J. O'Connor · Cadet D. Martínez"
+     "OOW",
+     "2/O J. O'Connor"
     ]
    ]
   }

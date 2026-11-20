@@ -54,6 +54,16 @@ Generá una sola vez la ficha de cada personaje y usala como imagen de referenci
 
 > An Irish man in his early thirties with a Dublin accent. Relaxed, friendly and easy-going, a little humour in the voice.
 
+## `mateo` · Mateo Rossi · 3rd Officer · italiano, 27
+
+**Ficha de cara**
+
+> Character reference sheet of one single person shown four times on a plain light-grey studio background: front view head and shoulders, three-quarter view head and shoulders, side profile, and a waist-up front view. Identical face, hair and clothes in all four views, soft even studio light. A 27-year-old Italian man, slim, dark brown wavy hair a little long on top, clean-shaven with light stubble, warm brown eyes, an easy, slightly cheeky smile. Wearing a navy-blue boiler suit. Photorealistic, Documentary photograph, natural light, realistic skin texture, real worn workwear, no logos, no visible text, no watermark.
+
+**Voz (Biblioteca de ElevenLabs)**
+
+> Buscar un hombre joven italiano hablando inglés: acento italiano claro pero fácil de entender, cálido, con algo de humor. Guardarla en Mis Voces y avisar el nombre.
+
 ## `marek` · Marek Novak · Chief Engineer · checo, 52
 
 **Ficha de cara**
