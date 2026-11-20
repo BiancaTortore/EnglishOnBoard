@@ -261,7 +261,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-37";
+const APP_VERSION = "beta-38";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -929,7 +929,36 @@ function openPlayer(){
   $("#quit").onclick = () => { stopAll(); navBack(); };
 }
 function showProgress(){ $("#prog").style.width = Math.round(S.pos / S.queue.length * 100) + "%"; }
-function next(){ stopAll(); S.pos++; if (S.pos >= S.queue.length) finish(); else render(); }
+function next(){
+  stopAll(); S.pos++;
+  if (audioDirty && resetAudioByReload()) return;
+  if (S.pos >= S.queue.length) finish(); else render();
+}
+
+/* Android keeps the phone in "call" audio after the page has recorded the microphone, even when the mic is
+   closed; only a reload brings normal sound back. So after a recording, when the student moves on, the app
+   saves the session, reloads itself and carries on at the next screen. */
+let audioDirty = false;
+const RESUME_KEY = "eob-resume";
+function resetAudioByReload(){
+  if (!S || S.drill || S.review || !L) return false;
+  try {
+    const {sess, ...rest} = S;
+    sessionStorage.setItem(RESUME_KEY, JSON.stringify({n: L.n, S: rest, t: Date.now()}));
+  } catch (e) { return false; }
+  location.reload();
+  return true;
+}
+async function resumeAfterReload(){
+  let r = null;
+  try { r = JSON.parse(sessionStorage.getItem(RESUME_KEY) || "null"); sessionStorage.removeItem(RESUME_KEY); } catch (e) {}
+  if (!r || Date.now() - r.t > 60000) return false;
+  try { await loadLesson(r.n); } catch (e) { return false; }
+  S = {...r.S, sess: L.sessions[r.S.i]};
+  openPlayer();
+  if (S.pos >= S.queue.length) finish(); else render();
+  return true;
+}
 
 function cont(label = "Continue", enabled = true){
   setBar(`<button class="cta" id="go" ${enabled ? "" : "disabled"}>${esc(label)}</button>`);
@@ -1395,7 +1424,7 @@ function setupMic(onDone){
     rec = new MediaRecorder(micStream);
     rec.ondataavailable = e => chunks.push(e.data);
     rec.onstop = () => {
-      releaseMic();
+      releaseMic(); audioDirty = true;
       if (!mic.isConnected) return;   /* left the screen while recording */
       mic.classList.remove("rec"); mic.innerHTML = I.mic; info.textContent = "Tap to record again.";
       if (url) URL.revokeObjectURL(url);
@@ -1572,6 +1601,7 @@ function viewWelcome(){
   syncProgress(true); flushOutbox();
   setTimeout(saveForOffline, 300);
   window.addEventListener("online", () => setTimeout(saveForOffline, 1500));
+  if (navState().v === "session" && await resumeAfterReload()) { registerSW(); return; }
   const m = /^#l(\d+)$/.exec(location.hash);
   const ready = m && COURSE.modules.some(mod => mod.lessons.some(l => l.n === +m[1] && l.ready));
   let fresh = false;
@@ -1579,7 +1609,10 @@ function viewWelcome(){
   if (ready) { history.replaceState({v: "home", d: 0}, "", PATH()); openLessonNav(+m[1]); }
   else if (fresh) { history.replaceState({v: "welcome", d: 0}, "", PATH()); viewWelcome(); }
   else { history.replaceState({v: "home", d: 0}, "", PATH()); viewHome(); }
+  registerSW();
+})();
+function registerSW(){
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
     try { navigator.serviceWorker.register("sw.js").catch(() => {}); } catch (e) {}
   }
-})();
+}
