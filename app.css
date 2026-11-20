@@ -511,31 +511,47 @@ html.dark-page body{background:#0A1620}
 
 /* ---------- certificate (fixed light colours: it is printed and shared) ---------- */
 .cert-view{padding-bottom:40px}
-.cert{background:#FBFAF6;color:#13212D;border:1px solid #D8D2C2;border-radius:6px;padding:26px 22px 20px;position:relative;
-  box-shadow:inset 0 0 0 6px #FBFAF6,inset 0 0 0 7px #C9A86A;font-family:var(--f-body)}
-.cert-top{display:flex;align-items:center;gap:8px;font:600 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:#17506A}
-.cert-ico{display:inline-flex;color:#17506A}.cert-ico svg{width:26px;height:26px}
-.cert-kicker{margin:22px 0 4px;font:700 28px/1.05 var(--f-display);text-transform:uppercase;letter-spacing:.02em;color:#17506A}
-.cert-line{margin:10px 0;font-size:16px;line-height:1.5}
-.cert-name{margin:6px 0 4px;font:700 34px/1.1 var(--f-display);color:#13212D;border-bottom:1.5px solid #C9A86A;padding-bottom:6px;overflow-wrap:anywhere}
-.cert-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:22px;flex-wrap:wrap}
-.cert-foot>div{display:flex;flex-direction:column;gap:2px}
-.cert-sign{font:italic 400 30px/1 "Snell Roundhand","Segoe Script","Brush Script MT",cursive;color:#17506A;border-bottom:1px solid #9AA6B2;padding-bottom:2px}
-.cert-small{font-size:12px;color:#5B6670}
-.cert-verify{margin:20px 0 6px;font-size:13px;color:#13212D;background:#EEF3F5;border-radius:6px;padding:8px 10px}
-.cert-verify span{display:block;font:600 11px/1.3 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:#5B6670}
-.cert-legal{margin:8px 0 0}
-.cert-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.cert{--paper:#FBF8F0;--navy:#17324A;--gold:#B8924A;--cink:#1F2A35;position:relative;overflow:hidden;background:var(--paper);color:var(--cink);
+  border-radius:4px;padding:10px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 8px 28px rgba(0,0,0,.12);text-align:center;font-family:var(--f-body)}
+.cert-rose{position:absolute;width:118%;left:-9%;top:50%;transform:translateY(-50%);color:var(--navy);opacity:.055;pointer-events:none}
+.cert-frame{position:relative;border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-5px;padding:24px 16px 14px}
+.cert-frame::before,.cert-frame::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--gold);transform:rotate(45deg);background:var(--paper);top:-8px;left:calc(50% - 7px)}
+.cert-frame::after{top:auto;bottom:-8px}
+.cert-brand{display:inline-flex;align-self:center;align-items:center;gap:7px;font:500 10.5px/1 var(--f-mono);letter-spacing:.22em;text-transform:uppercase;color:var(--navy)}
+.cert-ico{display:inline-flex}.cert-ico svg{width:18px;height:18px}
+.cert-title{margin:16px 0 0;font:600 34px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.16em;text-transform:uppercase;color:var(--navy)}
+.cert-sub{margin:2px 0 0;font:italic 500 18px/1.2 "Cormorant Garamond",Georgia,serif;color:var(--gold)}
+.cert-rule{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px auto 10px}
+.cert-rule i{width:56px;height:1px;background:var(--gold)}.cert-rule b{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.cert-line{margin:0;font-size:13px;letter-spacing:.04em;color:#5B6670}
+.cert-name{margin:6px 0 8px;font:italic 500 30px/1.15 "Cormorant Garamond",Georgia,serif;color:var(--cink);overflow-wrap:anywhere}
+.cert-body{margin:0 auto;max-width:34em;font-size:13.5px;line-height:1.55;color:#38444F}
+.cert-body b{color:var(--cink);font-weight:600}
+.cert-foot{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:6px;margin-top:18px}
+.cert-col{display:flex;flex-direction:column;gap:4px;align-items:center;min-width:0}
+.cert-sign{font:italic 400 19px/1 "Snell Roundhand","Segoe Script","Cormorant Garamond",Georgia,cursive;color:var(--navy);
+  border-bottom:1px solid #A9B2BA;padding:0 4px 4px;white-space:nowrap}
+.cert-date{font:500 14px/1.1 "Cormorant Garamond",Georgia,serif;color:var(--cink);border-bottom:1px solid #A9B2BA;padding:0 4px 5px;white-space:nowrap}
+.cert-cap{font-size:9.5px;line-height:1.35;letter-spacing:.04em;color:#6A747D}
+.cert-seal{width:58px;height:58px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
+.cert-verify{margin:16px 0 0;font:500 9.5px/1.4 var(--f-mono);letter-spacing:.06em;color:#6A747D}
+.cert-verify b{color:var(--navy);letter-spacing:.1em;white-space:nowrap}
+.cert-legal{position:relative;margin:8px 4px 2px;font-size:9.5px;color:#7A838B}
+.cert-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;align-items:center}
 .cert-actions .cta{flex:1;min-width:180px}
 @media print{
-  @page{size:A4 landscape;margin:12mm}
+  @page{size:A4 landscape;margin:0}
   html,body{background:#fff!important}
   body *{visibility:hidden}
   #cert,#cert *{visibility:visible}
-  #cert{position:absolute;left:0;top:0;width:100%;height:185mm;display:flex;flex-direction:column;justify-content:center;
-    box-shadow:inset 0 0 0 8px #FBFAF6,inset 0 0 0 10px #C9A86A;border:0;border-radius:0;padding:14mm 20mm;
-    -webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .cert-top{font-size:14px}.cert-ico svg{width:34px;height:34px}
-  .cert-kicker{font-size:50px;margin-top:14mm}.cert-name{font-size:60px;margin:10px 0 8px}.cert-line{font-size:20px}
-  .cert-sign{font-size:40px}.cert-foot{margin-top:12mm}.cert-small{font-size:13px}.cert-verify{font-size:15px;margin-top:10mm}
+  #cert{position:absolute;left:0;top:0;width:297mm;height:210mm;border-radius:0;box-shadow:none;padding:10mm;
+    display:flex;flex-direction:column;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cert-frame{flex:1;display:flex;flex-direction:column;justify-content:center;padding:12mm 26mm 8mm;outline-offset:-7px}
+  .cert-frame::before,.cert-frame::after{width:20px;height:20px;top:-11px;left:calc(50% - 10px)}.cert-frame::after{top:auto;bottom:-11px}
+  .cert-rose{width:150mm;left:calc(50% - 75mm)}
+  .cert-brand{font-size:12px}.cert-ico svg{width:24px;height:24px}
+  .cert-title{font-size:54px;margin-top:8mm}.cert-sub{font-size:26px}.cert-rule i{width:110px}
+  .cert-line{font-size:15px}.cert-name{font-size:46px;margin:8px 0 12px}.cert-body{font-size:16px;max-width:40em}
+  .cert-foot{margin:9mm auto 0;width:200mm;gap:20mm}.cert-sign{font-size:32px}.cert-date{font-size:20px}.cert-cap{font-size:11px}
+  .cert-seal{width:100px;height:100px}.cert-verify{font-size:11px;margin-top:8mm}.cert-legal{font-size:10px;margin:3mm 0 0}
 }

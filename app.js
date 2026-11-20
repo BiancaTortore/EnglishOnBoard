@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-43";
+const APP_VERSION = "beta-44";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -580,17 +580,23 @@ function viewCert(){
   app.innerHTML = `<div class="home cert-view">
     <button class="back-link" id="cBack">${I.back} Back</button>
     <article class="cert" id="cert">
-      <div class="cert-top"><span class="cert-ico">${I.wheel}</span><span>ChartroomLab · English on Board</span></div>
-      <p class="cert-kicker">Certificate of completion</p>
-      <p class="cert-line">This is to certify that</p>
-      <h1 class="cert-name">${esc(c.name)}</h1>
-      <p class="cert-line">has completed <b>English on Board</b>, Maritime English for deck officers: 27 lessons in 7 modules, from the first day on board in Houston to the pilot in Marseille, and passed the final test with <b>${c.pct}%</b>.</p>
-      <div class="cert-foot">
-        <div><span class="cert-sign">Bianca Tortore</span><span class="cert-small">Bianca Tortore · deck officer, course author</span></div>
-        <div><b>${esc(when)}</b><span class="cert-small">Date</span></div>
+      ${certRose()}
+      <div class="cert-frame">
+        <div class="cert-brand"><span class="cert-ico">${I.wheel}</span>English on Board</div>
+        <p class="cert-title">Certificate</p>
+        <p class="cert-sub">of completion</p>
+        <div class="cert-rule" aria-hidden="true"><i></i><b></b><i></i></div>
+        <p class="cert-line">This is to certify that</p>
+        <h1 class="cert-name">${esc(c.name)}</h1>
+        <p class="cert-body">has completed <b>English on Board</b>, Maritime English for deck officers: 27 lessons in 7 modules, from Houston to Marseille, and passed the final test with <b>${c.pct}%</b>.</p>
+        <div class="cert-foot">
+          <div class="cert-col"><span class="cert-sign">Bianca Tortore</span><span class="cert-cap">Course author<br>Deck officer</span></div>
+          ${certSeal()}
+          <div class="cert-col"><span class="cert-date">${esc(when)}</span><span class="cert-cap">Date of issue</span></div>
+        </div>
+        <p class="cert-verify">Verify at english.chartroomlab.com/verify · <b>${esc(c.code)}</b></p>
       </div>
-      <p class="cert-verify"><span>Check this certificate</span> english.chartroomlab.com/verify · code <b>${esc(c.code)}</b></p>
-      <p class="cert-small cert-legal">English on Board is a language course. It is not approved by the IMO and is not an STCW certificate.</p>
+      <p class="cert-legal">English on Board is a language course. It is not approved by the IMO and is not an STCW certificate.</p>
     </article>
     <div class="cert-actions"><button class="cta" id="cPdf">Save as PDF</button><button class="chip-btn" id="cShare">Share the check link</button></div>
     <p class="note">To save it: tap Save as PDF, then choose "Save as PDF" as the printer.</p>
@@ -603,6 +609,25 @@ function viewCert(){
     try { await navigator.clipboard.writeText(link); $("#cShare").textContent = "Link copied"; } catch (e) { prompt("Copy the link:", link); }
   };
   window.scrollTo(0, 0);
+}
+/* a faint compass rose behind the text, and the round seal of the course */
+function certRose(){
+  const pts = (r1, r2, n, rot = 0) => Array.from({length: n * 2}, (_, k) => {
+    const a = (k * Math.PI / n) + rot, r = k % 2 ? r2 : r1; return `${(100 + r * Math.sin(a)).toFixed(1)},${(100 - r * Math.cos(a)).toFixed(1)}`; }).join(" ");
+  return `<svg class="cert-rose" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width=".4"/>
+    ${Array.from({length: 72}, (_, k) => { const a = k * 5 * Math.PI / 180, r1 = k % 2 ? 88 : 86.5; return `<line x1="${(100 + r1 * Math.sin(a)).toFixed(1)}" y1="${(100 - r1 * Math.cos(a)).toFixed(1)}" x2="${(100 + 92 * Math.sin(a)).toFixed(1)}" y2="${(100 - 92 * Math.cos(a)).toFixed(1)}" stroke="currentColor" stroke-width=".5"/>`; }).join("")}
+    <polygon points="${pts(60, 12, 4, Math.PI / 4)}" fill="none" stroke="currentColor" stroke-width=".7"/>
+    <polygon points="${pts(80, 14, 4)}" fill="none" stroke="currentColor" stroke-width=".9"/>
+    <circle cx="100" cy="100" r="5" fill="none" stroke="currentColor" stroke-width=".8"/></svg>`;
+}
+function certSeal(){
+  return `<svg class="cert-seal" viewBox="0 0 120 120" aria-hidden="true">
+    <defs><path id="sealArc" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0"/></defs>
+    <circle cx="60" cy="60" r="57" fill="#17324A"/><circle cx="60" cy="60" r="53" fill="none" stroke="#C8A25A" stroke-width="1.4"/>
+    <circle cx="60" cy="60" r="31" fill="none" stroke="#C8A25A" stroke-width="1"/>
+    <text font-family="IBM Plex Mono, ui-monospace, monospace" font-size="8" fill="#E9D9B2" font-weight="500"><textPath href="#sealArc" textLength="250" lengthAdjust="spacing">ENGLISH ON BOARD · MARITIME ENGLISH ·</textPath></text>
+    <g transform="translate(25.7 25.7) scale(.686)" style="color:#FBF8F0">${I.wheel.replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, "")}</g></svg>`;
 }
 function finalRow(){
   const open = finalOpen(), t = testsState().final, c = progress.cert;
@@ -902,7 +927,7 @@ function viewProfile(){
 const viewSettings = viewProfile;
 const TAB_VIEWS = {home: viewHome, lessons: viewLessons, practice: viewPractice, logbook: viewLogbook, profile: viewProfile};
 function betaNoteHTML(){
-  return `<div class="beta-note"><span class="mono">Beta</span><p>The whole course is open during the beta: 27 lessons, a final test and a certificate.
+  return `<div class="beta-note"><span class="mono">Beta</span><p>Module 1 is open and free. Modules 2 to 7 open with the full course.
     English on Board is a language course: it is not approved by the IMO and does not give an STCW certificate.</p></div>`;
 }
 function viewFeedback(){
