@@ -8,6 +8,8 @@
   "hero": "img/l21/hero.jpg",
   "scene": "img/l21/scene.jpg"
  },
+ "modelAudio": true,
+ "mediaRev": 1,
  "audio": {
   "l21-01": {
    "voice": "tanya",

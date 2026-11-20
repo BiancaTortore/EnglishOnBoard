@@ -8,6 +8,8 @@
   "hero": "img/l23/hero.jpg",
   "scene": "img/l23/scene.jpg"
  },
+ "modelAudio": true,
+ "mediaRev": 1,
  "audio": {
   "l23-01": {
    "voice": "rolando",

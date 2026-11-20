@@ -8,6 +8,8 @@
   "hero": "img/l24/hero.jpg",
   "scene": "img/l24/scene.jpg"
  },
+ "modelAudio": true,
+ "mediaRev": 1,
  "radioChannel": "UHF",
  "audio": {
   "l24-01": {
