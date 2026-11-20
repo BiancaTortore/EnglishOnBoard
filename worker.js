@@ -4,6 +4,8 @@
      POST /api/progress   anonymous progress snapshot of one device (no names)
      GET  /admin          page to read comments and usage (PIN protected)
      POST /api/admin      data for that page
+     POST /api/cert       a course certificate: code, name, date and result (the learner typed the name for it)
+     GET  /verify         page where anybody checks a certificate by its code
      POST /api/ping       anonymous usage of the other ChartroomLab apps (BlackLog, CertWatch,
                           onboarding): one snapshot per device, no names, no content
    Bindings (wrangler.jsonc): ASSETS, EMAIL (send_email), DATA (KV, optional until created).
@@ -21,6 +23,8 @@ export default {
       if (url.pathname === "/api/feedback" && req.method === "POST") return feedback(req, env);
       if (url.pathname === "/api/progress" && req.method === "POST") return progress(req, env);
       if (url.pathname === "/api/ping") return ping(req, env);
+      if (url.pathname === "/api/cert" && req.method === "POST") return certSave(req, env);
+      if (url.pathname === "/verify" || url.pathname === "/verify/") return verify(url, env);
       if (url.pathname === "/api/admin" && req.method === "POST") return adminData(req, env);
       if (url.pathname === "/admin" || url.pathname === "/admin/") return new Response(ADMIN_HTML, {headers: {"content-type": "text/html;charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex"}});
       if (url.pathname.startsWith("/api/")) return json({error: "not found"}, 404);
@@ -110,13 +114,60 @@ async function progress(req, env) {
   const lessons = {};
   for (const [k, v] of Object.entries(b.lessons || {}).slice(0, 40)) if (/^\d{1,2}$/.test(k)) lessons[k] = Math.max(0, Math.min(6, v | 0));
   const tests = {};
-  for (const [k, v] of Object.entries(b.tests || {}).slice(0, 10)) if (/^m\d$/.test(k)) tests[k] = {best: Math.max(0, Math.min(100, v.best | 0)), passed: !!v.passed};
+  for (const [k, v] of Object.entries(b.tests || {}).slice(0, 10)) if (/^(m\d|final)$/.test(k)) tests[k] = {best: Math.max(0, Math.min(100, v.best | 0)), passed: !!v.passed};
   const key = `d:${id}`;
   const prev = JSON.parse((await env.DATA.get(key)) || "null");
   const now = new Date().toISOString();
   const snap = {first: prev ? prev.first : now, last: now, device: clip(b.device, 40), installed: !!b.installed || !!(prev && prev.installed), lessons, tests, opens: (prev ? prev.opens || 0 : 0) + (b.open ? 1 : 0)};
   await env.DATA.put(key, JSON.stringify(snap));
   return json({ok: true, stored: true});
+}
+
+/* ---------- certificates ---------- */
+const CERT_RE = /^EOB-[A-Z2-9]{4}-[A-Z2-9]{4}$/;
+async function certSave(req, env) {
+  if (!env.DATA) return json({error: "not configured"}, 503);
+  let b; try { b = await body(req, 2000); } catch (e) { return json({error: "bad request"}, 400); }
+  const code = clip(b.code, 20), name = clip(b.name, 60).replace(/\s+/g, " "), id = clip(b.id, 40);
+  const pct = b.pct | 0, date = clip(b.date, 10);
+  if (!CERT_RE.test(code) || name.length < 3 || pct < 80 || pct > 100 || !/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^[a-z0-9-]{8,40}$/i.test(id)) return json({error: "bad data"}, 400);
+  const key = `c:${code}`, prev = JSON.parse((await env.DATA.get(key)) || "null");
+  if (prev && prev.device !== id) return json({error: "code taken"}, 409);
+  /* the course must really be passed on that phone */
+  const dev = JSON.parse((await env.DATA.get(`d:${id}`)) || "null");
+  const passed = !!(dev && dev.tests && dev.tests.final && dev.tests.final.passed);
+  const c = prev || {code, name, pct, date, device: id, at: new Date().toISOString(), passed};
+  if (!prev) await env.DATA.put(key, JSON.stringify(c));
+  return json({ok: true});
+}
+async function verify(url, env) {
+  const code = String(url.searchParams.get("c") || "").trim().toUpperCase().replace(/\s+/g, "");
+  let found = null, asked = !!code;
+  if (asked && CERT_RE.test(code) && env.DATA) found = JSON.parse((await env.DATA.get(`c:${code}`)) || "null");
+  const e = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+  const when = found ? new Date(found.date + "T12:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric", timeZone: "UTC"}) : "";
+  const result = !asked ? "" : found
+    ? `<div class="card ok"><span class="tag">Valid certificate</span><h2>${e(found.name)}</h2><p>completed <b>English on Board</b> (Maritime English for deck officers, 27 lessons in 7 modules) and passed the final test with <b>${found.pct}%</b> on <b>${e(when)}</b>.</p><p class="mu">Code ${e(found.code)}</p></div>`
+    : `<div class="card no"><span class="tag">Not found</span><p>There is no English on Board certificate with the code <b>${e(code)}</b>. Check the letters and numbers and try again.</p></div>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Check a certificate · English on Board</title><link rel="icon" href="/icons/favicon-32.png">
+<style>:root{--bg:#F4F6F7;--s:#fff;--ink:#13212D;--mu:#5B6670;--ru:#D5DCE1;--ac:#17506A;--ok:#2E9E5B;--no:#C8281C}
+@media (prefers-color-scheme:dark){:root{--bg:#09131A;--s:#112029;--ink:#E3EBF0;--mu:#93A6B3;--ru:#22394A;--ac:#7FB8D6}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:560px;margin:0 auto;padding:28px 16px 60px}.brand{font:600 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ac)}
+h1{font-size:30px;margin:10px 0 6px}h2{font-size:26px;margin:8px 0 4px}.mu{color:var(--mu)}
+form{display:flex;gap:8px;margin:18px 0}input{flex:1;min-width:0;font:inherit;padding:12px;border-radius:10px;border:1px solid var(--ru);background:var(--s);color:var(--ink);text-transform:uppercase}
+button{font:inherit;font-weight:700;padding:12px 16px;border-radius:10px;border:0;background:var(--ac);color:#fff;cursor:pointer}
+.card{background:var(--s);border:1px solid var(--ru);border-radius:12px;padding:16px;margin:12px 0}.card.ok{border-color:var(--ok)}.card.no{border-color:var(--no)}
+.tag{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;color:#fff;background:var(--ok)}.no .tag{background:var(--no)}
+.small{font-size:13px}a{color:var(--ac)}</style></head><body><main>
+<p class="brand">ChartroomLab · English on Board</p><h1>Check a certificate</h1>
+<p class="mu">Type the code printed on the certificate, for example EOB-7K3M-Q9TD.</p>
+<form method="get" action="/verify"><input name="c" value="${e(code)}" placeholder="EOB-XXXX-XXXX" autocomplete="off" aria-label="Certificate code"><button>Check</button></form>
+${result}
+<p class="mu small">English on Board is a language course by Bianca Tortore, deck officer. It is not approved by the IMO and is not an STCW certificate. <a href="/">english.chartroomlab.com</a></p>
+</main></body></html>`;
+  return new Response(html, {status: asked && !found ? 404 : 200, headers: {"content-type": "text/html;charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex"}});
 }
 
 /* ---------- usage of the other ChartroomLab apps ----------
@@ -169,9 +220,10 @@ async function adminData(req, env) {
     } while (cursor && out.length < 5000);
     return out;
   };
-  const [feedback, devices, usage] = await Promise.all([all("f:"), all("d:"), all("u:")]);
+  const [feedback, devices, usage, certs] = await Promise.all([all("f:"), all("d:"), all("u:"), all("c:")]);
   feedback.sort((a, b) => b.at.localeCompare(a.at));
-  return json({ok: true, configured: {data: true, email: !!(env.EMAIL && env.FEEDBACK_TO)}, feedback, devices, usage});
+  certs.sort((a, b) => b.at.localeCompare(a.at));
+  return json({ok: true, configured: {data: true, email: !!(env.EMAIL && env.FEEDBACK_TO)}, feedback, devices, usage, certs});
 }
 function timingSafe(a, b) { let r = 0; for (let i = 0; i < a.length; i++) r |= a.charCodeAt(i) ^ b.charCodeAt(i); return r === 0; }
 
@@ -236,9 +288,15 @@ function drawEOB(){
   let h=warn.map(w=>'<div class="card warn">'+w+'</div>').join("");
   h+='<div class="stats"><div><b>'+devices.length+'</b>personas (celulares)</div><div><b>'+N(d=>new Date(d.last)>week)+'</b>activas esta semana</div><div><b>'+N(d=>d.installed)+'</b>instalaron la app</div><div><b>'+feedback.length+'</b>comentarios'+(avg.length?' · '+(avg.reduce((a,b)=>a+b,0)/avg.length).toFixed(1)+'★':'')+'</div></div>';
   h+='<h2>¿Hasta dónde llegan?</h2><table><tr><th>Lección</th><th>Empezaron</th><th>Terminaron</th><th></th></tr>';
-  for(let n=1;n<=6;n++){const s=N(d=>(d.lessons||{})[n]>0),t=N(d=>(d.lessons||{})[n]>=6);if(n===6&&!s)continue;
-    h+='<tr><td>Lesson '+n+'</td><td>'+s+'</td><td>'+t+'</td><td><div class="bar"><i style="width:'+(devices.length?Math.round(t/devices.length*100):0)+'%"></i></div></td></tr>'}
-  const tt=devices.filter(d=>d.tests&&d.tests.m1);h+='<tr><td>Test Módulo 1</td><td>'+tt.length+'</td><td>'+tt.filter(d=>d.tests.m1.passed).length+' aprobaron</td><td></td></tr></table>';
+  const MODS=[[1,6],[7,9],[10,12],[13,16],[17,20],[21,24],[25,27]];
+  MODS.forEach(([a,b],i)=>{
+    for(let n=a;n<=b;n++){const s=N(d=>(d.lessons||{})[n]>0),t=N(d=>(d.lessons||{})[n]>=6);
+      h+='<tr><td>Lesson '+n+'</td><td>'+s+'</td><td>'+t+'</td><td><div class="bar"><i style="width:'+(devices.length?Math.round(t/devices.length*100):0)+'%"></i></div></td></tr>'}
+    const k="m"+(i+1),tt=devices.filter(d=>d.tests&&d.tests[k]);
+    h+='<tr><td><b>Test Módulo '+(i+1)+'</b></td><td>'+tt.length+'</td><td>'+tt.filter(d=>d.tests[k].passed).length+' aprobaron</td><td></td></tr>'});
+  const tf=devices.filter(d=>d.tests&&d.tests.final);h+='<tr><td><b>Examen final</b></td><td>'+tf.length+'</td><td>'+tf.filter(d=>d.tests.final.passed).length+' aprobaron</td><td></td></tr></table>';
+  const C=DATA.certs||[];
+  h+='<h2>Certificados ('+C.length+')</h2>'+(C.length?'<table><tr><th>Nombre</th><th>Código</th><th>Nota</th><th>Fecha</th></tr>'+C.map(c=>'<tr><td>'+esc(c.name)+'</td><td><a style="color:var(--ac)" href="/verify?c='+esc(c.code)+'" target="_blank">'+esc(c.code)+'</a></td><td class="n">'+c.pct+'%</td><td>'+esc(c.date)+'</td></tr>').join("")+'</table>':'<p class="mu">Todavía nadie terminó el curso.</p>');
   const dev={};devices.forEach(d=>dev[d.device||"?"]=(dev[d.device||"?"]||0)+1);
   h+='<p class="mu">Celulares: '+Object.entries(dev).map(([k,v])=>esc(k)+' '+v).join(" · ")+'</p>';
   h+='<h2>Comentarios</h2><button class="sec" id="csv">Descargar en Excel (CSV)</button>';

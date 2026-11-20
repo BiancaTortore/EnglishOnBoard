@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-42";
+const APP_VERSION = "beta-43";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -499,9 +499,121 @@ function showState(st){
   if (st.v === "feedback") { viewFeedback(); return; }
   if (st.v === "vocab") { viewVocab(st.m); return; }
   if (st.v === "welcome") { viewWelcome(); return; }
+  if (st.v === "cert") { viewCert(); return; }
+  if (st.v === "certform") { viewCertForm(); return; }
   if (TAB_VIEWS[st.v]) { TAB_VIEWS[st.v](); return; }
   /* drills and reviews can't be resumed: land on the screen below */
   if ((st.d || 0) > 0) history.back(); else { navReplace({v: "home"}); viewHome(); }
+}
+
+/* =========================================================
+   FINAL TEST · CERTIFICATE
+   One certificate for the whole course. Its code is registered on the server, so anybody can check it at
+   /verify. The name is asked once, when the certificate is made; it is the only name the app ever sends.
+   ========================================================= */
+const CERT_URL = "https://english.chartroomlab.com/verify";
+function finishFinal(pct){
+  const t = testsState(), prev = t.final, pass = pct >= TEST_PASS;
+  t.final = {best: Math.max(pct, prev ? prev.best : 0), passed: pass || !!(prev && prev.passed), last: pct};
+  saveProgress(); syncProgress(false);
+  const oral = S.oralN ? `<p class="sub" style="margin:0">Speaking (not graded): ${S.oralOk} of ${S.oralN} clear.</p>` : "";
+  $("#stage").innerHTML = `<div class="result"><span class="mono kicker">Final test · English on Board</span>
+    <div class="score ${pass ? "" : "low"}">${pct}%</div>
+    <h2 class="prompt">${pass ? "Passed. Well done, officer." : "Not yet."}</h2>
+    <p style="margin:0">${S.firstRight} of ${S.graded} right. ${pass ? (progress.cert ? "Your certificate is in your profile." : "Now you can get your certificate.") : `You need ${TEST_PASS}% to pass. Every try has new questions.`}</p>
+    ${oral}${S.missed ? `<p class="sub" style="margin:0">The questions you missed are in your review.</p>` : ""}</div>`;
+  if (pass) {
+    setBar(`<button class="cta" id="go">${progress.cert ? "See your certificate" : "Get your certificate"}</button>`, "ok");
+    $("#go").onclick = () => openCertNav(true);
+  } else {
+    setBar(`<div class="self"><button class="opt" id="home2">Back</button><button class="cta" id="go" style="flex:1">Try again</button></div>`, "bad");
+    $("#go").onclick = () => startDrill("final"); $("#home2").onclick = navBack;
+  }
+}
+/* after the speaking part Android may still be in "call" audio: a reload clears it */
+function openCertNav(replace){
+  const st = {v: progress.cert ? "cert" : "certform"};
+  if (replace) navReplace(st); else navPush(st);
+  if (audioDirty) { location.reload(); return; }
+  showState(navState());
+}
+function certCode(){
+  const A = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", r = new Uint8Array(8);
+  (crypto.getRandomValues ? crypto.getRandomValues(r) : r.forEach((_, i) => r[i] = Math.random() * 256));
+  const c = Array.from(r, x => A[x % A.length]).join("");
+  return `EOB-${c.slice(0, 4)}-${c.slice(4)}`;
+}
+function viewCertForm(){
+  stopAll(); clearBar(); clearTabs();
+  const t = testsState().final;
+  if (!t || !t.passed) { goHome(); return; }
+  app.innerHTML = `<div class="home fb-view">
+    <button class="back-link" id="cBack">${I.back} Back</button>
+    <span class="mono kicker">Final test passed · ${t.best}%</span>
+    <h2 class="prompt" style="font-size:34px">Your certificate</h2>
+    <p class="sub" style="margin-top:-10px">Write your name as it should appear. It can't be changed later.</p>
+    <section class="panel fb-form">
+      <label class="fb-l" for="cN">Full name</label>
+      <input class="field" id="cN" maxlength="60" autocomplete="name" placeholder="e.g. Diego Martínez">
+      <p class="sub" style="margin:0">Your name, the date and your result are saved with a code, so a company can check the certificate at english.chartroomlab.com/verify. Nothing else is sent.</p>
+    </section></div>`;
+  setBar(`<button class="cta" id="go" disabled>Make my certificate</button>`);
+  const nm = $("#cN"), ok = () => nm.value.trim().replace(/\s+/g, " ").length >= 3;
+  nm.oninput = () => { $("#go").disabled = !ok(); };
+  $("#cBack").onclick = navBack;
+  $("#go").onclick = () => {
+    if (!ok()) return;
+    const d = new Date(), date = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    progress.cert = {name: nm.value.trim().replace(/\s+/g, " "), code: certCode(), date, pct: testsState().final.best};
+    saveProgress();
+    enqueue("/api/cert", {...progress.cert, id: deviceId()});
+    navReplace({v: "cert"}); viewCert();
+  };
+  window.scrollTo(0, 0);
+}
+function viewCert(){
+  stopAll(); clearBar(); clearTabs();
+  const c = progress.cert;
+  if (!c) { goHome(); return; }
+  const when = new Date(c.date + "T12:00:00").toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric"});
+  const link = `${CERT_URL}?c=${c.code}`;
+  app.innerHTML = `<div class="home cert-view">
+    <button class="back-link" id="cBack">${I.back} Back</button>
+    <article class="cert" id="cert">
+      <div class="cert-top"><span class="cert-ico">${I.wheel}</span><span>ChartroomLab · English on Board</span></div>
+      <p class="cert-kicker">Certificate of completion</p>
+      <p class="cert-line">This is to certify that</p>
+      <h1 class="cert-name">${esc(c.name)}</h1>
+      <p class="cert-line">has completed <b>English on Board</b>, Maritime English for deck officers: 27 lessons in 7 modules, from the first day on board in Houston to the pilot in Marseille, and passed the final test with <b>${c.pct}%</b>.</p>
+      <div class="cert-foot">
+        <div><span class="cert-sign">Bianca Tortore</span><span class="cert-small">Bianca Tortore · deck officer, course author</span></div>
+        <div><b>${esc(when)}</b><span class="cert-small">Date</span></div>
+      </div>
+      <p class="cert-verify"><span>Check this certificate</span> english.chartroomlab.com/verify · code <b>${esc(c.code)}</b></p>
+      <p class="cert-small cert-legal">English on Board is a language course. It is not approved by the IMO and is not an STCW certificate.</p>
+    </article>
+    <div class="cert-actions"><button class="cta" id="cPdf">Save as PDF</button><button class="chip-btn" id="cShare">Share the check link</button></div>
+    <p class="note">To save it: tap Save as PDF, then choose "Save as PDF" as the printer.</p>
+  </div>`;
+  $("#cBack").onclick = navBack;
+  $("#cPdf").onclick = () => window.print();
+  $("#cShare").onclick = async () => {
+    const text = `My English on Board certificate: ${link}`;
+    try { if (navigator.share) { await navigator.share({title: "English on Board certificate", text, url: link}); return; } } catch (e) { return; }
+    try { await navigator.clipboard.writeText(link); $("#cShare").textContent = "Link copied"; } catch (e) { prompt("Copy the link:", link); }
+  };
+  window.scrollTo(0, 0);
+}
+function finalRow(){
+  const open = finalOpen(), t = testsState().final, c = progress.cert;
+  const meta = !open ? "Finish all 27 lessons first" : c ? `Passed · ${t ? t.best : c.pct}% · certificate ready` : t ? `Best: ${t.best}%${t.passed ? " · passed" : ""}` : "40 questions · about 25 min · 80% to pass";
+  return `<section class="module"><div class="module-head"><h3>Final test</h3><span class="mono">One certificate</span></div>
+    <ol class="lrows"><li class="lrow test ${open ? "ready" : "locked"} ${t && t.passed ? "complete" : ""}">
+    <button class="lrow-btn" ${open ? "data-final" : "disabled"}>
+      <span class="lrow-num">${t && t.passed ? I.check : I.flag}</span>
+      <span class="lrow-body"><span class="lrow-title">English on Board final test</span><span class="lrow-meta">${meta}</span></span>
+      <span class="lrow-end">${open ? I.chev : I.lock}</span></button></li>
+    ${c ? `<li class="lrow ready"><button class="lrow-btn" data-cert><span class="lrow-num">${I.check}</span><span class="lrow-body"><span class="lrow-title">Your certificate</span><span class="lrow-meta">${esc(c.code)}</span></span><span class="lrow-end">${I.chev}</span></button></li>` : ""}</ol></section>`;
 }
 
 /* =========================================================
@@ -593,6 +705,8 @@ async function viewVocab(modN){
 function wireRows(){
   $$("[data-n]").forEach(b => b.onclick = () => openLessonNav(+b.dataset.n));
   $$("[data-test]").forEach(b => b.onclick = () => drillNav("test", +b.dataset.test));
+  $$("[data-final]").forEach(b => b.onclick = () => drillNav("final"));
+  $$("[data-cert]").forEach(b => b.onclick = () => openCertNav(false));
   $$("[data-vocab]").forEach(b => b.onclick = () => { navPush({v: "vocab", m: +b.dataset.vocab}); viewVocab(+b.dataset.vocab); });
 }
 
@@ -692,6 +806,7 @@ function viewLessons(){
   const cur = currentLesson();
   tabView("lessons", `<h2 class="tab-title">Lessons</h2><p class="sub tab-sub">27 lessons in 7 modules, from the first walk on deck to the radio.</p>
     ${COURSE.modules.map(m => moduleSection(m, cur)).join("")}
+    ${finalRow()}
     <p class="note">Progress is saved on this device.</p>`);
   wireRows();
 }
@@ -704,6 +819,7 @@ function viewPractice(){
     <button class="pcard" id="reviewBtn" ${rc ? "" : "disabled"}><span class="pcard-ico">${I.check}</span><span><b>Review your mistakes</b><small>${rc ? `${rc} to fix` : "Nothing to fix right now"}</small></span>${I.chev}</button>
     <section class="module"><div class="module-head"><h3>Module tests</h3><span class="mono">80% to pass</span></div>
       <ol class="lrows">${mods.map(moduleTestRow).join("")}</ol></section>
+    ${finalRow()}
     <p class="note">One certificate at the end of the course, when you pass the final test.</p>`);
   $("#quick").onclick = () => drillNav("quick");
   if (rc) $("#reviewBtn").onclick = reviewNav;
@@ -736,13 +852,14 @@ function viewProfile(){
   const sess = all.reduce((a, l) => a + doneCount(l.n), 0);
   const sc = Object.keys(progress).filter(k => /^l\d+$/.test(k)).flatMap(k => Object.values(progress[k].scores || {}));
   const avg = sc.length ? Math.round(sc.reduce((a, b) => a + b, 0) / sc.length) + "%" : "–";
-  const tests = testsState(), passed = Object.values(tests).filter(t => t.passed).length;
+  const tests = testsState(), passed = Object.entries(tests).filter(([k, t]) => /^m\d$/.test(k) && t.passed).length;
   const seg = (v, label) => `<button class="seg-b" data-speed="${v}" aria-pressed="${settings.speed === v}">${label}</button>`;
   tabView("profile", `<h2 class="tab-title">Profile</h2>
     <div class="stats4">
       <div><b>${ld}</b><span>${ld === 1 ? "lesson" : "lessons"} done</span></div><div><b>${sess}</b><span>sessions</span></div>
       <div><b>${avg}</b><span>right first time</span></div><div><b>${passed}</b><span>module ${passed === 1 ? "test" : "tests"} passed</span></div>
     </div>
+    ${progress.cert ? `<button class="pcard" data-cert><span class="pcard-ico">${I.check}</span><span><b>Your certificate</b><small>${esc(progress.cert.code)} · ${progress.cert.pct}%</small></span>${I.chev}</button>` : ""}
     <button class="pcard" id="fbOpen"><span class="pcard-ico">${I.msg}</span><span><b>Send feedback</b><small>Tell us what works and what to improve</small></span>${I.chev}</button>
     ${installCardHTML("profile")}
     <section class="panel setting">
@@ -764,6 +881,7 @@ function viewProfile(){
     <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>`);
   wireInstall();
   $("#fbOpen").onclick = () => { navPush({v: "feedback"}); viewFeedback(); };
+  $$("[data-cert]").forEach(b => b.onclick = () => openCertNav(false));
   offlineSummary().then(r => {
     const el = $("#offState"); if (!el) return;
     const ready = allLessons().filter(l => l.ready).map(l => l.n);
@@ -784,7 +902,7 @@ function viewProfile(){
 const viewSettings = viewProfile;
 const TAB_VIEWS = {home: viewHome, lessons: viewLessons, practice: viewPractice, logbook: viewLogbook, profile: viewProfile};
 function betaNoteHTML(){
-  return `<div class="beta-note"><span class="mono">Beta</span><p>Module 1 is open and free. The other modules are on the way.
+  return `<div class="beta-note"><span class="mono">Beta</span><p>The whole course is open during the beta: 27 lessons, a final test and a certificate.
     English on Board is a language course: it is not approved by the IMO and does not give an STCW certificate.</p></div>`;
 }
 function viewFeedback(){
@@ -825,14 +943,35 @@ function viewFeedback(){
    Both are built from the graded screens of the lessons, plus word questions.
    ========================================================= */
 const TEST_N = 15, TEST_PASS = 80, QUICK_N = 8;
+const FINAL = {listen: 14, choice: 5, type: 5, read: 6, complete: 10, oral: 4};   /* 40 graded + 4 speaking (not graded) */
+/* one round-robin over the modules for the whole test (it carries on from one section to the next),
+   so the 40 questions fall 5 or 6 per module; inside a module the lessons take turns, in random order */
+function finalPicker(){
+  const mods = COURSE.modules.map(m => shuffle(m.lessons.filter(l => l.ready).map(l => l.n))).filter(a => a.length);
+  const st = {mi: Math.floor(Math.random() * mods.length)};
+  return (pool, k) => {
+    const out = [];
+    for (let tries = 0; out.length < k && tries < k * mods.length * 2; tries++) {
+      const ls = mods[st.mi++ % mods.length];
+      for (let j = 0; j < ls.length; j++) {
+        const n = ls[0]; ls.push(ls.shift());
+        const i = pool.findIndex(x => x.ln === n);
+        if (i >= 0) { out.push(pool.splice(i, 1)[0]); break; }
+      }
+    }
+    return out;
+  };
+}
+const finalOpen = () => PREVIEW || allLessons().every(l => l.ready && isDone(l));
 async function screenPools(ns){
-  const pools = {listen: [], read: [], complete: [], vocab: []};
+  const pools = {listen: [], read: [], complete: [], vocab: [], oral: []};
   for (const n of ns) {
     await loadLesson(n);
     L.sessions.forEach(se => se.screens.forEach((s, j) => {
       const it = {...s, ln: n, rk: `${n}|${se.id}|${j}`};
       if (s.type === "listen" || s.type === "tap") pools.listen.push(it);
       else if (s.type === "doc" || s.type === "docfind") pools.read.push(it);
+      else if (s.type === "role") pools.oral.push(it);
       else if (s.type === "build" || (s.type === "type" && !s.audio) || (s.type === "choice" && !s.quick && /_{3}/.test(s.q))) pools.complete.push(it);
     }));
     const ws = Object.values(L.words || {});
@@ -857,7 +996,24 @@ async function startDrill(kind, modN){
   app.innerHTML = `<p class="loading">${kind === "test" ? "Preparing the test…" : "Preparing your practice…"}</p>`;
   let ns, items = [];
   try {
-    if (kind === "test") {
+    if (kind === "final") {
+      ns = allLessons().filter(l => l.ready).map(l => l.n);
+      const p = await screenPools(ns), last = ns.includes(27) ? 27 : ns[ns.length - 1], pick = finalPicker();
+      items = [
+        {type: "intro", ln: last, image: "img/l27/scene.jpg", kicker: "Final test · Marseille", title: "Before you sign off",
+          body: "The voyage is over. Tanya has one last check before you go down the gangway: 40 questions from the whole course. You need 80% to pass, and then you get your certificate.",
+          es: "40 preguntas de todo el curso. Con 80% aprobás y recibís el certificado."},
+        ...pick(p.listen, FINAL.listen),
+        ...pick(p.vocab.filter(x => x.kind === "choice"), FINAL.choice),
+        ...pick(p.vocab.filter(x => x.kind === "type"), FINAL.type),
+        ...pick(p.read, FINAL.read),
+        ...pick(p.complete, FINAL.complete)
+      ];
+      const oral = finalPicker()(p.oral, FINAL.oral).map(x => ({...x, oral: true}));
+      if (oral.length) items.push({type: "intro", ln: last, skip: true, kicker: "Final test · speaking", title: "Four answers out loud",
+        body: "This part is not graded: your result is already counted. Answer like on board, and see how clear you are.",
+        es: "Esta parte no cuenta para la nota. Podés saltearla."}, ...oral);
+    } else if (kind === "test") {
       ns = COURSE.modules.find(m => m.n === modN).lessons.filter(l => l.ready).map(l => l.n);
       const p = await screenPools(ns);
       const voc = [...takeSpread(p.vocab.filter(x => x.kind === "choice"), 2, ns), ...takeSpread(p.vocab.filter(x => x.kind === "type"), 2, ns)];
@@ -874,13 +1030,14 @@ async function startDrill(kind, modN){
   }
   if (!items.length) { navBack(); return; }
   if (kind === "quick") items = shuffle(items);
-  S = {drill: kind, mod: modN, review: false, i: -1, sess: null, pos: 0, graded: 0, firstRight: 0, missed: 0, queue: items};
+  S = {drill: kind, mod: modN, review: false, i: -1, sess: null, pos: 0, graded: 0, firstRight: 0, missed: 0, oralN: 0, oralOk: 0, queue: items};
   openPlayer();
   render();
 }
 function finishDrill(){
   $("#prog").style.width = "100%";
   const pct = S.graded ? Math.round(S.firstRight / S.graded * 100) : 0;
+  if (S.drill === "final") { finishFinal(pct); return; }
   if (S.drill === "test") {
     const t = testsState(), key = "m" + S.mod, prev = t[key], pass = pct >= TEST_PASS;
     t[key] = {best: Math.max(pct, prev ? prev.best : 0), passed: pass || !!(prev && prev.passed), last: pct};
@@ -1005,16 +1162,17 @@ function checkBtn(evalFn, info = {}){
   setBar(`<button class="cta" id="go" disabled>Check</button>`);
   $("#go").onclick = () => verdict(evalFn(), info.answer, info.why);
 }
+const isExam = () => S.drill === "test" || S.drill === "final";
 function enableCheck(on = true){ const g = $("#go"); if (g) g.disabled = !on; }
 function verdict(ok, answer, why){
   const sc = S.queue[S.pos];
   if (!sc.retry) { S.graded++; if (ok) S.firstRight++; }
-  if (!ok && !sc.retry) { if (S.drill !== "test") S.queue.push({...sc, retry: true}); S.missed++; }
+  if (!ok && !sc.retry) { if (!isExam()) S.queue.push({...sc, retry: true}); S.missed++; }
   if (ok) clearReview(sc.rk); else addReview(sc.rk, sc.type);
   setBar(`<div class="verdict" role="status"><b>${ok ? "Good." : "Not quite."}</b>
     ${!ok && answer ? `<span>Answer: <strong>${esc(answer)}</strong></span>` : ""}
     ${why ? `<span>${esc(why)}</span>` : ""}
-    ${!ok && !sc.retry && S.drill !== "test" ? `<span class="note">It comes back at the end.</span>` : ""}</div>
+    ${!ok && !sc.retry && !isExam() ? `<span class="note">It comes back at the end.</span>` : ""}</div>
     <button class="cta" id="go">Continue</button>`, ok ? "ok" : "bad");
   $("#go").onclick = next; $("#go").focus();
 }
@@ -1116,6 +1274,11 @@ const RENDER = {
     const img = sc.image ? `<div class="scene"><img src="${esc(sc.image)}" alt="" onerror="this.parentNode.remove()"></div>` : "";
     st.innerHTML = `${img}<span class="mono kicker">${esc(sc.kicker)}</span><h2 class="prompt" style="font-size:40px">${esc(sc.title)}</h2>
       <p style="margin:0">${esc(sc.body)}</p>${sc.es ? `<p class="sub">${esc(sc.es)}</p>` : ""}`;
+    if (sc.skip) {
+      setBar(`<div class="self"><button class="opt" id="skipOral">Skip</button><button class="cta" id="go" style="flex:1">Start</button></div>`);
+      $("#go").onclick = next; $("#skipOral").onclick = () => { S.pos = S.queue.length - 1; finish(); };
+      return;
+    }
     cont(sc.button || "Start");
   },
 
@@ -1429,6 +1592,7 @@ function showCheck(sc, m){
     <span class="mono kicker">Target</span><p class="target">${m.tw.map((w, i) => `<span class="${m.ok[i] ? "w-ok" : "w-miss"}">${esc(w)}</span>`).join(" ")}</p>`;
   $("#rev").hidden = false;
   info.textContent = "Tap to try again.";
+  if (sc.oral && !sc.counted) { sc.counted = true; S.oralN++; if (level === "ok") S.oralOk++; }
   if (level === "ok") {
     clearReview(sc.rk);
     setBar(`<div class="verdict" role="status"><b>Clear and correct.</b><span>That's what a listener on board would hear.</span></div><button class="cta" id="go">Continue</button>`, "ok");
@@ -1438,7 +1602,7 @@ function showCheck(sc, m){
     setBar(`<div class="verdict" role="status"><b>${level === "almost" ? "Almost." : "Try again."}</b><span>${msg}</span></div>
       <div class="self"><button class="opt" id="later">Continue</button><button class="cta" id="retryNow" style="flex:1">Try again</button></div>`, "bad");
     $("#retryNow").onclick = () => { setBar(`<button class="cta" disabled>Say it again</button>`); $("#mic").click(); };
-    $("#later").onclick = () => { addReview(sc.rk, sc.type); if (!sc.retry) S.queue.push({...sc, retry: true}); next(); };
+    $("#later").onclick = () => { addReview(sc.rk, sc.type); if (!sc.retry && !isExam()) S.queue.push({...sc, retry: true}); next(); };
   }
 }
 
@@ -1476,7 +1640,7 @@ function selfRate(sc){
   setBar(`<div class="verdict"><b style="color:var(--ink)">How did it go?</b><span>Compare your version with the model.</span></div>
     <div class="self"><button class="opt" id="again">Not yet</button><button class="cta" id="gotit" style="flex:1">Got it</button></div>`);
   $("#gotit").onclick = () => { clearReview(sc.rk); next(); };
-  $("#again").onclick = () => { addReview(sc.rk, sc.type); if (!sc.retry) S.queue.push({...sc, retry: true}); next(); };
+  $("#again").onclick = () => { addReview(sc.rk, sc.type); if (!sc.retry && !isExam()) S.queue.push({...sc, retry: true}); next(); };
 }
 
 function finish(){
@@ -1639,6 +1803,7 @@ function viewWelcome(){
   setTimeout(saveForOffline, 300);
   window.addEventListener("online", () => setTimeout(saveForOffline, 1500));
   if (navState().v === "session" && await resumeAfterReload()) { registerSW(); return; }
+  if (navState().v === "cert" || navState().v === "certform") { showState(navState()); registerSW(); return; }
   const m = /^#l(\d+)$/.exec(location.hash);
   const ready = m && COURSE.modules.some(mod => mod.lessons.some(l => l.n === +m[1] && l.ready));
   let fresh = false;

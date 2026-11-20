@@ -508,3 +508,34 @@ html.dark-page body{background:#0A1620}
 .vplay{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--rule);background:var(--bg);color:var(--ink);display:grid;place-items:center;cursor:pointer}
 .vplay.sm{width:24px;height:24px;display:inline-grid;vertical-align:middle}
 .vplay svg{width:16px;height:16px}
+
+/* ---------- certificate (fixed light colours: it is printed and shared) ---------- */
+.cert-view{padding-bottom:40px}
+.cert{background:#FBFAF6;color:#13212D;border:1px solid #D8D2C2;border-radius:6px;padding:26px 22px 20px;position:relative;
+  box-shadow:inset 0 0 0 6px #FBFAF6,inset 0 0 0 7px #C9A86A;font-family:var(--f-body)}
+.cert-top{display:flex;align-items:center;gap:8px;font:600 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:#17506A}
+.cert-ico{display:inline-flex;color:#17506A}.cert-ico svg{width:26px;height:26px}
+.cert-kicker{margin:22px 0 4px;font:700 28px/1.05 var(--f-display);text-transform:uppercase;letter-spacing:.02em;color:#17506A}
+.cert-line{margin:10px 0;font-size:16px;line-height:1.5}
+.cert-name{margin:6px 0 4px;font:700 34px/1.1 var(--f-display);color:#13212D;border-bottom:1.5px solid #C9A86A;padding-bottom:6px;overflow-wrap:anywhere}
+.cert-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:22px;flex-wrap:wrap}
+.cert-foot>div{display:flex;flex-direction:column;gap:2px}
+.cert-sign{font:italic 400 30px/1 "Snell Roundhand","Segoe Script","Brush Script MT",cursive;color:#17506A;border-bottom:1px solid #9AA6B2;padding-bottom:2px}
+.cert-small{font-size:12px;color:#5B6670}
+.cert-verify{margin:20px 0 6px;font-size:13px;color:#13212D;background:#EEF3F5;border-radius:6px;padding:8px 10px}
+.cert-verify span{display:block;font:600 11px/1.3 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:#5B6670}
+.cert-legal{margin:8px 0 0}
+.cert-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.cert-actions .cta{flex:1;min-width:180px}
+@media print{
+  @page{size:A4 landscape;margin:12mm}
+  html,body{background:#fff!important}
+  body *{visibility:hidden}
+  #cert,#cert *{visibility:visible}
+  #cert{position:absolute;left:0;top:0;width:100%;height:185mm;display:flex;flex-direction:column;justify-content:center;
+    box-shadow:inset 0 0 0 8px #FBFAF6,inset 0 0 0 10px #C9A86A;border:0;border-radius:0;padding:14mm 20mm;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cert-top{font-size:14px}.cert-ico svg{width:34px;height:34px}
+  .cert-kicker{font-size:50px;margin-top:14mm}.cert-name{font-size:60px;margin:10px 0 8px}.cert-line{font-size:20px}
+  .cert-sign{font-size:40px}.cert-foot{margin-top:12mm}.cert-small{font-size:13px}.cert-verify{font-size:15px;margin-top:10mm}
+}
