@@ -11,8 +11,8 @@
  "audio": {
   "l14-01": {
    "voice": "tanya",
-   "text": "Good morning, James. Diego, this is your first watch at sea. Listen to the handover.",
-   "es": "Buen día, James. Diego, esta es tu primera guardia en el mar. Escuchá el relevo."
+   "text": "Good morning, James. Diego, this is your first night watch. Listen to the handover.",
+   "es": "Buen día, James. Diego, esta es tu primera guardia de noche. Escuchá el relevo."
   },
   "l14-02": {
    "voice": "james",
@@ -413,7 +413,7 @@
      "type": "intro",
      "image": "img/l14/scene.jpg",
      "kicker": "Day 4 · 03:45 · Gulf of Mexico",
-     "title": "Diego's first sea watch",
+     "title": "Diego's first night watch",
      "body": "Quarter to four in the morning. Tanya comes to the bridge for her watch, and Diego comes with her. James gives the watch to Tanya. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },

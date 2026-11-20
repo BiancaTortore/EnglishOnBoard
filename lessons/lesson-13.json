@@ -2,93 +2,76 @@
  "n": 13,
  "module": 4,
  "title": "Bridge equipment",
- "place": "Day 3 · 11:50 · Gulf of Mexico, bridge",
- "goal": "Name the bridge equipment and say what each one does.",
+ "place": "Day 3 · 16:30 · Gulf of Mexico, bridge",
+ "goal": "Name the bridge equipment and say what each one is used for.",
  "images": {
   "hero": "img/l13/hero.jpg",
   "scene": "img/l13/scene.jpg"
  },
  "audio": {
   "l13-01": {
-   "voice": "mateo",
-   "text": "James, course one zero five, speed sixteen knots, on autopilot. No traffic close. That's all.",
-   "es": "James, rumbo uno cero cinco, velocidad dieciséis nudos, en piloto automático. Sin tráfico cerca. Eso es todo."
+   "voice": "tanya",
+   "text": "OK, Diego. Your first watch with me at sea. First, the equipment.",
+   "es": "Bueno, Diego. Tu primera guardia conmigo en el mar. Primero, los equipos."
   },
   "l13-02": {
-   "voice": "james",
-   "text": "Thanks, Mateo. I have the watch.",
-   "es": "Gracias, Mateo. Tomo la guardia."
-  },
-  "l13-03": {
-   "pause": 600,
-   "voice": "mateo",
-   "text": "Enjoy the bridge, cadet! Lunch for me now.",
-   "es": "¡Disfrutá el puente, cadete! Ahora me toca almorzar."
-  },
-  "l13-04": {
-   "pause": 1000,
-   "voice": "james",
-   "text": "Right, Diego. Your first time on the bridge at sea. Let me show you the equipment.",
-   "es": "Bueno, Diego. Tu primera vez en el puente navegando. Te muestro los equipos."
-  },
-  "l13-05": {
    "voice": "diego",
    "text": "Great. Is this the radar?",
    "es": "Genial. ¿Esto es el radar?"
   },
-  "l13-06": {
-   "voice": "james",
+  "l13-03": {
+   "voice": "tanya",
    "text": "No, that's the ECDIS, the electronic chart. It shows our position. This one is the radar. It shows other ships.",
    "es": "No, eso es el ECDIS, la carta electrónica. Muestra nuestra posición. Este es el radar. Muestra otros buques."
   },
-  "l13-07": {
+  "l13-04": {
    "voice": "diego",
    "text": "In fog too?",
    "es": "¿Con niebla también?"
   },
-  "l13-08": {
-   "voice": "james",
+  "l13-05": {
+   "voice": "tanya",
    "text": "In fog, at night, always. Remember Galveston?",
    "es": "Con niebla, de noche, siempre. ¿Te acordás de Galveston?"
   },
-  "l13-09": {
+  "l13-06": {
    "voice": "diego",
    "text": "I do! And what does this do?",
    "es": "¡Sí! ¿Y esto para qué sirve?"
   },
-  "l13-10": {
+  "l13-07": {
    "pause": 500,
-   "voice": "james",
+   "voice": "tanya",
    "text": "That's the echo sounder. It measures the depth under the ship. Here, forty metres.",
    "es": "Es la ecosonda. Mide la profundidad debajo del buque. Acá, cuarenta metros."
   },
-  "l13-11": {
+  "l13-08": {
    "voice": "diego",
    "text": "And the steering wheel?",
    "es": "¿Y el timón?"
   },
-  "l13-12": {
-   "voice": "james",
+  "l13-09": {
+   "voice": "tanya",
    "text": "We call it the helm. Now the autopilot steers, but we can change to hand steering any time.",
    "es": "Lo llamamos helm. Ahora gobierna el piloto automático, pero podemos pasar a gobierno manual cuando sea."
   },
-  "l13-13": {
+  "l13-10": {
    "pause": 600,
-   "voice": "james",
+   "voice": "tanya",
    "text": "This is the gyro compass. It gives the heading. And this lever is the engine telegraph.",
    "es": "Este es el girocompás. Da el rumbo de proa. Y esta palanca es el telégrafo de máquinas."
   },
-  "l13-14": {
+  "l13-11": {
    "voice": "diego",
    "text": "And the binoculars?",
    "es": "¿Y los binoculares?"
   },
-  "l13-15": {
-   "voice": "james",
-   "text": "For the lookout. But remember: the most important equipment on the bridge is your eyes.",
-   "es": "Para la vigía. Pero acordate: el equipo más importante del puente son tus ojos."
+  "l13-12": {
+   "voice": "tanya",
+   "text": "For the lookout. That's your job on my watch. And remember: the most important equipment on the bridge is your eyes.",
+   "es": "Para la vigía. Ese es tu trabajo en mi guardia. Y acordate: el equipo más importante del puente son tus ojos."
   },
-  "l13-16": {
+  "l13-13": {
    "voice": "diego",
    "text": "My eyes. Got it.",
    "es": "Mis ojos. Entendido."
@@ -205,26 +188,26 @@
    "text": "It gives the heading.",
    "es": "Da el rumbo de proa."
   },
-  "m-s": {
+  "m-spell": {
    "voice": "model",
-   "text": "shows, gives, steers",
-   "es": "muestra, da, gobierna"
+   "text": "V H F, G P S, A I S",
+   "es": "V H F, G P S, A I S"
   },
-  "m-iz": {
+  "m-read": {
    "voice": "model",
-   "text": "measures, watches",
-   "es": "mide, vigila"
+   "text": "ECDIS, NAVTEX, radar",
+   "es": "ECDIS, NAVTEX, radar"
   },
   "c-show-ecdis": {
    "voice": "james",
    "text": "Where's the ECDIS?"
   },
   "c-show-gyro": {
-   "voice": "mateo",
+   "voice": "tanya",
    "text": "Show me the gyro compass."
   },
   "c-show-helm": {
-   "voice": "mateo",
+   "voice": "tanya",
    "text": "Show me the helm."
   },
   "c-show-binoculars": {
@@ -236,19 +219,19 @@
    "text": "Show me the echo sounder."
   },
   "c-show-telegraph": {
-   "voice": "mateo",
+   "voice": "tanya",
    "text": "Where's the engine telegraph?"
   },
   "c-what-radar": {
-   "voice": "james",
+   "voice": "tanya",
    "text": "Diego, what does the radar do?"
   },
   "c-what-echo": {
-   "voice": "james",
+   "voice": "tanya",
    "text": "And the echo sounder? What does it do?"
   },
   "c-whatsthis": {
-   "voice": "mateo",
+   "voice": "james",
    "text": "Hey cadet, what's this screen?"
   },
   "c-what-gyro": {
@@ -256,12 +239,12 @@
    "text": "What does the gyro compass do?"
   },
   "c-depth": {
-   "voice": "james",
+   "voice": "tanya",
    "text": "The echo sounder shows twenty-five metres."
   },
   "c-steers": {
-   "voice": "mateo",
-   "text": "The autopilot steers. I watch."
+   "voice": "tanya",
+   "text": "The autopilot steers. We watch."
   }
  },
  "dialogue": [
@@ -277,10 +260,7 @@
   "l13-10",
   "l13-11",
   "l13-12",
-  "l13-13",
-  "l13-14",
-  "l13-15",
-  "l13-16"
+  "l13-13"
  ],
  "words": {
   "radar": {
@@ -436,44 +416,30 @@
     {
      "type": "intro",
      "image": "img/l13/scene.jpg",
-     "kicker": "Day 3 · 11:50 · Gulf of Mexico",
-     "title": "A visit to the bridge",
-     "body": "The fog is gone and the ship is at sea. Before lunch, Diego goes up to the bridge. Mateo, the Third Officer, is finishing his watch. Listen first, one piece at a time.",
+     "kicker": "Day 3 · 16:30 · Gulf of Mexico",
+     "title": "First watch with the Chief Officer",
+     "body": "The fog is gone and the ship is at sea. Diego starts his watch with Tanya, from 4 to 8. First, she shows him the bridge. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l13-01",
-      "l13-02"
-     ],
-     "q": "Who has the watch now?",
-     "opts": [
-      "James",
-      "Mateo",
-      "Tanya"
-     ],
-     "a": 0,
-     "why": "\"I have the watch.\""
     },
     {
      "type": "listen",
      "audio": [
       "l13-01"
      ],
-     "q": "What is the speed?",
+     "q": "Whose watch is it?",
      "opts": [
-      "16 knots",
-      "15 knots",
-      "60 knots"
+      "Tanya's",
+      "James's",
+      "Mateo's"
      ],
-     "a": 0
+     "a": 0,
+     "why": "\"Your first watch with me.\""
     },
     {
      "type": "listen",
      "audio": [
-      "l13-05",
-      "l13-06"
+      "l13-02",
+      "l13-03"
      ],
      "q": "What does the ECDIS show?",
      "opts": [
@@ -486,8 +452,22 @@
     {
      "type": "listen",
      "audio": [
-      "l13-09",
-      "l13-10"
+      "l13-04",
+      "l13-05"
+     ],
+     "q": "The radar works…",
+     "opts": [
+      "in fog and at night",
+      "only in daylight",
+      "only in port"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l13-06",
+      "l13-07"
      ],
      "q": "How deep is the water here?",
      "opts": [
@@ -500,13 +480,13 @@
     {
      "type": "listen",
      "audio": [
-      "l13-11",
-      "l13-12"
+      "l13-08",
+      "l13-09"
      ],
      "q": "Who steers the ship now?",
      "opts": [
       "The autopilot",
-      "James",
+      "Tanya",
       "Diego"
      ],
      "a": 0
@@ -514,21 +494,21 @@
     {
      "type": "listen",
      "audio": [
-      "l13-14",
-      "l13-15",
-      "l13-16"
+      "l13-11",
+      "l13-12",
+      "l13-13"
      ],
-     "q": "For James, the most important equipment is…",
+     "q": "What is Diego's job on Tanya's watch?",
      "opts": [
-      "your eyes",
-      "the radar",
-      "the ECDIS"
+      "Lookout",
+      "Helmsman",
+      "Radio"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole visit",
+     "title": "Now the whole scene",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
@@ -637,7 +617,7 @@
   },
   {
    "id": "phrases",
-   "title": "What does it do?",
+   "title": "What is it for?",
    "skill": "Phrases",
    "min": 6,
    "screens": [
@@ -671,44 +651,44 @@
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "It shows · it measures: the -s",
+     "title": "What is it for? used to / used for",
      "steps": [
       [
-       "it / he / she",
-       "The radar show<b>s</b> ships."
+       "used to + verb",
+       "The echo sounder is used to measure the depth."
+      ],
+      [
+       "used for + -ing",
+       "The radar is used for watching other ships."
       ],
       [
        "question",
-       "What <b>does</b> it do?"
-      ],
-      [
-       "answer",
-       "It measure<b>s</b> the depth."
+       "What is it used for?"
       ]
      ],
      "paras": [
-      "To say what something does (always, every day), use the simple verb. With <b>it, he, she</b> add <b>-s</b>.",
-      "In the question, <b>does</b> carries the -s, so the verb has none: <i>What does it <b>do</b>?</i>"
+      "Two ways to say what equipment is <b>for</b>: <b>is used to</b> + verb, or <b>is used for</b> + verb<b>-ing</b>. Same meaning.",
+      "Short and natural on the bridge: <i>It shows other ships.</i> <i>It measures the depth.</i> (Remember the -s from Lesson 4.)"
      ],
-     "avoid": "The radar show ships. · What it does? · What does it shows?"
+     "avoid": "It's used for measure the depth. · It's used to measuring. · It serves for…"
     },
     {
      "type": "choice",
-     "q": "The ECDIS ___ our position.",
+     "q": "The echo sounder is used to ___ the depth.",
      "opts": [
-      "shows",
-      "show",
-      "showing"
+      "measure",
+      "measuring",
+      "measures"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Which question is correct?",
+     "q": "The gyro compass is used for ___ the heading.",
      "opts": [
-      "What does the gyro compass do?",
-      "What does the gyro compass does?",
-      "What the gyro compass does?"
+      "giving",
+      "give",
+      "gives"
      ],
      "a": 0
     },
@@ -717,14 +697,16 @@
      "situation": "Diego asks about the echo sounder.",
      "q": "Answer him.",
      "a": [
-      "It",
-      "measures",
+      "It's",
+      "used",
+      "to",
+      "measure",
       "the",
       "depth."
      ],
      "extra": [
-      "measure",
-      "does"
+      "for",
+      "measuring"
      ]
     },
     {
@@ -740,42 +722,41 @@
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "Don't drop the -s",
+     "title": "\"Sirve para\" is not \"serves for\"",
      "paras": [
-      "In Spanish the verb changes by itself: <i>muestra, mide</i>. In English, the -s is small and easy to forget, but people hear it.",
+      "<i>Sirve para medir</i> = <b>it's used to measure</b>, or simply <b>it measures</b>.",
       "Also: <b>the helm</b> is the steering; <b>the heading</b> is where the bow points now; <b>the course</b> is the planned way."
      ],
-     "avoid": "The autopilot steer the ship. · It give the heading."
+     "avoid": "It serves for measure the depth. · It serves to see ships."
     },
     {
      "type": "choice",
-     "q": "The autopilot ___ the ship.",
+     "q": "What does the radar do?",
      "opts": [
-      "steers",
-      "steer",
-      "is steer"
+      "It's used for watching other ships.",
+      "It serves for watch other ships.",
+      "It's used for watch other ships."
      ],
      "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Three sounds for -s",
+     "title": "Spell it or read it?",
      "paras": [
-      "After most sounds, the -s is a soft <b>/z/</b>: <i>shows, gives, steers</i>.",
-      "After <i>s, sh, ch, j</i> sounds it's a new syllable <b>/ɪz/</b>: <i>measures, watches</i>.",
-      "<b>radar</b> = /ˈreɪdɑː/, <i>RAY-dar</i>. <b>ECDIS</b> = <i>EK-dis</i>."
+      "Some short names are <b>spelled</b>, letter by letter: <b>VHF</b>, <b>GPS</b>, <b>AIS</b>, <b>CPA</b>. Stress on the last letter: <i>vee-aitch-EF</i>.",
+      "Others are <b>read as a word</b>: <b>ECDIS</b> (<i>EK-dis</i>), <b>NAVTEX</b>, <b>radar</b> (<i>RAY-dar</i>)."
      ],
      "list": [
       [
-       "shows, gives, steers",
-       "muestra, da, gobierna",
-       "m-s"
+       "V H F, G P S, A I S",
+       "se deletrean",
+       "m-spell"
       ],
       [
-       "measures, watches",
-       "mide, vigila",
-       "m-iz"
+       "ECDIS, NAVTEX, radar",
+       "se leen como palabra",
+       "m-read"
       ]
      ]
     },
@@ -787,7 +768,7 @@
      "q": "Who steers?",
      "opts": [
       "The autopilot",
-      "Mateo",
+      "Tanya",
       "Nobody"
      ],
      "a": 0
@@ -862,8 +843,8 @@
      "type": "intro",
      "kicker": "Speaking",
      "title": "Say what it does",
-     "body": "Listen, say it, check it. Make the -s heard: it showS, it measureS.",
-     "es": "Que se escuche la -s.",
+     "body": "Listen, say it, check it. Short answers are fine: It shows other ships.",
+     "es": "Las respuestas cortas están bien.",
      "button": "Start"
     },
     {
@@ -887,7 +868,9 @@
       "It shows other ships.",
       "The radar shows other ships.",
       "It shows ships.",
-      "It shows the other ships."
+      "It shows the other ships.",
+      "It's used for watching other ships.",
+      "It's used to show other ships."
      ]
     },
     {
@@ -899,7 +882,9 @@
       "It measures the depth.",
       "The echo sounder measures the depth.",
       "It measures depth.",
-      "It measures the depth under the ship."
+      "It measures the depth under the ship.",
+      "It's used to measure the depth.",
+      "It's used for measuring the depth."
      ]
     },
     {
@@ -923,7 +908,8 @@
       "It gives the heading.",
       "The gyro compass gives the heading.",
       "It shows the heading.",
-      "It gives our heading."
+      "It gives our heading.",
+      "It's used to give the heading."
      ]
     }
    ]
@@ -956,23 +942,23 @@
     {
      "type": "listen",
      "audio": [
-      "l13-03"
+      "l13-12"
      ],
-     "q": "Where is Mateo going?",
+     "q": "For Tanya, the most important equipment is…",
      "opts": [
-      "To lunch",
-      "To his cabin",
-      "To the engine room"
+      "your eyes",
+      "the radar",
+      "the ECDIS"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Mateo gives the watch to James. James says…",
+     "q": "Diego's watch is…",
      "opts": [
-      "I have the watch.",
-      "You have the watch.",
-      "I am the watch."
+      "4 to 8, with the Chief Officer",
+      "12 to 4, with the Second Officer",
+      "8 to 12, with the Third Officer"
      ],
      "a": 0
     },

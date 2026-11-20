@@ -75,8 +75,8 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 11 | Mooring & letting go | Día 2 · 17:20 · estación de popa | La zarpada |
 | 12 | Anchoring | Día 3 · 02:00 · frente a Galveston | Niebla; el buque fondea a esperar, Diego en la proa |
 | **Módulo 4 · On the bridge** ||||
-| 13 | Bridge equipment | Día 3 · 11:50 · puente | Mateo le entrega la guardia a James; Diego sube de visita y James le muestra los equipos |
-| 14 | Watch handover | Día 4 · 03:45 · puente | James le entrega la guardia a Tanya; primera guardia de mar de Diego, con Tanya |
+| 13 | Bridge equipment | Día 3 · 16:30 · puente | Primera guardia de mar de Diego con Tanya: ella le muestra los equipos del puente |
+| 14 | Watch handover | Día 4 · 03:45 · puente | James le entrega la guardia a Tanya; primera guardia de noche de Diego |
 | 15 | Weather & sea | Día 4 · 06:30 · Golfo de México | Guardia de Tanya: entra un frente, Diego lo reporta desde el alerón y lo registra en el log |
 | 16 | Course, position & traffic | Día 5 · 17:00 · Estrecho de Florida | Guardia de Tanya: tráfico intenso; Diego de vigía reporta buques, marcaciones y distancias |
 | **Módulo 5 · Reporting** ||||
@@ -94,7 +94,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 26 | Medical & TMAS | Día 13 · Mediterráneo | Un marinero se lastima la mano; llaman a TMAS |
 | 27 | Pilot boarding & helm orders | Día 14 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
 
-### Foco de idioma por lección (borrador, no repetir)
+### Foco de idioma por lección (L1–16 ya escritas: así quedaron; L17+ borrador, no repetir)
 
 | # | Gramática / estructura | Pronunciación / oído |
 |---|---|---|
@@ -107,13 +107,13 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 7 | Preposiciones de lugar (in, on, behind, next to) | — (repasa formas débiles) |
 | 8 | La hora en 24 h; pedir con *can / could* | "zero seven thirty", "fourteen hundred" |
 | 9 | Do not vs Don't (altavoz vs persona) | Cazar el *not* |
-| 10 | Pedir y prestar: Can I borrow…? Pass me… | can /kən/ vs can't /kɑːnt/ |
-| 11 | Orden → read-back (-ing) → report | El nombre del cabo lleva el acento |
-| 12 | Present continuous para reportar avance | "two shackles", "up and down" |
+| 10 | Present continuous: What are you doing? I'm lashing… (+ Can you pass me…?) | La terminación -ing |
+| 11 | Orden → read-back → reporte corto (let go, all clear) | let go vs let's go; palabras clave fuertes |
+| 12 | Direcciones en reloj, grilletes; is leading / is holding | o'clock, shackle |
 | 13 | used to + verbo / used for + -ing | Siglas que se deletrean vs que se leen |
-| 14 | Present perfect vs past simple | El *have* tragado |
+| 14 | Rumbos de tres cifras, velocidad, read-back; I have / You have the watch | knot = not |
 | 15 | Tendencias y comparativos (increasing, backing) | Terminaciones -ing |
-| 16 | Reportar un buque: bearing, range, will pass | Dictados de radio con números |
+| 16 | Reportar un buque: qué, dónde (bow/beam/quarter), range, bearing | quarter, CPA |
 | 17 | Dónde va el *not*: I don't think… | Entonación |
 | 18 | has stopped / isn't working | Terminaciones -ed |
 | 19 | Voz pasiva simple; cantidades | — |
