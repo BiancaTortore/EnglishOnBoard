@@ -261,7 +261,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-38";
+const APP_VERSION = "beta-39";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -541,7 +541,7 @@ function lessonRow(l, cur){
       <span class="lrow-end">${l.ready ? I.chev : I.lock}</span></button></li>`;
 }
 function moduleTestRow(m){
-  const open = moduleDone(m), t = testsState()["m" + m.n];
+  const open = moduleDone(m) || (PREVIEW && m.lessons.some(l => l.ready)), t = testsState()["m" + m.n];   /* preview: the author can open every test */
   const meta = !open ? "Finish the lessons of this module first" : t ? `Best: ${t.best}%${t.passed ? " · passed" : ""}` : "15 questions · about 8 min";
   return `<li class="lrow test ${open ? "ready" : "locked"} ${t && t.passed ? "complete" : ""}">
     <button class="lrow-btn" ${open ? `data-test="${m.n}"` : "disabled"}>
