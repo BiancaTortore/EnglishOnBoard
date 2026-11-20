@@ -1,0 +1,981 @@
+{
+ "n": 25,
+ "module": 7,
+ "title": "Distress, urgency & safety",
+ "place": "Day 12 · 19:20 · Strait of Gibraltar",
+ "goal": "Recognise Mayday, Pan-Pan and Sécurité, write down a distress message and answer it on the radio.",
+ "images": {
+  "hero": "img/l25/hero.jpg",
+  "scene": "img/l25/scene.jpg"
+ },
+ "modelAudio": true,
+ "mediaRev": 1,
+ "audio": {
+  "l25-01": {
+   "pause": 600,
+   "voice": "skipper",
+   "text": "Mayday, Mayday, Mayday. This is fishing vessel Cap Béar, Cap Béar, Cap Béar. Mayday, Cap Béar. Position three five fifty-four North, zero zero five forty-two West. Taking water in the engine room. Require immediate assistance. Four persons on board. Over.",
+   "es": "Mayday, Mayday, Mayday. Aquí el pesquero Cap Béar, Cap Béar, Cap Béar. Mayday, Cap Béar. Posición tres cinco cincuenta y cuatro Norte, cero cero cinco cuarenta y dos Oeste. Hacemos agua en la sala de máquinas. Necesitamos asistencia inmediata. Cuatro personas a bordo. Cambio.",
+   "radio": true
+  },
+  "l25-02": {
+   "pause": 900,
+   "voice": "tanya",
+   "text": "Diego, write it down. Position, problem, persons. Quickly.",
+   "es": "Diego, anotalo. Posición, problema, personas. Rápido."
+  },
+  "l25-03": {
+   "voice": "diego",
+   "text": "Thirty-five fifty-four North, five forty-two West. Taking water. Four persons.",
+   "es": "Treinta y cinco cincuenta y cuatro Norte, cinco cuarenta y dos Oeste. Hace agua. Cuatro personas."
+  },
+  "l25-04": {
+   "pause": 1200,
+   "voice": "tarifa",
+   "text": "Cap Béar, this is Tarifa Traffic. Received Mayday. A Salvamento Marítimo boat is on its way. ETA forty minutes. Over.",
+   "es": "Cap Béar, aquí Tarifa Tráfico. Recibido Mayday. Una embarcación de Salvamento Marítimo va en camino. Llegada estimada cuarenta minutos. Cambio.",
+   "radio": true
+  },
+  "l25-05": {
+   "voice": "tanya",
+   "text": "Captain, we're only six miles from that position.",
+   "es": "Capitán, estamos a solo seis millas de esa posición."
+  },
+  "l25-06": {
+   "pause": 900,
+   "voice": "lars",
+   "text": "Then we go. Diego, you have a clear voice. Call Tarifa Traffic. Tanya, stay with him.",
+   "es": "Entonces vamos. Diego, tenés una voz clara. Llamá a Tarifa Tráfico. Tanya, quedate con él."
+  },
+  "l25-07": {
+   "voice": "diego",
+   "text": "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Received Mayday from Cap Béar. We are six miles from the position. Proceeding to assist. ETA thirty minutes. Over.",
+   "es": "Tarifa Tráfico, Tarifa Tráfico, aquí LNG Horizon, LNG Horizon. Recibido el Mayday del Cap Béar. Estamos a seis millas de la posición. Vamos a asistir. Llegada estimada treinta minutos. Cambio."
+  },
+  "l25-08": {
+   "pause": 1800,
+   "voice": "tarifa",
+   "text": "LNG Horizon, Tarifa Traffic. Thank you. Proceed to the position and report when on scene. Over.",
+   "es": "LNG Horizon, Tarifa Tráfico. Gracias. Diríjanse a la posición e informen al llegar. Cambio.",
+   "radio": true
+  },
+  "l25-09": {
+   "pause": 900,
+   "voice": "skipper",
+   "text": "Tarifa Traffic, Cap Béar. The water is rising. We are preparing the liferaft. Over.",
+   "es": "Tarifa Tráfico, Cap Béar. El agua sube. Estamos preparando la balsa. Cambio.",
+   "radio": true
+  },
+  "l25-10": {
+   "pause": 2000,
+   "voice": "lars",
+   "text": "Tanya, rescue boat crew to stand by. Pilot ladder ready on the starboard side.",
+   "es": "Tanya, la tripulación del bote de rescate en espera. La escala de práctico lista por estribor."
+  },
+  "l25-11": {
+   "pause": 700,
+   "voice": "tarifa",
+   "text": "LNG Horizon, Tarifa Traffic. Salvamento Marítimo is now on scene. Four persons recovered, all safe. You are released. Thank you for your assistance. Over.",
+   "es": "LNG Horizon, Tarifa Tráfico. Salvamento Marítimo ya está en la escena. Cuatro personas recuperadas, todas a salvo. Quedan liberados. Gracias por su asistencia. Cambio.",
+   "radio": true
+  },
+  "l25-12": {
+   "pause": 1200,
+   "voice": "diego",
+   "text": "Tarifa Traffic, LNG Horizon. Released. Resuming our voyage. Over.",
+   "es": "Tarifa Tráfico, LNG Horizon. Liberados. Retomamos nuestro viaje. Cambio."
+  },
+  "l25-13": {
+   "voice": "lars",
+   "text": "Good radio work, cadet. Short and clear. That's what saves people.",
+   "es": "Buen trabajo en la radio, cadete. Corto y claro. Eso es lo que salva gente."
+  },
+  "w-mayday": {
+   "voice": "model",
+   "text": "Mayday"
+  },
+  "x-mayday": {
+   "voice": "model",
+   "text": "Mayday, Mayday, Mayday.",
+   "es": "Mayday, Mayday, Mayday."
+  },
+  "w-panpan": {
+   "voice": "model",
+   "text": "Pan-Pan"
+  },
+  "x-panpan": {
+   "voice": "model",
+   "text": "Pan-Pan, Pan-Pan, Pan-Pan. Engine failure.",
+   "es": "Pan-Pan, Pan-Pan, Pan-Pan. Falla de máquina."
+  },
+  "w-securite": {
+   "voice": "model",
+   "text": "Sécurité"
+  },
+  "x-securite": {
+   "voice": "model",
+   "text": "Sécurité. Navigational warning.",
+   "es": "Sécurité. Aviso a los navegantes."
+  },
+  "w-distress": {
+   "voice": "model",
+   "text": "distress"
+  },
+  "x-distress": {
+   "voice": "model",
+   "text": "The fishing vessel is in distress.",
+   "es": "El pesquero está en peligro."
+  },
+  "w-ch16": {
+   "voice": "model",
+   "text": "channel sixteen"
+  },
+  "x-ch16": {
+   "voice": "model",
+   "text": "Keep a watch on channel sixteen.",
+   "es": "Mantené escucha en el canal dieciséis."
+  },
+  "w-acknowledge": {
+   "voice": "model",
+   "text": "to acknowledge"
+  },
+  "x-acknowledge": {
+   "voice": "model",
+   "text": "Acknowledge the Mayday: received Mayday.",
+   "es": "Acusá recibo del Mayday: recibido Mayday."
+  },
+  "w-proceed": {
+   "voice": "model",
+   "text": "to proceed"
+  },
+  "x-proceed": {
+   "voice": "model",
+   "text": "We are proceeding to assist.",
+   "es": "Vamos a asistir."
+  },
+  "w-onscene": {
+   "voice": "model",
+   "text": "on scene"
+  },
+  "x-onscene": {
+   "voice": "model",
+   "text": "Report when on scene.",
+   "es": "Informen al llegar al lugar."
+  },
+  "p-received": {
+   "voice": "model",
+   "text": "Received Mayday.",
+   "es": "Recibido Mayday."
+  },
+  "p-proceed": {
+   "voice": "model",
+   "text": "Proceeding to assist. ETA thirty minutes.",
+   "es": "Vamos a asistir. Llegada estimada treinta minutos."
+  },
+  "p-call": {
+   "voice": "model",
+   "text": "Tarifa Traffic, this is LNG Horizon.",
+   "es": "Tarifa Tráfico, aquí LNG Horizon."
+  },
+  "p-persons": {
+   "voice": "model",
+   "text": "Four persons on board.",
+   "es": "Cuatro personas a bordo."
+  },
+  "m-call": {
+   "voice": "model",
+   "text": "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Over.",
+   "es": "Tarifa Tráfico, Tarifa Tráfico, aquí LNG Horizon, LNG Horizon. Cambio."
+  },
+  "m-proceed": {
+   "voice": "model",
+   "text": "Received Mayday. Proceeding to assist. ETA twenty minutes. Over.",
+   "es": "Recibido Mayday. Vamos a asistir. Llegada estimada veinte minutos. Cambio."
+  },
+  "m-onscene": {
+   "voice": "model",
+   "text": "Tarifa Traffic, LNG Horizon. We are on scene. Over.",
+   "es": "Tarifa Tráfico, LNG Horizon. Estamos en el lugar. Cambio."
+  },
+  "m-released": {
+   "voice": "model",
+   "text": "Released. Resuming our voyage. Over.",
+   "es": "Liberados. Retomamos nuestro viaje. Cambio."
+  },
+  "m-mayday": {
+   "voice": "model",
+   "text": "Mayday, Mayday, Mayday.",
+   "es": "Mayday, Mayday, Mayday."
+  },
+  "c-show-mayday": {
+   "voice": "tanya",
+   "text": "Show me the vessel in distress."
+  },
+  "c-show-ch16": {
+   "voice": "lars",
+   "text": "Where's channel sixteen?"
+  },
+  "c-show-distress": {
+   "voice": "tanya",
+   "text": "Show me the distress button."
+  },
+  "c-show-proceed": {
+   "voice": "lars",
+   "text": "Show me where we are proceeding."
+  },
+  "c-show-onscene": {
+   "voice": "tanya",
+   "text": "Who is on scene now?"
+  },
+  "c-panpan": {
+   "voice": "skipper",
+   "text": "Pan-Pan, Pan-Pan, Pan-Pan. This is sailing yacht Bella Luna. Engine failure. Drifting towards the coast. Three persons on board. Over.",
+   "radio": true
+  },
+  "c-securite": {
+   "voice": "tarifa",
+   "text": "Sécurité, Sécurité, Sécurité. All ships, this is Tarifa Traffic. Navigational warning. Floating container reported five miles south of Tarifa. Over.",
+   "radio": true
+  },
+  "c-mayday2": {
+   "voice": "skipper",
+   "text": "Mayday, Mayday, Mayday. This is motor vessel Sirocco. Fire on board. Six persons on board. Over.",
+   "radio": true
+  },
+  "c-callnow": {
+   "voice": "lars",
+   "text": "Diego, call Tarifa Traffic."
+  },
+  "c-tarifa-ask": {
+   "voice": "tarifa",
+   "text": "LNG Horizon, Tarifa Traffic. Can you assist the vessel in distress? Over.",
+   "radio": true
+  },
+  "c-arrive": {
+   "voice": "tanya",
+   "text": "We're there. Tell Tarifa Traffic."
+  },
+  "c-release": {
+   "voice": "tarifa",
+   "text": "LNG Horizon, Tarifa Traffic. You are released. Thank you. Over.",
+   "radio": true
+  }
+ },
+ "dialogue": [
+  "l25-01",
+  "l25-02",
+  "l25-03",
+  "l25-04",
+  "l25-05",
+  "l25-06",
+  "l25-07",
+  "l25-08",
+  "l25-09",
+  "l25-10",
+  "l25-11",
+  "l25-12",
+  "l25-13"
+ ],
+ "words": {
+  "mayday": {
+   "en": "Mayday",
+   "ipa": "/ˈmeɪdeɪ/",
+   "es": "Mayday (socorro)",
+   "audio": "w-mayday",
+   "ex": "x-mayday"
+  },
+  "panpan": {
+   "en": "Pan-Pan",
+   "ipa": "/ˌpæn ˈpæn/",
+   "es": "Pan-Pan (urgencia)",
+   "audio": "w-panpan",
+   "ex": "x-panpan"
+  },
+  "securite": {
+   "en": "Sécurité",
+   "ipa": "/seɪˌkjʊərɪˈteɪ/",
+   "es": "Sécurité (seguridad)",
+   "audio": "w-securite",
+   "ex": "x-securite"
+  },
+  "distress": {
+   "en": "distress",
+   "ipa": "/dɪˈstres/",
+   "es": "peligro grave, socorro",
+   "audio": "w-distress",
+   "ex": "x-distress"
+  },
+  "ch16": {
+   "en": "channel sixteen",
+   "ipa": "/ˈtʃænl ˌsɪkˈstiːn/",
+   "es": "canal dieciséis",
+   "audio": "w-ch16",
+   "ex": "x-ch16"
+  },
+  "acknowledge": {
+   "en": "to acknowledge",
+   "ipa": "/əkˈnɒlɪdʒ/",
+   "es": "acusar recibo",
+   "audio": "w-acknowledge",
+   "ex": "x-acknowledge"
+  },
+  "proceed": {
+   "en": "to proceed",
+   "ipa": "/prəˈsiːd/",
+   "es": "dirigirse, ir hacia",
+   "audio": "w-proceed",
+   "ex": "x-proceed"
+  },
+  "onscene": {
+   "en": "on scene",
+   "ipa": "/ˌɒn ˈsiːn/",
+   "es": "en la escena, en el lugar",
+   "audio": "w-onscene",
+   "ex": "x-onscene"
+  }
+ },
+ "plate": {
+  "svg": "img/l25/plate.svg",
+  "pins": [
+   {
+    "word": "ch16",
+    "x": 32,
+    "y": 58
+   },
+   {
+    "word": "distress",
+    "x": 124,
+    "y": 102
+   },
+   {
+    "word": "mayday",
+    "x": 318,
+    "y": 150
+   },
+   {
+    "word": "proceed",
+    "x": 264,
+    "y": 120
+   },
+   {
+    "word": "onscene",
+    "x": 322,
+    "y": 100
+   }
+  ]
+ },
+ "docs": {
+  "log": {
+   "kind": "form",
+   "title": "GMDSS RADIO LOG",
+   "subtitle": "M/V LNG HORIZON · 25 MAR 2026 · STRAIT OF GIBRALTAR",
+   "cells": [
+    [
+     "1918 · VHF 16",
+     "MAYDAY from F/V Cap Béar · 35°54'N 005°42'W"
+    ],
+    [
+     "NATURE",
+     "Taking water in engine room · 4 POB"
+    ],
+    [
+     "1919 · VHF 16",
+     "Tarifa Traffic acknowledged · SAR boat ETA 40 min"
+    ],
+    [
+     "1921 · VHF 16",
+     "Horizon to Tarifa: proceeding to assist · ETA 30 min"
+    ],
+    [
+     "1934 · VHF 16",
+     "Cap Béar preparing liferaft"
+    ],
+    [
+     "1958 · VHF 16",
+     "Salvamento Marítimo on scene · 4 recovered, all safe"
+    ],
+    [
+     "2000 · VHF 16",
+     "Horizon released by Tarifa Traffic"
+    ],
+    [
+     "SIGNED",
+     "D. Martínez, cadet · T. Williams, C/O"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: Mayday",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l25/scene.jpg",
+     "kicker": "Day 12 · 19:20 · Strait of Gibraltar",
+     "title": "Mayday on channel 16",
+     "body": "Sunset near Gibraltar. Diego is on watch with Tanya when a Mayday comes in on the radio. Radio voices have static: listen more than once. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-01"
+     ],
+     "q": "What is the problem on the Cap Béar?",
+     "opts": [
+      "Taking water in the engine room",
+      "Fire on deck",
+      "A man overboard"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-01"
+     ],
+     "q": "How many persons on board?",
+     "opts": [
+      "Four",
+      "Fourteen",
+      "Forty"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-04"
+     ],
+     "q": "Who is coming, and when?",
+     "opts": [
+      "Salvamento Marítimo, in 40 minutes",
+      "A helicopter, in 4 minutes",
+      "Nobody"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-05",
+      "l25-06"
+     ],
+     "q": "Why does the Horizon go?",
+     "opts": [
+      "It's only six miles away",
+      "Tarifa orders it",
+      "The Captain knows the skipper"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-07"
+     ],
+     "q": "What is Diego's ETA?",
+     "opts": [
+      "30 minutes",
+      "13 minutes",
+      "6 minutes"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-11"
+     ],
+     "q": "How does it end?",
+     "opts": [
+      "Four recovered, all safe",
+      "Two missing",
+      "The fishing vessel is towed"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole radio traffic",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Distress, urgency, safety",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The VHF and the chart of the Strait."
+    },
+    {
+     "type": "card",
+     "word": "ch16"
+    },
+    {
+     "type": "card",
+     "word": "distress"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-ch16",
+     "a": "ch16"
+    },
+    {
+     "type": "card",
+     "word": "mayday"
+    },
+    {
+     "type": "card",
+     "word": "panpan"
+    },
+    {
+     "type": "card",
+     "word": "securite"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-mayday",
+     "a": "mayday"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-distress",
+     "a": "distress"
+    },
+    {
+     "type": "card",
+     "word": "acknowledge"
+    },
+    {
+     "type": "card",
+     "word": "proceed"
+    },
+    {
+     "type": "card",
+     "word": "onscene"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-onscene",
+     "a": "onscene"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "Engine failure, no danger to life yet. The signal is…",
+     "opts": [
+      "Pan-Pan",
+      "Mayday",
+      "Sécurité"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "Mayday",
+       "socorro"
+      ],
+      [
+       "Pan-Pan",
+       "urgencia"
+      ],
+      [
+       "Sécurité",
+       "seguridad"
+      ],
+      [
+       "to acknowledge",
+       "acusar recibo"
+      ],
+      [
+       "on scene",
+       "en el lugar"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Mayday, Pan-Pan, Sécurité",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Answering a Mayday",
+     "list": [
+      [
+       "Received Mayday.",
+       "Recibido Mayday.",
+       "p-received"
+      ],
+      [
+       "Proceeding to assist. ETA thirty minutes.",
+       "Vamos a asistir. Llegada estimada treinta minutos.",
+       "p-proceed"
+      ],
+      [
+       "Tarifa Traffic, this is LNG Horizon.",
+       "Tarifa Tráfico, aquí LNG Horizon.",
+       "p-call"
+      ],
+      [
+       "Four persons on board.",
+       "Cuatro personas a bordo.",
+       "p-persons"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Three signals, one order",
+     "steps": [
+      [
+       "Mayday ×3",
+       "Distress: danger to life or to the ship. <i>Sinking, fire, man overboard.</i>"
+      ],
+      [
+       "Pan-Pan ×3",
+       "Urgency: a serious problem, no danger to life yet. <i>Engine failure, drifting, medical help.</i>"
+      ],
+      [
+       "Sécurité ×3",
+       "Safety: a warning for all ships. <i>Floating container, bad weather.</i>"
+      ]
+     ],
+     "paras": [
+      "A distress message always comes in the same order: <b>Mayday ×3 · this is + name ×3 · position · what is wrong · what help · persons on board · Over</b>.",
+      "Write it in that order too: <b>position, problem, persons</b>, like Tanya says."
+     ],
+     "avoid": "Help! Help! We have a big problem!"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-panpan"
+     ],
+     "q": "Which signal is it, and what's the problem?",
+     "opts": [
+      "Pan-Pan: engine failure",
+      "Mayday: fire",
+      "Sécurité: a container"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-securite"
+     ],
+     "q": "What does the warning say?",
+     "opts": [
+      "A floating container south of Tarifa",
+      "A ship on fire",
+      "Fog in the Strait"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "audio": "c-mayday2",
+     "q": "How many persons on board? Write the number.",
+     "accept": [
+      "6",
+      "six"
+     ]
+    },
+    {
+     "type": "build",
+     "q": "Answer a Mayday: received, proceeding to assist.",
+     "a": [
+      "Received",
+      "Mayday.",
+      "Proceeding",
+      "to",
+      "assist."
+     ],
+     "extra": [
+      "Receive",
+      "going"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Pan-Pan and Sécurité",
+     "paras": [
+      "They're French words said in English: <b>Pan-Pan</b> rhymes with <i>man</i>, not with Spanish <i>pan</i>. <b>Sécurité</b>: <b>say-KYUR-ee-tay</b>.",
+      "Positions: say each figure: <b>three five fifty-four North</b>. Never <i>treinta y cinco</i>."
+     ],
+     "avoid": "Pan pan (like bread) · Security, security, security"
+    },
+    {
+     "type": "choice",
+     "q": "A floating container in the Strait. Tarifa Traffic says…",
+     "opts": [
+      "Sécurité ×3",
+      "Mayday ×3",
+      "Pan-Pan ×3"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Mayday",
+     "paras": [
+      "<b>MAY-day</b>: two syllables, strong first one. Three times, clear, not too fast.",
+      "After <b>Over</b>, stop talking and listen."
+     ],
+     "list": [
+      [
+       "Mayday, Mayday, Mayday.",
+       "Mayday, Mayday, Mayday.",
+       "m-mayday"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the radio log",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "log",
+     "q": "At what time did the Mayday come in?",
+     "opts": [
+      "19:18",
+      "19:58",
+      "20:00"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "log",
+     "q": "What does POB mean here?",
+     "opts": [
+      "Persons on board",
+      "Port of berth",
+      "Position of boat"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "log",
+     "q": "Tap the line where Salvamento Marítimo arrives.",
+     "a": 5
+    },
+    {
+     "type": "doc",
+     "doc": "log",
+     "q": "Who acknowledged the Mayday first?",
+     "opts": [
+      "Tarifa Traffic",
+      "LNG Horizon",
+      "Salvamento Marítimo"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "log",
+     "q": "Who signed the log?",
+     "opts": [
+      "The cadet and the Chief Officer",
+      "The Captain only",
+      "Tarifa Traffic"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "On channel 16",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Short and clear",
+     "body": "Listen, say it, check it. Like on the radio: calm, short, clear.",
+     "es": "Como en la radio: calma, corto y claro.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-received"
+    },
+    {
+     "type": "shadow",
+     "model": "p-proceed"
+    },
+    {
+     "type": "shadow",
+     "model": "p-persons"
+    },
+    {
+     "type": "role",
+     "cue": "c-callnow",
+     "task": "Call Tarifa Traffic: their name twice, your name twice, Over.",
+     "model": "m-call",
+     "accept": [
+      "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Over.",
+      "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon, over.",
+      "Tarifa Traffic, this is LNG Horizon. Over."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-tarifa-ask",
+     "task": "Received Mayday, proceeding to assist, ETA 20 minutes.",
+     "model": "m-proceed",
+     "accept": [
+      "Received Mayday. Proceeding to assist. ETA twenty minutes. Over.",
+      "Received Mayday, proceeding to assist, ETA twenty minutes, over.",
+      "Proceeding to assist. ETA twenty minutes. Over."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-arrive",
+     "task": "Tell Tarifa Traffic you are on scene.",
+     "model": "m-onscene",
+     "accept": [
+      "Tarifa Traffic, LNG Horizon. We are on scene. Over.",
+      "Tarifa Traffic, LNG Horizon, we are on scene, over.",
+      "We are on scene. Over."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-release",
+     "task": "Released: you resume your voyage.",
+     "model": "m-released",
+     "accept": [
+      "Released. Resuming our voyage. Over.",
+      "Released, resuming our voyage, over.",
+      "LNG Horizon released. Resuming our voyage. Over."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-distress",
+     "q": "Type what you hear.",
+     "accept": [
+      "distress"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-proceed",
+     "a": "proceed"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-mayday",
+     "a": "mayday"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-09"
+     ],
+     "q": "What is the Cap Béar crew doing now?",
+     "opts": [
+      "Preparing the liferaft",
+      "Repairing the engine",
+      "Calling the owner"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Put the Mayday in order: after \"This is Cap Béar ×3\" comes…",
+     "opts": [
+      "the position",
+      "the persons on board",
+      "Over"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "A crew member cut his arm. You need medical advice by radio. The signal is…",
+     "opts": [
+      "Pan-Pan",
+      "Sécurité",
+      "Mayday Relay"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Report when on scene.",
+     "a": [
+      "Report",
+      "when",
+      "on",
+      "scene."
+     ],
+     "extra": [
+      "in",
+      "arrive"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-13"
+     ],
+     "q": "What does the Captain say saves people?",
+     "opts": [
+      "Short and clear radio",
+      "A fast ship",
+      "Good English grammar"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: acusar recibo",
+     "accept": [
+      "acknowledge",
+      "to acknowledge"
+     ]
+    }
+   ]
+  }
+ ]
+}

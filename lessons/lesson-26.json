@@ -1,0 +1,1005 @@
+{
+ "n": 26,
+ "module": 7,
+ "title": "Medical & TMAS",
+ "place": "Day 13 · 10:00 · Mediterranean, galley",
+ "goal": "Describe an injury, dictate vital signs and read back a doctor's advice.",
+ "images": {
+  "hero": "img/l26/hero.jpg",
+  "scene": "img/l26/scene.jpg"
+ },
+ "modelAudio": true,
+ "mediaRev": 1,
+ "radioChannel": "Sat phone",
+ "audio": {
+  "l26-01": {
+   "pause": 500,
+   "voice": "mario",
+   "text": "Ay! Cadet! My hand! The knife slipped!",
+   "es": "¡Ay! ¡Cadete! ¡Mi mano! ¡Se me resbaló el cuchillo!"
+  },
+  "l26-02": {
+   "voice": "diego",
+   "text": "Mario, sit down. Show me. Press here with this clean towel. Hard.",
+   "es": "Mario, sentate. Mostrame. Apretá acá con esta toalla limpia. Fuerte."
+  },
+  "l26-03": {
+   "pause": 900,
+   "voice": "tanya",
+   "text": "What happened?",
+   "es": "¿Qué pasó?"
+  },
+  "l26-04": {
+   "voice": "diego",
+   "text": "He cut his left hand with a big knife. It's bleeding a lot, here, between the thumb and the first finger.",
+   "es": "Se cortó la mano izquierda con un cuchillo grande. Sangra mucho, acá, entre el pulgar y el índice."
+  },
+  "l26-05": {
+   "pause": 1800,
+   "voice": "tanya",
+   "text": "Keep pressing. I'm calling TMAS. Diego, take his pulse, blood pressure and temperature.",
+   "es": "Seguí apretando. Llamo al TMAS. Diego, tomale el pulso, la presión y la temperatura."
+  },
+  "l26-06": {
+   "voice": "doctor",
+   "text": "CIRM Rome, doctor speaking. Good morning. What is the problem?",
+   "es": "CIRM Roma, habla el médico. Buen día. ¿Cuál es el problema?",
+   "radio": true
+  },
+  "l26-07": {
+   "voice": "tanya",
+   "text": "Good morning, doctor. This is LNG Horizon. Our cook, fifty years old, cut his left hand with a knife twenty minutes ago.",
+   "es": "Buen día, doctor. Aquí LNG Horizon. Nuestro cocinero, de cincuenta años, se cortó la mano izquierda con un cuchillo hace veinte minutos."
+  },
+  "l26-08": {
+   "voice": "doctor",
+   "text": "Has the bleeding stopped? Can he move his fingers?",
+   "es": "¿Paró la hemorragia? ¿Puede mover los dedos?",
+   "radio": true
+  },
+  "l26-09": {
+   "voice": "diego",
+   "text": "The bleeding is slower now. He can move all his fingers, but it hurts.",
+   "es": "Ahora sangra menos. Puede mover todos los dedos, pero le duele."
+  },
+  "l26-10": {
+   "voice": "doctor",
+   "text": "Good. What are his vital signs?",
+   "es": "Bien. ¿Cuáles son sus signos vitales?",
+   "radio": true
+  },
+  "l26-11": {
+   "pause": 800,
+   "voice": "diego",
+   "text": "Pulse ninety-two. Blood pressure one hundred and thirty over eighty-five. Temperature thirty-six point eight. Pain seven out of ten.",
+   "es": "Pulso noventa y dos. Presión ciento treinta sobre ochenta y cinco. Temperatura treinta y seis coma ocho. Dolor siete sobre diez."
+  },
+  "l26-12": {
+   "voice": "doctor",
+   "text": "Thank you. Clean the wound with saline. Close it with steri-strips and put on a pressure bandage. Give him a painkiller, paracetamol, one gram. No work with that hand for five days. Call me again in six hours.",
+   "es": "Gracias. Limpien la herida con solución fisiológica. Ciérrenla con steri-strips y pongan un vendaje compresivo. Denle un analgésico, paracetamol, un gramo. Nada de trabajo con esa mano por cinco días. Llámenme de nuevo en seis horas.",
+   "radio": true
+  },
+  "l26-13": {
+   "voice": "tanya",
+   "text": "Clean with saline, steri-strips, pressure bandage, paracetamol one gram, no work for five days, call back in six hours. Correct?",
+   "es": "Limpiar con solución fisiológica, steri-strips, vendaje compresivo, paracetamol un gramo, nada de trabajo por cinco días, volver a llamar en seis horas. ¿Correcto?"
+  },
+  "l26-14": {
+   "pause": 1500,
+   "voice": "doctor",
+   "text": "Correct. Good luck.",
+   "es": "Correcto. Buena suerte.",
+   "radio": true
+  },
+  "l26-15": {
+   "voice": "mario",
+   "text": "Five days without work? And who cooks the lunch?",
+   "es": "¿Cinco días sin trabajar? ¿Y quién cocina el almuerzo?"
+  },
+  "l26-16": {
+   "voice": "diego",
+   "text": "Today I'll help in the galley, Mario. You just tell me what to do.",
+   "es": "Hoy te ayudo en la cocina, Mario. Vos decime qué hacer."
+  },
+  "w-wound": {
+   "voice": "model",
+   "text": "wound"
+  },
+  "x-wound": {
+   "voice": "model",
+   "text": "Clean the wound with saline.",
+   "es": "Limpiá la herida con solución fisiológica."
+  },
+  "w-bleeding": {
+   "voice": "model",
+   "text": "bleeding"
+  },
+  "x-bleeding": {
+   "voice": "model",
+   "text": "The bleeding has stopped.",
+   "es": "El sangrado paró."
+  },
+  "w-pulse": {
+   "voice": "model",
+   "text": "pulse"
+  },
+  "x-pulse": {
+   "voice": "model",
+   "text": "His pulse is ninety-two.",
+   "es": "Su pulso es noventa y dos."
+  },
+  "w-bp": {
+   "voice": "model",
+   "text": "blood pressure"
+  },
+  "x-bp": {
+   "voice": "model",
+   "text": "Blood pressure one thirty over eighty-five.",
+   "es": "Presión ciento treinta sobre ochenta y cinco."
+  },
+  "w-temp": {
+   "voice": "model",
+   "text": "temperature"
+  },
+  "x-temp": {
+   "voice": "model",
+   "text": "His temperature is thirty-six point eight.",
+   "es": "Su temperatura es treinta y seis coma ocho."
+  },
+  "w-vitals": {
+   "voice": "model",
+   "text": "vital signs"
+  },
+  "x-vitals": {
+   "voice": "model",
+   "text": "What are his vital signs?",
+   "es": "¿Cuáles son sus signos vitales?"
+  },
+  "w-painkiller": {
+   "voice": "model",
+   "text": "painkiller"
+  },
+  "x-painkiller": {
+   "voice": "model",
+   "text": "Give him a painkiller.",
+   "es": "Dale un analgésico."
+  },
+  "w-bandage": {
+   "voice": "model",
+   "text": "bandage"
+  },
+  "x-bandage": {
+   "voice": "model",
+   "text": "Put on a pressure bandage.",
+   "es": "Poné un vendaje compresivo."
+  },
+  "p-cut": {
+   "voice": "model",
+   "text": "He cut his left hand with a knife.",
+   "es": "Se cortó la mano izquierda con un cuchillo."
+  },
+  "p-hurts": {
+   "voice": "model",
+   "text": "He can move his fingers, but it hurts.",
+   "es": "Puede mover los dedos, pero le duele."
+  },
+  "p-bp": {
+   "voice": "model",
+   "text": "Blood pressure one hundred and thirty over eighty-five.",
+   "es": "Presión ciento treinta sobre ochenta y cinco."
+  },
+  "p-pain": {
+   "voice": "model",
+   "text": "Pain seven out of ten.",
+   "es": "Dolor siete sobre diez."
+  },
+  "m-what": {
+   "voice": "model",
+   "text": "He cut his hand. It's bleeding a lot.",
+   "es": "Se cortó la mano. Sangra mucho."
+  },
+  "m-vitals": {
+   "voice": "model",
+   "text": "Pulse eighty-eight. Temperature thirty-seven point two.",
+   "es": "Pulso ochenta y ocho. Temperatura treinta y siete coma dos."
+  },
+  "m-bp": {
+   "voice": "model",
+   "text": "Blood pressure one hundred and forty over ninety.",
+   "es": "Presión ciento cuarenta sobre noventa."
+  },
+  "m-fingers": {
+   "voice": "model",
+   "text": "Yes, he can move his fingers, but it hurts.",
+   "es": "Sí, puede mover los dedos, pero le duele."
+  },
+  "m-temp": {
+   "voice": "model",
+   "text": "Temperature thirty-six point eight.",
+   "es": "Temperatura treinta y seis coma ocho."
+  },
+  "c-show-wound": {
+   "voice": "tanya",
+   "text": "Show me the wound."
+  },
+  "c-show-bandage": {
+   "voice": "tanya",
+   "text": "Where's the bandage?"
+  },
+  "c-show-painkiller": {
+   "voice": "mario",
+   "text": "Where are the painkillers?"
+  },
+  "c-show-temp": {
+   "voice": "tanya",
+   "text": "Show me where you see his temperature."
+  },
+  "c-show-bp": {
+   "voice": "tanya",
+   "text": "Show me the blood pressure."
+  },
+  "c-show-pulse": {
+   "voice": "tanya",
+   "text": "Where do you take his pulse?"
+  },
+  "c-whathappened": {
+   "voice": "tanya",
+   "text": "Diego, what happened to Mario?"
+  },
+  "c-vitals": {
+   "voice": "doctor",
+   "text": "What are his pulse and temperature?",
+   "radio": true
+  },
+  "c-bp": {
+   "voice": "doctor",
+   "text": "And his blood pressure?",
+   "radio": true
+  },
+  "c-fingers": {
+   "voice": "doctor",
+   "text": "Can he move his fingers?",
+   "radio": true
+  },
+  "c-doc-other": {
+   "voice": "doctor",
+   "text": "Give him one tablet every eight hours and call me tomorrow morning.",
+   "radio": true
+  },
+  "c-bp-other": {
+   "voice": "tanya",
+   "text": "Blood pressure one hundred and twenty over seventy-five."
+  }
+ },
+ "dialogue": [
+  "l26-01",
+  "l26-02",
+  "l26-03",
+  "l26-04",
+  "l26-05",
+  "l26-06",
+  "l26-07",
+  "l26-08",
+  "l26-09",
+  "l26-10",
+  "l26-11",
+  "l26-12",
+  "l26-13",
+  "l26-14",
+  "l26-15",
+  "l26-16"
+ ],
+ "words": {
+  "wound": {
+   "en": "wound",
+   "ipa": "/wuːnd/",
+   "es": "herida",
+   "audio": "w-wound",
+   "ex": "x-wound"
+  },
+  "bleeding": {
+   "en": "bleeding",
+   "ipa": "/ˈbliːdɪŋ/",
+   "es": "hemorragia, sangrado",
+   "audio": "w-bleeding",
+   "ex": "x-bleeding"
+  },
+  "pulse": {
+   "en": "pulse",
+   "ipa": "/pʌls/",
+   "es": "pulso",
+   "audio": "w-pulse",
+   "ex": "x-pulse"
+  },
+  "bp": {
+   "en": "blood pressure",
+   "ipa": "/ˈblʌd ˌpreʃə/",
+   "es": "presión arterial",
+   "audio": "w-bp",
+   "ex": "x-bp"
+  },
+  "temp": {
+   "en": "temperature",
+   "ipa": "/ˈtemprətʃə/",
+   "es": "temperatura",
+   "audio": "w-temp",
+   "ex": "x-temp"
+  },
+  "vitals": {
+   "en": "vital signs",
+   "ipa": "/ˈvaɪtl saɪnz/",
+   "es": "signos vitales",
+   "audio": "w-vitals",
+   "ex": "x-vitals"
+  },
+  "painkiller": {
+   "en": "painkiller",
+   "ipa": "/ˈpeɪnkɪlə/",
+   "es": "analgésico",
+   "audio": "w-painkiller",
+   "ex": "x-painkiller"
+  },
+  "bandage": {
+   "en": "bandage",
+   "ipa": "/ˈbændɪdʒ/",
+   "es": "venda, vendaje",
+   "audio": "w-bandage",
+   "ex": "x-bandage"
+  }
+ },
+ "plate": {
+  "svg": "img/l26/plate.svg",
+  "pins": [
+   {
+    "word": "wound",
+    "x": 56,
+    "y": 112
+   },
+   {
+    "word": "pulse",
+    "x": 96,
+    "y": 218
+   },
+   {
+    "word": "bandage",
+    "x": 210,
+    "y": 62
+   },
+   {
+    "word": "painkiller",
+    "x": 215,
+    "y": 145
+   },
+   {
+    "word": "temp",
+    "x": 270,
+    "y": 52
+   },
+   {
+    "word": "bp",
+    "x": 339,
+    "y": 52
+   }
+  ]
+ },
+ "docs": {
+  "med": {
+   "kind": "form",
+   "title": "TMAS · MEDICAL REPORT",
+   "subtitle": "M/V LNG HORIZON · 26 MAR 2026 · 1005 · TO CIRM ROME",
+   "cells": [
+    [
+     "PATIENT",
+     "Chief Cook · male · 50 years"
+    ],
+    [
+     "WHAT HAPPENED",
+     "Cut, left hand, kitchen knife · 0940"
+    ],
+    [
+     "WHERE",
+     "Between thumb and first finger"
+    ],
+    [
+     "BLEEDING",
+     "Slower after 15 min pressure"
+    ],
+    [
+     "MOVEMENT",
+     "Can move all fingers · pain"
+    ],
+    [
+     "VITAL SIGNS",
+     "Pulse 92 · BP 130/85 · Temp 36.8 °C"
+    ],
+    [
+     "PAIN",
+     "7/10"
+    ],
+    [
+     "ALLERGIES",
+     "None known"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: a cut in the galley",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l26/scene.jpg",
+     "kicker": "Day 13 · 10:00 · Mediterranean",
+     "title": "Calling TMAS",
+     "body": "There's no doctor on board. When Mario cuts his hand, Tanya calls the radio medical service in Rome, and Diego gives the numbers. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-01",
+      "l26-02"
+     ],
+     "q": "What does Diego do first?",
+     "opts": [
+      "Presses the cut with a clean towel",
+      "Calls the bridge",
+      "Gives Mario water"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-04"
+     ],
+     "q": "Where is the cut?",
+     "opts": [
+      "Left hand, between the thumb and the first finger",
+      "Right arm",
+      "Left foot"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-08",
+      "l26-09"
+     ],
+     "q": "Can Mario move his fingers?",
+     "opts": [
+      "Yes, but it hurts",
+      "No",
+      "Only the thumb"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-11"
+     ],
+     "q": "What is Mario's pulse?",
+     "opts": [
+      "92",
+      "130",
+      "85"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-12"
+     ],
+     "q": "How long without work?",
+     "opts": [
+      "Five days",
+      "Six hours",
+      "One day"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-15",
+      "l26-16"
+     ],
+     "q": "Who will help in the galley?",
+     "opts": [
+      "Diego",
+      "Tanya",
+      "Nobody: no lunch today"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole scene",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "First aid and vital signs",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "Mario's hand and the first-aid kit."
+    },
+    {
+     "type": "card",
+     "word": "wound"
+    },
+    {
+     "type": "card",
+     "word": "bleeding"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-wound",
+     "a": "wound"
+    },
+    {
+     "type": "card",
+     "word": "vitals"
+    },
+    {
+     "type": "card",
+     "word": "pulse"
+    },
+    {
+     "type": "card",
+     "word": "bp"
+    },
+    {
+     "type": "card",
+     "word": "temp"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-pulse",
+     "a": "pulse"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-bp",
+     "a": "bp"
+    },
+    {
+     "type": "card",
+     "word": "painkiller"
+    },
+    {
+     "type": "card",
+     "word": "bandage"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-bandage",
+     "a": "bandage"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"analgésico\" in English:",
+     "opts": [
+      "painkiller",
+      "analgesic pill",
+      "pain stopper"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "wound",
+       "herida"
+      ],
+      [
+       "bleeding",
+       "sangrado"
+      ],
+      [
+       "pulse",
+       "pulso"
+      ],
+      [
+       "bandage",
+       "venda"
+      ],
+      [
+       "vital signs",
+       "signos vitales"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Describe and dictate",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Talking to the doctor",
+     "list": [
+      [
+       "He cut his left hand with a knife.",
+       "Se cortó la mano izquierda con un cuchillo.",
+       "p-cut"
+      ],
+      [
+       "He can move his fingers, but it hurts.",
+       "Puede mover los dedos, pero le duele.",
+       "p-hurts"
+      ],
+      [
+       "Blood pressure one hundred and thirty over eighty-five.",
+       "Presión ciento treinta sobre ochenta y cinco.",
+       "p-bp"
+      ],
+      [
+       "Pain seven out of ten.",
+       "Dolor siete sobre diez.",
+       "p-pain"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "What happened · how he is · the numbers",
+     "steps": [
+      [
+       "what happened",
+       "He <b>cut</b> his hand. (past: <i>cut</i> doesn't change)"
+      ],
+      [
+       "how he is now",
+       "It<b>'s bleeding</b>. It <b>hurts</b>. He <b>can</b> move his fingers."
+      ],
+      [
+       "the numbers",
+       "Pulse <b>ninety-two</b> · BP <b>one thirty over eighty-five</b> · Temp <b>thirty-six point eight</b> · Pain <b>seven out of ten</b>"
+      ]
+     ],
+     "paras": [
+      "Give the doctor the facts in that order: <b>what happened, when, where on the body, how he is now, vital signs</b>.",
+      "Blood pressure: two numbers with <b>over</b> in the middle. Temperature: <b>point</b>, not <i>comma</i>."
+     ],
+     "avoid": "He has cut himself the hand · thirty-six comma eight"
+    },
+    {
+     "type": "choice",
+     "q": "Temperature 37,2 °C. You say…",
+     "opts": [
+      "thirty-seven point two",
+      "thirty-seven comma two",
+      "thirty-seven and two"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Blood pressure 140/90. You say…",
+     "opts": [
+      "one hundred and forty over ninety",
+      "one hundred and forty on ninety",
+      "one hundred forty, ninety"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "audio": "c-bp-other",
+     "q": "Write the blood pressure like on a form (number/number).",
+     "accept": [
+      "120/75",
+      "120 / 75",
+      "120 over 75"
+     ]
+    },
+    {
+     "type": "build",
+     "q": "He can move his fingers, but it hurts.",
+     "a": [
+      "He",
+      "can",
+      "move",
+      "his",
+      "fingers,",
+      "but",
+      "it",
+      "hurts."
+     ],
+     "extra": [
+      "hurt",
+      "the"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "his hand, not the hand",
+     "paras": [
+      "In Spanish: <i>se cortó <b>la</b> mano</i>. In English the body part takes <b>his / her / my</b>: <b>He cut <u>his</u> hand.</b>",
+      "<b>It hurts</b>: the body part is the subject. <i>Le duele la mano</i> → <b>His hand hurts.</b>"
+     ],
+     "avoid": "He cut the hand · It hurts him the hand"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-doc-other"
+     ],
+     "q": "How often does he take a tablet?",
+     "opts": [
+      "Every eight hours",
+      "Every hour",
+      "Once a day"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "wound and temperature",
+     "paras": [
+      "<b>wound</b> (herida) sounds like <b>woond</b>, long <i>u</i>. Not like <i>round</i>.",
+      "<b>temperature</b>: <b>TEM-pruh-chuh</b>, three syllables. The middle <i>e</i> almost disappears."
+     ],
+     "list": [
+      [
+       "Temperature thirty-six point eight.",
+       "Temperatura treinta y seis coma ocho.",
+       "m-temp"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the medical report",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "med",
+     "q": "When did it happen?",
+     "opts": [
+      "09:40",
+      "10:05",
+      "10:40"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "med",
+     "q": "Where did the report go?",
+     "opts": [
+      "CIRM Rome",
+      "Tarifa Traffic",
+      "The company"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "med",
+     "q": "Tap the vital signs.",
+     "a": 5
+    },
+    {
+     "type": "doc",
+     "doc": "med",
+     "q": "Does Mario have allergies?",
+     "opts": [
+      "None known",
+      "Yes, to paracetamol",
+      "The report doesn't say"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "med",
+     "q": "How long did they press the wound?",
+     "opts": [
+      "15 minutes",
+      "5 minutes",
+      "1 hour"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Give the facts",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Calm numbers",
+     "body": "Listen, say it, check it. Slow and clear: the doctor is writing.",
+     "es": "Despacio y claro: el médico está anotando.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-cut"
+    },
+    {
+     "type": "shadow",
+     "model": "p-bp"
+    },
+    {
+     "type": "shadow",
+     "model": "p-pain"
+    },
+    {
+     "type": "role",
+     "cue": "c-whathappened",
+     "task": "He cut his hand, it's bleeding a lot.",
+     "model": "m-what",
+     "accept": [
+      "He cut his hand. It's bleeding a lot.",
+      "He cut his hand, it's bleeding a lot.",
+      "Mario cut his hand. It's bleeding a lot."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-vitals",
+     "task": "Pulse 88, temperature 37.2.",
+     "model": "m-vitals",
+     "accept": [
+      "Pulse eighty-eight. Temperature thirty-seven point two.",
+      "Pulse eighty-eight, temperature thirty-seven point two.",
+      "His pulse is eighty-eight. Temperature thirty-seven point two."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-bp",
+     "task": "Blood pressure 140/90.",
+     "model": "m-bp",
+     "accept": [
+      "Blood pressure one hundred and forty over ninety.",
+      "One hundred and forty over ninety.",
+      "Blood pressure one forty over ninety."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-fingers",
+     "task": "Yes, he can move them, but it hurts.",
+     "model": "m-fingers",
+     "accept": [
+      "Yes, he can move his fingers, but it hurts.",
+      "Yes, he can move his fingers but it hurts.",
+      "He can move his fingers, but it hurts."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-wound",
+     "q": "Type what you hear.",
+     "accept": [
+      "wound",
+      "a wound",
+      "the wound"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-painkiller",
+     "a": "painkiller"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-temp",
+     "a": "temp"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-13"
+     ],
+     "q": "Why does Tanya repeat everything?",
+     "opts": [
+      "To check she understood the doctor",
+      "Because the line is bad",
+      "For Mario"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Complete: \"He cut ___ hand.\"",
+     "opts": [
+      "his",
+      "the",
+      "him"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "\"Pain seven out of ten\" means the pain is…",
+     "opts": [
+      "strong",
+      "very small",
+      "gone"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Give him a painkiller.",
+     "a": [
+      "Give",
+      "him",
+      "a",
+      "painkiller."
+     ],
+     "extra": [
+      "his",
+      "to"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-12"
+     ],
+     "q": "When must they call again?",
+     "opts": [
+      "In six hours",
+      "Tomorrow",
+      "In five days"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: signos vitales",
+     "accept": [
+      "vital signs",
+      "the vital signs"
+     ]
+    }
+   ]
+  }
+ ]
+}

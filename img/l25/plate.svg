@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The bridge VHF on channel 16 with the red distress button, and the chart of the Strait of Gibraltar with the Horizon proceeding to the fishing vessel in distress and the rescue boat from Tarifa on scene">
+  <!-- Lesson 25 plate. Left: the VHF/DSC set on the bridge: display showing channel 16, the red DISTRESS button
+       under its flip cover, handset on its hook. Right: chart of the Strait: Spain (top), Morocco (bottom), Tarifa.
+       The Horizon (dark, coming from the west) steers east towards the Cap Béar (red, in distress); dashed line = 6 miles. The Salvamento
+       Marítimo boat (orange) comes from Tarifa and is on scene. Colours come from app.css (.p-*). -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <!-- VHF set -->
+  <rect x="12" y="40" width="140" height="150" rx="8" style="fill:#1D2730"/>
+  <rect x="24" y="54" width="116" height="44" rx="4" style="fill:#13212D"/>
+  <text x="36" y="88" style="font:700 30px var(--f-mono);fill:#3DDC84">16</text>
+  <text x="88" y="70" style="font:600 9px var(--f-mono);fill:#7FA7B8">25W</text><text x="88" y="86" style="font:600 9px var(--f-mono);fill:#7FA7B8">DSC</text>
+  <!-- knobs -->
+  <circle cx="40" cy="124" r="11" style="fill:#3A4650"/><circle cx="76" cy="124" r="11" style="fill:#3A4650"/>
+  <g style="fill:#5A6772"><rect x="24" y="148" width="22" height="12" rx="2"/><rect x="52" y="148" width="22" height="12" rx="2"/><rect x="80" y="148" width="22" height="12" rx="2"/></g>
+  <!-- DISTRESS button with flip cover -->
+  <rect x="106" y="110" width="36" height="34" rx="4" style="fill:#C8281C"/>
+  <path d="M106 110 L142 110 L136 98 L112 98 Z" style="fill:#E8705F" opacity=".8"/>
+  <text x="124" y="131" text-anchor="middle" style="font:700 7px var(--f-mono);fill:#fff">DISTRESS</text>
+  <!-- handset -->
+  <rect x="112" y="156" width="24" height="26" rx="6" style="fill:#2C363F"/>
+  <path d="M124 182 Q124 206 96 206 Q70 206 70 192" fill="none" style="stroke:#2C363F" stroke-width="2"/>
+
+  <!-- chart -->
+  <rect x="166" y="14" width="224" height="212" rx="4" class="p-water" style="stroke:var(--ink)" stroke-width="1"/>
+  <path d="M166 14 H390 V58 Q360 66 330 60 Q300 54 282 70 Q268 84 250 76 Q220 62 196 70 Q180 74 166 70 Z" class="p-quay"/>
+  <path d="M166 226 H390 V178 Q362 168 338 178 Q316 190 290 176 Q262 164 236 180 Q210 194 186 182 L166 186 Z" class="p-quay"/>
+  <circle cx="272" cy="76" r="3" class="p-ink"/>
+  <text x="230" y="96" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".7">TARIFA</text>
+  <text x="300" y="34" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".55">SPAIN</text>
+  <text x="300" y="214" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".55">MOROCCO</text>
+  <!-- Horizon (coming from the Atlantic, west) and its track east to the Cap Béar -->
+  <path d="M176 132 L198 132" class="p-line" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <path d="M198 124 L218 124 L232 132 L218 140 L198 140 Z" class="p-hull" style="stroke:var(--ink)" stroke-width="1"/>
+  <path d="M236 132 L294 130" class="p-stroke" stroke-width="2.4"/>
+  <path d="M286 124 L296 130 L286 136" class="p-stroke" stroke-width="2.4"/>
+  <text x="246" y="148" style="font:600 8.5px var(--f-mono);fill:var(--ink)" opacity=".75">6 NM</text>
+  <!-- Cap Béar in distress -->
+  <circle cx="318" cy="130" r="14" fill="none" style="stroke:#E23D2D" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <path d="M308 130 L318 124 L330 126 L330 134 L318 136 Z" style="fill:#E23D2D"/>
+  <!-- SAR boat from Tarifa -->
+  <path d="M272 80 Q292 98 308 112" fill="none" class="p-line" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <path d="M304 104 L316 104 L316 112 L306 114 Z" class="p-orange" style="stroke:var(--ink)" stroke-width=".8"/>
+</svg>

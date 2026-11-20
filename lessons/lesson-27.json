@@ -1,0 +1,1045 @@
+{
+ "n": 27,
+ "module": 7,
+ "title": "Pilot boarding & helm orders",
+ "place": "Day 14 · 07:00 · Marseille approach",
+ "goal": "Report the pilot on board, repeat helm orders and report the wheel and the heading.",
+ "images": {
+  "hero": "img/l27/hero.jpg",
+  "scene": "img/l27/scene.jpg"
+ },
+ "modelAudio": true,
+ "mediaRev": 1,
+ "radioChannel": "UHF",
+ "audio": {
+  "l27-01": {
+   "pause": 1500,
+   "voice": "lars",
+   "text": "Diego, the pilot boat is coming alongside. Report when the pilot is on board.",
+   "es": "Diego, la lancha del práctico se está abarloando. Avisá cuando el práctico esté a bordo.",
+   "radio": true
+  },
+  "l27-02": {
+   "pause": 2000,
+   "voice": "diego",
+   "text": "Bridge, pilot ladder. Pilot boat alongside, starboard side.",
+   "es": "Puente, escala de práctico. Lancha del práctico abarloada, banda de estribor."
+  },
+  "l27-03": {
+   "voice": "diego",
+   "text": "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
+   "es": "Puente, escala de práctico. Práctico a bordo. Vamos al puente."
+  },
+  "l27-04": {
+   "pause": 700,
+   "voice": "pilot",
+   "text": "Good morning, young man. Bonjour. Lead the way, please.",
+   "es": "Buen día, joven. Bonjour. Guíeme, por favor."
+  },
+  "l27-05": {
+   "pause": 2200,
+   "voice": "diego",
+   "text": "Good morning, Pilot. This way, please. Mind the step.",
+   "es": "Buen día, práctico. Por acá, por favor. Cuidado con el escalón."
+  },
+  "l27-06": {
+   "voice": "lars",
+   "text": "Good morning, Pilot. Welcome on board. Here is the pilot card. Draught nine point eight metres, speed eight knots.",
+   "es": "Buen día, práctico. Bienvenido a bordo. Acá tiene la tarjeta de práctico. Calado nueve coma ocho metros, velocidad ocho nudos."
+  },
+  "l27-07": {
+   "voice": "pilot",
+   "text": "Thank you, Captain. Who is on the helm?",
+   "es": "Gracias, Capitán. ¿Quién está en el timón?"
+  },
+  "l27-08": {
+   "pause": 900,
+   "voice": "lars",
+   "text": "The cadet. He's good, and I'm right here.",
+   "es": "El cadete. Es bueno, y yo estoy acá al lado."
+  },
+  "l27-09": {
+   "voice": "pilot",
+   "text": "Very good. Port ten.",
+   "es": "Muy bien. Babor diez."
+  },
+  "l27-10": {
+   "pause": 1500,
+   "voice": "diego",
+   "text": "Port ten.",
+   "es": "Babor diez."
+  },
+  "l27-11": {
+   "voice": "diego",
+   "text": "Wheel is port ten.",
+   "es": "Timón a babor diez."
+  },
+  "l27-12": {
+   "voice": "pilot",
+   "text": "Midships.",
+   "es": "A la vía."
+  },
+  "l27-13": {
+   "pause": 1400,
+   "voice": "diego",
+   "text": "Midships.",
+   "es": "A la vía."
+  },
+  "l27-14": {
+   "voice": "diego",
+   "text": "Wheel is amidships.",
+   "es": "Timón a la vía."
+  },
+  "l27-15": {
+   "voice": "pilot",
+   "text": "Steer zero four five.",
+   "es": "Gobierne cero cuatro cinco."
+  },
+  "l27-16": {
+   "pause": 2200,
+   "voice": "diego",
+   "text": "Steer zero four five.",
+   "es": "Gobernar cero cuatro cinco."
+  },
+  "l27-17": {
+   "voice": "diego",
+   "text": "Steady on zero four five.",
+   "es": "Rumbo cero cuatro cinco."
+  },
+  "l27-18": {
+   "voice": "pilot",
+   "text": "Starboard twenty.",
+   "es": "Estribor veinte."
+  },
+  "l27-19": {
+   "pause": 1400,
+   "voice": "diego",
+   "text": "Starboard twenty.",
+   "es": "Estribor veinte."
+  },
+  "l27-20": {
+   "voice": "diego",
+   "text": "Wheel is starboard twenty.",
+   "es": "Timón a estribor veinte."
+  },
+  "l27-21": {
+   "voice": "pilot",
+   "text": "Midships. Steady.",
+   "es": "A la vía. Así."
+  },
+  "l27-22": {
+   "pause": 2400,
+   "voice": "diego",
+   "text": "Midships. Steady. Steady on zero nine zero.",
+   "es": "A la vía. Así. Rumbo cero nueve cero."
+  },
+  "l27-23": {
+   "voice": "pilot",
+   "text": "Finished with the helm. Well done, cadet. You'll make a good officer.",
+   "es": "Terminado con el timón. Bien hecho, cadete. Vas a ser un buen oficial."
+  },
+  "l27-24": {
+   "pause": 900,
+   "voice": "diego",
+   "text": "Thank you, Pilot. Thank you, Captain.",
+   "es": "Gracias, práctico. Gracias, Capitán."
+  },
+  "l27-25": {
+   "voice": "lars",
+   "text": "Welcome to Marseille, Diego. And welcome to your new life at sea.",
+   "es": "Bienvenido a Marsella, Diego. Y bienvenido a tu nueva vida en el mar."
+  },
+  "w-ladder": {
+   "voice": "model",
+   "text": "pilot ladder"
+  },
+  "x-ladder": {
+   "voice": "model",
+   "text": "The pilot ladder is on the starboard side.",
+   "es": "La escala de práctico está por estribor."
+  },
+  "w-card": {
+   "voice": "model",
+   "text": "pilot card"
+  },
+  "x-card": {
+   "voice": "model",
+   "text": "Here is the pilot card.",
+   "es": "Acá tiene la tarjeta de práctico."
+  },
+  "w-helm": {
+   "voice": "model",
+   "text": "helm"
+  },
+  "x-helm": {
+   "voice": "model",
+   "text": "Who is on the helm?",
+   "es": "¿Quién está en el timón?"
+  },
+  "w-rudder": {
+   "voice": "model",
+   "text": "rudder angle indicator"
+  },
+  "x-rudder": {
+   "voice": "model",
+   "text": "Check the rudder angle indicator.",
+   "es": "Mirá el axiómetro."
+  },
+  "w-midships": {
+   "voice": "model",
+   "text": "midships"
+  },
+  "x-midships": {
+   "voice": "model",
+   "text": "Midships. Wheel is amidships.",
+   "es": "A la vía. Timón a la vía."
+  },
+  "w-hardport": {
+   "voice": "model",
+   "text": "hard-a-port"
+  },
+  "x-hardport": {
+   "voice": "model",
+   "text": "Hard-a-port!",
+   "es": "¡Todo a babor!"
+  },
+  "w-steady": {
+   "voice": "model",
+   "text": "steady"
+  },
+  "x-steady": {
+   "voice": "model",
+   "text": "Steady on zero four five.",
+   "es": "Rumbo cero cuatro cinco, así."
+  },
+  "w-heading": {
+   "voice": "model",
+   "text": "heading"
+  },
+  "x-heading": {
+   "voice": "model",
+   "text": "Our heading is zero four five.",
+   "es": "Nuestro rumbo es cero cuatro cinco."
+  },
+  "p-port": {
+   "voice": "model",
+   "text": "Port ten.",
+   "es": "Babor diez."
+  },
+  "p-wheel": {
+   "voice": "model",
+   "text": "Wheel is port ten.",
+   "es": "Timón a babor diez."
+  },
+  "p-steady": {
+   "voice": "model",
+   "text": "Steady on zero four five.",
+   "es": "Rumbo cero cuatro cinco."
+  },
+  "p-onboard": {
+   "voice": "model",
+   "text": "Pilot on board. Coming to the bridge.",
+   "es": "Práctico a bordo. Vamos al puente."
+  },
+  "m-stbd": {
+   "voice": "model",
+   "text": "Starboard fifteen.",
+   "es": "Estribor quince."
+  },
+  "m-steer": {
+   "voice": "model",
+   "text": "Steer one two zero.",
+   "es": "Gobernar uno dos cero."
+  },
+  "m-onboard": {
+   "voice": "model",
+   "text": "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
+   "es": "Puente, escala de práctico. Práctico a bordo. Vamos al puente."
+  },
+  "m-hard": {
+   "voice": "model",
+   "text": "Hard-a-port.",
+   "es": "Todo a babor."
+  },
+  "c-show-ladder": {
+   "voice": "lars",
+   "text": "Show me the pilot ladder."
+  },
+  "c-show-card": {
+   "voice": "pilot",
+   "text": "Where's the pilot card?"
+  },
+  "c-show-helm": {
+   "voice": "lars",
+   "text": "Where's the helm?"
+  },
+  "c-show-rudder": {
+   "voice": "pilot",
+   "text": "Show me the rudder angle indicator."
+  },
+  "c-show-heading": {
+   "voice": "pilot",
+   "text": "Where can you see the heading?"
+  },
+  "c-o-stbd": {
+   "voice": "pilot",
+   "text": "Starboard fifteen."
+  },
+  "c-o-steer": {
+   "voice": "pilot",
+   "text": "Steer one two zero."
+  },
+  "c-o-mid": {
+   "voice": "pilot",
+   "text": "Midships."
+  },
+  "c-o-hard": {
+   "voice": "pilot",
+   "text": "Hard-a-port!"
+  },
+  "c-askladder": {
+   "voice": "lars",
+   "text": "Diego, is the pilot on board? Over.",
+   "radio": true
+  },
+  "c-o-other": {
+   "voice": "pilot",
+   "text": "Port twenty. Then steer three three zero."
+  },
+  "c-head-other": {
+   "voice": "tanya",
+   "text": "Our heading is two seven five."
+  }
+ },
+ "dialogue": [
+  "l27-01",
+  "l27-02",
+  "l27-03",
+  "l27-04",
+  "l27-05",
+  "l27-06",
+  "l27-07",
+  "l27-08",
+  "l27-09",
+  "l27-10",
+  "l27-11",
+  "l27-12",
+  "l27-13",
+  "l27-14",
+  "l27-15",
+  "l27-16",
+  "l27-17",
+  "l27-18",
+  "l27-19",
+  "l27-20",
+  "l27-21",
+  "l27-22",
+  "l27-23",
+  "l27-24",
+  "l27-25"
+ ],
+ "words": {
+  "ladder": {
+   "en": "pilot ladder",
+   "ipa": "/ˈpaɪlət ˌlædə/",
+   "es": "escala de práctico",
+   "audio": "w-ladder",
+   "ex": "x-ladder"
+  },
+  "card": {
+   "en": "pilot card",
+   "ipa": "/ˈpaɪlət kɑːd/",
+   "es": "tarjeta de práctico",
+   "audio": "w-card",
+   "ex": "x-card"
+  },
+  "helm": {
+   "en": "helm",
+   "ipa": "/helm/",
+   "es": "timón (puesto de gobierno)",
+   "audio": "w-helm",
+   "ex": "x-helm"
+  },
+  "rudder": {
+   "en": "rudder angle indicator",
+   "ipa": "/ˈrʌdər ˌæŋɡl ˈɪndɪkeɪtə/",
+   "es": "axiómetro",
+   "audio": "w-rudder",
+   "ex": "x-rudder"
+  },
+  "midships": {
+   "en": "midships",
+   "ipa": "/ˈmɪdʃɪps/",
+   "es": "a la vía",
+   "audio": "w-midships",
+   "ex": "x-midships"
+  },
+  "hardport": {
+   "en": "hard-a-port",
+   "ipa": "/ˌhɑːd ə ˈpɔːt/",
+   "es": "todo a babor",
+   "audio": "w-hardport",
+   "ex": "x-hardport"
+  },
+  "steady": {
+   "en": "steady",
+   "ipa": "/ˈstedi/",
+   "es": "así (mantener el rumbo)",
+   "audio": "w-steady",
+   "ex": "x-steady"
+  },
+  "heading": {
+   "en": "heading",
+   "ipa": "/ˈhedɪŋ/",
+   "es": "rumbo (proa)",
+   "audio": "w-heading",
+   "ex": "x-heading"
+  }
+ },
+ "plate": {
+  "svg": "img/l27/plate.svg",
+  "pins": [
+   {
+    "word": "ladder",
+    "x": 78,
+    "y": 28
+   },
+   {
+    "word": "rudder",
+    "x": 230,
+    "y": 38
+   },
+   {
+    "word": "heading",
+    "x": 342,
+    "y": 38
+   },
+   {
+    "word": "helm",
+    "x": 262,
+    "y": 146
+   },
+   {
+    "word": "card",
+    "x": 360,
+    "y": 204
+   }
+  ]
+ },
+ "docs": {
+  "card": {
+   "kind": "form",
+   "title": "PILOT CARD",
+   "subtitle": "M/V LNG HORIZON · MARSEILLE · 27 MAR 2026 · 0710",
+   "cells": [
+    [
+     "DRAUGHT",
+     "Fwd 9.8 m · Aft 9.8 m"
+    ],
+    [
+     "LENGTH / BEAM",
+     "295 m / 46 m"
+    ],
+    [
+     "SPEED NOW",
+     "8 knots"
+    ],
+    [
+     "HEADING",
+     "045°"
+    ],
+    [
+     "RUDDER",
+     "Hard over to hard over: 28 seconds"
+    ],
+    [
+     "PROPELLER",
+     "Right-handed, fixed pitch"
+    ],
+    [
+     "BOW THRUSTER",
+     "Yes · 2,000 kW"
+    ],
+    [
+     "ON THE HELM",
+     "Cadet D. Martínez · Master on the bridge"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: the pilot",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l27/scene.jpg",
+     "kicker": "Day 14 · 07:00 · Marseille",
+     "title": "Pilot on board",
+     "body": "The last morning of the voyage. Diego meets the pilot at the ladder, takes him to the bridge and then takes the helm. Every order, he repeats. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l27-01",
+      "l27-02"
+     ],
+     "q": "On which side is the pilot boat?",
+     "opts": [
+      "Starboard",
+      "Port",
+      "Astern"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l27-06"
+     ],
+     "q": "What is the draught?",
+     "opts": [
+      "9.8 metres",
+      "8 metres",
+      "9 metres"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l27-07",
+      "l27-08"
+     ],
+     "q": "Who is on the helm?",
+     "opts": [
+      "The cadet",
+      "The Captain",
+      "An AB"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l27-09",
+      "l27-10",
+      "l27-11"
+     ],
+     "q": "What does Diego do with each order?",
+     "opts": [
+      "Repeats it, then reports the wheel",
+      "Says OK",
+      "Waits in silence"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l27-21",
+      "l27-22"
+     ],
+     "q": "What is the new heading?",
+     "opts": [
+      "090",
+      "045",
+      "009"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l27-23"
+     ],
+     "q": "What does the pilot say about Diego?",
+     "opts": [
+      "He'll make a good officer",
+      "He's too slow",
+      "He talks too much"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole arrival",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Pilot and helm",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The steering position and the pilot ladder."
+    },
+    {
+     "type": "card",
+     "word": "ladder"
+    },
+    {
+     "type": "card",
+     "word": "card"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-ladder",
+     "a": "ladder"
+    },
+    {
+     "type": "card",
+     "word": "helm"
+    },
+    {
+     "type": "card",
+     "word": "rudder"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-rudder",
+     "a": "rudder"
+    },
+    {
+     "type": "card",
+     "word": "midships"
+    },
+    {
+     "type": "card",
+     "word": "hardport"
+    },
+    {
+     "type": "card",
+     "word": "steady"
+    },
+    {
+     "type": "card",
+     "word": "heading"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-heading",
+     "a": "heading"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-helm",
+     "a": "helm"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"a la vía\" in English:",
+     "opts": [
+      "midships",
+      "middle",
+      "straight"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "pilot ladder",
+       "escala de práctico"
+      ],
+      [
+       "helm",
+       "timón"
+      ],
+      [
+       "midships",
+       "a la vía"
+      ],
+      [
+       "steady",
+       "así"
+      ],
+      [
+       "heading",
+       "rumbo"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Order, read-back, report",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "At the helm",
+     "list": [
+      [
+       "Port ten.",
+       "Babor diez.",
+       "p-port"
+      ],
+      [
+       "Wheel is port ten.",
+       "Timón a babor diez.",
+       "p-wheel"
+      ],
+      [
+       "Steady on zero four five.",
+       "Rumbo cero cuatro cinco.",
+       "p-steady"
+      ],
+      [
+       "Pilot on board. Coming to the bridge.",
+       "Práctico a bordo. Vamos al puente.",
+       "p-onboard"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Three steps for every order",
+     "steps": [
+      [
+       "1 · repeat",
+       "Pilot: <b>Port ten.</b> → You: <b>Port ten.</b>"
+      ],
+      [
+       "2 · do it",
+       "Turn the wheel. Watch the rudder angle indicator."
+      ],
+      [
+       "3 · report",
+       "<b>Wheel is port ten.</b> · <b>Wheel is amidships.</b> · <b>Steady on zero four five.</b>"
+      ]
+     ],
+     "paras": [
+      "The repeat is called the <b>read-back</b>: it proves you heard the right order. Exactly the same words, nothing more.",
+      "Courses are said figure by figure: <b>zero four five</b>, <b>one two zero</b>. Angles of rudder: <b>port ten</b>, <b>starboard twenty</b>, <b>hard-a-port</b>."
+     ],
+     "avoid": "OK · Yes, sir · forty-five"
+    },
+    {
+     "type": "choice",
+     "q": "The pilot says \"Starboard twenty.\" First you say…",
+     "opts": [
+      "Starboard twenty.",
+      "Yes, Pilot.",
+      "OK, twenty."
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The rudder is now at port ten. You report…",
+     "opts": [
+      "Wheel is port ten.",
+      "Port ten done.",
+      "I did it."
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "audio": "c-head-other",
+     "q": "What's the heading? Write three numbers.",
+     "accept": [
+      "275",
+      "2 7 5",
+      "two seven five"
+     ]
+    },
+    {
+     "type": "build",
+     "q": "Steady on zero four five.",
+     "a": [
+      "Steady",
+      "on",
+      "zero",
+      "four",
+      "five."
+     ],
+     "extra": [
+      "forty-five",
+      "in"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "No numbers in Spanish style",
+     "paras": [
+      "In Spanish we say <i>rumbo cuarenta y cinco</i>. On the helm it's always three figures: <b>zero four five</b>.",
+      "<b>Midships</b> is one word; when you report, <b>amidships</b>: <b>Wheel is amidships.</b>"
+     ],
+     "avoid": "Steer forty-five · Wheel is in the middle"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-o-other"
+     ],
+     "q": "What are the two orders?",
+     "opts": [
+      "Port twenty, then steer 330",
+      "Starboard twenty, then steer 030",
+      "Port twelve, then steer 333"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Helm orders",
+     "paras": [
+      "A pilot speaks fast. Answer at the same speed, clear and flat, no question tone.",
+      "<b>Hard-a-port</b>: three beats, <b>HARD-a-PORT</b>."
+     ],
+     "list": [
+      [
+       "Hard-a-port.",
+       "Todo a babor.",
+       "m-hard"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the pilot card",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "card",
+     "q": "How long from hard over to hard over?",
+     "opts": [
+      "28 seconds",
+      "28 minutes",
+      "2 seconds"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "card",
+     "q": "Is there a bow thruster?",
+     "opts": [
+      "Yes, 2,000 kW",
+      "No",
+      "Only aft"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "card",
+     "q": "Tap who is on the helm.",
+     "a": 7
+    },
+    {
+     "type": "doc",
+     "doc": "card",
+     "q": "What kind of propeller?",
+     "opts": [
+      "Right-handed, fixed pitch",
+      "Left-handed",
+      "Controllable pitch"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "card",
+     "q": "What is the ship's length?",
+     "opts": [
+      "295 m",
+      "46 m",
+      "9.8 m"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Take the helm",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Repeat every order",
+     "body": "Listen, say it, check it. Same words as the pilot, at the same speed.",
+     "es": "Las mismas palabras que el práctico.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-port"
+    },
+    {
+     "type": "shadow",
+     "model": "p-wheel"
+    },
+    {
+     "type": "shadow",
+     "model": "p-steady"
+    },
+    {
+     "type": "role",
+     "cue": "c-askladder",
+     "task": "Report: pilot on board, coming to the bridge.",
+     "model": "m-onboard",
+     "accept": [
+      "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
+      "Pilot on board. Coming to the bridge.",
+      "Bridge, pilot ladder, pilot on board, coming to the bridge."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-o-stbd",
+     "task": "Repeat the order.",
+     "model": "m-stbd",
+     "accept": [
+      "Starboard fifteen.",
+      "Starboard fifteen!"
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-o-steer",
+     "task": "Repeat the order.",
+     "model": "m-steer",
+     "accept": [
+      "Steer one two zero.",
+      "Steer one two zero!"
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-o-hard",
+     "task": "Repeat the order.",
+     "model": "m-hard",
+     "accept": [
+      "Hard-a-port.",
+      "Hard a port.",
+      "Hard-a-port!",
+      "Hard to port."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-helm",
+     "q": "Type what you hear.",
+     "accept": [
+      "helm",
+      "the helm"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-card",
+     "a": "card"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-rudder",
+     "a": "rudder"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-o-mid"
+     ],
+     "q": "What's the order?",
+     "opts": [
+      "Midships",
+      "Port side",
+      "Middle watch"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "After \"Steer zero four five\", when the ship is on 045, you report…",
+     "opts": [
+      "Steady on zero four five.",
+      "Forty-five, OK.",
+      "Steer zero four five done."
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Why do you repeat each order?",
+     "opts": [
+      "To prove you heard it right",
+      "To be polite",
+      "Because the pilot is French"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Wheel is amidships.",
+     "a": [
+      "Wheel",
+      "is",
+      "amidships."
+     ],
+     "extra": [
+      "midships",
+      "the"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l27-25"
+     ],
+     "q": "What does the Captain say at the end?",
+     "opts": [
+      "Welcome to your new life at sea",
+      "See you next voyage",
+      "Go and rest"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: escala de práctico",
+     "accept": [
+      "pilot ladder",
+      "the pilot ladder",
+      "a pilot ladder"
+     ]
+    }
+   ]
+  }
+ ]
+}

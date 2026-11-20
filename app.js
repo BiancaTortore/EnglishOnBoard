@@ -17,6 +17,10 @@ const VOICES = {
   mario:   {name:"Mario",   langs:["en-PH","en-IN","en-US"], rate:1.0, pitch:1.0},
   chen:    {name:"Lt Chen", langs:["en-US"],         rate:1.0, pitch:1.1},
   pilot:   {name:"Pilot",   langs:["en-GB","en-US"], rate:1.0, pitch:.9},
+  mateo:   {name:"Mateo",   langs:["en-GB","en-US"], rate:1.0, pitch:.95},
+  skipper: {name:"Cap Béar", langs:["en-GB","en-US"], rate:1.05, pitch:.85},
+  tarifa:  {name:"Tarifa Traffic", langs:["en-GB","en-US"], rate:.95, pitch:.9},
+  doctor:  {name:"CIRM doctor", langs:["en-GB","en-US"], rate:.95, pitch:.9},
   agent:   {name:"Agent",   langs:["en-US"],         rate:1.0, pitch:1.0},
   terminal:{name:"Terminal",langs:["en-US"],         rate:1.05, pitch:.95},
   model:   {name:"Model",   langs:["en-GB"],         rate:.92, pitch:1.0}
@@ -261,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-41";
+const APP_VERSION = "beta-42";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };

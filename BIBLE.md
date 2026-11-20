@@ -40,6 +40,9 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | `mario` | Mario Dela Cruz | Chief Cook | Filipino, 50 | Bajo, sonriente, chaqueta blanca de cocinero, gorro negro | Hombre, acento filipino, alegre |
 | `chen` | Lt. Amy Chen | Inspectora de PSC, US Coast Guard | Estadounidense, 36 | Pelo negro atado, uniforme azul de la USCG, carpeta en mano | Mujer, inglés americano, directa |
 | `pilot` | Capt. Laurent Dubois | Práctico de Marsella | Francés, 55 | Canoso, campera de práctico roja con reflectivos, casco | Hombre, acento francés marcado |
+| `skipper` | Patrón del *Cap Béar* | Pesquero francés | Francés, ~50 | No aparece en fotos (solo radio) | Hombre, acento francés, agitado pero claro |
+| `tarifa` | Tarifa Traffic | Operador del centro de tráfico | Español | No aparece en fotos | Hombre, inglés con acento español |
+| `doctor` | Médico del CIRM | TMAS, Roma | Italiano, ~50 | No aparece en fotos (teléfono satelital) | Hombre, acento italiano, tranquilo |
 | `terminal` | Houston Terminal | Operador de radio de la terminal | Estadounidense | No aparece en fotos | Hombre, inglés americano del sur, rápido y rutinario, como quien hace la misma llamada todos los días |
 | `model` | — | Voz modelo | — | — | Palabras sueltas, ejemplos y respuestas modelo. ElevenLabs **"Brian"** (americano, claro), con `tools/model-voice.mjs --us --voice "Brian"`. Pronunciación de referencia americana: *starboard* = STAR-berd |
 
@@ -51,7 +54,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 
 **Ropa de trabajo:** oficiales y cadetes con mameluco **azul marino**, ratings (Rolando y los marineros) con mameluco **naranja**. Mario, en la cocina, con chaqueta blanca de cocinero.
 
-**Voces en ElevenLabs** (nombre en "Mis Voces" de la cuenta de Bianca; no cambiarlas): Diego = Matias · Rolando = Juan Tamad · Tanya = Joanna · James = Andrew · Marek = Oliver · Mario = Pochology · Lars = Wolf Spencer · Mateo = Alberto Loco · Chen = Sarah (Approachable and Informative) · voz modelo = Brian. El práctico, el agente y Houston Terminal: todavía sin elegir. La lista vive en `CAST`, dentro de `tools/model-voice.mjs`.
+**Voces en ElevenLabs** (nombre en "Mis Voces" de la cuenta de Bianca; no cambiarlas): Diego = Matias · Rolando = Juan Tamad · Tanya = Joanna · James = Andrew · Marek = Oliver · Mario = Pochology · Lars = Wolf Spencer · Mateo = Alberto Loco · Chen = Sarah (Approachable and Informative) · voz modelo = Brian. El práctico, el patrón del Cap Béar, Tarifa Traffic, el médico del CIRM, el agente y Houston Terminal: todavía sin elegir. La lista vive en `CAST`, dentro de `tools/model-voice.mjs`.
 
 ---
 
@@ -90,9 +93,9 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 23 | Firefighting equipment | Día 9 · 15:00 · pasillo | Rolando muestra los extintores; Diego confunde espuma y polvo |
 | 24 | Fire party communication | Día 10 · 11:30 · cocina | Incendio real en la cocina de Mario; James dirige la brigada, Diego lleva el tablero de BA (equipo uno: Rolando y el AB Santos) |
 | **Módulo 7 · Radio & outside parties** ||||
-| 25 | Distress, urgency & safety | Día 12 · cerca de Gibraltar | Escuchan el MAYDAY del pesquero francés *Cap Béar* |
-| 26 | Medical & TMAS | Día 13 · Mediterráneo | Un marinero se lastima la mano; llaman a TMAS |
-| 27 | Pilot boarding & helm orders | Día 14 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
+| 25 | Distress, urgency & safety | Día 12 · 19:20 · Estrecho | Guardia de Tanya y Diego: MAYDAY del pesquero francés *Cap Béar* (hace agua, 4 personas). Tarifa Traffic acusa recibo; el *Horizon* está a 6 millas y Diego llama a Tarifa; Salvamento Marítimo los rescata |
+| 26 | Medical & TMAS | Día 13 · 10:00 · cocina | Mario se corta la mano izquierda con un cuchillo; Tanya llama al CIRM de Roma por teléfono satelital y Diego dicta los signos vitales; Diego ayuda en la cocina |
+| 27 | Pilot boarding & helm orders | Día 14 · 07:00 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
 
 ### Glosario náutico en español (cómo lo dice Bianca; usarlo en todas las traducciones)
 accommodation = casillaje · rating = subalterno (marineros, AB y otros) · department = departamento · crew agreement = rol · to sign on = firmar el embarque · seaman's book = libreta de embarco · bunk = cama · muster card = tarjeta de rol · muster station = punto de reunión · drill = zafarrancho · announcement = anuncio · loudspeaker = altavoz · safety shoes = zapatos de seguridad · spanner = llave · chipping = picaretear · shackle = grillete · windlass = cabrestante · ECDIS = carta electrónica · swell = oleaje · rough (sea) = agitado · squall = chubasco

@@ -1,14 +1,16 @@
 # Lesson 25 · Distress, urgency & safety · imágenes
 
-Día 12 · cerca de Gibraltar, al anochecer. La lección todavía no está escrita: por ahora solo hace falta la portada, para que aparezca junto al "Coming soon".
-Cuando se escriba la lección se agrega acá la escena (`scene.jpg`) y, si hace falta, se ajusta la portada para que coincida.
+Día 12 · 19:20 · Estrecho de Gibraltar, puente al atardecer. La lámina (`plate.svg`) ya está dibujada. La portada (`hero.jpg`) ya está hecha. Falta la escena del diálogo.
+Referencias: **Lars**, **Tanya**, **Diego** y la portada `hero.jpg`.
 
-Referencias: **Lars**, **Diego**.
+**Regla:** personas y ambiente, nada técnico en foco ni texto legible.
 
-**Regla:** en las fotos no aparece nada técnico. Eso va en las láminas dibujadas. Las fotos son personas y ambiente.
+## `scene.jpg` · el diálogo (sesión Listen)
+- **Formato:** 4:3 horizontal, mínimo 1440 × 1080. Adjuntá `hero.jpg` como referencia.
 
+> Using the attached image as reference for the bridge, the dusk light and the people: a horizontal medium shot on the same ship's bridge at dusk. A 22-year-old young man [reference: diego] in a navy-blue boiler suit holds a plain black VHF handset close to his mouth and speaks with calm concentration. Next to him a 41-year-old British woman, Chief Officer [reference: tanya], in a navy-blue boiler suit, writes quickly on a blank logbook page, not readable. Behind them a tall 58-year-old captain with white hair, a neat grey beard and thin metal glasses [reference: lars], in a white uniform shirt, looks out of the window with binoculars in his hand. Through the windows, a dusky purple sea and a dark mountainous coastline. No readable screens. Documentary photograph, 35mm lens, natural light, realistic skin texture, real worn workwear, no visible text, no logos, no watermark.
 
-## `hero.jpg` · portada de la lección
+## `hero.jpg` · portada de la lección (ya hecha)
 - **Dónde se ve:** en la lista de lecciones (miniatura) y arriba de todo en la pantalla de la lección, con el título encima.
 - **Formato:** 4:5 vertical, mínimo 1080 × 1350.
 

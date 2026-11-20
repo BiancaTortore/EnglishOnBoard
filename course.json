@@ -40,9 +40,9 @@
       {"n": 24, "title": "Fire party communication", "ready": true}
     ]},
     {"n": 7, "title": "Radio & outside parties", "where": "Gibraltar · Marseille", "lessons": [
-      {"n": 25, "title": "Distress, urgency & safety"},
-      {"n": 26, "title": "Medical & TMAS"},
-      {"n": 27, "title": "Pilot boarding & helm orders"}
+      {"n": 25, "title": "Distress, urgency & safety", "ready": true},
+      {"n": 26, "title": "Medical & TMAS", "ready": true},
+      {"n": 27, "title": "Pilot boarding & helm orders", "ready": true}
     ]}
   ]
 }
