@@ -1022,5 +1022,7 @@
     }
    ]
   }
- ]
+ ],
+ "modelAudio": true,
+ "mediaRev": 1
 }
