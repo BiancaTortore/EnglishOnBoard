@@ -1,0 +1,985 @@
+{
+ "n": 14,
+ "module": 4,
+ "title": "Watch handover",
+ "place": "Day 4 · 03:45 · Gulf of Mexico, bridge",
+ "goal": "Follow a watch handover and read back course, speed and orders.",
+ "images": {
+  "hero": "img/l14/hero.jpg",
+  "scene": "img/l14/scene.jpg"
+ },
+ "audio": {
+  "l14-01": {
+   "voice": "tanya",
+   "text": "Good morning, James. Diego, this is your first watch at sea. Listen to the handover.",
+   "es": "Buen día, James. Diego, esta es tu primera guardia en el mar. Escuchá el relevo."
+  },
+  "l14-02": {
+   "voice": "james",
+   "text": "Morning, both. OK. Course one one zero, speed sixteen knots, on autopilot.",
+   "es": "Buen día a los dos. Bueno. Rumbo uno uno cero, velocidad dieciséis nudos, en piloto automático."
+  },
+  "l14-03": {
+   "voice": "tanya",
+   "text": "Course one one zero, speed sixteen.",
+   "es": "Rumbo uno uno cero, velocidad dieciséis."
+  },
+  "l14-04": {
+   "pause": 500,
+   "voice": "james",
+   "text": "Position: about ninety miles south of the Mississippi. It's on the chart.",
+   "es": "Posición: unas noventa millas al sur del Mississippi. Está en la carta."
+  },
+  "l14-05": {
+   "voice": "james",
+   "text": "Traffic: one fishing boat on the port bow, eight miles. No danger.",
+   "es": "Tráfico: un pesquero por la amura de babor, a ocho millas. Sin peligro."
+  },
+  "l14-06": {
+   "voice": "james",
+   "text": "Weather: wind north-west, force four. A front is coming in the morning.",
+   "es": "Tiempo: viento del noroeste, fuerza cuatro. Viene un frente a la mañana."
+  },
+  "l14-07": {
+   "voice": "tanya",
+   "text": "And the Captain's night orders?",
+   "es": "¿Y las órdenes de noche del Capitán?"
+  },
+  "l14-08": {
+   "pause": 400,
+   "voice": "james",
+   "text": "Call him if visibility is less than three miles, or if any ship comes closer than two miles.",
+   "es": "Llamarlo si la visibilidad baja de tres millas, o si algún buque se acerca a menos de dos millas."
+  },
+  "l14-09": {
+   "voice": "tanya",
+   "text": "Under three miles, closer than two miles. OK.",
+   "es": "Menos de tres millas, menos de dos millas. Okey."
+  },
+  "l14-10": {
+   "pause": 800,
+   "voice": "diego",
+   "text": "And the lookout? Is that me?",
+   "es": "¿Y la vigía? ¿Soy yo?"
+  },
+  "l14-11": {
+   "voice": "tanya",
+   "text": "Yes. You're the lookout. Eyes outside, and report everything you see.",
+   "es": "Sí. Vos sos la vigía. Ojos afuera, y reportá todo lo que veas."
+  },
+  "l14-12": {
+   "pause": 600,
+   "voice": "james",
+   "text": "Any questions, Tanya?",
+   "es": "¿Alguna pregunta, Tanya?"
+  },
+  "l14-13": {
+   "voice": "tanya",
+   "text": "No questions. I have the watch.",
+   "es": "Sin preguntas. Tomo la guardia."
+  },
+  "l14-14": {
+   "pause": 500,
+   "voice": "james",
+   "text": "You have the watch. Good night.",
+   "es": "La guardia es tuya. Buenas noches."
+  },
+  "l14-15": {
+   "voice": "diego",
+   "text": "Good night, James.",
+   "es": "Buenas noches, James."
+  },
+  "w-course": {
+   "voice": "model",
+   "text": "course"
+  },
+  "x-course": {
+   "voice": "model",
+   "text": "Course one one zero.",
+   "es": "Rumbo uno uno cero."
+  },
+  "w-speed": {
+   "voice": "model",
+   "text": "speed"
+  },
+  "x-speed": {
+   "voice": "model",
+   "text": "Speed sixteen knots.",
+   "es": "Velocidad dieciséis nudos."
+  },
+  "w-knot": {
+   "voice": "model",
+   "text": "knot"
+  },
+  "x-knot": {
+   "voice": "model",
+   "text": "The ship makes sixteen knots.",
+   "es": "El buque hace dieciséis nudos."
+  },
+  "w-position": {
+   "voice": "model",
+   "text": "position"
+  },
+  "x-position": {
+   "voice": "model",
+   "text": "The position is on the chart.",
+   "es": "La posición está en la carta."
+  },
+  "w-traffic": {
+   "voice": "model",
+   "text": "traffic"
+  },
+  "x-traffic": {
+   "voice": "model",
+   "text": "Traffic: one fishing boat.",
+   "es": "Tráfico: un pesquero."
+  },
+  "w-orders": {
+   "voice": "model",
+   "text": "night orders"
+  },
+  "x-orders": {
+   "voice": "model",
+   "text": "Read the Captain's night orders.",
+   "es": "Leé las órdenes de noche del Capitán."
+  },
+  "w-handover": {
+   "voice": "model",
+   "text": "handover"
+  },
+  "x-handover": {
+   "voice": "model",
+   "text": "Listen to the handover.",
+   "es": "Escuchá el relevo."
+  },
+  "w-lookout": {
+   "voice": "model",
+   "text": "lookout"
+  },
+  "x-lookout": {
+   "voice": "model",
+   "text": "You're the lookout.",
+   "es": "Vos sos la vigía."
+  },
+  "p-course": {
+   "voice": "model",
+   "text": "Course one one zero, speed sixteen knots.",
+   "es": "Rumbo uno uno cero, velocidad dieciséis nudos."
+  },
+  "p-ihave": {
+   "voice": "model",
+   "text": "I have the watch.",
+   "es": "Tomo la guardia."
+  },
+  "p-youhave": {
+   "voice": "model",
+   "text": "You have the watch.",
+   "es": "La guardia es tuya."
+  },
+  "p-report": {
+   "voice": "model",
+   "text": "Eyes outside, and report everything you see.",
+   "es": "Ojos afuera, y reportá todo lo que veas."
+  },
+  "m-rb1": {
+   "voice": "model",
+   "text": "Course one two five, speed fifteen knots.",
+   "es": "Rumbo uno dos cinco, velocidad quince nudos."
+  },
+  "m-rb2": {
+   "voice": "model",
+   "text": "Course zero nine five, speed sixteen knots.",
+   "es": "Rumbo cero nueve cinco, velocidad dieciséis nudos."
+  },
+  "m-course": {
+   "voice": "model",
+   "text": "Course one one zero.",
+   "es": "Rumbo uno uno cero."
+  },
+  "m-ihave": {
+   "voice": "model",
+   "text": "No questions. I have the watch.",
+   "es": "Sin preguntas. Tomo la guardia."
+  },
+  "m-knot": {
+   "voice": "model",
+   "text": "knot",
+   "es": "nudo"
+  },
+  "m-not": {
+   "voice": "model",
+   "text": "not",
+   "es": "no"
+  },
+  "c-show-course": {
+   "voice": "tanya",
+   "text": "Show me the course."
+  },
+  "c-show-speed": {
+   "voice": "james",
+   "text": "Where's the speed?"
+  },
+  "c-show-position": {
+   "voice": "tanya",
+   "text": "Show me our position."
+  },
+  "c-show-traffic": {
+   "voice": "james",
+   "text": "Where's the traffic?"
+  },
+  "c-rb1": {
+   "voice": "james",
+   "text": "Course one two five, speed fifteen knots."
+  },
+  "c-rb2": {
+   "voice": "james",
+   "text": "New course: zero nine five. Speed sixteen knots."
+  },
+  "c-whatcourse": {
+   "voice": "tanya",
+   "text": "Diego, what's the course?"
+  },
+  "c-anyq": {
+   "voice": "james",
+   "text": "Any questions?"
+  },
+  "c-course-other": {
+   "voice": "tanya",
+   "text": "Course zero eight five."
+  },
+  "c-speed-other": {
+   "voice": "james",
+   "text": "Speed fourteen knots."
+  },
+  "c-miles": {
+   "voice": "james",
+   "text": "The fishing boat is now six miles away."
+  }
+ },
+ "dialogue": [
+  "l14-01",
+  "l14-02",
+  "l14-03",
+  "l14-04",
+  "l14-05",
+  "l14-06",
+  "l14-07",
+  "l14-08",
+  "l14-09",
+  "l14-10",
+  "l14-11",
+  "l14-12",
+  "l14-13",
+  "l14-14",
+  "l14-15"
+ ],
+ "words": {
+  "course": {
+   "en": "course",
+   "ipa": "/kɔːs/",
+   "es": "rumbo",
+   "audio": "w-course",
+   "ex": "x-course"
+  },
+  "speed": {
+   "en": "speed",
+   "ipa": "/spiːd/",
+   "es": "velocidad",
+   "audio": "w-speed",
+   "ex": "x-speed"
+  },
+  "knot": {
+   "en": "knot",
+   "ipa": "/nɒt/",
+   "es": "nudo (milla por hora)",
+   "audio": "w-knot",
+   "ex": "x-knot"
+  },
+  "position": {
+   "en": "position",
+   "ipa": "/pəˈzɪʃn/",
+   "es": "posición",
+   "audio": "w-position",
+   "ex": "x-position"
+  },
+  "traffic": {
+   "en": "traffic",
+   "ipa": "/ˈtræfɪk/",
+   "es": "tráfico",
+   "audio": "w-traffic",
+   "ex": "x-traffic"
+  },
+  "orders": {
+   "en": "night orders",
+   "ipa": "/ˈnaɪt ˌɔːdəz/",
+   "es": "órdenes de noche",
+   "audio": "w-orders",
+   "ex": "x-orders"
+  },
+  "handover": {
+   "en": "handover",
+   "ipa": "/ˈhændəʊvə/",
+   "es": "relevo, entrega de guardia",
+   "audio": "w-handover",
+   "ex": "x-handover"
+  },
+  "lookout": {
+   "en": "lookout",
+   "ipa": "/ˈlʊkaʊt/",
+   "es": "vigía",
+   "audio": "w-lookout",
+   "ex": "x-lookout"
+  }
+ },
+ "plate": {
+  "svg": "img/l14/plate.svg",
+  "pins": [
+   {
+    "word": "course",
+    "x": 200,
+    "y": 140
+   },
+   {
+    "word": "speed",
+    "x": 300,
+    "y": 100
+   },
+   {
+    "word": "knot",
+    "x": 335,
+    "y": 100
+   },
+   {
+    "word": "position",
+    "x": 330,
+    "y": 150
+   },
+   {
+    "word": "traffic",
+    "x": 196,
+    "y": 96
+   }
+  ]
+ },
+ "docs": {
+  "orders": {
+   "kind": "form",
+   "title": "MASTER'S NIGHT ORDERS",
+   "subtitle": "M/V LNG HORIZON · 16–17 MAR 2026",
+   "cells": [
+    [
+     "COURSE · SPEED",
+     "110° · 16 knots"
+    ],
+    [
+     "CALL ME IF",
+     "Visibility is less than 3 NM"
+    ],
+    [
+     "CALL ME IF",
+     "Any ship comes closer than 2 NM"
+    ],
+    [
+     "CALL ME IF",
+     "You have any doubt"
+    ],
+    [
+     "LOOKOUT",
+     "Cadet on lookout 0400–0800"
+    ],
+    [
+     "WEATHER",
+     "Front expected in the morning"
+    ],
+    [
+     "SIGNED",
+     "Master L. Andersen"
+    ],
+    [
+     "READ BY",
+     "2/O J. O'Connor · C/O T. Williams"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: the handover",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l14/scene.jpg",
+     "kicker": "Day 4 · 03:45 · Gulf of Mexico",
+     "title": "Diego's first sea watch",
+     "body": "Quarter to four in the morning. Tanya comes to the bridge for her watch, and Diego comes with her. James gives the watch to Tanya. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-02",
+      "l14-03"
+     ],
+     "q": "What is the course?",
+     "opts": [
+      "110",
+      "100",
+      "011"
+     ],
+     "a": 0,
+     "why": "\"Course one one zero.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-04"
+     ],
+     "q": "Where is the ship?",
+     "opts": [
+      "South of the Mississippi",
+      "North of Galveston",
+      "Near Florida"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-05"
+     ],
+     "q": "What traffic is there?",
+     "opts": [
+      "A fishing boat, 8 miles",
+      "A tanker, 2 miles",
+      "No traffic"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-07",
+      "l14-08"
+     ],
+     "q": "When do they call the Captain?",
+     "opts": [
+      "Visibility under 3 miles, or a ship closer than 2 miles",
+      "Every hour",
+      "Only for fire"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-10",
+      "l14-11"
+     ],
+     "q": "What is Diego's job on the watch?",
+     "opts": [
+      "Lookout",
+      "Helmsman",
+      "Radio"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-12",
+      "l14-13",
+      "l14-14"
+     ],
+     "q": "Who has the watch at the end?",
+     "opts": [
+      "Tanya",
+      "James",
+      "Diego"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole handover",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "On the screen",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The radar at night, during the handover."
+    },
+    {
+     "type": "card",
+     "word": "course"
+    },
+    {
+     "type": "card",
+     "word": "speed"
+    },
+    {
+     "type": "card",
+     "word": "knot"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-course",
+     "a": "course"
+    },
+    {
+     "type": "card",
+     "word": "position"
+    },
+    {
+     "type": "card",
+     "word": "traffic"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-traffic",
+     "a": "traffic"
+    },
+    {
+     "type": "card",
+     "word": "orders"
+    },
+    {
+     "type": "card",
+     "word": "handover"
+    },
+    {
+     "type": "card",
+     "word": "lookout"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-position",
+     "a": "position"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"vigía\" in English:",
+     "opts": [
+      "lookout",
+      "watcher",
+      "look man"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "course",
+       "rumbo"
+      ],
+      [
+       "speed",
+       "velocidad"
+      ],
+      [
+       "knot",
+       "nudo"
+      ],
+      [
+       "handover",
+       "relevo"
+      ],
+      [
+       "lookout",
+       "vigía"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "I have the watch",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "The handover",
+     "list": [
+      [
+       "Course one one zero, speed sixteen knots.",
+       "Rumbo uno uno cero, velocidad dieciséis nudos.",
+       "p-course"
+      ],
+      [
+       "I have the watch.",
+       "Tomo la guardia.",
+       "p-ihave"
+      ],
+      [
+       "You have the watch.",
+       "La guardia es tuya.",
+       "p-youhave"
+      ],
+      [
+       "Eyes outside, and report everything you see.",
+       "Ojos afuera, y reportá todo lo que veas.",
+       "p-report"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Course, speed, distance",
+     "steps": [
+      [
+       "Course 110°",
+       "one one zero: always three digits, one by one"
+      ],
+      [
+       "Course 085°",
+       "zero eight five"
+      ],
+      [
+       "Speed 16 kn",
+       "sixteen knots: a normal number"
+      ],
+      [
+       "Distance 8 NM",
+       "eight miles: nautical miles"
+      ]
+     ],
+     "paras": [
+      "Courses and headings have <b>three digits</b>, said one by one: <i>zero eight five</i>, never <i>eighty-five</i>.",
+      "The new officer <b>reads back</b> course and speed. The handover ends with <b>I have the watch</b> / <b>You have the watch</b>."
+     ],
+     "avoid": "Course one hundred ten. · Course eighty-five. · I take the guard."
+    },
+    {
+     "type": "choice",
+     "q": "Course 095° is…",
+     "opts": [
+      "zero nine five",
+      "ninety-five",
+      "nine five"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "James gives you the watch. You say…",
+     "opts": [
+      "I have the watch.",
+      "You have the watch.",
+      "I take the guard."
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "audio": "c-course-other",
+     "q": "Write the course you hear, three digits.",
+     "accept": [
+      "085",
+      "85",
+      "085°"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-speed-other",
+     "q": "Write the speed in knots.",
+     "accept": [
+      "14",
+      "fourteen"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "\"Tomar la guardia\" is not \"take the guard\"",
+     "paras": [
+      "In English it's <b>the watch</b>, not <i>the guard</i>: <b>I have the watch</b>, <b>I'm on watch</b>, <b>the 4 to 8 watch</b>.",
+      "And <b>course</b> is <i>rumbo</i>. A <i>curso</i> (like this one) is a <b>course</b> too, but on the bridge it always means direction."
+     ],
+     "avoid": "I take the guard. · The guard of 4 to 8."
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Knot: no K",
+     "paras": [
+      "<b>knot</b> sounds exactly like <b>not</b>: /nɒt/. The <i>k</i> is silent, like in <i>know</i> and <i>knife</i>.",
+      "<i>Sixteen KNOTS</i>: stress on the number and on knots."
+     ],
+     "list": [
+      [
+       "knot",
+       "nudo",
+       "m-knot"
+      ],
+      [
+       "not",
+       "no",
+       "m-not"
+      ]
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-miles"
+     ],
+     "q": "How far is the fishing boat now?",
+     "opts": [
+      "6 miles",
+      "16 miles",
+      "60 miles"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the night orders",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "orders",
+     "q": "Visibility is 2 miles. What do you do?",
+     "opts": [
+      "Call the Captain",
+      "Nothing",
+      "Stop the engine"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "orders",
+     "q": "Who is the lookout from 0400 to 0800?",
+     "opts": [
+      "The cadet",
+      "The bosun",
+      "The Second Officer"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "orders",
+     "q": "Tap the order for when you are not sure.",
+     "a": 3
+    },
+    {
+     "type": "doc",
+     "doc": "orders",
+     "q": "What weather do they expect?",
+     "opts": [
+      "A front in the morning",
+      "Fog all night",
+      "Calm sea"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "orders",
+     "q": "Who signed the orders?",
+     "opts": [
+      "The Master",
+      "The Chief Officer",
+      "The pilot"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Take the watch",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Read back and take over",
+     "body": "Listen, say it, check it. Courses digit by digit: one, one, zero.",
+     "es": "Rumbos, cifra por cifra.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-course"
+    },
+    {
+     "type": "shadow",
+     "model": "p-ihave"
+    },
+    {
+     "type": "shadow",
+     "model": "p-report"
+    },
+    {
+     "type": "role",
+     "cue": "c-rb1",
+     "task": "Read back course and speed.",
+     "model": "m-rb1",
+     "accept": [
+      "Course one two five, speed fifteen knots.",
+      "Course one two five, speed fifteen.",
+      "One two five, fifteen knots.",
+      "Course one two five. Speed fifteen knots."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-rb2",
+     "task": "Read back the new course and speed.",
+     "model": "m-rb2",
+     "accept": [
+      "Course zero nine five, speed sixteen knots.",
+      "Course zero nine five, speed sixteen.",
+      "Zero nine five, sixteen knots.",
+      "New course zero nine five, speed sixteen knots."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-whatcourse",
+     "task": "The course is 110°. Tell her.",
+     "model": "m-course",
+     "accept": [
+      "Course one one zero.",
+      "One one zero.",
+      "The course is one one zero.",
+      "It's one one zero."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-anyq",
+     "task": "No questions. Take the watch.",
+     "model": "m-ihave",
+     "accept": [
+      "No questions. I have the watch.",
+      "I have the watch.",
+      "No questions, I have the watch.",
+      "No. I have the watch."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-lookout",
+     "q": "Type what you hear.",
+     "accept": [
+      "lookout",
+      "the lookout",
+      "look out"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-speed",
+     "a": "speed"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-course",
+     "a": "course"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-06"
+     ],
+     "q": "What is the wind?",
+     "opts": [
+      "North-west, force 4",
+      "North-east, force 4",
+      "North-west, force 8"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Diego's watch is with…",
+     "opts": [
+      "the Chief Officer, 4 to 8",
+      "the Second Officer, 12 to 4",
+      "the Third Officer, 8 to 12"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The bridge reads back an order. That means it…",
+     "opts": [
+      "repeats the same words",
+      "says OK",
+      "writes it in the log"
+     ],
+     "a": 0,
+     "why": "From Lesson 11."
+    },
+    {
+     "type": "build",
+     "q": "Give the watch to the new officer.",
+     "a": [
+      "You",
+      "have",
+      "the",
+      "watch."
+     ],
+     "extra": [
+      "guard",
+      "take"
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "Course 007° is…",
+     "opts": [
+      "zero zero seven",
+      "seven",
+      "zero seven"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: relevo de guardia",
+     "accept": [
+      "handover",
+      "watch handover",
+      "the handover",
+      "hand over"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -22,10 +22,10 @@
       {"n": 12, "title": "Anchoring", "ready": true}
     ]},
     {"n": 4, "title": "On the bridge", "where": "Gulf of Mexico", "lessons": [
-      {"n": 13, "title": "Bridge equipment"},
-      {"n": 14, "title": "Watch handover"},
-      {"n": 15, "title": "Weather & sea"},
-      {"n": 16, "title": "Course, position & traffic"}
+      {"n": 13, "title": "Bridge equipment", "ready": true},
+      {"n": 14, "title": "Watch handover", "ready": true},
+      {"n": 15, "title": "Weather & sea", "ready": true},
+      {"n": 16, "title": "Course, position & traffic", "ready": true}
     ]},
     {"n": 5, "title": "Reporting", "where": "Florida · Port Everglades", "lessons": [
       {"n": 17, "title": "Speaking up about safety"},

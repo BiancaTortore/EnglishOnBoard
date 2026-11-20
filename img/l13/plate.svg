@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The front of the bridge: radar, ECDIS, gyro compass, autopilot, helm, engine telegraph, echo sounder and binoculars">
+  <!-- Lesson 13 plate: the bridge console seen from the helm position, with the front windows above.
+       Left to right: radar, ECDIS, gyro compass repeater with the autopilot below it, helm, engine telegraph,
+       echo sounder. Binoculars rest on the console. Colours come from app.css (.p-*). -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <!-- windows -->
+  <rect class="p-water" x="0" y="0" width="400" height="74"/>
+  <rect class="p-soft" x="0" y="0" width="400" height="34" opacity=".55"/>
+  <line class="p-line" x1="0" y1="44" x2="400" y2="44" stroke-width="1" opacity=".6"/>
+  <g class="p-hull"><rect x="0" y="0" width="400" height="5"/><rect x="0" y="72" width="400" height="6"/>
+    <rect x="96" y="0" width="5" height="74"/><rect x="198" y="0" width="5" height="74"/><rect x="300" y="0" width="5" height="74"/></g>
+  <!-- console -->
+  <path d="M0 96 H400 V240 H0 Z" class="p-blue" opacity=".9"/>
+  <rect x="0" y="92" width="400" height="8" class="p-hull"/>
+
+  <!-- RADAR -->
+  <rect x="12" y="106" width="98" height="92" rx="5" class="p-hull"/>
+  <circle cx="61" cy="152" r="40" style="fill:#0E2A1F"/>
+  <g fill="none" style="stroke:#3DDC84" opacity=".55" stroke-width="1"><circle cx="61" cy="152" r="26"/><circle cx="61" cy="152" r="13"/></g>
+  <path d="M61 152 L84 120 A40 40 0 0 0 61 112 Z" style="fill:#3DDC84" opacity=".25"/>
+  <line x1="61" y1="152" x2="61" y2="113" style="stroke:#3DDC84" stroke-width="1.4"/>
+  <g style="fill:#E9C46A"><circle cx="82" cy="134" r="2.4"/><circle cx="44" cy="128" r="2.4"/><circle cx="72" cy="176" r="2.4"/></g>
+
+  <!-- ECDIS -->
+  <rect x="120" y="106" width="98" height="92" rx="5" class="p-hull"/>
+  <rect x="126" y="112" width="86" height="72" style="fill:#BFD8E8"/>
+  <path d="M126 112 H212 V132 Q190 140 170 128 Q150 120 126 130 Z" style="fill:#E8DDB5"/>
+  <path d="M136 176 L166 158 L200 146" fill="none" style="stroke:#D9534F" stroke-width="2" stroke-dasharray="4 2"/>
+  <path d="M162 156 l8 -2 l-4 7 z" style="fill:#1E3A5F"/>
+  <rect x="126" y="186" width="86" height="8" style="fill:#2B3A4A"/>
+
+  <!-- GYRO COMPASS repeater -->
+  <circle cx="254" cy="128" r="22" class="p-white"/>
+  <circle cx="254" cy="128" r="17" fill="none" style="stroke:var(--hull)" stroke-width="1"/>
+  <g style="stroke:var(--hull)" stroke-width="1.2"><line x1="254" y1="111" x2="254" y2="116"/><line x1="254" y1="140" x2="254" y2="145"/><line x1="237" y1="128" x2="242" y2="128"/><line x1="266" y1="128" x2="271" y2="128"/></g>
+  <path d="M254 128 L262 114 L256 128 Z" style="fill:var(--antifoul)"/>
+  <!-- AUTOPILOT panel -->
+  <rect x="230" y="160" width="48" height="30" rx="3" class="p-hull"/>
+  <rect x="235" y="165" width="38" height="9" style="fill:#3DDC84" opacity=".7"/>
+  <g class="p-gold"><circle cx="241" cy="182" r="3"/><circle cx="254" cy="182" r="3"/><circle cx="267" cy="182" r="3"/></g>
+
+  <!-- HELM (small wheel) -->
+  <circle cx="254" cy="218" r="17" fill="none" style="stroke:var(--hull)" stroke-width="4"/>
+  <g style="stroke:var(--hull)" stroke-width="3"><line x1="254" y1="201" x2="254" y2="235"/><line x1="237" y1="218" x2="271" y2="218"/></g>
+  <circle cx="254" cy="218" r="4" class="p-hull"/>
+
+  <!-- ENGINE TELEGRAPH lever -->
+  <rect x="300" y="150" width="34" height="56" rx="4" class="p-hull"/>
+  <rect x="314" y="156" width="6" height="44" rx="3" style="fill:#5E6B78"/>
+  <rect x="306" y="166" width="22" height="9" rx="3" class="p-red"/>
+  <g class="p-label" style="font-size:6px"><text x="337" y="160">AH</text><text x="337" y="205">AS</text></g>
+
+  <!-- ECHO SOUNDER -->
+  <rect x="346" y="106" width="48" height="40" rx="4" class="p-hull"/>
+  <path d="M350 116 H390 V142 H350 Z" style="fill:#0E2A1F"/>
+  <path d="M350 132 Q360 130 368 134 Q378 138 390 133" fill="none" style="stroke:#E9C46A" stroke-width="1.6"/>
+  <text x="370" y="124" text-anchor="middle" style="font:700 8px var(--f-mono);fill:#3DDC84">40 m</text>
+
+  <!-- BINOCULARS on the console -->
+  <g transform="translate(374 180)">
+    <rect x="-16" y="-8" width="14" height="22" rx="5" style="fill:#2B3A4A"/><rect x="2" y="-8" width="14" height="22" rx="5" style="fill:#2B3A4A"/>
+    <rect x="-4" y="-2" width="8" height="8" style="fill:#2B3A4A"/>
+    <circle cx="-9" cy="-6" r="4" style="fill:#5E6B78"/><circle cx="9" cy="-6" r="4" style="fill:#5E6B78"/>
+  </g>
+</svg>

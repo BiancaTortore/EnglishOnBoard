@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Our ship from above with the bow and quarter sectors, a crossing ship on the starboard bow, an overtaking ship on the port quarter and a head-on ship ahead">
+  <!-- Lesson 16 plate: own ship in the centre, heading up. Green = starboard, red = port; the wedges are the
+       bow sectors (front) and quarter sectors (back); the beams are the gaps at 90°. The dashed circle is the
+       6-mile range. Target 1 crosses from the starboard bow (bearing line dashed, CPA marked); target 2 overtakes
+       on the port quarter; target 3 is head-on. Colours come from app.css (.p-*). Generated with a small script. -->
+  <rect class="p-water" x="0" y="0" width="400" height="240"/>
+  <path d="M200 132 L200.0 14.0 A118 118 0 0 1 309.0 86.8 Z" style="fill:#2E9E6B" opacity="0.18"/><path d="M200 132 L91.0 86.8 A118 118 0 0 1 200.0 14.0 Z" style="fill:#C0392B" opacity="0.14"/><path d="M200 132 L200.0 250.0 A118 118 0 0 1 91.0 177.2 Z" style="fill:#C0392B" opacity="0.14"/><path d="M200 132 L309.0 177.2 A118 118 0 0 1 200.0 250.0 Z" style="fill:#2E9E6B" opacity="0.18"/><line x1="200" y1="132" x2="309.0" y2="86.8" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="309.0" y2="177.2" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="91.0" y2="177.2" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="91.0" y2="86.8" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="200.0" y2="14.0" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="200.0" y2="250.0" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><circle cx="200" cy="132" r="90" fill="none" class="p-stroke" stroke-width="1.2" stroke-dasharray="4 3" opacity=".7"/>
+  <!-- own ship -->
+  <g transform="translate(200.0 132.0) rotate(0) scale(1.6)"><path d="M0 -12 Q6 -4 6 6 L6 12 H-6 L-6 6 Q-6 -4 0 -12 Z" style="fill:#5E6B78"/><rect x="-3.5" y="5" width="7" height="4" class="p-super"/></g>
+  <!-- bearing line to target 1 -->
+  <line x1="200" y1="132" x2="263.6" y2="68.4" style="stroke:var(--antifoul)" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <!-- target 1 crossing (heading west) with its track -->
+  <line x1="263.6" y1="68.4" x2="206" y2="68.4" style="stroke:var(--antifoul)" stroke-width="1" opacity=".6"/>
+  <g transform="translate(263.6 68.4) rotate(270) scale(1)"><path d="M0 -12 Q6 -4 6 6 L6 12 H-6 L-6 6 Q-6 -4 0 -12 Z" class="p-red"/><rect x="-3.5" y="5" width="7" height="4" class="p-super"/></g>
+  <!-- CPA marker -->
+  <g style="stroke:var(--antifoul)" stroke-width="2"><line x1="199" y1="63.4" x2="209" y2="73.4"/><line x1="209" y1="63.4" x2="199" y2="73.4"/></g>
+  <!-- target 2 overtaking on the port quarter (same direction) -->
+  <g transform="translate(170.2 174.6) rotate(0) scale(1)"><path d="M0 -12 Q6 -4 6 6 L6 12 H-6 L-6 6 Q-6 -4 0 -12 Z" class="p-blue"/><rect x="-3.5" y="5" width="7" height="4" class="p-super"/></g>
+  <path d="M170.2 158.6 v-12" style="stroke:var(--blue)" stroke-width="1.6"/>
+  <!-- target 3 head-on -->
+  <g transform="translate(200.0 34.0) rotate(180) scale(1)"><path d="M0 -12 Q6 -4 6 6 L6 12 H-6 L-6 6 Q-6 -4 0 -12 Z" class="p-orange"/><rect x="-3.5" y="5" width="7" height="4" class="p-super"/></g>
+</svg>

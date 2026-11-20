@@ -1,0 +1,1036 @@
+{
+ "n": 15,
+ "module": 4,
+ "title": "Weather & sea",
+ "place": "Day 4 · 06:30 · Gulf of Mexico, bridge wing",
+ "goal": "Report wind, sea, visibility and the barometer, and say how they are changing.",
+ "images": {
+  "hero": "img/l15/hero.jpg",
+  "scene": "img/l15/scene.jpg"
+ },
+ "radioChannel": "PHONE",
+ "audio": {
+  "l15-01": {
+   "voice": "diego",
+   "text": "Chief Officer! The wind is increasing. And there's a dark cloud ahead.",
+   "es": "¡Primer Oficial! El viento está aumentando. Y hay una nube oscura adelante."
+  },
+  "l15-02": {
+   "pause": 600,
+   "voice": "tanya",
+   "text": "Let me see… Yes, that's a squall. Rain and strong gusts. What's the barometer?",
+   "es": "A ver… Sí, es un chubasco. Lluvia y rachas fuertes. ¿Qué marca el barómetro?"
+  },
+  "l15-03": {
+   "pause": 900,
+   "voice": "diego",
+   "text": "One thousand and six. It's falling.",
+   "es": "Mil seis. Está bajando."
+  },
+  "l15-04": {
+   "voice": "tanya",
+   "text": "Falling fast. That's the front. And the wind now?",
+   "es": "Bajando rápido. Es el frente. ¿Y el viento ahora?"
+  },
+  "l15-05": {
+   "voice": "diego",
+   "text": "North-west, force six, I think.",
+   "es": "Del noroeste, fuerza seis, creo."
+  },
+  "l15-06": {
+   "voice": "tanya",
+   "text": "Good. And the sea?",
+   "es": "Bien. ¿Y el mar?"
+  },
+  "l15-07": {
+   "voice": "diego",
+   "text": "The sea is rough. And there's a long swell from the north-west.",
+   "es": "El mar está grueso. Y hay mar de fondo largo del noroeste."
+  },
+  "l15-08": {
+   "voice": "tanya",
+   "text": "Visibility?",
+   "es": "¿Visibilidad?"
+  },
+  "l15-09": {
+   "voice": "diego",
+   "text": "Good now. Five miles, maybe. But in the rain, much less.",
+   "es": "Buena ahora. Cinco millas, quizás. Pero con la lluvia, mucho menos."
+  },
+  "l15-10": {
+   "pause": 500,
+   "voice": "tanya",
+   "text": "Right. Close the door of the bridge wing and write it in the log: zero six thirty, wind north-west six, sea rough, barometer one thousand and six, falling.",
+   "es": "Bien. Cerrá la puerta del alerón y anotalo en el diario: cero seis treinta, viento noroeste seis, mar gruesa, barómetro mil seis, bajando."
+  },
+  "l15-11": {
+   "voice": "diego",
+   "text": "Zero six thirty, wind north-west six…",
+   "es": "Cero seis treinta, viento noroeste seis…"
+  },
+  "l15-12": {
+   "pause": 1500,
+   "voice": "tanya",
+   "text": "Here comes the rain. Diego, keep a good lookout and report the visibility.",
+   "es": "Ahí viene la lluvia. Diego, mantené buena vigía y reportá la visibilidad."
+  },
+  "l15-13": {
+   "pause": 1300,
+   "voice": "diego",
+   "text": "Visibility about one mile now!",
+   "es": "¡Visibilidad de una milla ahora!"
+  },
+  "l15-14": {
+   "voice": "tanya",
+   "text": "One mile. Standing orders: under three miles, call the Captain.",
+   "es": "Una milla. Órdenes permanentes: menos de tres millas, llamar al Capitán."
+  },
+  "l15-15": {
+   "pause": 800,
+   "voice": "tanya",
+   "text": "Captain, Chief Officer. We're in a squall. Visibility one mile, wind north-west seven.",
+   "es": "Capitán, Primer Oficial. Estamos en un chubasco. Visibilidad una milla, viento noroeste siete."
+  },
+  "l15-16": {
+   "pause": 700,
+   "voice": "lars",
+   "text": "Thank you, Tanya. I'm coming up.",
+   "es": "Gracias, Tanya. Ya subo.",
+   "radio": true
+  },
+  "w-wind": {
+   "voice": "model",
+   "text": "wind"
+  },
+  "x-wind": {
+   "voice": "model",
+   "text": "The wind is north-west.",
+   "es": "El viento es del noroeste."
+  },
+  "w-gust": {
+   "voice": "model",
+   "text": "gust"
+  },
+  "x-gust": {
+   "voice": "model",
+   "text": "Strong gusts in the squall.",
+   "es": "Rachas fuertes en el chubasco."
+  },
+  "w-force": {
+   "voice": "model",
+   "text": "force"
+  },
+  "x-force": {
+   "voice": "model",
+   "text": "Wind force six.",
+   "es": "Viento fuerza seis."
+  },
+  "w-swell": {
+   "voice": "model",
+   "text": "swell"
+  },
+  "x-swell": {
+   "voice": "model",
+   "text": "A long swell from the north-west.",
+   "es": "Mar de fondo largo del noroeste."
+  },
+  "w-rough": {
+   "voice": "model",
+   "text": "rough"
+  },
+  "x-rough": {
+   "voice": "model",
+   "text": "The sea is rough.",
+   "es": "El mar está grueso."
+  },
+  "w-squall": {
+   "voice": "model",
+   "text": "squall"
+  },
+  "x-squall": {
+   "voice": "model",
+   "text": "That dark cloud is a squall.",
+   "es": "Esa nube oscura es un chubasco."
+  },
+  "w-visibility": {
+   "voice": "model",
+   "text": "visibility"
+  },
+  "x-visibility": {
+   "voice": "model",
+   "text": "Visibility one mile.",
+   "es": "Visibilidad una milla."
+  },
+  "w-barometer": {
+   "voice": "model",
+   "text": "barometer"
+  },
+  "x-barometer": {
+   "voice": "model",
+   "text": "The barometer is falling.",
+   "es": "El barómetro está bajando."
+  },
+  "p-increasing": {
+   "voice": "model",
+   "text": "The wind is increasing.",
+   "es": "El viento está aumentando."
+  },
+  "p-falling": {
+   "voice": "model",
+   "text": "The barometer is falling.",
+   "es": "El barómetro está bajando."
+  },
+  "p-wind": {
+   "voice": "model",
+   "text": "Wind north-west, force six.",
+   "es": "Viento noroeste, fuerza seis."
+  },
+  "p-vis": {
+   "voice": "model",
+   "text": "Visibility about one mile.",
+   "es": "Visibilidad de una milla."
+  },
+  "m-wind": {
+   "voice": "model",
+   "text": "North-west, force six.",
+   "es": "Noroeste, fuerza seis."
+  },
+  "m-baro": {
+   "voice": "model",
+   "text": "One thousand and six. It's falling.",
+   "es": "Mil seis. Está bajando."
+  },
+  "m-vis": {
+   "voice": "model",
+   "text": "Visibility about two miles.",
+   "es": "Visibilidad de unas dos millas."
+  },
+  "m-sea": {
+   "voice": "model",
+   "text": "The sea is rough.",
+   "es": "El mar está grueso."
+  },
+  "m-baro-stress": {
+   "voice": "model",
+   "text": "baROmeter",
+   "es": "barómetro"
+  },
+  "m-rough": {
+   "voice": "model",
+   "text": "rough",
+   "es": "grueso"
+  },
+  "c-show-wind": {
+   "voice": "tanya",
+   "text": "Show me the wind."
+  },
+  "c-show-gust": {
+   "voice": "tanya",
+   "text": "Where's the gust?"
+  },
+  "c-show-force": {
+   "voice": "james",
+   "text": "Show me force six."
+  },
+  "c-show-swell": {
+   "voice": "tanya",
+   "text": "Show me the swell."
+  },
+  "c-show-squall": {
+   "voice": "tanya",
+   "text": "Show me the squall."
+  },
+  "c-show-barometer": {
+   "voice": "james",
+   "text": "Where's the barometer?"
+  },
+  "c-wind": {
+   "voice": "tanya",
+   "text": "Diego, what's the wind now?"
+  },
+  "c-baro": {
+   "voice": "tanya",
+   "text": "And the barometer?"
+  },
+  "c-vis": {
+   "voice": "lars",
+   "text": "Cadet, what's the visibility?",
+   "radio": true
+  },
+  "c-sea": {
+   "voice": "tanya",
+   "text": "How's the sea?"
+  },
+  "c-wind-other": {
+   "voice": "james",
+   "text": "Wind south-west, force five."
+  },
+  "c-baro-other": {
+   "voice": "tanya",
+   "text": "The barometer is rising. One thousand and twelve."
+  },
+  "c-from": {
+   "voice": "james",
+   "text": "The wind is from the north-east."
+  }
+ },
+ "dialogue": [
+  "l15-01",
+  "l15-02",
+  "l15-03",
+  "l15-04",
+  "l15-05",
+  "l15-06",
+  "l15-07",
+  "l15-08",
+  "l15-09",
+  "l15-10",
+  "l15-11",
+  "l15-12",
+  "l15-13",
+  "l15-14",
+  "l15-15",
+  "l15-16"
+ ],
+ "words": {
+  "wind": {
+   "en": "wind",
+   "ipa": "/wɪnd/",
+   "es": "viento",
+   "audio": "w-wind",
+   "ex": "x-wind"
+  },
+  "gust": {
+   "en": "gust",
+   "ipa": "/ɡʌst/",
+   "es": "racha",
+   "audio": "w-gust",
+   "ex": "x-gust"
+  },
+  "force": {
+   "en": "force",
+   "ipa": "/fɔːs/",
+   "es": "fuerza (Beaufort)",
+   "audio": "w-force",
+   "ex": "x-force"
+  },
+  "swell": {
+   "en": "swell",
+   "ipa": "/swel/",
+   "es": "mar de fondo",
+   "audio": "w-swell",
+   "ex": "x-swell"
+  },
+  "rough": {
+   "en": "rough",
+   "ipa": "/rʌf/",
+   "es": "grueso, agitado (el mar)",
+   "audio": "w-rough",
+   "ex": "x-rough"
+  },
+  "squall": {
+   "en": "squall",
+   "ipa": "/skwɔːl/",
+   "es": "chubasco, turbonada",
+   "audio": "w-squall",
+   "ex": "x-squall"
+  },
+  "visibility": {
+   "en": "visibility",
+   "ipa": "/ˌvɪzəˈbɪləti/",
+   "es": "visibilidad",
+   "audio": "w-visibility",
+   "ex": "x-visibility"
+  },
+  "barometer": {
+   "en": "barometer",
+   "ipa": "/bəˈrɒmɪtə/",
+   "es": "barómetro",
+   "audio": "w-barometer",
+   "ex": "x-barometer"
+  }
+ },
+ "plate": {
+  "svg": "img/l15/plate.svg",
+  "pins": [
+   {
+    "word": "force",
+    "x": 283,
+    "y": 44
+   },
+   {
+    "word": "barometer",
+    "x": 64,
+    "y": 98
+   },
+   {
+    "word": "wind",
+    "x": 184,
+    "y": 96
+   },
+   {
+    "word": "gust",
+    "x": 208,
+    "y": 64
+   },
+   {
+    "word": "squall",
+    "x": 344,
+    "y": 50
+   },
+   {
+    "word": "rough",
+    "x": 300,
+    "y": 208
+   },
+   {
+    "word": "swell",
+    "x": 200,
+    "y": 178
+   }
+  ]
+ },
+ "docs": {
+  "wx": {
+   "kind": "form",
+   "title": "WEATHER FORECAST · NAVTEX",
+   "subtitle": "GULF OF MEXICO · EAST · ISSUED 0400 UTC 17 MAR 2026",
+   "cells": [
+    [
+     "WIND",
+     "North-west 5 to 6, gusts 8"
+    ],
+    [
+     "SEA",
+     "Rough"
+    ],
+    [
+     "SWELL",
+     "North-west, 2 to 3 metres"
+    ],
+    [
+     "WEATHER",
+     "Squalls with heavy rain"
+    ],
+    [
+     "VISIBILITY",
+     "Good, poor in rain"
+    ],
+    [
+     "PRESSURE",
+     "1006 hPa, falling"
+    ],
+    [
+     "OUTLOOK",
+     "Wind decreasing to force 4 from 1800"
+    ],
+    [
+     "WARNING",
+     "Gale possible in the north"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: the front",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l15/scene.jpg",
+     "kicker": "Day 4 · 06:30 · Gulf of Mexico",
+     "title": "A front comes in",
+     "body": "The morning watch with Tanya. Diego is the lookout on the bridge wing. The sky is getting dark. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l15-01",
+      "l15-02"
+     ],
+     "q": "What does Diego see?",
+     "opts": [
+      "A squall ahead",
+      "A ship ahead",
+      "Land ahead"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l15-03",
+      "l15-04"
+     ],
+     "q": "What is the barometer doing?",
+     "opts": [
+      "Falling",
+      "Rising",
+      "Steady"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l15-05"
+     ],
+     "q": "What is the wind?",
+     "opts": [
+      "North-west, force 6",
+      "North-east, force 6",
+      "North-west, force 3"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l15-06",
+      "l15-07"
+     ],
+     "q": "How is the sea?",
+     "opts": [
+      "Rough, with a long swell",
+      "Calm",
+      "Rough, no swell"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l15-12",
+      "l15-13"
+     ],
+     "q": "In the rain, the visibility is…",
+     "opts": [
+      "about one mile",
+      "five miles",
+      "zero"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l15-14",
+      "l15-15",
+      "l15-16"
+     ],
+     "q": "Why does Tanya call the Captain?",
+     "opts": [
+      "Visibility is under three miles",
+      "The engine stopped",
+      "Diego is sick"
+     ],
+     "a": 0,
+     "why": "From Lesson 14: call him if visibility is less than three miles."
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole scene",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Wind and sea",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The front coming in: wind, sea and the barometer."
+    },
+    {
+     "type": "card",
+     "word": "wind"
+    },
+    {
+     "type": "card",
+     "word": "gust"
+    },
+    {
+     "type": "card",
+     "word": "force"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-force",
+     "a": "force"
+    },
+    {
+     "type": "card",
+     "word": "swell"
+    },
+    {
+     "type": "card",
+     "word": "rough"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-swell",
+     "a": "swell"
+    },
+    {
+     "type": "card",
+     "word": "squall"
+    },
+    {
+     "type": "card",
+     "word": "visibility"
+    },
+    {
+     "type": "card",
+     "word": "barometer"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-squall",
+     "a": "squall"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-gust",
+     "a": "gust"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"mar de fondo\" in English:",
+     "opts": [
+      "swell",
+      "deep sea",
+      "background sea"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "gust",
+       "racha"
+      ],
+      [
+       "swell",
+       "mar de fondo"
+      ],
+      [
+       "squall",
+       "chubasco"
+      ],
+      [
+       "rough",
+       "grueso"
+      ],
+      [
+       "barometer",
+       "barómetro"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "The wind is increasing",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Reporting the weather",
+     "list": [
+      [
+       "The wind is increasing.",
+       "El viento está aumentando.",
+       "p-increasing"
+      ],
+      [
+       "The barometer is falling.",
+       "El barómetro está bajando.",
+       "p-falling"
+      ],
+      [
+       "Wind north-west, force six.",
+       "Viento noroeste, fuerza seis.",
+       "p-wind"
+      ],
+      [
+       "Visibility about one mile.",
+       "Visibilidad de una milla.",
+       "p-vis"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Changes: is + -ing",
+     "steps": [
+      [
+       "Wind",
+       "increasing · decreasing"
+      ],
+      [
+       "Barometer",
+       "falling · rising · steady"
+      ],
+      [
+       "Visibility",
+       "going down · improving"
+      ]
+     ],
+     "paras": [
+      "For weather that is changing <b>now</b>, use <b>is</b> + verb-ing, like in Lesson 10: <i>The barometer <b>is falling</b>.</i>",
+      "The wind is given by where it comes <b>from</b>: <i>wind north-west</i> = from the north-west. Then the Beaufort <b>force</b>."
+     ],
+     "avoid": "The barometer falls now. · The wind is increase."
+    },
+    {
+     "type": "choice",
+     "q": "The barometer goes from 1012 to 1006. It's…",
+     "opts": [
+      "falling",
+      "rising",
+      "steady"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The wind is stronger than an hour ago. It's…",
+     "opts": [
+      "increasing",
+      "decreasing",
+      "improving"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "The barometer goes down fast.",
+     "q": "Report it.",
+     "a": [
+      "The",
+      "barometer",
+      "is",
+      "falling."
+     ],
+     "extra": [
+      "falls",
+      "rising"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-wind-other",
+     "q": "What force is the wind? Write the number.",
+     "accept": [
+      "5",
+      "five"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Wind FROM, current TO",
+     "paras": [
+      "<b>Wind north-west</b> comes <b>from</b> the north-west, like <i>viento del noroeste</i>. (A current is the opposite: it is named for where it goes.)",
+      "Compass points in English: <b>north, south, east, west</b>; <i>noroeste</i> = <b>north-west</b>, <i>sudeste</i> = <b>south-east</b>. North or south always comes first."
+     ],
+     "avoid": "west-north · the wind goes to north-west (when it comes from there)"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-from"
+     ],
+     "q": "Where does the wind come from?",
+     "opts": [
+      "North-east",
+      "South-west",
+      "North-west"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "baROmeter, rough",
+     "paras": [
+      "<b>barometer</b> = /bəˈrɒmɪtə/: the stress is on <b>RO</b>, not on <i>me</i> like in Spanish.",
+      "<b>rough</b> = /rʌf/: <i>gh</i> sounds like <b>f</b>, like <i>enough</i>."
+     ],
+     "list": [
+      [
+       "baROmeter",
+       "barómetro",
+       "m-baro-stress"
+      ],
+      [
+       "rough",
+       "grueso",
+       "m-rough"
+      ]
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-baro-other"
+     ],
+     "q": "What is the barometer doing now?",
+     "opts": [
+      "Rising",
+      "Falling",
+      "Steady"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the forecast",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "wx",
+     "q": "What are the gusts?",
+     "opts": [
+      "Force 8",
+      "Force 6",
+      "Force 5"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "wx",
+     "q": "How high is the swell?",
+     "opts": [
+      "2 to 3 metres",
+      "5 metres",
+      "Under 1 metre"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "wx",
+     "q": "Tap when the weather gets better.",
+     "a": 6
+    },
+    {
+     "type": "doc",
+     "doc": "wx",
+     "q": "When is the visibility poor?",
+     "opts": [
+      "In rain",
+      "At night",
+      "All day"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "wx",
+     "q": "Where is a gale possible?",
+     "opts": [
+      "In the north",
+      "In the south",
+      "Everywhere"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Report the weather",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Short weather reports",
+     "body": "Listen, say it, check it. Direction, then force: north-west, force SIX.",
+     "es": "Dirección, después la fuerza.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-wind"
+    },
+    {
+     "type": "shadow",
+     "model": "p-falling"
+    },
+    {
+     "type": "shadow",
+     "model": "p-increasing"
+    },
+    {
+     "type": "role",
+     "cue": "c-wind",
+     "task": "The wind is from the north-west, force 6. Tell her.",
+     "model": "m-wind",
+     "accept": [
+      "North-west, force six.",
+      "Wind north-west, force six.",
+      "The wind is north-west, force six.",
+      "North-west force six."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-baro",
+     "task": "It shows 1006 and it's going down.",
+     "model": "m-baro",
+     "accept": [
+      "One thousand and six. It's falling.",
+      "One thousand six, falling.",
+      "It's falling. One thousand and six.",
+      "One thousand and six, falling.",
+      "The barometer is falling."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-sea",
+     "task": "Big waves, white tops. Tell her.",
+     "model": "m-sea",
+     "accept": [
+      "The sea is rough.",
+      "Rough.",
+      "It's rough.",
+      "Rough sea."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-vis",
+     "task": "You can see about two miles. Tell the Captain.",
+     "model": "m-vis",
+     "accept": [
+      "Visibility about two miles.",
+      "About two miles.",
+      "Visibility two miles.",
+      "Two miles, Captain.",
+      "About two miles, Captain."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-squall",
+     "q": "Type what you hear.",
+     "accept": [
+      "squall",
+      "a squall"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-barometer",
+     "a": "barometer"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-wind",
+     "a": "wind"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l15-10"
+     ],
+     "q": "Where does Diego write the weather?",
+     "opts": [
+      "In the log",
+      "On the chart",
+      "On the notice board"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Long, smooth waves from far away are…",
+     "opts": [
+      "swell",
+      "gusts",
+      "squalls"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Diego reports the time of the weather: 0630. He says…",
+     "opts": [
+      "zero six thirty",
+      "six and a half",
+      "six thirty a.m."
+     ],
+     "a": 0,
+     "why": "From Lesson 8."
+    },
+    {
+     "type": "build",
+     "q": "Report: the wind is getting stronger.",
+     "a": [
+      "The",
+      "wind",
+      "is",
+      "increasing."
+     ],
+     "extra": [
+      "increase",
+      "more"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l15-16"
+     ],
+     "q": "What does the Captain do?",
+     "opts": [
+      "He comes up to the bridge",
+      "He calls the engine room",
+      "He goes to sleep"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: racha",
+     "accept": [
+      "gust",
+      "a gust"
+     ]
+    }
+   ]
+  }
+ ]
+}

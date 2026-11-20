@@ -60,9 +60,9 @@ Generá una sola vez la ficha de cada personaje y usala como imagen de referenci
 
 > Character reference sheet of one single person shown four times on a plain light-grey studio background: front view head and shoulders, three-quarter view head and shoulders, side profile, and a waist-up front view. Identical face, hair and clothes in all four views, soft even studio light. A 27-year-old Italian man, slim, dark brown wavy hair a little long on top, clean-shaven with light stubble, warm brown eyes, an easy, slightly cheeky smile. Wearing a navy-blue boiler suit. Photorealistic, Documentary photograph, natural light, realistic skin texture, real worn workwear, no logos, no visible text, no watermark.
 
-**Voz (Biblioteca de ElevenLabs)**
+**Voz (ElevenLabs Voice Design)**
 
-> Buscar un hombre joven italiano hablando inglés: acento italiano claro pero fácil de entender, cálido, con algo de humor. Guardarla en Mis Voces y avisar el nombre.
+> A young Italian man speaking English with a clear Italian accent. Warm, easy to understand, with a little humour.
 
 ## `marek` · Marek Novak · Chief Engineer · checo, 52
 

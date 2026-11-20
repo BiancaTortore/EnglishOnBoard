@@ -8,7 +8,7 @@ const pad = String(n).padStart(2, "0");
 const lesson = JSON.parse(fs.readFileSync(`lessons/lesson-${pad}.json`, "utf8"));
 
 const VOICE = {
-  diego: "Diego Martínez", lars: "Lars Andersen", tanya: "Tanya Williams", james: "James O'Connor",
+  diego: "Diego Martínez", lars: "Lars Andersen", tanya: "Tanya Williams", james: "James O'Connor", mateo: "Mateo Rossi",
   marek: "Marek Novak", rolando: "Rolando Reyes", mario: "Mario Dela Cruz", chen: "Lt Amy Chen",
   pilot: "Capt Laurent Dubois", agent: "Port agent", terminal: "Houston Terminal (radio operator)", model: "Model voice (neutral British)"
 };

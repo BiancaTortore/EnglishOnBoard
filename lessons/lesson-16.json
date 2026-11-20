@@ -1,0 +1,1038 @@
+{
+ "n": 16,
+ "module": 4,
+ "title": "Course, position & traffic",
+ "place": "Day 5 · 17:00 · Florida Strait, bridge",
+ "goal": "Report other ships as lookout: what, where, how far, and the bearing.",
+ "images": {
+  "hero": "img/l16/hero.jpg",
+  "scene": "img/l16/scene.jpg"
+ },
+ "audio": {
+  "l16-01": {
+   "voice": "tanya",
+   "text": "Busy afternoon, Diego. This is the Florida Strait. Report every ship you see.",
+   "es": "Tarde movida, Diego. Este es el Estrecho de Florida. Reportá cada buque que veas."
+  },
+  "l16-02": {
+   "pause": 1200,
+   "voice": "diego",
+   "text": "Ship on the starboard bow!",
+   "es": "¡Buque por la amura de estribor!"
+  },
+  "l16-03": {
+   "voice": "tanya",
+   "text": "Range?",
+   "es": "¿Distancia?"
+  },
+  "l16-04": {
+   "voice": "diego",
+   "text": "About six miles.",
+   "es": "Unas seis millas."
+  },
+  "l16-05": {
+   "voice": "tanya",
+   "text": "Good. Now take a bearing, and again in three minutes.",
+   "es": "Bien. Ahora tomá una marcación, y otra en tres minutos."
+  },
+  "l16-06": {
+   "pause": 1500,
+   "voice": "diego",
+   "text": "Bearing zero four five… Now zero four five again. The bearing is steady.",
+   "es": "Marcación cero cuatro cinco… Ahora cero cuatro cinco otra vez. La marcación se mantiene."
+  },
+  "l16-07": {
+   "voice": "tanya",
+   "text": "Steady bearing, and the range is closing. What does that mean?",
+   "es": "Marcación constante, y la distancia se achica. ¿Qué significa eso?"
+  },
+  "l16-08": {
+   "pause": 600,
+   "voice": "diego",
+   "text": "Risk of collision?",
+   "es": "¿Riesgo de abordaje?"
+  },
+  "l16-09": {
+   "voice": "tanya",
+   "text": "Exactly. She's crossing from starboard, so we give way. I'm altering course to starboard.",
+   "es": "Exacto. Nos cruza desde estribor, así que maniobramos nosotros. Caigo a estribor."
+  },
+  "l16-10": {
+   "pause": 1200,
+   "voice": "diego",
+   "text": "Another ship on the port quarter. She's overtaking us.",
+   "es": "Otro buque por la aleta de babor. Nos está alcanzando."
+  },
+  "l16-11": {
+   "voice": "tanya",
+   "text": "Overtaking. She keeps clear of us. Good report.",
+   "es": "Alcanzando. Ella se mantiene apartada. Buen reporte."
+  },
+  "l16-12": {
+   "pause": 1200,
+   "voice": "diego",
+   "text": "And one ship right ahead. Head-on!",
+   "es": "Y un buque justo adelante. ¡De vuelta encontrada!"
+  },
+  "l16-13": {
+   "pause": 400,
+   "voice": "tanya",
+   "text": "Head-on: both ships alter to starboard. Let's check the CPA on the radar… One point five miles. Watch her.",
+   "es": "De vuelta encontrada: los dos caen a estribor. Veamos el CPA en el radar… Una coma cinco millas. Vigilalo."
+  },
+  "l16-14": {
+   "voice": "diego",
+   "text": "Watching her, Chief.",
+   "es": "La vigilo, jefa."
+  },
+  "w-bearing": {
+   "voice": "model",
+   "text": "bearing"
+  },
+  "x-bearing": {
+   "voice": "model",
+   "text": "The bearing is steady.",
+   "es": "La marcación se mantiene."
+  },
+  "w-range": {
+   "voice": "model",
+   "text": "range"
+  },
+  "x-range": {
+   "voice": "model",
+   "text": "Range six miles.",
+   "es": "Distancia seis millas."
+  },
+  "w-stbdbow": {
+   "voice": "model",
+   "text": "starboard bow"
+  },
+  "x-stbdbow": {
+   "voice": "model",
+   "text": "Ship on the starboard bow.",
+   "es": "Buque por la amura de estribor."
+  },
+  "w-portqtr": {
+   "voice": "model",
+   "text": "port quarter"
+  },
+  "x-portqtr": {
+   "voice": "model",
+   "text": "A ship on the port quarter.",
+   "es": "Un buque por la aleta de babor."
+  },
+  "w-crossing": {
+   "voice": "model",
+   "text": "crossing"
+  },
+  "x-crossing": {
+   "voice": "model",
+   "text": "She's crossing from starboard.",
+   "es": "Nos cruza desde estribor."
+  },
+  "w-overtaking": {
+   "voice": "model",
+   "text": "overtaking"
+  },
+  "x-overtaking": {
+   "voice": "model",
+   "text": "She's overtaking us.",
+   "es": "Nos está alcanzando."
+  },
+  "w-headon": {
+   "voice": "model",
+   "text": "head-on"
+  },
+  "x-headon": {
+   "voice": "model",
+   "text": "A ship right ahead, head-on.",
+   "es": "Un buque justo adelante, de vuelta encontrada."
+  },
+  "w-cpa": {
+   "voice": "model",
+   "text": "CPA"
+  },
+  "x-cpa": {
+   "voice": "model",
+   "text": "The CPA is one point five miles.",
+   "es": "El CPA es una coma cinco millas."
+  },
+  "p-report": {
+   "voice": "model",
+   "text": "Ship on the starboard bow, range six miles.",
+   "es": "Buque por la amura de estribor, distancia seis millas."
+  },
+  "p-steady": {
+   "voice": "model",
+   "text": "The bearing is steady.",
+   "es": "La marcación se mantiene."
+  },
+  "p-overtaking": {
+   "voice": "model",
+   "text": "She's overtaking us.",
+   "es": "Nos está alcanzando."
+  },
+  "p-headon": {
+   "voice": "model",
+   "text": "One ship right ahead, head-on.",
+   "es": "Un buque justo adelante, de vuelta encontrada."
+  },
+  "m-portbow": {
+   "voice": "model",
+   "text": "Ship on the port bow, range four miles.",
+   "es": "Buque por la amura de babor, distancia cuatro millas."
+  },
+  "m-stbdbeam": {
+   "voice": "model",
+   "text": "Ship on the starboard beam, range three miles.",
+   "es": "Buque por el través de estribor, distancia tres millas."
+  },
+  "m-steady": {
+   "voice": "model",
+   "text": "Bearing steady. Range closing.",
+   "es": "Marcación constante. Distancia disminuyendo."
+  },
+  "m-overtaking": {
+   "voice": "model",
+   "text": "A ship on the port quarter is overtaking us.",
+   "es": "Un buque por la aleta de babor nos está alcanzando."
+  },
+  "m-quarter": {
+   "voice": "model",
+   "text": "quarter",
+   "es": "aleta"
+  },
+  "m-cpa": {
+   "voice": "model",
+   "text": "C, P, A",
+   "es": "C, P, A"
+  },
+  "c-show-bearing": {
+   "voice": "tanya",
+   "text": "Show me the bearing."
+  },
+  "c-show-stbdbow": {
+   "voice": "james",
+   "text": "Show me the starboard bow."
+  },
+  "c-show-portqtr": {
+   "voice": "tanya",
+   "text": "Show me the port quarter."
+  },
+  "c-show-crossing": {
+   "voice": "tanya",
+   "text": "Which ship is crossing?"
+  },
+  "c-show-overtaking": {
+   "voice": "james",
+   "text": "Which ship is overtaking?"
+  },
+  "c-show-headon": {
+   "voice": "tanya",
+   "text": "Which ship is head-on?"
+  },
+  "c-show-cpa": {
+   "voice": "tanya",
+   "text": "Where's the CPA?"
+  },
+  "c-see1": {
+   "voice": "tanya",
+   "text": "Diego, anything on the port side?"
+  },
+  "c-see2": {
+   "voice": "tanya",
+   "text": "And on the starboard side?"
+  },
+  "c-bearing": {
+   "voice": "tanya",
+   "text": "And the bearing? Is it changing?"
+  },
+  "c-behind": {
+   "voice": "lars",
+   "text": "Cadet, what's that ship behind us?"
+  },
+  "c-range-other": {
+   "voice": "tanya",
+   "text": "Range three point five miles."
+  },
+  "c-bearing-other": {
+   "voice": "james",
+   "text": "Bearing two seven zero."
+  },
+  "c-changing": {
+   "voice": "tanya",
+   "text": "Bearing zero four five… now zero five five. It's changing."
+  }
+ },
+ "dialogue": [
+  "l16-01",
+  "l16-02",
+  "l16-03",
+  "l16-04",
+  "l16-05",
+  "l16-06",
+  "l16-07",
+  "l16-08",
+  "l16-09",
+  "l16-10",
+  "l16-11",
+  "l16-12",
+  "l16-13",
+  "l16-14"
+ ],
+ "words": {
+  "bearing": {
+   "en": "bearing",
+   "ipa": "/ˈbeərɪŋ/",
+   "es": "marcación",
+   "audio": "w-bearing",
+   "ex": "x-bearing"
+  },
+  "range": {
+   "en": "range",
+   "ipa": "/reɪndʒ/",
+   "es": "distancia",
+   "audio": "w-range",
+   "ex": "x-range"
+  },
+  "stbdbow": {
+   "en": "starboard bow",
+   "ipa": "/ˈstɑːbəd ˈbaʊ/",
+   "es": "amura de estribor",
+   "audio": "w-stbdbow",
+   "ex": "x-stbdbow"
+  },
+  "portqtr": {
+   "en": "port quarter",
+   "ipa": "/ˌpɔːt ˈkwɔːtə/",
+   "es": "aleta de babor",
+   "audio": "w-portqtr",
+   "ex": "x-portqtr"
+  },
+  "crossing": {
+   "en": "crossing",
+   "ipa": "/ˈkrɒsɪŋ/",
+   "es": "que cruza",
+   "audio": "w-crossing",
+   "ex": "x-crossing"
+  },
+  "overtaking": {
+   "en": "overtaking",
+   "ipa": "/ˌəʊvəˈteɪkɪŋ/",
+   "es": "que alcanza",
+   "audio": "w-overtaking",
+   "ex": "x-overtaking"
+  },
+  "headon": {
+   "en": "head-on",
+   "ipa": "/ˌhed ˈɒn/",
+   "es": "de vuelta encontrada",
+   "audio": "w-headon",
+   "ex": "x-headon"
+  },
+  "cpa": {
+   "en": "CPA",
+   "ipa": "/ˌsiː piː ˈeɪ/",
+   "es": "punto de máxima aproximación",
+   "audio": "w-cpa",
+   "ex": "x-cpa"
+  }
+ },
+ "plate": {
+  "svg": "img/l16/plate.svg",
+  "pins": [
+   {
+    "word": "stbdbow",
+    "x": 242,
+    "y": 40
+   },
+   {
+    "word": "portqtr",
+    "x": 128,
+    "y": 172
+   },
+   {
+    "word": "crossing",
+    "x": 264,
+    "y": 52
+   },
+   {
+    "word": "overtaking",
+    "x": 186,
+    "y": 168
+   },
+   {
+    "word": "headon",
+    "x": 218,
+    "y": 30
+   },
+   {
+    "word": "bearing",
+    "x": 232,
+    "y": 100
+   },
+   {
+    "word": "range",
+    "x": 110,
+    "y": 132
+   },
+   {
+    "word": "cpa",
+    "x": 192,
+    "y": 58
+   }
+  ]
+ },
+ "docs": {
+  "targets": {
+   "kind": "form",
+   "title": "RADAR TARGETS",
+   "subtitle": "M/V LNG HORIZON · FLORIDA STRAIT · 18 MAR 2026 · 1715",
+   "cells": [
+    [
+     "OWN SHIP",
+     "Course 095° · speed 16 kn"
+    ],
+    [
+     "TARGET 1 · CROSSING",
+     "Starboard bow · range 6.0 NM · bearing 045° steady"
+    ],
+    [
+     "TARGET 1 · CPA",
+     "0.2 NM · risk of collision"
+    ],
+    [
+     "TARGET 2 · OVERTAKING",
+     "Port quarter · range 2.5 NM · CPA 1.0 NM"
+    ],
+    [
+     "TARGET 3 · HEAD-ON",
+     "Right ahead · range 9.0 NM · CPA 1.5 NM"
+    ],
+    [
+     "ACTION",
+     "Altered course to starboard, 10°"
+    ],
+    [
+     "CALL THE MASTER",
+     "If CPA under 2 NM"
+    ],
+    [
+     "OOW",
+     "C/O T. Williams · Lookout: Cadet D. Martínez"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: busy waters",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l16/scene.jpg",
+     "kicker": "Day 5 · 17:00 · Florida Strait",
+     "title": "Ships everywhere",
+     "body": "The afternoon watch with Tanya, in one of the busiest straits in the world. Diego is the lookout, with the binoculars. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l16-02",
+      "l16-03",
+      "l16-04"
+     ],
+     "q": "Where is the first ship, and how far?",
+     "opts": [
+      "Starboard bow, 6 miles",
+      "Port bow, 6 miles",
+      "Starboard bow, 16 miles"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l16-05",
+      "l16-06"
+     ],
+     "q": "What happens to the bearing?",
+     "opts": [
+      "It stays the same",
+      "It changes a lot",
+      "Diego can't see it"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l16-07",
+      "l16-08"
+     ],
+     "q": "Steady bearing and closing range means…",
+     "opts": [
+      "risk of collision",
+      "no danger",
+      "the ship is stopped"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l16-09"
+     ],
+     "q": "What does Tanya do?",
+     "opts": [
+      "Alters course to starboard",
+      "Alters course to port",
+      "Stops the ship"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l16-10",
+      "l16-11"
+     ],
+     "q": "The ship on the port quarter is…",
+     "opts": [
+      "overtaking us",
+      "crossing",
+      "head-on"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l16-12",
+      "l16-13"
+     ],
+     "q": "What is the CPA of the head-on ship?",
+     "opts": [
+      "1.5 miles",
+      "15 miles",
+      "0.5 miles"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole watch",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Around the ship",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "Our ship from above, and three ships around her."
+    },
+    {
+     "type": "card",
+     "word": "stbdbow"
+    },
+    {
+     "type": "card",
+     "word": "portqtr"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-portqtr",
+     "a": "portqtr"
+    },
+    {
+     "type": "card",
+     "word": "bearing"
+    },
+    {
+     "type": "card",
+     "word": "range"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-bearing",
+     "a": "bearing"
+    },
+    {
+     "type": "card",
+     "word": "crossing"
+    },
+    {
+     "type": "card",
+     "word": "overtaking"
+    },
+    {
+     "type": "card",
+     "word": "headon"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-crossing",
+     "a": "crossing"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-headon",
+     "a": "headon"
+    },
+    {
+     "type": "card",
+     "word": "cpa"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-cpa",
+     "a": "cpa"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"marcación\" in English:",
+     "opts": [
+      "bearing",
+      "course",
+      "marking"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "bearing",
+       "marcación"
+      ],
+      [
+       "range",
+       "distancia"
+      ],
+      [
+       "port quarter",
+       "aleta de babor"
+      ],
+      [
+       "overtaking",
+       "que alcanza"
+      ],
+      [
+       "head-on",
+       "de vuelta encontrada"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Report a ship",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "The lookout report",
+     "list": [
+      [
+       "Ship on the starboard bow, range six miles.",
+       "Buque por la amura de estribor, distancia seis millas.",
+       "p-report"
+      ],
+      [
+       "The bearing is steady.",
+       "La marcación se mantiene.",
+       "p-steady"
+      ],
+      [
+       "She's overtaking us.",
+       "Nos está alcanzando.",
+       "p-overtaking"
+      ],
+      [
+       "One ship right ahead, head-on.",
+       "Un buque justo adelante, de vuelta encontrada.",
+       "p-headon"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "What, where, how far",
+     "steps": [
+      [
+       "What",
+       "Ship · fishing boat · light"
+      ],
+      [
+       "Where",
+       "on the starboard bow · on the port beam · on the port quarter · right ahead · astern"
+      ],
+      [
+       "How far",
+       "range six miles"
+      ],
+      [
+       "Then",
+       "bearing steady / changing"
+      ]
+     ],
+     "paras": [
+      "Always in this order: <b>what</b>, <b>where</b>, <b>how far</b>. Short, no verb needed.",
+      "<b>bow</b> = between ahead and the beam · <b>beam</b> = at 90° · <b>quarter</b> = between the beam and astern. Plus <b>port</b> or <b>starboard</b>.",
+      "Ships are often <b>she</b>: <i>She's crossing.</i>"
+     ],
+     "avoid": "There is a ship that is coming from the right. · Ship in the starboard bow."
+    },
+    {
+     "type": "choice",
+     "q": "A ship is behind you, a little to the left. She's on the…",
+     "opts": [
+      "port quarter",
+      "port bow",
+      "starboard quarter"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "A ship is at 90° on your right. She's on the…",
+     "opts": [
+      "starboard beam",
+      "starboard bow",
+      "starboard quarter"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "A ship ahead and a little to the left, 4 miles.",
+     "q": "Report it.",
+     "a": [
+      "Ship",
+      "on",
+      "the",
+      "port",
+      "bow,",
+      "range",
+      "four",
+      "miles."
+     ],
+     "extra": [
+      "in",
+      "starboard"
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-bearing-other",
+     "q": "Write the bearing, three digits.",
+     "accept": [
+      "270",
+      "270°",
+      "two seven zero"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Bearing is not course",
+     "paras": [
+      "<b>course</b> = rumbo: where <i>our</i> ship goes. <b>bearing</b> = marcación: the direction from us to <i>another</i> ship or object.",
+      "And <b>range</b> is <i>distancia</i>, not <i>rango</i>. Use <b>on</b> the bow, not <i>in</i>."
+     ],
+     "avoid": "The course of the other ship is zero four five (when you mean bearing). · in the starboard bow"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-changing"
+     ],
+     "q": "The bearing is changing. Is there a risk of collision?",
+     "opts": [
+      "Probably not",
+      "Yes, very high",
+      "We can't know"
+     ],
+     "a": 0,
+     "why": "A steady bearing with a closing range is the danger. A changing bearing usually means she passes clear."
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Quarter, CPA",
+     "paras": [
+      "<b>quarter</b> = /ˈkwɔːtə/: <i>KWOR-ter</i>, with a <i>w</i>.",
+      "<b>CPA</b>: three letters, <i>see-pee-AY</i>, stress on the last one. Remember the letters from Lesson 5."
+     ],
+     "list": [
+      [
+       "quarter",
+       "aleta",
+       "m-quarter"
+      ],
+      [
+       "C, P, A",
+       "C, P, A",
+       "m-cpa"
+      ]
+     ]
+    },
+    {
+     "type": "type",
+     "audio": "c-range-other",
+     "q": "Write the range in miles.",
+     "accept": [
+      "3.5",
+      "3,5",
+      "three point five"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the radar targets",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "targets",
+     "q": "Which target is dangerous?",
+     "opts": [
+      "Target 1, crossing",
+      "Target 2, overtaking",
+      "Target 3, head-on"
+     ],
+     "a": 0,
+     "why": "CPA 0.2 NM, risk of collision."
+    },
+    {
+     "type": "doc",
+     "doc": "targets",
+     "q": "What did they do?",
+     "opts": [
+      "Altered course 10° to starboard",
+      "Stopped the engine",
+      "Called the other ship"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "targets",
+     "q": "Tap when to call the Master.",
+     "a": 6
+    },
+    {
+     "type": "doc",
+     "doc": "targets",
+     "q": "What is our speed?",
+     "opts": [
+      "16 knots",
+      "9 knots",
+      "6 knots"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "targets",
+     "q": "Who is the lookout?",
+     "opts": [
+      "The cadet",
+      "The Chief Officer",
+      "Nobody"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Report as lookout",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "What, where, how far",
+     "body": "Listen, say it, check it. Clear and short: SHIP, on the STARboard BOW, range SIX miles.",
+     "es": "Claro y corto.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-report"
+    },
+    {
+     "type": "shadow",
+     "model": "p-steady"
+    },
+    {
+     "type": "shadow",
+     "model": "p-headon"
+    },
+    {
+     "type": "role",
+     "cue": "c-see1",
+     "task": "A ship ahead and a little to the left, 4 miles. Report.",
+     "model": "m-portbow",
+     "accept": [
+      "Ship on the port bow, range four miles.",
+      "Ship on the port bow, four miles.",
+      "A ship on the port bow, range four miles.",
+      "Yes, ship on the port bow, range four miles."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-see2",
+     "task": "A ship at 90° on the right, 3 miles. Report.",
+     "model": "m-stbdbeam",
+     "accept": [
+      "Ship on the starboard beam, range three miles.",
+      "Ship on the starboard beam, three miles.",
+      "A ship on the starboard beam, range three miles."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-bearing",
+     "task": "The bearing doesn't change and the ship is closer. Report.",
+     "model": "m-steady",
+     "accept": [
+      "Bearing steady. Range closing.",
+      "Bearing steady, range closing.",
+      "The bearing is steady. The range is closing.",
+      "No, the bearing is steady.",
+      "Bearing steady."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-behind",
+     "task": "Behind, a little to port, and it's faster than us.",
+     "model": "m-overtaking",
+     "accept": [
+      "A ship on the port quarter is overtaking us.",
+      "She's overtaking us.",
+      "Ship on the port quarter, overtaking.",
+      "It's overtaking us, Captain.",
+      "On the port quarter, overtaking us."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-bearing",
+     "q": "Type what you hear.",
+     "accept": [
+      "bearing",
+      "a bearing",
+      "the bearing"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-overtaking",
+     "a": "overtaking"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-stbdbow",
+     "a": "stbdbow"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l16-01"
+     ],
+     "q": "Where is the ship?",
+     "opts": [
+      "Florida Strait",
+      "Gulf of Mexico",
+      "Galveston"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "A ship is right in front, coming towards us. She's…",
+     "opts": [
+      "head-on",
+      "overtaking",
+      "on the quarter"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "You see a ship in the bow sector, like twelve to two on the clock from Lesson 12. She's on the…",
+     "opts": [
+      "starboard bow",
+      "port bow",
+      "port quarter"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Report a ship faster than us, coming from behind.",
+     "a": [
+      "She's",
+      "overtaking",
+      "us."
+     ],
+     "extra": [
+      "crossing",
+      "we"
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "The bearing is steady and the range is closing. You…",
+     "opts": [
+      "report it at once",
+      "wait and see",
+      "say nothing"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: marcación",
+     "accept": [
+      "bearing",
+      "a bearing",
+      "the bearing"
+     ]
+    }
+   ]
+  }
+ ]
+}

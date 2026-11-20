@@ -28,6 +28,9 @@ CHARS = [
  ("james","James O'Connor","2nd Officer · irlandés, 33",False,
   "A 33-year-old Irish man, red hair, short red beard, relaxed smile. Wearing a navy fleece jacket.",
   "An Irish man in his early thirties with a Dublin accent. Relaxed, friendly and easy-going, a little humour in the voice."),
+ ("mateo","Mateo Rossi","3rd Officer · italiano, 27",False,
+  "A 27-year-old Italian man, slim, dark brown wavy hair a little long on top, clean-shaven with light stubble, warm brown eyes, an easy, slightly cheeky smile. Wearing a navy-blue boiler suit.",
+  "A young Italian man speaking English with a clear Italian accent. Warm, easy to understand, with a little humour."),
  ("marek","Marek Novak","Chief Engineer · checo, 52",False,
   "A 52-year-old Czech man, stocky build, shaved head, grey moustache, serious expression. Wearing a navy-blue engineer officer's boiler suit with a few oil stains.",
   "A Czech man in his early fifties speaking English with a Central European accent. Dry, low and matter-of-fact. Short sentences."),
@@ -43,7 +46,7 @@ CHARS = [
   "A 55-year-old French man, grey hair, weathered tanned face, confident expression. Wearing a red marine pilot jacket with reflective strips and a white helmet.",
   "A French man in his mid-fifties speaking English with a strong French accent. Gravelly, fast and confident."),
 ]
-MODEL_VOICE = "A clear, neutral British English voice, a woman in her thirties. Calm, warm and measured, like a good language teacher. Every word easy to hear. Studio quality, no accent quirks."
+MODEL_VOICE = "ElevenLabs \"Brian\": American, clear and calm. Recorded with Grabar audios.command."
 NAMES = {c[0]: c[1] for c in CHARS}; NAMES["model"] = "Voz modelo"
 
 def copybtn(text, label="Copiar"):
@@ -190,7 +193,7 @@ ul.plain{{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 
 <section class="part" id="voces">
   <span class="num">02</span><h2>Voces en ElevenLabs</h2>
-  <p class="sub">Para la Lesson {N} necesitás {len(USED - {'model'})}: {', '.join('<b>'+NAMES[v].split()[0]+'</b>' for v in sorted(USED - {'model'}))}. Los textos de "Voz" de cada ficha de arriba sirven para crearlas con Voice Design, o para buscar una parecida en la Voice Library. Las palabras sueltas, los ejemplos y las respuestas modelo no se graban: los dice la voz del celular.</p>
+  <p class="sub">Para la Lesson {N} necesitás {len(USED - {'model'})}: {', '.join('<b>'+NAMES[v].split()[0]+'</b>' for v in sorted(USED - {'model'}))}. Usá siempre las mismas voces de "Mis Voces" (lista en BIBLE.md). Lo más fácil: doble clic en <code>Grabar audios.command</code>, que graba todo lo que falta, personajes y voz modelo (Brian).</p>
   <div class="panel"><span class="mono">Ajustes de partida (después afinás a oído)</span>
     <div class="settings"><div><span class="mono">Stability</span><b>50</b></div><div><span class="mono">Similarity</span><b>75</b></div><div><span class="mono">Style</span><b>0–10</b></div><div><span class="mono">Speed</span><b>0.95</b></div></div>
     <p class="note">Con stability más baja suena más expresivo pero menos parejo.</p></div>
