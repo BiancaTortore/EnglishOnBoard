@@ -1,5 +1,7 @@
 {
- "n": 9, "modelAudio": true, "mediaRev": 3,
+ "n": 9,
+ "modelAudio": true,
+ "mediaRev": 4,
  "module": 2,
  "title": "Alarms & emergency instructions",
  "place": "Day 2 · 10:00 · Houston, boat deck",
@@ -13,14 +15,14 @@
   "l09-01": {
    "voice": "lars",
    "text": "Attention, all crew. This is the Captain speaking. This is a drill. This is a drill.",
-   "es": "Atención, toda la tripulación. Habla el Capitán. Esto es un simulacro. Esto es un simulacro.",
+   "es": "Atención, toda la tripulación. Habla el Capitán. Esto es un zafarrancho. Esto es un zafarrancho.",
    "pa": true
   },
   "l09-02": {
    "pause": 700,
    "voice": "lars",
    "text": "General alarm. All crew, go to your muster stations. Do not use the lift.",
-   "es": "Alarma general. Toda la tripulación, a sus estaciones de reunión. No usen el ascensor.",
+   "es": "Alarma general. Toda la tripulación, a sus puntos de reunión. No usen el ascensor.",
    "pa": true
   },
   "l09-03": {
@@ -32,7 +34,7 @@
   "l09-04": {
    "voice": "diego",
    "text": "Boat deck, port side. Muster station B!",
-   "es": "Cubierta de botes, babor. ¡Estación B!"
+   "es": "Cubierta de botes, babor. ¡Punto de reunión B!"
   },
   "l09-05": {
    "pause": 1600,
@@ -82,7 +84,7 @@
    "pause": 700,
    "voice": "tanya",
    "text": "Bridge, muster station B. Seventeen present, one missing: Kumar. Over.",
-   "es": "Puente, estación B. Diecisiete presentes, uno falta: Kumar. Cambio."
+   "es": "Puente, punto de reunión B. Diecisiete presentes, uno falta: Kumar. Cambio."
   },
   "l09-14": {
    "pause": 800,
@@ -100,7 +102,7 @@
    "pause": 1800,
    "voice": "lars",
    "text": "This is the Captain. The drill is over. Thank you, all crew.",
-   "es": "Habla el Capitán. El simulacro terminó. Gracias a toda la tripulación.",
+   "es": "Habla el Capitán. El zafarrancho terminó. Gracias a toda la tripulación.",
    "pa": true
   },
   "w-drill": {
@@ -110,7 +112,7 @@
   "x-drill": {
    "voice": "model",
    "text": "This is a drill.",
-   "es": "Esto es un simulacro."
+   "es": "Esto es un zafarrancho."
   },
   "w-general": {
    "voice": "model",
@@ -146,7 +148,7 @@
   "x-speaker": {
    "voice": "model",
    "text": "The loudspeaker is above the door.",
-   "es": "El parlante está arriba de la puerta."
+   "es": "El altavoz está arriba de la puerta."
   },
   "w-lifeboat": {
    "voice": "model",
@@ -178,7 +180,7 @@
   "p-drill": {
    "voice": "model",
    "text": "This is a drill.",
-   "es": "Esto es un simulacro."
+   "es": "Esto es un zafarrancho."
   },
   "p-present": {
    "voice": "model",
@@ -298,7 +300,7 @@
   "drill": {
    "en": "drill",
    "ipa": "/drɪl/",
-   "es": "simulacro, ejercicio",
+   "es": "zafarrancho",
    "audio": "w-drill",
    "ex": "x-drill"
   },
@@ -319,14 +321,14 @@
   "announcement": {
    "en": "announcement",
    "ipa": "/əˈnaʊnsmənt/",
-   "es": "anuncio (por altavoz)",
+   "es": "anuncio",
    "audio": "w-announcement",
    "ex": "x-announcement"
   },
   "speaker": {
    "en": "loudspeaker",
    "ipa": "/ˌlaʊdˈspiːkə/",
-   "es": "altavoz, parlante",
+   "es": "altavoz",
    "audio": "w-speaker",
    "ex": "x-speaker"
   },
@@ -595,7 +597,7 @@
     {
      "type": "choice",
      "quick": true,
-     "q": "\"simulacro\" in English:",
+     "q": "\"zafarrancho\" in English:",
      "opts": [
       "drill",
       "simulation",
@@ -609,7 +611,7 @@
      "pairs": [
       [
        "drill",
-       "simulacro"
+       "zafarrancho"
       ],
       [
        "headcount",
@@ -621,7 +623,7 @@
       ],
       [
        "loudspeaker",
-       "parlante"
+       "altavoz"
       ],
       [
        "lifeboat",
@@ -644,7 +646,7 @@
      "list": [
       [
        "This is a drill.",
-       "Esto es un simulacro.",
+       "Esto es un zafarrancho.",
        "p-drill"
       ],
       [
@@ -1040,7 +1042,7 @@
     },
     {
      "type": "type",
-     "q": "Write it in English: simulacro",
+     "q": "Write it in English: zafarrancho",
      "accept": [
       "drill",
       "a drill"

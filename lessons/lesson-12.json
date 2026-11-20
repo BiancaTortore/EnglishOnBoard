@@ -1,7 +1,7 @@
 {
  "n": 12,
  "modelAudio": true,
- "mediaRev": 2,
+ "mediaRev": 3,
  "module": 3,
  "title": "Anchoring",
  "place": "Day 3 · 02:00 · off Galveston, in fog",
@@ -142,7 +142,7 @@
   "x-windlass": {
    "voice": "model",
    "text": "Rolando is at the windlass.",
-   "es": "Rolando está en el molinete."
+   "es": "Rolando está en el cabrestante."
   },
   "w-brake": {
    "voice": "model",
@@ -320,14 +320,14 @@
   "shackle": {
    "en": "shackle",
    "ipa": "/ˈʃækl/",
-   "es": "grillete (largo de cadena)",
+   "es": "grillete",
    "audio": "w-shackle",
    "ex": "x-shackle"
   },
   "windlass": {
    "en": "windlass",
    "ipa": "/ˈwɪndləs/",
-   "es": "molinete",
+   "es": "cabrestante",
    "audio": "w-windlass",
    "ex": "x-windlass"
   },
@@ -631,7 +631,7 @@
     {
      "type": "choice",
      "quick": true,
-     "q": "\"molinete\" in English:",
+     "q": "\"cabrestante\" in English:",
      "opts": [
       "windlass",
       "winch wheel",

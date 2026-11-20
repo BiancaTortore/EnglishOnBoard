@@ -1,5 +1,7 @@
 {
- "n": 6, "modelAudio": true, "mediaRev": 5,
+ "n": 6,
+ "modelAudio": true,
+ "mediaRev": 6,
  "module": 2,
  "title": "Joining the ship",
  "place": "Day 1 · 15:30 · Houston, Captain's office",
@@ -284,14 +286,14 @@
   "crew": {
    "en": "crew agreement",
    "ipa": "/ˈkruː əˌɡriːmənt/",
-   "es": "rol, contrato de enrolamiento",
+   "es": "rol",
    "audio": "w-crew",
    "ex": "x-crew"
   },
   "signon": {
    "en": "to sign on",
    "ipa": "/ˌsaɪn ˈɒn/",
-   "es": "firmar el embarque, enrolarse",
+   "es": "firmar el embarque",
    "audio": "w-signon",
    "ex": "x-signon"
   },
@@ -326,7 +328,7 @@
   "book": {
    "en": "seaman's book",
    "ipa": "/ˈsiːmənz bʊk/",
-   "es": "libreta de embarco (libreta marítima)",
+   "es": "libreta de embarco",
    "audio": "w-book",
    "ex": "x-book"
   },

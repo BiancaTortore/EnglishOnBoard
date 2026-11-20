@@ -1,5 +1,7 @@
 {
- "n": 4, "modelAudio": true, "mediaRev": 3,
+ "n": 4,
+ "modelAudio": true,
+ "mediaRev": 4,
  "module": 1,
  "title": "Crew & ranks",
  "place": "Day 1 · 12:00 · Houston, officers' mess",
@@ -292,7 +294,7 @@
   "rating": {
    "en": "rating",
    "ipa": "/ˈreɪtɪŋ/",
-   "es": "marinero / personal subalterno",
+   "es": "subalterno (marineros, AB y otros)",
    "audio": "w-rating",
    "ex": "x-rating"
   },
@@ -306,7 +308,7 @@
   "dept": {
    "en": "department",
    "ipa": "/dɪˈpɑːtmənt/",
-   "es": "departamento (cubierta, máquinas…)",
+   "es": "departamento",
    "audio": "w-dept",
    "ex": "x-dept"
   }

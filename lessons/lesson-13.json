@@ -1,5 +1,7 @@
 {
- "n": 13, "modelAudio": true, "mediaRev": 1,
+ "n": 13,
+ "modelAudio": true,
+ "mediaRev": 2,
  "module": 4,
  "title": "Bridge equipment",
  "place": "Day 3 · 16:30 · Gulf of Mexico, bridge",
@@ -273,7 +275,7 @@
   "ecdis": {
    "en": "ECDIS",
    "ipa": "/ˈekdɪs/",
-   "es": "ECDIS, carta electrónica",
+   "es": "carta electrónica",
    "audio": "w-ecdis",
    "ex": "x-ecdis"
   },

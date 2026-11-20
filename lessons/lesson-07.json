@@ -1,5 +1,7 @@
 {
- "n": 7, "modelAudio": true, "mediaRev": 4,
+ "n": 7,
+ "modelAudio": true,
+ "mediaRev": 5,
  "module": 2,
  "title": "Cabin & safety kit",
  "place": "Day 1 · 16:30 · Houston, Diego's cabin",
@@ -44,7 +46,7 @@
    "pause": 700,
    "voice": "tanya",
    "text": "And this orange bag, under the bunk, is your immersion suit.",
-   "es": "Y este bolso naranja, debajo de la cucheta, es tu traje de inmersión."
+   "es": "Y este bolso naranja, debajo de la cama, es tu traje de inmersión."
   },
   "l07-08": {
    "voice": "diego",
@@ -54,13 +56,13 @@
   "l07-09": {
    "voice": "tanya",
    "text": "Immersion suit. For cold water. Now, behind the door, there's your muster card. Read it to me.",
-   "es": "Traje de inmersión. Para el agua fría. Ahora, detrás de la puerta está tu tarjeta de zafarrancho. Leémela."
+   "es": "Traje de inmersión. Para el agua fría. Ahora, detrás de la puerta está tu tarjeta de rol. Leémela."
   },
   "l07-10": {
    "pause": 1300,
    "voice": "diego",
    "text": "Muster station B. Boat deck, port side. Lifeboat number two.",
-   "es": "Estación de reunión B. Cubierta de botes, babor. Bote salvavidas número dos."
+   "es": "Punto de reunión B. Cubierta de botes, babor. Bote salvavidas número dos."
   },
   "l07-11": {
    "voice": "tanya",
@@ -75,7 +77,7 @@
   "l07-13": {
    "voice": "tanya",
    "text": "Perfect. Tomorrow morning we have a drill. See you at your muster station.",
-   "es": "Perfecto. Mañana a la mañana tenemos un simulacro. Nos vemos en tu estación de reunión."
+   "es": "Perfecto. Mañana a la mañana tenemos un zafarrancho. Nos vemos en tu punto de reunión."
   },
   "l07-14": {
    "voice": "diego",
@@ -89,7 +91,7 @@
   "x-bunk": {
    "voice": "model",
    "text": "Your bag is on the bunk.",
-   "es": "Tu bolso está sobre la cucheta."
+   "es": "Tu bolso está sobre la cama."
   },
   "w-wardrobe": {
    "voice": "model",
@@ -125,7 +127,7 @@
   "x-suit": {
    "voice": "model",
    "text": "The immersion suit is under the bunk.",
-   "es": "El traje de inmersión está debajo de la cucheta."
+   "es": "El traje de inmersión está debajo de la cama."
   },
   "w-card": {
    "voice": "model",
@@ -134,7 +136,7 @@
   "x-card": {
    "voice": "model",
    "text": "Your muster card is behind the door.",
-   "es": "Tu tarjeta de zafarrancho está detrás de la puerta."
+   "es": "Tu tarjeta de rol está detrás de la puerta."
   },
   "w-station": {
    "voice": "model",
@@ -167,7 +169,7 @@
   "p-under": {
    "voice": "model",
    "text": "It's under the bunk.",
-   "es": "Está debajo de la cucheta."
+   "es": "Está debajo de la cama."
   },
   "p-gotit": {
    "voice": "model",
@@ -258,7 +260,7 @@
   "bunk": {
    "en": "bunk",
    "ipa": "/bʌŋk/",
-   "es": "cucheta, litera",
+   "es": "cama",
    "audio": "w-bunk",
    "ex": "x-bunk"
   },
@@ -293,14 +295,14 @@
   "card": {
    "en": "muster card",
    "ipa": "/ˈmʌstə kɑːd/",
-   "es": "tarjeta de zafarrancho",
+   "es": "tarjeta de rol",
    "audio": "w-card",
    "ex": "x-card"
   },
   "station": {
    "en": "muster station",
    "ipa": "/ˈmʌstə ˌsteɪʃn/",
-   "es": "estación de reunión, punto de reunión",
+   "es": "punto de reunión",
    "audio": "w-station",
    "ex": "x-station"
   },
@@ -583,7 +585,7 @@
      "pairs": [
       [
        "bunk",
-       "cucheta"
+       "cama"
       ],
       [
        "wardrobe",
@@ -628,7 +630,7 @@
       ],
       [
        "It's under the bunk.",
-       "Está debajo de la cucheta.",
+       "Está debajo de la cama.",
        "p-under"
       ],
       [
@@ -725,7 +727,7 @@
      "tag": "Spanish speaker alert",
      "title": "\"En\" is not always \"in\"",
      "paras": [
-      "In Spanish, <i>en</i> works for everything: <i>en el placard, en la cucheta, en la cubierta</i>. In English you choose: <b>in</b> the wardrobe (inside), <b>on</b> the bunk (on top), <b>on</b> the boat deck (a deck is a surface).",
+      "In Spanish, <i>en</i> works for everything: <i>en el placard, en la cama, en la cubierta</i>. In English you choose: <b>in</b> the wardrobe (inside), <b>on</b> the bunk (on top), <b>on</b> the boat deck (a deck is a surface).",
       "<i>Arriba de</i> can be <b>on</b> (touching) or <b>above</b> (not touching)."
      ],
      "avoid": "in the bunk (if it's on top) · in the boat deck · on the wardrobe (if it's inside)"
@@ -767,7 +769,7 @@
       ],
       [
        "It's UNder the BUNK.",
-       "Está debajo de la cucheta.",
+       "Está debajo de la cama.",
        "p-under"
       ]
      ]

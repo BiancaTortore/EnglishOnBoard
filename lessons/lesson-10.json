@@ -1,5 +1,7 @@
 {
- "n": 10, "modelAudio": true, "mediaRev": 1,
+ "n": 10,
+ "modelAudio": true,
+ "mediaRev": 2,
  "module": 3,
  "title": "Tools, PPE & deck work",
  "place": "Day 2 · 13:00 · Houston, main deck",
@@ -27,7 +29,7 @@
   "l10-04": {
    "voice": "diego",
    "text": "Thanks. Can I help? I can finish the chipping here, with the hammer.",
-   "es": "Gracias. ¿Te ayudo? Puedo terminar de picar acá, con el martillo."
+   "es": "Gracias. ¿Te ayudo? Puedo terminar de picaretear acá, con el martillo."
   },
   "l10-05": {
    "pause": 700,
@@ -43,7 +45,7 @@
   "l10-07": {
    "voice": "rolando",
    "text": "On your helmet they don't protect your eyes. Put them on. And your ear defenders. Chipping is very loud.",
-   "es": "En el casco no te protegen los ojos. Ponételas. Y los protectores auditivos. Picar hace mucho ruido."
+   "es": "En el casco no te protegen los ojos. Ponételas. Y los protectores auditivos. Picaretear hace mucho ruido."
   },
   "l10-08": {
    "pause": 1000,
@@ -117,7 +119,7 @@
   "x-shoes": {
    "voice": "model",
    "text": "Safety shoes, always.",
-   "es": "Calzado de seguridad, siempre."
+   "es": "Zapatos de seguridad, siempre."
   },
   "w-ear": {
    "voice": "model",
@@ -126,7 +128,7 @@
   "x-ear": {
    "voice": "model",
    "text": "Chipping is loud. Wear ear defenders.",
-   "es": "Picar hace ruido. Usá protectores auditivos."
+   "es": "Picaretear hace ruido. Usá protectores auditivos."
   },
   "w-harness": {
    "voice": "model",
@@ -144,7 +146,7 @@
   "x-hammer": {
    "voice": "model",
    "text": "I'm chipping with the hammer.",
-   "es": "Estoy picando con el martillo."
+   "es": "Estoy picareteando con el martillo."
   },
   "w-spanner": {
    "voice": "model",
@@ -183,7 +185,7 @@
   "m-chipping": {
    "voice": "model",
    "text": "I'm chipping.",
-   "es": "Estoy picando."
+   "es": "Estoy picareteando."
   },
   "m-painting": {
    "voice": "model",
@@ -198,7 +200,7 @@
   "m-ing": {
    "voice": "model",
    "text": "chipping, painting, lashing",
-   "es": "picando, pintando, trincando"
+   "es": "picareteando, pintando, trincando"
   },
   "m-permit": {
    "voice": "model",
@@ -299,7 +301,7 @@
   "shoes": {
    "en": "safety shoes",
    "ipa": "/ˈseɪfti ʃuːz/",
-   "es": "calzado de seguridad, botines",
+   "es": "zapatos de seguridad",
    "audio": "w-shoes",
    "ex": "x-shoes"
   },
@@ -327,7 +329,7 @@
   "spanner": {
    "en": "spanner",
    "ipa": "/ˈspænə/",
-   "es": "llave (de boca)",
+   "es": "llave",
    "audio": "w-spanner",
    "ex": "x-spanner"
   }
@@ -782,7 +784,7 @@
      "list": [
       [
        "chipping, painting, lashing",
-       "picando, pintando, trincando",
+       "picareteando, pintando, trincando",
        "m-ing"
       ]
      ]

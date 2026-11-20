@@ -1,5 +1,7 @@
 {
- "n": 15, "modelAudio": true, "mediaRev": 1,
+ "n": 15,
+ "modelAudio": true,
+ "mediaRev": 2,
  "module": 4,
  "title": "Weather & sea",
  "place": "Day 4 · 06:30 · Gulf of Mexico, bridge wing",
@@ -45,7 +47,7 @@
   "l15-07": {
    "voice": "diego",
    "text": "The sea is rough. And there's a long swell from the north-west.",
-   "es": "El mar está grueso. Y hay mar de fondo largo del noroeste."
+   "es": "El mar está agitado. Y hay oleaje largo del noroeste."
   },
   "l15-08": {
    "voice": "tanya",
@@ -61,7 +63,7 @@
    "pause": 500,
    "voice": "tanya",
    "text": "Right. Close the door of the bridge wing and write it in the log: zero six thirty, wind north-west six, sea rough, barometer one thousand and six, falling.",
-   "es": "Bien. Cerrá la puerta del alerón y anotalo en el diario: cero seis treinta, viento noroeste seis, mar gruesa, barómetro mil seis, bajando."
+   "es": "Bien. Cerrá la puerta del alerón y anotalo en el diario: cero seis treinta, viento noroeste seis, mar agitado, barómetro mil seis, bajando."
   },
   "l15-11": {
    "voice": "diego",
@@ -132,7 +134,7 @@
   "x-swell": {
    "voice": "model",
    "text": "A long swell from the north-west.",
-   "es": "Mar de fondo largo del noroeste."
+   "es": "Oleaje largo del noroeste."
   },
   "w-rough": {
    "voice": "model",
@@ -141,7 +143,7 @@
   "x-rough": {
    "voice": "model",
    "text": "The sea is rough.",
-   "es": "El mar está grueso."
+   "es": "El mar está agitado."
   },
   "w-squall": {
    "voice": "model",
@@ -208,7 +210,7 @@
   "m-sea": {
    "voice": "model",
    "text": "The sea is rough.",
-   "es": "El mar está grueso."
+   "es": "El mar está agitado."
   },
   "m-baro-stress": {
    "voice": "model",
@@ -218,7 +220,7 @@
   "m-rough": {
    "voice": "model",
    "text": "rough",
-   "es": "grueso"
+   "es": "agitado"
   },
   "c-show-wind": {
    "voice": "tanya",
@@ -317,21 +319,21 @@
   "swell": {
    "en": "swell",
    "ipa": "/swel/",
-   "es": "mar de fondo",
+   "es": "oleaje",
    "audio": "w-swell",
    "ex": "x-swell"
   },
   "rough": {
    "en": "rough",
    "ipa": "/rʌf/",
-   "es": "grueso, agitado (el mar)",
+   "es": "agitado",
    "audio": "w-rough",
    "ex": "x-rough"
   },
   "squall": {
    "en": "squall",
    "ipa": "/skwɔːl/",
-   "es": "chubasco, turbonada",
+   "es": "chubasco",
    "audio": "w-squall",
    "ex": "x-squall"
   },
@@ -604,7 +606,7 @@
     {
      "type": "choice",
      "quick": true,
-     "q": "\"mar de fondo\" in English:",
+     "q": "\"oleaje\" in English:",
      "opts": [
       "swell",
       "deep sea",
@@ -622,7 +624,7 @@
       ],
       [
        "swell",
-       "mar de fondo"
+       "oleaje"
       ],
       [
        "squall",
@@ -630,7 +632,7 @@
       ],
       [
        "rough",
-       "grueso"
+       "agitado"
       ],
       [
        "barometer",
@@ -780,7 +782,7 @@
       ],
       [
        "rough",
-       "grueso",
+       "agitado",
        "m-rough"
       ]
      ]
