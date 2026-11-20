@@ -58,7 +58,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.
 2. Test final del curso + certificado único (al terminar las 27).
-3. Probar en iPhone/Safari.
+3. (hecho, 20 nov) Probado en iPhone/Safari; comentarios y /admin probados.
 4. **Siguiente:** Módulo 3 completo (20 nov). Módulo 4 (L13–L16) completo el 20 nov (fotos, láminas y audios). Mateo (3/O) existe en la biblia pero todavía no habla en ninguna lección; su voz ya está (ElevenLabs "Alberto Loco"); cuando hable en una foto, necesita su ficha (`PENDING_CHARACTERS` en `tools/photos-build.py`).
 - **Fotos:** `python3 tools/photos-build.py` arma una sola página con todas las fotos pendientes del curso (`tools/out/fotos.html`); se publica siempre como el mismo artifact "Fotos pendientes" (https://claude.ai/artifact/ECkDhdAJ96VVo4tnKEjDDY: actualizarlo pasando esa URL). Ya no se publican kits por lección. Módulo 5 (L17–L20) escrito el 20 nov, todo el módulo en el Día 6, fondeados frente a Port Everglades: escenas y audios listos (20 nov) completo, incluidos los audios de Chen (Sarah, 20 nov). Módulo 6 (L21–L24, Días 7–10, Atlántico) escrito el 20 nov: JSON, láminas y prompts listos; completo el 20 nov (fotos, láminas y audios). En L24 aparecen ABs sin voz propia solo por nombre (Santos, Bautista, Lim). Módulo 7 (L25–L27, Días 12–14) completo el 20 nov (fotos, láminas y audios; voces nuevas: práctico, patrón, Tarifa, médico). **Las 27 lecciones del curso están completas.**
 5. (hecho, 4 nov) Tarjeta "APP 04 · English on Board · Public beta" en la landing chartroomlab.com, con captura del inicio; se sube a mano como zip al proyecto de la landing en Cloudflare.
