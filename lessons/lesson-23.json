@@ -1,0 +1,982 @@
+{
+ "n": 23,
+ "module": 6,
+ "title": "Firefighting equipment",
+ "place": "Day 9 · 15:00 · Atlantic, accommodation corridor",
+ "goal": "Name the firefighting equipment, match each extinguisher with the fire class and say which one to use.",
+ "images": {
+  "hero": "img/l23/hero.jpg",
+  "scene": "img/l23/scene.jpg"
+ },
+ "audio": {
+  "l23-01": {
+   "voice": "rolando",
+   "text": "Cadet, tomorrow we have a fire drill. Today I show you the equipment in this corridor.",
+   "es": "Cadete, mañana tenemos zafarrancho de incendio. Hoy te muestro los equipos de este pasillo."
+  },
+  "l23-02": {
+   "voice": "diego",
+   "text": "OK, Bosun. This red one is a fire extinguisher, right?",
+   "es": "Bien, contramaestre. Este rojo es un extintor, ¿no?"
+  },
+  "l23-03": {
+   "voice": "rolando",
+   "text": "Yes, but they're all red. Look at the label. This one is water. Use water for class A fires: wood, paper, cloth.",
+   "es": "Sí, pero son todos rojos. Mirá la etiqueta. Este es de agua. Usá agua para fuegos clase A: madera, papel, tela."
+  },
+  "l23-04": {
+   "pause": 700,
+   "voice": "diego",
+   "text": "And this one with the blue label is foam, for oil fires.",
+   "es": "Y este de etiqueta azul es de espuma, para fuegos de aceite."
+  },
+  "l23-05": {
+   "voice": "rolando",
+   "text": "No, no. Careful! Blue is dry powder. Cream is foam. Use foam for class B fires: oil and fuel.",
+   "es": "No, no. ¡Cuidado! Azul es polvo químico. Crema es espuma. Usá espuma para fuegos clase B: aceite y combustible."
+  },
+  "l23-06": {
+   "voice": "diego",
+   "text": "Sorry. Blue, dry powder. Cream, foam. I'll read the label first.",
+   "es": "Perdón. Azul, polvo químico. Crema, espuma. Primero voy a leer la etiqueta."
+  },
+  "l23-07": {
+   "voice": "rolando",
+   "text": "Good. And the black one is CO2. Use CO2 for electrical fires. Never water on electricity!",
+   "es": "Bien. Y el negro es de CO2. Usá CO2 para fuegos eléctricos. ¡Nunca agua sobre electricidad!"
+  },
+  "l23-08": {
+   "pause": 1200,
+   "voice": "diego",
+   "text": "Never water on electricity. Got it.",
+   "es": "Nunca agua sobre electricidad. Entendido."
+  },
+  "l23-09": {
+   "voice": "rolando",
+   "text": "Here is the fire hydrant, and the fire hose is in this box. The hose needs two people.",
+   "es": "Acá está el hidrante, y la manguera está en esta caja. La manguera necesita dos personas."
+  },
+  "l23-10": {
+   "voice": "diego",
+   "text": "And the fire blanket? I don't see one here.",
+   "es": "¿Y la manta ignífuga? Acá no veo ninguna."
+  },
+  "l23-11": {
+   "pause": 900,
+   "voice": "rolando",
+   "text": "It's in the galley, next to Mario's stove. It's for a small pan fire.",
+   "es": "Está en la cocina, al lado del fogón de Mario. Es para un fuego chico en una sartén."
+  },
+  "l23-12": {
+   "voice": "rolando",
+   "text": "Now your job: check every extinguisher in this corridor. The needle must be in the green.",
+   "es": "Ahora tu trabajo: revisá todos los extintores de este pasillo. La aguja tiene que estar en el verde."
+  },
+  "l23-13": {
+   "voice": "diego",
+   "text": "I'll check them all and tell you. Water, foam, powder, CO2.",
+   "es": "Los reviso todos y te aviso. Agua, espuma, polvo, CO2."
+  },
+  "w-extinguisher": {
+   "voice": "model",
+   "text": "fire extinguisher"
+  },
+  "x-extinguisher": {
+   "voice": "model",
+   "text": "Take the fire extinguisher.",
+   "es": "Agarrá el extintor."
+  },
+  "w-hose": {
+   "voice": "model",
+   "text": "fire hose"
+  },
+  "x-hose": {
+   "voice": "model",
+   "text": "The fire hose needs two people.",
+   "es": "La manguera necesita dos personas."
+  },
+  "w-hydrant": {
+   "voice": "model",
+   "text": "fire hydrant"
+  },
+  "x-hydrant": {
+   "voice": "model",
+   "text": "Connect the hose to the hydrant.",
+   "es": "Conectá la manguera al hidrante."
+  },
+  "w-blanket": {
+   "voice": "model",
+   "text": "fire blanket"
+  },
+  "x-blanket": {
+   "voice": "model",
+   "text": "Use the fire blanket on the pan.",
+   "es": "Usá la manta ignífuga sobre la sartén."
+  },
+  "w-co2": {
+   "voice": "model",
+   "text": "CO2"
+  },
+  "x-co2": {
+   "voice": "model",
+   "text": "Use CO2 for electrical fires.",
+   "es": "Usá CO2 para fuegos eléctricos."
+  },
+  "w-foam": {
+   "voice": "model",
+   "text": "foam"
+  },
+  "x-foam": {
+   "voice": "model",
+   "text": "Use foam for oil fires.",
+   "es": "Usá espuma para fuegos de aceite."
+  },
+  "w-powder": {
+   "voice": "model",
+   "text": "dry powder"
+  },
+  "x-powder": {
+   "voice": "model",
+   "text": "The blue label is dry powder.",
+   "es": "La etiqueta azul es polvo químico."
+  },
+  "w-fireclass": {
+   "voice": "model",
+   "text": "fire class"
+  },
+  "x-fireclass": {
+   "voice": "model",
+   "text": "Oil is fire class B.",
+   "es": "El aceite es fuego clase B."
+  },
+  "p-use": {
+   "voice": "model",
+   "text": "Use foam for oil fires.",
+   "es": "Usá espuma para fuegos de aceite."
+  },
+  "p-never": {
+   "voice": "model",
+   "text": "Never water on electricity.",
+   "es": "Nunca agua sobre electricidad."
+  },
+  "p-which": {
+   "voice": "model",
+   "text": "Which extinguisher for this fire?",
+   "es": "¿Qué extintor para este fuego?"
+  },
+  "p-label": {
+   "voice": "model",
+   "text": "I'll read the label first.",
+   "es": "Primero voy a leer la etiqueta."
+  },
+  "m-elec": {
+   "voice": "model",
+   "text": "Use CO2.",
+   "es": "Usá CO2."
+  },
+  "m-oil": {
+   "voice": "model",
+   "text": "Use foam. It's class B.",
+   "es": "Usá espuma. Es clase B."
+  },
+  "m-paper": {
+   "voice": "model",
+   "text": "Use water. It's class A.",
+   "es": "Usá agua. Es clase A."
+  },
+  "m-which": {
+   "voice": "model",
+   "text": "Which extinguisher for this fire?",
+   "es": "¿Qué extintor para este fuego?"
+  },
+  "m-co2": {
+   "voice": "model",
+   "text": "CO2",
+   "es": "CO2"
+  },
+  "c-show-extinguisher": {
+   "voice": "rolando",
+   "text": "Show me a fire extinguisher."
+  },
+  "c-show-foam": {
+   "voice": "rolando",
+   "text": "Which one is foam?"
+  },
+  "c-show-powder": {
+   "voice": "rolando",
+   "text": "Which one is dry powder?"
+  },
+  "c-show-co2": {
+   "voice": "tanya",
+   "text": "Show me the CO2 extinguisher."
+  },
+  "c-show-hydrant": {
+   "voice": "rolando",
+   "text": "Where's the fire hydrant?"
+  },
+  "c-show-hose": {
+   "voice": "rolando",
+   "text": "Where's the fire hose?"
+  },
+  "c-show-blanket": {
+   "voice": "mario",
+   "text": "Where's the fire blanket?"
+  },
+  "c-show-fireclass": {
+   "voice": "tanya",
+   "text": "Show me the fire classes."
+  },
+  "c-elec": {
+   "voice": "tanya",
+   "text": "Smoke from the switchboard! Electrical fire. Which extinguisher?"
+  },
+  "c-oil": {
+   "voice": "rolando",
+   "text": "Fuel on the floor, and it's burning. What do you use?"
+  },
+  "c-paper": {
+   "voice": "tanya",
+   "text": "Paper and cardboard on fire in the store. What do you use?"
+  },
+  "c-ask": {
+   "voice": "rolando",
+   "text": "You see a fire and you're not sure. Ask me."
+  },
+  "c-blanket-other": {
+   "voice": "mario",
+   "text": "The fire blanket is next to the stove, on the left."
+  }
+ },
+ "dialogue": [
+  "l23-01",
+  "l23-02",
+  "l23-03",
+  "l23-04",
+  "l23-05",
+  "l23-06",
+  "l23-07",
+  "l23-08",
+  "l23-09",
+  "l23-10",
+  "l23-11",
+  "l23-12",
+  "l23-13"
+ ],
+ "words": {
+  "extinguisher": {
+   "en": "fire extinguisher",
+   "ipa": "/ˈfaɪər ɪkˌstɪŋɡwɪʃə/",
+   "es": "extintor",
+   "audio": "w-extinguisher",
+   "ex": "x-extinguisher"
+  },
+  "hose": {
+   "en": "fire hose",
+   "ipa": "/ˈfaɪə həʊz/",
+   "es": "manguera contra incendio",
+   "audio": "w-hose",
+   "ex": "x-hose"
+  },
+  "hydrant": {
+   "en": "fire hydrant",
+   "ipa": "/ˈfaɪə ˌhaɪdrənt/",
+   "es": "hidrante",
+   "audio": "w-hydrant",
+   "ex": "x-hydrant"
+  },
+  "blanket": {
+   "en": "fire blanket",
+   "ipa": "/ˈfaɪə ˌblæŋkɪt/",
+   "es": "manta ignífuga",
+   "audio": "w-blanket",
+   "ex": "x-blanket"
+  },
+  "co2": {
+   "en": "CO2",
+   "ipa": "/ˌsiː əʊ ˈtuː/",
+   "es": "CO2, dióxido de carbono",
+   "audio": "w-co2",
+   "ex": "x-co2"
+  },
+  "foam": {
+   "en": "foam",
+   "ipa": "/fəʊm/",
+   "es": "espuma",
+   "audio": "w-foam",
+   "ex": "x-foam"
+  },
+  "powder": {
+   "en": "dry powder",
+   "ipa": "/ˌdraɪ ˈpaʊdə/",
+   "es": "polvo químico",
+   "audio": "w-powder",
+   "ex": "x-powder"
+  },
+  "fireclass": {
+   "en": "fire class",
+   "ipa": "/ˈfaɪə klɑːs/",
+   "es": "clase de fuego",
+   "audio": "w-fireclass",
+   "ex": "x-fireclass"
+  }
+ },
+ "plate": {
+  "svg": "img/l23/plate.svg",
+  "pins": [
+   {
+    "word": "fireclass",
+    "x": 124,
+    "y": 16
+   },
+   {
+    "word": "extinguisher",
+    "x": 47,
+    "y": 176
+   },
+   {
+    "word": "foam",
+    "x": 97,
+    "y": 131
+   },
+   {
+    "word": "powder",
+    "x": 147,
+    "y": 131
+   },
+   {
+    "word": "co2",
+    "x": 197,
+    "y": 131
+   },
+   {
+    "word": "hydrant",
+    "x": 256,
+    "y": 136
+   },
+   {
+    "word": "hose",
+    "x": 311,
+    "y": 122
+   },
+   {
+    "word": "blanket",
+    "x": 372,
+    "y": 118
+   }
+  ]
+ },
+ "docs": {
+  "label": {
+   "kind": "form",
+   "title": "DRY POWDER FIRE EXTINGUISHER",
+   "subtitle": "6 kg · CORRIDOR, DECK B · No. B-04",
+   "cells": [
+    [
+     "SUITABLE FOR",
+     "Class A · B · C"
+    ],
+    [
+     "CLASS A",
+     "Solids: wood, paper, cloth"
+    ],
+    [
+     "CLASS B",
+     "Liquids: oil, fuel, paint"
+    ],
+    [
+     "CLASS C",
+     "Gases"
+    ],
+    [
+     "ELECTRICAL",
+     "Yes, up to 1000 V"
+    ],
+    [
+     "NOT FOR",
+     "Cooking oil in pans: use the fire blanket"
+    ],
+    [
+     "PRESSURE GAUGE",
+     "Needle must be in the green"
+    ],
+    [
+     "NEXT SERVICE",
+     "SEP 2026"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: the fire station",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l23/scene.jpg",
+     "kicker": "Day 9 · 15:00 · Atlantic",
+     "title": "Fire extinguishers",
+     "body": "Tomorrow there's a fire drill. Rolando shows Diego the equipment in the corridor, and Diego gets one wrong. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l23-01"
+     ],
+     "q": "Why is Rolando showing the equipment today?",
+     "opts": [
+      "There's a fire drill tomorrow",
+      "There was a fire yesterday",
+      "The inspector is coming"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l23-03"
+     ],
+     "q": "What does Rolando say about the colour?",
+     "opts": [
+      "They're all red: look at the label",
+      "Red is always water",
+      "Colour doesn't matter"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l23-04",
+      "l23-05"
+     ],
+     "q": "What is Diego's mistake?",
+     "opts": [
+      "He thinks blue is foam",
+      "He thinks black is water",
+      "He can't find the hydrant"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l23-07"
+     ],
+     "q": "Which one for electrical fires?",
+     "opts": [
+      "CO2",
+      "Water",
+      "Foam"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l23-10",
+      "l23-11"
+     ],
+     "q": "Where is the fire blanket?",
+     "opts": [
+      "In the galley, next to the stove",
+      "In the hose box",
+      "On the bridge"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l23-12"
+     ],
+     "q": "What must Diego check?",
+     "opts": [
+      "That every needle is in the green",
+      "The hose length",
+      "The labels' language"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole conversation",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Firefighting equipment",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The fire station in the corridor."
+    },
+    {
+     "type": "card",
+     "word": "extinguisher"
+    },
+    {
+     "type": "card",
+     "word": "fireclass"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-fireclass",
+     "a": "fireclass"
+    },
+    {
+     "type": "card",
+     "word": "foam"
+    },
+    {
+     "type": "card",
+     "word": "powder"
+    },
+    {
+     "type": "card",
+     "word": "co2"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-powder",
+     "a": "powder"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-foam",
+     "a": "foam"
+    },
+    {
+     "type": "card",
+     "word": "hydrant"
+    },
+    {
+     "type": "card",
+     "word": "hose"
+    },
+    {
+     "type": "card",
+     "word": "blanket"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-hydrant",
+     "a": "hydrant"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-blanket",
+     "a": "blanket"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"polvo químico\" in English:",
+     "opts": [
+      "dry powder",
+      "chemical dust",
+      "dry foam"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "fire extinguisher",
+       "extintor"
+      ],
+      [
+       "fire hose",
+       "manguera"
+      ],
+      [
+       "fire hydrant",
+       "hidrante"
+      ],
+      [
+       "fire blanket",
+       "manta ignífuga"
+      ],
+      [
+       "foam",
+       "espuma"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "Use … for …",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Choosing the extinguisher",
+     "list": [
+      [
+       "Use foam for oil fires.",
+       "Usá espuma para fuegos de aceite.",
+       "p-use"
+      ],
+      [
+       "Never water on electricity.",
+       "Nunca agua sobre electricidad.",
+       "p-never"
+      ],
+      [
+       "Which extinguisher for this fire?",
+       "¿Qué extintor para este fuego?",
+       "p-which"
+      ],
+      [
+       "I'll read the label first.",
+       "Primero voy a leer la etiqueta.",
+       "p-label"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "use + equipment + for + fire",
+     "steps": [
+      [
+       "the pattern",
+       "<b>Use</b> water <b>for</b> class A fires."
+      ],
+      [
+       "the class",
+       "Oil <b>is</b> class B. It's a class B fire."
+      ],
+      [
+       "the warning",
+       "<b>Never</b> water on electricity!"
+      ]
+     ],
+     "paras": [
+      "On board you'll hear the fire classes as labels: <b>class A</b> (solids), <b>class B</b> (liquids), <b>class C</b> (gases). You don't need more theory: just match the class with the extinguisher.",
+      "<b>Use … for …</b> is how instructions and labels say it. Short and clear."
+     ],
+     "avoid": "Use foam to oil fires · Use foam for to oil"
+    },
+    {
+     "type": "choice",
+     "q": "Paper is burning. Use…",
+     "opts": [
+      "water: class A",
+      "CO2: class C",
+      "nothing"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Fuel on the floor is burning. It's…",
+     "opts": [
+      "class B",
+      "class A",
+      "class C"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Use CO2 for electrical fires.",
+     "a": [
+      "Use",
+      "CO2",
+      "for",
+      "electrical",
+      "fires."
+     ],
+     "extra": [
+      "to",
+      "with"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Colour isn't the name",
+     "paras": [
+      "In Spanish we often call them by the colour. On board, the body is red for all of them: the <b>label</b> or the <b>band</b> tells you what's inside. Say the agent: <b>water, foam, dry powder, CO2</b>.",
+      "<b>CO2</b> is said letter by letter: <b>C-O-two</b>."
+     ],
+     "avoid": "Give me the blue one · the CO-dos"
+    },
+    {
+     "type": "type",
+     "audio": "c-blanket-other",
+     "q": "Where is the fire blanket? Next to the…",
+     "accept": [
+      "stove",
+      "the stove"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-oil"
+     ],
+     "q": "What's burning?",
+     "opts": [
+      "Fuel on the floor",
+      "Paper",
+      "A switchboard"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "extinguisher",
+     "paras": [
+      "<b>ex-TIN-gwi-sher</b>: the stress is on <b>TIN</b>. The <i>gu</i> sounds <b>gw</b>, like in <i>agua</i>.",
+      "<b>CO2</b>: <b>see-oh-TOO</b>, stress on the last part."
+     ],
+     "list": [
+      [
+       "CO2",
+       "CO2",
+       "m-co2"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the label",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "label",
+     "q": "Which fire classes is it for?",
+     "opts": [
+      "A, B and C",
+      "Only B",
+      "Only electrical"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "label",
+     "q": "What is class B?",
+     "opts": [
+      "Liquids: oil, fuel, paint",
+      "Solids",
+      "Gases"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "label",
+     "q": "Tap what it is NOT for.",
+     "a": 5
+    },
+    {
+     "type": "doc",
+     "doc": "label",
+     "q": "For cooking oil in a pan, use…",
+     "opts": [
+      "the fire blanket",
+      "this extinguisher",
+      "water"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "label",
+     "q": "Where must the needle be?",
+     "opts": [
+      "In the green",
+      "In the red",
+      "At zero"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Choose and say it",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Which extinguisher?",
+     "body": "Listen, say it, check it. Name the agent, not the colour.",
+     "es": "Decí el agente, no el color.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-use"
+    },
+    {
+     "type": "shadow",
+     "model": "p-never"
+    },
+    {
+     "type": "shadow",
+     "model": "p-which"
+    },
+    {
+     "type": "role",
+     "cue": "c-elec",
+     "task": "Electrical fire: say which one.",
+     "model": "m-elec",
+     "accept": [
+      "Use CO2.",
+      "CO2.",
+      "Use the CO2.",
+      "Use CO2!",
+      "Use the CO2 extinguisher."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-oil",
+     "task": "Fuel: foam, and say the class.",
+     "model": "m-oil",
+     "accept": [
+      "Use foam. It's class B.",
+      "Use foam, it's class B.",
+      "Foam. It's class B.",
+      "Use foam. Class B."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-paper",
+     "task": "Paper: water, and say the class.",
+     "model": "m-paper",
+     "accept": [
+      "Use water. It's class A.",
+      "Use water, it's class A.",
+      "Water. It's class A.",
+      "Use water. Class A."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-ask",
+     "task": "Ask which extinguisher for this fire.",
+     "model": "m-which",
+     "accept": [
+      "Which extinguisher for this fire?",
+      "Which extinguisher should I use?",
+      "Which extinguisher for this fire, Bosun?"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-foam",
+     "q": "Type what you hear.",
+     "accept": [
+      "foam"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-co2",
+     "a": "co2"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-hose",
+     "a": "hose"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-extinguisher",
+     "a": "extinguisher"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l23-09"
+     ],
+     "q": "How many people does the fire hose need?",
+     "opts": [
+      "Two",
+      "One",
+      "Four"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Smoke from the radar's fuse box. You use…",
+     "opts": [
+      "CO2",
+      "water",
+      "the fire hose"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Complete: \"Use foam ___ oil fires.\"",
+     "opts": [
+      "for",
+      "to",
+      "in"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Never water on electricity.",
+     "a": [
+      "Never",
+      "water",
+      "on",
+      "electricity."
+     ],
+     "extra": [
+      "use",
+      "no"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: manta ignífuga",
+     "accept": [
+      "fire blanket",
+      "a fire blanket",
+      "the fire blanket"
+     ]
+    }
+   ]
+  }
+ ]
+}

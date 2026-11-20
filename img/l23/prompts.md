@@ -1,14 +1,16 @@
 # Lesson 23 · Firefighting equipment · imágenes
 
-Día 9 · Atlántico, a bordo. La lección todavía no está escrita: por ahora solo hace falta la portada, para que aparezca junto al "Coming soon".
-Cuando se escriba la lección se agrega acá la escena (`scene.jpg`) y, si hace falta, se ajusta la portada para que coincida.
+Día 9 · 15:00 · Atlántico, pasillo del casillaje. La lámina (`plate.svg`) ya está dibujada y la portada (`hero.jpg`) ya está hecha. Falta la escena del diálogo.
+Referencias: **Rolando**, **Diego** y la portada `hero.jpg`.
 
-Referencias: **Rolando**, **Diego**.
+**Regla:** personas y ambiente, nada técnico en foco ni texto legible.
 
-**Regla:** en las fotos no aparece nada técnico. Eso va en las láminas dibujadas. Las fotos son personas y ambiente.
+## `scene.jpg` · el diálogo (sesión Listen)
+- **Formato:** 4:3 horizontal, mínimo 1440 × 1080. Adjuntá `hero.jpg` como referencia.
 
+> Using the attached image as reference for the corridor, the light and the two people: a horizontal medium shot in the same bright ship's corridor. A 46-year-old Filipino bosun [reference: rolando] in an orange boiler suit taps with one finger on the coloured band of a plain red fire extinguisher hanging on the wall, laughing kindly. A 22-year-old young man [reference: diego] in a navy-blue boiler suit puts a hand on his forehead, embarrassed but smiling. Several plain red extinguishers on the wall, labels blurred and not readable. Documentary photograph, 35mm lens, natural light, realistic skin texture, real worn workwear, no visible text, no logos, no watermark.
 
-## `hero.jpg` · portada de la lección
+## `hero.jpg` · portada de la lección (ya hecha)
 - **Dónde se ve:** en la lista de lecciones (miniatura) y arriba de todo en la pantalla de la lección, con el título encima.
 - **Formato:** 4:5 vertical, mínimo 1080 × 1350.
 

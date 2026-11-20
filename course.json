@@ -34,10 +34,10 @@
       {"n": 20, "title": "Bunkering & pollution", "ready": true}
     ]},
     {"n": 6, "title": "Emergencies", "where": "Atlantic Ocean", "lessons": [
-      {"n": 21, "title": "Life-saving appliances"},
-      {"n": 22, "title": "Muster & man overboard"},
-      {"n": 23, "title": "Firefighting equipment"},
-      {"n": 24, "title": "Fire party communication"}
+      {"n": 21, "title": "Life-saving appliances", "ready": true},
+      {"n": 22, "title": "Muster & man overboard", "ready": true},
+      {"n": 23, "title": "Firefighting equipment", "ready": true},
+      {"n": 24, "title": "Fire party communication", "ready": true}
     ]},
     {"n": 7, "title": "Radio & outside parties", "where": "Gibraltar · Marseille", "lessons": [
       {"n": 25, "title": "Distress, urgency & safety"},

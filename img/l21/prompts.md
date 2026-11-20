@@ -1,14 +1,16 @@
 # Lesson 21 · Life-saving appliances · imágenes
 
-Día 7 · Atlántico. La lección todavía no está escrita: por ahora solo hace falta la portada, para que aparezca junto al "Coming soon".
-Cuando se escriba la lección se agrega acá la escena (`scene.jpg`) y, si hace falta, se ajusta la portada para que coincida.
+Día 7 · 09:00 · Atlántico, cubierta de botes. La lámina (`plate.svg`) ya está dibujada y la portada (`hero.jpg`) ya está hecha. Falta la escena del diálogo.
+Referencias: **Tanya**, **Diego** y la portada `hero.jpg`.
 
-Referencias: **Tanya**, **Diego**.
+**Regla:** personas y ambiente, nada técnico en foco ni texto legible.
 
-**Regla:** en las fotos no aparece nada técnico. Eso va en las láminas dibujadas. Las fotos son personas y ambiente.
+## `scene.jpg` · el diálogo (sesión Listen)
+- **Formato:** 4:3 horizontal, mínimo 1440 × 1080. Adjuntá `hero.jpg` como referencia.
 
+> Using the attached image as reference for the two people, their clothes and the bright Atlantic light: a horizontal medium shot on the open boat deck of the same ship, morning. A 41-year-old British woman, Chief Officer [reference: tanya], in a navy-blue boiler suit and white helmet holds a blank clipboard and looks at the cadet with raised eyebrows. A 22-year-old young man [reference: diego] in a navy-blue boiler suit and white helmet holds up a small red cylinder in one hand and looks at it closely, frowning. Behind them, out of focus, white rounded shapes along the rail and the deep-blue ocean. Nothing technical in focus. Documentary photograph, 35mm lens, natural light, realistic skin texture, real worn workwear, no visible text, no logos, no watermark.
 
-## `hero.jpg` · portada de la lección
+## `hero.jpg` · portada de la lección (ya hecha)
 - **Dónde se ve:** en la lista de lecciones (miniatura) y arriba de todo en la pantalla de la lección, con el título encima.
 - **Formato:** 4:5 vertical, mínimo 1080 × 1350.
 

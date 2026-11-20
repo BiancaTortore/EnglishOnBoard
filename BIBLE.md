@@ -85,10 +85,10 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 19 | Cargo & documents | Día 6 · 10:00 · cargo control room | Reporte diario de carga con Tanya; Diego encuentra una discrepancia en el tanque 3 (error de tipeo) |
 | 20 | Bunkering & pollution | Día 6 · 14:00 · fondeadero de Port Everglades | Bunker desde una barcaza; la inspectora Chen le pregunta a Diego qué hacer ante un derrame |
 | **Módulo 6 · Emergencies** ||||
-| 21 | Life-saving appliances | Día 7 · Atlántico | Inspección semanal con Tanya |
-| 22 | Muster & man overboard | Día 8 · Atlántico | Simulacro de hombre al agua; Diego recibe un rol nuevo |
-| 23 | Firefighting equipment | Día 9 · Atlántico | Preparación del simulacro de incendio |
-| 24 | Fire party communication | Día 10 · Atlántico | Incendio real en la cocina de Mario; Diego asiste a James con el tablero de BA |
+| 21 | Life-saving appliances | Día 7 · 09:00 · cubierta de botes | Inspección semanal de LSA con Tanya; Diego encuentra una bengala vencida |
+| 22 | Muster & man overboard | Día 8 · 10:00 · estribor | Simulacro de hombre al agua; Tanya le da a Diego el rol de vigía; Rolando tira el aro |
+| 23 | Firefighting equipment | Día 9 · 15:00 · pasillo | Rolando muestra los extintores; Diego confunde espuma y polvo |
+| 24 | Fire party communication | Día 10 · 11:30 · cocina | Incendio real en la cocina de Mario; James dirige la brigada, Diego lleva el tablero de BA (equipo uno: Rolando y el AB Santos) |
 | **Módulo 7 · Radio & outside parties** ||||
 | 25 | Distress, urgency & safety | Día 12 · cerca de Gibraltar | Escuchan el MAYDAY del pesquero francés *Cap Béar* |
 | 26 | Medical & TMAS | Día 13 · Mediterráneo | Un marinero se lastima la mano; llaman a TMAS |
@@ -121,10 +121,10 @@ accommodation = casillaje · rating = subalterno (marineros, AB y otros) · depa
 | 18 | has stopped / isn't working | Terminaciones -ed |
 | 19 | Voz pasiva simple; cantidades | — |
 | 20 | must / mustn't / have to; respuestas directas | — |
-| 21 | Colocaciones: launch, inflate, activate | — |
+| 21 | Colocaciones: launch, inflate, activate, fire, throw; fecha de vencimiento | — |
 | 22 | Alertar y asignar roles: You will be… | Gritos cortos: "Man overboard, starboard side!" |
-| 23 | Nombres de equipos y clases de fuego (solo etiquetas) | — |
-| 24 | Phrasal verbs: put out, break out, back up | Reportes al tablero de BA |
+| 23 | Use … for …; clases de fuego A, B, C (solo etiquetas) | *extinguisher*, CO2 letra por letra |
+| 24 | Phrasal verbs: put out, break out, back up | Reportes al tablero de BA; *bar* sin s |
 | 25 | Estructura MAYDAY / PAN-PAN / SÉCURITÉ | Mensajes con estática |
 | 26 | Describir síntomas y signos vitales | — |
 | 27 | Órdenes de timón y read-back | Velocidad real de un práctico |

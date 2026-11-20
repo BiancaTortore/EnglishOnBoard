@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Fire in the galley: the BA control board with names, entry time and pressure, a breathing apparatus set, and the galley door with boundary cooling on the wall">
+  <!-- Lesson 24 plate: left, the BA control board held by the cadet: columns NAME, ENTRY, BAR, plus the tallies of
+       team one. Middle: a breathing apparatus set (yellow cylinder, harness, full face mask). Right: the galley door,
+       closed, with smoke coming from the top, and a hose spraying water on the wall next to it (boundary cooling).
+       Colours come from app.css (.p-*). -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <path class="p-quay" d="M0 212 H400 V240 H0 Z"/>
+  <!-- BA board -->
+  <rect x="12" y="20" width="160" height="150" rx="5" style="fill:#F4F6F7;stroke:#13212D" stroke-width="1"/>
+  <rect x="12" y="20" width="160" height="22" rx="5" class="p-red"/>
+  <text x="92" y="36" text-anchor="middle" style="font:700 11px var(--f-mono);fill:#fff">BA CONTROL</text>
+  <g style="font:600 8.5px var(--f-mono);fill:#13212D" opacity=".6"><text x="20" y="58">NAME</text><text x="88" y="58">ENTRY</text><text x="136" y="58">BAR</text></g>
+  <line style="stroke:#13212D" x1="18" y1="63" x2="166" y2="63" stroke-width="1"/>
+  <line style="stroke:#13212D" x1="82" y1="48" x2="82" y2="162" stroke-width=".8" opacity=".5"/><line style="stroke:#13212D" x1="130" y1="48" x2="130" y2="162" stroke-width=".8" opacity=".5"/>
+  <g style="font:600 10px var(--f-mono);fill:#13212D">
+    <text x="20" y="80">ROLANDO</text><text x="88" y="80">1135</text><text x="136" y="80">200</text>
+    <text x="20" y="98">SANTOS</text><text x="88" y="98">1135</text><text x="136" y="98">200</text>
+  </g>
+  <g style="stroke:#13212D" stroke-width=".8" opacity=".35"><line x1="18" y1="106" x2="166" y2="106"/><line x1="18" y1="124" x2="166" y2="124"/><line x1="18" y1="142" x2="166" y2="142"/></g>
+  <!-- marker -->
+  <rect x="140" y="176" width="34" height="7" rx="3" class="p-blue" transform="rotate(-20 157 180)"/>
+
+  <!-- breathing apparatus set -->
+  <rect x="200" y="70" width="30" height="110" rx="13" class="p-gold" style="stroke:var(--ink)" stroke-width="1"/>
+  <rect x="208" y="58" width="14" height="14" rx="2" class="p-ink"/>
+  <path d="M196 76 V190 M234 76 V190" class="p-stroke" stroke-width="5" stroke-linecap="round"/>
+  <path d="M215 58 Q216 30 246 34" fill="none" class="p-stroke" stroke-width="2.4"/>
+  <ellipse cx="256" cy="44" rx="15" ry="19" class="p-ink"/>
+  <ellipse cx="256" cy="40" rx="10" ry="11" class="p-water"/>
+  <circle cx="256" cy="58" r="5" class="p-white"/>
+  <!-- small gauge on the hose -->
+  <circle cx="236" cy="104" r="6" class="p-white"/><line x1="236" y1="104" x2="239" y2="100" class="p-line" stroke-width="1.2"/>
+
+  <!-- galley bulkhead and door -->
+  <rect x="282" y="10" width="118" height="202" class="p-super"/>
+  <rect x="312" y="62" width="58" height="150" rx="3" class="p-white"/>
+  <circle cx="362" cy="140" r="3" class="p-ink"/>
+  <!-- smoke from the top of the door -->
+  <path d="M316 58 Q330 40 320 24 Q340 30 346 14 Q356 30 372 22 Q366 42 376 56" style="fill:#5B6670" opacity=".55"/>
+  <!-- boundary cooling: water spray on the wall -->
+  <path d="M260 196 Q276 170 290 150" fill="none" class="p-stroke" stroke-width="5" stroke-linecap="round"/>
+  <g style="stroke:#8CC4DE" stroke-width="2" stroke-linecap="round" opacity=".95">
+    <line x1="292" y1="146" x2="300" y2="110"/><line x1="292" y1="146" x2="304" y2="122"/><line x1="292" y1="146" x2="306" y2="136"/><line x1="292" y1="146" x2="300" y2="96"/>
+  </g>
+  <g style="fill:#8CC4DE" opacity=".9"><circle cx="300" cy="104" r="2.5"/><circle cx="304" cy="118" r="2.5"/><circle cx="306" cy="132" r="2.5"/><circle cx="300" cy="92" r="2.5"/></g>
+  <path d="M296 100 V200 M302 110 V204" style="stroke:#8CC4DE" stroke-width="2" opacity=".5"/>
+</svg>

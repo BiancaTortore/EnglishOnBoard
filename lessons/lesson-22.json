@@ -1,0 +1,972 @@
+{
+ "n": 22,
+ "module": 6,
+ "title": "Muster & man overboard",
+ "place": "Day 8 · 10:00 · Atlantic, starboard side",
+ "goal": "Raise the man overboard alarm, take a role and keep reporting where the person is.",
+ "images": {
+  "hero": "img/l22/hero.jpg",
+  "scene": "img/l22/scene.jpg"
+ },
+ "radioChannel": "UHF",
+ "audio": {
+  "l22-01": {
+   "voice": "lars",
+   "text": "Attention, all crew. This is a drill. Man overboard, starboard side. Man overboard, starboard side.",
+   "es": "Atención, toda la tripulación. Esto es un zafarrancho. Hombre al agua por estribor. Hombre al agua por estribor.",
+   "pa": true
+  },
+  "l22-02": {
+   "pause": 900,
+   "voice": "rolando",
+   "text": "Man overboard, starboard side! I see it!",
+   "es": "¡Hombre al agua por estribor! ¡Lo veo!"
+  },
+  "l22-03": {
+   "pause": 700,
+   "voice": "tanya",
+   "text": "Diego, you will be the lookout. Keep pointing at him and don't look away.",
+   "es": "Diego, vos vas a ser el vigía. Seguí señalándolo y no le saques la vista de encima."
+  },
+  "l22-04": {
+   "voice": "diego",
+   "text": "I'll keep pointing. He's there, about two hundred metres, starboard quarter!",
+   "es": "Lo sigo señalando. ¡Está ahí, a unos doscientos metros, por la aleta de estribor!"
+  },
+  "l22-05": {
+   "voice": "tanya",
+   "text": "Rolando, you will throw the lifebuoy with the smoke float.",
+   "es": "Rolando, vos vas a tirar el aro salvavidas con la señal fumígena."
+  },
+  "l22-06": {
+   "pause": 1200,
+   "voice": "rolando",
+   "text": "Lifebuoy and smoke float, gone!",
+   "es": "¡Aro y señal fumígena, tirados!"
+  },
+  "l22-07": {
+   "voice": "tanya",
+   "text": "Bridge, starboard side. Lookout on the casualty, lifebuoy in the water. Over.",
+   "es": "Puente, banda de estribor. Vigía sobre el náufrago, aro en el agua. Cambio."
+  },
+  "l22-08": {
+   "pause": 600,
+   "voice": "lars",
+   "text": "Received. MOB button pressed. I'm turning to starboard. Rescue boat crew, stand by. Over.",
+   "es": "Recibido. Botón de hombre al agua apretado. Caigo a estribor. Tripulación del bote de rescate, listos. Cambio.",
+   "radio": true
+  },
+  "l22-09": {
+   "pause": 1500,
+   "voice": "diego",
+   "text": "I can still see him. Now he's on the starboard beam!",
+   "es": "¡Lo sigo viendo! ¡Ahora está por el través de estribor!"
+  },
+  "l22-10": {
+   "voice": "tanya",
+   "text": "Good, Diego. Keep him in sight. If you lose him, say so at once.",
+   "es": "Bien, Diego. Mantenelo a la vista. Si lo perdés, decilo enseguida."
+  },
+  "l22-11": {
+   "pause": 1000,
+   "voice": "james",
+   "text": "Rescue boat ready. Launching now.",
+   "es": "Bote de rescate listo. Arriando ahora.",
+   "radio": true
+  },
+  "l22-12": {
+   "pause": 1800,
+   "voice": "lars",
+   "text": "This is the Captain. Recovery complete. The dummy is on board. The drill is over.",
+   "es": "Habla el Capitán. Recuperación completa. El maniquí está a bordo. El zafarrancho terminó.",
+   "pa": true
+  },
+  "l22-13": {
+   "pause": 800,
+   "voice": "tanya",
+   "text": "Well done, everybody. In real life, the next problem is hypothermia. That's why we're fast.",
+   "es": "Bien hecho, todos. En la vida real, el próximo problema es la hipotermia. Por eso somos rápidos."
+  },
+  "w-mob": {
+   "voice": "model",
+   "text": "man overboard"
+  },
+  "x-mob": {
+   "voice": "model",
+   "text": "Man overboard, starboard side!",
+   "es": "¡Hombre al agua por estribor!"
+  },
+  "w-mobbutton": {
+   "voice": "model",
+   "text": "MOB button"
+  },
+  "x-mobbutton": {
+   "voice": "model",
+   "text": "Press the MOB button.",
+   "es": "Apretá el botón de hombre al agua."
+  },
+  "w-smoke": {
+   "voice": "model",
+   "text": "smoke float"
+  },
+  "x-smoke": {
+   "voice": "model",
+   "text": "Throw the smoke float.",
+   "es": "Tirá la señal fumígena."
+  },
+  "w-sight": {
+   "voice": "model",
+   "text": "keep in sight"
+  },
+  "x-sight": {
+   "voice": "model",
+   "text": "Keep him in sight.",
+   "es": "Mantenelo a la vista."
+  },
+  "w-rescueboat": {
+   "voice": "model",
+   "text": "rescue boat"
+  },
+  "x-rescueboat": {
+   "voice": "model",
+   "text": "The rescue boat is ready.",
+   "es": "El bote de rescate está listo."
+  },
+  "w-recovery": {
+   "voice": "model",
+   "text": "recovery"
+  },
+  "x-recovery": {
+   "voice": "model",
+   "text": "Recovery complete.",
+   "es": "Recuperación completa."
+  },
+  "w-role": {
+   "voice": "model",
+   "text": "role"
+  },
+  "x-role": {
+   "voice": "model",
+   "text": "Everybody has a role.",
+   "es": "Todos tienen un rol."
+  },
+  "w-hypothermia": {
+   "voice": "model",
+   "text": "hypothermia"
+  },
+  "x-hypothermia": {
+   "voice": "model",
+   "text": "Cold water causes hypothermia.",
+   "es": "El agua fría causa hipotermia."
+  },
+  "p-mob": {
+   "voice": "model",
+   "text": "Man overboard, starboard side!",
+   "es": "¡Hombre al agua por estribor!"
+  },
+  "p-willbe": {
+   "voice": "model",
+   "text": "You will be the lookout.",
+   "es": "Vos vas a ser el vigía."
+  },
+  "p-ill": {
+   "voice": "model",
+   "text": "I'll keep pointing.",
+   "es": "Lo sigo señalando."
+  },
+  "p-sight": {
+   "voice": "model",
+   "text": "Keep him in sight.",
+   "es": "Mantenelo a la vista."
+  },
+  "m-mobport": {
+   "voice": "model",
+   "text": "Man overboard, port side!",
+   "es": "¡Hombre al agua por babor!"
+  },
+  "m-ill": {
+   "voice": "model",
+   "text": "I'll keep pointing.",
+   "es": "Lo sigo señalando."
+  },
+  "m-where": {
+   "voice": "model",
+   "text": "Starboard quarter, about two hundred metres!",
+   "es": "¡Aleta de estribor, a unos doscientos metros!"
+  },
+  "m-lost": {
+   "voice": "model",
+   "text": "I've lost him!",
+   "es": "¡Lo perdí!"
+  },
+  "m-shout": {
+   "voice": "model",
+   "text": "Man overboard, starboard side!",
+   "es": "¡Hombre al agua por estribor!"
+  },
+  "c-show-mob": {
+   "voice": "tanya",
+   "text": "Where's the man overboard?"
+  },
+  "c-show-smoke": {
+   "voice": "rolando",
+   "text": "Show me the smoke float."
+  },
+  "c-show-rescueboat": {
+   "voice": "tanya",
+   "text": "Where's the rescue boat?"
+  },
+  "c-show-mobbutton": {
+   "voice": "lars",
+   "text": "Where's the MOB button?"
+  },
+  "c-see-port": {
+   "voice": "tanya",
+   "text": "You see someone fall on the left side. Shout!"
+  },
+  "c-role": {
+   "voice": "tanya",
+   "text": "Diego, you will be the lookout. Keep pointing."
+  },
+  "c-where": {
+   "voice": "tanya",
+   "text": "Where is he? Distance?"
+  },
+  "c-cantsee": {
+   "voice": "tanya",
+   "text": "Diego, can you still see him?"
+  },
+  "c-role-other": {
+   "voice": "tanya",
+   "text": "Rolando, you will be in the rescue boat."
+  },
+  "c-dist-other": {
+   "voice": "rolando",
+   "text": "He's about three hundred metres, port quarter!"
+  }
+ },
+ "dialogue": [
+  "l22-01",
+  "l22-02",
+  "l22-03",
+  "l22-04",
+  "l22-05",
+  "l22-06",
+  "l22-07",
+  "l22-08",
+  "l22-09",
+  "l22-10",
+  "l22-11",
+  "l22-12",
+  "l22-13"
+ ],
+ "words": {
+  "mob": {
+   "en": "man overboard",
+   "ipa": "/ˌmæn ˈəʊvəbɔːd/",
+   "es": "hombre al agua",
+   "audio": "w-mob",
+   "ex": "x-mob"
+  },
+  "mobbutton": {
+   "en": "MOB button",
+   "ipa": "/ˌem əʊ ˈbiː ˌbʌtn/",
+   "es": "botón de hombre al agua",
+   "audio": "w-mobbutton",
+   "ex": "x-mobbutton"
+  },
+  "smoke": {
+   "en": "smoke float",
+   "ipa": "/ˈsməʊk fləʊt/",
+   "es": "señal fumígena",
+   "audio": "w-smoke",
+   "ex": "x-smoke"
+  },
+  "sight": {
+   "en": "keep in sight",
+   "ipa": "/ˌkiːp ɪn ˈsaɪt/",
+   "es": "mantener a la vista",
+   "audio": "w-sight",
+   "ex": "x-sight"
+  },
+  "rescueboat": {
+   "en": "rescue boat",
+   "ipa": "/ˈreskjuː bəʊt/",
+   "es": "bote de rescate",
+   "audio": "w-rescueboat",
+   "ex": "x-rescueboat"
+  },
+  "recovery": {
+   "en": "recovery",
+   "ipa": "/rɪˈkʌvəri/",
+   "es": "recuperación (de la persona)",
+   "audio": "w-recovery",
+   "ex": "x-recovery"
+  },
+  "role": {
+   "en": "role",
+   "ipa": "/rəʊl/",
+   "es": "rol, tarea",
+   "audio": "w-role",
+   "ex": "x-role"
+  },
+  "hypothermia": {
+   "en": "hypothermia",
+   "ipa": "/ˌhaɪpəʊˈθɜːmiə/",
+   "es": "hipotermia",
+   "audio": "w-hypothermia",
+   "ex": "x-hypothermia"
+  }
+ },
+ "plate": {
+  "svg": "img/l22/plate.svg",
+  "pins": [
+   {
+    "word": "mobbutton",
+    "x": 181,
+    "y": 66
+   },
+   {
+    "word": "sight",
+    "x": 138,
+    "y": 132
+   },
+   {
+    "word": "rescueboat",
+    "x": 142,
+    "y": 180
+   },
+   {
+    "word": "mob",
+    "x": 80,
+    "y": 208
+   },
+   {
+    "word": "smoke",
+    "x": 24,
+    "y": 160
+   }
+  ]
+ },
+ "docs": {
+  "roles": {
+   "kind": "form",
+   "title": "MAN OVERBOARD · ROLES",
+   "subtitle": "M/V LNG HORIZON · DRILL · 21 MAR 2026 · 1000",
+   "cells": [
+    [
+     "MASTER",
+     "Bridge · MOB button, turn, alarm"
+    ],
+    [
+     "CHIEF OFFICER",
+     "On scene · in charge on deck"
+    ],
+    [
+     "CADET",
+     "Lookout · keep pointing, never look away"
+    ],
+    [
+     "BOSUN",
+     "Lifebuoy with light and smoke float"
+    ],
+    [
+     "2ND OFFICER",
+     "Rescue boat · in charge"
+    ],
+    [
+     "RESCUE BOAT CREW",
+     "2/O, 2 ABs"
+    ],
+    [
+     "3RD OFFICER",
+     "Bridge · VHF and position"
+    ],
+    [
+     "AFTER RECOVERY",
+     "Check for hypothermia · ship's hospital"
+    ]
+   ]
+  }
+ },
+ "sessions": [
+  {
+   "id": "listen",
+   "title": "Listen: man overboard",
+   "skill": "Listening",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "image": "img/l22/scene.jpg",
+     "kicker": "Day 8 · 10:00 · Atlantic",
+     "title": "Man overboard drill",
+     "body": "A drill in the middle of the ocean. A dummy goes into the water, and every person on board has a role. Diego has a new one. Listen first, one piece at a time.",
+     "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l22-01"
+     ],
+     "q": "Which side?",
+     "opts": [
+      "Starboard",
+      "Port",
+      "Astern"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l22-03",
+      "l22-04"
+     ],
+     "q": "What is Diego's role?",
+     "opts": [
+      "Lookout: keep pointing",
+      "Throw the lifebuoy",
+      "Drive the rescue boat"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l22-04"
+     ],
+     "q": "Where is the man, and how far?",
+     "opts": [
+      "Starboard quarter, about 200 m",
+      "Port bow, 2 miles",
+      "Right ahead, 20 m"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l22-05",
+      "l22-06"
+     ],
+     "q": "What does Rolando throw?",
+     "opts": [
+      "The lifebuoy with the smoke float",
+      "A liferaft",
+      "A line"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l22-08"
+     ],
+     "q": "What does the Captain do?",
+     "opts": [
+      "Presses the MOB button and turns to starboard",
+      "Stops and waits",
+      "Calls the Coast Guard"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l22-12",
+      "l22-13"
+     ],
+     "q": "In real life, what is the next danger?",
+     "opts": [
+      "Hypothermia",
+      "Sharks",
+      "Fire"
+     ],
+     "a": 0
+    },
+    {
+     "type": "dialogue",
+     "title": "Now the whole drill",
+     "body": "Play it again. Open the text and the Spanish if you want them."
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "title": "Man overboard",
+   "skill": "Vocabulary",
+   "min": 4,
+   "screens": [
+    {
+     "type": "plate",
+     "title": "Tap every number",
+     "body": "The ship from above during the drill."
+    },
+    {
+     "type": "card",
+     "word": "mob"
+    },
+    {
+     "type": "card",
+     "word": "mobbutton"
+    },
+    {
+     "type": "card",
+     "word": "smoke"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-smoke",
+     "a": "smoke"
+    },
+    {
+     "type": "card",
+     "word": "sight"
+    },
+    {
+     "type": "card",
+     "word": "rescueboat"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-rescueboat",
+     "a": "rescueboat"
+    },
+    {
+     "type": "card",
+     "word": "recovery"
+    },
+    {
+     "type": "card",
+     "word": "role"
+    },
+    {
+     "type": "card",
+     "word": "hypothermia"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-mob",
+     "a": "mob"
+    },
+    {
+     "type": "choice",
+     "quick": true,
+     "q": "\"hombre al agua\" in English:",
+     "opts": [
+      "man overboard",
+      "man in water",
+      "man out board"
+     ],
+     "a": 0
+    },
+    {
+     "type": "match",
+     "title": "Match the pairs",
+     "pairs": [
+      [
+       "man overboard",
+       "hombre al agua"
+      ],
+      [
+       "smoke float",
+       "señal fumígena"
+      ],
+      [
+       "rescue boat",
+       "bote de rescate"
+      ],
+      [
+       "recovery",
+       "recuperación"
+      ],
+      [
+       "role",
+       "rol"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrases",
+   "title": "You will be… I'll…",
+   "skill": "Phrases",
+   "min": 6,
+   "screens": [
+    {
+     "type": "tip",
+     "tag": "Useful language",
+     "title": "Alarm and roles",
+     "list": [
+      [
+       "Man overboard, starboard side!",
+       "¡Hombre al agua por estribor!",
+       "p-mob"
+      ],
+      [
+       "You will be the lookout.",
+       "Vos vas a ser el vigía.",
+       "p-willbe"
+      ],
+      [
+       "I'll keep pointing.",
+       "Lo sigo señalando.",
+       "p-ill"
+      ],
+      [
+       "Keep him in sight.",
+       "Mantenelo a la vista.",
+       "p-sight"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "will for roles and promises",
+     "steps": [
+      [
+       "give a role",
+       "You <b>will be</b> the lookout. Rolando, you <b>will throw</b> the lifebuoy."
+      ],
+      [
+       "accept it",
+       "<b>I'll</b> keep pointing. <b>I'll</b> throw it."
+      ],
+      [
+       "shout",
+       "Man overboard, <b>starboard side</b>! (no verb)"
+      ]
+     ],
+     "paras": [
+      "In an emergency the person in charge gives roles with <b>You will…</b>. You answer with <b>I'll…</b> + the action: short, so everyone knows it's done.",
+      "The first shout has no verb: what + where. <b>Man overboard, port side!</b>"
+     ],
+     "avoid": "You are going to be lookout? (sounds like a question) · OK OK (without saying what you'll do)"
+    },
+    {
+     "type": "choice",
+     "q": "Tanya gives you a role: \"You will throw the lifebuoy.\" You answer…",
+     "opts": [
+      "I'll throw it.",
+      "OK, maybe.",
+      "I throw?"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Someone falls on the left side. You shout…",
+     "opts": [
+      "Man overboard, port side!",
+      "There is a man in the water on the left!",
+      "Help, help!"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "situation": "Tanya: \"Rolando, you will be in the rescue boat.\"",
+     "q": "Answer as Rolando.",
+     "a": [
+      "I'll",
+      "be",
+      "in",
+      "the",
+      "rescue",
+      "boat."
+     ],
+     "extra": [
+      "will",
+      "going"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-role-other"
+     ],
+     "q": "What is Rolando's role?",
+     "opts": [
+      "Rescue boat",
+      "Lookout",
+      "Bridge"
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Don't explain, shout",
+     "paras": [
+      "In Spanish we might say <i>¡Se cayó alguien al agua por el lado derecho!</i> In English, the standard shout is shorter: <b>Man overboard, starboard side!</b> Then point and don't stop pointing.",
+      "Distances: <b>about two hundred metres</b>; position: the clock (Lesson 12) or the bow / beam / quarter (Lesson 16)."
+     ],
+     "avoid": "Somebody fell in the water at the right side!"
+    },
+    {
+     "type": "type",
+     "audio": "c-dist-other",
+     "q": "How far is he? Write the number of metres.",
+     "accept": [
+      "300",
+      "three hundred"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Shouting clearly",
+     "paras": [
+      "A shout must be short, loud and clear: <b>MAN o-ver-BOARD | STAR-board SIDE</b>. A small pause after <i>overboard</i>.",
+      "Don't swallow the end: <i>side</i> with a clear <b>d</b>."
+     ],
+     "list": [
+      [
+       "Man overboard, starboard side!",
+       "¡Hombre al agua por estribor!",
+       "m-shout"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Read the roles",
+   "skill": "Reading",
+   "min": 3,
+   "screens": [
+    {
+     "type": "doc",
+     "doc": "roles",
+     "q": "Who is in charge of the rescue boat?",
+     "opts": [
+      "The Second Officer",
+      "The bosun",
+      "The cadet"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "roles",
+     "q": "What does the Master do?",
+     "opts": [
+      "MOB button, turn and alarm",
+      "Throws the lifebuoy",
+      "Drives the rescue boat"
+     ],
+     "a": 0
+    },
+    {
+     "type": "docfind",
+     "doc": "roles",
+     "q": "Tap the cadet's role.",
+     "a": 2
+    },
+    {
+     "type": "doc",
+     "doc": "roles",
+     "q": "After recovery, they check for…",
+     "opts": [
+      "hypothermia",
+      "fire",
+      "the time"
+     ],
+     "a": 0
+    },
+    {
+     "type": "doc",
+     "doc": "roles",
+     "q": "Where is the Third Officer?",
+     "opts": [
+      "On the bridge, VHF and position",
+      "In the rescue boat",
+      "On deck with the lifebuoy"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "title": "Shout and take your role",
+   "skill": "Speaking",
+   "min": 5,
+   "screens": [
+    {
+     "type": "intro",
+     "kicker": "Speaking",
+     "title": "Short, loud, clear",
+     "body": "Listen, say it, check it. Say it like a shout, but clear.",
+     "es": "Como un grito, pero claro.",
+     "button": "Start"
+    },
+    {
+     "type": "shadow",
+     "model": "p-mob"
+    },
+    {
+     "type": "shadow",
+     "model": "p-ill"
+    },
+    {
+     "type": "shadow",
+     "model": "p-sight"
+    },
+    {
+     "type": "role",
+     "cue": "c-see-port",
+     "task": "Shout the alarm: man overboard, port side.",
+     "model": "m-mobport",
+     "accept": [
+      "Man overboard, port side!",
+      "Man overboard port side!",
+      "Man overboard! Port side!"
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-role",
+     "task": "Accept: you'll keep pointing.",
+     "model": "m-ill",
+     "accept": [
+      "I'll keep pointing.",
+      "I'll keep pointing!",
+      "I will keep pointing.",
+      "OK, I'll keep pointing."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-where",
+     "task": "Starboard quarter, about 200 metres.",
+     "model": "m-where",
+     "accept": [
+      "Starboard quarter, about two hundred metres!",
+      "Starboard quarter, about two hundred metres.",
+      "Starboard quarter, two hundred metres.",
+      "About two hundred metres, starboard quarter."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-cantsee",
+     "task": "No! You can't see him any more. Say it at once.",
+     "model": "m-lost",
+     "accept": [
+      "I've lost him!",
+      "I lost him!",
+      "I've lost him.",
+      "No, I've lost him!"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Lesson check",
+   "skill": "Review",
+   "min": 4,
+   "screens": [
+    {
+     "type": "type",
+     "audio": "w-role",
+     "q": "Type what you hear.",
+     "accept": [
+      "role",
+      "a role",
+      "the role"
+     ]
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-mobbutton",
+     "a": "mobbutton"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-mob",
+     "a": "mob"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l22-09",
+      "l22-10"
+     ],
+     "q": "What must Diego do if he loses sight of the man?",
+     "opts": [
+      "Say so at once",
+      "Look for him quietly",
+      "Go to the bridge"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The man is behind the ship, a little to the right. He's on the…",
+     "opts": [
+      "starboard quarter",
+      "port bow",
+      "starboard bow"
+     ],
+     "a": 0,
+     "why": "From Lesson 16."
+    },
+    {
+     "type": "choice",
+     "q": "Tanya: \"You will launch the rescue boat.\" James answers…",
+     "opts": [
+      "I'll launch it.",
+      "I launch.",
+      "You will launch."
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Give a role: Mateo will be on the VHF.",
+     "a": [
+      "Mateo,",
+      "you",
+      "will",
+      "be",
+      "on",
+      "the",
+      "VHF."
+     ],
+     "extra": [
+      "are",
+      "going"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l22-12"
+     ],
+     "q": "What is on board at the end?",
+     "opts": [
+      "The dummy",
+      "A fisherman",
+      "The lifebuoy only"
+     ],
+     "a": 0
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: bote de rescate",
+     "accept": [
+      "rescue boat",
+      "the rescue boat",
+      "a rescue boat"
+     ]
+    }
+   ]
+  }
+ ]
+}
