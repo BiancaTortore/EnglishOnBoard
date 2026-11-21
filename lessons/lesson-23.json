@@ -9,7 +9,7 @@
   "scene": "img/l23/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 1,
+ "mediaRev": 2,
  "audio": {
   "l23-01": {
    "voice": "rolando",

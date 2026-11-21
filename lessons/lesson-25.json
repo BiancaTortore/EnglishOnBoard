@@ -9,7 +9,7 @@
   "scene": "img/l25/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 1,
+ "mediaRev": 2,
  "audio": {
   "l25-01": {
    "pause": 600,
