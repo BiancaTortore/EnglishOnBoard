@@ -384,14 +384,14 @@
   "steady": {
    "en": "steady",
    "ipa": "/ˈstedi/",
-   "es": "así (mantener el rumbo)",
+   "es": "mantener el rumbo",
    "audio": "w-steady",
    "ex": "x-steady"
   },
   "heading": {
    "en": "heading",
    "ipa": "/ˈhedɪŋ/",
-   "es": "rumbo (proa)",
+   "es": "rumbo",
    "audio": "w-heading",
    "ex": "x-heading"
   }

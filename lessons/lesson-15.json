@@ -21,7 +21,7 @@
    "pause": 600,
    "voice": "tanya",
    "text": "Let me see… Yes, that's a squall. Rain and strong gusts. What's the barometer?",
-   "es": "A ver… Sí, es un chubasco. Lluvia y rachas fuertes. ¿Qué marca el barómetro?"
+   "es": "A ver… Sí, es un chubasco. Lluvia y ráfagas fuertes. ¿Qué marca el barómetro?"
   },
   "l15-03": {
    "pause": 900,
@@ -116,7 +116,7 @@
   "x-gust": {
    "voice": "model",
    "text": "Strong gusts in the squall.",
-   "es": "Rachas fuertes en el chubasco."
+   "es": "Ráfagas fuertes en el chubasco."
   },
   "w-force": {
    "voice": "model",
@@ -305,7 +305,7 @@
   "gust": {
    "en": "gust",
    "ipa": "/ɡʌst/",
-   "es": "racha",
+   "es": "ráfaga",
    "audio": "w-gust",
    "ex": "x-gust"
   },
@@ -620,7 +620,7 @@
      "pairs": [
       [
        "gust",
-       "racha"
+       "ráfaga"
       ],
       [
        "swell",
@@ -1026,7 +1026,7 @@
     },
     {
      "type": "type",
-     "q": "Write it in English: racha",
+     "q": "Write it in English: ráfaga",
      "accept": [
       "gust",
       "a gust"

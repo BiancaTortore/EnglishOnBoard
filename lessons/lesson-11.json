@@ -138,7 +138,7 @@
   "x-fairlead": {
    "voice": "model",
    "text": "The line goes through the fairlead.",
-   "es": "El cabo pasa por la guía."
+   "es": "El cabo pasa por el portaespía."
   },
   "w-tug": {
    "voice": "model",
@@ -327,7 +327,7 @@
   "fairlead": {
    "en": "fairlead",
    "ipa": "/ˈfeəliːd/",
-   "es": "guía, gatera",
+   "es": "portaespía",
    "audio": "w-fairlead",
    "ex": "x-fairlead"
   },
