@@ -9,7 +9,7 @@
   "scene": "img/l25/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 2,
+ "mediaRev": 3,
  "audio": {
   "l25-01": {
    "pause": 600,
@@ -361,6 +361,16 @@
     "word": "onscene",
     "x": 322,
     "y": 100
+   },
+   {
+    "word": "panpan",
+    "x": 178,
+    "y": 82
+   },
+   {
+    "word": "securite",
+    "x": 382,
+    "y": 172
    }
   ]
  },
@@ -541,6 +551,18 @@
     {
      "type": "card",
      "word": "securite"
+    },
+    {
+     "type": "tap",
+     "audio": "x-panpan",
+     "q": "Listen to the call. Who is calling?",
+     "a": "panpan"
+    },
+    {
+     "type": "tap",
+     "audio": "x-securite",
+     "q": "Listen to the call. What is it about?",
+     "a": "securite"
     },
     {
      "type": "tap",
