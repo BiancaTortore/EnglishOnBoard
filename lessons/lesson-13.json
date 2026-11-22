@@ -1,7 +1,7 @@
 {
  "n": 13,
  "modelAudio": true,
- "mediaRev": 3,
+ "mediaRev": 4,
  "module": 4,
  "title": "Bridge equipment",
  "place": "Day 3 · 16:30 · Gulf of Mexico, bridge",
@@ -131,6 +131,33 @@
    "voice": "model",
    "text": "The binoculars are for the lookout.",
    "es": "Los binoculares son para la vigía."
+  },
+  "w-gps": {
+   "voice": "model",
+   "text": "GPS"
+  },
+  "x-gps": {
+   "voice": "model",
+   "text": "The GPS gives our position.",
+   "es": "El GPS da nuestra posición."
+  },
+  "w-log": {
+   "voice": "model",
+   "text": "speed log"
+  },
+  "x-log": {
+   "voice": "model",
+   "text": "The speed log shows twelve knots.",
+   "es": "La corredera marca doce nudos."
+  },
+  "w-anemometer": {
+   "voice": "model",
+   "text": "anemometer"
+  },
+  "x-anemometer": {
+   "voice": "model",
+   "text": "The anemometer shows the wind direction and speed.",
+   "es": "El anemómetro muestra la dirección y la velocidad del viento."
   },
   "w-echo": {
    "voice": "model",
@@ -307,6 +334,27 @@
    "audio": "w-binoculars",
    "ex": "x-binoculars"
   },
+  "gps": {
+   "en": "GPS",
+   "ipa": "/ˌdʒiː piː ˈes/",
+   "es": "GPS",
+   "audio": "w-gps",
+   "ex": "x-gps"
+  },
+  "log": {
+   "en": "speed log",
+   "ipa": "/ˈspiːd lɒɡ/",
+   "es": "corredera",
+   "audio": "w-log",
+   "ex": "x-log"
+  },
+  "anemometer": {
+   "en": "anemometer",
+   "ipa": "/ˌænɪˈmɒmɪtə/",
+   "es": "anemómetro",
+   "audio": "w-anemometer",
+   "ex": "x-anemometer"
+  },
   "echo": {
    "en": "echo sounder",
    "ipa": "/ˈekəʊ ˌsaʊndə/",
@@ -364,6 +412,21 @@
     "word": "binoculars",
     "x": 374,
     "y": 204
+   },
+   {
+    "word": "gps",
+    "x": 70,
+    "y": 202
+   },
+   {
+    "word": "log",
+    "x": 142,
+    "y": 202
+   },
+   {
+    "word": "anemometer",
+    "x": 218,
+    "y": 202
    }
   ]
  },
@@ -567,6 +630,18 @@
     {
      "type": "card",
      "word": "binoculars"
+    },
+    {
+     "type": "card",
+     "word": "gps"
+    },
+    {
+     "type": "card",
+     "word": "log"
+    },
+    {
+     "type": "card",
+     "word": "anemometer"
     },
     {
      "type": "tap",

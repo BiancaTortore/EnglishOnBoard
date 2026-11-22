@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The front of the bridge: radar, ECDIS, gyro compass, autopilot, helm, engine telegraph, echo sounder and binoculars">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The front of the bridge: radar, ECDIS, gyro compass, autopilot, helm, engine telegraph, echo sounder, binoculars, GPS, speed log and anemometer">
   <!-- Lesson 13 plate: the bridge console seen from the helm position, with the front windows above.
        Left to right: radar, ECDIS, gyro compass repeater with the autopilot below it, helm, engine telegraph,
        echo sounder. Binoculars rest on the console. Colours come from app.css (.p-*). -->
@@ -62,4 +62,23 @@
     <rect x="-4" y="-2" width="8" height="8" style="fill:#2B3A4A"/>
     <circle cx="-9" cy="-6" r="4" style="fill:#5E6B78"/><circle cx="9" cy="-6" r="4" style="fill:#5E6B78"/>
   </g>
+  <!-- GPS: position on a dark screen, with a satellite symbol -->
+  <rect x="12" y="204" width="58" height="32" rx="4" class="p-hull"/>
+  <rect x="16" y="208" width="50" height="24" style="fill:#0E2A1F"/>
+  <g transform="translate(24 220)" style="fill:#E9C46A"><rect x="-2" y="-2" width="4" height="4"/><rect x="-7" y="-1.2" width="4" height="2.4"/><rect x="3" y="-1.2" width="4" height="2.4"/></g>
+  <g style="font:700 6px var(--f-mono);fill:#3DDC84"><text x="32" y="217">36°08'N</text><text x="32" y="228">005°21'W</text></g>
+
+  <!-- SPEED LOG: speed through the water -->
+  <rect x="80" y="204" width="62" height="32" rx="4" class="p-hull"/>
+  <rect x="84" y="208" width="54" height="24" style="fill:#0E2A1F"/>
+  <text x="111" y="225" text-anchor="middle" style="font:700 11px var(--f-mono);fill:#3DDC84">12.0 kn</text>
+  <g style="stroke:#3DDC84" stroke-width="1" opacity=".6"><path d="M88 229 q3 -2 6 0 t6 0 t6 0"/></g>
+
+  <!-- ANEMOMETER: where the wind comes from (arrow towards the ship) and how strong it is -->
+  <rect x="150" y="204" width="68" height="32" rx="4" class="p-hull"/>
+  <circle cx="167" cy="220" r="13" class="p-white"/>
+  <path d="M167 213 L170 224 L164 224 Z" class="p-hull"/>
+  <path d="M178 211 L171 216" style="stroke:var(--antifoul)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M168 219 L173 213 L175 217 Z" style="fill:var(--antifoul)"/>
+  <text x="200" y="224" text-anchor="middle" style="font:700 9px var(--f-mono);fill:#3DDC84">25 kn</text>
 </svg>

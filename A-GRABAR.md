@@ -24,3 +24,9 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L4 | `x-pumpman` | Brian (modelo) | The pumpman works with the cargo pumps. | Nueva |
 | L4 | `w-messman` | Brian (modelo) | messman | Nueva |
 | L4 | `x-messman` | Brian (modelo) | The messman cleans the mess room. | Nueva |
+| L13 | `w-gps` | Brian (modelo) | GPS | Nueva |
+| L13 | `x-gps` | Brian (modelo) | The GPS gives our position. | Nueva |
+| L13 | `w-log` | Brian (modelo) | speed log | Nueva |
+| L13 | `x-log` | Brian (modelo) | The speed log shows twelve knots. | Nueva |
+| L13 | `w-anemometer` | Brian (modelo) | anemometer | Nueva |
+| L13 | `x-anemometer` | Brian (modelo) | The anemometer shows the wind direction and speed. | Nueva |
