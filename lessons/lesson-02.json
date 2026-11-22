@@ -819,7 +819,7 @@
      "kicker": "Speaking",
      "title": "Say the names",
      "body": "Listen, say it, check it. Watch out for forecastle: it's short when you say it.",
-     "es": "Ojo con forecastle: se dice FOKE-sl.",
+     "es": "Ojo con forecastle: se dice FOHK-sl (también se escribe fo'c'sle). Vas a escuchar también «FOR-cas-el», tal como se lee; se entiende igual.",
      "button": "Start"
     },
     {
@@ -842,7 +842,9 @@
      "accept": [
       "It's the forecastle.",
       "It's called the forecastle.",
-      "The forecastle."
+      "The forecastle.",
+      "It's the fore castle.",
+      "The fore castle."
      ]
     },
     {
