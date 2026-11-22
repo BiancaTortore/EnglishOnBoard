@@ -36,3 +36,12 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L14 | `x-brill` | Brian (modelo) | Turn down the brilliance at night. | Nueva |
 | L19 | `w-flow` | Brian (modelo) | flow | Nueva |
 | L19 | `x-flow` | Brian (modelo) | The gas flow to the engines is steady. | Nueva |
+| L24 | `w-firedoor` | Brian (modelo) | fire door | Nueva |
+| L24 | `x-firedoor` | Brian (modelo) | Keep the fire door closed. | Nueva |
+| L24 | `w-mask` | Brian (modelo) | face mask | Nueva |
+| L24 | `x-mask` | Brian (modelo) | Check the face mask before you enter. | Nueva |
+| L24 | `w-radio` | Brian (modelo) | portable radio | Nueva |
+| L24 | `x-radio` | Brian (modelo) | Take the red radio for the fire party. | Nueva |
+| L24 | `w-torch` | Brian (modelo) | torch | Nueva |
+| L24 | `x-torch` | Brian (modelo) | Take a torch. There is a lot of smoke. | Nueva |
+| L24 | `c-show-firedoor` | James | Show me the fire door. | Nueva |

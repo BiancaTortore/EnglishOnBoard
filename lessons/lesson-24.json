@@ -9,7 +9,7 @@
   "scene": "img/l24/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 1,
+ "mediaRev": 2,
  "radioChannel": "UHF",
  "audio": {
   "l24-01": {
@@ -182,6 +182,42 @@
    "text": "The fire is contained.",
    "es": "El fuego está contenido."
   },
+  "w-firedoor": {
+   "voice": "model",
+   "text": "fire door"
+  },
+  "x-firedoor": {
+   "voice": "model",
+   "text": "Keep the fire door closed.",
+   "es": "Mantené cerrada la puerta cortafuego."
+  },
+  "w-mask": {
+   "voice": "model",
+   "text": "face mask"
+  },
+  "x-mask": {
+   "voice": "model",
+   "text": "Check the face mask before you enter.",
+   "es": "Revisá la máscara antes de entrar."
+  },
+  "w-radio": {
+   "voice": "model",
+   "text": "portable radio"
+  },
+  "x-radio": {
+   "voice": "model",
+   "text": "Take the red radio for the fire party.",
+   "es": "Llevá el handy rojo de la brigada de incendio."
+  },
+  "w-torch": {
+   "voice": "model",
+   "text": "torch"
+  },
+  "x-torch": {
+   "voice": "model",
+   "text": "Take a torch. There is a lot of smoke.",
+   "es": "Llevá una linterna. Hay mucho humo."
+  },
   "p-out": {
    "voice": "model",
    "text": "The fire is out.",
@@ -247,6 +283,10 @@
    "voice": "mario",
    "text": "Where's my galley?"
   },
+  "c-show-firedoor": {
+   "voice": "james",
+   "text": "Show me the fire door."
+  },
   "c-show-boundary": {
    "voice": "james",
    "text": "Show me the boundary cooling."
@@ -307,7 +347,7 @@
    "ex": "x-fireparty"
   },
   "ba": {
-   "en": "breathing apparatus",
+   "en": "breathing apparatus (BA set)",
    "ipa": "/ˈbriːðɪŋ æpəˌreɪtəs/",
    "es": "equipo de respiración autónoma (ERA)",
    "audio": "w-ba",
@@ -354,6 +394,34 @@
    "es": "contenido, controlado",
    "audio": "w-contained",
    "ex": "x-contained"
+  },
+  "firedoor": {
+   "en": "fire door",
+   "ipa": "/ˈfaɪə dɔː/",
+   "es": "puerta cortafuego",
+   "audio": "w-firedoor",
+   "ex": "x-firedoor"
+  },
+  "mask": {
+   "en": "face mask",
+   "ipa": "/ˈfeɪs mɑːsk/",
+   "es": "máscara",
+   "audio": "w-mask",
+   "ex": "x-mask"
+  },
+  "radio": {
+   "en": "portable radio",
+   "ipa": "/ˈpɔːtəbl ˈreɪdiəʊ/",
+   "es": "handy (radio portátil)",
+   "audio": "w-radio",
+   "ex": "x-radio"
+  },
+  "torch": {
+   "en": "torch",
+   "ipa": "/tɔːtʃ/",
+   "es": "linterna",
+   "audio": "w-torch",
+   "ex": "x-torch"
   }
  },
  "plate": {
@@ -380,7 +448,7 @@
     "y": 124
    },
    {
-    "word": "galley",
+    "word": "firedoor",
     "x": 341,
     "y": 184
    },
@@ -388,6 +456,21 @@
     "word": "boundary",
     "x": 304,
     "y": 150
+   },
+   {
+    "word": "mask",
+    "x": 280,
+    "y": 26
+   },
+   {
+    "word": "radio",
+    "x": 16,
+    "y": 168
+   },
+   {
+    "word": "torch",
+    "x": 86,
+    "y": 220
    }
   ]
  },
@@ -555,13 +638,21 @@
      "word": "galley"
     },
     {
+     "type": "card",
+     "word": "firedoor"
+    },
+    {
      "type": "tap",
-     "audio": "c-show-galley",
-     "a": "galley"
+     "audio": "c-show-firedoor",
+     "a": "firedoor"
     },
     {
      "type": "card",
      "word": "ba"
+    },
+    {
+     "type": "card",
+     "word": "mask"
     },
     {
      "type": "card",
@@ -592,6 +683,14 @@
     {
      "type": "card",
      "word": "contained"
+    },
+    {
+     "type": "card",
+     "word": "radio"
+    },
+    {
+     "type": "card",
+     "word": "torch"
     },
     {
      "type": "tap",
