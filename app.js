@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-47";
+const APP_VERSION = "beta-48";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -435,7 +435,7 @@ function accountCardHTML(){
   if (!signedIn()) return `<button class="pcard" id="accIn"><span class="pcard-ico">${I.user}</span><span><b>Sign in</b><small>Keep your progress safe in a free account</small></span>${I.chev}</button>`;
   const u = session.user || {};
   return `<section class="panel setting acc">
-    <div><b>Account</b><span class="sub">${esc(u.email || "")}${u.google ? " · Google" : ""}</span></div>
+    <div><b>Account</b><span class="sub">${esc(u.email || "")}${u.google ? " · Google" : ""}<br>${u.access ? "Full course: yes" : "Full course: not yet (Module 1)"}</span></div>
     <div class="acc-btns"><button class="chip-btn" id="accOut">Sign out</button><button class="chip-btn danger" id="accDel">Delete account</button></div></section>`;
 }
 function wireAccount(){
@@ -1255,7 +1255,8 @@ async function openLesson(n){
       try { const r = await fetch(L.plate.svg); if (r.ok) PLATE_SVG = await r.text(); } catch (e) {}
     }
   } catch (e) {
-    app.innerHTML = `<div class="home"><p>Lesson ${n} could not be loaded. Check your connection and try again.</p><button class="cta" id="home">Back</button></div>`;
+    const locked = / 403$/.test(e.message);
+    app.innerHTML = `<div class="home"><p>${locked ? `Lesson ${n} is part of the full course. ${signedIn() ? `This account (${esc((session.user || {}).email || "")}) doesn't have the full course yet.` : "Sign in with the account that has the full course."}` : `Lesson ${n} could not be loaded. Check your connection and try again.`}</p><button class="cta" id="home">Back</button></div>`;
     $("#home").onclick = navBack; return;
   }
   viewLesson();
