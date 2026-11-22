@@ -98,7 +98,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 27 | Pilot boarding & helm orders | Día 14 · 07:00 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
 
 ### Glosario náutico en español (cómo lo dice Bianca; usarlo en todas las traducciones)
-accommodation = casillaje · rating = subalterno (marineros, AB y otros) · department = departamento · crew agreement = rol · to sign on = firmar el embarque · seaman's book = libreta de embarco · bunk = cama · muster card = tarjeta de rol · muster station = punto de reunión · drill = zafarrancho · announcement = anuncio · loudspeaker = altavoz · safety shoes = zapatos de seguridad · spanner = llave · chipping = picaretear · shackle = grillete · windlass = cabrestante · ECDIS = carta electrónica · swell = oleaje · rough (sea) = agitado · squall = chubasco
+accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero · pumpman = bombero · messman = mozo · department = departamento · crew agreement = rol · to sign on = firmar el embarque · seaman's book = libreta de embarco · bunk = cama · muster card = tarjeta de rol · muster station = punto de reunión · drill = zafarrancho · announcement = anuncio · loudspeaker = altavoz · safety shoes = zapatos de seguridad · spanner = llave · chipping = picaretear · shackle = grillete · windlass = cabrestante · ECDIS = carta electrónica · swell = oleaje · rough (sea) = agitado · squall = chubasco
 
 ### Foco de idioma por lección (L1–16 ya escritas: así quedaron; L17+ borrador, no repetir)
 

@@ -18,3 +18,9 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L3 | `x-smoking` | Brian (modelo) | The smoking room is on B-deck. | Nueva |
 | L3 | `w-recreation` | Brian (modelo) | recreation room | Nueva |
 | L3 | `x-recreation` | Brian (modelo) | We watch films in the recreation room. | Nueva |
+| L4 | `w-ab` | Brian (modelo) | AB | Nueva |
+| L4 | `x-ab` | Brian (modelo) | The AB is on watch with the Second Officer. | Nueva |
+| L4 | `w-pumpman` | Brian (modelo) | pumpman | Nueva |
+| L4 | `x-pumpman` | Brian (modelo) | The pumpman works with the cargo pumps. | Nueva |
+| L4 | `w-messman` | Brian (modelo) | messman | Nueva |
+| L4 | `x-messman` | Brian (modelo) | The messman cleans the mess room. | Nueva |

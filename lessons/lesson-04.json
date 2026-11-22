@@ -1,7 +1,7 @@
 {
  "n": 4,
  "modelAudio": true,
- "mediaRev": 4,
+ "mediaRev": 5,
  "module": 1,
  "title": "Crew & ranks",
  "place": "Day 1 · 12:00 · Houston, officers' mess",
@@ -133,12 +133,12 @@
   "x-bosun": {
    "voice": "model",
    "text": "The bosun is in charge of the ratings on deck.",
-   "es": "El contramaestre está a cargo de los marineros en cubierta."
+   "es": "El contramaestre está a cargo de los subalternos de cubierta."
   },
   "x-rating": {
    "voice": "model",
    "text": "Ratings wear orange boiler suits.",
-   "es": "Los marineros usan mameluco naranja."
+   "es": "Los subalternos usan mameluco naranja."
   },
   "x-cook": {
    "voice": "model",
@@ -149,6 +149,33 @@
    "voice": "model",
    "text": "There are three departments: deck, engine and catering.",
    "es": "Hay tres departamentos: cubierta, máquinas y fonda."
+  },
+  "w-ab": {
+   "voice": "model",
+   "text": "AB"
+  },
+  "x-ab": {
+   "voice": "model",
+   "text": "The AB is on watch with the Second Officer.",
+   "es": "El marinero está de guardia con el Segundo Oficial."
+  },
+  "w-pumpman": {
+   "voice": "model",
+   "text": "pumpman"
+  },
+  "x-pumpman": {
+   "voice": "model",
+   "text": "The pumpman works with the cargo pumps.",
+   "es": "El bombero trabaja con las bombas de carga."
+  },
+  "w-messman": {
+   "voice": "model",
+   "text": "messman"
+  },
+  "x-messman": {
+   "voice": "model",
+   "text": "The messman cleans the mess room.",
+   "es": "El mozo limpia el comedor."
   },
   "p-incharge": {
    "voice": "model",
@@ -294,7 +321,7 @@
   "rating": {
    "en": "rating",
    "ipa": "/ˈreɪtɪŋ/",
-   "es": "subalterno (marineros, AB y otros)",
+   "es": "subalterno",
    "audio": "w-rating",
    "ex": "x-rating"
   },
@@ -311,6 +338,27 @@
    "es": "departamento",
    "audio": "w-dept",
    "ex": "x-dept"
+  },
+  "ab": {
+   "en": "AB (able seaman)",
+   "ipa": "/ˌeɪ ˈbiː/",
+   "es": "marinero",
+   "audio": "w-ab",
+   "ex": "x-ab"
+  },
+  "pumpman": {
+   "en": "pumpman",
+   "ipa": "/ˈpʌmpmən/",
+   "es": "bombero",
+   "audio": "w-pumpman",
+   "ex": "x-pumpman"
+  },
+  "messman": {
+   "en": "messman",
+   "ipa": "/ˈmesmən/",
+   "es": "mozo",
+   "audio": "w-messman",
+   "ex": "x-messman"
   }
  },
  "plate": {
@@ -338,8 +386,8 @@
    },
    {
     "word": "rating",
-    "x": 136,
-    "y": 216
+    "x": 243,
+    "y": 192
    },
    {
     "word": "ce",
@@ -355,6 +403,21 @@
     "word": "dept",
     "x": 262,
     "y": 83
+   },
+   {
+    "word": "ab",
+    "x": 18,
+    "y": 200
+   },
+   {
+    "word": "pumpman",
+    "x": 152,
+    "y": 214
+   },
+   {
+    "word": "messman",
+    "x": 300,
+    "y": 152
    }
   ]
  },
@@ -593,6 +656,14 @@
      "word": "rating"
     },
     {
+     "type": "card",
+     "word": "ab"
+    },
+    {
+     "type": "card",
+     "word": "pumpman"
+    },
+    {
      "type": "tap",
      "audio": "c-show-bosun",
      "a": "bosun"
@@ -600,6 +671,10 @@
     {
      "type": "card",
      "word": "cook"
+    },
+    {
+     "type": "card",
+     "word": "messman"
     },
     {
      "type": "card",
