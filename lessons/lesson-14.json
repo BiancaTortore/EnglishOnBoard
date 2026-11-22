@@ -1,5 +1,5 @@
 {
- "n": 14, "modelAudio": true, "mediaRev": 1,
+ "n": 14, "modelAudio": true, "mediaRev": 2,
  "module": 4,
  "title": "Watch handover",
  "place": "Day 4 · 03:45 · Gulf of Mexico, bridge",
@@ -160,6 +160,24 @@
    "voice": "model",
    "text": "You're the lookout.",
    "es": "Vos sos la vigía."
+  },
+  "w-range": {
+   "voice": "model",
+   "text": "range"
+  },
+  "x-range": {
+   "voice": "model",
+   "text": "Change the range to six miles.",
+   "es": "Cambiá la escala a seis millas."
+  },
+  "w-brill": {
+   "voice": "model",
+   "text": "brilliance"
+  },
+  "x-brill": {
+   "voice": "model",
+   "text": "Turn down the brilliance at night.",
+   "es": "Bajá el brillo de noche."
   },
   "p-course": {
    "voice": "model",
@@ -329,6 +347,20 @@
    "es": "vigía",
    "audio": "w-lookout",
    "ex": "x-lookout"
+  },
+  "range": {
+   "en": "range",
+   "ipa": "/reɪndʒ/",
+   "es": "escala (del radar)",
+   "audio": "w-range",
+   "ex": "x-range"
+  },
+  "brill": {
+   "en": "brilliance (BRILL)",
+   "ipa": "/ˈbrɪliəns/",
+   "es": "brillo",
+   "audio": "w-brill",
+   "ex": "x-brill"
   }
  },
  "plate": {
@@ -358,6 +390,16 @@
     "word": "traffic",
     "x": 196,
     "y": 96
+   },
+   {
+    "word": "range",
+    "x": 338,
+    "y": 184
+   },
+   {
+    "word": "brill",
+    "x": 286,
+    "y": 222
    }
   ]
  },
@@ -560,6 +602,14 @@
     {
      "type": "card",
      "word": "lookout"
+    },
+    {
+     "type": "card",
+     "word": "range"
+    },
+    {
+     "type": "card",
+     "word": "brill"
     },
     {
      "type": "tap",

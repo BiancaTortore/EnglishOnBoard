@@ -30,3 +30,7 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L13 | `x-log` | Brian (modelo) | The speed log shows twelve knots. | Nueva |
 | L13 | `w-anemometer` | Brian (modelo) | anemometer | Nueva |
 | L13 | `x-anemometer` | Brian (modelo) | The anemometer shows the wind direction and speed. | Nueva |
+| L14 | `w-range` | Brian (modelo) | range | Nueva |
+| L14 | `x-range` | Brian (modelo) | Change the range to six miles. | Nueva |
+| L14 | `w-brill` | Brian (modelo) | brilliance | Nueva |
+| L14 | `x-brill` | Brian (modelo) | Turn down the brilliance at night. | Nueva |
