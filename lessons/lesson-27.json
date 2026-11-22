@@ -9,7 +9,7 @@
   "scene": "img/l27/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 2,
+ "mediaRev": 3,
  "radioChannel": "UHF",
  "audio": {
   "l27-01": {
@@ -221,6 +221,24 @@
    "text": "Our heading is zero four five.",
    "es": "Nuestro rumbo es cero cuatro cinco."
   },
+  "w-pilotboat": {
+   "voice": "model",
+   "text": "pilot boat"
+  },
+  "x-pilotboat": {
+   "voice": "model",
+   "text": "The pilot boat is alongside.",
+   "es": "La lancha de práctico está al costado."
+  },
+  "w-station": {
+   "voice": "model",
+   "text": "pilot station"
+  },
+  "x-station": {
+   "voice": "model",
+   "text": "Call the pilot station on channel twelve.",
+   "es": "Llamá a la estación de prácticos por el canal doce."
+  },
   "p-port": {
    "voice": "model",
    "text": "Port ten.",
@@ -394,6 +412,20 @@
    "es": "rumbo",
    "audio": "w-heading",
    "ex": "x-heading"
+  },
+  "pilotboat": {
+   "en": "pilot boat",
+   "ipa": "/ˈpaɪlət bəʊt/",
+   "es": "lancha de práctico",
+   "audio": "w-pilotboat",
+   "ex": "x-pilotboat"
+  },
+  "station": {
+   "en": "pilot station",
+   "ipa": "/ˈpaɪlət ˈsteɪʃn/",
+   "es": "estación de prácticos",
+   "audio": "w-station",
+   "ex": "x-station"
   }
  },
  "plate": {
@@ -423,6 +455,16 @@
     "word": "card",
     "x": 360,
     "y": 204
+   },
+   {
+    "word": "pilotboat",
+    "x": 118,
+    "y": 212
+   },
+   {
+    "word": "station",
+    "x": 26,
+    "y": 186
    }
   ]
  },
@@ -590,6 +632,14 @@
     {
      "type": "card",
      "word": "card"
+    },
+    {
+     "type": "card",
+     "word": "pilotboat"
+    },
+    {
+     "type": "card",
+     "word": "station"
     },
     {
      "type": "tap",

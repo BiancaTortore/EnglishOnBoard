@@ -47,3 +47,7 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L24 | `c-show-firedoor` | James | Show me the fire door. | Nueva |
 | L26 | `w-kit` | Brian (modelo) | first-aid kit | Nueva |
 | L26 | `x-kit` | Brian (modelo) | Bring the first-aid kit to the galley. | Nueva |
+| L27 | `w-pilotboat` | Brian (modelo) | pilot boat | Nueva |
+| L27 | `x-pilotboat` | Brian (modelo) | The pilot boat is alongside. | Nueva |
+| L27 | `w-station` | Brian (modelo) | pilot station | Nueva |
+| L27 | `x-station` | Brian (modelo) | Call the pilot station on channel twelve. | Nueva |
