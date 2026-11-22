@@ -45,3 +45,5 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L24 | `w-torch` | Brian (modelo) | torch | Nueva |
 | L24 | `x-torch` | Brian (modelo) | Take a torch. There is a lot of smoke. | Nueva |
 | L24 | `c-show-firedoor` | James | Show me the fire door. | Nueva |
+| L26 | `w-kit` | Brian (modelo) | first-aid kit | Nueva |
+| L26 | `x-kit` | Brian (modelo) | Bring the first-aid kit to the galley. | Nueva |

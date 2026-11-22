@@ -9,7 +9,7 @@
   "scene": "img/l26/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 4,
+ "mediaRev": 5,
  "radioChannel": "Sat phone",
  "audio": {
   "l26-01": {
@@ -173,6 +173,15 @@
    "voice": "model",
    "text": "Put on a pressure bandage.",
    "es": "Poné un vendaje compresivo."
+  },
+  "w-kit": {
+   "voice": "model",
+   "text": "first-aid kit"
+  },
+  "x-kit": {
+   "voice": "model",
+   "text": "Bring the first-aid kit to the galley.",
+   "es": "Traé el botiquín a la cocina."
   },
   "p-cut": {
    "voice": "model",
@@ -346,6 +355,13 @@
    "es": "venda, vendaje",
    "audio": "w-bandage",
    "ex": "x-bandage"
+  },
+  "kit": {
+   "en": "first-aid kit",
+   "ipa": "/ˌfɜːst ˈeɪd kɪt/",
+   "es": "botiquín",
+   "audio": "w-kit",
+   "ex": "x-kit"
   }
  },
  "plate": {
@@ -380,6 +396,11 @@
     "word": "bp",
     "x": 339,
     "y": 52
+   },
+   {
+    "word": "kit",
+    "x": 194,
+    "y": 30
    }
   ]
  },
@@ -584,6 +605,10 @@
     {
      "type": "card",
      "word": "bandage"
+    },
+    {
+     "type": "card",
+     "word": "kit"
     },
     {
      "type": "tap",
