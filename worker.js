@@ -29,6 +29,8 @@ export default {
       if (url.pathname === "/api/admin" && req.method === "POST") return adminData(req, env);
       if (url.pathname === "/admin" || url.pathname === "/admin/") return new Response(ADMIN_HTML, {headers: {"content-type": "text/html;charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex"}});
       if (url.pathname.startsWith("/api/")) return json({error: "not found"}, 404);
+      const lm = /^\/lessons\/lesson-(\d+)\.json$/.exec(url.pathname) || /^\/audio\/l(\d+)\//.exec(url.pathname);
+      if (lm && !(await isFree(+lm[1], url, env))) return lockedContent(req, env);
     } catch (e) {
       return json({error: "server"}, 500);
     }
@@ -124,6 +126,47 @@ async function progress(req, env) {
   return json({ok: true, stored: true});
 }
 
+/* ---------- paid content ----------
+   Lessons of the free modules (course.json → beta.openModules) are public. The lesson text and the voices of the
+   other modules go only to accounts with access (paid, given in /admin, or the author). The session travels in a
+   cookie, so audio tags and the offline download carry it on their own; what is already saved on the phone keeps
+   working at sea. */
+let FREE = null, FREE_AT = 0;
+async function isFree(n, url, env) {
+  if (!FREE || Date.now() - FREE_AT > 300e3) {
+    try {
+      const c = await (await env.ASSETS.fetch(new Request(url.origin + "/course.json"))).json();
+      const open = c.beta && c.beta.openModules;
+      FREE = new Set(c.modules.filter(m => !open || open.includes(m.n)).flatMap(m => m.lessons.map(l => l.n)));
+      FREE_AT = Date.now();
+    } catch (e) { return false; }
+  }
+  return FREE.has(n);
+}
+const ACCESS = new Map();   /* token → {ok, until}: one KV read per minute, not one per audio clip */
+async function hasAccess(tok, env) {
+  if (!tok || !env.DATA) return false;
+  const c = ACCESS.get(tok);
+  if (c && c.until > Date.now()) return c.ok;
+  const uid = await env.DATA.get(`s:${tok}`), a = uid && await kvJSON(env, `a:${uid}`);
+  const authors = String(env.AUTHOR_EMAILS || "").toLowerCase().split(/[\s,]+/).filter(Boolean);
+  const ok = !!(a && (a.paid || a.access || authors.includes(a.email)));
+  ACCESS.set(tok, {ok, until: Date.now() + 60e3});
+  if (ACCESS.size > 5000) ACCESS.clear();
+  return ok;
+}
+const cookieTok = req => { const m = /(?:^|;\s*)eob_s=([A-Za-z0-9_-]{20,80})/.exec(req.headers.get("cookie") || ""); return m && m[1]; };
+async function lockedContent(req, env) {
+  if (!(await hasAccess(cookieTok(req), env))) return json({error: "locked"}, 403);
+  const r = await env.ASSETS.fetch(req), h = new Headers(r.headers);
+  h.set("cache-control", "private, max-age=3600");
+  return new Response(r.body, {status: r.status, headers: h});
+}
+const withCookie = (res, tok) => {
+  res.headers.append("set-cookie", tok ? `eob_s=${tok}; Path=/; Max-Age=${SESSION_TTL}; Secure; HttpOnly; SameSite=Lax` : "eob_s=; Path=/; Max-Age=0; Secure; HttpOnly; SameSite=Lax");
+  return res;
+};
+
 /* ---------- accounts ----------
    Sign in with a 6-digit code sent by e-mail, or with Google. No passwords.
    KV:  e:<email> → uid · a:<uid> → account (with progress) · s:<token> → uid (180 days) · o:<email> → pending code (10 min)
@@ -147,23 +190,25 @@ async function accounts(req, url, env) {
   const tok = clip(b.token, 80), uid = tok && await env.DATA.get(`s:${tok}`);
   const acct = uid && await kvJSON(env, `a:${uid}`);
   if (!acct) return json({error: "signed out"}, 401);
-  if (p === "/api/me") return json({ok: true, user: publicUser(acct), progress: acct.progress || {}});
+  if (p === "/api/me") return withCookie(json({ok: true, user: publicUser(acct, env), progress: acct.progress || {}}), tok);
   if (p === "/api/me/progress") {
     acct.progress = b.replace ? mergeProgress({}, b.progress || {}) : mergeProgress(acct.progress || {}, b.progress || {});
     acct.updated = new Date().toISOString(); acct.device = clip(b.device, 20) || acct.device;
     const s = JSON.stringify(acct);
     if (s.length > 100000) return json({error: "too big"}, 413);
     await env.DATA.put(`a:${uid}`, s);
-    return json({ok: true, user: publicUser(acct), progress: acct.progress});
+    return withCookie(json({ok: true, user: publicUser(acct, env), progress: acct.progress}), tok);
   }
-  if (p === "/api/auth/logout") { await env.DATA.delete(`s:${tok}`); return json({ok: true}); }
+  if (p === "/api/auth/logout") { await env.DATA.delete(`s:${tok}`); ACCESS.delete(tok); return withCookie(json({ok: true}), null); }
   if (p === "/api/me/delete") {
     await Promise.all([env.DATA.delete(`a:${uid}`), env.DATA.delete(`e:${acct.email}`), env.DATA.delete(`s:${tok}`)]);
-    return json({ok: true});
+    ACCESS.delete(tok);
+    return withCookie(json({ok: true}), null);
   }
   return json({error: "not found"}, 404);
 }
-const publicUser = a => ({email: a.email, name: a.name || "", paid: !!a.paid, google: !!a.google});
+const publicUser = (a, env) => ({email: a.email, name: a.name || "", paid: !!a.paid, google: !!a.google,
+  access: !!(a.paid || a.access || String((env && env.AUTHOR_EMAILS) || "").toLowerCase().split(/[\s,]+/).includes(a.email))});
 
 async function authCode(b, env) {
   const email = clip(b.email, 254).toLowerCase();
@@ -232,7 +277,7 @@ async function signIn(env, email, extra, b) {
   await env.DATA.put(`a:${uid}`, JSON.stringify(acct));
   const token = rnd(32);
   await env.DATA.put(`s:${token}`, uid, {expirationTtl: SESSION_TTL});
-  return json({ok: true, token, user: publicUser(acct), progress: acct.progress});
+  return withCookie(json({ok: true, token, user: publicUser(acct, env), progress: acct.progress}), token);
 }
 /* progress from two phones: lessons keep every finished session and the best scores; tests keep the best */
 function mergeProgress(a, b) {
@@ -343,8 +388,16 @@ async function ping(req, env) {
 async function adminData(req, env) {
   let b; try { b = await body(req, 500); } catch (e) { return json({error: "bad request"}, 400); }
   const pin = String(b.pin || "");
-  const ok = env.ADMIN_PIN && pin.length === String(env.ADMIN_PIN).length && timingSafe(pin, String(env.ADMIN_PIN));
+  const ok0 = env.ADMIN_PIN && pin.length === String(env.ADMIN_PIN).length && timingSafe(pin, String(env.ADMIN_PIN));
+  const ok = ok0;
   if (!ok) { await new Promise(r => setTimeout(r, 1200)); return json({error: "wrong pin"}, 401); }
+  /* give or take away access to the full course (beta testers, companies, the author's second account) */
+  if (b.action === "access" && env.DATA) {
+    const email = clip(b.email, 254).toLowerCase(), uid = await env.DATA.get(`e:${email}`), a = uid && await kvJSON(env, `a:${uid}`);
+    if (!a) return json({error: "no account"}, 404);
+    a.access = !!b.value; await env.DATA.put(`a:${uid}`, JSON.stringify(a)); ACCESS.clear();
+    return json({ok: true});
+  }
   if (!env.DATA) return json({ok: true, configured: {data: false, email: !!(env.EMAIL && env.FEEDBACK_TO)}, feedback: [], devices: [], usage: []});
   const all = async prefix => {
     const out = []; let cursor;
@@ -356,7 +409,10 @@ async function adminData(req, env) {
     return out;
   };
   const [feedback, devices, usage, certs, accts] = await Promise.all([all("f:"), all("d:"), all("u:"), all("c:"), all("a:")]);
-  const accounts = {total: accts.length, google: accts.filter(a => a.google).length, paid: accts.filter(a => a.paid).length};
+  const accounts = {total: accts.length, google: accts.filter(a => a.google).length, paid: accts.filter(a => a.paid).length,
+    list: accts.map(a => ({email: a.email, created: a.created, updated: a.updated, google: !!a.google, paid: !!a.paid, access: !!a.access,
+      lessons: Object.keys(a.progress || {}).filter(k => /^l\d+$/.test(k) && ((a.progress[k].done || []).length >= 6)).length}))
+      .sort((x, y) => String(y.updated).localeCompare(String(x.updated)))};
   feedback.sort((a, b) => b.at.localeCompare(a.at));
   certs.sort((a, b) => b.at.localeCompare(a.at));
   return json({ok: true, configured: {data: true, email: !!(env.EMAIL && env.FEEDBACK_TO)}, feedback, devices, usage, certs, accounts});
@@ -391,6 +447,10 @@ $("#f").onsubmit=async e=>{e.preventDefault();$("#msg").textContent="…";
   const r=await fetch("/api/admin",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({pin:$("#pin").value})});
   if(!r.ok){$("#msg").textContent=r.status===401?"PIN incorrecto":"Error "+r.status;return}
   DATA=await r.json();$("#f").hidden=true;draw()};
+document.addEventListener("click",async e=>{const b=e.target.closest("[data-acc]");if(!b)return;b.disabled=true;
+  const r=await fetch("/api/admin",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({pin:$("#pin").value,action:"access",email:b.dataset.acc,value:b.dataset.v==="1"})});
+  if(!r.ok){b.disabled=false;alert("No se pudo");return}
+  const a=DATA.accounts.list.find(x=>x.email===b.dataset.acc);a.access=b.dataset.v==="1";draw()});
 const APPS={eob:"English on Board",blacklog:"BlackLog",certwatch:"CertWatch",onboarding:"Onboarding"};let TAB="eob";
 function draw(){
   $("#out").innerHTML='<nav class="tabs">'+Object.entries(APPS).map(([k,v])=>'<button class="'+(k===TAB?"on":"")+'" data-tab="'+k+'">'+v+'</button>').join("")+'</nav><div id="pane"></div>';
@@ -433,6 +493,7 @@ function drawEOB(){
   const tf=devices.filter(d=>d.tests&&d.tests.final);h+='<tr><td><b>Examen final</b></td><td>'+tf.length+'</td><td>'+tf.filter(d=>d.tests.final.passed).length+' aprobaron</td><td></td></tr></table>';
   const AC=DATA.accounts||{total:0,google:0,paid:0};
   h+='<h2>Cuentas</h2><p>'+AC.total+' cuentas · '+AC.google+' con Google · '+AC.paid+' pagaron</p>';
+  if((AC.list||[]).length)h+='<table><tr><th>Mail</th><th>Lecciones</th><th>Último uso</th><th>Curso completo</th></tr>'+AC.list.map(a=>'<tr><td>'+esc(a.email)+(a.google?' <span class="mu">· Google</span>':'')+'</td><td class="n">'+a.lessons+'</td><td>'+fecha(a.updated)+'</td><td>'+(a.paid?'Pagó':'<button data-acc="'+esc(a.email)+'" data-v="'+(a.access?0:1)+'">'+(a.access?'Quitar acceso':'Dar acceso')+'</button>')+'</td></tr>').join("")+'</table>';
   const C=DATA.certs||[];
   h+='<h2>Certificados ('+C.length+')</h2>'+(C.length?'<table><tr><th>Nombre</th><th>Código</th><th>Nota</th><th>Fecha</th></tr>'+C.map(c=>'<tr><td>'+esc(c.name)+'</td><td><a style="color:var(--ac)" href="/verify?c='+esc(c.code)+'" target="_blank">'+esc(c.code)+'</a></td><td class="n">'+c.pct+'%</td><td>'+esc(c.date)+'</td></tr>').join("")+'</table>':'<p class="mu">Todavía nadie terminó el curso.</p>');
   const dev={};devices.forEach(d=>dev[d.device||"?"]=(dev[d.device||"?"]||0)+1);

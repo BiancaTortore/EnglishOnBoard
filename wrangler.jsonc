@@ -10,11 +10,13 @@
     "directory": "./",
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
-    "run_worker_first": ["/api/*", "/admin", "/admin/", "/verify", "/verify/"]
+    "run_worker_first": ["/api/*", "/admin", "/admin/", "/verify", "/verify/", "/lessons/*", "/audio/*"]
   },
   // plain settings (not secret). Kept here because a deploy replaces what was typed in the dashboard.
   "vars": {
     "MAIL_FROM": "English on Board <login@chartroomlab.com>",
+    // accounts that always see the whole course
+    "AUTHOR_EMAILS": "biantortore@gmail.com",
     "GOOGLE_CLIENT_ID": "964654618857-mpmm8oq9jot1cpijrgcjetqo0e4don6p.apps.googleusercontent.com"
   },
   "send_email": [
