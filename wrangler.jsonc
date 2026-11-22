@@ -1,7 +1,7 @@
 // Cloudflare deploy config. The repo is a static site (no build step) with a small
 // worker in front for /api/* and /admin (feedback, anonymous progress, admin page).
 // Secrets set in the Cloudflare dashboard (never in this file): FEEDBACK_TO, ADMIN_PIN,
-// RESEND_KEY, MAIL_FROM and GOOGLE_CLIENT_ID (accounts).
+// RESEND_KEY (accounts). GOOGLE_CLIENT_ID goes in "vars" once there is one.
 {
   "name": "englishonboard",
   "main": "worker.js",
@@ -11,6 +11,10 @@
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
     "run_worker_first": ["/api/*", "/admin", "/admin/", "/verify", "/verify/"]
+  },
+  // plain settings (not secret). Kept here because a deploy replaces what was typed in the dashboard.
+  "vars": {
+    "MAIL_FROM": "English on Board <login@chartroomlab.com>"
   },
   "send_email": [
     { "name": "EMAIL" }

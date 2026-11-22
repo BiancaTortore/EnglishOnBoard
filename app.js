@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-45";
+const APP_VERSION = "beta-46";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -320,7 +320,7 @@ function syncProgress(open){
 const SESSION_KEY = "eob-session-v1";
 let session = null;
 try { session = JSON.parse(lsGet(SESSION_KEY) || "null"); } catch (e) {}
-const ACC = () => !!(COURSE && COURSE.accounts && COURSE.accounts.enabled);
+const ACC = () => !!(COURSE && COURSE.accounts && (COURSE.accounts.enabled || PREVIEW));   /* the author tries it in preview first */
 const signedIn = () => !!(session && session.token);
 const needAccount = n => ACC() && !signedIn() && n !== 1;
 function setSession(s){ session = s; s ? lsSet(SESSION_KEY, JSON.stringify(s)) : (() => { try { localStorage.removeItem(SESSION_KEY); } catch (e) {} })(); }
