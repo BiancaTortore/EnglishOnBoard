@@ -1,5 +1,5 @@
 {
- "n": 3, "modelAudio": true, "mediaRev": 4,
+ "n": 3, "modelAudio": true, "mediaRev": 5,
  "module": 1,
  "title": "Decks & spaces",
  "place": "Day 1 · 09:30 · Houston, accommodation",
@@ -136,6 +136,24 @@
    "voice": "model",
    "text": "There's a lift.",
    "es": "Hay un ascensor."
+  },
+  "w-smoking": {
+   "voice": "model",
+   "text": "smoking room"
+  },
+  "x-smoking": {
+   "voice": "model",
+   "text": "The smoking room is on B-deck.",
+   "es": "La sala de fumadores está en la cubierta B."
+  },
+  "w-recreation": {
+   "voice": "model",
+   "text": "recreation room"
+  },
+  "x-recreation": {
+   "voice": "model",
+   "text": "We watch films in the recreation room.",
+   "es": "Vemos películas en la sala de recreación."
   },
   "p-where": {
    "voice": "model",
@@ -301,6 +319,20 @@
    "es": "ascensor",
    "audio": "w-lift",
    "ex": "x-lift"
+  },
+  "smoking": {
+   "en": "smoking room",
+   "ipa": "/ˈsməʊkɪŋ ruːm/",
+   "es": "sala de fumadores",
+   "audio": "w-smoking",
+   "ex": "x-smoking"
+  },
+  "recreation": {
+   "en": "recreation room",
+   "ipa": "/ˌrekriˈeɪʃn ruːm/",
+   "es": "sala de recreación",
+   "audio": "w-recreation",
+   "ex": "x-recreation"
   }
  },
  "plate": {
@@ -313,8 +345,8 @@
    },
    {
     "word": "laundry",
-    "x": 214,
-    "y": 165
+    "x": 210,
+    "y": 172
    },
    {
     "word": "mess",
@@ -323,8 +355,8 @@
    },
    {
     "word": "cabin",
-    "x": 130,
-    "y": 87
+    "x": 135,
+    "y": 80
    },
    {
     "word": "engine",
@@ -340,6 +372,16 @@
     "word": "stairs",
     "x": 280,
     "y": 139
+   },
+   {
+    "word": "smoking",
+    "x": 114,
+    "y": 100
+   },
+   {
+    "word": "recreation",
+    "x": 200,
+    "y": 104
    }
   ]
  },
@@ -368,7 +410,7 @@
      ],
      [
       "B-DECK",
-      "Crew cabins, hospital"
+      "Crew cabins, hospital, smoking room, recreation room"
      ],
      [
       "A-DECK",
@@ -567,6 +609,14 @@
     {
      "type": "card",
      "word": "lift"
+    },
+    {
+     "type": "card",
+     "word": "smoking"
+    },
+    {
+     "type": "card",
+     "word": "recreation"
     },
     {
      "type": "tap",
