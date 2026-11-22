@@ -1,5 +1,5 @@
 {
- "n": 11, "modelAudio": true, "mediaRev": 2,
+ "n": 11, "modelAudio": true, "mediaRev": 3,
  "module": 3,
  "title": "Mooring & letting go",
  "place": "Day 2 · 17:20 · Houston, aft mooring station",
@@ -166,6 +166,24 @@
    "voice": "model",
    "text": "Heave in the spring.",
    "es": "Virá el esprín."
+  },
+  "w-slackaway": {
+   "voice": "model",
+   "text": "slack away"
+  },
+  "x-slackaway": {
+   "voice": "model",
+   "text": "Slack away the stern line.",
+   "es": "Arriá el largo de popa."
+  },
+  "w-headline": {
+   "voice": "model",
+   "text": "head line"
+  },
+  "x-headline": {
+   "voice": "model",
+   "text": "The head lines are on the forecastle.",
+   "es": "Los largos de proa están en el castillo de proa."
   },
   "p-singleup": {
    "voice": "model",
@@ -351,6 +369,20 @@
    "es": "virar, cobrar",
    "audio": "w-heave",
    "ex": "x-heave"
+  },
+  "slackaway": {
+   "en": "slack away",
+   "ipa": "/ˌslæk əˈweɪ/",
+   "es": "arriar",
+   "audio": "w-slackaway",
+   "ex": "x-slackaway"
+  },
+  "headline": {
+   "en": "head line",
+   "ipa": "/ˈhed laɪn/",
+   "es": "largo de proa",
+   "audio": "w-headline",
+   "ex": "x-headline"
   }
  },
  "plate": {
@@ -395,6 +427,11 @@
     "word": "heave",
     "x": 244,
     "y": 92
+   },
+   {
+    "word": "slackaway",
+    "x": 308,
+    "y": 148
    }
   ]
  },
@@ -567,6 +604,10 @@
     },
     {
      "type": "card",
+     "word": "headline"
+    },
+    {
+     "type": "card",
      "word": "spring"
     },
     {
@@ -603,6 +644,10 @@
     {
      "type": "card",
      "word": "heave"
+    },
+    {
+     "type": "card",
+     "word": "slackaway"
     },
     {
      "type": "tap",
