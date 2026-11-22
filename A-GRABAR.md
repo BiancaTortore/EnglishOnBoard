@@ -34,3 +34,5 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L14 | `x-range` | Brian (modelo) | Change the range to six miles. | Nueva |
 | L14 | `w-brill` | Brian (modelo) | brilliance | Nueva |
 | L14 | `x-brill` | Brian (modelo) | Turn down the brilliance at night. | Nueva |
+| L19 | `w-flow` | Brian (modelo) | flow | Nueva |
+| L19 | `x-flow` | Brian (modelo) | The gas flow to the engines is steady. | Nueva |

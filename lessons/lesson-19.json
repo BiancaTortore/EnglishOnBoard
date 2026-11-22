@@ -150,6 +150,15 @@
    "text": "The figures are checked twice.",
    "es": "Las cifras se controlan dos veces."
   },
+  "w-flow": {
+   "voice": "model",
+   "text": "flow"
+  },
+  "x-flow": {
+   "voice": "model",
+   "text": "The gas flow to the engines is steady.",
+   "es": "El caudal de gas a las máquinas es estable."
+  },
   "p-measured": {
    "voice": "model",
    "text": "The volume is measured in cubic metres.",
@@ -315,6 +324,13 @@
    "es": "cifras",
    "audio": "w-figures",
    "ex": "x-figures"
+  },
+  "flow": {
+   "en": "flow",
+   "ipa": "/fləʊ/",
+   "es": "caudal",
+   "audio": "w-flow",
+   "ex": "x-flow"
   }
  },
  "plate": {
@@ -349,6 +365,11 @@
     "word": "discrepancy",
     "x": 280,
     "y": 68
+   },
+   {
+    "word": "flow",
+    "x": 232,
+    "y": 14
    }
   ]
  },
@@ -542,6 +563,10 @@
     {
      "type": "card",
      "word": "boiloff"
+    },
+    {
+     "type": "card",
+     "word": "flow"
     },
     {
      "type": "tap",
@@ -1005,5 +1030,5 @@
   }
  ],
  "modelAudio": true,
- "mediaRev": 1
+ "mediaRev": 2
 }
