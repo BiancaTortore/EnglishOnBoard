@@ -21,13 +21,20 @@
   <rect x="40" y="58" width="120" height="84" class="p-super" style="stroke:var(--hull)" stroke-width="1"/>
   <rect x="96" y="80" width="22" height="40" rx="3" class="p-hull" opacity=".55"/>
   <!-- winch drums on deck -->
-  <g transform="translate(222 124)">
+  <g transform="translate(200 124)">
     <rect x="-16" y="-8" width="32" height="16" rx="3" class="p-white"/>
     <rect x="-8" y="-11" width="16" height="22" rx="2" class="p-hull" opacity=".6"/>
   </g>
-  <!-- heave-in arrow by the winch -->
-  <path d="M244 108 A12 12 0 1 1 236 98" fill="none" style="stroke:var(--antifoul)" stroke-width="2.4"/>
-  <path d="M232 92 L238 98 L230 102 Z" style="fill:var(--antifoul)"/>
+  <!-- the winch works two stern lines:
+       heave in = the lower line is tight and the arrow points in, to the winch;
+       slack away = the upper line sags in waves and the arrow points out, away from the winch -->
+  <g fill="none" style="stroke:#E9C46A" stroke-width="2.4" stroke-linecap="round">
+    <path d="M214 130 L268 150"/>
+    <path d="M214 118 Q220 104 230 104 q6 -6 11 0 t11 0 t11 0 t11 0 Q284 106 288 134"/>
+  </g>
+  <g style="stroke:var(--antifoul)" stroke-width="2.6" fill="none" stroke-linecap="round"><path d="M262 132 L236 122"/><path d="M234 88 L262 88"/></g>
+  <path d="M229 119 L239 116 L236 126 Z" style="fill:var(--antifoul)"/>
+  <path d="M269 88 L261 83 L261 93 Z" style="fill:var(--antifoul)"/>
   <!-- fairleads on the port side (ship's edge) -->
   <g class="p-white" style="stroke:var(--hull)" stroke-width="1">
     <rect x="186" y="150" width="12" height="7" rx="2"/><rect x="226" y="150" width="12" height="7" rx="2"/>
