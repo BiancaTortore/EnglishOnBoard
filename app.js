@@ -34,7 +34,7 @@ const RESPELL = {starboard:"starbuhd", bosun:"bohsun", forecastle:"fohksul", "fo
 const KEY = "eob-progress-v1";
 let progress = {};
 try { progress = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) {}
-function saveProgress(){ try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch (e) {} }
+function saveProgress(){ try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch (e) {} accountPushSoon(); }
 function lessonProgress(n){ return progress["l"+n] || (progress["l"+n] = {done:[], scores:{}}); }
 
 /* settings (speed) — per device */
@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-44";
+const APP_VERSION = "beta-45";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -282,6 +282,10 @@ function saveOutbox(o){ lsSet(OUTBOX_KEY, JSON.stringify(o.slice(-50))); }
 function enqueue(url, body){
   let o = outbox();
   if (url === "/api/progress") o = o.filter(x => x.url !== url);   /* only the latest snapshot matters */
+  if (url === "/api/me/progress") {
+    if (o.some(x => x.url === url && x.body.replace)) body = {...body, replace: true};   /* a reset still waiting must not be lost */
+    o = o.filter(x => x.url !== url);
+  }
   o.push({url, body}); saveOutbox(o); flushOutbox();
 }
 let flushing = false;
@@ -307,6 +311,149 @@ function syncProgress(open){
   const tests = {};
   Object.entries(progress.tests || {}).forEach(([k, v]) => tests[k] = {best: v.best, passed: v.passed});
   enqueue("/api/progress", {id: deviceId(), device: platform(), installed: isStandalone(), open: !!open, lessons, tests});
+}
+
+/* ---------- account ----------
+   Lesson 1 works without an account; from Lesson 2 on the learner signs in (6-digit code by e-mail, or Google).
+   The progress lives on the phone and in the account: every change is sent, and on start-up the account copy
+   (maybe from another phone) is merged in. Switched on in course.json → "accounts": {"enabled": true, "google": "<client id>"}. */
+const SESSION_KEY = "eob-session-v1";
+let session = null;
+try { session = JSON.parse(lsGet(SESSION_KEY) || "null"); } catch (e) {}
+const ACC = () => !!(COURSE && COURSE.accounts && COURSE.accounts.enabled);
+const signedIn = () => !!(session && session.token);
+const needAccount = n => ACC() && !signedIn() && n !== 1;
+function setSession(s){ session = s; s ? lsSet(SESSION_KEY, JSON.stringify(s)) : (() => { try { localStorage.removeItem(SESSION_KEY); } catch (e) {} })(); }
+let pushTimer = 0;
+function accountPushSoon(){
+  if (!signedIn()) return;
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(() => enqueue("/api/me/progress", {token: session.token, device: platform(), progress}), 1500);
+}
+async function api(path, body){
+  const r = await fetch(path, {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify(body)});
+  let j = {}; try { j = await r.json(); } catch (e) {}
+  if (r.status === 401 && body.token) { setSession(null); }
+  if (!r.ok) throw Object.assign(new Error(j.error || "error"), {status: r.status, code: j.error});
+  return j;
+}
+/* on start-up: bring in what the account has (another phone may have done more) */
+async function accountPull(){
+  if (!signedIn() || !navigator.onLine) return;
+  try {
+    const j = await api("/api/me/progress", {token: session.token, device: platform(), progress});
+    progress = j.progress || progress; setSession({...session, user: j.user});
+    try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch (e) {}
+  } catch (e) {}
+}
+function signedInAs(j){
+  setSession({token: j.token, user: j.user});
+  progress = j.progress || progress;
+  try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch (e) {}
+}
+function signInNav(next){ navPush({v: "signin", n: next || 0}); viewSignIn(next || 0); }
+function viewSignIn(next){
+  stopAll(); clearBar(); clearTabs();
+  const g = COURSE.accounts && COURSE.accounts.google;
+  app.innerHTML = `<div class="home fb-view signin">
+    <button class="back-link" id="sBack">${I.back} Back</button>
+    <span class="mono kicker">${next > 1 ? "Free account" : "Your account"}</span>
+    <h2 class="prompt" style="font-size:34px">${next > 1 ? "Keep going with a free account" : "Sign in"}</h2>
+    <p class="sub" style="margin-top:-8px">${next > 1 ? "The rest of Module 1 is free. Your account keeps your progress safe, also if you change phone." : "Your progress is saved in your account, on every phone you use."}</p>
+    <p class="sub" style="margin:-6px 0 0">${next > 1 ? "El resto del Módulo 1 es gratis. Con la cuenta tu avance queda guardado, aunque cambies de celular." : "Tu avance queda guardado en tu cuenta."}</p>
+    ${navigator.onLine ? "" : `<p class="note">You need a connection to sign in. Your lessons stay on this phone.</p>`}
+    ${g ? `<div id="gBtn" class="g-btn"></div><div class="or"><span>or with your e-mail</span></div>` : ""}
+    <section class="panel fb-form" id="sForm">
+      <label class="fb-l" for="sMail">E-mail</label>
+      <input class="field" id="sMail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" value="${esc((session && session.user && session.user.email) || "")}">
+      <div id="sCodeBox" hidden>
+        <label class="fb-l" for="sCode">Code</label>
+        <input class="field code-field" id="sCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6 numbers">
+        <p class="sub" style="margin:6px 0 0" id="sSent"></p>
+      </div>
+      <p class="sub err" id="sErr" hidden></p>
+    </section>
+    <p class="note">We keep your e-mail and your progress, nothing else. You can delete your account in Profile.</p></div>`;
+  setBar(`<button class="cta" id="go">Send me a code</button>`);
+  $("#sBack").onclick = navBack;
+  const mail = $("#sMail"), code = $("#sCode"), err = t => { const e = $("#sErr"); e.hidden = !t; e.textContent = t || ""; };
+  let step = "mail";
+  const done = () => {
+    syncProgress(false);
+    if (next > 0) { navReplace({v: "lesson", n: next}, "#l" + next); openLesson(next); }
+    else navBack();
+  };
+  const go = async () => {
+    err("");
+    if (!navigator.onLine) { err("No connection. Try again when you have signal."); return; }
+    const b = $("#go"); b.disabled = true;
+    try {
+      if (step === "mail") {
+        const e = mail.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(e)) { err("Check the e-mail address."); return; }
+        await api("/api/auth/code", {email: e});
+        step = "code"; $("#sCodeBox").hidden = false; mail.readOnly = true;
+        $("#sSent").innerHTML = `We sent a code to <b>${esc(e)}</b>. Check also the spam folder. <button class="link-btn" id="sOther">Use another e-mail</button>`;
+        $("#sOther").onclick = () => { step = "mail"; mail.readOnly = false; $("#sCodeBox").hidden = true; code.value = ""; b.textContent = "Send me a code"; mail.focus(); };
+        b.textContent = "Sign in"; code.focus();
+      } else {
+        const j = await api("/api/auth/verify", {email: mail.value.trim(), code: code.value.trim(), id: deviceId(), device: platform(), progress});
+        signedInAs(j); done();
+      }
+    } catch (e) {
+      err(e.code === "wrong code" ? "That code is not right. Check it and try again."
+        : e.code === "expired" ? "The code expired. Ask for a new one."
+        : e.code === "too many" ? "Too many codes for this e-mail. Wait an hour and try again."
+        : e.code === "bad email" ? "Check the e-mail address."
+        : "Something went wrong. Try again in a moment.");
+      if (e.code === "expired") { step = "mail"; mail.readOnly = false; $("#sCodeBox").hidden = true; b.textContent = "Send me a code"; }
+    } finally { b.disabled = false; }
+  };
+  $("#go").onclick = go;
+  mail.onkeydown = code.onkeydown = e => { if (e.key === "Enter") go(); };
+  code.oninput = () => { if (code.value.replace(/\D/g, "").length === 6) go(); };
+  if (g && navigator.onLine) loadGoogle().then(() => {
+    const el = $("#gBtn"); if (!el || !window.google) return;
+    google.accounts.id.initialize({client_id: g, callback: async r => {
+      err("");
+      try { signedInAs(await api("/api/auth/google", {credential: r.credential, id: deviceId(), device: platform(), progress})); done(); }
+      catch (e) { err("Google sign-in didn't work. Try with your e-mail."); }
+    }});
+    google.accounts.id.renderButton(el, {theme: "outline", size: "large", text: "continue_with", shape: "pill", width: Math.min(360, el.clientWidth || 320)});
+  }).catch(() => { const el = $("#gBtn"); if (el) el.remove(); });
+  window.scrollTo(0, 0);
+}
+let gLoad = null;
+function loadGoogle(){
+  return gLoad || (gLoad = new Promise((ok, no) => {
+    const sc = document.createElement("script"); sc.src = "https://accounts.google.com/gsi/client"; sc.async = true;
+    sc.onload = ok; sc.onerror = () => { gLoad = null; no(); }; document.head.appendChild(sc);
+  }));
+}
+function accountCardHTML(){
+  if (!ACC()) return "";
+  if (!signedIn()) return `<button class="pcard" id="accIn"><span class="pcard-ico">${I.user}</span><span><b>Sign in</b><small>Keep your progress safe in a free account</small></span>${I.chev}</button>`;
+  const u = session.user || {};
+  return `<section class="panel setting acc">
+    <div><b>Account</b><span class="sub">${esc(u.email || "")}${u.google ? " · Google" : ""}</span></div>
+    <div class="acc-btns"><button class="chip-btn" id="accOut">Sign out</button><button class="chip-btn danger" id="accDel">Delete account</button></div></section>`;
+}
+function wireAccount(){
+  const i = $("#accIn"); if (i) i.onclick = () => signInNav(0);
+  const o = $("#accOut");
+  if (o) o.onclick = async () => {
+    if (!confirm("Sign out? Your progress stays in your account. This phone starts empty until you sign in again.")) return;
+    try { await api("/api/auth/logout", {token: session.token}); } catch (e) {}
+    setSession(null); progress = {}; try { localStorage.setItem(KEY, "{}"); } catch (e) {}
+    goHome();
+  };
+  const d = $("#accDel");
+  if (d) d.onclick = async () => {
+    if (!navigator.onLine) { alert("You need a connection to delete your account."); return; }
+    if (!confirm("Delete your account? Your e-mail and your saved progress are erased from the server. This can't be undone.")) return;
+    try { await api("/api/me/delete", {token: session.token}); } catch (e) { if (e.status !== 401) { alert("It didn't work. Try again later."); return; } }
+    setSession(null); goHome();
+  };
 }
 
 /* ---------- install on the phone ---------- */
@@ -429,6 +576,7 @@ const I = {
   t_logbook:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M13 4H5v16h14v-8"/><path d="M17.5 3.5l3 3L12 15l-4 1 1-4z"/></svg>',
   t_profile:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>',
   chev:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+  user:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>',
   lock:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
   flag:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
   play:'<svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>',
@@ -483,8 +631,14 @@ function tabNav(k){
   if ((navState().d || 0) === 0) navPush({v: k}); else navReplace({v: k});
   fn();
 }
-function openLessonNav(n){ navPush({v: "lesson", n}, "#l" + n); openLesson(n); }
-function drillNav(kind, mod){ navPush({v: "drill"}); startDrill(kind, mod); }
+function openLessonNav(n){
+  if (needAccount(n)) { signInNav(n); return; }
+  navPush({v: "lesson", n}, "#l" + n); openLesson(n);
+}
+function drillNav(kind, mod){
+  if ((kind === "test" || kind === "final") && needAccount(0)) { signInNav(0); return; }
+  navPush({v: "drill"}); startDrill(kind, mod);
+}
 function reviewNav(){ navPush({v: "review"}); startReview(); }
 window.addEventListener("popstate", e => {
   const st = e.state || {v: "home", d: 0};
@@ -500,6 +654,7 @@ function showState(st){
   if (st.v === "vocab") { viewVocab(st.m); return; }
   if (st.v === "welcome") { viewWelcome(); return; }
   if (st.v === "cert") { viewCert(); return; }
+  if (st.v === "signin") { if (signedIn()) { goHome(); return; } viewSignIn(st.n || 0); return; }
   if (st.v === "certform") { viewCertForm(); return; }
   if (TAB_VIEWS[st.v]) { TAB_VIEWS[st.v](); return; }
   /* drills and reviews can't be resumed: land on the screen below */
@@ -885,6 +1040,7 @@ function viewProfile(){
       <div><b>${avg}</b><span>right first time</span></div><div><b>${passed}</b><span>module ${passed === 1 ? "test" : "tests"} passed</span></div>
     </div>
     ${progress.cert ? `<button class="pcard" data-cert><span class="pcard-ico">${I.check}</span><span><b>Your certificate</b><small>${esc(progress.cert.code)} · ${progress.cert.pct}%</small></span>${I.chev}</button>` : ""}
+    ${accountCardHTML()}
     <button class="pcard" id="fbOpen"><span class="pcard-ico">${I.msg}</span><span><b>Send feedback</b><small>Tell us what works and what to improve</small></span>${I.chev}</button>
     ${installCardHTML("profile")}
     <section class="panel setting">
@@ -899,12 +1055,12 @@ function viewProfile(){
       <button class="chip-btn" id="showWelcome">Show intro</button>
     </section>
     <section class="panel setting">
-      <div><b>Reset progress</b><span class="sub">Clears lessons, scores, tests and the review list on this device.</span></div>
+      <div><b>Reset progress</b><span class="sub">Clears lessons, scores, tests and the review list${signedIn() ? ", here and in your account" : " on this device"}.</span></div>
       <button class="chip-btn danger" id="reset">Reset progress</button>
     </section>
     ${betaNoteHTML()}
     <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>`);
-  wireInstall();
+  wireInstall(); wireAccount();
   $("#fbOpen").onclick = () => { navPush({v: "feedback"}); viewFeedback(); };
   $$("[data-cert]").forEach(b => b.onclick = () => openCertNav(false));
   offlineSummary().then(r => {
@@ -921,7 +1077,9 @@ function viewProfile(){
   let armed = false; const reset = $("#reset");
   reset.onclick = () => {
     if (!armed) { armed = true; reset.textContent = "Tap again to erase"; reset.classList.add("armed"); return; }
-    progress = {}; saveProgress(); goHome();
+    progress = {}; try { localStorage.setItem(KEY, "{}"); } catch (e) {}
+    if (signedIn()) enqueue("/api/me/progress", {token: session.token, device: platform(), progress: {}, replace: true});
+    goHome();
   };
 }
 const viewSettings = viewProfile;
@@ -1824,6 +1982,7 @@ function viewWelcome(){
   /* beta: only the open modules can be used; preview mode (for the author) opens everything ready */
   const open = COURSE.beta && COURSE.beta.openModules;
   if (open && !PREVIEW) COURSE.modules.forEach(m => { if (!open.includes(m.n)) m.lessons.forEach(l => { l.ready = false; }); });
+  if (ACC()) await Promise.race([accountPull(), new Promise(r => setTimeout(r, 2500))]);
   syncProgress(true); flushOutbox();
   setTimeout(saveForOffline, 300);
   window.addEventListener("online", () => setTimeout(saveForOffline, 1500));

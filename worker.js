@@ -24,6 +24,7 @@ export default {
       if (url.pathname === "/api/progress" && req.method === "POST") return progress(req, env);
       if (url.pathname === "/api/ping") return ping(req, env);
       if (url.pathname === "/api/cert" && req.method === "POST") return certSave(req, env);
+      if (url.pathname.startsWith("/api/auth/") || url.pathname.startsWith("/api/me")) return accounts(req, url, env);
       if (url.pathname === "/verify" || url.pathname === "/verify/") return verify(url, env);
       if (url.pathname === "/api/admin" && req.method === "POST") return adminData(req, env);
       if (url.pathname === "/admin" || url.pathname === "/admin/") return new Response(ADMIN_HTML, {headers: {"content-type": "text/html;charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex"}});
@@ -123,6 +124,140 @@ async function progress(req, env) {
   return json({ok: true, stored: true});
 }
 
+/* ---------- accounts ----------
+   Sign in with a 6-digit code sent by e-mail, or with Google. No passwords.
+   KV:  e:<email> → uid · a:<uid> → account (with progress) · s:<token> → uid (180 days) · o:<email> → pending code (10 min)
+   Secrets/vars (Cloudflare dashboard): RESEND_KEY, MAIL_FROM ("English on Board <login@chartroomlab.com>"), GOOGLE_CLIENT_ID */
+const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[a-z]{2,}$/i;
+const SESSION_TTL = 180 * 86400;
+const b64url = buf => btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const sha = async t => b64url(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)));
+const rnd = n => b64url(crypto.getRandomValues(new Uint8Array(n)));
+const kvJSON = async (env, k) => JSON.parse((await env.DATA.get(k)) || "null");
+
+async function accounts(req, url, env) {
+  if (!env.DATA) return json({error: "not configured"}, 503);
+  const p = url.pathname;
+  if (req.method !== "POST") return json({error: "method"}, 405);
+  let b; try { b = await body(req, 60000); } catch (e) { return json({error: "bad request"}, 400); }
+  if (p === "/api/auth/code") return authCode(b, env);
+  if (p === "/api/auth/verify") return authVerify(b, env);
+  if (p === "/api/auth/google") return authGoogle(b, env);
+  /* everything below needs a session */
+  const tok = clip(b.token, 80), uid = tok && await env.DATA.get(`s:${tok}`);
+  const acct = uid && await kvJSON(env, `a:${uid}`);
+  if (!acct) return json({error: "signed out"}, 401);
+  if (p === "/api/me") return json({ok: true, user: publicUser(acct), progress: acct.progress || {}});
+  if (p === "/api/me/progress") {
+    acct.progress = b.replace ? mergeProgress({}, b.progress || {}) : mergeProgress(acct.progress || {}, b.progress || {});
+    acct.updated = new Date().toISOString(); acct.device = clip(b.device, 20) || acct.device;
+    const s = JSON.stringify(acct);
+    if (s.length > 100000) return json({error: "too big"}, 413);
+    await env.DATA.put(`a:${uid}`, s);
+    return json({ok: true, user: publicUser(acct), progress: acct.progress});
+  }
+  if (p === "/api/auth/logout") { await env.DATA.delete(`s:${tok}`); return json({ok: true}); }
+  if (p === "/api/me/delete") {
+    await Promise.all([env.DATA.delete(`a:${uid}`), env.DATA.delete(`e:${acct.email}`), env.DATA.delete(`s:${tok}`)]);
+    return json({ok: true});
+  }
+  return json({error: "not found"}, 404);
+}
+const publicUser = a => ({email: a.email, name: a.name || "", paid: !!a.paid, google: !!a.google});
+
+async function authCode(b, env) {
+  const email = clip(b.email, 254).toLowerCase();
+  if (!EMAIL_RE.test(email)) return json({error: "bad email"}, 400);
+  if (!env.RESEND_KEY || !env.MAIL_FROM) return json({error: "mail not configured"}, 503);
+  /* at most 5 codes per address per hour */
+  const rk = `r:${email}`, n = +(await env.DATA.get(rk) || 0);
+  if (n >= 5) return json({error: "too many"}, 429);
+  await env.DATA.put(rk, String(n + 1), {expirationTtl: 3600});
+  const code = String(100000 + (crypto.getRandomValues(new Uint32Array(1))[0] % 900000));
+  await env.DATA.put(`o:${email}`, JSON.stringify({h: await sha(code + email), tries: 0}), {expirationTtl: 600});
+  const html = `<div style="font-family:system-ui,sans-serif;font-size:16px;color:#13212D">
+    <p>Your English on Board sign-in code:</p><p style="font-size:32px;font-weight:700;letter-spacing:6px;margin:12px 0">${code}</p>
+    <p style="color:#5B6670">It works for 10 minutes. If you didn't ask for it, ignore this e-mail.</p>
+    <p style="color:#5B6670">Tu código para entrar a English on Board. Vale 10 minutos.</p></div>`;
+  const r = await fetch("https://api.resend.com/emails", {method: "POST",
+    headers: {"authorization": `Bearer ${env.RESEND_KEY}`, "content-type": "application/json"},
+    body: JSON.stringify({from: env.MAIL_FROM, to: [email], subject: `${code} is your English on Board code`, html,
+      text: `Your English on Board sign-in code: ${code}\nIt works for 10 minutes.`})});
+  if (!r.ok) return json({error: "mail failed"}, 502);
+  return json({ok: true});
+}
+async function authVerify(b, env) {
+  const email = clip(b.email, 254).toLowerCase(), code = clip(b.code, 10).replace(/\D/g, "");
+  const k = `o:${email}`, o = await kvJSON(env, k);
+  if (!o) return json({error: "expired"}, 400);
+  if (o.h !== await sha(code + email)) {
+    o.tries++;
+    if (o.tries >= 5) await env.DATA.delete(k); else await env.DATA.put(k, JSON.stringify(o), {expirationTtl: 600});
+    return json({error: o.tries >= 5 ? "expired" : "wrong code"}, 400);
+  }
+  await env.DATA.delete(k);
+  return signIn(env, email, {}, b);
+}
+let GKEYS = null, GKEYS_AT = 0;
+async function authGoogle(b, env) {
+  if (!env.GOOGLE_CLIENT_ID) return json({error: "google not configured"}, 503);
+  const parts = clip(b.credential, 4000).split(".");
+  if (parts.length !== 3) return json({error: "bad token"}, 400);
+  const dec = s => JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/")), c => c.charCodeAt(0))));
+  let head, claims; try { head = dec(parts[0]); claims = dec(parts[1]); } catch (e) { return json({error: "bad token"}, 400); }
+  if (!GKEYS || Date.now() - GKEYS_AT > 3600e3) { GKEYS = (await (await fetch("https://www.googleapis.com/oauth2/v3/certs")).json()).keys; GKEYS_AT = Date.now(); }
+  const jwk = GKEYS.find(k => k.kid === head.kid);
+  if (!jwk || head.alg !== "RS256") return json({error: "bad token"}, 400);
+  const key = await crypto.subtle.importKey("jwk", jwk, {name: "RSASSA-PKCS1-v1_5", hash: "SHA-256"}, false, ["verify"]);
+  const sig = Uint8Array.from(atob(parts[2].replace(/-/g, "+").replace(/_/g, "/")), c => c.charCodeAt(0));
+  const ok = await crypto.subtle.verify("RSASSA-PKCS1-v1_5", key, sig, new TextEncoder().encode(parts[0] + "." + parts[1]));
+  if (!ok || claims.aud !== env.GOOGLE_CLIENT_ID || !["accounts.google.com", "https://accounts.google.com"].includes(claims.iss)
+      || claims.exp * 1000 < Date.now() || !claims.email || !claims.email_verified) return json({error: "bad token"}, 400);
+  return signIn(env, String(claims.email).toLowerCase(), {google: claims.sub, name: clip(claims.name, 80)}, b);
+}
+async function signIn(env, email, extra, b) {
+  let uid = await env.DATA.get(`e:${email}`), acct = uid && await kvJSON(env, `a:${uid}`);
+  if (!acct) {
+    uid = rnd(12);
+    acct = {uid, email, created: new Date().toISOString(), paid: false, progress: {}};
+    await env.DATA.put(`e:${email}`, uid);
+  }
+  if (extra.google) acct.google = extra.google;
+  if (extra.name && !acct.name) acct.name = extra.name;
+  /* the progress already on the phone joins the account */
+  if (b.progress) acct.progress = mergeProgress(acct.progress || {}, b.progress);
+  acct.updated = new Date().toISOString(); acct.device = clip(b.device, 20) || acct.device;
+  const dev = clip(b.id, 40);
+  if (dev) acct.devices = [...new Set([...(acct.devices || []), dev])].slice(-10);
+  await env.DATA.put(`a:${uid}`, JSON.stringify(acct));
+  const token = rnd(32);
+  await env.DATA.put(`s:${token}`, uid, {expirationTtl: SESSION_TTL});
+  return json({ok: true, token, user: publicUser(acct), progress: acct.progress});
+}
+/* progress from two phones: lessons keep every finished session and the best scores; tests keep the best */
+function mergeProgress(a, b) {
+  const out = {...a};
+  for (const [k, v] of Object.entries(b || {})) {
+    if (/^l\d{1,2}$/.test(k) && v && typeof v === "object") {
+      const o = out[k] || {done: [], scores: {}};
+      const done = [...new Set([...(o.done || []), ...(Array.isArray(v.done) ? v.done : [])].map(x => clip(x, 20)))].slice(0, 12);
+      const scores = {...(o.scores || {})};
+      for (const [s, n] of Object.entries(v.scores || {})) if (typeof n === "number") scores[clip(s, 20)] = Math.max(scores[s] || 0, n);
+      out[k] = {...o, ...v, done, scores};
+    } else if (k === "tests" && v && typeof v === "object") {
+      const t = {...(out.tests || {})};
+      for (const [m, r] of Object.entries(v)) {
+        if (!/^(m\d|final)$/.test(m) || !r) continue;
+        const p = t[m] || {};
+        t[m] = {best: Math.max(p.best || 0, r.best || 0), passed: !!(p.passed || r.passed), last: r.last ?? p.last};
+      }
+      out.tests = t;
+    } else if (k === "cert" && v && !out.cert) out.cert = v;
+    else if (!(k in out)) out[k] = v;   /* review queue and other small things: the first copy wins */
+  }
+  return out;
+}
+
 /* ---------- certificates ---------- */
 const CERT_RE = /^EOB-[A-Z2-9]{4}-[A-Z2-9]{4}$/;
 async function certSave(req, env) {
@@ -220,10 +355,11 @@ async function adminData(req, env) {
     } while (cursor && out.length < 5000);
     return out;
   };
-  const [feedback, devices, usage, certs] = await Promise.all([all("f:"), all("d:"), all("u:"), all("c:")]);
+  const [feedback, devices, usage, certs, accts] = await Promise.all([all("f:"), all("d:"), all("u:"), all("c:"), all("a:")]);
+  const accounts = {total: accts.length, google: accts.filter(a => a.google).length, paid: accts.filter(a => a.paid).length};
   feedback.sort((a, b) => b.at.localeCompare(a.at));
   certs.sort((a, b) => b.at.localeCompare(a.at));
-  return json({ok: true, configured: {data: true, email: !!(env.EMAIL && env.FEEDBACK_TO)}, feedback, devices, usage, certs});
+  return json({ok: true, configured: {data: true, email: !!(env.EMAIL && env.FEEDBACK_TO)}, feedback, devices, usage, certs, accounts});
 }
 function timingSafe(a, b) { let r = 0; for (let i = 0; i < a.length; i++) r |= a.charCodeAt(i) ^ b.charCodeAt(i); return r === 0; }
 
@@ -295,6 +431,8 @@ function drawEOB(){
     const k="m"+(i+1),tt=devices.filter(d=>d.tests&&d.tests[k]);
     h+='<tr><td><b>Test Módulo '+(i+1)+'</b></td><td>'+tt.length+'</td><td>'+tt.filter(d=>d.tests[k].passed).length+' aprobaron</td><td></td></tr>'});
   const tf=devices.filter(d=>d.tests&&d.tests.final);h+='<tr><td><b>Examen final</b></td><td>'+tf.length+'</td><td>'+tf.filter(d=>d.tests.final.passed).length+' aprobaron</td><td></td></tr></table>';
+  const AC=DATA.accounts||{total:0,google:0,paid:0};
+  h+='<h2>Cuentas</h2><p>'+AC.total+' cuentas · '+AC.google+' con Google · '+AC.paid+' pagaron</p>';
   const C=DATA.certs||[];
   h+='<h2>Certificados ('+C.length+')</h2>'+(C.length?'<table><tr><th>Nombre</th><th>Código</th><th>Nota</th><th>Fecha</th></tr>'+C.map(c=>'<tr><td>'+esc(c.name)+'</td><td><a style="color:var(--ac)" href="/verify?c='+esc(c.code)+'" target="_blank">'+esc(c.code)+'</a></td><td class="n">'+c.pct+'%</td><td>'+esc(c.date)+'</td></tr>').join("")+'</table>':'<p class="mu">Todavía nadie terminó el curso.</p>');
   const dev={};devices.forEach(d=>dev[d.device||"?"]=(dev[d.device||"?"]||0)+1);
