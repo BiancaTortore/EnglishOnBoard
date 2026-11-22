@@ -38,46 +38,7 @@ const CAST = {
   marek: "Oliver", mario: "Pochology", lars: "Wolf Spencer", mateo: "Alberto Loco", chen: "Sarah - Approachable", pilot: "Peter - Podcast", skipper: "David - Professional", tarifa: "Mateo - News", doctor: "Alessandro - Stoic", agent: null, terminal: null
 };
 
-const REDO_LIST = [
-  "l10/l10-04",
-  "l10/x-hammer",
-  "l10/m-hammer",
-  "l10/c-show-hammer",
-  "l13/l13-09",
-  "l13/x-autopilot",
-  "l13/x-helm",
-  "l13/c-show-helm",
-  "l13/c-steers",
-  "l27/l27-07",
-  "l27/l27-23",
-  "l27/x-helm",
-  "l27/c-show-helm",
-  "l21/l21-09",
-  "l21/x-sart",
-  "l26/l26-10",
-  "l26/l26-12",
-  "l26/x-wound",
-  "l26/x-vitals",
-  "l26/x-painkiller",
-  "l26/c-show-wound",
-  "l17/l17-10",
-  "l17/l17-12",
-  "l17/x-nearmiss",
-  "l17/x-report",
-  "l20/l20-01",
-  "l20/x-hose",
-  "l20/c-show-hose",
-  "l22/l22-01",
-  "l22/l22-02",
-  "l22/l22-12",
-  "l22/x-recovery",
-  "l23/l23-05",
-  "l23/l23-06",
-  "l23/x-powder",
-  "l23/c-show-powder",
-  "l25/l25-07",
-  "l25/m-call",
-];
+const REDO_LIST = [];
 
 /* the characters: the same model and settings Bianca uses on the ElevenLabs website
    (Eleven v4, Stability 50 %, Similarity 75 %, Clone strength 0; v4 has no Speed or Style) */
