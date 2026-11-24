@@ -37,7 +37,7 @@ form.cf button{align-self:flex-start;font:inherit;font-weight:700;padding:12px 2
 <p class="brand">ChartroomLab · English on Board</p>
 <h1>Contact</h1>
 <div class="es"><b>En español:</b> escribinos en español o en inglés. Te respondemos al mail que pongas, normalmente en uno o dos días.</div>
-<p>Write in English or Spanish. We usually answer within one or two days. You can also write directly to <a href="mailto:biantortore@gmail.com">biantortore@gmail.com</a>.</p>
+<p>Write in English or Spanish. We usually answer within one or two days. You can also write directly to <a href="mailto:info@chartroomlab.com">info@chartroomlab.com</a>.</p>
 <form class="cf" id="cf">
   <label for="cfName">Name</label><input id="cfName" maxlength="120" autocomplete="name">
   <label for="cfMail">Your e-mail (so we can answer)</label><input id="cfMail" type="email" maxlength="160" autocomplete="email" required>
@@ -59,7 +59,7 @@ document.getElementById("cf").onsubmit = async e => {
       body: JSON.stringify({where: "contact page", name: document.getElementById("cfName").value.trim(), contact: mail, comment: text})});
     if (!r.ok) throw 0;
     e.target.reset(); m.textContent = "Thank you. Your message was sent.";
-  } catch (err) { m.textContent = "It didn't work. Please write to biantortore@gmail.com."; }
+  } catch (err) { m.textContent = "It didn't work. Please write to info@chartroomlab.com."; }
   btn.disabled = false;
 };
 </script>
