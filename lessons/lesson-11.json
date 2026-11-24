@@ -1,7 +1,7 @@
 {
  "n": 11,
  "modelAudio": true,
- "mediaRev": 1,
+ "mediaRev": 2,
  "module": 3,
  "title": "Lifting gear",
  "place": "Day 2 · 15:00 · Houston, main deck",
@@ -420,18 +420,18 @@
    },
    {
     "word": "shackle",
-    "x": 74,
-    "y": 146
+    "x": 170,
+    "y": 128
    },
    {
     "word": "padeye",
-    "x": 42,
-    "y": 100
+    "x": 70,
+    "y": 146
    },
    {
     "word": "lashing",
-    "x": 172,
-    "y": 140
+    "x": 112,
+    "y": 120
    }
   ]
  },
