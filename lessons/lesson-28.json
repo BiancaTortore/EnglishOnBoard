@@ -1,7 +1,7 @@
 {
  "n": 28,
  "modelAudio": true,
- "mediaRev": 1,
+ "mediaRev": 2,
  "module": 7,
  "title": "Engine orders",
  "place": "Day 14 · 05:30 · off Marseille, bridge",
@@ -230,10 +230,6 @@
    "voice": "tanya",
    "text": "Show me the towing hook."
   },
-  "c-show-fender": {
-   "voice": "tanya",
-   "text": "Show me a fender."
-  },
   "p-standby": {
    "voice": "model",
    "text": "Stand by engine.",
@@ -448,11 +444,6 @@
     "word": "towhook",
     "x": 344,
     "y": 76
-   },
-   {
-    "word": "fender",
-    "x": 322,
-    "y": 134
    }
   ]
  },
@@ -691,11 +682,6 @@
      "type": "tap",
      "audio": "c-show-towhook",
      "a": "towhook"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-fender",
-     "a": "fender"
     },
     {
      "type": "choice",
@@ -1066,8 +1052,8 @@
     },
     {
      "type": "tap",
-     "audio": "c-show-fender",
-     "a": "fender"
+     "audio": "c-show-towhook",
+     "a": "towhook"
     },
     {
      "type": "listen",
