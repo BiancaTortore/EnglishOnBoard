@@ -46,6 +46,23 @@ const REDO_LIST = [
   "l25/l25-12",
   "l25/l25-17",
   "l25/c-take",
+  "l04/l04-07",
+  "l04/c-show-2o",
+  "l04/c-who-bosun",
+  "l04/c-deck-who",
+  "l19/l19-06",
+  "l19/l19-07",
+  "l19/l19-09",
+  "l19/l19-11",
+  "l19/l19-12",
+  "l19/l19-14",
+  "l19/c-show-frozen",
+  "l19/c-show-reset",
+  "l19/c-show-fuse",
+  "l19/c-show-spare",
+  "l19/c-happened",
+  "l19/c-touched",
+  "l19/c-time-other",
 ];
 
 /* the characters: the same model and settings Bianca uses on the ElevenLabs website

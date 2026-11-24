@@ -78,3 +78,20 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L25 | `c-relay` | James | Diego, tell the bridge: team two is starting boundary cooling. | Nueva |
 | L25 | `c-bridge-q` | Lars | Fire party, bridge. Is anybody injured? Over. | Nueva |
 | L25 | `c-relay-other` | James | Diego, tell the bridge the fire door is closed. | Nueva |
+| L4 | `l04-07` | Marek | Hello. If something breaks, you call me. | Regrabar (voz nueva) |
+| L4 | `c-show-2o` | Marek | Show me the Second Officer. | Regrabar (voz nueva) |
+| L4 | `c-who-bosun` | Marek | Who's the bosun on this ship? | Regrabar (voz nueva) |
+| L4 | `c-deck-who` | Marek | Who's in charge of the deck department? | Regrabar (voz nueva) |
+| L19 | `l19-06` | Marek | Radar one. OK. I'm coming. | Regrabar (voz nueva) |
+| L19 | `l19-07` | Marek | So. What happened? | Regrabar (voz nueva) |
+| L19 | `l19-09` | Marek | Hmm. Has anybody touched it? | Regrabar (voz nueva) |
+| L19 | `l19-11` | Marek | A fuse has blown. I have a spare. | Regrabar (voz nueva) |
+| L19 | `l19-12` | Marek | OK. I've changed the fuse. Now reset it, cadet. | Regrabar (voz nueva) |
+| L19 | `l19-14` | Marek | Good. Write it in the defect list. Fault, cause, repair. Short. | Regrabar (voz nueva) |
+| L19 | `c-show-frozen` | Marek | Which screen has frozen? | Regrabar (voz nueva) |
+| L19 | `c-show-reset` | Marek | Where's the reset button? | Regrabar (voz nueva) |
+| L19 | `c-show-fuse` | Marek | Show me the fuse. | Regrabar (voz nueva) |
+| L19 | `c-show-spare` | Marek | Where's the spare? | Regrabar (voz nueva) |
+| L19 | `c-happened` | Marek | So, cadet. What happened? When? | Regrabar (voz nueva) |
+| L19 | `c-touched` | Marek | Has anybody touched it? | Regrabar (voz nueva) |
+| L19 | `c-time-other` | Marek | The fuse blew at zero six fifty. | Regrabar (voz nueva) |
