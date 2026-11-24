@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Loading stores in Houston: the provision crane with its jib, wire rope, hook and sling lifting a pallet from the quay; on deck a lashed pallet with turnbuckles, a tackle hanging from a beam, a snatch block on a pad eye, and a detail of a shackle through a thimble">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Loading stores in Houston: the provision crane with its jib, wire rope and hook; the sling hangs on the hook by a wire eye with a thimble and lifts a pallet from the quay; on deck a lashed pallet, and a pad eye welded to the deck with a shackle">
   <!-- Lesson 11 plate, side view. Right: the quay with a pallet of stores in a four-leg sling on the crane hook.
        Centre: the provision crane on the ship's side; the wire rope runs from the
        jib head down to the hook block. Left, on deck: a pallet already landed and lashed to the deck with two lashings
-       and turnbuckles; a tackle (two blocks) hangs from a beam, its fall led through a snatch block on a pad eye.
-       Circle, top right: detail of the top of a sling leg, a wire eye with a thimble and a shackle through it.
+       and turnbuckles; far left, a pad eye welded to the deck, seen from the front, with a shackle hanging from its hole.
+       On the hook: the top of the sling is a wire eye with a white thimble inside it.
        Colours come from app.css (.p-*). -->
   <rect class="p-soft" x="0" y="0" width="400" height="240"/>
   <!-- quay, water and ship -->
@@ -12,24 +12,14 @@
   <rect class="p-hull" x="0" y="170" width="212" height="70"/>
   <rect class="p-deck" x="0" y="164" width="212" height="7"/>
 
-  <!-- beam on deck (left) with the TACKLE: upper block, lower block, rope reeved between them -->
-  <rect class="p-hull" x="18" y="58" width="6" height="106"/>
-  <rect class="p-hull" x="18" y="56" width="78" height="6"/>
-  <rect class="p-hull" x="68" y="62" width="4" height="4"/>
-  <g style="stroke:#E9C46A" stroke-width="1.4"><path d="M65 76 V114 M68 76 V114 M72 76 V114 M75 76 V114"/></g>
-  <rect class="p-hull" x="62" y="66" width="16" height="12" rx="4"/>
-  <rect class="p-hull" x="62" y="112" width="16" height="12" rx="4"/>
-  <path d="M70 124 v4 q0 5 -4 5" fill="none" class="p-stroke" stroke-width="2"/>
-  <rect class="p-gold" x="58" y="132" width="24" height="14" rx="1"/>
-  <!-- the fall comes out of the upper block and goes down through the SNATCH BLOCK on the PAD EYE -->
-  <path d="M63 70 L44 134" fill="none" style="stroke:#E9C46A" stroke-width="1.6"/>
-  <path d="M33 141 L0 141" fill="none" style="stroke:#E9C46A" stroke-width="1.6"/>
-  <circle cx="40" cy="140" r="8" class="p-orange" style="stroke:var(--hull)" stroke-width="1"/>
-  <circle cx="40" cy="140" r="3" class="p-hull"/>
-  <path d="M40 148 v4" class="p-stroke" stroke-width="2"/>
-  <path d="M36 152 Q40 158 44 152" fill="none" class="p-stroke" stroke-width="1.8"/>
-  <path d="M33 164 L36 156 Q40 151 44 156 L47 164 Z" class="p-hull"/>
-  <circle cx="40" cy="159" r="1.8" class="p-soft"/>
+  <!-- a PAD EYE welded to the deck (seen from the front): a thick plate with a round hole; a SHACKLE hangs from the hole -->
+  <path d="M20 164 V138 Q20 114 42 114 Q64 114 64 138 V164 Z" class="p-hull"/>
+  <path d="M12 164 L20 152 V164 Z M72 164 L64 152 V164 Z" style="fill:#5E6B78"/>
+  <circle cx="42" cy="134" r="9" class="p-soft"/>
+  <path d="M33 134 V150 Q33 160 42 160 Q51 160 51 150 V134" fill="none" style="stroke:#AEB8C2" stroke-width="4.2"/>
+  <rect x="28" y="131.5" width="28" height="5" rx="2.5" style="fill:#AEB8C2;stroke:var(--hull)" stroke-width=".6"/>
+  <circle cx="28" cy="134" r="4" style="fill:#AEB8C2;stroke:var(--hull)" stroke-width=".6"/>
+  <rect x="54" y="130.5" width="6" height="7" rx="1" style="fill:#AEB8C2;stroke:var(--hull)" stroke-width=".6"/>
 
   <!-- pallet already on deck, LASHED to pad eyes with two lashings and TURNBUCKLES -->
   <rect class="p-hull" x="100" y="158" width="50" height="6"/>
@@ -47,23 +37,16 @@
   <path d="M198 108 L318 26 L322 32 L204 116 Z" class="p-gold" style="stroke:var(--hull)" stroke-width=".8"/>
   <g style="stroke:var(--hull)" stroke-width=".7" opacity=".6"><path d="M220 101 L226 92 M242 86 L248 77 M264 71 L270 62 M286 56 L292 47"/></g>
   <circle cx="320" cy="30" r="5" class="p-hull"/>
-  <g style="stroke:#8A97A4" stroke-width="1.6"><path d="M317 31 V112 M323 31 V112"/></g>
-  <rect class="p-hull" x="312" y="110" width="16" height="14" rx="3"/>
-  <path d="M320 124 v4 q0 9 -7 9 q-5 0 -5 -5" fill="none" class="p-stroke" stroke-width="3" stroke-linecap="round"/>
-  <!-- four-leg SLING from the hook to the pallet on the quay -->
-  <circle cx="314" cy="140" r="3" fill="none" class="p-stroke" stroke-width="1.6"/>
-  <g style="stroke:#8A97A4" stroke-width="1.5"><path d="M314 143 L290 178 M314 143 L346 178"/></g>
-  <g style="stroke:#8A97A4" stroke-width="1" opacity=".55"><path d="M314 143 L302 176 M314 143 L334 176"/></g>
+  <g style="stroke:#8A97A4" stroke-width="1.6"><path d="M317 31 V98 M323 31 V98"/></g>
+  <!-- the top of the SLING: a wire eye with a white THIMBLE inside it, hanging on the HOOK -->
+  <path d="M311 128 Q298 138 299 150 L311 164 L323 150 Q324 138 311 128 Z" fill="none" style="stroke:#8A97A4" stroke-width="3.2"/>
+  <path d="M311 132 Q303 140 303.5 149 L311 159 L318.5 149 Q319 140 311 132 Z" style="fill:#FFFFFF;stroke:var(--hull)" stroke-width="1"/>
+  <rect class="p-hull" x="310" y="96" width="20" height="16" rx="3"/>
+  <path d="M320 112 v12 q0 12 -9 12 q-7 0 -7 -7" fill="none" style="stroke:var(--hull)" stroke-width="4" stroke-linecap="round"/>
+  <rect x="306" y="164" width="10" height="5" rx="1" class="p-hull"/>
+  <g style="stroke:#8A97A4" stroke-width="1.5"><path d="M311 169 L290 178 M311 169 L346 178"/></g>
+  <g style="stroke:#8A97A4" stroke-width="1" opacity=".55"><path d="M311 169 L302 178 M311 169 L334 178"/></g>
   <g class="p-gold"><rect x="290" y="178" width="27" height="18" rx="1"/><rect x="319" y="178" width="27" height="18" rx="1"/></g>
   <rect class="p-hull" x="288" y="196" width="60" height="4"/>
 
-  <!-- detail: top of a sling leg, a wire eye with a THIMBLE, and a SHACKLE through it -->
-  <path d="M318 140 L342 106" fill="none" class="p-stroke" stroke-width=".8" stroke-dasharray="2 2"/>
-  <circle cx="368" cy="82" r="30" class="p-super" style="stroke:var(--hull)" stroke-width="1.2"/>
-  <path d="M358 74 V66 Q358 57 368 57 Q378 57 378 66 V74" fill="none" style="stroke:var(--hull)" stroke-width="3.2"/>
-  <rect x="352" y="73" width="31" height="3.5" rx="1.5" class="p-hull"/><circle cx="352" cy="74.7" r="3" class="p-hull"/>
-  <path d="M368 77 Q360 84 361 94 L368 104 L375 94 Q376 84 368 77 Z" fill="none" style="stroke:#8A97A4" stroke-width="2.6"/>
-  <path d="M368 80 Q363 86 364 93 L368 99 L372 93 Q373 86 368 80 Z" style="fill:#FFFFFF;stroke:var(--hull)" stroke-width=".8"/>
-  <rect x="363" y="103" width="10" height="5" rx="1" class="p-hull"/>
-  <path d="M368 108 V112" style="stroke:#8A97A4" stroke-width="3"/>
 </svg>

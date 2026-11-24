@@ -198,17 +198,9 @@
    "voice": "tanya",
    "text": "Where's the pad eye?"
   },
-  "c-show-block": {
-   "voice": "rolando",
-   "text": "Where's the snatch block?"
-  },
   "c-show-thimble": {
    "voice": "tanya",
    "text": "Show me the thimble."
-  },
-  "c-show-turnbuckle": {
-   "voice": "rolando",
-   "text": "Show me the turnbuckle."
   },
   "c-show-jib": {
    "voice": "tanya",
@@ -409,52 +401,37 @@
    {
     "word": "wire",
     "x": 304,
-    "y": 78
+    "y": 70
    },
    {
     "word": "hook",
-    "x": 298,
-    "y": 124
-   },
-   {
-    "word": "sling",
-    "x": 318,
-    "y": 166
-   },
-   {
-    "word": "shackle",
-    "x": 344,
-    "y": 60
+    "x": 342,
+    "y": 118
    },
    {
     "word": "thimble",
-    "x": 388,
-    "y": 100
+    "x": 280,
+    "y": 146
+   },
+   {
+    "word": "sling",
+    "x": 346,
+    "y": 160
+   },
+   {
+    "word": "shackle",
+    "x": 74,
+    "y": 146
    },
    {
     "word": "padeye",
-    "x": 18,
-    "y": 176
-   },
-   {
-    "word": "block",
-    "x": 18,
-    "y": 122
-   },
-   {
-    "word": "tackle",
-    "x": 94,
-    "y": 92
+    "x": 42,
+    "y": 100
    },
    {
     "word": "lashing",
     "x": 172,
     "y": 140
-   },
-   {
-    "word": "turnbuckle",
-    "x": 80,
-    "y": 152
    }
   ]
  },
@@ -616,7 +593,7 @@
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The provision crane lifting a pallet, and the gear on deck."
+     "body": "The provision crane lifting a pallet, a pad eye and a lashed pallet on deck."
     },
     {
      "type": "card",
@@ -679,22 +656,12 @@
      "a": "padeye"
     },
     {
-     "type": "tap",
-     "audio": "c-show-block",
-     "a": "block"
-    },
-    {
      "type": "card",
      "word": "lashing"
     },
     {
      "type": "card",
      "word": "turnbuckle"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-turnbuckle",
-     "a": "turnbuckle"
     },
     {
      "type": "choice",
@@ -1058,8 +1025,8 @@
     },
     {
      "type": "tap",
-     "audio": "c-show-turnbuckle",
-     "a": "turnbuckle"
+     "audio": "c-show-padeye",
+     "a": "padeye"
     },
     {
      "type": "listen",
