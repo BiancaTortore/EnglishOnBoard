@@ -62,3 +62,4 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L12 | `w-drum` | Brian (modelo) | drum | Nueva |
 | L12 | `x-drum` | Brian (modelo) | Keep three turns on the drum. | Nueva |
 | L11 | todas (62) | Personajes y Brian | Lección nueva *Lifting gear*: todo lo de `audio/l11/script.csv` (29 de personajes) más las 33 de la voz modelo | Nueva |
+| L29 | todas (60) | Personajes y Brian | Lección nueva *Engine orders & berthing*: todo lo de `audio/l29/script.csv` (31 de personajes) más las 29 de la voz modelo | Nueva |

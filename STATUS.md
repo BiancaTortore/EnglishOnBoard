@@ -1,6 +1,6 @@
 # English on Board — estado del trabajo
 
-Leer junto con `BIBLE.md` (historia, personajes, temario de las 28 lecciones, reglas de imagen y audio).
+Leer junto con `BIBLE.md` (historia, personajes, temario de las 29 lecciones, reglas de imagen y audio).
 Actualizado: 3 nov 2026 (inicio con pestañas, test por módulo, audio sin cortes).
 
 ## Qué es
@@ -59,7 +59,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - Se agregó la **L11 "Lifting gear"** (Día 2 · 15:00, víveres con la grúa de provisiones: grúa, pluma, cable, gancho, eslinga, grillete, guardacabo, cáncamo, pasteca, aparejo, trinca, tensor; SWL vs WLL en la lectura). Las lecciones de la vieja L11 a la L27 pasaron a **L12–L28** (archivos, carpetas de audio e imagen, claves `lNN-…`, referencias "Lesson N", `course.json`, biblia). El progreso guardado en los celulares quedó corrido un número; no importa porque el curso no está abierto al público.
 - La L11 tiene JSON, lámina y `img/l11/prompts.md`; **faltan las fotos (`scene.jpg`, `hero.jpg`) y todos sus audios** (`audio/l11/script.csv`, 29 de personajes + voz modelo).
 - La app ya no tiene "27" fijo: la cantidad de lecciones y módulos sale de `course.json`, y el examen final usa la foto de la última lección.
-- Planeada: una lección final de atraque en Marsella (órdenes de máquina, hélice, pala de timón, gancho de remolque, defensas), después de la del práctico.
+- Se agregó la **L29 "Engine orders & berthing"** (Día 14 · 08:30, atracada en Marsella: órdenes de máquina, hélice, pala del timón, gancho de remolque, defensas; lectura de los datos de maniobra). Es la última lección y su escena es la foto del examen final. Igual que la L11: **faltan fotos y audios** (`img/l29/prompts.md`, `audio/l29/script.csv`).
 
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.

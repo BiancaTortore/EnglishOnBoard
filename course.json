@@ -45,7 +45,8 @@
     {"n": 7, "title": "Radio & outside parties", "where": "Gibraltar · Marseille", "lessons": [
       {"n": 26, "title": "Distress, urgency & safety", "ready": true},
       {"n": 27, "title": "Medical & TMAS", "ready": true},
-      {"n": 28, "title": "Pilot boarding & helm orders", "ready": true}
+      {"n": 28, "title": "Pilot boarding & helm orders", "ready": true},
+      {"n": 29, "title": "Engine orders & berthing", "ready": true}
     ]}
   ]
 }

@@ -58,7 +58,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 
 ---
 
-## 4. Temario: 28 lecciones en 7 módulos
+## 4. Temario: 29 lecciones en 7 módulos
 
 | # | Lección | Día · lugar | Escena |
 |---|---|---|---|
@@ -97,9 +97,10 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 26 | Distress, urgency & safety | Día 12 · 19:20 · Estrecho | Guardia de Tanya y Diego: MAYDAY del pesquero francés *Cap Béar* (hace agua, 4 personas). Tarifa Traffic acusa recibo; el *Horizon* está a 6 millas y Diego llama a Tarifa; Salvamento Marítimo los rescata |
 | 27 | Medical & TMAS | Día 13 · 10:00 · cocina | Mario se corta la mano izquierda con un cuchillo; Tanya llama al CIRM de Roma por teléfono satelital y Diego dicta los signos vitales; Diego ayuda en la cocina |
 | 28 | Pilot boarding & helm orders | Día 14 · 07:00 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
+| 29 | Engine orders & berthing | Día 14 · 08:30 · Marsella, puente | La atracada con remolcadores: Diego va al telégrafo, repite las órdenes de máquina del práctico y reporta; Tanya da distancias desde proa. "Finished with engine." Fin del viaje |
 
 ### Glosario náutico en español (cómo lo dice Bianca; usarlo en todas las traducciones)
-accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero · pumpman = bombero · messman = mozo · department = departamento · crew agreement = rol · to sign on = firmar el embarque · seaman's book = libreta de embarco · bunk = cama · muster card = tarjeta de rol · muster station = punto de reunión · drill = zafarrancho · announcement = anuncio · loudspeaker = altavoz · safety shoes = zapatos de seguridad · spanner = llave · chipping = picaretear · shackle = grillete · crane = grúa · jib = pluma · hook = gancho · sling = eslinga · pad eye = cáncamo · wire rope = cable · snatch block = pasteca · tackle = aparejo · thimble = guardacabo · lashing = trinca · turnbuckle = tensor · winch = guinche · drum = tambor · chain stopper = estopor · hawse pipe = escobén · chain locker = caja de cadenas · windlass = cabrestante · ECDIS = carta electrónica · swell = oleaje · rough (sea) = agitado · squall = chubasco
+accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero · pumpman = bombero · messman = mozo · department = departamento · crew agreement = rol · to sign on = firmar el embarque · seaman's book = libreta de embarco · bunk = cama · muster card = tarjeta de rol · muster station = punto de reunión · drill = zafarrancho · announcement = anuncio · loudspeaker = altavoz · safety shoes = zapatos de seguridad · spanner = llave · chipping = picaretear · shackle = grillete · crane = grúa · jib = pluma · hook = gancho · sling = eslinga · pad eye = cáncamo · wire rope = cable · snatch block = pasteca · tackle = aparejo · thimble = guardacabo · lashing = trinca · turnbuckle = tensor · winch = guinche · drum = tambor · chain stopper = estopor · hawse pipe = escobén · chain locker = caja de cadenas · ahead = adelante · astern = atrás · dead slow = muy despacio · half = media · full = toda · stop engine = pare máquina · propeller = hélice · rudder = pala del timón · towing hook = gancho de remolque · fender = defensa · windlass = cabrestante · ECDIS = carta electrónica · swell = oleaje · rough (sea) = agitado · squall = chubasco
 
 ### Foco de idioma por lección (todas escritas: así quedaron; no repetir)
 
@@ -133,6 +134,7 @@ accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero 
 | 26 | Estructura MAYDAY / PAN-PAN / SÉCURITÉ | Mensajes con estática |
 | 27 | Describir síntomas y signos vitales | — |
 | 28 | Órdenes de timón y read-back | Velocidad real de un práctico |
+| 29 | Órdenes de máquina: velocidad + dirección; orden → read-back → reporte (Engine stopped) | half sin l, a-STERN; ahead ≠ forward |
 
 ---
 
