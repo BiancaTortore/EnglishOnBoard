@@ -564,3 +564,13 @@ html.dark-page body{background:#0A1620}
 .link-btn{background:none;border:0;padding:0;color:var(--accent);font:inherit;text-decoration:underline;cursor:pointer}
 .signin .err{color:var(--bad, #C8281C);margin:8px 0 0}
 .acc .acc-btns{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ---------- buy ---------- */
+.lrow.buy .lrow-btn{border:1.5px solid var(--accent)}
+.buyview .price-big{font:700 36px/1 var(--f-display);margin:0 0 10px}
+.buyview .price-big .sub{font:500 15px/1 var(--f-body)}
+.buy-list{margin:0;padding-left:18px;display:grid;gap:6px}
+.consent{display:flex;gap:10px;align-items:flex-start;margin:16px 0 4px;font-size:14px;line-height:1.45}
+.consent input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--accent)}
+.consent i{color:var(--muted)}
+.acc-btns a.chip-btn{text-decoration:none}

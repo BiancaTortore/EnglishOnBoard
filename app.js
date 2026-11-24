@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-50";
+const APP_VERSION = "beta-51";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -454,6 +454,104 @@ function wireAccount(){
     try { await api("/api/me/delete", {token: session.token}); } catch (e) { if (e.status !== 401) { alert("It didn't work. Try again later."); return; } }
     setSession(null); goHome();
   };
+}
+
+/* ---------- the full course (Paddle) ----------
+   A yearly subscription sold by Paddle (merchant of record). The app opens Paddle's checkout with the account e-mail
+   in custom_data; Paddle tells the server (/api/paddle), the account gets the access, and the app reloads to open
+   Modules 2–7. Settings in course.json → "paddle": {"env", "token", "price"}. */
+const PAD = () => COURSE && COURSE.paddle;
+const SALE = () => ACC() && !!(PAD() && PAD().token && PAD().price);
+const hasFull = () => !!(session && session.user && session.user.access);
+function buyRow(m){
+  return `<li class="lrow test ready buy"><button class="lrow-btn" data-buy>
+      <span class="lrow-num">${I.lock}</span>
+      <span class="lrow-body"><span class="lrow-title">Unlock the full course</span><span class="lrow-meta">Modules 2–7, final test and certificate · US$ 39 a year</span></span>
+      <span class="lrow-end">${I.chev}</span></button></li>`;
+}
+function buyNav(){
+  if (!signedIn()) { signInNav(0); return; }
+  navPush({v: "buy"}); viewBuy();
+}
+let paddleLoad = null;
+function loadPaddle(){
+  return paddleLoad || (paddleLoad = new Promise((ok, no) => {
+    const sc = document.createElement("script"); sc.src = "https://cdn.paddle.com/paddle/v2/paddle.js"; sc.async = true;
+    sc.onload = () => {
+      const p = PAD();
+      if (p.env === "sandbox") Paddle.Environment.set("sandbox");
+      Paddle.Initialize({token: p.token, eventCallback: ev => { if (ev && ev.name === "checkout.completed") afterPayment(); }});
+      ok();
+    };
+    sc.onerror = () => { paddleLoad = null; no(); };
+    document.head.appendChild(sc);
+  }));
+}
+function viewBuy(){
+  stopAll(); clearBar(); clearTabs();
+  if (hasFull()) { goHome(); return; }
+  app.innerHTML = `<div class="home fb-view buyview">
+    <button class="back-link" id="bBack">${I.back} Back</button>
+    <span class="mono kicker">Full course</span>
+    <h2 class="prompt" style="font-size:34px">Unlock Modules 2 to 7</h2>
+    <p class="sub" style="margin-top:-8px">El curso completo: ${COURSE.modules.filter(m => m.paid).reduce((n, m) => n + m.lessons.length, 0) || "todas las"} lecciones más, los tests, el examen final y el certificado.</p>
+    <section class="panel">
+      <p class="price-big">US$ 39 <span class="sub">per year</span></p>
+      <ul class="buy-list">
+        <li>Modules 2–7: watch, cargo, port State control, emergencies, radio, the pilot</li>
+        <li>Module tests, final test and a certificate anybody can check</li>
+        <li>Works without signal, saved in your account</li>
+        <li>Renews every year. Cancel any time in Profile · Se renueva cada año, cancelás cuando quieras</li>
+      </ul>
+    </section>
+    <label class="consent"><input type="checkbox" id="bOk"><span>I want the access to start now, and I understand that because of this I lose my right of withdrawal and the payment is not refundable. The subscription renews every year until I cancel it. ·
+      <i>Quiero que el acceso empiece ahora y entiendo que por eso pierdo el derecho de desistimiento y no hay reembolso. La suscripción se renueva cada año hasta que la cancele.</i></span></label>
+    <p class="note">Payment by Paddle, our reseller. <a href="/terms" target="_blank" rel="noopener">Terms</a> · <a href="/refunds" target="_blank" rel="noopener">Refunds</a> · <a href="/privacy" target="_blank" rel="noopener">Privacy</a></p>
+    <p class="sub err" id="bErr" hidden></p></div>`;
+  setBar(`<button class="cta" id="go" disabled>Continue to payment</button>`);
+  $("#bBack").onclick = navBack;
+  $("#bOk").onchange = () => { $("#go").disabled = !$("#bOk").checked; };
+  $("#go").onclick = async () => {
+    const err = $("#bErr"); err.hidden = true;
+    if (!navigator.onLine) { err.textContent = "You need a connection to pay."; err.hidden = false; return; }
+    $("#go").disabled = true;
+    try {
+      await loadPaddle();
+      const u = session.user || {};
+      Paddle.Checkout.open({items: [{priceId: PAD().price, quantity: 1}], customer: {email: u.email},
+        customData: {account: u.email, consent: "immediate-access-waiver", device: platform()},
+        settings: {displayMode: "overlay", locale: "es", theme: document.documentElement.dataset.theme === "dark" ? "dark" : "light", allowLogout: false}});
+    } catch (e) { err.textContent = "The payment page didn't open. Try again in a moment."; err.hidden = false; }
+    $("#go").disabled = !$("#bOk").checked;
+  };
+  window.scrollTo(0, 0);
+}
+/* Paddle tells our server a few seconds after the payment: wait for it, then reload with Modules 2–7 open */
+async function afterPayment(){
+  try { Paddle.Checkout.close(); } catch (e) {}
+  app.innerHTML = `<div class="home"><span class="mono kicker">Payment received</span><h2 class="prompt">Thank you! Opening the full course…</h2><p class="sub">Gracias. Esto tarda unos segundos.</p></div>`;
+  clearBar();
+  for (let i = 0; i < 20; i++) {
+    await new Promise(r => setTimeout(r, 2000));
+    try {
+      const j = await api("/api/me", {token: session.token});
+      setSession({...session, user: j.user});
+      if (j.user.access) { navReplace({v: "home"}); location.reload(); return; }
+    } catch (e) {}
+  }
+  app.innerHTML = `<div class="home"><h2 class="prompt">Your payment is being confirmed</h2><p>It can take a few minutes. Close the app and open it again. If Modules 2–7 are still locked in an hour, write to info@chartroomlab.com.</p><button class="cta" id="home">Back</button></div>`;
+  $("#home").onclick = goHome;
+}
+function subCardHTML(){
+  if (!SALE() || !signedIn()) return "";
+  const u = session.user || {}, sb = u.sub;
+  const day = t => t ? new Date(t).toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric"}) : "";
+  if (!u.access) return `<button class="pcard" data-buy><span class="pcard-ico">${I.lock}</span><span><b>Unlock the full course</b><small>Modules 2–7 · US$ 39 a year</small></span>${I.chev}</button>`;
+  if (!sb) return "";
+  const cancelled = !!sb.cancelAt;
+  return `<section class="panel setting acc">
+    <div><b>Subscription</b><span class="sub">${sb.status === "past_due" ? "The last payment didn't go through: update your card." : cancelled ? `Cancelled · access until ${day(sb.cancelAt)}` : `Full course · renews on ${day(sb.ends)}`}</span></div>
+    <div class="acc-btns">${sb.updateUrl ? `<a class="chip-btn" href="${esc(sb.updateUrl)}" target="_blank" rel="noopener">Update card</a>` : ""}${!cancelled && sb.cancelUrl ? `<a class="chip-btn danger" href="${esc(sb.cancelUrl)}" target="_blank" rel="noopener">Cancel subscription</a>` : ""}</div></section>`;
 }
 
 /* ---------- install on the phone ---------- */
@@ -654,6 +752,7 @@ function showState(st){
   if (st.v === "vocab") { viewVocab(st.m); return; }
   if (st.v === "welcome") { viewWelcome(); return; }
   if (st.v === "cert") { viewCert(); return; }
+  if (st.v === "buy") { viewBuy(); return; }
   if (st.v === "signin") { if (signedIn()) { goHome(); return; } viewSignIn(st.n || 0); return; }
   if (st.v === "certform") { viewCertForm(); return; }
   if (TAB_VIEWS[st.v]) { TAB_VIEWS[st.v](); return; }
@@ -828,7 +927,7 @@ function tabView(active, html){
 
 function lessonRow(l, cur){
   const d = isDone(l), dc = doneCount(l.n);
-  const meta = !l.ready ? "Coming soon" : d ? "Done" : `${dc} of ${SESS_PER_LESSON} sessions`;
+  const meta = !l.ready ? (l.paid ? "Full course" : "Coming soon") : d ? "Done" : `${dc} of ${SESS_PER_LESSON} sessions`;
   return `<li class="lrow ${l.ready ? "ready" : "locked"} ${cur ? "current" : ""} ${d ? "complete" : ""}">
     <button class="lrow-btn" ${l.ready ? `data-n="${l.n}"` : "disabled"}>
       <span class="lrow-num">${d ? I.check : l.n}</span>
@@ -849,7 +948,7 @@ function moduleTestRow(m){
 function moduleSection(m, cur){
   return `<section class="module">
     <div class="module-head"><h3>${m.n} · ${esc(m.title)}</h3><span class="mono">${esc(m.where || "")}</span></div>
-    <ol class="lrows">${m.lessons.map(l => lessonRow(l, cur && l.n === cur.n)).join("")}${m.lessons.some(l => l.ready) ? moduleTestRow(m) : ""}${PREVIEW && m.lessons.some(l => l.ready) ? vocabRow(m) : ""}</ol></section>`;
+    <ol class="lrows">${m.paid && SALE() && m === COURSE.modules.find(x => x.paid) ? buyRow(m) : ""}${m.lessons.map(l => lessonRow({...l, paid: m.paid}, cur && l.n === cur.n)).join("")}${m.lessons.some(l => l.ready) ? moduleTestRow(m) : ""}${PREVIEW && m.lessons.some(l => l.ready) ? vocabRow(m) : ""}</ol></section>`;
 }
 /* preview only: the author's list of every word and phrase in a module, to check and correct */
 function vocabRow(m){
@@ -886,6 +985,7 @@ function wireRows(){
   $$("[data-n]").forEach(b => b.onclick = () => openLessonNav(+b.dataset.n));
   $$("[data-test]").forEach(b => b.onclick = () => drillNav("test", +b.dataset.test));
   $$("[data-final]").forEach(b => b.onclick = () => drillNav("final"));
+  $$("[data-buy]").forEach(b => b.onclick = () => buyNav());
   $$("[data-cert]").forEach(b => b.onclick = () => openCertNav(false));
   $$("[data-vocab]").forEach(b => b.onclick = () => { navPush({v: "vocab", m: +b.dataset.vocab}); viewVocab(+b.dataset.vocab); });
 }
@@ -1041,6 +1141,7 @@ function viewProfile(){
     </div>
     ${progress.cert ? `<button class="pcard" data-cert><span class="pcard-ico">${I.check}</span><span><b>Your certificate</b><small>${esc(progress.cert.code)} · ${progress.cert.pct}%</small></span>${I.chev}</button>` : ""}
     ${accountCardHTML()}
+    ${subCardHTML()}
     <button class="pcard" id="fbOpen"><span class="pcard-ico">${I.msg}</span><span><b>Send feedback</b><small>Tell us what works and what to improve</small></span>${I.chev}</button>
     ${installCardHTML("profile")}
     <section class="panel setting">
@@ -1062,6 +1163,7 @@ function viewProfile(){
     <p class="note legal-links"><a href="/course" target="_blank" rel="noopener">The course</a> · <a href="/terms" target="_blank" rel="noopener">Terms</a> · <a href="/refunds" target="_blank" rel="noopener">Refunds</a> · <a href="/privacy" target="_blank" rel="noopener">Privacy</a></p>
     <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>`);
   wireInstall(); wireAccount();
+  $$("[data-buy]").forEach(b => b.onclick = () => buyNav());
   $("#fbOpen").onclick = () => { navPush({v: "feedback"}); viewFeedback(); };
   $$("[data-cert]").forEach(b => b.onclick = () => openCertNav(false));
   offlineSummary().then(r => {
@@ -1982,9 +2084,12 @@ function viewWelcome(){
   try { COURSE = await getJSON("course.json"); }
   catch (e) { app.innerHTML = `<p class="loading">The course could not be loaded. Check your connection and reload.</p>`; return; }
   /* beta: only the open modules can be used; preview mode (for the author) opens everything ready */
-  const open = COURSE.beta && COURSE.beta.openModules;
-  if (open && !PREVIEW) COURSE.modules.forEach(m => { if (!open.includes(m.n)) m.lessons.forEach(l => { l.ready = false; }); });
   if (ACC()) await Promise.race([accountPull(), new Promise(r => setTimeout(r, 2500))]);
+  /* modules outside the free ones: open for the author's preview and for accounts with the full course */
+  const open = COURSE.beta && COURSE.beta.openModules;
+  if (open && !PREVIEW && !hasFull()) COURSE.modules.forEach(m => {
+    if (!open.includes(m.n)) { m.paid = m.lessons.some(l => l.ready); m.lessons.forEach(l => { l.ready = false; }); }
+  });
   syncProgress(true); flushOutbox();
   setTimeout(saveForOffline, 300);
   window.addEventListener("online", () => setTimeout(saveForOffline, 1500));

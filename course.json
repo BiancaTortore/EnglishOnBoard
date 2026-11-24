@@ -2,6 +2,7 @@
   "title": "English on Board",
   "subtitle": "Maritime English for deck officers",
   "beta": {"openModules": [1]},
+  "paddle": {"env": "sandbox", "token": "test_28a8fb5cf3f1d70978942871100", "price": "pri_01m86470ywx06n44hehacnyybq"},
   "accounts": {"enabled": false, "google": "964654618857-mpmm8oq9jot1cpijrgcjetqo0e4don6p.apps.googleusercontent.com"},
   "modules": [
     {"n": 1, "title": "Ship basics", "where": "Houston · Day 1", "hero": "img/m01/hero.jpg", "lessons": [

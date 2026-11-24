@@ -25,6 +25,7 @@ export default {
       if (url.pathname === "/api/ping") return ping(req, env);
       if (url.pathname === "/api/cert" && req.method === "POST") return certSave(req, env);
       if (url.pathname.startsWith("/api/auth/") || url.pathname.startsWith("/api/me")) return accounts(req, url, env);
+      if (url.pathname === "/api/paddle" && req.method === "POST") return paddleHook(req, env);
       if (url.pathname === "/verify" || url.pathname === "/verify/") return verify(url, env);
       if (url.pathname === "/api/admin" && req.method === "POST") return adminData(req, env);
       if (url.pathname === "/admin" || url.pathname === "/admin/") return new Response(ADMIN_HTML, {headers: {"content-type": "text/html;charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex"}});
@@ -208,6 +209,7 @@ async function accounts(req, url, env) {
   return json({error: "not found"}, 404);
 }
 const publicUser = (a, env) => ({email: a.email, name: a.name || "", paid: !!a.paid, google: !!a.google,
+  sub: a.sub ? {status: a.sub.status, ends: a.sub.ends, cancelAt: a.sub.cancelAt, cancelUrl: a.sub.cancelUrl, updateUrl: a.sub.updateUrl} : null,
   access: !!(a.paid || a.access || String((env && env.AUTHOR_EMAILS) || "").toLowerCase().split(/[\s,]+/).includes(a.email))});
 
 async function authCode(b, env) {
@@ -301,6 +303,46 @@ function mergeProgress(a, b) {
     else if (!(k in out)) out[k] = v;   /* review queue and other small things: the first copy wins */
   }
   return out;
+}
+
+/* ---------- Paddle: payments and subscriptions ----------
+   Paddle calls /api/paddle for every change of a subscription (secret: PADDLE_WEBHOOK_SECRET). The account comes from
+   custom_data.account (the e-mail the app sent to the checkout). Access while the subscription is active, trialing or
+   past_due (Paddle retries the card); it ends when Paddle says "canceled" (at the end of the paid year). */
+async function paddleHook(req, env) {
+  if (!env.PADDLE_WEBHOOK_SECRET || !env.DATA) return json({error: "not configured"}, 503);
+  const raw = await req.text();
+  if (raw.length > 200000) return json({error: "too big"}, 413);
+  const sig = Object.fromEntries((req.headers.get("paddle-signature") || "").split(";").map(p => p.split("=")));
+  if (!sig.ts || !sig.h1 || Math.abs(Date.now() / 1000 - +sig.ts) > 600) return json({error: "bad signature"}, 401);
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(env.PADDLE_WEBHOOK_SECRET), {name: "HMAC", hash: "SHA-256"}, false, ["sign"]);
+  const mac = [...new Uint8Array(await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(`${sig.ts}:${raw}`)))].map(b => b.toString(16).padStart(2, "0")).join("");
+  if (!timingSafe(mac, String(sig.h1)) || mac.length !== String(sig.h1).length) return json({error: "bad signature"}, 401);
+  let ev; try { ev = JSON.parse(raw); } catch (e) { return json({error: "bad json"}, 400); }
+  const type = String(ev.event_type || ""), d = ev.data || {};
+  /* keep the last events for the admin panel (and to look into problems) */
+  await env.DATA.put(`pe:${new Date().toISOString()}:${clip(ev.event_id, 40)}`, JSON.stringify({type, id: d.id, status: d.status,
+    account: d.custom_data && d.custom_data.account, at: ev.occurred_at}), {expirationTtl: 90 * 86400});
+  if (!type.startsWith("subscription.")) return json({ok: true});
+  const email = clip(d.custom_data && d.custom_data.account, 254).toLowerCase();
+  if (!EMAIL_RE.test(email)) return json({ok: true, note: "no account in custom_data"});
+  let uid = await env.DATA.get(`e:${email}`), a = uid && await kvJSON(env, `a:${uid}`);
+  if (!a) {   /* paid before having an account (or deleted it): the access waits for the first sign-in with that e-mail */
+    uid = rnd(12); a = {uid, email, created: new Date().toISOString(), progress: {}};
+    await env.DATA.put(`e:${email}`, uid);
+  }
+  /* events can arrive out of order: never let an older one overwrite a newer one */
+  const at = String(d.updated_at || ev.occurred_at || "");
+  if (a.sub && a.sub.id === d.id && a.sub.at && at && at < a.sub.at) return json({ok: true, note: "older event"});
+  const period = d.current_billing_period || {}, sch = d.scheduled_change || null, urls = d.management_urls || {};
+  a.sub = {id: d.id, status: d.status, customer: d.customer_id, ends: period.ends_at || null,
+    cancelAt: sch && sch.action === "cancel" ? sch.effective_at : null, cancelUrl: urls.cancel || null,
+    updateUrl: urls.update_payment_method || null, at, first: (a.sub && a.sub.first) || d.started_at || d.created_at || at};
+  a.paid = ["active", "trialing", "past_due"].includes(d.status);
+  a.updated = new Date().toISOString();
+  await env.DATA.put(`a:${uid}`, JSON.stringify(a));
+  ACCESS.clear();
+  return json({ok: true});
 }
 
 /* ---------- certificates ---------- */
@@ -484,7 +526,7 @@ function drawEOB(){
   let h=warn.map(w=>'<div class="card warn">'+w+'</div>').join("");
   h+='<div class="stats"><div><b>'+devices.length+'</b>personas (celulares)</div><div><b>'+N(d=>new Date(d.last)>week)+'</b>activas esta semana</div><div><b>'+N(d=>d.installed)+'</b>instalaron la app</div><div><b>'+feedback.length+'</b>comentarios'+(avg.length?' · '+(avg.reduce((a,b)=>a+b,0)/avg.length).toFixed(1)+'★':'')+'</div></div>';
   h+='<h2>¿Hasta dónde llegan?</h2><table><tr><th>Lección</th><th>Empezaron</th><th>Terminaron</th><th></th></tr>';
-  const MODS=[[1,6],[7,9],[10,12],[13,16],[17,20],[21,24],[25,27]];
+  const MODS=[[1,5],[6,9],[10,13],[14,17],[18,21],[22,25],[26,28]];
   MODS.forEach(([a,b],i)=>{
     for(let n=a;n<=b;n++){const s=N(d=>(d.lessons||{})[n]>0),t=N(d=>(d.lessons||{})[n]>=6);
       h+='<tr><td>Lesson '+n+'</td><td>'+s+'</td><td>'+t+'</td><td><div class="bar"><i style="width:'+(devices.length?Math.round(t/devices.length*100):0)+'%"></i></div></td></tr>'}
