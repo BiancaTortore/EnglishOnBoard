@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-53";
+const APP_VERSION = "beta-54";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -592,7 +592,7 @@ function wireStars(root, onChange){
    OFFLINE — download the open lessons' recorded voices and pictures
    into the same cache the service worker uses, so they play without signal.
    ========================================================= */
-const MEDIA_CACHE = "eob-media-v2";   /* same name as MEDIA in sw.js */
+const MEDIA_CACHE = "eob-media-v3";   /* same name as MEDIA in sw.js */
 function lessonMediaFiles(Ln){
   const dir = "l" + pad(Ln.n), files = new Set();
   JSON.stringify(Ln).replace(/"(img\/[^"]+\.(?:jpe?g|png|webp|svg))"/g, (_, f) => files.add(f));

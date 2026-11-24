@@ -1,332 +1,311 @@
 {
  "n": 28,
+ "modelAudio": true,
+ "mediaRev": 1,
  "module": 7,
- "title": "Pilot boarding & helm orders",
- "place": "Day 14 · 07:00 · Marseille approach",
- "goal": "Report the pilot on board, repeat helm orders and report the wheel and the heading.",
+ "title": "Engine orders",
+ "place": "Day 14 · 05:30 · off Marseille, bridge",
+ "goal": "Read back engine orders, report the engine, and talk about the berthing plan.",
  "images": {
   "hero": "img/l28/hero.jpg",
   "scene": "img/l28/scene.jpg"
  },
- "modelAudio": true,
- "mediaRev": 3,
- "radioChannel": "UHF",
  "audio": {
   "l28-01": {
-   "pause": 1500,
    "voice": "lars",
-   "text": "Diego, the pilot boat is coming alongside. Report when the pilot is on board.",
-   "es": "Diego, la lancha del práctico se está abarloando. Avisá cuando el práctico esté a bordo.",
-   "radio": true
+   "text": "Good morning, cadet. This morning you're on the engine telegraph. Repeat every engine order, loud and clear.",
+   "es": "Buen día, cadete. Esta mañana vas al telégrafo de máquina. Repetí cada orden de máquina, fuerte y claro."
   },
   "l28-02": {
-   "pause": 2000,
    "voice": "diego",
-   "text": "Bridge, pilot ladder. Pilot boat alongside, starboard side.",
-   "es": "Puente, escala de práctico. Lancha del práctico abarloada, banda de estribor."
+   "text": "Yes, Captain.",
+   "es": "Sí, Capitán."
   },
   "l28-03": {
-   "voice": "diego",
-   "text": "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
-   "es": "Puente, escala de práctico. Práctico a bordo. Vamos al puente."
+   "pause": 900,
+   "voice": "lars",
+   "text": "Engine room, bridge. Stand by engine. Pilot at seven.",
+   "es": "Máquinas, puente. Máquina en atención. Práctico a las siete."
   },
   "l28-04": {
-   "pause": 700,
-   "voice": "pilot",
-   "text": "Good morning, young man. Bonjour. Lead the way, please.",
-   "es": "Buen día, joven. Bonjour. Guíeme, por favor."
+   "pause": 1200,
+   "voice": "marek",
+   "text": "Bridge, engine room. Standing by. Engine tested ahead and astern. Rudder tested, hard over both sides. All OK.",
+   "es": "Puente, máquinas. En atención. Máquina probada avante y atrás. Timón probado, todo a una y otra banda. Todo bien."
   },
   "l28-05": {
-   "pause": 2200,
-   "voice": "diego",
-   "text": "Good morning, Pilot. This way, please. Mind the step.",
-   "es": "Buen día, práctico. Por acá, por favor. Cuidado con el escalón."
+   "voice": "lars",
+   "text": "Thank you, Chief. Half ahead.",
+   "es": "Gracias, Jefe. Adelante media."
   },
   "l28-06": {
-   "voice": "lars",
-   "text": "Good morning, Pilot. Welcome on board. Here is the pilot card. Draught nine point eight metres, speed eight knots.",
-   "es": "Buen día, práctico. Bienvenido a bordo. Acá tiene la tarjeta de práctico. Calado nueve coma ocho metros, velocidad ocho nudos."
+   "pause": 1300,
+   "voice": "diego",
+   "text": "Half ahead.",
+   "es": "Adelante media."
   },
   "l28-07": {
-   "voice": "pilot",
-   "text": "Thank you, Captain. Who is on the helm?",
-   "es": "Gracias, Capitán. ¿Quién está en el timón?"
+   "voice": "diego",
+   "text": "Engine is half ahead.",
+   "es": "Máquina adelante media."
   },
   "l28-08": {
-   "pause": 900,
+   "pause": 1500,
    "voice": "lars",
-   "text": "The cadet. He's good, and I'm right here.",
-   "es": "El cadete. Es bueno, y yo estoy acá al lado."
+   "text": "Slow ahead.",
+   "es": "Adelante despacio."
   },
   "l28-09": {
-   "voice": "pilot",
-   "text": "Very good. Port ten.",
-   "es": "Muy bien. Babor diez."
+   "pause": 1300,
+   "voice": "diego",
+   "text": "Slow ahead.",
+   "es": "Adelante despacio."
   },
   "l28-10": {
-   "pause": 1500,
    "voice": "diego",
-   "text": "Port ten.",
-   "es": "Babor diez."
+   "text": "Engine is slow ahead. Captain, why so slow?",
+   "es": "Máquina adelante despacio. Capitán, ¿por qué tan despacio?"
   },
   "l28-11": {
-   "voice": "diego",
-   "text": "Wheel is port ten.",
-   "es": "Timón a babor diez."
+   "voice": "lars",
+   "text": "The pilot boat comes alongside at about eight knots. We need to be slow and steady.",
+   "es": "La lancha del práctico se abarloa a unos ocho nudos. Tenemos que ir despacio y firmes."
   },
   "l28-12": {
-   "voice": "pilot",
-   "text": "Midships.",
-   "es": "A la vía."
+   "pause": 1000,
+   "voice": "tanya",
+   "text": "Morning, Captain. The berthing plan from the port: two tugs. One will make fast forward, one aft.",
+   "es": "Buen día, Capitán. El plan de atraque del puerto: dos remolcadores. Uno toma cabo a proa y otro a popa."
   },
   "l28-13": {
-   "pause": 1400,
-   "voice": "diego",
-   "text": "Midships.",
-   "es": "A la vía."
+   "voice": "lars",
+   "text": "Good. Our lines will go on their towing hooks. Port side alongside, on the big fenders of the gas berth.",
+   "es": "Bien. Nuestros cabos van a ir a sus ganchos de remolque. Atracamos por babor, contra las defensas grandes del muelle de gas."
   },
   "l28-14": {
-   "voice": "diego",
-   "text": "Wheel is amidships.",
-   "es": "Timón a la vía."
+   "pause": 1500,
+   "voice": "lars",
+   "text": "Dead slow ahead.",
+   "es": "Adelante muy despacio."
   },
   "l28-15": {
-   "voice": "pilot",
-   "text": "Steer zero four five.",
-   "es": "Gobierne cero cuatro cinco."
+   "pause": 1300,
+   "voice": "diego",
+   "text": "Dead slow ahead.",
+   "es": "Adelante muy despacio."
   },
   "l28-16": {
-   "pause": 2200,
    "voice": "diego",
-   "text": "Steer zero four five.",
-   "es": "Gobernar cero cuatro cinco."
+   "text": "Engine is dead slow ahead.",
+   "es": "Máquina adelante muy despacio."
   },
   "l28-17": {
-   "voice": "diego",
-   "text": "Steady on zero four five.",
-   "es": "Rumbo cero cuatro cinco."
+   "pause": 900,
+   "voice": "lars",
+   "text": "Good. In one hour, the pilot. And then, cadet, you take the wheel.",
+   "es": "Bien. En una hora, el práctico. Y después, cadete, tomás el timón."
   },
   "l28-18": {
-   "voice": "pilot",
-   "text": "Starboard twenty.",
-   "es": "Estribor veinte."
+   "pause": 600,
+   "voice": "diego",
+   "text": "The wheel? Me?",
+   "es": "¿El timón? ¿Yo?"
   },
   "l28-19": {
-   "pause": 1400,
-   "voice": "diego",
-   "text": "Starboard twenty.",
-   "es": "Estribor veinte."
+   "voice": "tanya",
+   "text": "You. Steady hands, Diego.",
+   "es": "Vos. Manos firmes, Diego."
   },
-  "l28-20": {
-   "voice": "diego",
-   "text": "Wheel is starboard twenty.",
-   "es": "Timón a estribor veinte."
-  },
-  "l28-21": {
-   "voice": "pilot",
-   "text": "Midships. Steady.",
-   "es": "A la vía. Así."
-  },
-  "l28-22": {
-   "pause": 2400,
-   "voice": "diego",
-   "text": "Midships. Steady. Steady on zero nine zero.",
-   "es": "A la vía. Así. Rumbo cero nueve cero."
-  },
-  "l28-23": {
-   "voice": "pilot",
-   "text": "Finished with the helm. Well done, cadet. You'll make a good officer.",
-   "es": "Terminado con el timón. Bien hecho, cadete. Vas a ser un buen oficial."
-  },
-  "l28-24": {
-   "pause": 900,
-   "voice": "diego",
-   "text": "Thank you, Pilot. Thank you, Captain.",
-   "es": "Gracias, práctico. Gracias, Capitán."
-  },
-  "l28-25": {
-   "voice": "lars",
-   "text": "Welcome to Marseille, Diego. And welcome to your new life at sea.",
-   "es": "Bienvenido a Marsella, Diego. Y bienvenido a tu nueva vida en el mar."
-  },
-  "w-ladder": {
+  "w-ahead": {
    "voice": "model",
-   "text": "pilot ladder"
+   "text": "ahead"
   },
-  "x-ladder": {
+  "x-ahead": {
    "voice": "model",
-   "text": "The pilot ladder is on the starboard side.",
-   "es": "La escala de práctico está por estribor."
+   "text": "Slow ahead.",
+   "es": "Adelante despacio."
   },
-  "w-card": {
+  "w-astern": {
    "voice": "model",
-   "text": "pilot card"
+   "text": "astern"
   },
-  "x-card": {
+  "x-astern": {
    "voice": "model",
-   "text": "Here is the pilot card.",
-   "es": "Acá tiene la tarjeta de práctico."
+   "text": "Half astern.",
+   "es": "Atrás media."
   },
-  "w-helm": {
+  "w-stop": {
    "voice": "model",
-   "text": "helm"
+   "text": "stop engine"
   },
-  "x-helm": {
+  "x-stop": {
    "voice": "model",
-   "text": "Who is on the helm?",
-   "es": "¿Quién está en el timón?"
+   "text": "Stop engine.",
+   "es": "Pare máquina."
+  },
+  "w-deadslow": {
+   "voice": "model",
+   "text": "dead slow"
+  },
+  "x-deadslow": {
+   "voice": "model",
+   "text": "Dead slow ahead.",
+   "es": "Adelante muy despacio."
+  },
+  "w-half": {
+   "voice": "model",
+   "text": "half"
+  },
+  "x-half": {
+   "voice": "model",
+   "text": "Half ahead.",
+   "es": "Adelante media."
+  },
+  "w-full": {
+   "voice": "model",
+   "text": "full"
+  },
+  "x-full": {
+   "voice": "model",
+   "text": "Full astern!",
+   "es": "¡Atrás toda!"
+  },
+  "w-propeller": {
+   "voice": "model",
+   "text": "propeller"
+  },
+  "x-propeller": {
+   "voice": "model",
+   "text": "The propeller is clear.",
+   "es": "La hélice está libre."
   },
   "w-rudder": {
    "voice": "model",
-   "text": "rudder angle indicator"
+   "text": "rudder"
   },
   "x-rudder": {
    "voice": "model",
-   "text": "Check the rudder angle indicator.",
-   "es": "Mirá el axiómetro."
+   "text": "The rudder is behind the propeller.",
+   "es": "La pala del timón está detrás de la hélice."
   },
-  "w-midships": {
+  "w-towhook": {
    "voice": "model",
-   "text": "midships"
+   "text": "towing hook"
   },
-  "x-midships": {
+  "x-towhook": {
    "voice": "model",
-   "text": "Midships. Wheel is amidships.",
-   "es": "A la vía. Timón a la vía."
+   "text": "Our line will go on the tug's towing hook.",
+   "es": "Nuestro cabo va a ir al gancho de remolque del remolcador."
   },
-  "w-hardport": {
+  "w-fender": {
    "voice": "model",
-   "text": "hard-a-port"
+   "text": "fender"
   },
-  "x-hardport": {
+  "x-fender": {
    "voice": "model",
-   "text": "Hard-a-port!",
-   "es": "¡Todo a babor!"
+   "text": "The berth has big fenders.",
+   "es": "El muelle tiene defensas grandes."
   },
-  "w-steady": {
-   "voice": "model",
-   "text": "steady"
-  },
-  "x-steady": {
-   "voice": "model",
-   "text": "Steady on zero four five.",
-   "es": "Rumbo cero cuatro cinco, así."
-  },
-  "w-heading": {
-   "voice": "model",
-   "text": "heading"
-  },
-  "x-heading": {
-   "voice": "model",
-   "text": "Our heading is zero four five.",
-   "es": "Nuestro rumbo es cero cuatro cinco."
-  },
-  "w-pilotboat": {
-   "voice": "model",
-   "text": "pilot boat"
-  },
-  "x-pilotboat": {
-   "voice": "model",
-   "text": "The pilot boat is alongside.",
-   "es": "La lancha de práctico está al costado."
-  },
-  "w-station": {
-   "voice": "model",
-   "text": "pilot station"
-  },
-  "x-station": {
-   "voice": "model",
-   "text": "Call the pilot station on channel twelve.",
-   "es": "Llamá a la estación de prácticos por el canal doce."
-  },
-  "p-port": {
-   "voice": "model",
-   "text": "Port ten.",
-   "es": "Babor diez."
-  },
-  "p-wheel": {
-   "voice": "model",
-   "text": "Wheel is port ten.",
-   "es": "Timón a babor diez."
-  },
-  "p-steady": {
-   "voice": "model",
-   "text": "Steady on zero four five.",
-   "es": "Rumbo cero cuatro cinco."
-  },
-  "p-onboard": {
-   "voice": "model",
-   "text": "Pilot on board. Coming to the bridge.",
-   "es": "Práctico a bordo. Vamos al puente."
-  },
-  "m-stbd": {
-   "voice": "model",
-   "text": "Starboard fifteen.",
-   "es": "Estribor quince."
-  },
-  "m-steer": {
-   "voice": "model",
-   "text": "Steer one two zero.",
-   "es": "Gobernar uno dos cero."
-  },
-  "m-onboard": {
-   "voice": "model",
-   "text": "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
-   "es": "Puente, escala de práctico. Práctico a bordo. Vamos al puente."
-  },
-  "m-hard": {
-   "voice": "model",
-   "text": "Hard-a-port.",
-   "es": "Todo a babor."
-  },
-  "c-show-ladder": {
+  "c-show-half": {
    "voice": "lars",
-   "text": "Show me the pilot ladder."
+   "text": "Show me half ahead."
   },
-  "c-show-card": {
-   "voice": "pilot",
-   "text": "Where's the pilot card?"
-  },
-  "c-show-helm": {
+  "c-show-stop": {
    "voice": "lars",
-   "text": "Where's the helm?"
+   "text": "Where is stop?"
+  },
+  "c-show-astern": {
+   "voice": "lars",
+   "text": "Show me the astern side."
+  },
+  "c-show-propeller": {
+   "voice": "marek",
+   "text": "Show me the propeller."
   },
   "c-show-rudder": {
-   "voice": "pilot",
-   "text": "Show me the rudder angle indicator."
+   "voice": "marek",
+   "text": "Where's the rudder?"
   },
-  "c-show-heading": {
-   "voice": "pilot",
-   "text": "Where can you see the heading?"
-  },
-  "c-o-stbd": {
-   "voice": "pilot",
-   "text": "Starboard fifteen."
-  },
-  "c-o-steer": {
-   "voice": "pilot",
-   "text": "Steer one two zero."
-  },
-  "c-o-mid": {
-   "voice": "pilot",
-   "text": "Midships."
-  },
-  "c-o-hard": {
-   "voice": "pilot",
-   "text": "Hard-a-port!"
-  },
-  "c-askladder": {
-   "voice": "lars",
-   "text": "Diego, is the pilot on board? Over.",
-   "radio": true
-  },
-  "c-o-other": {
-   "voice": "pilot",
-   "text": "Port twenty. Then steer three three zero."
-  },
-  "c-head-other": {
+  "c-show-towhook": {
    "voice": "tanya",
-   "text": "Our heading is two seven five."
+   "text": "Show me the towing hook."
+  },
+  "c-show-fender": {
+   "voice": "tanya",
+   "text": "Show me a fender."
+  },
+  "p-standby": {
+   "voice": "model",
+   "text": "Stand by engine.",
+   "es": "Máquina en atención."
+  },
+  "p-deadslow": {
+   "voice": "model",
+   "text": "Dead slow ahead.",
+   "es": "Adelante muy despacio."
+  },
+  "p-halfastern": {
+   "voice": "model",
+   "text": "Half astern.",
+   "es": "Atrás media."
+  },
+  "p-isahead": {
+   "voice": "model",
+   "text": "Engine is slow ahead.",
+   "es": "Máquina adelante despacio."
+  },
+  "p-stopped": {
+   "voice": "model",
+   "text": "Stop engine. Engine stopped.",
+   "es": "Pare máquina. Máquina parada."
+  },
+  "c-order-half": {
+   "voice": "lars",
+   "text": "Half astern."
+  },
+  "c-order-stop": {
+   "voice": "lars",
+   "text": "Stop engine."
+  },
+  "c-order-slow": {
+   "voice": "lars",
+   "text": "Slow ahead."
+  },
+  "c-whatorder": {
+   "voice": "lars",
+   "text": "Diego, what's the engine on now?"
+  },
+  "c-er-ready": {
+   "voice": "marek",
+   "text": "Bridge, engine room. Engine ready, standing by."
+  },
+  "c-plan-tug": {
+   "voice": "tanya",
+   "text": "Tug one will make fast forward."
+  },
+  "c-eta": {
+   "voice": "lars",
+   "text": "We'll be at the pilot station in fifteen minutes."
+  },
+  "m-halfastern": {
+   "voice": "model",
+   "text": "Half astern.",
+   "es": "Atrás media."
+  },
+  "m-stopped": {
+   "voice": "model",
+   "text": "Stop engine. Engine stopped.",
+   "es": "Pare máquina. Máquina parada."
+  },
+  "m-deadslow": {
+   "voice": "model",
+   "text": "Dead slow ahead, Captain.",
+   "es": "Adelante muy despacio, Capitán."
+  },
+  "m-ready": {
+   "voice": "model",
+   "text": "Engine ready, Captain.",
+   "es": "Máquina lista, Capitán."
   }
  },
  "dialogue": [
@@ -348,163 +327,172 @@
   "l28-16",
   "l28-17",
   "l28-18",
-  "l28-19",
-  "l28-20",
-  "l28-21",
-  "l28-22",
-  "l28-23",
-  "l28-24",
-  "l28-25"
+  "l28-19"
  ],
  "words": {
-  "ladder": {
-   "en": "pilot ladder",
-   "ipa": "/ˈpaɪlət ˌlædə/",
-   "es": "escala de práctico",
-   "audio": "w-ladder",
-   "ex": "x-ladder"
+  "ahead": {
+   "en": "ahead",
+   "ipa": "/əˈhed/",
+   "es": "adelante (máquina avante)",
+   "audio": "w-ahead",
+   "ex": "x-ahead"
   },
-  "card": {
-   "en": "pilot card",
-   "ipa": "/ˈpaɪlət kɑːd/",
-   "es": "tarjeta de práctico",
-   "audio": "w-card",
-   "ex": "x-card"
+  "astern": {
+   "en": "astern",
+   "ipa": "/əˈstɜːn/",
+   "es": "atrás",
+   "audio": "w-astern",
+   "ex": "x-astern"
   },
-  "helm": {
-   "en": "helm",
-   "ipa": "/helm/",
-   "es": "timón (puesto de gobierno)",
-   "audio": "w-helm",
-   "ex": "x-helm"
+  "stop": {
+   "en": "stop engine",
+   "ipa": "/ˌstɒp ˈendʒɪn/",
+   "es": "pare máquina",
+   "audio": "w-stop",
+   "ex": "x-stop"
+  },
+  "deadslow": {
+   "en": "dead slow",
+   "ipa": "/ˌded ˈsləʊ/",
+   "es": "muy despacio",
+   "audio": "w-deadslow",
+   "ex": "x-deadslow"
+  },
+  "half": {
+   "en": "half",
+   "ipa": "/hɑːf/",
+   "es": "media (máquina)",
+   "audio": "w-half",
+   "ex": "x-half"
+  },
+  "full": {
+   "en": "full",
+   "ipa": "/fʊl/",
+   "es": "toda (máquina)",
+   "audio": "w-full",
+   "ex": "x-full"
+  },
+  "propeller": {
+   "en": "propeller",
+   "ipa": "/prəˈpelə/",
+   "es": "hélice",
+   "audio": "w-propeller",
+   "ex": "x-propeller"
   },
   "rudder": {
-   "en": "rudder angle indicator",
-   "ipa": "/ˈrʌdər ˌæŋɡl ˈɪndɪkeɪtə/",
-   "es": "axiómetro",
+   "en": "rudder",
+   "ipa": "/ˈrʌdə/",
+   "es": "pala del timón",
    "audio": "w-rudder",
    "ex": "x-rudder"
   },
-  "midships": {
-   "en": "midships",
-   "ipa": "/ˈmɪdʃɪps/",
-   "es": "a la vía",
-   "audio": "w-midships",
-   "ex": "x-midships"
+  "towhook": {
+   "en": "towing hook",
+   "ipa": "/ˈtəʊɪŋ hʊk/",
+   "es": "gancho de remolque",
+   "audio": "w-towhook",
+   "ex": "x-towhook"
   },
-  "hardport": {
-   "en": "hard-a-port",
-   "ipa": "/ˌhɑːd ə ˈpɔːt/",
-   "es": "todo a babor",
-   "audio": "w-hardport",
-   "ex": "x-hardport"
-  },
-  "steady": {
-   "en": "steady",
-   "ipa": "/ˈstedi/",
-   "es": "mantener el rumbo",
-   "audio": "w-steady",
-   "ex": "x-steady"
-  },
-  "heading": {
-   "en": "heading",
-   "ipa": "/ˈhedɪŋ/",
-   "es": "rumbo",
-   "audio": "w-heading",
-   "ex": "x-heading"
-  },
-  "pilotboat": {
-   "en": "pilot boat",
-   "ipa": "/ˈpaɪlət bəʊt/",
-   "es": "lancha de práctico",
-   "audio": "w-pilotboat",
-   "ex": "x-pilotboat"
-  },
-  "station": {
-   "en": "pilot station",
-   "ipa": "/ˈpaɪlət ˈsteɪʃn/",
-   "es": "estación de prácticos",
-   "audio": "w-station",
-   "ex": "x-station"
+  "fender": {
+   "en": "fender",
+   "ipa": "/ˈfendə/",
+   "es": "defensa",
+   "audio": "w-fender",
+   "ex": "x-fender"
   }
  },
  "plate": {
   "svg": "img/l28/plate.svg",
   "pins": [
    {
-    "word": "ladder",
-    "x": 78,
-    "y": 28
+    "word": "stop",
+    "x": 86,
+    "y": 46
+   },
+   {
+    "word": "deadslow",
+    "x": 120,
+    "y": 46
+   },
+   {
+    "word": "half",
+    "x": 172,
+    "y": 92
+   },
+   {
+    "word": "full",
+    "x": 178,
+    "y": 130
+   },
+   {
+    "word": "ahead",
+    "x": 112,
+    "y": 110
+   },
+   {
+    "word": "astern",
+    "x": 60,
+    "y": 110
+   },
+   {
+    "word": "propeller",
+    "x": 236,
+    "y": 196
    },
    {
     "word": "rudder",
-    "x": 230,
-    "y": 38
+    "x": 324,
+    "y": 196
    },
    {
-    "word": "heading",
-    "x": 342,
-    "y": 38
+    "word": "towhook",
+    "x": 344,
+    "y": 76
    },
    {
-    "word": "helm",
-    "x": 262,
-    "y": 146
-   },
-   {
-    "word": "card",
-    "x": 360,
-    "y": 204
-   },
-   {
-    "word": "pilotboat",
-    "x": 118,
-    "y": 212
-   },
-   {
-    "word": "station",
-    "x": 26,
-    "y": 186
+    "word": "fender",
+    "x": 322,
+    "y": 134
    }
   ]
  },
  "docs": {
-  "card": {
+  "manoeuvring": {
    "kind": "form",
-   "title": "PILOT CARD",
-   "subtitle": "M/V LNG HORIZON · MARSEILLE · 27 MAR 2026 · 0710",
+   "title": "MANOEUVRING DATA",
+   "subtitle": "M/V LNG HORIZON · Loaded condition",
    "cells": [
     [
-     "DRAUGHT",
-     "Fwd 9.8 m · Aft 9.8 m"
+     "FULL AHEAD",
+     "80 rpm · 16.0 knots"
     ],
     [
-     "LENGTH / BEAM",
-     "295 m / 46 m"
+     "HALF AHEAD",
+     "60 rpm · 12.0 knots"
     ],
     [
-     "SPEED NOW",
-     "8 knots"
+     "SLOW AHEAD",
+     "45 rpm · 9.0 knots"
     ],
     [
-     "HEADING",
-     "045°"
+     "DEAD SLOW AHEAD",
+     "30 rpm · 6.0 knots"
     ],
     [
-     "RUDDER",
-     "Hard over to hard over: 28 seconds"
+     "DEAD SLOW ASTERN",
+     "30 rpm"
     ],
     [
-     "PROPELLER",
-     "Right-handed, fixed pitch"
+     "HALF ASTERN",
+     "60 rpm"
     ],
     [
-     "BOW THRUSTER",
-     "Yes · 2,000 kW"
+     "FULL ASTERN",
+     "70 rpm · max. 10 minutes"
     ],
     [
-     "ON THE HELM",
-     "Cadet D. Martínez · Master on the bridge"
+     "NOTE",
+     "From full ahead to stop: about 12 minutes"
     ]
    ]
   }
@@ -512,17 +500,17 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: the pilot",
+   "title": "Listen: slowing down for Marseille",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l28/scene.jpg",
-     "kicker": "Day 14 · 07:00 · Marseille",
-     "title": "Pilot on board",
-     "body": "The last morning of the voyage. Diego meets the pilot at the ladder, takes him to the bridge and then takes the helm. Every order, he repeats. Listen first, one piece at a time.",
-     "es": "Escuchá primero. El texto está escondido a propósito."
+     "kicker": "Day 14 · 05:30 · off Marseille",
+     "title": "Stand by engine",
+     "body": "Dawn on the last day of the voyage. The ship slows down for the pilot, and Diego goes to the engine telegraph. Listen first, one piece at a time.",
+     "es": "Amanece el último día del viaje. El buque baja la velocidad para el práctico y Diego va al telégrafo de máquina."
     },
     {
      "type": "listen",
@@ -530,129 +518,161 @@
       "l28-01",
       "l28-02"
      ],
-     "q": "On which side is the pilot boat?",
+     "q": "What is Diego's job this morning?",
      "opts": [
-      "Starboard",
-      "Port",
-      "Astern"
+      "The engine telegraph",
+      "The helm",
+      "The lookout"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l28-06"
+      "l28-03",
+      "l28-04"
      ],
-     "q": "What is the draught?",
+     "q": "What did the engine room test?",
      "opts": [
-      "9.8 metres",
-      "8 metres",
-      "9 metres"
+      "The engine and the rudder",
+      "The radar and the GPS",
+      "The lifeboat"
+     ],
+     "a": 0,
+     "why": "\"Engine tested ahead and astern. Rudder tested.\""
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l28-05",
+      "l28-06",
+      "l28-07"
+     ],
+     "q": "What does Diego say after the read-back?",
+     "opts": [
+      "Engine is half ahead.",
+      "Half ahead, please.",
+      "OK, Captain."
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l28-07",
-      "l28-08"
-     ],
-     "q": "Who is on the helm?",
-     "opts": [
-      "The cadet",
-      "The Captain",
-      "An AB"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
+      "l28-08",
       "l28-09",
       "l28-10",
       "l28-11"
      ],
-     "q": "What does Diego do with each order?",
+     "q": "Why does the ship go slow?",
      "opts": [
-      "Repeats it, then reports the wheel",
-      "Says OK",
-      "Waits in silence"
+      "For the pilot boat",
+      "Because of the fog",
+      "For the tugs"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l28-21",
-      "l28-22"
+      "l28-12",
+      "l28-13"
      ],
-     "q": "What is the new heading?",
+     "q": "Where will the ship's lines go?",
      "opts": [
-      "090",
-      "045",
-      "009"
+      "On the tugs' towing hooks",
+      "On the fenders",
+      "On the pilot boat"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l28-23"
+      "l28-14",
+      "l28-15",
+      "l28-16",
+      "l28-17",
+      "l28-18",
+      "l28-19"
      ],
-     "q": "What does the pilot say about Diego?",
+     "q": "What will Diego do after the pilot boards?",
      "opts": [
-      "He'll make a good officer",
-      "He's too slow",
-      "He talks too much"
+      "Take the wheel",
+      "Go to the forward station",
+      "Go to sleep"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole arrival",
+     "title": "Now the whole scene",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Pilot and helm",
+   "title": "Engine orders",
    "skill": "Vocabulary",
-   "min": 4,
+   "min": 5,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The steering position and the pilot ladder."
+     "body": "The engine telegraph, the stern under water, and a tug."
     },
     {
      "type": "card",
-     "word": "ladder"
+     "word": "ahead"
     },
     {
      "type": "card",
-     "word": "card"
+     "word": "astern"
     },
     {
      "type": "card",
-     "word": "pilotboat"
-    },
-    {
-     "type": "card",
-     "word": "station"
+     "word": "stop"
     },
     {
      "type": "tap",
-     "audio": "c-show-ladder",
-     "a": "ladder"
+     "audio": "c-show-stop",
+     "a": "stop"
     },
     {
      "type": "card",
-     "word": "helm"
+     "word": "deadslow"
+    },
+    {
+     "type": "card",
+     "word": "half"
+    },
+    {
+     "type": "card",
+     "word": "full"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-half",
+     "a": "half"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-astern",
+     "a": "astern"
+    },
+    {
+     "type": "card",
+     "word": "propeller"
     },
     {
      "type": "card",
      "word": "rudder"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-propeller",
+     "a": "propeller"
     },
     {
      "type": "tap",
@@ -661,38 +681,30 @@
     },
     {
      "type": "card",
-     "word": "midships"
+     "word": "towhook"
     },
     {
      "type": "card",
-     "word": "hardport"
-    },
-    {
-     "type": "card",
-     "word": "steady"
-    },
-    {
-     "type": "card",
-     "word": "heading"
+     "word": "fender"
     },
     {
      "type": "tap",
-     "audio": "c-show-heading",
-     "a": "heading"
+     "audio": "c-show-towhook",
+     "a": "towhook"
     },
     {
      "type": "tap",
-     "audio": "c-show-helm",
-     "a": "helm"
+     "audio": "c-show-fender",
+     "a": "fender"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"a la vía\" in English:",
+     "q": "\"atrás media\" in English:",
      "opts": [
-      "midships",
-      "middle",
-      "straight"
+      "half astern",
+      "medium back",
+      "half aft"
      ],
      "a": 0
     },
@@ -701,24 +713,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "pilot ladder",
-       "escala de práctico"
+       "propeller",
+       "hélice"
       ],
       [
-       "helm",
-       "timón"
+       "rudder",
+       "pala del timón"
       ],
       [
-       "midships",
-       "a la vía"
+       "towing hook",
+       "gancho de remolque"
       ],
       [
-       "steady",
-       "así"
+       "fender",
+       "defensa"
       ],
       [
-       "heading",
-       "rumbo"
+       "dead slow",
+       "muy despacio"
       ]
      ]
     }
@@ -726,200 +738,231 @@
   },
   {
    "id": "phrases",
-   "title": "Order, read-back, report",
+   "title": "Repeat, report, plan",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "At the helm",
+     "title": "At the telegraph",
      "list": [
       [
-       "Port ten.",
-       "Babor diez.",
-       "p-port"
+       "Stand by engine.",
+       "Máquina en atención.",
+       "p-standby"
       ],
       [
-       "Wheel is port ten.",
-       "Timón a babor diez.",
-       "p-wheel"
+       "Dead slow ahead.",
+       "Adelante muy despacio.",
+       "p-deadslow"
       ],
       [
-       "Steady on zero four five.",
-       "Rumbo cero cuatro cinco.",
-       "p-steady"
+       "Half astern.",
+       "Atrás media.",
+       "p-halfastern"
       ],
       [
-       "Pilot on board. Coming to the bridge.",
-       "Práctico a bordo. Vamos al puente.",
-       "p-onboard"
+       "Engine is slow ahead.",
+       "Máquina adelante despacio.",
+       "p-isahead"
+      ],
+      [
+       "Stop engine. Engine stopped.",
+       "Pare máquina. Máquina parada.",
+       "p-stopped"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Three steps for every order",
+     "title": "Order, read-back, report",
      "steps": [
       [
-       "1 · repeat",
-       "Pilot: <b>Port ten.</b> → You: <b>Port ten.</b>"
+       "1 · order",
+       "Captain: <b>Half ahead.</b>"
       ],
       [
-       "2 · do it",
-       "Turn the wheel. Watch the rudder angle indicator."
+       "2 · read-back",
+       "You: <b>Half ahead.</b>"
       ],
       [
        "3 · report",
-       "<b>Wheel is port ten.</b> · <b>Wheel is amidships.</b> · <b>Steady on zero four five.</b>"
+       "<b>Engine is half ahead.</b> · <b>Engine stopped.</b>"
       ]
      ],
      "paras": [
-      "The repeat is called the <b>read-back</b>: it proves you heard the right order. Exactly the same words, nothing more.",
-      "Courses are said figure by figure: <b>zero four five</b>, <b>one two zero</b>. Angles of rudder: <b>port ten</b>, <b>starboard twenty</b>, <b>hard-a-port</b>."
+      "Repeat the exact words, then report when it's done. In the next lesson you do the same at the helm.",
+      "An engine order is: speed + direction. <b>Dead slow / slow / half / full</b> + <b>ahead / astern</b>. <b>Stop engine</b> stands alone."
      ],
-     "avoid": "OK · Yes, sir · forty-five"
+     "avoid": "OK · Ahead half · Engine stop (as a report)"
     },
     {
      "type": "choice",
-     "q": "The pilot says \"Starboard twenty.\" First you say…",
+     "q": "The Captain says \"Slow ahead.\" Your read-back:",
      "opts": [
-      "Starboard twenty.",
-      "Yes, Pilot.",
-      "OK, twenty."
+      "Slow ahead.",
+      "OK, slow.",
+      "Ahead slow."
      ],
      "a": 0
     },
     {
+     "type": "build",
+     "situation": "You moved the telegraph to half astern.",
+     "q": "Report it.",
+     "a": [
+      "Engine",
+      "is",
+      "half",
+      "astern."
+     ],
+     "extra": [
+      "stern",
+      "are"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "The plan: will",
+     "steps": [
+      [
+       "Plan",
+       "Two tugs <b>will</b> make fast."
+      ],
+      [
+       "Where",
+       "Our lines <b>will</b> go on their towing hooks."
+      ],
+      [
+       "Short",
+       "We<b>'ll</b> be at the pilot station at seven."
+      ]
+     ],
+     "paras": [
+      "For a plan that is already decided, use <b>will</b> + verb. Same form for everyone: I will, it will, they will.",
+      "In speech, <b>we will</b> → <b>we'll</b>, <b>it will</b> → <b>it'll</b>."
+     ],
+     "avoid": "Two tugs will makes fast. · Our lines will to go."
+    },
+    {
      "type": "choice",
-     "q": "The rudder is now at port ten. You report…",
+     "q": "Tanya reads the berthing plan: \"One tug ___ make fast aft.\"",
      "opts": [
-      "Wheel is port ten.",
-      "Port ten done.",
-      "I did it."
+      "will",
+      "wills",
+      "is"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "audio": "c-head-other",
-     "q": "What's the heading? Write three numbers.",
+     "audio": "c-order-slow",
+     "q": "Write the order you hear.",
      "accept": [
-      "275",
-      "2 7 5",
-      "two seven five"
-     ]
-    },
-    {
-     "type": "build",
-     "q": "Steady on zero four five.",
-     "a": [
-      "Steady",
-      "on",
-      "zero",
-      "four",
-      "five."
-     ],
-     "extra": [
-      "forty-five",
-      "in"
+      "slow ahead",
+      "slow ahead."
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "No numbers in Spanish style",
+     "title": "\"Adelante\" is ahead, not forward",
      "paras": [
-      "In Spanish we say <i>rumbo cuarenta y cinco</i>. On the helm it's always three figures: <b>zero four five</b>.",
-      "<b>Midships</b> is one word; when you report, <b>amidships</b>: <b>Wheel is amidships.</b>"
+      "For the engine, <i>adelante</i> is <b>ahead</b>: <i>Slow ahead.</i>",
+      "<b>Forward</b> is a place on board, the bow: <i>forward station</i>, <i>the tug makes fast forward</i>.",
+      "And <i>atrás</i> is <b>astern</b>, not <i>back</i> or <i>aft</i>."
      ],
-     "avoid": "Steer forty-five · Wheel is in the middle"
+     "avoid": "Slow forward. · Half back. · Full aft."
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-o-other"
-     ],
-     "q": "What are the two orders?",
+     "type": "choice",
+     "q": "The Captain wants the ship to go backwards, slowly. He says…",
      "opts": [
-      "Port twenty, then steer 330",
-      "Starboard twenty, then steer 030",
-      "Port twelve, then steer 333"
+      "Slow astern.",
+      "Slow back.",
+      "Slow aft."
      ],
      "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Helm orders",
+     "title": "HALF without l, a-STERN",
      "paras": [
-      "A pilot speaks fast. Answer at the same speed, clear and flat, no question tone.",
-      "<b>Hard-a-port</b>: three beats, <b>HARD-a-PORT</b>."
-     ],
-     "list": [
-      [
-       "Hard-a-port.",
-       "Todo a babor.",
-       "m-hard"
-      ]
+      "<b>half</b> /hɑːf/: the <i>l</i> is silent, like <i>calf</i>. Not <i>halv</i>, not <i>hal-f</i>.",
+      "<b>astern</b> /əˈstɜːn/: the strong part is <b>STERN</b>, and the <i>a</i> is very short: <i>uh-STERN</i>.",
+      "Orders are said with two strong words: <b>DEAD SLOW a-HEAD</b>. <b>HALF a-STERN</b>."
      ]
+    },
+    {
+     "type": "choice",
+     "q": "Which one is a report, not an order?",
+     "opts": [
+      "Engine stopped.",
+      "Stop engine.",
+      "Stop the engine, please."
+     ],
+     "a": 0,
+     "why": "Order: Stop engine. Report: Engine stopped."
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the pilot card",
+   "title": "Read the manoeuvring data",
    "skill": "Reading",
-   "min": 3,
+   "min": 4,
    "screens": [
     {
      "type": "doc",
-     "doc": "card",
-     "q": "How long from hard over to hard over?",
+     "doc": "manoeuvring",
+     "q": "What is the speed at half ahead?",
      "opts": [
-      "28 seconds",
-      "28 minutes",
-      "2 seconds"
+      "12.0 knots",
+      "16.0 knots",
+      "9.0 knots"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "card",
-     "q": "Is there a bow thruster?",
+     "doc": "manoeuvring",
+     "q": "The pilot boat needs about 8 knots. Which order is closest?",
      "opts": [
-      "Yes, 2,000 kW",
-      "No",
-      "Only aft"
+      "Slow ahead",
+      "Half ahead",
+      "Full ahead"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "card",
-     "q": "Tap who is on the helm.",
-     "a": 7
+     "doc": "manoeuvring",
+     "q": "Tap the order with a time limit.",
+     "a": 6
     },
     {
      "type": "doc",
-     "doc": "card",
-     "q": "What kind of propeller?",
+     "doc": "manoeuvring",
+     "q": "How many rpm at full astern?",
      "opts": [
-      "Right-handed, fixed pitch",
-      "Left-handed",
-      "Controllable pitch"
+      "70",
+      "80",
+      "60"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "card",
-     "q": "What is the ship's length?",
+     "doc": "manoeuvring",
+     "q": "From full ahead, how long does the ship need to stop?",
      "opts": [
-      "295 m",
-      "46 m",
-      "9.8 m"
+      "About 12 minutes",
+      "About 10 minutes",
+      "About 1 minute"
      ],
      "a": 0
     }
@@ -927,71 +970,75 @@
   },
   {
    "id": "speak",
-   "title": "Take the helm",
+   "title": "At the telegraph",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Repeat every order",
-     "body": "Listen, say it, check it. Same words as the pilot, at the same speed.",
-     "es": "Las mismas palabras que el práctico.",
+     "title": "Exactly the same words",
+     "body": "Listen, say it, check it. The read-back is the order, word for word: HALF a-STERN.",
+     "es": "Repetí la orden palabra por palabra.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-port"
+     "model": "p-standby"
     },
     {
      "type": "shadow",
-     "model": "p-wheel"
+     "model": "p-deadslow"
     },
     {
      "type": "shadow",
-     "model": "p-steady"
+     "model": "p-halfastern"
     },
     {
      "type": "role",
-     "cue": "c-askladder",
-     "task": "Report: pilot on board, coming to the bridge.",
-     "model": "m-onboard",
+     "cue": "c-order-half",
+     "task": "Read back the order.",
+     "model": "m-halfastern",
      "accept": [
-      "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
-      "Pilot on board. Coming to the bridge.",
-      "Bridge, pilot ladder, pilot on board, coming to the bridge."
+      "Half astern.",
+      "Half astern, Captain.",
+      "Half astern, sir."
      ]
     },
     {
      "type": "role",
-     "cue": "c-o-stbd",
-     "task": "Repeat the order.",
-     "model": "m-stbd",
+     "cue": "c-order-stop",
+     "task": "Read back the order, then report the engine is stopped.",
+     "model": "m-stopped",
      "accept": [
-      "Starboard fifteen.",
-      "Starboard fifteen!"
+      "Stop engine. Engine stopped.",
+      "Stop engine. Engine is stopped.",
+      "Stop engine, engine stopped.",
+      "Stop engine. The engine is stopped."
      ]
     },
     {
      "type": "role",
-     "cue": "c-o-steer",
-     "task": "Repeat the order.",
-     "model": "m-steer",
+     "cue": "c-whatorder",
+     "task": "The telegraph is at dead slow ahead. Tell the Captain.",
+     "model": "m-deadslow",
      "accept": [
-      "Steer one two zero.",
-      "Steer one two zero!"
+      "Dead slow ahead, Captain.",
+      "Dead slow ahead.",
+      "Engine is dead slow ahead.",
+      "It's dead slow ahead."
      ]
     },
     {
      "type": "role",
-     "cue": "c-o-hard",
-     "task": "Repeat the order.",
-     "model": "m-hard",
+     "cue": "c-er-ready",
+     "task": "Marek says the engine is ready. Tell the Captain.",
+     "model": "m-ready",
      "accept": [
-      "Hard-a-port.",
-      "Hard a port.",
-      "Hard-a-port!",
-      "Hard to port."
+      "Engine ready, Captain.",
+      "The engine is ready, Captain.",
+      "Engine ready.",
+      "Captain, the engine is ready."
      ]
     }
    ]
@@ -1004,17 +1051,13 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-helm",
+     "audio": "w-propeller",
      "q": "Type what you hear.",
      "accept": [
-      "helm",
-      "the helm"
+      "propeller",
+      "the propeller",
+      "a propeller"
      ]
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-card",
-     "a": "card"
     },
     {
      "type": "tap",
@@ -1022,71 +1065,75 @@
      "a": "rudder"
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-o-mid"
-     ],
-     "q": "What's the order?",
-     "opts": [
-      "Midships",
-      "Port side",
-      "Middle watch"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "After \"Steer zero four five\", when the ship is on 045, you report…",
-     "opts": [
-      "Steady on zero four five.",
-      "Forty-five, OK.",
-      "Steer zero four five done."
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "Why do you repeat each order?",
-     "opts": [
-      "To prove you heard it right",
-      "To be polite",
-      "Because the pilot is French"
-     ],
-     "a": 0
-    },
-    {
-     "type": "build",
-     "q": "Wheel is amidships.",
-     "a": [
-      "Wheel",
-      "is",
-      "amidships."
-     ],
-     "extra": [
-      "midships",
-      "the"
-     ]
+     "type": "tap",
+     "audio": "c-show-fender",
+     "a": "fender"
     },
     {
      "type": "listen",
      "audio": [
-      "l28-25"
+      "c-plan-tug"
      ],
-     "q": "What does the Captain say at the end?",
+     "q": "Where will tug one make fast?",
      "opts": [
-      "Welcome to your new life at sea",
-      "See you next voyage",
-      "Go and rest"
+      "Forward",
+      "Aft",
+      "Alongside the pilot boat"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: escala de práctico",
+     "audio": "c-eta",
+     "q": "In how many minutes? Write the number.",
      "accept": [
-      "pilot ladder",
-      "the pilot ladder",
-      "a pilot ladder"
+      "15",
+      "fifteen",
+      "15 minutes",
+      "fifteen minutes"
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "Bridge: \"Let go aft.\" You are at the aft station. You say…",
+     "opts": [
+      "Let go aft.",
+      "OK, we go.",
+      "Aft is free."
+     ],
+     "a": 0,
+     "why": "From Lesson 12: read-back, the same words."
+    },
+    {
+     "type": "choice",
+     "q": "\"Bridge, ___. Tug one is fast. Over.\" Tanya is at the bow.",
+     "opts": [
+      "forward",
+      "ahead",
+      "front"
+     ],
+     "a": 0,
+     "why": "A place on board: forward. Engine direction: ahead."
+    },
+    {
+     "type": "build",
+     "q": "Read back the Captain's order: full astern.",
+     "a": [
+      "Full",
+      "astern."
+     ],
+     "extra": [
+      "back",
+      "aft"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: hélice",
+     "accept": [
+      "propeller",
+      "the propeller",
+      "a propeller"
      ]
     }
    ]

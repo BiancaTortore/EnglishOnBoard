@@ -47,10 +47,10 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L25 | `c-show-firedoor` | James | Show me the fire door. | Nueva |
 | L27 | `w-kit` | Brian (modelo) | first-aid kit | Nueva |
 | L27 | `x-kit` | Brian (modelo) | Bring the first-aid kit to the galley. | Nueva |
-| L28 | `w-pilotboat` | Brian (modelo) | pilot boat | Nueva |
-| L28 | `x-pilotboat` | Brian (modelo) | The pilot boat is alongside. | Nueva |
-| L28 | `w-station` | Brian (modelo) | pilot station | Nueva |
-| L28 | `x-station` | Brian (modelo) | Call the pilot station on channel twelve. | Nueva |
+| L29 | `w-pilotboat` | Brian (modelo) | pilot boat | Nueva |
+| L29 | `x-pilotboat` | Brian (modelo) | The pilot boat is alongside. | Nueva |
+| L29 | `w-station` | Brian (modelo) | pilot station | Nueva |
+| L29 | `x-station` | Brian (modelo) | Call the pilot station on channel twelve. | Nueva |
 | L13 | `w-stopper` | Brian (modelo) | chain stopper | Nueva |
 | L13 | `x-stopper` | Brian (modelo) | Put the chain stopper on. | Nueva |
 | L13 | `w-hawse` | Brian (modelo) | hawse pipe | Nueva |
@@ -62,4 +62,4 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L12 | `w-drum` | Brian (modelo) | drum | Nueva |
 | L12 | `x-drum` | Brian (modelo) | Keep three turns on the drum. | Nueva |
 | L11 | todas (58) | Personajes y Brian | Lección nueva *Lifting gear*: todo lo de `audio/l11/script.csv` (25 de personajes) más las 33 de la voz modelo | Nueva |
-| L29 | todas (60) | Personajes y Brian | Lección nueva *Engine orders & berthing*: todo lo de `audio/l29/script.csv` (31 de personajes) más las 29 de la voz modelo | Nueva |
+| L28 | todas (62) | Personajes y Brian | Lección nueva *Engine orders*: todo lo de `audio/l28/script.csv` (33 de personajes) más las 29 de la voz modelo | Nueva |

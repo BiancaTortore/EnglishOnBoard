@@ -60,7 +60,7 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 - La L11 tiene JSON, lámina y `img/l11/prompts.md`; **faltan las fotos (`scene.jpg`, `hero.jpg`) y todos sus audios** (`audio/l11/script.csv`, 25 de personajes + 33 de voz modelo).
 - Después de renumerar, los celulares tocaban audios de otra lección (el caché guarda por dirección: `audio/l13/…` era otra lección). Se cambió el nombre del caché de medios a `eob-media-v2` (en `sw.js` y `app.js`) para que todo se baje de nuevo. Si alguna vez se vuelve a renumerar, hacer lo mismo.
 - La app ya no tiene "27" fijo: la cantidad de lecciones y módulos sale de `course.json`, y el examen final usa la foto de la última lección.
-- Se agregó la **L29 "Engine orders & berthing"** (Día 14 · 08:30, atracada en Marsella: órdenes de máquina, hélice, pala del timón, gancho de remolque, defensas; lectura de los datos de maniobra). Es la última lección y su escena es la foto del examen final. Igual que la L11: **faltan fotos y audios** (`img/l29/prompts.md`, `audio/l29/script.csv`).
+- Lección de órdenes de máquina: primero se escribió como L29 (atraque en Marsella, después del práctico), pero Bianca prefirió que el curso termine con el práctico. Quedó como **L28 "Engine orders"** (Día 14 · 05:30, acercándose a Marsella: máquina en atención, Marek confirma pruebas, Diego al telégrafo, plan de atraque con remolcadores y defensas; *will* para el plan). La del práctico pasó a ser la **L29**, la última. Al intercambiarlas se cambió el caché de medios a `eob-media-v3`. Faltan fotos y audios de la L28 (`img/l28/prompts.md`, `audio/l28/script.csv`).
 
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.

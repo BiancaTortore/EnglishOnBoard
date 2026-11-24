@@ -18,7 +18,7 @@ Inglés marítimo para oficiales de cubierta hispanohablantes, en formato app de
 
 Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horizon**: es su primer embarque y su primer buque con tripulación internacional. El viaje dura 14 días: Houston → Golfo de México → Port Everglades → Atlántico → Marsella. **El Día 1 es el 14 de marzo de 2026** (Día N = 14 de marzo + N − 1); es la fecha de embarque que figura en el crew agreement de la Lesson 6. Datos de Diego que ya salen en documentos: nacido el 12 AUG 2003, seaman's book AR047926, pasaporte AAB512304.
 
-**El arco:** en la Lesson 1 Diego está nervioso y le pide a Rolando que repita todo. En la Lesson 28, al timón, es el práctico de Marsella quien le dice "say again", y Diego repite la orden con calma. Al final el Capitán le dice: *"Well done, cadet. You'll make a good officer."* El alumno hace el mismo recorrido.
+**El arco:** en la Lesson 1 Diego está nervioso y le pide a Rolando que repita todo. En la Lesson 29, al timón, es el práctico de Marsella quien le dice "say again", y Diego repite la orden con calma. Al final el Capitán le dice: *"Well done, cadet. You'll make a good officer."* El alumno hace el mismo recorrido.
 
 **El buque:** metanero tipo **Moss**, unos 290 m de eslora, con **cuatro tanques esféricos gigantes** que sobresalen de la cubierta, cubiertos por domos blancos. Casco negro con fondo rojo, superestructura blanca a popa, cubierta verde con tuberías entre las esferas. Ninguna imagen muestra texto legible.
 
@@ -96,8 +96,8 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | **Módulo 7 · Radio & outside parties** ||||
 | 26 | Distress, urgency & safety | Día 12 · 19:20 · Estrecho | Guardia de Tanya y Diego: MAYDAY del pesquero francés *Cap Béar* (hace agua, 4 personas). Tarifa Traffic acusa recibo; el *Horizon* está a 6 millas y Diego llama a Tarifa; Salvamento Marítimo los rescata |
 | 27 | Medical & TMAS | Día 13 · 10:00 · cocina | Mario se corta la mano izquierda con un cuchillo; Tanya llama al CIRM de Roma por teléfono satelital y Diego dicta los signos vitales; Diego ayuda en la cocina |
-| 28 | Pilot boarding & helm orders | Día 14 · 07:00 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
-| 29 | Engine orders & berthing | Día 14 · 08:30 · Marsella, puente | La atracada con remolcadores: Diego va al telégrafo, repite las órdenes de máquina del práctico y reporta; Tanya da distancias desde proa. "Finished with engine." Fin del viaje |
+| 28 | Engine orders | Día 14 · 05:30 · acercándose a Marsella, puente | Lars pone máquina en atención; Marek confirma máquina y timón probados. Diego va al telégrafo y repite las órdenes mientras bajan la velocidad para el práctico; Tanya trae el plan de atraque (dos remolcadores, cabos a sus ganchos, defensas del muelle). "Then you take the wheel." |
+| 29 | Pilot boarding & helm orders | Día 14 · 07:00 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
 
 ### Glosario náutico en español (cómo lo dice Bianca; usarlo en todas las traducciones)
 accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero · pumpman = bombero · messman = mozo · department = departamento · crew agreement = rol · to sign on = firmar el embarque · seaman's book = libreta de embarco · bunk = cama · muster card = tarjeta de rol · muster station = punto de reunión · drill = zafarrancho · announcement = anuncio · loudspeaker = altavoz · safety shoes = zapatos de seguridad · spanner = llave · chipping = picaretear · shackle = grillete · crane = grúa · jib = pluma · hook = gancho · sling = eslinga · pad eye = cáncamo · wire rope = cable · snatch block = pasteca · tackle = aparejo · thimble = guardacabo · lashing = trinca · turnbuckle = tensor · winch = guinche · drum = tambor · chain stopper = estopor · hawse pipe = escobén · chain locker = caja de cadenas · ahead = adelante · astern = atrás · dead slow = muy despacio · half = media · full = toda · stop engine = pare máquina · propeller = hélice · rudder = pala del timón · towing hook = gancho de remolque · fender = defensa · windlass = cabrestante · ECDIS = carta electrónica · swell = oleaje · rough (sea) = agitado · squall = chubasco
@@ -133,8 +133,8 @@ accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero 
 | 25 | Phrasal verbs: put out, break out, back up | Reportes al tablero de BA; *bar* sin s |
 | 26 | Estructura MAYDAY / PAN-PAN / SÉCURITÉ | Mensajes con estática |
 | 27 | Describir síntomas y signos vitales | — |
-| 28 | Órdenes de timón y read-back | Velocidad real de un práctico |
-| 29 | Órdenes de máquina: velocidad + dirección; orden → read-back → reporte (Engine stopped) | half sin l, a-STERN; ahead ≠ forward |
+| 28 | Órdenes de máquina: velocidad + dirección; orden → read-back → reporte (Engine stopped) + will para el plan (Two tugs will make fast) | half sin l, a-STERN; ahead ≠ forward |
+| 29 | Órdenes de timón y read-back | Velocidad real de un práctico |
 
 ---
 
