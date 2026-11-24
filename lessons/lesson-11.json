@@ -5,7 +5,7 @@
  "module": 3,
  "title": "Lifting gear",
  "place": "Day 2 · 15:00 · Houston, main deck",
- "goal": "Name the lifting gear, give crane signals and read a load limit.",
+ "goal": "Name the lifting gear, give crane signals and read a stores delivery note.",
  "images": {
   "hero": "img/l11/hero.jpg",
   "scene": "img/l11/scene.jpg"
@@ -29,68 +29,58 @@
   "l11-04": {
    "pause": 900,
    "voice": "tanya",
-   "text": "Wait a moment, Rolando. How heavy is the first pallet?",
-   "es": "Un momento, Rolando. ¿Cuánto pesa el primer pallet?"
+   "text": "Diego, before the first lift, check the gear: the sling, the shackle and the hook.",
+   "es": "Diego, antes del primer izado, revisá el equipo: la eslinga, el grillete y el gancho."
   },
   "l11-05": {
-   "voice": "rolando",
-   "text": "About one point five tonnes, Chief.",
-   "es": "Alrededor de una tonelada y media, Primer."
-  },
-  "l11-06": {
-   "voice": "tanya",
-   "text": "Diego, read the marking on the jib. What's the SWL?",
-   "es": "Diego, leé lo que dice la pluma. ¿Cuál es la SWL?"
-  },
-  "l11-07": {
-   "pause": 900,
-   "voice": "diego",
-   "text": "SWL two tonnes.",
-   "es": "SWL dos toneladas."
-  },
-  "l11-08": {
-   "voice": "tanya",
-   "text": "Good. One point five is fine. But the drinks pallet is two point five. We can't lift that in one go. Split it.",
-   "es": "Bien. Una y media está bien. Pero el pallet de bebidas pesa dos y media. Eso no lo podemos izar de una vez. Dividilo."
-  },
-  "l11-09": {
-   "voice": "rolando",
-   "text": "No problem, Chief. Cadet, check the sling and the shackle on the hook.",
-   "es": "No hay problema, Primer. Cadete, revisá la eslinga y el grillete en el gancho."
-  },
-  "l11-10": {
    "pause": 800,
    "voice": "diego",
    "text": "Sling on the hook, shackle pin tight. Ready.",
    "es": "Eslinga en el gancho, perno del grillete ajustado. Listo."
   },
-  "l11-11": {
+  "l11-06": {
    "voice": "rolando",
-   "text": "OK. Give me the signals.",
-   "es": "Bien. Haceme las señales."
+   "text": "OK, cadet. Give me the signals.",
+   "es": "Bien, cadete. Haceme las señales."
   },
-  "l11-12": {
+  "l11-07": {
    "pause": 600,
    "voice": "diego",
-   "text": "Hoist slowly… Stop! Lower… lower… Stop. Load on deck.",
-   "es": "Izá despacio… ¡Pará! Arriá… arriá… Pará. Carga en cubierta."
+   "text": "Hoist slowly… Stop!",
+   "es": "Izá despacio… ¡Pará!"
   },
-  "l11-13": {
+  "l11-08": {
+   "voice": "rolando",
+   "text": "Where does it go?",
+   "es": "¿Dónde va?"
+  },
+  "l11-09": {
+   "pause": 600,
+   "voice": "diego",
+   "text": "Slew left… Stop. Lower… lower… Stop. Load on deck.",
+   "es": "Girá a la izquierda… Pará. Arriá… arriá… Pará. Carga en cubierta."
+  },
+  "l11-10": {
    "pause": 1000,
    "voice": "mario",
    "text": "Careful! My eggs are in that pallet!",
    "es": "¡Cuidado! ¡Mis huevos están en ese pallet!"
   },
-  "l11-14": {
+  "l11-11": {
    "voice": "rolando",
    "text": "Relax, Mario. Cadet, now we lash it. Lashings on, turnbuckles tight.",
    "es": "Tranquilo, Mario. Cadete, ahora lo trincamos. Trincas puestas, tensores ajustados."
   },
-  "l11-15": {
+  "l11-12": {
    "pause": 900,
    "voice": "diego",
    "text": "Lashings on, turnbuckles tight. Nothing moves.",
    "es": "Trincas puestas, tensores ajustados. No se mueve nada."
+  },
+  "l11-13": {
+   "voice": "tanya",
+   "text": "Good work, you two. Next pallet: the drinks.",
+   "es": "Buen trabajo, los dos. Próximo pallet: las bebidas."
   },
   "w-crane": {
    "voice": "model",
@@ -107,8 +97,8 @@
   },
   "x-jib": {
    "voice": "model",
-   "text": "Read the marking on the jib.",
-   "es": "Leé lo que dice la pluma."
+   "text": "The jib is over the quay.",
+   "es": "La pluma está sobre el muelle."
   },
   "w-wire": {
    "voice": "model",
@@ -234,40 +224,32 @@
    "text": "Lower. Stop!",
    "es": "Arriá. ¡Pará!"
   },
-  "p-swl": {
+  "p-slew": {
    "voice": "model",
-   "text": "What's the SWL?",
-   "es": "¿Cuál es la SWL?"
+   "text": "Slew left.",
+   "es": "Girá a la izquierda."
   },
-  "p-cant": {
+  "p-check": {
    "voice": "model",
-   "text": "We can't lift that in one go.",
-   "es": "Eso no lo podemos izar de una vez."
+   "text": "Sling on the hook, shackle pin tight.",
+   "es": "Eslinga en el gancho, perno del grillete ajustado."
   },
   "p-ondeck": {
    "voice": "model",
    "text": "Load on deck.",
    "es": "Carga en cubierta."
   },
-  "c-weight": {
+  "c-where": {
    "voice": "rolando",
-   "text": "This pallet is one point two tonnes."
-  },
-  "c-crane-can": {
-   "voice": "tanya",
-   "text": "This crane can lift two tonnes. The pallet is three tonnes."
+   "text": "Where does it go, cadet?"
   },
   "c-signal": {
    "voice": "rolando",
    "text": "Cadet, the load is ready. Give me the signal."
   },
-  "c-swl-q": {
+  "c-gear-q": {
    "voice": "tanya",
-   "text": "Diego, what's the SWL of the crane?"
-  },
-  "c-heavy": {
-   "voice": "rolando",
-   "text": "The drinks pallet is two point five tonnes. One lift, OK?"
+   "text": "Diego, is the gear ready?"
   },
   "c-secure": {
    "voice": "rolando",
@@ -279,22 +261,30 @@
   },
   "c-lifting": {
    "voice": "rolando",
-   "text": "I'm lifting the vegetables. One tonne."
+   "text": "I'm lifting the vegetables."
+  },
+  "c-next": {
+   "voice": "tanya",
+   "text": "Next pallet: the frozen meat."
+  },
+  "c-goleft": {
+   "voice": "rolando",
+   "text": "The load must go to the left. Give me the signal."
   },
   "m-hoist": {
    "voice": "model",
    "text": "Hoist slowly.",
    "es": "Izá despacio."
   },
-  "m-swl": {
+  "m-check": {
    "voice": "model",
-   "text": "The SWL is two tonnes.",
-   "es": "La SWL es de dos toneladas."
+   "text": "Sling on the hook, shackle pin tight.",
+   "es": "Eslinga en el gancho, perno del grillete ajustado."
   },
-  "m-cant": {
+  "m-slew": {
    "voice": "model",
-   "text": "We can't lift that in one go.",
-   "es": "Eso no lo podemos izar de una vez."
+   "text": "Slew left.",
+   "es": "Girá a la izquierda."
   },
   "m-secure": {
    "voice": "model",
@@ -315,9 +305,7 @@
   "l11-10",
   "l11-11",
   "l11-12",
-  "l11-13",
-  "l11-14",
-  "l11-15"
+  "l11-13"
  ],
  "words": {
   "crane": {
@@ -471,42 +459,42 @@
   ]
  },
  "docs": {
-  "register": {
+  "delivery": {
    "kind": "form",
-   "title": "LIFTING GEAR REGISTER",
-   "subtitle": "M/V LNG HORIZON · Deck stores",
+   "title": "STORES DELIVERY NOTE",
+   "subtitle": "M/V LNG HORIZON · Houston · Day 2",
    "cells": [
     [
-     "PROVISION CRANE (STBD)",
-     "SWL 2 t · tested 10 JAN 2026"
+     "PALLET 1",
+     "Frozen meat and fish → cold room"
     ],
     [
-     "WIRE ROPE, 16 mm",
-     "WLL 3 t · on the crane"
+     "PALLET 2",
+     "Vegetables, fruit and eggs → vegetable room"
     ],
     [
-     "4-LEG SLING, No. 7",
-     "WLL 2 t"
+     "PALLET 3",
+     "Drinks and water → dry store"
     ],
     [
-     "SHACKLE, 3/4 in",
-     "WLL 4.75 t"
+     "PALLET 4",
+     "Rice, flour and tins → dry store"
     ],
     [
-     "SNATCH BLOCK, No. 2",
-     "SWL 1 t"
+     "PALLET 5",
+     "Cleaning materials → deck store"
     ],
     [
-     "PAD EYE, beam aft",
-     "SWL 1.5 t"
+     "HANDLE WITH CARE",
+     "Pallet 2 (eggs)"
     ],
     [
-     "NEXT INSPECTION",
-     "10 JUL 2026 · Chief Officer"
+     "ORDER OF LIFTS",
+     "1 · 2 · 4 · 3 · 5"
     ],
     [
-     "NOTE",
-     "Use the lowest limit of the whole set"
+     "RECEIVED BY",
+     "Chief Cook"
     ]
    ]
   }
@@ -547,11 +535,11 @@
       "l11-04",
       "l11-05"
      ],
-     "q": "How heavy is the first pallet?",
+     "q": "What does Diego check before the first lift?",
      "opts": [
-      "1.5 tonnes",
-      "5 tonnes",
-      "2.5 tonnes"
+      "The sling, the shackle and the hook",
+      "The engine and the radar",
+      "The cabins"
      ],
      "a": 0
     },
@@ -561,11 +549,11 @@
       "l11-06",
       "l11-07"
      ],
-     "q": "What is the SWL of the crane?",
+     "q": "What is Diego's first signal?",
      "opts": [
-      "2 tonnes",
-      "1.5 tonnes",
-      "2.5 tonnes"
+      "Hoist slowly",
+      "Lower",
+      "Slew left"
      ],
      "a": 0
     },
@@ -575,14 +563,14 @@
       "l11-08",
       "l11-09"
      ],
-     "q": "What do they do with the drinks pallet?",
+     "q": "Which signal moves the load to the side?",
      "opts": [
-      "They split it",
-      "They lift it in one go",
-      "They leave it on the quay"
+      "Slew left",
+      "Hoist",
+      "Lower"
      ],
      "a": 0,
-     "why": "\"We can't lift that in one go. Split it.\""
+     "why": "\"Slew\": the crane turns, and the load goes left or right."
     },
     {
      "type": "listen",
@@ -591,26 +579,24 @@
       "l11-11",
       "l11-12"
      ],
-     "q": "What is Diego's last signal?",
+     "q": "What do they do with the pallet on deck?",
      "opts": [
-      "Stop",
-      "Hoist",
-      "Lower"
+      "They lash it",
+      "They open it",
+      "They paint it"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l11-13",
-      "l11-14",
-      "l11-15"
+      "l11-13"
      ],
-     "q": "What do they do with the pallet on deck?",
+     "q": "What is the next pallet?",
      "opts": [
-      "They lash it",
-      "They open it",
-      "They paint it"
+      "The drinks",
+      "The eggs",
+      "The meat"
      ],
      "a": 0
     },
@@ -751,7 +737,7 @@
   },
   {
    "id": "phrases",
-   "title": "Hoist, lower, stop",
+   "title": "Hoist, lower, slew, stop",
    "skill": "Phrases",
    "min": 6,
    "screens": [
@@ -771,14 +757,14 @@
        "p-lower"
       ],
       [
-       "What's the SWL?",
-       "¿Cuál es la SWL?",
-       "p-swl"
+       "Slew left.",
+       "Girá a la izquierda.",
+       "p-slew"
       ],
       [
-       "We can't lift that in one go.",
-       "Eso no lo podemos izar de una vez.",
-       "p-cant"
+       "Sling on the hook, shackle pin tight.",
+       "Eslinga en el gancho, perno del grillete ajustado.",
+       "p-check"
       ],
       [
        "Load on deck.",
@@ -790,7 +776,7 @@
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Crane orders: the verb comes first",
+     "title": "Crane signals: the verb comes first",
      "steps": [
       [
        "Up",
@@ -801,17 +787,17 @@
        "Lower. Lower slowly."
       ],
       [
-       "Stop",
-       "Stop!"
+       "Sideways",
+       "Slew left. Slew right."
       ],
       [
-       "Not",
-       "Don't lower yet."
+       "Stop",
+       "Stop!"
       ]
      ],
      "paras": [
       "Signals to the crane driver are short orders: the verb first, no <b>you</b>, no <b>please</b>.",
-      "Add <b>slowly</b> after the verb when you need it."
+      "Add <b>slowly</b> after the verb when you need it. <b>Slew</b> = the crane turns, so the load goes left or right."
      ],
      "avoid": "You hoist. · Hoisting slowly. · Slowly hoist."
     },
@@ -821,7 +807,7 @@
      "opts": [
       "Lower.",
       "Hoist.",
-      "You go down."
+      "Slew left."
      ],
      "a": 0
     },
@@ -839,69 +825,66 @@
      ]
     },
     {
-     "type": "tip",
-     "tag": "Language focus",
-     "title": "Limits: can / can't",
-     "steps": [
-      [
-       "Yes",
-       "The crane can lift two tonnes."
-      ],
-      [
-       "No",
-       "We can't lift two point five."
-      ],
-      [
-       "Question",
-       "Can we lift this pallet?"
-      ]
-     ],
-     "paras": [
-      "<b>can</b> + verb, with no <i>to</i> and no <i>-s</i>: <i>it can lift</i>.",
-      "<b>in one go</b> = all in one lift."
-     ],
-     "avoid": "It can lifts. · It can to lift. · We don't can lift."
-    },
-    {
-     "type": "choice",
-     "q": "The SWL is 2 tonnes. The pallet is 3 tonnes. We ___ lift it in one go.",
-     "opts": [
-      "can't",
-      "can",
-      "don't can"
-     ],
-     "a": 0
-    },
-    {
      "type": "type",
-     "audio": "c-crane-can",
-     "q": "How heavy is the pallet? Write the number of tonnes.",
+     "audio": "c-goleft",
+     "q": "Write the signal.",
      "accept": [
-      "3",
-      "three",
-      "3 tonnes",
-      "three tonnes",
-      "3 t"
+      "slew left",
+      "slew left."
      ]
     },
     {
      "type": "tip",
-     "tag": "Spanish speaker alert",
-     "title": "One POINT five, not one comma five",
-     "paras": [
-      "In English the decimal mark is a <b>point</b>: <i>1.5</i> = <b>one point five</b>.",
-      "Say every digit after the point: <i>2.25</i> = <b>two point two five</b>.",
-      "<b>Tonne</b> is the metric tonne, 1,000 kg. Written <i>t</i>."
+     "tag": "Language focus",
+     "title": "Short reports",
+     "steps": [
+      [
+       "Gear",
+       "Sling on the hook, shackle pin tight."
+      ],
+      [
+       "Load",
+       "Load on deck."
+      ],
+      [
+       "Secure",
+       "Lashings on, turnbuckles tight."
+      ]
      ],
-     "avoid": "one comma five · one and a half point"
+     "paras": [
+      "Reports on deck drop the small words: no <i>the</i>, no <i>is</i>. Thing + where or how.",
+      "Plural with <b>-s</b> when there is more than one: <b>lashings</b>, <b>turnbuckles</b>."
+     ],
+     "avoid": "The sling it is on the hook. · Lashing are on."
     },
     {
      "type": "choice",
-     "q": "Rolando writes 1.5 t. He says…",
+     "q": "The pallet is on the deck now. You report…",
      "opts": [
-      "One point five tonnes.",
-      "One comma five tonnes.",
-      "One five tonnes."
+      "Load on deck.",
+      "The load it is in deck.",
+      "Deck load is."
+     ],
+     "a": 0
+    },
+    {
+     "type": "tip",
+     "tag": "Spanish speaker alert",
+     "title": "Lower, not \"go down\"",
+     "paras": [
+      "<i>Bajá</i> is <b>Lower</b> for a load. Not <i>go down</i>, not <i>down it</i>.",
+      "<i>Subí</i> is <b>Hoist</b>. <i>Girá</i> is <b>Slew</b>. <i>Pará</i> is <b>Stop</b>.",
+      "One word, loud and clear: the driver hears you over the engine noise."
+     ],
+     "avoid": "Go down! · Down it! · Turn it left!"
+    },
+    {
+     "type": "choice",
+     "q": "\"¡Bajá despacio!\" to the crane driver:",
+     "opts": [
+      "Lower slowly!",
+      "Go down slowly!",
+      "Down it slow!"
      ],
      "a": 0
     },
@@ -914,84 +897,63 @@
       "At sea, for blocks and rope, many seafarers say <b>TAY-kul</b> /ˈteɪkl/. You'll hear both: they mean the same thing.",
       "<i>Thimble</i> starts with the <i>th</i> of <i>think</i>: put your tongue between your teeth."
      ]
-    },
-    {
-     "type": "choice",
-     "q": "Which one is correct?",
-     "opts": [
-      "The crane can lift two tonnes.",
-      "The crane can lifts two tonnes.",
-      "The crane can to lift two tonnes."
-     ],
-     "a": 0,
-     "why": "can + verb, no -s, no to."
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the lifting gear register",
+   "title": "Read the stores delivery note",
    "skill": "Reading",
    "min": 4,
    "screens": [
     {
-     "type": "tip",
-     "tag": "On the label",
-     "title": "SWL or WLL?",
-     "paras": [
-      "<b>SWL</b>, Safe Working Load: the most you may lift with that gear on board. You see it painted on cranes, davits and pad eyes.",
-      "<b>WLL</b>, Working Load Limit: the most the maker certifies for a loose part, like a shackle or a sling. It's stamped or written on its tag.",
-      "Newer rules use WLL, but on board you'll see both. With several parts together, the lowest limit is the limit of the whole set."
-     ]
-    },
-    {
      "type": "doc",
-     "doc": "register",
-     "q": "What is the SWL of the provision crane?",
+     "doc": "delivery",
+     "q": "Which pallet has the eggs?",
      "opts": [
-      "2 t",
-      "3 t",
-      "4.75 t"
+      "Pallet 2",
+      "Pallet 1",
+      "Pallet 3"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "register",
-     "q": "Where is the WLL of the shackle written?",
+     "doc": "delivery",
+     "q": "Where do the drinks go?",
      "opts": [
-      "On the shackle",
-      "On the crane jib",
-      "On the bridge"
+      "To the dry store",
+      "To the cold room",
+      "To the deck store"
      ],
-     "a": 0,
-     "why": "WLL: stamped or written on the part itself."
+     "a": 0
     },
     {
      "type": "docfind",
-     "doc": "register",
-     "q": "Tap the gear with the lowest limit.",
-     "a": 4
+     "doc": "delivery",
+     "q": "Tap the line that tells you to be careful.",
+     "a": 5
     },
     {
      "type": "doc",
-     "doc": "register",
-     "q": "You lift a 1.5 t pallet with the crane, sling No. 7 and the shackle. Is it OK?",
+     "doc": "delivery",
+     "q": "Which pallet is the third lift?",
      "opts": [
-      "Yes",
-      "No"
+      "Pallet 4",
+      "Pallet 3",
+      "Pallet 5"
      ],
      "a": 0,
-     "why": "Crane 2 t, sling 2 t, shackle 4.75 t: the lowest is 2 t."
+     "why": "Order of lifts: 1 · 2 · 4 · 3 · 5."
     },
     {
      "type": "doc",
-     "doc": "register",
-     "q": "When is the next inspection?",
+     "doc": "delivery",
+     "q": "Who receives the stores?",
      "opts": [
-      "10 July 2026",
-      "10 January 2026",
-      "10 June 2026"
+      "The Chief Cook",
+      "The Chief Officer",
+      "The Bosun"
      ],
      "a": 0
     }
@@ -1017,11 +979,23 @@
     },
     {
      "type": "shadow",
-     "model": "p-cant"
+     "model": "p-slew"
     },
     {
      "type": "shadow",
      "model": "p-ondeck"
+    },
+    {
+     "type": "role",
+     "cue": "c-gear-q",
+     "task": "Say the sling is on the hook and the shackle pin is tight.",
+     "model": "m-check",
+     "accept": [
+      "Sling on the hook, shackle pin tight.",
+      "Yes. Sling on the hook, shackle pin tight.",
+      "The sling is on the hook and the shackle pin is tight.",
+      "Sling on the hook and shackle pin tight."
+     ]
     },
     {
      "type": "role",
@@ -1037,28 +1011,14 @@
     },
     {
      "type": "role",
-     "cue": "c-swl-q",
-     "task": "Read the jib: SWL 2 t. Answer.",
-     "model": "m-swl",
+     "cue": "c-where",
+     "task": "The load must go to the left. Give the signal.",
+     "model": "m-slew",
      "accept": [
-      "The SWL is two tonnes.",
-      "Two tonnes.",
-      "SWL two tonnes.",
-      "It's two tonnes.",
-      "2 tonnes."
-     ]
-    },
-    {
-     "type": "role",
-     "cue": "c-heavy",
-     "task": "The SWL is 2 t. Say you can't lift it in one go.",
-     "model": "m-cant",
-     "accept": [
-      "We can't lift that in one go.",
-      "We can't lift it in one go.",
-      "We can't lift that.",
-      "No, we can't lift that in one go.",
-      "We cannot lift that in one go."
+      "Slew left.",
+      "Slew left!",
+      "Slew to the left.",
+      "Slew left, slowly."
      ]
     },
     {
@@ -1102,16 +1062,17 @@
      "a": "turnbuckle"
     },
     {
-     "type": "type",
-     "audio": "c-weight",
-     "q": "How heavy is the pallet? Write the number.",
-     "accept": [
-      "1.2",
-      "1.2 t",
-      "1.2 tonnes",
-      "one point two",
-      "one point two tonnes"
-     ]
+     "type": "listen",
+     "audio": [
+      "c-next"
+     ],
+     "q": "What is the next pallet?",
+     "opts": [
+      "The frozen meat",
+      "The drinks",
+      "The eggs"
+     ],
+     "a": 0
     },
     {
      "type": "listen",
@@ -1151,15 +1112,16 @@
     },
     {
      "type": "build",
-     "q": "Ask Tanya about the limit of the crane.",
+     "q": "Ask Rolando where the pallet goes.",
      "a": [
-      "What's",
-      "the",
-      "SWL?"
+      "Where",
+      "does",
+      "it",
+      "go?"
      ],
      "extra": [
       "is",
-      "how"
+      "do"
      ]
     },
     {

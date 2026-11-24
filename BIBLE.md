@@ -75,7 +75,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 9 | Alarms & emergency instructions | Día 2 · 10:00 · puerto | Simulacro antes de zarpar |
 | **Módulo 3 · Deck work** ||||
 | 10 | Tools, PPE & deck work | Día 2 · 13:00 · cubierta | Rolando prepara la cubierta para el mar; permiso de trabajo |
-| 11 | Lifting gear | Día 2 · 15:00 · cubierta, junto a la grúa de provisiones | Llegan los víveres al muelle; Rolando los sube con la grúa, Diego hace de señalero y lee la chapa de SWL; después trincan los pallets |
+| 11 | Lifting gear | Día 2 · 15:00 · cubierta, junto a la grúa de provisiones | Llegan los víveres al muelle; Rolando los sube con la grúa y Diego hace de señalero: revisa el equipo, da las señales y después trincan los pallets. Sin límites de carga (SWL/WLL): es conocimiento técnico, no inglés |
 | 12 | Mooring & letting go | Día 2 · 17:20 · estación de popa | La zarpada |
 | 13 | Anchoring | Día 3 · 02:00 · frente a Galveston | Niebla; el buque fondea a esperar, Diego en la proa |
 | **Módulo 4 · On the bridge** ||||
@@ -116,7 +116,7 @@ accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero 
 | 8 | La hora en 24 h; pedir con *can / could* | "zero seven thirty", "fourteen hundred" |
 | 9 | Do not vs Don't (altavoz vs persona) | Cazar el *not* |
 | 10 | Present continuous: What are you doing? I'm lashing… (+ Can you pass me…?) | La terminación -ing |
-| 11 | Órdenes de grúa en imperativo (hoist, lower, stop) + can / can't con límites (SWL) | Números de carga: tonnes, "one point five" |
+| 11 | Señales de grúa en imperativo (hoist, lower, slew, stop) + reportes cortos (Load on deck) | tackle "TAY-kul" en cubierta; th de thimble |
 | 12 | Orden → read-back → reporte corto (let go, all clear) | let go vs let's go; palabras clave fuertes |
 | 13 | Direcciones en reloj, grilletes; is leading / is holding | o'clock, shackle |
 | 14 | used to + verbo / used for + -ing | Siglas que se deletrean vs que se leen |

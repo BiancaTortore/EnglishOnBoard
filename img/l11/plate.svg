@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Loading stores in Houston: the provision crane with its jib, wire rope, hook and sling lifting a pallet from the quay; on deck a lashed pallet with turnbuckles, a tackle hanging from a beam, a snatch block on a pad eye, and a detail of a shackle through a thimble">
   <!-- Lesson 11 plate, side view. Right: the quay with a pallet of stores in a four-leg sling on the crane hook.
-       Centre: the provision crane on the ship's side; the jib has SWL 2 t painted on it; the wire rope runs from the
+       Centre: the provision crane on the ship's side; the wire rope runs from the
        jib head down to the hook block. Left, on deck: a pallet already landed and lashed to the deck with two lashings
        and turnbuckles; a tackle (two blocks) hangs from a beam, its fall led through a snatch block on a pad eye.
        Circle, top right: detail of the top of a sling leg, a wire eye with a thimble and a shackle through it.
@@ -40,13 +40,12 @@
   <rect x="154" y="147" width="7" height="9" rx="1.5" class="p-hull" transform="rotate(-20 157 151)"/>
   <g class="p-hull"><path d="M84 164 L86 159 Q89 156 92 159 L94 164 Z"/><path d="M156 164 L158 159 Q161 156 164 159 L166 164 Z"/></g>
 
-  <!-- the provision CRANE: pedestal, house, JIB with its SWL marking, WIRE ROPE to the HOOK -->
+  <!-- the provision CRANE: pedestal, house, JIB, WIRE ROPE to the HOOK -->
   <rect class="p-super" x="184" y="122" width="18" height="42" style="stroke:var(--hull)" stroke-width="1"/>
   <rect class="p-super" x="174" y="102" width="38" height="22" rx="3" style="stroke:var(--hull)" stroke-width="1"/>
   <rect x="180" y="107" width="12" height="9" rx="1" style="fill:#7FB7D6"/>
   <path d="M198 108 L318 26 L322 32 L204 116 Z" class="p-gold" style="stroke:var(--hull)" stroke-width=".8"/>
   <g style="stroke:var(--hull)" stroke-width=".7" opacity=".6"><path d="M220 101 L226 92 M242 86 L248 77 M264 71 L270 62 M286 56 L292 47"/></g>
-  <text x="0" y="0" transform="translate(268 74) rotate(-34.5)" text-anchor="middle" style="font:700 7px var(--f-mono);fill:var(--hull)">SWL 2 t</text>
   <circle cx="320" cy="30" r="5" class="p-hull"/>
   <g style="stroke:#8A97A4" stroke-width="1.6"><path d="M317 31 V112 M323 31 V112"/></g>
   <rect class="p-hull" x="312" y="110" width="16" height="14" rx="3"/>
