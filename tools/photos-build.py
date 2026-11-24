@@ -42,13 +42,15 @@ for l in lessons:
         redo = "rehacer" in sec[f][0]
         if redo or not os.path.exists(f"{d}/{f}"): todo.append((f, sec[f][1], redo))
     if not todo: continue
-    hero_first = any(f == "hero.jpg" for f, _, _ in todo)
-    todo.sort(key=lambda t: 0 if (t[0] == "hero.jpg") == hero_first else 1)
+    # the order of the sections in prompts.md is the order to make them (the second one uses the first as reference)
+    todo.sort(key=lambda t: md.index(f"## `{t[0]}`"))
+    hero_first = todo[0][0] == "hero.jpg"
     items = []
     for i, (f, prompt, redo) in enumerate(todo, 1):
         fmt = "Vertical 4:5 · mín. 1080 × 1350" if f == "hero.jpg" else "Horizontal 4:3 · mín. 1440 × 1080"
         what = "Portada" if f == "hero.jpg" else "Escena del diálogo"
-        attach = ("Adjuntá la portada nueva" if hero_first else "Adjuntá la portada actual") if f == "scene.jpg" else ""
+        attach = (("Adjuntá la portada nueva" if hero_first else "Adjuntá la portada actual") if f == "scene.jpg"
+                  else ("Adjuntá la escena nueva" if not hero_first and len(todo) > 1 else ""))
         items.append(f'''<article class="photo"><h3>{len(todo) > 1 and f"{i} · " or ""}{what} · <code>{f}</code>{" · rehacer" if redo else ""}</h3>
           <div class="meta"><span>{fmt}</span>{f"<span>{attach}</span>" if attach else ""}</div>
           <p class="prompt">{e(prompt)}</p>{copybtn(prompt)}</article>''')
