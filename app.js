@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-51";
+const APP_VERSION = "beta-52";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -506,7 +506,7 @@ function viewBuy(){
     </section>
     <label class="consent"><input type="checkbox" id="bOk"><span>I want the access to start now, and I understand that because of this I lose my right of withdrawal and the payment is not refundable. The subscription renews every year until I cancel it. ·
       <i>Quiero que el acceso empiece ahora y entiendo que por eso pierdo el derecho de desistimiento y no hay reembolso. La suscripción se renueva cada año hasta que la cancele.</i></span></label>
-    <p class="note">Payment by Paddle, our reseller. <a href="/terms" target="_blank" rel="noopener">Terms</a> · <a href="/refunds" target="_blank" rel="noopener">Refunds</a> · <a href="/privacy" target="_blank" rel="noopener">Privacy</a></p>
+    <p class="note">Payment by Paddle, our reseller. <a href="/terms" target="_blank" rel="noopener">Terms</a> · <a href="/refunds" target="_blank" rel="noopener">Refunds</a> · <a href="/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="/impressum" target="_blank" rel="noopener">Impressum</a></p>
     <p class="sub err" id="bErr" hidden></p></div>`;
   setBar(`<button class="cta" id="go" disabled>Continue to payment</button>`);
   $("#bBack").onclick = navBack;
@@ -1160,7 +1160,7 @@ function viewProfile(){
       <button class="chip-btn danger" id="reset">Reset progress</button>
     </section>
     ${betaNoteHTML()}
-    <p class="note legal-links"><a href="/course" target="_blank" rel="noopener">The course</a> · <a href="/terms" target="_blank" rel="noopener">Terms</a> · <a href="/refunds" target="_blank" rel="noopener">Refunds</a> · <a href="/privacy" target="_blank" rel="noopener">Privacy</a></p>
+    <p class="note legal-links"><a href="/course" target="_blank" rel="noopener">The course</a> · <a href="/terms" target="_blank" rel="noopener">Terms</a> · <a href="/refunds" target="_blank" rel="noopener">Refunds</a> · <a href="/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="/impressum" target="_blank" rel="noopener">Impressum</a></p>
     <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>`);
   wireInstall(); wireAccount();
   $$("[data-buy]").forEach(b => b.onclick = () => buyNav());
