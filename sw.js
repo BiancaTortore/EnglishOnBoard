@@ -5,7 +5,7 @@
      background (see saveForOffline in app.js), so lessons work later without signal.
    - Audio is requested in byte ranges; ranges are answered from the cached full file.
    Bump VERSION whenever app.js / app.css / index.html change. */
-const VERSION = "eob-v75";
+const VERSION = "eob-v76";
 const MEDIA = "eob-media-v1";
 const SHELL = ["./", "index.html", "app.js", "app.css", "course.json", "manifest.webmanifest", "icons/app-icon-192.png", "icons/app-icon-512.png"];
 const IS_MEDIA = /\.(mp3|m4a|wav|ogg|jpe?g|png|webp|svg)$/i;
@@ -27,7 +27,7 @@ self.addEventListener("fetch", e => {
   if (sameOrigin && (url.pathname.startsWith("/api/") || url.pathname.startsWith("/admin") || url.pathname.startsWith("/verify"))) return;
   if (sameOrigin && IS_MEDIA.test(url.pathname) && !url.pathname.includes("/icons/")) { e.respondWith(media(req, url)); return; }
   const fresh = /\.(json|js|css|html|webmanifest)$/.test(url.pathname) || url.pathname.endsWith("/") || url.pathname.includes("/icons/")
-    || /^\/(course|terms|refunds|privacy)$/.test(url.pathname);
+    || /^\/(course|terms|refunds|privacy|contact)$/.test(url.pathname);
   if (fresh) {
     /* network first, so content updates show up; cache when offline */
     e.respondWith(fetch(req).then(r => { if (r.ok) { const copy = r.clone(); caches.open(VERSION).then(c => c.put(req, copy)); } return r; })
