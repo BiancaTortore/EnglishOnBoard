@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The bow from above in fog, with the windlass, the chain leading two o'clock, the anchor holding and the fog bell">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The bow from above in fog, with the windlass, chain stopper, hawse pipe and chain locker, the chain leading two o'clock, the anchor holding and the fog bell">
   <!-- Lesson 12 plate: the bow seen from above, at anchor in fog. A clock is laid over the bow: 12 = straight ahead,
        3 = starboard beam, 9 = port beam. The starboard chain leads two o'clock to the anchor, which is holding (dug in);
        the port anchor is still in its pocket. Windlass with brake wheels, fog bell on the foremast.
@@ -22,6 +22,15 @@
   <line x1="214" y1="62" x2="329.9" y2="37.0" style="stroke:#8A97A4" stroke-width="3.2" stroke-dasharray="5 2"/><line x1="258.0" y1="52.5" x2="267.3" y2="50.5" style="stroke:#fff" stroke-width="4.2"/><g transform="translate(329.9 37.0) rotate(258)">
   <path d="M0 -10 V12 M-10 4 Q0 18 10 4 M-5 -6 H5" fill="none" style="stroke:#5E6B78" stroke-width="3.4" stroke-linecap="round"/><circle cy="-12" r="3" fill="none" style="stroke:#5E6B78" stroke-width="2.2"/>
   <path d="M-14 14 Q0 26 14 14" fill="none" style="stroke:#B98A5A" stroke-width="2.4" stroke-dasharray="3 3" opacity=".9"/></g>
+  <!-- HAWSE PIPE: where the chain goes through the deck and out of the ship -->
+  <ellipse cx="214" cy="62" rx="8" ry="6" class="p-hull"/><ellipse cx="214" cy="62" rx="4" ry="3" style="fill:#8A97A4"/>
+  <!-- CHAIN STOPPER: a heavy clamp on the chain, with its locking bar -->
+  <rect x="207" y="88" width="22" height="12" rx="2" class="p-hull" transform="rotate(-6 218 94)"/>
+  <rect x="204" y="92" width="28" height="4" rx="1.5" style="fill:var(--antifoul)" transform="rotate(-6 218 94)"/>
+  <!-- CHAIN LOCKER below deck (dashed = under the deck): the chain goes down from the gypsy and lies in a heap -->
+  <rect x="204" y="142" width="34" height="26" rx="3" fill="none" class="p-stroke" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <line x1="220" y1="138" x2="220" y2="150" style="stroke:#8A97A4" stroke-width="3" stroke-dasharray="5 2"/>
+  <path d="M209 162 q4 -6 8 0 t8 0 t8 0 M211 156 q4 -6 8 0 t8 0" fill="none" style="stroke:#8A97A4" stroke-width="2.4"/>
   <!-- FOREMAST with the fog BELL -->
   <circle cx="200" cy="178" r="6" class="p-hull"/>
   <path d="M190 206 Q190 192 200 190 Q210 192 210 206 Z" class="p-gold"/><rect x="186" y="205" width="28" height="3" rx="1.5" class="p-gold"/>

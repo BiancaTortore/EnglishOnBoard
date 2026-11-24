@@ -1,5 +1,5 @@
 {
- "n": 11, "modelAudio": true, "mediaRev": 4,
+ "n": 11, "modelAudio": true, "mediaRev": 5,
  "module": 3,
  "title": "Mooring & letting go",
  "place": "Day 2 · 17:20 · Houston, aft mooring station",
@@ -184,6 +184,24 @@
    "voice": "model",
    "text": "The head lines are on the forecastle.",
    "es": "Los largos de proa están en el castillo de proa."
+  },
+  "w-winch": {
+   "voice": "model",
+   "text": "winch"
+  },
+  "x-winch": {
+   "voice": "model",
+   "text": "Start the winch.",
+   "es": "Arrancá el guinche."
+  },
+  "w-drum": {
+   "voice": "model",
+   "text": "drum"
+  },
+  "x-drum": {
+   "voice": "model",
+   "text": "Keep three turns on the drum.",
+   "es": "Dejá tres vueltas en el tambor."
   },
   "p-singleup": {
    "voice": "model",
@@ -383,6 +401,20 @@
    "es": "largo de proa",
    "audio": "w-headline",
    "ex": "x-headline"
+  },
+  "winch": {
+   "en": "winch",
+   "ipa": "/wɪntʃ/",
+   "es": "guinche",
+   "audio": "w-winch",
+   "ex": "x-winch"
+  },
+  "drum": {
+   "en": "drum",
+   "ipa": "/drʌm/",
+   "es": "tambor",
+   "audio": "w-drum",
+   "ex": "x-drum"
   }
  },
  "plate": {
@@ -430,8 +462,18 @@
    },
    {
     "word": "slackaway",
-    "x": 214,
-    "y": 84
+    "x": 248,
+    "y": 72
+   },
+   {
+    "word": "winch",
+    "x": 170,
+    "y": 124
+   },
+   {
+    "word": "drum",
+    "x": 206,
+    "y": 100
    }
   ]
  },
@@ -640,6 +682,14 @@
     {
      "type": "card",
      "word": "slack"
+    },
+    {
+     "type": "card",
+     "word": "winch"
+    },
+    {
+     "type": "card",
+     "word": "drum"
     },
     {
      "type": "card",

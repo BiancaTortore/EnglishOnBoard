@@ -51,3 +51,13 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L27 | `x-pilotboat` | Brian (modelo) | The pilot boat is alongside. | Nueva |
 | L27 | `w-station` | Brian (modelo) | pilot station | Nueva |
 | L27 | `x-station` | Brian (modelo) | Call the pilot station on channel twelve. | Nueva |
+| L12 | `w-stopper` | Brian (modelo) | chain stopper | Nueva |
+| L12 | `x-stopper` | Brian (modelo) | Put the chain stopper on. | Nueva |
+| L12 | `w-hawse` | Brian (modelo) | hawse pipe | Nueva |
+| L12 | `x-hawse` | Brian (modelo) | The chain runs through the hawse pipe. | Nueva |
+| L12 | `w-locker` | Brian (modelo) | chain locker | Nueva |
+| L12 | `x-locker` | Brian (modelo) | The chain is stowed in the chain locker. | Nueva |
+| L11 | `w-winch` | Brian (modelo) | winch | Nueva |
+| L11 | `x-winch` | Brian (modelo) | Start the winch. | Nueva |
+| L11 | `w-drum` | Brian (modelo) | drum | Nueva |
+| L11 | `x-drum` | Brian (modelo) | Keep three turns on the drum. | Nueva |

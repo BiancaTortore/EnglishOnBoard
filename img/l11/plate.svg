@@ -21,9 +21,14 @@
   <rect x="40" y="58" width="120" height="84" class="p-super" style="stroke:var(--hull)" stroke-width="1"/>
   <rect x="96" y="80" width="22" height="40" rx="3" class="p-hull" opacity=".55"/>
   <!-- winch drums on deck -->
+  <!-- mooring WINCH: motor and gearbox on the left, the DRUM with the line wound on it, between two flanges -->
   <g transform="translate(200 124)">
-    <rect x="-16" y="-8" width="32" height="16" rx="3" class="p-white"/>
-    <rect x="-8" y="-11" width="16" height="22" rx="2" class="p-hull" opacity=".6"/>
+    <rect x="-24" y="-9" width="12" height="18" rx="2" class="p-hull"/>
+    <rect x="-12" y="-3" width="4" height="6" class="p-hull" opacity=".7"/>
+    <rect x="-8" y="-12" width="3" height="24" rx="1" class="p-white"/>
+    <rect x="11" y="-12" width="3" height="24" rx="1" class="p-white"/>
+    <rect x="-5" y="-9" width="16" height="18" style="fill:#E9C46A"/>
+    <g style="stroke:#B98A3A" stroke-width="1"><path d="M-3 -9 V9 M0 -9 V9 M3 -9 V9 M6 -9 V9 M9 -9 V9"/></g>
   </g>
   <!-- the winch works two stern lines:
        heave in = the lower line is tight and the arrow points in, to the winch;

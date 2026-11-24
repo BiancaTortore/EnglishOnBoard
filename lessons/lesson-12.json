@@ -1,7 +1,7 @@
 {
  "n": 12,
  "modelAudio": true,
- "mediaRev": 3,
+ "mediaRev": 4,
  "module": 3,
  "title": "Anchoring",
  "place": "Day 3 · 02:00 · off Galveston, in fog",
@@ -180,6 +180,33 @@
    "text": "Ring the bell every minute.",
    "es": "Tocá la campana cada minuto."
   },
+  "w-stopper": {
+   "voice": "model",
+   "text": "chain stopper"
+  },
+  "x-stopper": {
+   "voice": "model",
+   "text": "Put the chain stopper on.",
+   "es": "Poné el estopor."
+  },
+  "w-hawse": {
+   "voice": "model",
+   "text": "hawse pipe"
+  },
+  "x-hawse": {
+   "voice": "model",
+   "text": "The chain runs through the hawse pipe.",
+   "es": "La cadena pasa por el escobén."
+  },
+  "w-locker": {
+   "voice": "model",
+   "text": "chain locker"
+  },
+  "x-locker": {
+   "voice": "model",
+   "text": "The chain is stowed in the chain locker.",
+   "es": "La cadena va estibada en la caja de cadenas."
+  },
   "p-howmany": {
    "voice": "model",
    "text": "How many shackles in the water?",
@@ -320,7 +347,7 @@
   "shackle": {
    "en": "shackle",
    "ipa": "/ˈʃækl/",
-   "es": "grillete",
+   "es": "grillete (la pieza, y también el tramo de cadena: 27,5 m)",
    "audio": "w-shackle",
    "ex": "x-shackle"
   },
@@ -358,6 +385,27 @@
    "es": "campana",
    "audio": "w-bell",
    "ex": "x-bell"
+  },
+  "stopper": {
+   "en": "chain stopper",
+   "ipa": "/ˈtʃeɪn ˌstɒpə/",
+   "es": "estopor",
+   "audio": "w-stopper",
+   "ex": "x-stopper"
+  },
+  "hawse": {
+   "en": "hawse pipe",
+   "ipa": "/ˈhɔːz paɪp/",
+   "es": "escobén",
+   "audio": "w-hawse",
+   "ex": "x-hawse"
+  },
+  "locker": {
+   "en": "chain locker",
+   "ipa": "/ˈtʃeɪn ˌlɒkə/",
+   "es": "caja de cadenas",
+   "audio": "w-locker",
+   "ex": "x-locker"
   }
  },
  "plate": {
@@ -370,8 +418,8 @@
    },
    {
     "word": "chain",
-    "x": 236,
-    "y": 72
+    "x": 194,
+    "y": 82
    },
    {
     "word": "shackle",
@@ -402,6 +450,21 @@
     "word": "fog",
     "x": 80,
     "y": 40
+   },
+   {
+    "word": "stopper",
+    "x": 244,
+    "y": 98
+   },
+   {
+    "word": "hawse",
+    "x": 232,
+    "y": 56
+   },
+   {
+    "word": "locker",
+    "x": 252,
+    "y": 176
    }
   ]
  },
@@ -600,6 +663,18 @@
     {
      "type": "card",
      "word": "brake"
+    },
+    {
+     "type": "card",
+     "word": "stopper"
+    },
+    {
+     "type": "card",
+     "word": "hawse"
+    },
+    {
+     "type": "card",
+     "word": "locker"
     },
     {
      "type": "tap",
