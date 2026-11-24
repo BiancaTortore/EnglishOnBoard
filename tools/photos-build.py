@@ -49,7 +49,7 @@ for l in lessons:
     for i, (f, prompt, redo) in enumerate(todo, 1):
         fmt = "Vertical 4:5 · mín. 1080 × 1350" if f == "hero.jpg" else "Horizontal 4:3 · mín. 1440 × 1080"
         what = "Portada" if f == "hero.jpg" else "Escena del diálogo"
-        attach = (("Adjuntá la portada nueva" if hero_first else "Adjuntá la portada actual") if f == "scene.jpg"
+        attach = (("Adjuntá la portada nueva" if hero_first else "Adjuntá la portada actual" if os.path.exists(f"{d}/hero.jpg") else "") if f == "scene.jpg"
                   else ("Adjuntá la escena nueva" if not hero_first and len(todo) > 1 else ""))
         items.append(f'''<article class="photo"><h3>{len(todo) > 1 and f"{i} · " or ""}{what} · <code>{f}</code>{" · rehacer" if redo else ""}</h3>
           <div class="meta"><span>{fmt}</span>{f"<span>{attach}</span>" if attach else ""}</div>
