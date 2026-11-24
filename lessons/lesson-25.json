@@ -3,13 +3,13 @@
  "module": 6,
  "title": "Fire party communication",
  "place": "Day 10 · 11:30 · Atlantic, galley",
- "goal": "Keep the BA board, read back names, times and pressure, and report that a fire is out.",
+ "goal": "Pass messages to the bridge on the radio, read back pressure, and report that a fire is out.",
  "images": {
   "hero": "img/l25/hero.jpg",
   "scene": "img/l25/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 2,
+ "mediaRev": 3,
  "radioChannel": "UHF",
  "audio": {
   "l25-01": {
@@ -27,14 +27,14 @@
   },
   "l25-03": {
    "voice": "james",
-   "text": "Diego, you're with me. Take the BA board. Write every name and every time.",
-   "es": "Diego, venís conmigo. Agarrá el tablero de BA. Anotá cada nombre y cada hora."
+   "text": "Diego, you're with me. Take a radio. You're my messenger to the bridge.",
+   "es": "Diego, venís conmigo. Agarrá un handy. Sos mi mensajero con el puente."
   },
   "l25-04": {
    "pause": 1200,
    "voice": "diego",
-   "text": "Yes, Second. I'll take the BA board.",
-   "es": "Sí, segundo. Me encargo del tablero de BA."
+   "text": "Yes, Second. I'll take the radio.",
+   "es": "Sí, Segundo. Agarro el handy."
   },
   "l25-05": {
    "voice": "james",
@@ -53,15 +53,15 @@
   },
   "l25-08": {
    "voice": "rolando",
-   "text": "Team one ready. Entry time eleven thirty-five. Pressure two hundred bar.",
-   "es": "Equipo uno listo. Hora de entrada once treinta y cinco. Presión doscientos bar.",
+   "text": "Team one ready. BA on, pressure two hundred bar.",
+   "es": "Equipo uno listo. Equipos puestos, presión doscientos bar.",
    "radio": true
   },
   "l25-09": {
    "pause": 800,
    "voice": "diego",
-   "text": "Team one: Rolando, Santos. Entry eleven thirty-five. Two hundred bar. Written.",
-   "es": "Equipo uno: Rolando, Santos. Entrada once treinta y cinco. Doscientos bar. Anotado."
+   "text": "Bridge, fire party. Team one is entering the galley. Over.",
+   "es": "Puente, brigada. El equipo uno está entrando a la cocina. Cambio."
   },
   "l25-10": {
    "pause": 1800,
@@ -78,8 +78,8 @@
   },
   "l25-12": {
    "voice": "diego",
-   "text": "Second, team one has been inside for ten minutes.",
-   "es": "Segundo, el equipo uno ya lleva diez minutos adentro."
+   "text": "Bridge, fire party. Team one is at the extractor. Small fire. Over.",
+   "es": "Puente, brigada. El equipo uno está en el extractor. Fuego chico. Cambio."
   },
   "l25-13": {
    "voice": "james",
@@ -107,8 +107,8 @@
   },
   "l25-17": {
    "voice": "james",
-   "text": "Good board, Diego. Every name, every time. That's how we bring everybody back.",
-   "es": "Buen tablero, Diego. Cada nombre, cada hora. Así es como traemos a todos de vuelta."
+   "text": "Good work, Diego. The bridge knew everything, all the time.",
+   "es": "Buen trabajo, Diego. El puente supo todo, todo el tiempo."
   },
   "w-fireparty": {
    "voice": "model",
@@ -127,24 +127,6 @@
    "voice": "model",
    "text": "Put on your breathing apparatus.",
    "es": "Ponete el equipo de respiración."
-  },
-  "w-baboard": {
-   "voice": "model",
-   "text": "BA board"
-  },
-  "x-baboard": {
-   "voice": "model",
-   "text": "Write the names on the BA board.",
-   "es": "Anotá los nombres en el tablero de ERA."
-  },
-  "w-entrytime": {
-   "voice": "model",
-   "text": "entry time"
-  },
-  "x-entrytime": {
-   "voice": "model",
-   "text": "Entry time eleven thirty-five.",
-   "es": "Hora de entrada once treinta y cinco."
   },
   "w-pressure": {
    "voice": "model",
@@ -223,35 +205,10 @@
    "text": "The fire is out.",
    "es": "El fuego está apagado."
   },
-  "p-written": {
-   "voice": "model",
-   "text": "Entry eleven thirty-five. Two hundred bar. Written.",
-   "es": "Entrada once treinta y cinco. Doscientos bar. Anotado."
-  },
   "p-backup": {
    "voice": "model",
    "text": "Team two, back up team one.",
    "es": "Equipo dos, apoyen al equipo uno."
-  },
-  "p-board": {
-   "voice": "model",
-   "text": "I'll take the BA board.",
-   "es": "Me encargo del tablero de ERA."
-  },
-  "m-board": {
-   "voice": "model",
-   "text": "I'll take the BA board.",
-   "es": "Me encargo del tablero de ERA."
-  },
-  "m-readback": {
-   "voice": "model",
-   "text": "Team two: Bautista, Lim. Entry eleven forty. Two hundred bar. Written.",
-   "es": "Equipo dos: Bautista, Lim. Entrada once cuarenta. Doscientos bar. Anotado."
-  },
-  "m-time": {
-   "voice": "model",
-   "text": "Second, team one has been inside for fifteen minutes.",
-   "es": "Segundo, el equipo uno lleva quince minutos adentro."
   },
   "m-out": {
    "voice": "model",
@@ -263,14 +220,6 @@
    "text": "Pressure two hundred bar.",
    "es": "Presión doscientos bar."
   },
-  "c-show-baboard": {
-   "voice": "james",
-   "text": "Where's the BA board?"
-  },
-  "c-show-entrytime": {
-   "voice": "james",
-   "text": "Show me the entry time."
-  },
   "c-show-pressure": {
    "voice": "james",
    "text": "Show me the pressure."
@@ -278,10 +227,6 @@
   "c-show-ba": {
    "voice": "rolando",
    "text": "Show me the breathing apparatus."
-  },
-  "c-show-galley": {
-   "voice": "mario",
-   "text": "Where's my galley?"
   },
   "c-show-firedoor": {
    "voice": "james",
@@ -293,30 +238,55 @@
   },
   "c-take": {
    "voice": "james",
-   "text": "Diego, you're with me. Take the BA board."
-  },
-  "c-team2": {
-   "voice": "james",
-   "text": "Diego, team two: Bautista and Lim. Entry time eleven forty. Pressure two hundred bar."
-  },
-  "c-howlong": {
-   "voice": "james",
-   "text": "Diego, team one went in at eleven thirty-five. It's eleven fifty now. Tell me."
+   "text": "Diego, you're with me. Take a radio."
   },
   "c-report": {
    "voice": "lars",
    "text": "Fire party, bridge. What's the situation? Over.",
    "radio": true
   },
-  "c-time-other": {
-   "voice": "rolando",
-   "text": "Team one ready. Entry time eleven forty-two. Pressure two hundred bar.",
-   "radio": true
-  },
   "c-out-other": {
    "voice": "rolando",
    "text": "Pressure one hundred and twenty bar. The fire is out.",
    "radio": true
+  },
+  "p-radio": {
+   "voice": "model",
+   "text": "I'll take the radio.",
+   "es": "Agarro el handy."
+  },
+  "p-relay": {
+   "voice": "model",
+   "text": "Bridge, fire party. Team one is entering the galley. Over.",
+   "es": "Puente, brigada. El equipo uno está entrando a la cocina. Cambio."
+  },
+  "m-radio": {
+   "voice": "model",
+   "text": "I'll take the radio.",
+   "es": "Agarro el handy."
+  },
+  "m-relay": {
+   "voice": "model",
+   "text": "Bridge, fire party. Team two is starting boundary cooling. Over.",
+   "es": "Puente, brigada. El equipo dos empieza a enfriar el mamparo. Cambio."
+  },
+  "m-noinj": {
+   "voice": "model",
+   "text": "Bridge, fire party. No injuries. Over.",
+   "es": "Puente, brigada. Sin heridos. Cambio."
+  },
+  "c-relay": {
+   "voice": "james",
+   "text": "Diego, tell the bridge: team two is starting boundary cooling."
+  },
+  "c-bridge-q": {
+   "voice": "lars",
+   "text": "Fire party, bridge. Is anybody injured? Over.",
+   "radio": true
+  },
+  "c-relay-other": {
+   "voice": "james",
+   "text": "Diego, tell the bridge the fire door is closed."
   }
  },
  "dialogue": [
@@ -352,20 +322,6 @@
    "es": "equipo de respiración autónoma (ERA)",
    "audio": "w-ba",
    "ex": "x-ba"
-  },
-  "baboard": {
-   "en": "BA board",
-   "ipa": "/ˌbiː ˈeɪ bɔːd/",
-   "es": "tablero de control de ERA",
-   "audio": "w-baboard",
-   "ex": "x-baboard"
-  },
-  "entrytime": {
-   "en": "entry time",
-   "ipa": "/ˈentri taɪm/",
-   "es": "hora de entrada",
-   "audio": "w-entrytime",
-   "ex": "x-entrytime"
   },
   "pressure": {
    "en": "pressure",
@@ -428,19 +384,9 @@
   "svg": "img/l25/plate.svg",
   "pins": [
    {
-    "word": "baboard",
-    "x": 92,
-    "y": 20
-   },
-   {
-    "word": "entrytime",
-    "x": 102,
-    "y": 86
-   },
-   {
     "word": "pressure",
-    "x": 146,
-    "y": 86
+    "x": 258,
+    "y": 112
    },
    {
     "word": "ba",
@@ -464,13 +410,13 @@
    },
    {
     "word": "radio",
-    "x": 16,
-    "y": 168
+    "x": 96,
+    "y": 78
    },
    {
     "word": "torch",
-    "x": 86,
-    "y": 220
+    "x": 112,
+    "y": 214
    }
   ]
  },
@@ -498,7 +444,7 @@
     ],
     [
      "TEAM ONE",
-     "Bosun, AB Santos · entry 1135 · 200 bar"
+     "Bosun, AB Santos · BA · 200 bar"
     ],
     [
      "EXTINGUISHED WITH",
@@ -527,7 +473,7 @@
      "image": "img/l25/scene.jpg",
      "kicker": "Day 10 · 11:30 · Atlantic",
      "title": "Fire party",
-     "body": "This time it's not a drill. There's a fire in Mario's galley. James leads the fire party and Diego keeps the BA board. Listen first, one piece at a time.",
+     "body": "This time it's not a drill. There's a fire in Mario's galley. James leads the fire party and Diego is his messenger to the bridge, with a radio. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
@@ -552,9 +498,9 @@
      ],
      "q": "What is Diego's job?",
      "opts": [
-      "The BA board: names and times",
+      "Messenger to the bridge, with a radio",
       "Enter the galley",
-      "Call the bridge"
+      "Cook the lunch"
      ],
      "a": 0
     },
@@ -577,11 +523,11 @@
      "audio": [
       "l25-08"
      ],
-     "q": "Team one's entry time and pressure?",
+     "q": "What is team one's pressure?",
      "opts": [
-      "11:35 · 200 bar",
-      "11:30 · 140 bar",
-      "11:53 · 200 bar"
+      "200 bar",
+      "140 bar",
+      "120 bar"
      ],
      "a": 0
     },
@@ -627,7 +573,7 @@
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The BA board, a BA set and the galley door."
+     "body": "A BA set, the galley fire door, and the fire party's radio and torch."
     },
     {
      "type": "card",
@@ -655,17 +601,9 @@
      "word": "mask"
     },
     {
-     "type": "card",
-     "word": "baboard"
-    },
-    {
      "type": "tap",
      "audio": "c-show-ba",
      "a": "ba"
-    },
-    {
-     "type": "card",
-     "word": "entrytime"
     },
     {
      "type": "card",
@@ -717,8 +655,8 @@
        "cocina"
       ],
       [
-       "entry time",
-       "hora de entrada"
+       "torch",
+       "linterna"
       ],
       [
        "pressure",
@@ -745,17 +683,17 @@
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "At the BA board",
+     "title": "On the radio",
      "list": [
       [
-       "I'll take the BA board.",
-       "Me encargo del tablero de ERA.",
-       "p-board"
+       "I'll take the radio.",
+       "Agarro el handy.",
+       "p-radio"
       ],
       [
-       "Entry eleven thirty-five. Two hundred bar. Written.",
-       "Entrada once treinta y cinco. Doscientos bar. Anotado.",
-       "p-written"
+       "Bridge, fire party. Team one is entering the galley. Over.",
+       "Puente, brigada. El equipo uno está entrando a la cocina. Cambio.",
+       "p-relay"
       ],
       [
        "Team two, back up team one.",
@@ -832,22 +770,25 @@
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "Read back the numbers",
+     "title": "Bridge, fire party: who you call goes first",
      "paras": [
-      "At the BA board you repeat what you hear and say <b>Written</b> at the end. Times in 24 hours (Lesson 8): <b>eleven thirty-five</b>. Pressure in <b>bar</b>, always the same word.",
-      "No Spanish words on the radio: not <i>once y treinta y cinco</i>, not <i>bares</i>."
+      "On the radio you say first who you call, then who you are: <b>Bridge, fire party.</b> Then the message, and <b>Over.</b>",
+      "Not <i>Here fire party</i> (aquí brigada), not <i>Hello bridge</i>. And the numbers in English: <b>two hundred bar</b>, not <i>bares</i>."
      ],
-     "avoid": "Eleven and thirty-five · two hundred bars"
+     "avoid": "Here fire party. · Hello bridge, we are the fire party. · two hundred bars"
     },
     {
-     "type": "type",
-     "audio": "c-time-other",
-     "q": "What's the entry time? Write it with four numbers.",
-     "accept": [
-      "1142",
-      "11:42",
-      "11.42"
-     ]
+     "type": "listen",
+     "audio": [
+      "c-relay-other"
+     ],
+     "q": "What does James want you to tell the bridge?",
+     "opts": [
+      "The fire door is closed",
+      "The fire is out",
+      "Team two is ready"
+     ],
+     "a": 0
     },
     {
      "type": "listen",
@@ -865,10 +806,10 @@
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "bar, board, BA",
+     "title": "bar, BA, over",
      "paras": [
       "<b>bar</b>: one short syllable, no <i>s</i> in the plural: <b>two hundred bar</b>.",
-      "<b>BA</b>: letter by letter, <b>bee-AY</b>. <b>board</b> sounds like <i>bord</i>, long."
+      "<b>BA</b>: letter by letter, <b>bee-AY</b>. <b>Over</b> at the end, clear: <b>OH-ver</b>."
      ],
      "list": [
       [
@@ -911,7 +852,7 @@
     {
      "type": "docfind",
      "doc": "report",
-     "q": "Tap the line with team one's entry time.",
+     "q": "Tap the line about team one.",
      "a": 4
     },
     {
@@ -940,25 +881,25 @@
   },
   {
    "id": "speak",
-   "title": "Keep the board",
+   "title": "Messenger to the bridge",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Names, times, pressure",
-     "body": "Listen, say it, check it. Read back every number.",
-     "es": "Repetí cada número.",
+     "title": "Short radio messages",
+     "body": "Listen, say it, check it. Who you call, who you are, the message, Over.",
+     "es": "A quién llamás, quién sos, el mensaje, Cambio.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-board"
+     "model": "p-radio"
     },
     {
      "type": "shadow",
-     "model": "p-written"
+     "model": "p-relay"
     },
     {
      "type": "shadow",
@@ -967,34 +908,36 @@
     {
      "type": "role",
      "cue": "c-take",
-     "task": "Accept: you'll take the BA board.",
-     "model": "m-board",
+     "task": "Accept: you'll take the radio.",
+     "model": "m-radio",
      "accept": [
-      "I'll take the BA board.",
-      "Yes, Second. I'll take the BA board.",
-      "I will take the BA board."
+      "I'll take the radio.",
+      "Yes, Second. I'll take the radio.",
+      "I will take the radio.",
+      "OK, I'll take the radio."
      ]
     },
     {
      "type": "role",
-     "cue": "c-team2",
-     "task": "Read back team two: Bautista, Lim, 11:40, 200 bar. Then say \"Written\".",
-     "model": "m-readback",
+     "cue": "c-relay",
+     "task": "Tell the bridge: team two is starting boundary cooling.",
+     "model": "m-relay",
      "accept": [
-      "Team two: Bautista, Lim. Entry eleven forty. Two hundred bar. Written.",
-      "Team two, Bautista and Lim. Entry eleven forty. Two hundred bar. Written.",
-      "Bautista, Lim. Entry eleven forty. Two hundred bar. Written."
+      "Bridge, fire party. Team two is starting boundary cooling. Over.",
+      "Bridge, fire party. Team two is starting boundary cooling.",
+      "Bridge, team two is starting boundary cooling. Over."
      ]
     },
     {
      "type": "role",
-     "cue": "c-howlong",
-     "task": "Team one has been inside for fifteen minutes. Tell James.",
-     "model": "m-time",
+     "cue": "c-bridge-q",
+     "task": "Answer: nobody is injured.",
+     "model": "m-noinj",
      "accept": [
-      "Second, team one has been inside for fifteen minutes.",
-      "Team one has been inside for fifteen minutes.",
-      "Fifteen minutes inside, Second."
+      "Bridge, fire party. No injuries. Over.",
+      "No injuries. Over.",
+      "Bridge, fire party. No injuries.",
+      "Nobody is injured. Over."
      ]
     },
     {
@@ -1027,13 +970,13 @@
     },
     {
      "type": "tap",
-     "audio": "c-show-baboard",
-     "a": "baboard"
+     "audio": "c-show-ba",
+     "a": "ba"
     },
     {
      "type": "tap",
-     "audio": "c-show-entrytime",
-     "a": "entrytime"
+     "audio": "c-show-firedoor",
+     "a": "firedoor"
     },
     {
      "type": "listen",
@@ -1090,11 +1033,11 @@
      "audio": [
       "l25-17"
      ],
-     "q": "Why is the BA board important?",
+     "q": "What does James say about Diego's work?",
      "opts": [
-      "So everybody comes back",
-      "For the company report",
-      "To check the time"
+      "The bridge knew everything",
+      "He wrote every name",
+      "He was too slow"
      ],
      "a": 0
     },

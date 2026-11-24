@@ -38,7 +38,15 @@ const CAST = {
   marek: "Oliver", mario: "Pochology", lars: "Wolf Spencer", mateo: "Alberto Loco", chen: "Sarah - Approachable", pilot: "Peter - Podcast", skipper: "David - Professional", tarifa: "Mateo - News", doctor: "Alessandro - Stoic", agent: null, terminal: null
 };
 
-const REDO_LIST = [];
+const REDO_LIST = [
+  "l25/l25-03",
+  "l25/l25-04",
+  "l25/l25-08",
+  "l25/l25-09",
+  "l25/l25-12",
+  "l25/l25-17",
+  "l25/c-take",
+];
 
 /* the characters: the same model and settings Bianca uses on the ElevenLabs website
    (Eleven v4, Stability 50 %, Similarity 75 %, Clone strength 0; v4 has no Speed or Style) */

@@ -92,7 +92,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 22 | Life-saving appliances | Día 7 · 09:00 · cubierta de botes | Inspección semanal de LSA con Tanya; Diego encuentra una bengala vencida |
 | 23 | Muster & man overboard | Día 8 · 10:00 · estribor | Simulacro de hombre al agua; Tanya le da a Diego el rol de vigía; Rolando tira el aro |
 | 24 | Firefighting equipment | Día 9 · 15:00 · pasillo | Rolando muestra los extintores; Diego confunde espuma y polvo |
-| 25 | Fire party communication | Día 10 · 11:30 · cocina | Incendio real en la cocina de Mario; James dirige la brigada, Diego lleva el tablero de BA (equipo uno: Rolando y el AB Santos) |
+| 25 | Fire party communication | Día 10 · 11:30 · cocina | Incendio real en la cocina de Mario; James dirige la brigada, Diego es su mensajero con el handy y le pasa todo al puente (equipo uno: Rolando y el AB Santos). Sin tablero de BA: a bordo no se usa |
 | **Módulo 7 · Radio & outside parties** ||||
 | 26 | Distress, urgency & safety | Día 12 · 19:20 · Estrecho | Guardia de Tanya y Diego: MAYDAY del pesquero francés *Cap Béar* (hace agua, 4 personas). Tarifa Traffic acusa recibo; el *Horizon* está a 6 millas y Diego llama a Tarifa; Salvamento Marítimo los rescata |
 | 27 | Medical & TMAS | Día 13 · 10:00 · cocina | Mario se corta la mano izquierda con un cuchillo; Tanya llama al CIRM de Roma por teléfono satelital y Diego dicta los signos vitales; Diego ayuda en la cocina |
@@ -130,7 +130,7 @@ accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero 
 | 22 | Colocaciones: launch, inflate, activate, fire, throw; fecha de vencimiento | — |
 | 23 | Alertar y asignar roles: You will be… | Gritos cortos: "Man overboard, starboard side!" |
 | 24 | Use … for …; clases de fuego A, B, C (solo etiquetas) | *extinguisher*, CO2 letra por letra |
-| 25 | Phrasal verbs: put out, break out, back up | Reportes al tablero de BA; *bar* sin s |
+| 25 | Phrasal verbs: put out, break out, back up | Mensajes por radio: "Bridge, fire party" (a quién, quién sos); *bar* sin s |
 | 26 | Estructura MAYDAY / PAN-PAN / SÉCURITÉ | Mensajes con estática |
 | 27 | Describir síntomas y signos vitales | — |
 | 28 | Órdenes de máquina: velocidad + dirección; orden → read-back → reporte (Engine stopped) + will para el plan (Two tugs will make fast) | half sin l, a-STERN; ahead ≠ forward |

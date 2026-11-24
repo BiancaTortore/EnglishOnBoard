@@ -63,3 +63,18 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L12 | `x-drum` | Brian (modelo) | Keep three turns on the drum. | Nueva |
 | L11 | todas (58) | Personajes y Brian | Lección nueva *Lifting gear*: todo lo de `audio/l11/script.csv` (25 de personajes) más las 33 de la voz modelo | Nueva |
 | L28 | todas (61) | Personajes y Brian | Lección nueva *Engine orders*: todo lo de `audio/l28/script.csv` (32 de personajes) más las 29 de la voz modelo | Nueva |
+| L25 | `l25-03` | James | Diego, you're with me. Take a radio. You're my messenger to the bridge. | Regrabar |
+| L25 | `l25-04` | Diego | Yes, Second. I'll take the radio. | Regrabar |
+| L25 | `l25-08` | Rolando | Team one ready. BA on, pressure two hundred bar. | Regrabar |
+| L25 | `l25-09` | Diego | Bridge, fire party. Team one is entering the galley. Over. | Regrabar |
+| L25 | `l25-12` | Diego | Bridge, fire party. Team one is at the extractor. Small fire. Over. | Regrabar |
+| L25 | `l25-17` | James | Good work, Diego. The bridge knew everything, all the time. | Regrabar |
+| L25 | `c-take` | James | Diego, you're with me. Take a radio. | Regrabar |
+| L25 | `p-radio` | Brian (modelo) | I'll take the radio. | Nueva |
+| L25 | `p-relay` | Brian (modelo) | Bridge, fire party. Team one is entering the galley. Over. | Nueva |
+| L25 | `m-radio` | Brian (modelo) | I'll take the radio. | Nueva |
+| L25 | `m-relay` | Brian (modelo) | Bridge, fire party. Team two is starting boundary cooling. Over. | Nueva |
+| L25 | `m-noinj` | Brian (modelo) | Bridge, fire party. No injuries. Over. | Nueva |
+| L25 | `c-relay` | James | Diego, tell the bridge: team two is starting boundary cooling. | Nueva |
+| L25 | `c-bridge-q` | Lars | Fire party, bridge. Is anybody injured? Over. | Nueva |
+| L25 | `c-relay-other` | James | Diego, tell the bridge the fire door is closed. | Nueva |
