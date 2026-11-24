@@ -1,84 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The front of the bridge: radar, ECDIS, gyro compass, autopilot, helm, engine telegraph, echo sounder, binoculars, GPS, speed log and anemometer">
-  <!-- Lesson 13 plate: the bridge console seen from the helm position, with the front windows above.
-       Left to right: radar, ECDIS, gyro compass repeater with the autopilot below it, helm, engine telegraph,
-       echo sounder. Binoculars rest on the console. Colours come from app.css (.p-*). -->
-  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
-  <!-- windows -->
-  <rect class="p-water" x="0" y="0" width="400" height="74"/>
-  <rect class="p-soft" x="0" y="0" width="400" height="34" opacity=".55"/>
-  <line class="p-line" x1="0" y1="44" x2="400" y2="44" stroke-width="1" opacity=".6"/>
-  <g class="p-hull"><rect x="0" y="0" width="400" height="5"/><rect x="0" y="72" width="400" height="6"/>
-    <rect x="96" y="0" width="5" height="74"/><rect x="198" y="0" width="5" height="74"/><rect x="300" y="0" width="5" height="74"/></g>
-  <!-- console -->
-  <path d="M0 96 H400 V240 H0 Z" class="p-blue" opacity=".9"/>
-  <rect x="0" y="92" width="400" height="8" class="p-hull"/>
-
-  <!-- RADAR -->
-  <rect x="12" y="106" width="98" height="92" rx="5" class="p-hull"/>
-  <circle cx="61" cy="152" r="40" style="fill:#0E2A1F"/>
-  <g fill="none" style="stroke:#3DDC84" opacity=".55" stroke-width="1"><circle cx="61" cy="152" r="26"/><circle cx="61" cy="152" r="13"/></g>
-  <path d="M61 152 L84 120 A40 40 0 0 0 61 112 Z" style="fill:#3DDC84" opacity=".25"/>
-  <line x1="61" y1="152" x2="61" y2="113" style="stroke:#3DDC84" stroke-width="1.4"/>
-  <g style="fill:#E9C46A"><circle cx="82" cy="134" r="2.4"/><circle cx="44" cy="128" r="2.4"/><circle cx="72" cy="176" r="2.4"/></g>
-
-  <!-- ECDIS -->
-  <rect x="120" y="106" width="98" height="92" rx="5" class="p-hull"/>
-  <rect x="126" y="112" width="86" height="72" style="fill:#BFD8E8"/>
-  <path d="M126 112 H212 V132 Q190 140 170 128 Q150 120 126 130 Z" style="fill:#E8DDB5"/>
-  <path d="M136 176 L166 158 L200 146" fill="none" style="stroke:#D9534F" stroke-width="2" stroke-dasharray="4 2"/>
-  <path d="M162 156 l8 -2 l-4 7 z" style="fill:#1E3A5F"/>
-  <rect x="126" y="186" width="86" height="8" style="fill:#2B3A4A"/>
-
-  <!-- GYRO COMPASS repeater -->
-  <circle cx="254" cy="128" r="22" class="p-white"/>
-  <circle cx="254" cy="128" r="17" fill="none" style="stroke:var(--hull)" stroke-width="1"/>
-  <g style="stroke:var(--hull)" stroke-width="1.2"><line x1="254" y1="111" x2="254" y2="116"/><line x1="254" y1="140" x2="254" y2="145"/><line x1="237" y1="128" x2="242" y2="128"/><line x1="266" y1="128" x2="271" y2="128"/></g>
-  <path d="M254 128 L262 114 L256 128 Z" style="fill:var(--antifoul)"/>
-  <!-- AUTOPILOT panel -->
-  <rect x="230" y="160" width="48" height="30" rx="3" class="p-hull"/>
-  <rect x="235" y="165" width="38" height="9" style="fill:#3DDC84" opacity=".7"/>
-  <g class="p-gold"><circle cx="241" cy="182" r="3"/><circle cx="254" cy="182" r="3"/><circle cx="267" cy="182" r="3"/></g>
-
-  <!-- HELM (small wheel) -->
-  <circle cx="254" cy="218" r="17" fill="none" style="stroke:var(--hull)" stroke-width="4"/>
-  <g style="stroke:var(--hull)" stroke-width="3"><line x1="254" y1="201" x2="254" y2="235"/><line x1="237" y1="218" x2="271" y2="218"/></g>
-  <circle cx="254" cy="218" r="4" class="p-hull"/>
-
-  <!-- ENGINE TELEGRAPH lever -->
-  <rect x="300" y="150" width="34" height="56" rx="4" class="p-hull"/>
-  <rect x="314" y="156" width="6" height="44" rx="3" style="fill:#5E6B78"/>
-  <rect x="306" y="166" width="22" height="9" rx="3" class="p-red"/>
-  <g class="p-label" style="font-size:6px"><text x="337" y="160">AH</text><text x="337" y="205">AS</text></g>
-
-  <!-- ECHO SOUNDER -->
-  <rect x="346" y="106" width="48" height="40" rx="4" class="p-hull"/>
-  <path d="M350 116 H390 V142 H350 Z" style="fill:#0E2A1F"/>
-  <path d="M350 132 Q360 130 368 134 Q378 138 390 133" fill="none" style="stroke:#E9C46A" stroke-width="1.6"/>
-  <text x="370" y="124" text-anchor="middle" style="font:700 8px var(--f-mono);fill:#3DDC84">40 m</text>
-
-  <!-- BINOCULARS on the console -->
-  <g transform="translate(374 180)">
-    <rect x="-16" y="-8" width="14" height="22" rx="5" style="fill:#2B3A4A"/><rect x="2" y="-8" width="14" height="22" rx="5" style="fill:#2B3A4A"/>
-    <rect x="-4" y="-2" width="8" height="8" style="fill:#2B3A4A"/>
-    <circle cx="-9" cy="-6" r="4" style="fill:#5E6B78"/><circle cx="9" cy="-6" r="4" style="fill:#5E6B78"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The bow from above in fog, with the windlass, chain stopper, hawse pipe and chain locker, the chain leading two o'clock, the anchor holding and the fog bell">
+  <!-- Lesson 12 plate: the bow seen from above, at anchor in fog. A clock is laid over the bow: 12 = straight ahead,
+       3 = starboard beam, 9 = port beam. The starboard chain leads two o'clock to the anchor, which is holding (dug in);
+       the port anchor is still in its pocket. Windlass with brake wheels, fog bell on the foremast.
+       Colours come from app.css (.p-*). Generated with a small script. -->
+  <rect class="p-water" x="0" y="0" width="400" height="240"/>
+  <circle cx="200" cy="112" r="92" fill="none" class="p-stroke" stroke-width="1.2" stroke-dasharray="3 4" opacity=".6"/><circle cx="246.0" cy="32.3" r="2" class="p-ink" opacity=".6"/><text x="290.1" y="64.0" text-anchor="middle" class="p-label">2</text><circle cx="279.7" cy="66.0" r="2" class="p-ink" opacity=".6"/><text x="304.0" y="116.0" text-anchor="middle" class="p-label">3</text><circle cx="292.0" cy="112.0" r="2" class="p-ink" opacity=".6"/><circle cx="279.7" cy="158.0" r="2" class="p-ink" opacity=".6"/><circle cx="246.0" cy="191.7" r="2" class="p-ink" opacity=".6"/><text x="200.0" y="220.0" text-anchor="middle" class="p-label">6</text><circle cx="200.0" cy="204.0" r="2" class="p-ink" opacity=".6"/><circle cx="154.0" cy="191.7" r="2" class="p-ink" opacity=".6"/><circle cx="120.3" cy="158.0" r="2" class="p-ink" opacity=".6"/><text x="96.0" y="116.0" text-anchor="middle" class="p-label">9</text><circle cx="108.0" cy="112.0" r="2" class="p-ink" opacity=".6"/><text x="109.9" y="64.0" text-anchor="middle" class="p-label">10</text><circle cx="120.3" cy="66.0" r="2" class="p-ink" opacity=".6"/><circle cx="154.0" cy="32.3" r="2" class="p-ink" opacity=".6"/><text x="200.0" y="12.0" text-anchor="middle" class="p-label">12</text><circle cx="200.0" cy="20.0" r="2" class="p-ink" opacity=".6"/>
+  <!-- BOW (pointing up) -->
+  <path d="M120 240 L120 150 Q122 92 200 26 Q278 92 280 150 L280 240 Z" class="p-hull"/>
+  <path d="M130 240 L130 152 Q132 100 200 40 Q268 100 270 152 L270 240 Z" class="p-deck"/>
+  <!-- port anchor still stowed in the hawse pocket -->
+  <g transform="translate(180 64) rotate(-30)"><path d="M0 -7 V8 M-7 3 Q0 12 7 3" fill="none" style="stroke:#8A97A4" stroke-width="2.6" stroke-linecap="round"/></g>
+  <!-- WINDLASS: two gypsies, brake wheels outboard -->
+  <g>
+    <rect x="160" y="118" width="80" height="18" rx="4" class="p-white"/>
+    <circle cx="180" cy="127" r="11" class="p-hull" opacity=".7"/><circle cx="220" cy="127" r="11" class="p-hull" opacity=".7"/>
+    <circle cx="148" cy="127" r="9" fill="none" style="stroke:var(--antifoul)" stroke-width="3"/>
+    <circle cx="252" cy="127" r="9" fill="none" style="stroke:var(--antifoul)" stroke-width="3"/>
   </g>
-  <!-- GPS: position on a dark screen, with a satellite symbol -->
-  <rect x="12" y="204" width="58" height="32" rx="4" class="p-hull"/>
-  <rect x="16" y="208" width="50" height="24" style="fill:#0E2A1F"/>
-  <g transform="translate(24 220)" style="fill:#E9C46A"><rect x="-2" y="-2" width="4" height="4"/><rect x="-7" y="-1.2" width="4" height="2.4"/><rect x="3" y="-1.2" width="4" height="2.4"/></g>
-  <g style="font:700 6px var(--f-mono);fill:#3DDC84"><text x="32" y="217">36°08'N</text><text x="32" y="228">005°21'W</text></g>
-
-  <!-- SPEED LOG: speed through the water -->
-  <rect x="80" y="204" width="62" height="32" rx="4" class="p-hull"/>
-  <rect x="84" y="208" width="54" height="24" style="fill:#0E2A1F"/>
-  <text x="111" y="225" text-anchor="middle" style="font:700 11px var(--f-mono);fill:#3DDC84">12.0 kn</text>
-  <g style="stroke:#3DDC84" stroke-width="1" opacity=".6"><path d="M88 229 q3 -2 6 0 t6 0 t6 0"/></g>
-
-  <!-- ANEMOMETER: where the wind comes from (arrow towards the ship) and how strong it is -->
-  <rect x="150" y="204" width="68" height="32" rx="4" class="p-hull"/>
-  <circle cx="167" cy="220" r="13" class="p-white"/>
-  <path d="M167 213 L170 224 L164 224 Z" class="p-hull"/>
-  <path d="M178 211 L171 216" style="stroke:var(--antifoul)" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M168 219 L173 213 L175 217 Z" style="fill:var(--antifoul)"/>
-  <text x="200" y="224" text-anchor="middle" style="font:700 9px var(--f-mono);fill:#3DDC84">25 kn</text>
+  <!-- chain on deck: gypsy to hawse -->
+  <line x1="220" y1="116" x2="214" y2="62" style="stroke:#8A97A4" stroke-width="3.2" stroke-dasharray="5 2"/>
+  <line x1="214" y1="62" x2="329.9" y2="37.0" style="stroke:#8A97A4" stroke-width="3.2" stroke-dasharray="5 2"/><line x1="258.0" y1="52.5" x2="267.3" y2="50.5" style="stroke:#fff" stroke-width="4.2"/><g transform="translate(329.9 37.0) rotate(258)">
+  <path d="M0 -10 V12 M-10 4 Q0 18 10 4 M-5 -6 H5" fill="none" style="stroke:#5E6B78" stroke-width="3.4" stroke-linecap="round"/><circle cy="-12" r="3" fill="none" style="stroke:#5E6B78" stroke-width="2.2"/>
+  <path d="M-14 14 Q0 26 14 14" fill="none" style="stroke:#B98A5A" stroke-width="2.4" stroke-dasharray="3 3" opacity=".9"/></g>
+  <!-- HAWSE PIPE: where the chain goes through the deck and out of the ship -->
+  <ellipse cx="214" cy="62" rx="8" ry="6" class="p-hull"/><ellipse cx="214" cy="62" rx="4" ry="3" style="fill:#8A97A4"/>
+  <!-- CHAIN STOPPER: a heavy clamp on the chain, with its locking bar -->
+  <rect x="207" y="88" width="22" height="12" rx="2" class="p-hull" transform="rotate(-6 218 94)"/>
+  <rect x="204" y="92" width="28" height="4" rx="1.5" style="fill:var(--antifoul)" transform="rotate(-6 218 94)"/>
+  <!-- CHAIN LOCKER below deck (dashed = under the deck): the chain goes down from the gypsy and lies in a heap -->
+  <rect x="204" y="142" width="34" height="26" rx="3" fill="none" class="p-stroke" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <line x1="220" y1="138" x2="220" y2="150" style="stroke:#8A97A4" stroke-width="3" stroke-dasharray="5 2"/>
+  <path d="M209 162 q4 -6 8 0 t8 0 t8 0 M211 156 q4 -6 8 0 t8 0" fill="none" style="stroke:#8A97A4" stroke-width="2.4"/>
+  <!-- FOREMAST with the fog BELL -->
+  <circle cx="200" cy="178" r="6" class="p-hull"/>
+  <path d="M190 206 Q190 192 200 190 Q210 192 210 206 Z" class="p-gold"/><rect x="186" y="205" width="28" height="3" rx="1.5" class="p-gold"/>
+  <!-- FOG banks -->
+  <g style="fill:#fff">
+    <ellipse cx="70" cy="40" rx="90" ry="20" opacity=".35"/><ellipse cx="330" cy="150" rx="90" ry="22" opacity=".35"/>
+    <ellipse cx="60" cy="190" rx="80" ry="18" opacity=".3"/><ellipse cx="360" cy="40" rx="60" ry="14" opacity=".25"/>
+  </g>
 </svg>

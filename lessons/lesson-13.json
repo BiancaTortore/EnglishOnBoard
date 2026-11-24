@@ -2,278 +2,312 @@
  "n": 13,
  "modelAudio": true,
  "mediaRev": 4,
- "module": 4,
- "title": "Bridge equipment",
- "place": "Day 3 · 16:30 · Gulf of Mexico, bridge",
- "goal": "Name the bridge equipment and say what each one is used for.",
+ "module": 3,
+ "title": "Anchoring",
+ "place": "Day 3 · 02:00 · off Galveston, in fog",
+ "goal": "Report the anchor and the chain with numbers and clock directions.",
  "images": {
   "hero": "img/l13/hero.jpg",
   "scene": "img/l13/scene.jpg"
  },
+ "radioChannel": "UHF",
  "audio": {
   "l13-01": {
-   "voice": "tanya",
-   "text": "OK, Diego. Your first watch with me at sea. First, the equipment.",
-   "es": "Bueno, Diego. Tu primera guardia conmigo en el mar. Primero, los equipos."
+   "voice": "lars",
+   "text": "Forward, bridge. Stand by starboard anchor. Over.",
+   "es": "Proa, puente. Listos con el ancla de estribor. Cambio.",
+   "radio": true
   },
   "l13-02": {
-   "voice": "diego",
-   "text": "Great. Is this the radar?",
-   "es": "Genial. ¿Esto es el radar?"
+   "voice": "tanya",
+   "text": "Stand by starboard anchor. Forward, roger. Over.",
+   "es": "Listos con el ancla de estribor. Proa, recibido. Cambio."
   },
   "l13-03": {
+   "pause": 500,
    "voice": "tanya",
-   "text": "No, that's the ECDIS, the electronic chart. It shows our position. This one is the radar. It shows other ships.",
-   "es": "No, eso es el ECDIS, la carta electrónica. Muestra nuestra posición. Este es el radar. Muestra otros buques."
+   "text": "Rolando, take off the lashing. Keep it on the brake. Diego, stand next to me and watch the chain.",
+   "es": "Rolando, sacá la trinca. Dejala en el freno. Diego, ponete al lado mío y mirá la cadena."
   },
   "l13-04": {
    "voice": "diego",
-   "text": "In fog too?",
-   "es": "¿Con niebla también?"
+   "text": "This fog… I can't see the water!",
+   "es": "Esta niebla… ¡No veo el agua!"
   },
   "l13-05": {
    "voice": "tanya",
-   "text": "In fog, at night, always. Remember Galveston?",
-   "es": "Con niebla, de noche, siempre. ¿Te acordás de Galveston?"
+   "text": "That's why we anchor. No entry to Galveston in this fog.",
+   "es": "Por eso fondeamos. Con esta niebla no se entra a Galveston."
   },
   "l13-06": {
-   "voice": "diego",
-   "text": "I do! And what does this do?",
-   "es": "¡Sí! ¿Y esto para qué sirve?"
+   "pause": 1300,
+   "voice": "lars",
+   "text": "Forward, bridge. Let go starboard anchor. Over.",
+   "es": "Proa, puente. Fondo el ancla de estribor. Cambio.",
+   "radio": true
   },
   "l13-07": {
-   "pause": 500,
    "voice": "tanya",
-   "text": "That's the echo sounder. It measures the depth under the ship. Here, forty metres.",
-   "es": "Es la ecosonda. Mide la profundidad debajo del buque. Acá, cuarenta metros."
+   "text": "Let go starboard anchor!",
+   "es": "¡Fondo el ancla de estribor!"
   },
   "l13-08": {
-   "voice": "diego",
-   "text": "And the steering wheel?",
-   "es": "¿Y el timón?"
+   "voice": "rolando",
+   "text": "Letting go!",
+   "es": "¡Fondeando!"
   },
   "l13-09": {
+   "pause": 1600,
    "voice": "tanya",
-   "text": "We call it the helm. Now the autopilot steers, but we can change to hand steering any time.",
-   "es": "Lo llamamos helm. Ahora gobierna el piloto automático, pero podemos pasar a gobierno manual cuando sea."
+   "text": "Diego, how many shackles in the water?",
+   "es": "Diego, ¿cuántos grilletes en el agua?"
   },
   "l13-10": {
-   "pause": 600,
-   "voice": "tanya",
-   "text": "This is the gyro compass. It gives the heading. And this lever is the engine telegraph.",
-   "es": "Este es el girocompás. Da el rumbo de proa. Y esta palanca es el telégrafo de máquinas."
+   "pause": 700,
+   "voice": "diego",
+   "text": "Three shackles in the water.",
+   "es": "Tres grilletes en el agua."
   },
   "l13-11": {
-   "voice": "diego",
-   "text": "And the binoculars?",
-   "es": "¿Y los binoculares?"
+   "voice": "tanya",
+   "text": "Good. And where is the chain leading?",
+   "es": "Bien. ¿Y hacia dónde trabaja la cadena?"
   },
   "l13-12": {
-   "voice": "tanya",
-   "text": "For the lookout. That's your job on my watch. And remember: the most important equipment on the bridge is your eyes.",
-   "es": "Para la vigía. Ese es tu trabajo en mi guardia. Y acordate: el equipo más importante del puente son tus ojos."
+   "pause": 600,
+   "voice": "diego",
+   "text": "It's leading… two o'clock.",
+   "es": "Trabaja… hacia las dos."
   },
   "l13-13": {
+   "voice": "tanya",
+   "text": "Bridge, forward. Three shackles in the water, chain leading two o'clock. Over.",
+   "es": "Puente, proa. Tres grilletes en el agua, cadena trabajando a las dos. Cambio."
+  },
+  "l13-14": {
+   "pause": 700,
+   "voice": "lars",
+   "text": "Thank you. Report when the anchor is holding. Over.",
+   "es": "Gracias. Avise cuando el ancla esté agarrando. Cambio.",
+   "radio": true
+  },
+  "l13-15": {
+   "pause": 2000,
+   "voice": "tanya",
+   "text": "Bridge, forward. The anchor is holding. Over.",
+   "es": "Puente, proa. El ancla está agarrando. Cambio."
+  },
+  "l13-16": {
+   "pause": 800,
+   "voice": "tanya",
+   "text": "Diego, now the fog bell. Ring it for five seconds, every minute.",
+   "es": "Diego, ahora la campana de niebla. Tocala cinco segundos, cada minuto."
+  },
+  "l13-17": {
    "voice": "diego",
-   "text": "My eyes. Got it.",
-   "es": "Mis ojos. Entendido."
+   "text": "Five seconds, every minute. OK, Chief.",
+   "es": "Cinco segundos, cada minuto. Okey, jefa."
   },
-  "w-radar": {
+  "w-anchor": {
    "voice": "model",
-   "text": "radar"
+   "text": "anchor"
   },
-  "x-radar": {
+  "x-anchor": {
    "voice": "model",
-   "text": "The radar shows other ships.",
-   "es": "El radar muestra otros buques."
+   "text": "Stand by starboard anchor.",
+   "es": "Listos con el ancla de estribor."
   },
-  "w-ecdis": {
+  "w-chain": {
    "voice": "model",
-   "text": "ECDIS"
+   "text": "chain"
   },
-  "x-ecdis": {
+  "x-chain": {
    "voice": "model",
-   "text": "The ECDIS shows our position.",
-   "es": "El ECDIS muestra nuestra posición."
+   "text": "Watch the chain.",
+   "es": "Mirá la cadena."
   },
-  "w-gyro": {
+  "w-shackle": {
    "voice": "model",
-   "text": "gyro compass"
+   "text": "shackle"
   },
-  "x-gyro": {
+  "x-shackle": {
    "voice": "model",
-   "text": "The gyro compass gives the heading.",
-   "es": "El girocompás da el rumbo de proa."
+   "text": "Three shackles in the water.",
+   "es": "Tres grilletes en el agua."
   },
-  "w-autopilot": {
+  "w-windlass": {
    "voice": "model",
-   "text": "autopilot"
+   "text": "windlass"
   },
-  "x-autopilot": {
+  "x-windlass": {
    "voice": "model",
-   "text": "The autopilot steers the ship.",
-   "es": "El piloto automático gobierna el buque."
+   "text": "Rolando is at the windlass.",
+   "es": "Rolando está en el cabrestante."
   },
-  "w-helm": {
+  "w-brake": {
    "voice": "model",
-   "text": "helm"
+   "text": "brake"
   },
-  "x-helm": {
+  "x-brake": {
    "voice": "model",
-   "text": "Take the helm.",
-   "es": "Tomá el timón."
+   "text": "Keep it on the brake.",
+   "es": "Dejala en el freno."
   },
-  "w-binoculars": {
+  "w-holding": {
    "voice": "model",
-   "text": "binoculars"
+   "text": "holding"
   },
-  "x-binoculars": {
+  "x-holding": {
    "voice": "model",
-   "text": "The binoculars are for the lookout.",
-   "es": "Los binoculares son para la vigía."
+   "text": "The anchor is holding.",
+   "es": "El ancla está agarrando."
   },
-  "w-gps": {
+  "w-fog": {
    "voice": "model",
-   "text": "GPS"
+   "text": "fog"
   },
-  "x-gps": {
+  "x-fog": {
    "voice": "model",
-   "text": "The GPS gives our position.",
-   "es": "El GPS da nuestra posición."
+   "text": "No entry in this fog.",
+   "es": "Con esta niebla no se entra."
   },
-  "w-log": {
+  "w-bell": {
    "voice": "model",
-   "text": "speed log"
+   "text": "bell"
   },
-  "x-log": {
+  "x-bell": {
    "voice": "model",
-   "text": "The speed log shows twelve knots.",
-   "es": "La corredera marca doce nudos."
+   "text": "Ring the bell every minute.",
+   "es": "Tocá la campana cada minuto."
   },
-  "w-anemometer": {
+  "w-stopper": {
    "voice": "model",
-   "text": "anemometer"
+   "text": "chain stopper"
   },
-  "x-anemometer": {
+  "x-stopper": {
    "voice": "model",
-   "text": "The anemometer shows the wind direction and speed.",
-   "es": "El anemómetro muestra la dirección y la velocidad del viento."
+   "text": "Put the chain stopper on.",
+   "es": "Poné el estopor."
   },
-  "w-echo": {
+  "w-hawse": {
    "voice": "model",
-   "text": "echo sounder"
+   "text": "hawse pipe"
   },
-  "x-echo": {
+  "x-hawse": {
    "voice": "model",
-   "text": "The echo sounder measures the depth.",
-   "es": "La ecosonda mide la profundidad."
+   "text": "The chain runs through the hawse pipe.",
+   "es": "La cadena pasa por el escobén."
   },
-  "w-telegraph": {
+  "w-locker": {
    "voice": "model",
-   "text": "engine telegraph"
+   "text": "chain locker"
   },
-  "x-telegraph": {
+  "x-locker": {
    "voice": "model",
-   "text": "The engine telegraph controls the speed.",
-   "es": "El telégrafo de máquinas controla la velocidad."
+   "text": "The chain is stowed in the chain locker.",
+   "es": "La cadena va estibada en la caja de cadenas."
   },
-  "p-whatdo": {
+  "p-howmany": {
    "voice": "model",
-   "text": "What does this do?",
-   "es": "¿Esto para qué sirve?"
+   "text": "How many shackles in the water?",
+   "es": "¿Cuántos grilletes en el agua?"
   },
-  "p-shows": {
+  "p-three": {
    "voice": "model",
-   "text": "The radar shows other ships.",
-   "es": "El radar muestra otros buques."
+   "text": "Three shackles in the water.",
+   "es": "Tres grilletes en el agua."
   },
-  "p-measures": {
+  "p-leading": {
    "voice": "model",
-   "text": "The echo sounder measures the depth.",
-   "es": "La ecosonda mide la profundidad."
+   "text": "The chain is leading two o'clock.",
+   "es": "La cadena trabaja a las dos."
   },
-  "p-eyes": {
+  "p-holding": {
    "voice": "model",
-   "text": "The most important equipment is your eyes.",
-   "es": "El equipo más importante son tus ojos."
+   "text": "The anchor is holding.",
+   "es": "El ancla está agarrando."
   },
-  "m-radar": {
+  "m-four": {
    "voice": "model",
-   "text": "It shows other ships.",
-   "es": "Muestra otros buques."
+   "text": "Four shackles in the water.",
+   "es": "Cuatro grilletes en el agua."
   },
-  "m-echo": {
+  "m-ten": {
    "voice": "model",
-   "text": "It measures the depth.",
-   "es": "Mide la profundidad."
+   "text": "The chain is leading ten o'clock.",
+   "es": "La cadena trabaja a las diez."
   },
-  "m-ecdis": {
+  "m-twelve": {
    "voice": "model",
-   "text": "It's the ECDIS. It shows our position.",
-   "es": "Es el ECDIS. Muestra nuestra posición."
+   "text": "Leading twelve o'clock.",
+   "es": "Trabaja a las doce."
   },
-  "m-gyro": {
+  "m-rb": {
    "voice": "model",
-   "text": "It gives the heading.",
-   "es": "Da el rumbo de proa."
+   "text": "Stand by port anchor.",
+   "es": "Listos con el ancla de babor."
   },
-  "m-spell": {
+  "m-oclock": {
    "voice": "model",
-   "text": "V H F, G P S, A I S",
-   "es": "V H F, G P S, A I S"
+   "text": "two o'clock",
+   "es": "las dos"
   },
-  "m-read": {
-   "voice": "model",
-   "text": "ECDIS, NAVTEX, radar",
-   "es": "ECDIS, NAVTEX, radar"
-  },
-  "c-show-ecdis": {
-   "voice": "james",
-   "text": "Where's the ECDIS?"
-  },
-  "c-show-gyro": {
+  "c-show-anchor": {
    "voice": "tanya",
-   "text": "Show me the gyro compass."
+   "text": "Show me the port anchor."
   },
-  "c-show-helm": {
+  "c-show-shackle": {
    "voice": "tanya",
-   "text": "Show me the helm."
+   "text": "Show me the shackle mark."
   },
-  "c-show-binoculars": {
-   "voice": "james",
-   "text": "Where are the binoculars?"
+  "c-show-windlass": {
+   "voice": "rolando",
+   "text": "Show me the windlass."
   },
-  "c-show-echo": {
-   "voice": "james",
-   "text": "Show me the echo sounder."
+  "c-show-brake": {
+   "voice": "rolando",
+   "text": "Where's the brake?"
   },
-  "c-show-telegraph": {
+  "c-show-bell": {
    "voice": "tanya",
-   "text": "Where's the engine telegraph?"
+   "text": "Where's the fog bell?"
   },
-  "c-what-radar": {
+  "c-show-holding": {
    "voice": "tanya",
-   "text": "Diego, what does the radar do?"
+   "text": "Which anchor is holding?"
   },
-  "c-what-echo": {
+  "c-show-fog": {
+   "voice": "rolando",
+   "text": "Show me the fog."
+  },
+  "c-howmany": {
    "voice": "tanya",
-   "text": "And the echo sounder? What does it do?"
+   "text": "Diego, how many shackles in the water?"
   },
-  "c-whatsthis": {
-   "voice": "james",
-   "text": "Hey cadet, what's this screen?"
-  },
-  "c-what-gyro": {
+  "c-leading": {
    "voice": "tanya",
-   "text": "What does the gyro compass do?"
+   "text": "Where is the chain leading?"
   },
-  "c-depth": {
+  "c-leading2": {
    "voice": "tanya",
-   "text": "The echo sounder shows twenty-five metres."
+   "text": "And now? Where is it leading?"
   },
-  "c-steers": {
+  "c-rb": {
+   "voice": "lars",
+   "text": "Forward, bridge. Stand by port anchor. Over.",
+   "radio": true
+  },
+  "c-clock-other": {
+   "voice": "rolando",
+   "text": "Chain leading eleven o'clock."
+  },
+  "c-shackles-other": {
    "voice": "tanya",
-   "text": "The autopilot steers. We watch."
+   "text": "Five shackles on deck."
+  },
+  "c-clock3": {
+   "voice": "tanya",
+   "text": "The other ship is at three o'clock."
   }
  },
  "dialogue": [
@@ -289,184 +323,188 @@
   "l13-10",
   "l13-11",
   "l13-12",
-  "l13-13"
+  "l13-13",
+  "l13-14",
+  "l13-15",
+  "l13-16",
+  "l13-17"
  ],
  "words": {
-  "radar": {
-   "en": "radar",
-   "ipa": "/ˈreɪdɑː/",
-   "es": "radar",
-   "audio": "w-radar",
-   "ex": "x-radar"
+  "anchor": {
+   "en": "anchor",
+   "ipa": "/ˈæŋkə/",
+   "es": "ancla",
+   "audio": "w-anchor",
+   "ex": "x-anchor"
   },
-  "ecdis": {
-   "en": "ECDIS",
-   "ipa": "/ˈekdɪs/",
-   "es": "carta electrónica",
-   "audio": "w-ecdis",
-   "ex": "x-ecdis"
+  "chain": {
+   "en": "chain",
+   "ipa": "/tʃeɪn/",
+   "es": "cadena",
+   "audio": "w-chain",
+   "ex": "x-chain"
   },
-  "gyro": {
-   "en": "gyro compass",
-   "ipa": "/ˈdʒaɪrəʊ ˌkʌmpəs/",
-   "es": "girocompás",
-   "audio": "w-gyro",
-   "ex": "x-gyro"
+  "shackle": {
+   "en": "shackle",
+   "ipa": "/ˈʃækl/",
+   "es": "grillete (la pieza, y también el tramo de cadena: 27,5 m)",
+   "audio": "w-shackle",
+   "ex": "x-shackle"
   },
-  "autopilot": {
-   "en": "autopilot",
-   "ipa": "/ˈɔːtəʊˌpaɪlət/",
-   "es": "piloto automático",
-   "audio": "w-autopilot",
-   "ex": "x-autopilot"
+  "windlass": {
+   "en": "windlass",
+   "ipa": "/ˈwɪndləs/",
+   "es": "cabrestante",
+   "audio": "w-windlass",
+   "ex": "x-windlass"
   },
-  "helm": {
-   "en": "helm",
-   "ipa": "/helm/",
-   "es": "timón",
-   "audio": "w-helm",
-   "ex": "x-helm"
+  "brake": {
+   "en": "brake",
+   "ipa": "/breɪk/",
+   "es": "freno",
+   "audio": "w-brake",
+   "ex": "x-brake"
   },
-  "binoculars": {
-   "en": "binoculars",
-   "ipa": "/bɪˈnɒkjələz/",
-   "es": "binoculares",
-   "audio": "w-binoculars",
-   "ex": "x-binoculars"
+  "holding": {
+   "en": "holding",
+   "ipa": "/ˈhəʊldɪŋ/",
+   "es": "agarrando (el ancla)",
+   "audio": "w-holding",
+   "ex": "x-holding"
   },
-  "gps": {
-   "en": "GPS",
-   "ipa": "/ˌdʒiː piː ˈes/",
-   "es": "GPS",
-   "audio": "w-gps",
-   "ex": "x-gps"
+  "fog": {
+   "en": "fog",
+   "ipa": "/fɒɡ/",
+   "es": "niebla",
+   "audio": "w-fog",
+   "ex": "x-fog"
   },
-  "log": {
-   "en": "speed log",
-   "ipa": "/ˈspiːd lɒɡ/",
-   "es": "corredera",
-   "audio": "w-log",
-   "ex": "x-log"
+  "bell": {
+   "en": "bell",
+   "ipa": "/bel/",
+   "es": "campana",
+   "audio": "w-bell",
+   "ex": "x-bell"
   },
-  "anemometer": {
-   "en": "anemometer",
-   "ipa": "/ˌænɪˈmɒmɪtə/",
-   "es": "anemómetro",
-   "audio": "w-anemometer",
-   "ex": "x-anemometer"
+  "stopper": {
+   "en": "chain stopper",
+   "ipa": "/ˈtʃeɪn ˌstɒpə/",
+   "es": "estopor",
+   "audio": "w-stopper",
+   "ex": "x-stopper"
   },
-  "echo": {
-   "en": "echo sounder",
-   "ipa": "/ˈekəʊ ˌsaʊndə/",
-   "es": "ecosonda",
-   "audio": "w-echo",
-   "ex": "x-echo"
+  "hawse": {
+   "en": "hawse pipe",
+   "ipa": "/ˈhɔːz paɪp/",
+   "es": "escobén",
+   "audio": "w-hawse",
+   "ex": "x-hawse"
   },
-  "telegraph": {
-   "en": "engine telegraph",
-   "ipa": "/ˈendʒɪn ˌtelɪɡrɑːf/",
-   "es": "telégrafo de máquinas",
-   "audio": "w-telegraph",
-   "ex": "x-telegraph"
+  "locker": {
+   "en": "chain locker",
+   "ipa": "/ˈtʃeɪn ˌlɒkə/",
+   "es": "caja de cadenas",
+   "audio": "w-locker",
+   "ex": "x-locker"
   }
  },
  "plate": {
   "svg": "img/l13/plate.svg",
   "pins": [
    {
-    "word": "radar",
-    "x": 61,
-    "y": 104
+    "word": "holding",
+    "x": 330,
+    "y": 22
    },
    {
-    "word": "ecdis",
-    "x": 169,
-    "y": 104
+    "word": "chain",
+    "x": 194,
+    "y": 82
    },
    {
-    "word": "gyro",
-    "x": 278,
-    "y": 110
+    "word": "shackle",
+    "x": 263,
+    "y": 40
    },
    {
-    "word": "autopilot",
-    "x": 282,
-    "y": 175
+    "word": "windlass",
+    "x": 200,
+    "y": 108
    },
    {
-    "word": "helm",
-    "x": 277,
-    "y": 220
-   },
-   {
-    "word": "telegraph",
-    "x": 317,
+    "word": "brake",
+    "x": 252,
     "y": 146
    },
    {
-    "word": "echo",
-    "x": 370,
-    "y": 102
+    "word": "anchor",
+    "x": 180,
+    "y": 52
    },
    {
-    "word": "binoculars",
-    "x": 374,
-    "y": 204
+    "word": "bell",
+    "x": 200,
+    "y": 214
    },
    {
-    "word": "gps",
-    "x": 70,
-    "y": 202
+    "word": "fog",
+    "x": 80,
+    "y": 40
    },
    {
-    "word": "log",
-    "x": 142,
-    "y": 202
+    "word": "stopper",
+    "x": 244,
+    "y": 98
    },
    {
-    "word": "anemometer",
-    "x": 218,
-    "y": 202
+    "word": "hawse",
+    "x": 232,
+    "y": 56
+   },
+   {
+    "word": "locker",
+    "x": 252,
+    "y": 176
    }
   ]
  },
  "docs": {
-  "test": {
+  "log": {
    "kind": "form",
-   "title": "BRIDGE EQUIPMENT TEST",
-   "subtitle": "M/V LNG HORIZON · BEFORE DEPARTURE · 15 MAR 2026",
+   "title": "DECK LOG · ANCHORING",
+   "subtitle": "M/V LNG HORIZON · OFF GALVESTON · 16 MAR 2026",
    "cells": [
     [
-     "RADAR 1 AND 2",
-     "OK"
+     "0214",
+     "Starboard anchor let go"
     ],
     [
-     "ECDIS",
-     "OK · route loaded"
+     "POSITION",
+     "29°12.8' N 094°37.5' W"
     ],
     [
-     "GYRO COMPASS",
-     "OK · error 0.5° East"
+     "SHACKLES",
+     "3 in the water"
     ],
     [
-     "AUTOPILOT",
-     "OK"
+     "CHAIN",
+     "Leading 2 o'clock"
     ],
     [
-     "STEERING",
-     "OK · both pumps tested"
+     "0231",
+     "Anchor holding · brought up"
     ],
     [
-     "ECHO SOUNDER",
-     "OK"
+     "VISIBILITY",
+     "Under 0.5 NM · fog"
     ],
     [
-     "ENGINE TELEGRAPH",
-     "OK · tested with the engine room"
+     "FOG SIGNAL",
+     "Bell forward, 5 s every minute"
     ],
     [
-     "TESTED BY",
-     "3/O M. Rossi"
+     "OOW",
+     "2/O J. O'Connor"
     ]
    ]
   }
@@ -474,43 +512,42 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: the bridge at sea",
+   "title": "Listen: anchoring in fog",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l13/scene.jpg",
-     "kicker": "Day 3 · 16:30 · Gulf of Mexico",
-     "title": "First watch with the Chief Officer",
-     "body": "The fog is gone and the ship is at sea. Diego starts his watch with Tanya, from 4 to 8. First, she shows him the bridge. Listen first, one piece at a time.",
+     "kicker": "Day 3 · 02:00 · off Galveston",
+     "title": "Fog at the bow",
+     "body": "In the night the fog comes down. The ship can't enter port, so she anchors to wait. Diego is at the bow with Tanya and Rolando. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l13-01"
+      "l13-01",
+      "l13-02"
      ],
-     "q": "Whose watch is it?",
+     "q": "Which anchor?",
      "opts": [
-      "Tanya's",
-      "James's",
-      "Mateo's"
+      "Starboard",
+      "Port",
+      "Both"
      ],
-     "a": 0,
-     "why": "\"Your first watch with me.\""
+     "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l13-02",
       "l13-03"
      ],
-     "q": "What does the ECDIS show?",
+     "q": "What does Diego do?",
      "opts": [
-      "Our position",
-      "Other ships",
-      "The depth"
+      "Watch the chain",
+      "Hold the brake",
+      "Call the bridge"
      ],
      "a": 0
     },
@@ -520,39 +557,25 @@
       "l13-04",
       "l13-05"
      ],
-     "q": "The radar works…",
+     "q": "Why do they anchor?",
      "opts": [
-      "in fog and at night",
-      "only in daylight",
-      "only in port"
+      "Because of the fog",
+      "Because of the wind",
+      "To wait for the pilot"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l13-06",
-      "l13-07"
+      "l13-09",
+      "l13-10"
      ],
-     "q": "How deep is the water here?",
+     "q": "How many shackles are in the water?",
      "opts": [
-      "40 metres",
-      "14 metres",
-      "400 metres"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l13-08",
-      "l13-09"
-     ],
-     "q": "Who steers the ship now?",
-     "opts": [
-      "The autopilot",
-      "Tanya",
-      "Diego"
+      "Three",
+      "Two",
+      "Four"
      ],
      "a": 0
     },
@@ -560,107 +583,134 @@
      "type": "listen",
      "audio": [
       "l13-11",
-      "l13-12",
-      "l13-13"
+      "l13-12"
      ],
-     "q": "What is Diego's job on Tanya's watch?",
+     "q": "Where is the chain leading?",
      "opts": [
-      "Lookout",
-      "Helmsman",
-      "Radio"
+      "Two o'clock",
+      "Ten o'clock",
+      "Twelve o'clock"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l13-14",
+      "l13-15"
+     ],
+     "q": "What does Tanya report at the end?",
+     "opts": [
+      "The anchor is holding",
+      "The chain is broken",
+      "Three shackles on deck"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l13-16",
+      "l13-17"
+     ],
+     "q": "How often does Diego ring the bell?",
+     "opts": [
+      "Every minute, for five seconds",
+      "Every five minutes",
+      "Once"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole scene",
+     "title": "Now the whole anchoring",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Bridge equipment",
+   "title": "At the bow",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The front of the bridge, from the helm."
+     "body": "The bow from above, in fog. The clock shows directions from the bow."
     },
     {
      "type": "card",
-     "word": "radar"
+     "word": "anchor"
     },
     {
      "type": "card",
-     "word": "ecdis"
+     "word": "chain"
+    },
+    {
+     "type": "card",
+     "word": "shackle"
     },
     {
      "type": "tap",
-     "audio": "c-show-ecdis",
-     "a": "ecdis"
+     "audio": "c-show-shackle",
+     "a": "shackle"
     },
     {
      "type": "card",
-     "word": "gyro"
+     "word": "windlass"
     },
     {
      "type": "card",
-     "word": "autopilot"
+     "word": "brake"
     },
     {
      "type": "card",
-     "word": "helm"
+     "word": "stopper"
+    },
+    {
+     "type": "card",
+     "word": "hawse"
+    },
+    {
+     "type": "card",
+     "word": "locker"
     },
     {
      "type": "tap",
-     "audio": "c-show-helm",
-     "a": "helm"
+     "audio": "c-show-brake",
+     "a": "brake"
     },
     {
      "type": "card",
-     "word": "echo"
-    },
-    {
-     "type": "card",
-     "word": "telegraph"
-    },
-    {
-     "type": "card",
-     "word": "binoculars"
-    },
-    {
-     "type": "card",
-     "word": "gps"
-    },
-    {
-     "type": "card",
-     "word": "log"
-    },
-    {
-     "type": "card",
-     "word": "anemometer"
+     "word": "holding"
     },
     {
      "type": "tap",
-     "audio": "c-show-echo",
-     "a": "echo"
+     "audio": "c-show-holding",
+     "a": "holding"
+    },
+    {
+     "type": "card",
+     "word": "fog"
+    },
+    {
+     "type": "card",
+     "word": "bell"
     },
     {
      "type": "tap",
-     "audio": "c-show-telegraph",
-     "a": "telegraph"
+     "audio": "c-show-bell",
+     "a": "bell"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"ecosonda\" in English:",
+     "q": "\"cabrestante\" in English:",
      "opts": [
-      "echo sounder",
-      "sound echo",
-      "depth radar"
+      "windlass",
+      "winch wheel",
+      "windmill"
      ],
      "a": 0
     },
@@ -669,24 +719,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "helm",
-       "timón"
+       "anchor",
+       "ancla"
       ],
       [
-       "gyro compass",
-       "girocompás"
+       "chain",
+       "cadena"
       ],
       [
-       "echo sounder",
-       "ecosonda"
+       "brake",
+       "freno"
       ],
       [
-       "autopilot",
-       "piloto automático"
+       "fog",
+       "niebla"
       ],
       [
-       "binoculars",
-       "binoculares"
+       "bell",
+       "campana"
       ]
      ]
     }
@@ -694,217 +744,214 @@
   },
   {
    "id": "phrases",
-   "title": "What is it for?",
+   "title": "Two o'clock",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Asking about equipment",
+     "title": "Anchor reports",
      "list": [
       [
-       "What does this do?",
-       "¿Esto para qué sirve?",
-       "p-whatdo"
+       "How many shackles in the water?",
+       "¿Cuántos grilletes en el agua?",
+       "p-howmany"
       ],
       [
-       "The radar shows other ships.",
-       "El radar muestra otros buques.",
-       "p-shows"
+       "Three shackles in the water.",
+       "Tres grilletes en el agua.",
+       "p-three"
       ],
       [
-       "The echo sounder measures the depth.",
-       "La ecosonda mide la profundidad.",
-       "p-measures"
+       "The chain is leading two o'clock.",
+       "La cadena trabaja a las dos.",
+       "p-leading"
       ],
       [
-       "The most important equipment is your eyes.",
-       "El equipo más importante son tus ojos.",
-       "p-eyes"
+       "The anchor is holding.",
+       "El ancla está agarrando.",
+       "p-holding"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "What is it for? used to / used for",
+     "title": "Directions like a clock",
      "steps": [
       [
-       "used to + verb",
-       "The echo sounder is used to measure the depth."
+       "12 o'clock",
+       "straight ahead"
       ],
       [
-       "used for + -ing",
-       "The radar is used for watching other ships."
+       "3 o'clock",
+       "starboard side, at 90°"
       ],
       [
-       "question",
-       "What is it used for?"
+       "6 o'clock",
+       "astern, behind"
+      ],
+      [
+       "9 o'clock",
+       "port side, at 90°"
       ]
      ],
      "paras": [
-      "Two ways to say what equipment is <b>for</b>: <b>is used to</b> + verb, or <b>is used for</b> + verb<b>-ing</b>. Same meaning.",
-      "Short and natural on the bridge: <i>It shows other ships.</i> <i>It measures the depth.</i> (Remember the -s from Lesson 4.)"
+      "Imagine a clock on the deck, with <b>12</b> at the bow. The chain, a ship, a buoy: say where it is with the hour.",
+      "<b>leading</b> = the direction the chain goes from the ship: <i>The chain is leading two o'clock.</i>",
+      "<b>one shackle</b> = one length of chain, 27.5 metres (15 fathoms)."
      ],
-     "avoid": "It's used for measure the depth. · It's used to measuring. · It serves for…"
+     "avoid": "at the two · two hours · the two o'clock"
     },
     {
      "type": "choice",
-     "q": "The echo sounder is used to ___ the depth.",
+     "q": "The chain goes straight ahead. It's leading…",
      "opts": [
-      "measure",
-      "measuring",
-      "measures"
+      "twelve o'clock",
+      "six o'clock",
+      "three o'clock"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The gyro compass is used for ___ the heading.",
+     "q": "A buoy is on the port side, at 90°. It's at…",
      "opts": [
-      "giving",
-      "give",
-      "gives"
+      "nine o'clock",
+      "three o'clock",
+      "six o'clock"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-clock3"
+     ],
+     "q": "Where is the other ship?",
+     "opts": [
+      "Starboard side, at 90°",
+      "Port side, at 90°",
+      "Straight ahead"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "Diego asks about the echo sounder.",
-     "q": "Answer him.",
+     "situation": "Tanya asks about the shackles.",
+     "q": "Answer: two in the water.",
      "a": [
-      "It's",
-      "used",
-      "to",
-      "measure",
+      "Two",
+      "shackles",
+      "in",
       "the",
-      "depth."
+      "water."
      ],
      "extra": [
-      "for",
-      "measuring"
+      "on",
+      "at"
      ]
     },
     {
      "type": "type",
-     "audio": "c-depth",
-     "q": "How deep is it? Write the number of metres.",
+     "audio": "c-clock-other",
+     "q": "What o'clock is the chain leading? Write the number.",
      "accept": [
-      "25",
-      "twenty five",
-      "twentyfive"
+      "11",
+      "eleven"
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "\"Sirve para\" is not \"serves for\"",
+     "title": "\"A las dos\" is \"two o'clock\"",
      "paras": [
-      "<i>Sirve para medir</i> = <b>it's used to measure</b>, or simply <b>it measures</b>.",
-      "Also: <b>the helm</b> is the steering; <b>the heading</b> is where the bow points now; <b>the course</b> is the planned way."
+      "For directions and for time, say <b>two o'clock</b>, never <i>at the two</i> or <i>two hours</i>.",
+      "For the chain, no <i>at</i>: <b>leading two o'clock</b>. For a ship or a buoy: <b>at two o'clock</b>."
      ],
-     "avoid": "It serves for measure the depth. · It serves to see ships."
-    },
-    {
-     "type": "choice",
-     "q": "What does the radar do?",
-     "opts": [
-      "It's used for watching other ships.",
-      "It serves for watch other ships.",
-      "It's used for watch other ships."
-     ],
-     "a": 0
+     "avoid": "The chain is leading at the two. · Two hours."
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Spell it or read it?",
+     "title": "o'clock and shackle",
      "paras": [
-      "Some short names are <b>spelled</b>, letter by letter: <b>VHF</b>, <b>GPS</b>, <b>AIS</b>, <b>CPA</b>. Stress on the last letter: <i>vee-aitch-EF</i>.",
-      "Others are <b>read as a word</b>: <b>ECDIS</b> (<i>EK-dis</i>), <b>NAVTEX</b>, <b>radar</b> (<i>RAY-dar</i>)."
+      "<b>o'clock</b> = /əˈklɒk/: a quick <i>uh</i>, then <b>CLOCK</b>.",
+      "<b>shackle</b> = /ˈʃækl/: <b>SHACK</b>-l. The <i>-le</i> is almost silent."
      ],
      "list": [
       [
-       "V H F, G P S, A I S",
-       "se deletrean",
-       "m-spell"
-      ],
-      [
-       "ECDIS, NAVTEX, radar",
-       "se leen como palabra",
-       "m-read"
+       "two o'clock",
+       "las dos",
+       "m-oclock"
       ]
      ]
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-steers"
-     ],
-     "q": "Who steers?",
-     "opts": [
-      "The autopilot",
-      "Tanya",
-      "Nobody"
-     ],
-     "a": 0
+     "type": "type",
+     "audio": "c-shackles-other",
+     "q": "How many shackles on deck? Write the number.",
+     "accept": [
+      "5",
+      "five"
+     ]
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the equipment test",
+   "title": "Read the log",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "test",
-     "q": "What is the gyro compass error?",
+     "doc": "log",
+     "q": "What time did they let go the anchor?",
      "opts": [
-      "0.5° East",
-      "0.5° West",
-      "No error"
+      "0214",
+      "0231",
+      "0200"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "test",
-     "q": "How many radars does the ship have?",
+     "doc": "log",
+     "q": "When was the anchor holding?",
      "opts": [
-      "Two",
-      "One",
-      "Three"
+      "0231",
+      "0214",
+      "0300"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "test",
-     "q": "Tap who did the test.",
-     "a": 7
+     "doc": "log",
+     "q": "Tap the direction of the chain.",
+     "a": 3
     },
     {
      "type": "doc",
-     "doc": "test",
-     "q": "What is loaded in the ECDIS?",
+     "doc": "log",
+     "q": "How far can they see?",
      "opts": [
-      "The route",
-      "The cargo plan",
-      "The weather"
+      "Less than half a mile",
+      "Two miles",
+      "Five miles"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "test",
-     "q": "They tested the engine telegraph with…",
+     "doc": "log",
+     "q": "Where is the fog bell?",
      "opts": [
-      "the engine room",
-      "the bridge wing",
-      "the Captain"
+      "Forward",
+      "On the bridge",
+      "Aft"
      ],
      "a": 0
     }
@@ -912,81 +959,78 @@
   },
   {
    "id": "speak",
-   "title": "Explain the equipment",
+   "title": "Report from the bow",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Say what it does",
-     "body": "Listen, say it, check it. Short answers are fine: It shows other ships.",
-     "es": "Las respuestas cortas están bien.",
+     "title": "Numbers and directions",
+     "body": "Listen, say it, check it. The number and the hour are the strong words: THREE shackles, TWO o'CLOCK.",
+     "es": "El número y la hora, fuertes.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-whatdo"
+     "model": "p-three"
     },
     {
      "type": "shadow",
-     "model": "p-shows"
+     "model": "p-leading"
     },
     {
      "type": "shadow",
-     "model": "p-measures"
+     "model": "p-holding"
     },
     {
      "type": "role",
-     "cue": "c-what-radar",
-     "task": "Tell him what the radar does.",
-     "model": "m-radar",
+     "cue": "c-howmany",
+     "task": "You see four shackles in the water. Tell her.",
+     "model": "m-four",
      "accept": [
-      "It shows other ships.",
-      "The radar shows other ships.",
-      "It shows ships.",
-      "It shows the other ships.",
-      "It's used for watching other ships.",
-      "It's used to show other ships."
+      "Four shackles in the water.",
+      "Four shackles.",
+      "Four in the water.",
+      "Four shackles in the water, Chief."
      ]
     },
     {
      "type": "role",
-     "cue": "c-what-echo",
-     "task": "Tell him what the echo sounder does.",
-     "model": "m-echo",
+     "cue": "c-leading",
+     "task": "The chain goes forward and to port, at ten o'clock. Tell her.",
+     "model": "m-ten",
      "accept": [
-      "It measures the depth.",
-      "The echo sounder measures the depth.",
-      "It measures depth.",
-      "It measures the depth under the ship.",
-      "It's used to measure the depth.",
-      "It's used for measuring the depth."
+      "The chain is leading ten o'clock.",
+      "Leading ten o'clock.",
+      "Ten o'clock.",
+      "It's leading ten o'clock.",
+      "The chain is leading at ten o'clock."
      ]
     },
     {
      "type": "role",
-     "cue": "c-whatsthis",
-     "task": "It's the ECDIS. Say what it is and what it does.",
-     "model": "m-ecdis",
+     "cue": "c-leading2",
+     "task": "Now the chain goes straight ahead.",
+     "model": "m-twelve",
      "accept": [
-      "It's the ECDIS. It shows our position.",
-      "It's the ECDIS.",
-      "The ECDIS. It shows our position.",
-      "It's the electronic chart. It shows our position."
+      "Leading twelve o'clock.",
+      "Twelve o'clock.",
+      "It's leading twelve o'clock.",
+      "The chain is leading twelve o'clock.",
+      "Straight ahead, twelve o'clock."
      ]
     },
     {
      "type": "role",
-     "cue": "c-what-gyro",
-     "task": "Tell her what it does: the heading.",
-     "model": "m-gyro",
+     "cue": "c-rb",
+     "task": "Read back the order.",
+     "model": "m-rb",
      "accept": [
-      "It gives the heading.",
-      "The gyro compass gives the heading.",
-      "It shows the heading.",
-      "It gives our heading.",
-      "It's used to give the heading."
+      "Stand by port anchor.",
+      "Stand by port anchor. Over.",
+      "Forward, stand by port anchor.",
+      "Stand by port anchor, roger."
      ]
     }
    ]
@@ -999,89 +1043,95 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-radar",
+     "audio": "w-chain",
      "q": "Type what you hear.",
      "accept": [
-      "radar",
-      "the radar"
+      "chain",
+      "the chain"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-binoculars",
-     "a": "binoculars"
+     "audio": "c-show-windlass",
+     "a": "windlass"
     },
     {
      "type": "tap",
-     "audio": "c-show-gyro",
-     "a": "gyro"
+     "audio": "c-show-anchor",
+     "a": "anchor"
     },
     {
      "type": "listen",
      "audio": [
-      "l13-12"
+      "l13-06",
+      "l13-07",
+      "l13-08"
      ],
-     "q": "For Tanya, the most important equipment is…",
+     "q": "What is the order?",
      "opts": [
-      "your eyes",
-      "the radar",
-      "the ECDIS"
+      "Let go starboard anchor",
+      "Heave up the anchor",
+      "Stand by port anchor"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Diego's watch is…",
+     "q": "The anchor is in the ground and the ship doesn't move. The anchor is…",
      "opts": [
-      "4 to 8, with the Chief Officer",
-      "12 to 4, with the Second Officer",
-      "8 to 12, with the Third Officer"
+      "holding",
+      "leading",
+      "slack"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "16 knots is the ship's…",
+     "q": "The bridge says \"Let go starboard anchor.\" You…",
      "opts": [
-      "speed",
-      "course",
-      "depth"
+      "read back: \"Let go starboard anchor.\"",
+      "say: \"OK.\"",
+      "say: \"Let's go.\""
      ],
-     "a": 0
+     "a": 0,
+     "why": "From Lesson 12: read back, and let go is not let's go."
     },
     {
      "type": "build",
-     "q": "Ask what the telegraph does.",
+     "q": "Report: the chain goes to two o'clock.",
      "a": [
-      "What",
-      "does",
-      "the",
-      "telegraph",
-      "do?"
+      "The",
+      "chain",
+      "is",
+      "leading",
+      "two",
+      "o'clock."
      ],
      "extra": [
-      "does",
-      "is"
+      "at",
+      "hours"
      ]
     },
     {
-     "type": "choice",
-     "q": "A ship is far away in the fog. You see it on the…",
+     "type": "listen",
+     "audio": [
+      "c-show-fog"
+     ],
+     "q": "Rolando wants to see the…",
      "opts": [
-      "radar",
-      "echo sounder",
-      "engine telegraph"
+      "fog",
+      "bell",
+      "brake"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: timón",
+     "q": "Write it in English: ancla",
      "accept": [
-      "helm",
-      "the helm",
-      "wheel",
-      "steering wheel"
+      "anchor",
+      "an anchor",
+      "the anchor"
      ]
     }
    ]

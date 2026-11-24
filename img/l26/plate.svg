@@ -1,49 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Mario's left hand with the cut between the thumb and the first finger, the pulse point on the wrist, and the first-aid kit: bandage, painkillers, thermometer and blood pressure monitor">
-  <!-- Lesson 26 plate. Left: a left hand, palm towards us, with the cut between the thumb and the first finger
-       (red line) and the pulse point on the inside of the wrist (dotted circle). Right: the open first-aid kit:
-       a white bandage roll, a box of painkillers with a blister strip, a digital thermometer reading 36.8 and a blood
-       pressure monitor with its cuff, reading 130/85 and pulse 92. Colours come from app.css (.p-*). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The bridge VHF on channel 16 with the red distress button, and the chart of the Strait of Gibraltar with the Horizon proceeding to the fishing vessel in distress and the rescue boat from Tarifa on scene">
+  <!-- Lesson 25 plate. Left: the VHF/DSC set on the bridge: display showing channel 16, the red DISTRESS button
+       under its flip cover, handset on its hook. Right: chart of the Strait: Spain (top), Morocco (bottom), Tarifa.
+       The Horizon (dark, coming from the west) steers east towards the Cap Béar (red, in distress); dashed line = 6 miles. The Salvamento
+       Marítimo boat (orange) comes from Tarifa and is on scene. Colours come from app.css (.p-*). -->
   <rect class="p-soft" x="0" y="0" width="400" height="240"/>
-  <!-- forearm and hand (left hand, palm towards us) -->
-  <g style="fill:#D9A47E;stroke:#8A5A3C" stroke-width="1.2">
-    <path d="M70 240 L74 176 L134 176 L138 240 Z"/>
-    <rect x="76" y="44" width="15" height="70" rx="7.5"/>
-    <rect x="94" y="32" width="15" height="80" rx="7.5"/>
-    <rect x="112" y="38" width="15" height="76" rx="7.5"/>
-    <rect x="130" y="56" width="14" height="60" rx="7" transform="rotate(8 137 86)"/>
-    <path d="M74 112 L48 80 Q42 72 35 77 Q29 83 34 90 L68 168 Z"/>
-    <path d="M70 106 Q70 96 80 96 L136 96 Q146 96 146 108 L142 160 Q138 182 120 184 L88 184 Q70 182 66 160 Z"/>
-  </g>
-  <g style="stroke:#8A5A3C" stroke-width="1" opacity=".5" fill="none"><path d="M80 130 Q104 140 132 126"/><path d="M78 148 Q96 160 120 162"/></g>
-  <!-- the cut between thumb and first finger -->
-  <path d="M62 100 Q70 110 82 104" style="stroke:#C8281C" stroke-width="3.2" stroke-linecap="round" fill="none"/>
-  <!-- pulse point on the wrist -->
-  <circle cx="96" cy="200" r="9" fill="none" style="stroke:#2F6FD6" stroke-width="2" stroke-dasharray="3 2"/>
+  <!-- VHF set -->
+  <rect x="12" y="40" width="140" height="150" rx="8" style="fill:#1D2730"/>
+  <rect x="24" y="54" width="116" height="44" rx="4" style="fill:#13212D"/>
+  <text x="36" y="88" style="font:700 30px var(--f-mono);fill:#3DDC84">16</text>
+  <text x="88" y="70" style="font:600 9px var(--f-mono);fill:#7FA7B8">25W</text><text x="88" y="86" style="font:600 9px var(--f-mono);fill:#7FA7B8">DSC</text>
+  <!-- knobs -->
+  <circle cx="40" cy="124" r="11" style="fill:#3A4650"/><circle cx="76" cy="124" r="11" style="fill:#3A4650"/>
+  <!-- DSC call categories, from the most serious: DISTRESS (red button), URGENCY, SAFETY, ROUTINE -->
+  <rect x="22" y="146" width="27" height="14" rx="2" style="fill:#E9A23B"/><rect x="52" y="146" width="27" height="14" rx="2" style="fill:#3B82C4"/><rect x="82" y="146" width="22" height="14" rx="2" style="fill:#5A6772"/>
+  <g style="font:700 4.6px var(--f-mono);fill:#fff" text-anchor="middle"><text x="35.5" y="155">URGENCY</text><text x="65.5" y="155">SAFETY</text><text x="93" y="155">ROUTINE</text></g>
+  <!-- DISTRESS button with flip cover -->
+  <rect x="106" y="110" width="36" height="34" rx="4" style="fill:#C8281C"/>
+  <path d="M106 110 L142 110 L136 98 L112 98 Z" style="fill:#E8705F" opacity=".8"/>
+  <text x="124" y="131" text-anchor="middle" style="font:700 7px var(--f-mono);fill:#fff">DISTRESS</text>
+  <!-- handset -->
+  <rect x="112" y="156" width="24" height="26" rx="6" style="fill:#2C363F"/>
+  <path d="M124 182 Q124 206 96 206 Q70 206 70 192" fill="none" style="stroke:#2C363F" stroke-width="2"/>
 
-  <!-- first-aid kit -->
-  <rect x="172" y="20" width="220" height="200" rx="8" class="p-white"/>
-  <rect x="172" y="20" width="220" height="24" rx="8" style="fill:#2E9E5B"/>
-  <path d="M276 26 H288 V30 H292 V36 H288 V40 H276 V36 H272 V30 H276 Z" style="fill:#fff" transform="translate(0 -1)"/>
-  <!-- bandage roll -->
-  <rect x="188" y="62" width="44" height="44" rx="22" style="fill:#F4F1EA;stroke:#8B8F94" stroke-width="1.2"/>
-  <circle cx="210" cy="84" r="8" style="fill:#D8D4CA"/>
-  <path d="M230 84 Q252 90 252 112 L244 112 Q244 96 228 94 Z" style="fill:#F4F1EA;stroke:#8B8F94" stroke-width="1"/>
-  <!-- painkillers -->
-  <rect x="190" y="130" width="50" height="30" rx="3" style="fill:#2F6FD6"/>
-  <rect x="196" y="164" width="44" height="22" rx="3" style="fill:#C9D2DA;stroke:#8B8F94" stroke-width="1"/>
-  <g style="fill:#fff;stroke:#8B8F94" stroke-width=".8"><circle cx="205" cy="175" r="4"/><circle cx="218" cy="175" r="4"/><circle cx="231" cy="175" r="4"/></g>
-  <!-- thermometer -->
-  <rect x="262" y="60" width="16" height="66" rx="8" style="fill:#F4F6F7;stroke:#5B6670" stroke-width="1.2"/>
-  <rect x="265" y="72" width="10" height="26" rx="2" style="fill:#13212D"/>
-  <text x="270" y="88" text-anchor="middle" transform="rotate(-90 270 85)" style="font:700 7px var(--f-mono);fill:#3DDC84">36.8</text>
-  <rect x="267" y="122" width="6" height="12" rx="3" style="fill:#9AA6B2"/>
-  <!-- blood pressure monitor and cuff -->
-  <rect x="300" y="60" width="78" height="70" rx="6" style="fill:#F4F6F7;stroke:#5B6670" stroke-width="1.2"/>
-  <rect x="308" y="68" width="62" height="40" rx="3" style="fill:#13212D"/>
-  <text x="314" y="84" style="font:700 11px var(--f-mono);fill:#3DDC84">130/85</text>
-  <text x="314" y="100" style="font:600 9px var(--f-mono);fill:#7FA7B8">♥ 92</text>
-  <circle cx="339" cy="119" r="5" style="fill:#2E9E5B"/>
-  <path d="M300 112 Q280 150 300 176" fill="none" style="stroke:#5B6670" stroke-width="2"/>
-  <rect x="290" y="168" width="88" height="34" rx="8" style="fill:#2B3F57"/>
-  <path d="M296 176 H372 M296 194 H372" style="stroke:#fff" stroke-width=".8" opacity=".4"/>
+  <!-- chart -->
+  <rect x="166" y="14" width="224" height="212" rx="4" class="p-water" style="stroke:var(--ink)" stroke-width="1"/>
+  <path d="M166 14 H390 V58 Q360 66 330 60 Q300 54 282 70 Q268 84 250 76 Q220 62 196 70 Q180 74 166 70 Z" class="p-quay"/>
+  <path d="M166 226 H390 V178 Q362 168 338 178 Q316 190 290 176 Q262 164 236 180 Q210 194 186 182 L166 186 Z" class="p-quay"/>
+  <circle cx="272" cy="76" r="3" class="p-ink"/>
+  <text x="230" y="96" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".7">TARIFA</text>
+  <text x="300" y="34" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".55">SPAIN</text>
+  <text x="300" y="214" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".55">MOROCCO</text>
+  <!-- Horizon (coming from the Atlantic, west) and its track east to the Cap Béar -->
+  <path d="M176 132 L198 132" class="p-line" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <path d="M198 124 L218 124 L232 132 L218 140 L198 140 Z" class="p-hull" style="stroke:var(--ink)" stroke-width="1"/>
+  <path d="M236 132 L294 130" class="p-stroke" stroke-width="2.4"/>
+  <path d="M286 124 L296 130 L286 136" class="p-stroke" stroke-width="2.4"/>
+  <text x="246" y="148" style="font:600 8.5px var(--f-mono);fill:var(--ink)" opacity=".75">6 NM</text>
+  <!-- MAYDAY: Cap Béar on fire and listing (grave and imminent danger) -->
+  <circle cx="318" cy="130" r="14" fill="none" style="stroke:#E23D2D" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <path d="M308 130 L318 124 L330 126 L330 134 L318 136 Z" style="fill:#E23D2D" transform="rotate(-18 318 130)"/>
+  <path d="M316 124 Q314 116 319 112 Q319 118 323 117 Q325 121 321 125 Z" style="fill:#F2A23A"/>
+  <!-- PAN-PAN: a ship with engine failure, drifting (urgency) -->
+  <circle cx="196" cy="102" r="14" fill="none" style="stroke:#E9A23B" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <path d="M184 102 L194 96 L208 98 L208 106 L194 108 Z" class="p-hull" style="stroke:var(--ink)" stroke-width=".8"/>
+  <path d="M190 112 Q196 120 206 118" fill="none" style="stroke:#E9A23B" stroke-width="1.4" stroke-dasharray="2 2"/>
+  <path d="M203 115 L208 118 L202 121 Z" style="fill:#E9A23B"/>
+  <g transform="translate(212 90)"><circle r="5" style="fill:#E9A23B"/><path d="M-2.5 -2.5 L2.5 2.5 M2.5 -2.5 L-2.5 2.5" style="stroke:#fff" stroke-width="1.4"/></g>
+  <!-- SECURITE: a container adrift, a danger to navigation (safety) -->
+  <circle cx="360" cy="152" r="14" fill="none" style="stroke:#3B82C4" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <rect x="351" y="148" width="16" height="9" rx="1" style="fill:#3B82C4;stroke:var(--ink)" stroke-width=".6" transform="rotate(-12 359 152)"/>
+  <path d="M358 150 v6 M362 149 v6" style="stroke:#fff" stroke-width=".6" opacity=".7" transform="rotate(-12 359 152)"/>
+  <path d="M370 132 L377 144 H363 Z" style="fill:#F2C230;stroke:var(--ink)" stroke-width=".8" stroke-linejoin="round"/>
+  <text x="370" y="142.5" text-anchor="middle" style="font:900 8px var(--f-display);fill:var(--ink)">!</text>
+  <!-- SAR boat from Tarifa -->
+  <path d="M272 80 Q292 98 308 112" fill="none" class="p-line" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <path d="M304 104 L316 104 L316 112 L306 114 Z" class="p-orange" style="stroke:var(--ink)" stroke-width=".8"/>
 </svg>

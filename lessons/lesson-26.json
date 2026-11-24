@@ -1,284 +1,264 @@
 {
  "n": 26,
  "module": 7,
- "title": "Medical & TMAS",
- "place": "Day 13 · 10:00 · Mediterranean, galley",
- "goal": "Describe an injury, dictate vital signs and read back a doctor's advice.",
+ "title": "Distress, urgency & safety",
+ "place": "Day 12 · 19:20 · Strait of Gibraltar",
+ "goal": "Recognise Mayday, Pan-Pan and Sécurité, write down a distress message and answer it on the radio.",
  "images": {
   "hero": "img/l26/hero.jpg",
   "scene": "img/l26/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 5,
- "radioChannel": "Sat phone",
+ "mediaRev": 3,
  "audio": {
   "l26-01": {
-   "pause": 500,
-   "voice": "mario",
-   "text": "Ay! Cadet! My hand! The knife slipped!",
-   "es": "¡Ay! ¡Cadete! ¡Mi mano! ¡Se me resbaló el cuchillo!"
-  },
-  "l26-02": {
-   "voice": "diego",
-   "text": "Mario, sit down. Show me. Press here with this clean towel. Hard.",
-   "es": "Mario, sentate. Mostrame. Apretá acá con esta toalla limpia. Fuerte."
-  },
-  "l26-03": {
-   "pause": 900,
-   "voice": "tanya",
-   "text": "What happened?",
-   "es": "¿Qué pasó?"
-  },
-  "l26-04": {
-   "voice": "diego",
-   "text": "He cut his left hand with a big knife. It's bleeding a lot, here, between the thumb and the first finger.",
-   "es": "Se cortó la mano izquierda con un cuchillo grande. Sangra mucho, acá, entre el pulgar y el índice."
-  },
-  "l26-05": {
-   "pause": 1800,
-   "voice": "tanya",
-   "text": "Keep pressing. I'm calling TMAS. Diego, take his pulse, blood pressure and temperature.",
-   "es": "Seguí apretando. Llamo al TMAS. Diego, tomale el pulso, la presión y la temperatura."
-  },
-  "l26-06": {
-   "voice": "doctor",
-   "text": "CIRM Rome, doctor speaking. Good morning. What is the problem?",
-   "es": "CIRM Roma, habla el médico. Buen día. ¿Cuál es el problema?",
+   "pause": 600,
+   "voice": "skipper",
+   "text": "Mayday, Mayday, Mayday. This is fishing vessel Cap Béar, Cap Béar, Cap Béar. Mayday, Cap Béar. Position three five fifty-four North, zero zero five forty-two West. Taking water in the engine room. Require immediate assistance. Four persons on board. Over.",
+   "es": "Mayday, Mayday, Mayday. Aquí el pesquero Cap Béar, Cap Béar, Cap Béar. Mayday, Cap Béar. Posición tres cinco cincuenta y cuatro Norte, cero cero cinco cuarenta y dos Oeste. Hacemos agua en la sala de máquinas. Necesitamos asistencia inmediata. Cuatro personas a bordo. Cambio.",
    "radio": true
   },
-  "l26-07": {
+  "l26-02": {
+   "pause": 900,
    "voice": "tanya",
-   "text": "Good morning, doctor. This is LNG Horizon. Our cook, fifty years old, cut his left hand with a knife twenty minutes ago.",
-   "es": "Buen día, doctor. Aquí LNG Horizon. Nuestro cocinero, de cincuenta años, se cortó la mano izquierda con un cuchillo hace veinte minutos."
+   "text": "Diego, write it down. Position, problem, persons. Quickly.",
+   "es": "Diego, anotalo. Posición, problema, personas. Rápido."
+  },
+  "l26-03": {
+   "voice": "diego",
+   "text": "Thirty-five fifty-four North, five forty-two West. Taking water. Four persons.",
+   "es": "Treinta y cinco cincuenta y cuatro Norte, cinco cuarenta y dos Oeste. Hace agua. Cuatro personas."
+  },
+  "l26-04": {
+   "pause": 1200,
+   "voice": "tarifa",
+   "text": "Cap Béar, this is Tarifa Traffic. Received Mayday. A Salvamento Marítimo boat is on its way. ETA forty minutes. Over.",
+   "es": "Cap Béar, aquí Tarifa Tráfico. Recibido Mayday. Una embarcación de Salvamento Marítimo va en camino. Llegada estimada cuarenta minutos. Cambio.",
+   "radio": true
+  },
+  "l26-05": {
+   "voice": "tanya",
+   "text": "Captain, we're only six miles from that position.",
+   "es": "Capitán, estamos a solo seis millas de esa posición."
+  },
+  "l26-06": {
+   "pause": 900,
+   "voice": "lars",
+   "text": "Then we go. Diego, you have a clear voice. Call Tarifa Traffic. Tanya, stay with him.",
+   "es": "Entonces vamos. Diego, tenés una voz clara. Llamá a Tarifa Tráfico. Tanya, quedate con él."
+  },
+  "l26-07": {
+   "voice": "diego",
+   "text": "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Received Mayday from Cap Béar. We are six miles from the position. Proceeding to assist. ETA thirty minutes. Over.",
+   "es": "Tarifa Tráfico, Tarifa Tráfico, aquí LNG Horizon, LNG Horizon. Recibido el Mayday del Cap Béar. Estamos a seis millas de la posición. Vamos a asistir. Llegada estimada treinta minutos. Cambio."
   },
   "l26-08": {
-   "voice": "doctor",
-   "text": "Has the bleeding stopped? Can he move his fingers?",
-   "es": "¿Paró la hemorragia? ¿Puede mover los dedos?",
+   "pause": 1800,
+   "voice": "tarifa",
+   "text": "LNG Horizon, Tarifa Traffic. Thank you. Proceed to the position and report when on scene. Over.",
+   "es": "LNG Horizon, Tarifa Tráfico. Gracias. Diríjanse a la posición e informen al llegar. Cambio.",
    "radio": true
   },
   "l26-09": {
-   "voice": "diego",
-   "text": "The bleeding is slower now. He can move all his fingers, but it hurts.",
-   "es": "Ahora sangra menos. Puede mover todos los dedos, pero le duele."
+   "pause": 900,
+   "voice": "skipper",
+   "text": "Tarifa Traffic, Cap Béar. The water is rising. We are preparing the liferaft. Over.",
+   "es": "Tarifa Tráfico, Cap Béar. El agua sube. Estamos preparando la balsa. Cambio.",
+   "radio": true
   },
   "l26-10": {
-   "voice": "doctor",
-   "text": "Good. What are his vital signs?",
-   "es": "Bien. ¿Cuáles son sus signos vitales?",
-   "radio": true
+   "pause": 2000,
+   "voice": "lars",
+   "text": "Tanya, rescue boat crew to stand by. Pilot ladder ready on the starboard side.",
+   "es": "Tanya, la tripulación del bote de rescate en espera. La escala de práctico lista por estribor."
   },
   "l26-11": {
-   "pause": 800,
-   "voice": "diego",
-   "text": "Pulse ninety-two. Blood pressure one hundred and thirty over eighty-five. Temperature thirty-six point eight. Pain seven out of ten.",
-   "es": "Pulso noventa y dos. Presión ciento treinta sobre ochenta y cinco. Temperatura treinta y seis coma ocho. Dolor siete sobre diez."
+   "pause": 700,
+   "voice": "tarifa",
+   "text": "LNG Horizon, Tarifa Traffic. Salvamento Marítimo is now on scene. Four persons recovered, all safe. You are released. Thank you for your assistance. Over.",
+   "es": "LNG Horizon, Tarifa Tráfico. Salvamento Marítimo ya está en la escena. Cuatro personas recuperadas, todas a salvo. Quedan liberados. Gracias por su asistencia. Cambio.",
+   "radio": true
   },
   "l26-12": {
-   "voice": "doctor",
-   "text": "Thank you. Clean the wound with saline. Close it with steri-strips and put on a pressure bandage. Give him a painkiller, paracetamol, one gram. No work with that hand for five days. Call me again in six hours.",
-   "es": "Gracias. Limpien la herida con solución fisiológica. Ciérrenla con steri-strips y pongan un vendaje compresivo. Denle un analgésico, paracetamol, un gramo. Nada de trabajo con esa mano por cinco días. Llámenme de nuevo en seis horas.",
-   "radio": true
+   "pause": 1200,
+   "voice": "diego",
+   "text": "Tarifa Traffic, LNG Horizon. Released. Resuming our voyage. Over.",
+   "es": "Tarifa Tráfico, LNG Horizon. Liberados. Retomamos nuestro viaje. Cambio."
   },
   "l26-13": {
-   "voice": "tanya",
-   "text": "Clean with saline, steri-strips, pressure bandage, paracetamol one gram, no work for five days, call back in six hours. Correct?",
-   "es": "Limpiar con solución fisiológica, steri-strips, vendaje compresivo, paracetamol un gramo, nada de trabajo por cinco días, volver a llamar en seis horas. ¿Correcto?"
+   "voice": "lars",
+   "text": "Good radio work, cadet. Short and clear. That's what saves people.",
+   "es": "Buen trabajo en la radio, cadete. Corto y claro. Eso es lo que salva gente."
   },
-  "l26-14": {
-   "pause": 1500,
-   "voice": "doctor",
-   "text": "Correct. Good luck.",
-   "es": "Correcto. Buena suerte.",
+  "w-mayday": {
+   "voice": "model",
+   "text": "Mayday"
+  },
+  "x-mayday": {
+   "voice": "model",
+   "text": "Mayday, Mayday, Mayday.",
+   "es": "Mayday, Mayday, Mayday."
+  },
+  "w-panpan": {
+   "voice": "model",
+   "text": "Pan-Pan"
+  },
+  "x-panpan": {
+   "voice": "model",
+   "text": "Pan-Pan, Pan-Pan, Pan-Pan. Engine failure.",
+   "es": "Pan-Pan, Pan-Pan, Pan-Pan. Falla de máquina."
+  },
+  "w-securite": {
+   "voice": "model",
+   "text": "Sécurité"
+  },
+  "x-securite": {
+   "voice": "model",
+   "text": "Sécurité. Navigational warning.",
+   "es": "Sécurité. Aviso a los navegantes."
+  },
+  "w-distress": {
+   "voice": "model",
+   "text": "distress"
+  },
+  "x-distress": {
+   "voice": "model",
+   "text": "The fishing vessel is in distress.",
+   "es": "El pesquero está en peligro."
+  },
+  "w-ch16": {
+   "voice": "model",
+   "text": "channel sixteen"
+  },
+  "x-ch16": {
+   "voice": "model",
+   "text": "Keep a watch on channel sixteen.",
+   "es": "Mantené escucha en el canal dieciséis."
+  },
+  "w-acknowledge": {
+   "voice": "model",
+   "text": "to acknowledge"
+  },
+  "x-acknowledge": {
+   "voice": "model",
+   "text": "Acknowledge the Mayday: received Mayday.",
+   "es": "Acusá recibo del Mayday: recibido Mayday."
+  },
+  "w-proceed": {
+   "voice": "model",
+   "text": "to proceed"
+  },
+  "x-proceed": {
+   "voice": "model",
+   "text": "We are proceeding to assist.",
+   "es": "Vamos a asistir."
+  },
+  "w-onscene": {
+   "voice": "model",
+   "text": "on scene"
+  },
+  "x-onscene": {
+   "voice": "model",
+   "text": "Report when on scene.",
+   "es": "Informen al llegar al lugar."
+  },
+  "p-received": {
+   "voice": "model",
+   "text": "Received Mayday.",
+   "es": "Recibido Mayday."
+  },
+  "p-proceed": {
+   "voice": "model",
+   "text": "Proceeding to assist. ETA thirty minutes.",
+   "es": "Vamos a asistir. Llegada estimada treinta minutos."
+  },
+  "p-call": {
+   "voice": "model",
+   "text": "Tarifa Traffic, this is LNG Horizon.",
+   "es": "Tarifa Tráfico, aquí LNG Horizon."
+  },
+  "p-persons": {
+   "voice": "model",
+   "text": "Four persons on board.",
+   "es": "Cuatro personas a bordo."
+  },
+  "m-call": {
+   "voice": "model",
+   "text": "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Over.",
+   "es": "Tarifa Tráfico, Tarifa Tráfico, aquí LNG Horizon, LNG Horizon. Cambio."
+  },
+  "m-proceed": {
+   "voice": "model",
+   "text": "Received Mayday. Proceeding to assist. ETA twenty minutes. Over.",
+   "es": "Recibido Mayday. Vamos a asistir. Llegada estimada veinte minutos. Cambio."
+  },
+  "m-onscene": {
+   "voice": "model",
+   "text": "Tarifa Traffic, LNG Horizon. We are on scene. Over.",
+   "es": "Tarifa Tráfico, LNG Horizon. Estamos en el lugar. Cambio."
+  },
+  "m-released": {
+   "voice": "model",
+   "text": "Released. Resuming our voyage. Over.",
+   "es": "Liberados. Retomamos nuestro viaje. Cambio."
+  },
+  "m-mayday": {
+   "voice": "model",
+   "text": "Mayday, Mayday, Mayday.",
+   "es": "Mayday, Mayday, Mayday."
+  },
+  "c-show-mayday": {
+   "voice": "tanya",
+   "text": "Show me the vessel in distress."
+  },
+  "c-show-ch16": {
+   "voice": "lars",
+   "text": "Where's channel sixteen?"
+  },
+  "c-show-distress": {
+   "voice": "tanya",
+   "text": "Show me the distress button."
+  },
+  "c-show-proceed": {
+   "voice": "lars",
+   "text": "Show me where we are proceeding."
+  },
+  "c-show-onscene": {
+   "voice": "tanya",
+   "text": "Who is on scene now?"
+  },
+  "c-panpan": {
+   "voice": "skipper",
+   "text": "Pan-Pan, Pan-Pan, Pan-Pan. This is sailing yacht Bella Luna. Engine failure. Drifting towards the coast. Three persons on board. Over.",
    "radio": true
   },
-  "l26-15": {
-   "voice": "mario",
-   "text": "Five days without work? And who cooks the lunch?",
-   "es": "¿Cinco días sin trabajar? ¿Y quién cocina el almuerzo?"
-  },
-  "l26-16": {
-   "voice": "diego",
-   "text": "Today I'll help in the galley, Mario. You just tell me what to do.",
-   "es": "Hoy te ayudo en la cocina, Mario. Vos decime qué hacer."
-  },
-  "w-wound": {
-   "voice": "model",
-   "text": "wound"
-  },
-  "x-wound": {
-   "voice": "model",
-   "text": "Clean the wound with saline.",
-   "es": "Limpiá la herida con solución fisiológica."
-  },
-  "w-bleeding": {
-   "voice": "model",
-   "text": "bleeding"
-  },
-  "x-bleeding": {
-   "voice": "model",
-   "text": "The bleeding has stopped.",
-   "es": "El sangrado paró."
-  },
-  "w-pulse": {
-   "voice": "model",
-   "text": "pulse"
-  },
-  "x-pulse": {
-   "voice": "model",
-   "text": "His pulse is ninety-two.",
-   "es": "Su pulso es noventa y dos."
-  },
-  "w-bp": {
-   "voice": "model",
-   "text": "blood pressure"
-  },
-  "x-bp": {
-   "voice": "model",
-   "text": "Blood pressure one thirty over eighty-five.",
-   "es": "Presión ciento treinta sobre ochenta y cinco."
-  },
-  "w-temp": {
-   "voice": "model",
-   "text": "temperature"
-  },
-  "x-temp": {
-   "voice": "model",
-   "text": "His temperature is thirty-six point eight.",
-   "es": "Su temperatura es treinta y seis coma ocho."
-  },
-  "w-vitals": {
-   "voice": "model",
-   "text": "vital signs"
-  },
-  "x-vitals": {
-   "voice": "model",
-   "text": "What are his vital signs?",
-   "es": "¿Cuáles son sus signos vitales?"
-  },
-  "w-painkiller": {
-   "voice": "model",
-   "text": "painkiller"
-  },
-  "x-painkiller": {
-   "voice": "model",
-   "text": "Give him a painkiller.",
-   "es": "Dale un analgésico."
-  },
-  "w-bandage": {
-   "voice": "model",
-   "text": "bandage"
-  },
-  "x-bandage": {
-   "voice": "model",
-   "text": "Put on a pressure bandage.",
-   "es": "Poné un vendaje compresivo."
-  },
-  "w-kit": {
-   "voice": "model",
-   "text": "first-aid kit"
-  },
-  "x-kit": {
-   "voice": "model",
-   "text": "Bring the first-aid kit to the galley.",
-   "es": "Traé el botiquín a la cocina."
-  },
-  "p-cut": {
-   "voice": "model",
-   "text": "He cut his left hand with a knife.",
-   "es": "Se cortó la mano izquierda con un cuchillo."
-  },
-  "p-hurts": {
-   "voice": "model",
-   "text": "He can move his fingers, but it hurts.",
-   "es": "Puede mover los dedos, pero le duele."
-  },
-  "p-bp": {
-   "voice": "model",
-   "text": "Blood pressure one hundred and thirty over eighty-five.",
-   "es": "Presión ciento treinta sobre ochenta y cinco."
-  },
-  "p-pain": {
-   "voice": "model",
-   "text": "Pain seven out of ten.",
-   "es": "Dolor siete sobre diez."
-  },
-  "m-what": {
-   "voice": "model",
-   "text": "He cut his hand. It's bleeding a lot.",
-   "es": "Se cortó la mano. Sangra mucho."
-  },
-  "m-vitals": {
-   "voice": "model",
-   "text": "Pulse eighty-eight. Temperature thirty-seven point two.",
-   "es": "Pulso ochenta y ocho. Temperatura treinta y siete coma dos."
-  },
-  "m-bp": {
-   "voice": "model",
-   "text": "Blood pressure one hundred and forty over ninety.",
-   "es": "Presión ciento cuarenta sobre noventa."
-  },
-  "m-fingers": {
-   "voice": "model",
-   "text": "Yes, he can move his fingers, but it hurts.",
-   "es": "Sí, puede mover los dedos, pero le duele."
-  },
-  "m-temp": {
-   "voice": "model",
-   "text": "Temperature thirty-six point eight.",
-   "es": "Temperatura treinta y seis coma ocho."
-  },
-  "c-show-wound": {
-   "voice": "tanya",
-   "text": "Show me the wound."
-  },
-  "c-show-bandage": {
-   "voice": "tanya",
-   "text": "Where's the bandage?"
-  },
-  "c-show-painkiller": {
-   "voice": "mario",
-   "text": "Where are the painkillers?"
-  },
-  "c-show-temp": {
-   "voice": "tanya",
-   "text": "Show me where you see his temperature."
-  },
-  "c-show-bp": {
-   "voice": "tanya",
-   "text": "Show me the blood pressure."
-  },
-  "c-show-pulse": {
-   "voice": "tanya",
-   "text": "Where do you take his pulse?"
-  },
-  "c-whathappened": {
-   "voice": "tanya",
-   "text": "Diego, what happened to Mario?"
-  },
-  "c-vitals": {
-   "voice": "doctor",
-   "text": "What are his pulse and temperature?",
+  "c-securite": {
+   "voice": "tarifa",
+   "text": "Sécurité, Sécurité, Sécurité. All ships, this is Tarifa Traffic. Navigational warning. Floating container reported five miles south of Tarifa. Over.",
    "radio": true
   },
-  "c-bp": {
-   "voice": "doctor",
-   "text": "And his blood pressure?",
+  "c-mayday2": {
+   "voice": "skipper",
+   "text": "Mayday, Mayday, Mayday. This is motor vessel Sirocco. Fire on board. Six persons on board. Over.",
    "radio": true
   },
-  "c-fingers": {
-   "voice": "doctor",
-   "text": "Can he move his fingers?",
+  "c-callnow": {
+   "voice": "lars",
+   "text": "Diego, call Tarifa Traffic."
+  },
+  "c-tarifa-ask": {
+   "voice": "tarifa",
+   "text": "LNG Horizon, Tarifa Traffic. Can you assist the vessel in distress? Over.",
    "radio": true
   },
-  "c-doc-other": {
-   "voice": "doctor",
-   "text": "Give him one tablet every eight hours and call me tomorrow morning.",
-   "radio": true
-  },
-  "c-bp-other": {
+  "c-arrive": {
    "voice": "tanya",
-   "text": "Blood pressure one hundred and twenty over seventy-five."
+   "text": "We're there. Tell Tarifa Traffic."
+  },
+  "c-release": {
+   "voice": "tarifa",
+   "text": "LNG Horizon, Tarifa Traffic. You are released. Thank you. Over.",
+   "radio": true
   }
  },
  "dialogue": [
@@ -294,153 +274,143 @@
   "l26-10",
   "l26-11",
   "l26-12",
-  "l26-13",
-  "l26-14",
-  "l26-15",
-  "l26-16"
+  "l26-13"
  ],
  "words": {
-  "wound": {
-   "en": "wound",
-   "ipa": "/wuːnd/",
-   "es": "herida",
-   "audio": "w-wound",
-   "ex": "x-wound"
+  "mayday": {
+   "en": "Mayday",
+   "ipa": "/ˈmeɪdeɪ/",
+   "es": "Mayday (socorro)",
+   "audio": "w-mayday",
+   "ex": "x-mayday"
   },
-  "bleeding": {
-   "en": "bleeding",
-   "ipa": "/ˈbliːdɪŋ/",
-   "es": "hemorragia, sangrado",
-   "audio": "w-bleeding",
-   "ex": "x-bleeding"
+  "panpan": {
+   "en": "Pan-Pan",
+   "ipa": "/ˌpæn ˈpæn/",
+   "es": "Pan-Pan (urgencia)",
+   "audio": "w-panpan",
+   "ex": "x-panpan"
   },
-  "pulse": {
-   "en": "pulse",
-   "ipa": "/pʌls/",
-   "es": "pulso",
-   "audio": "w-pulse",
-   "ex": "x-pulse"
+  "securite": {
+   "en": "Sécurité",
+   "ipa": "/seɪˌkjʊərɪˈteɪ/",
+   "es": "Sécurité (seguridad)",
+   "audio": "w-securite",
+   "ex": "x-securite"
   },
-  "bp": {
-   "en": "blood pressure",
-   "ipa": "/ˈblʌd ˌpreʃə/",
-   "es": "presión arterial",
-   "audio": "w-bp",
-   "ex": "x-bp"
+  "distress": {
+   "en": "distress",
+   "ipa": "/dɪˈstres/",
+   "es": "peligro grave, socorro",
+   "audio": "w-distress",
+   "ex": "x-distress"
   },
-  "temp": {
-   "en": "temperature",
-   "ipa": "/ˈtemprətʃə/",
-   "es": "temperatura",
-   "audio": "w-temp",
-   "ex": "x-temp"
+  "ch16": {
+   "en": "channel sixteen",
+   "ipa": "/ˈtʃænl ˌsɪkˈstiːn/",
+   "es": "canal dieciséis",
+   "audio": "w-ch16",
+   "ex": "x-ch16"
   },
-  "vitals": {
-   "en": "vital signs",
-   "ipa": "/ˈvaɪtl saɪnz/",
-   "es": "signos vitales",
-   "audio": "w-vitals",
-   "ex": "x-vitals"
+  "acknowledge": {
+   "en": "to acknowledge",
+   "ipa": "/əkˈnɒlɪdʒ/",
+   "es": "acusar recibo",
+   "audio": "w-acknowledge",
+   "ex": "x-acknowledge"
   },
-  "painkiller": {
-   "en": "painkiller",
-   "ipa": "/ˈpeɪnkɪlə/",
-   "es": "analgésico",
-   "audio": "w-painkiller",
-   "ex": "x-painkiller"
+  "proceed": {
+   "en": "to proceed",
+   "ipa": "/prəˈsiːd/",
+   "es": "dirigirse, ir hacia",
+   "audio": "w-proceed",
+   "ex": "x-proceed"
   },
-  "bandage": {
-   "en": "bandage",
-   "ipa": "/ˈbændɪdʒ/",
-   "es": "venda, vendaje",
-   "audio": "w-bandage",
-   "ex": "x-bandage"
-  },
-  "kit": {
-   "en": "first-aid kit",
-   "ipa": "/ˌfɜːst ˈeɪd kɪt/",
-   "es": "botiquín",
-   "audio": "w-kit",
-   "ex": "x-kit"
+  "onscene": {
+   "en": "on scene",
+   "ipa": "/ˌɒn ˈsiːn/",
+   "es": "en la escena, en el lugar",
+   "audio": "w-onscene",
+   "ex": "x-onscene"
   }
  },
  "plate": {
   "svg": "img/l26/plate.svg",
   "pins": [
    {
-    "word": "wound",
-    "x": 56,
-    "y": 112
+    "word": "ch16",
+    "x": 32,
+    "y": 58
    },
    {
-    "word": "pulse",
-    "x": 96,
-    "y": 218
+    "word": "distress",
+    "x": 124,
+    "y": 102
    },
    {
-    "word": "bandage",
-    "x": 210,
-    "y": 62
+    "word": "mayday",
+    "x": 318,
+    "y": 150
    },
    {
-    "word": "painkiller",
-    "x": 215,
-    "y": 145
+    "word": "proceed",
+    "x": 264,
+    "y": 120
    },
    {
-    "word": "temp",
-    "x": 270,
-    "y": 52
+    "word": "onscene",
+    "x": 322,
+    "y": 100
    },
    {
-    "word": "bp",
-    "x": 339,
-    "y": 52
+    "word": "panpan",
+    "x": 178,
+    "y": 82
    },
    {
-    "word": "kit",
-    "x": 194,
-    "y": 30
+    "word": "securite",
+    "x": 382,
+    "y": 172
    }
   ]
  },
  "docs": {
-  "med": {
+  "log": {
    "kind": "form",
-   "title": "TMAS · MEDICAL REPORT",
-   "subtitle": "M/V LNG HORIZON · 26 MAR 2026 · 1005 · TO CIRM ROME",
+   "title": "GMDSS RADIO LOG",
+   "subtitle": "M/V LNG HORIZON · 25 MAR 2026 · STRAIT OF GIBRALTAR",
    "cells": [
     [
-     "PATIENT",
-     "Chief Cook · male · 50 years"
+     "1918 · VHF 16",
+     "MAYDAY from F/V Cap Béar · 35°54'N 005°42'W"
     ],
     [
-     "WHAT HAPPENED",
-     "Cut, left hand, kitchen knife · 0940"
+     "NATURE",
+     "Taking water in engine room · 4 POB"
     ],
     [
-     "WHERE",
-     "Between thumb and first finger"
+     "1919 · VHF 16",
+     "Tarifa Traffic acknowledged · SAR boat ETA 40 min"
     ],
     [
-     "BLEEDING",
-     "Slower after 15 min pressure"
+     "1921 · VHF 16",
+     "Horizon to Tarifa: proceeding to assist · ETA 30 min"
     ],
     [
-     "MOVEMENT",
-     "Can move all fingers · pain"
+     "1934 · VHF 16",
+     "Cap Béar preparing liferaft"
     ],
     [
-     "VITAL SIGNS",
-     "Pulse 92 · BP 130/85 · Temp 36.8 °C"
+     "1958 · VHF 16",
+     "Salvamento Marítimo on scene · 4 recovered, all safe"
     ],
     [
-     "PAIN",
-     "7/10"
+     "2000 · VHF 16",
+     "Horizon released by Tarifa Traffic"
     ],
     [
-     "ALLERGIES",
-     "None known"
+     "SIGNED",
+     "D. Martínez, cadet · T. Williams, C/O"
     ]
    ]
   }
@@ -448,29 +418,41 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: a cut in the galley",
+   "title": "Listen: Mayday",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l26/scene.jpg",
-     "kicker": "Day 13 · 10:00 · Mediterranean",
-     "title": "Calling TMAS",
-     "body": "There's no doctor on board. When Mario cuts his hand, Tanya calls the radio medical service in Rome, and Diego gives the numbers. Listen first, one piece at a time.",
+     "kicker": "Day 12 · 19:20 · Strait of Gibraltar",
+     "title": "Mayday on channel 16",
+     "body": "Sunset near Gibraltar. Diego is on watch with Tanya when a Mayday comes in on the radio. Radio voices have static: listen more than once. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l26-01",
-      "l26-02"
+      "l26-01"
      ],
-     "q": "What does Diego do first?",
+     "q": "What is the problem on the Cap Béar?",
      "opts": [
-      "Presses the cut with a clean towel",
-      "Calls the bridge",
-      "Gives Mario water"
+      "Taking water in the engine room",
+      "Fire on deck",
+      "A man overboard"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-01"
+     ],
+     "q": "How many persons on board?",
+     "opts": [
+      "Four",
+      "Fourteen",
+      "Forty"
      ],
      "a": 0
     },
@@ -479,25 +461,38 @@
      "audio": [
       "l26-04"
      ],
-     "q": "Where is the cut?",
+     "q": "Who is coming, and when?",
      "opts": [
-      "Left hand, between the thumb and the first finger",
-      "Right arm",
-      "Left foot"
+      "Salvamento Marítimo, in 40 minutes",
+      "A helicopter, in 4 minutes",
+      "Nobody"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l26-08",
-      "l26-09"
+      "l26-05",
+      "l26-06"
      ],
-     "q": "Can Mario move his fingers?",
+     "q": "Why does the Horizon go?",
      "opts": [
-      "Yes, but it hurts",
-      "No",
-      "Only the thumb"
+      "It's only six miles away",
+      "Tarifa orders it",
+      "The Captain knows the skipper"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-07"
+     ],
+     "q": "What is Diego's ETA?",
+     "opts": [
+      "30 minutes",
+      "13 minutes",
+      "6 minutes"
      ],
      "a": 0
     },
@@ -506,123 +501,104 @@
      "audio": [
       "l26-11"
      ],
-     "q": "What is Mario's pulse?",
+     "q": "How does it end?",
      "opts": [
-      "92",
-      "130",
-      "85"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l26-12"
-     ],
-     "q": "How long without work?",
-     "opts": [
-      "Five days",
-      "Six hours",
-      "One day"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l26-15",
-      "l26-16"
-     ],
-     "q": "Who will help in the galley?",
-     "opts": [
-      "Diego",
-      "Tanya",
-      "Nobody: no lunch today"
+      "Four recovered, all safe",
+      "Two missing",
+      "The fishing vessel is towed"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole scene",
+     "title": "Now the whole radio traffic",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "First aid and vital signs",
+   "title": "Distress, urgency, safety",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "Mario's hand and the first-aid kit."
+     "body": "The VHF and the chart of the Strait."
     },
     {
      "type": "card",
-     "word": "wound"
+     "word": "ch16"
     },
     {
      "type": "card",
-     "word": "bleeding"
+     "word": "distress"
     },
     {
      "type": "tap",
-     "audio": "c-show-wound",
-     "a": "wound"
+     "audio": "c-show-ch16",
+     "a": "ch16"
     },
     {
      "type": "card",
-     "word": "vitals"
+     "word": "mayday"
     },
     {
      "type": "card",
-     "word": "pulse"
+     "word": "panpan"
     },
     {
      "type": "card",
-     "word": "bp"
-    },
-    {
-     "type": "card",
-     "word": "temp"
+     "word": "securite"
     },
     {
      "type": "tap",
-     "audio": "c-show-pulse",
-     "a": "pulse"
+     "audio": "x-panpan",
+     "q": "Listen to the call. Who is calling?",
+     "a": "panpan"
     },
     {
      "type": "tap",
-     "audio": "c-show-bp",
-     "a": "bp"
-    },
-    {
-     "type": "card",
-     "word": "painkiller"
-    },
-    {
-     "type": "card",
-     "word": "bandage"
-    },
-    {
-     "type": "card",
-     "word": "kit"
+     "audio": "x-securite",
+     "q": "Listen to the call. What is it about?",
+     "a": "securite"
     },
     {
      "type": "tap",
-     "audio": "c-show-bandage",
-     "a": "bandage"
+     "audio": "c-show-mayday",
+     "a": "mayday"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-distress",
+     "a": "distress"
+    },
+    {
+     "type": "card",
+     "word": "acknowledge"
+    },
+    {
+     "type": "card",
+     "word": "proceed"
+    },
+    {
+     "type": "card",
+     "word": "onscene"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-onscene",
+     "a": "onscene"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"analgésico\" in English:",
+     "q": "Engine failure, no danger to life yet. The signal is…",
      "opts": [
-      "painkiller",
-      "analgesic pill",
-      "pain stopper"
+      "Pan-Pan",
+      "Mayday",
+      "Sécurité"
      ],
      "a": 0
     },
@@ -631,24 +607,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "wound",
-       "herida"
+       "Mayday",
+       "socorro"
       ],
       [
-       "bleeding",
-       "sangrado"
+       "Pan-Pan",
+       "urgencia"
       ],
       [
-       "pulse",
-       "pulso"
+       "Sécurité",
+       "seguridad"
       ],
       [
-       "bandage",
-       "venda"
+       "to acknowledge",
+       "acusar recibo"
       ],
       [
-       "vital signs",
-       "signos vitales"
+       "on scene",
+       "en el lugar"
       ]
      ]
     }
@@ -656,145 +632,144 @@
   },
   {
    "id": "phrases",
-   "title": "Describe and dictate",
+   "title": "Mayday, Pan-Pan, Sécurité",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Talking to the doctor",
+     "title": "Answering a Mayday",
      "list": [
       [
-       "He cut his left hand with a knife.",
-       "Se cortó la mano izquierda con un cuchillo.",
-       "p-cut"
+       "Received Mayday.",
+       "Recibido Mayday.",
+       "p-received"
       ],
       [
-       "He can move his fingers, but it hurts.",
-       "Puede mover los dedos, pero le duele.",
-       "p-hurts"
+       "Proceeding to assist. ETA thirty minutes.",
+       "Vamos a asistir. Llegada estimada treinta minutos.",
+       "p-proceed"
       ],
       [
-       "Blood pressure one hundred and thirty over eighty-five.",
-       "Presión ciento treinta sobre ochenta y cinco.",
-       "p-bp"
+       "Tarifa Traffic, this is LNG Horizon.",
+       "Tarifa Tráfico, aquí LNG Horizon.",
+       "p-call"
       ],
       [
-       "Pain seven out of ten.",
-       "Dolor siete sobre diez.",
-       "p-pain"
+       "Four persons on board.",
+       "Cuatro personas a bordo.",
+       "p-persons"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "What happened · how he is · the numbers",
+     "title": "Three signals, one order",
      "steps": [
       [
-       "what happened",
-       "He <b>cut</b> his hand. (past: <i>cut</i> doesn't change)"
+       "Mayday ×3",
+       "Distress: danger to life or to the ship. <i>Sinking, fire, man overboard.</i>"
       ],
       [
-       "how he is now",
-       "It<b>'s bleeding</b>. It <b>hurts</b>. He <b>can</b> move his fingers."
+       "Pan-Pan ×3",
+       "Urgency: a serious problem, no danger to life yet. <i>Engine failure, drifting, medical help.</i>"
       ],
       [
-       "the numbers",
-       "Pulse <b>ninety-two</b> · BP <b>one thirty over eighty-five</b> · Temp <b>thirty-six point eight</b> · Pain <b>seven out of ten</b>"
+       "Sécurité ×3",
+       "Safety: a warning for all ships. <i>Floating container, bad weather.</i>"
       ]
      ],
      "paras": [
-      "Give the doctor the facts in that order: <b>what happened, when, where on the body, how he is now, vital signs</b>.",
-      "Blood pressure: two numbers with <b>over</b> in the middle. Temperature: <b>point</b>, not <i>comma</i>."
+      "A distress message always comes in the same order: <b>Mayday ×3 · this is + name ×3 · position · what is wrong · what help · persons on board · Over</b>.",
+      "Write it in that order too: <b>position, problem, persons</b>, like Tanya says."
      ],
-     "avoid": "He has cut himself the hand · thirty-six comma eight"
+     "avoid": "Help! Help! We have a big problem!"
     },
     {
-     "type": "choice",
-     "q": "Temperature 37,2 °C. You say…",
+     "type": "listen",
+     "audio": [
+      "c-panpan"
+     ],
+     "q": "Which signal is it, and what's the problem?",
      "opts": [
-      "thirty-seven point two",
-      "thirty-seven comma two",
-      "thirty-seven and two"
+      "Pan-Pan: engine failure",
+      "Mayday: fire",
+      "Sécurité: a container"
      ],
      "a": 0
     },
     {
-     "type": "choice",
-     "q": "Blood pressure 140/90. You say…",
+     "type": "listen",
+     "audio": [
+      "c-securite"
+     ],
+     "q": "What does the warning say?",
      "opts": [
-      "one hundred and forty over ninety",
-      "one hundred and forty on ninety",
-      "one hundred forty, ninety"
+      "A floating container south of Tarifa",
+      "A ship on fire",
+      "Fog in the Strait"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "audio": "c-bp-other",
-     "q": "Write the blood pressure like on a form (number/number).",
+     "audio": "c-mayday2",
+     "q": "How many persons on board? Write the number.",
      "accept": [
-      "120/75",
-      "120 / 75",
-      "120 over 75"
+      "6",
+      "six"
      ]
     },
     {
      "type": "build",
-     "q": "He can move his fingers, but it hurts.",
+     "q": "Answer a Mayday: received, proceeding to assist.",
      "a": [
-      "He",
-      "can",
-      "move",
-      "his",
-      "fingers,",
-      "but",
-      "it",
-      "hurts."
+      "Received",
+      "Mayday.",
+      "Proceeding",
+      "to",
+      "assist."
      ],
      "extra": [
-      "hurt",
-      "the"
+      "Receive",
+      "going"
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "his hand, not the hand",
+     "title": "Pan-Pan and Sécurité",
      "paras": [
-      "In Spanish: <i>se cortó <b>la</b> mano</i>. In English the body part takes <b>his / her / my</b>: <b>He cut <u>his</u> hand.</b>",
-      "<b>It hurts</b>: the body part is the subject. <i>Le duele la mano</i> → <b>His hand hurts.</b>"
+      "They're French words said in English: <b>Pan-Pan</b> rhymes with <i>man</i>, not with Spanish <i>pan</i>. <b>Sécurité</b>: <b>say-KYUR-ee-tay</b>.",
+      "Positions: say each figure: <b>three five fifty-four North</b>. Never <i>treinta y cinco</i>."
      ],
-     "avoid": "He cut the hand · It hurts him the hand"
+     "avoid": "Pan pan (like bread) · Security, security, security"
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-doc-other"
-     ],
-     "q": "How often does he take a tablet?",
+     "type": "choice",
+     "q": "A floating container in the Strait. Tarifa Traffic says…",
      "opts": [
-      "Every eight hours",
-      "Every hour",
-      "Once a day"
+      "Sécurité ×3",
+      "Mayday ×3",
+      "Pan-Pan ×3"
      ],
      "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "wound and temperature",
+     "title": "Mayday",
      "paras": [
-      "<b>wound</b> (herida) sounds like <b>woond</b>, long <i>u</i>. Not like <i>round</i>.",
-      "<b>temperature</b>: <b>TEM-pruh-chuh</b>, three syllables. The middle <i>e</i> almost disappears."
+      "<b>MAY-day</b>: two syllables, strong first one. Three times, clear, not too fast.",
+      "After <b>Over</b>, stop talking and listen."
      ],
      "list": [
       [
-       "Temperature thirty-six point eight.",
-       "Temperatura treinta y seis coma ocho.",
-       "m-temp"
+       "Mayday, Mayday, Mayday.",
+       "Mayday, Mayday, Mayday.",
+       "m-mayday"
       ]
      ]
     }
@@ -802,57 +777,57 @@
   },
   {
    "id": "read",
-   "title": "Read the medical report",
+   "title": "Read the radio log",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "med",
-     "q": "When did it happen?",
+     "doc": "log",
+     "q": "At what time did the Mayday come in?",
      "opts": [
-      "09:40",
-      "10:05",
-      "10:40"
+      "19:18",
+      "19:58",
+      "20:00"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "med",
-     "q": "Where did the report go?",
+     "doc": "log",
+     "q": "What does POB mean here?",
      "opts": [
-      "CIRM Rome",
-      "Tarifa Traffic",
-      "The company"
+      "Persons on board",
+      "Port of berth",
+      "Position of boat"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "med",
-     "q": "Tap the vital signs.",
+     "doc": "log",
+     "q": "Tap the line where Salvamento Marítimo arrives.",
      "a": 5
     },
     {
      "type": "doc",
-     "doc": "med",
-     "q": "Does Mario have allergies?",
+     "doc": "log",
+     "q": "Who acknowledged the Mayday first?",
      "opts": [
-      "None known",
-      "Yes, to paracetamol",
-      "The report doesn't say"
+      "Tarifa Traffic",
+      "LNG Horizon",
+      "Salvamento Marítimo"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "med",
-     "q": "How long did they press the wound?",
+     "doc": "log",
+     "q": "Who signed the log?",
      "opts": [
-      "15 minutes",
-      "5 minutes",
-      "1 hour"
+      "The cadet and the Chief Officer",
+      "The Captain only",
+      "Tarifa Traffic"
      ],
      "a": 0
     }
@@ -860,72 +835,72 @@
   },
   {
    "id": "speak",
-   "title": "Give the facts",
+   "title": "On channel 16",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Calm numbers",
-     "body": "Listen, say it, check it. Slow and clear: the doctor is writing.",
-     "es": "Despacio y claro: el médico está anotando.",
+     "title": "Short and clear",
+     "body": "Listen, say it, check it. Like on the radio: calm, short, clear.",
+     "es": "Como en la radio: calma, corto y claro.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-cut"
+     "model": "p-received"
     },
     {
      "type": "shadow",
-     "model": "p-bp"
+     "model": "p-proceed"
     },
     {
      "type": "shadow",
-     "model": "p-pain"
+     "model": "p-persons"
     },
     {
      "type": "role",
-     "cue": "c-whathappened",
-     "task": "He cut his hand, it's bleeding a lot.",
-     "model": "m-what",
+     "cue": "c-callnow",
+     "task": "Call Tarifa Traffic: their name twice, your name twice, Over.",
+     "model": "m-call",
      "accept": [
-      "He cut his hand. It's bleeding a lot.",
-      "He cut his hand, it's bleeding a lot.",
-      "Mario cut his hand. It's bleeding a lot."
+      "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Over.",
+      "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon, over.",
+      "Tarifa Traffic, this is LNG Horizon. Over."
      ]
     },
     {
      "type": "role",
-     "cue": "c-vitals",
-     "task": "Pulse 88, temperature 37.2.",
-     "model": "m-vitals",
+     "cue": "c-tarifa-ask",
+     "task": "Received Mayday, proceeding to assist, ETA 20 minutes.",
+     "model": "m-proceed",
      "accept": [
-      "Pulse eighty-eight. Temperature thirty-seven point two.",
-      "Pulse eighty-eight, temperature thirty-seven point two.",
-      "His pulse is eighty-eight. Temperature thirty-seven point two."
+      "Received Mayday. Proceeding to assist. ETA twenty minutes. Over.",
+      "Received Mayday, proceeding to assist, ETA twenty minutes, over.",
+      "Proceeding to assist. ETA twenty minutes. Over."
      ]
     },
     {
      "type": "role",
-     "cue": "c-bp",
-     "task": "Blood pressure 140/90.",
-     "model": "m-bp",
+     "cue": "c-arrive",
+     "task": "Tell Tarifa Traffic you are on scene.",
+     "model": "m-onscene",
      "accept": [
-      "Blood pressure one hundred and forty over ninety.",
-      "One hundred and forty over ninety.",
-      "Blood pressure one forty over ninety."
+      "Tarifa Traffic, LNG Horizon. We are on scene. Over.",
+      "Tarifa Traffic, LNG Horizon, we are on scene, over.",
+      "We are on scene. Over."
      ]
     },
     {
      "type": "role",
-     "cue": "c-fingers",
-     "task": "Yes, he can move them, but it hurts.",
-     "model": "m-fingers",
+     "cue": "c-release",
+     "task": "Released: you resume your voyage.",
+     "model": "m-released",
      "accept": [
-      "Yes, he can move his fingers, but it hurts.",
-      "Yes, he can move his fingers but it hurts.",
-      "He can move his fingers, but it hurts."
+      "Released. Resuming our voyage. Over.",
+      "Released, resuming our voyage, over.",
+      "LNG Horizon released. Resuming our voyage. Over."
      ]
     }
    ]
@@ -938,90 +913,88 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-wound",
+     "audio": "w-distress",
      "q": "Type what you hear.",
      "accept": [
-      "wound",
-      "a wound",
-      "the wound"
+      "distress"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-painkiller",
-     "a": "painkiller"
+     "audio": "c-show-proceed",
+     "a": "proceed"
     },
     {
      "type": "tap",
-     "audio": "c-show-temp",
-     "a": "temp"
+     "audio": "c-show-mayday",
+     "a": "mayday"
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l26-09"
+     ],
+     "q": "What is the Cap Béar crew doing now?",
+     "opts": [
+      "Preparing the liferaft",
+      "Repairing the engine",
+      "Calling the owner"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Put the Mayday in order: after \"This is Cap Béar ×3\" comes…",
+     "opts": [
+      "the position",
+      "the persons on board",
+      "Over"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "A crew member cut his arm. You need medical advice by radio. The signal is…",
+     "opts": [
+      "Pan-Pan",
+      "Sécurité",
+      "Mayday Relay"
+     ],
+     "a": 0
+    },
+    {
+     "type": "build",
+     "q": "Report when on scene.",
+     "a": [
+      "Report",
+      "when",
+      "on",
+      "scene."
+     ],
+     "extra": [
+      "in",
+      "arrive"
+     ]
     },
     {
      "type": "listen",
      "audio": [
       "l26-13"
      ],
-     "q": "Why does Tanya repeat everything?",
+     "q": "What does the Captain say saves people?",
      "opts": [
-      "To check she understood the doctor",
-      "Because the line is bad",
-      "For Mario"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "Complete: \"He cut ___ hand.\"",
-     "opts": [
-      "his",
-      "the",
-      "him"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "\"Pain seven out of ten\" means the pain is…",
-     "opts": [
-      "strong",
-      "very small",
-      "gone"
-     ],
-     "a": 0
-    },
-    {
-     "type": "build",
-     "q": "Give him a painkiller.",
-     "a": [
-      "Give",
-      "him",
-      "a",
-      "painkiller."
-     ],
-     "extra": [
-      "his",
-      "to"
-     ]
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l26-12"
-     ],
-     "q": "When must they call again?",
-     "opts": [
-      "In six hours",
-      "Tomorrow",
-      "In five days"
+      "Short and clear radio",
+      "A fast ship",
+      "Good English grammar"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: signos vitales",
+     "q": "Write it in English: acusar recibo",
      "accept": [
-      "vital signs",
-      "the vital signs"
+      "acknowledge",
+      "to acknowledge"
      ]
     }
    ]

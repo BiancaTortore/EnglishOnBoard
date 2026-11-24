@@ -1,52 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Corridor fire station: four extinguishers with coloured labels (water, foam, dry powder, CO2), the fire classes sign, the fire hydrant with the hose box, and the fire blanket">
-  <!-- Lesson 23 plate: a corridor bulkhead. Left: four red extinguishers on brackets, each with a coloured band
-       (red = water, cream = foam, blue = dry powder, black = CO2 with a horn). Above them, the fire classes sign:
-       A (solids), B (liquids), C (gases). Right: the fire hydrant with its valve wheel, the hose box with the hose
-       rolled inside and, at the far right, the fire blanket in its red pouch. Colours come from app.css (.p-*). -->
-  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
-  <path class="p-quay" d="M0 212 H400 V240 H0 Z"/>
-  <line class="p-line" x1="0" y1="212" x2="400" y2="212" stroke-width="1" opacity=".5"/>
-  <!-- fire classes sign -->
-  <rect x="24" y="16" width="200" height="40" rx="4" class="p-white"/>
-  <g style="font:700 18px var(--f-display);fill:var(--ink)" text-anchor="middle"><text x="60" y="43">A</text><text x="124" y="43">B</text><text x="188" y="43">C</text></g>
-  <g class="p-ink" opacity=".55">
-    <rect x="72" y="32" width="12" height="10" rx="1"/>
-    <path d="M136 42 Q136 30 142 28 Q148 30 148 42 Z"/>
-    <rect x="200" y="28" width="8" height="15" rx="4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Man overboard seen from above: the ship turning to starboard, the person in the water behind it with the lifebuoy and the orange smoke, the lookout pointing, and the rescue boat going out">
+  <!-- Lesson 22 plate: seen from above. The ship (bow to the right; the whole drawing is mirrored by the outer group) has started to turn to starboard (its wake curves).
+       Behind it, on the starboard quarter, the person in the water with the lifebuoy next to him and the orange smoke of
+       the smoke float drifting downwind. On the starboard side aft, the lookout points with his arm. The rescue boat
+       leaves the ship's side towards the person. The bridge has the MOB button (red). Colours come from app.css (.p-*). -->
+  <rect class="p-water" x="0" y="0" width="400" height="240"/>
+  <g transform="translate(400 0) scale(-1 1)">
+  <!-- wake: curving, the ship turns -->
+  <path d="M250 96 Q300 96 330 70 Q360 44 400 40" fill="none" stroke="#fff" stroke-width="10" opacity=".35" stroke-linecap="round"/>
+  <!-- ship -->
+  <g transform="rotate(-8 150 96)">
+    <path d="M20 96 Q40 66 80 66 H252 Q262 66 262 76 V116 Q262 126 252 126 H80 Q40 126 20 96 Z" class="p-hull"/>
+    <path d="M30 96 Q46 72 82 72 H248 V120 H82 Q46 120 30 96 Z" class="p-deck"/>
+    <g class="p-dome"><circle cx="90" cy="96" r="15"/><circle cx="130" cy="96" r="15"/><circle cx="170" cy="96" r="15"/></g>
+    <rect x="208" y="72" width="34" height="48" class="p-super" style="stroke:var(--ink)" stroke-width="1"/>
+    <!-- MOB button on the bridge -->
+    <circle cx="218" cy="80" r="5" class="p-red" style="stroke:#fff" stroke-width="1.4"/>
+    <!-- lookout on the starboard side aft, arm pointing -->
+    <circle cx="240" cy="128" r="4.5" class="p-orange"/>
+    <path d="M243 130 L258 142" class="p-stroke" stroke-width="2.4" stroke-linecap="round"/>
+    <!-- rescue boat leaving the starboard side -->
   </g>
-  <!-- four extinguishers -->
-  <g>
-    <rect x="30" y="92" width="34" height="106" rx="12" class="p-red"/><rect x="30" y="122" width="34" height="18" style="fill:#E23D2D;stroke:#fff" stroke-width="1"/>
-    <rect x="80" y="92" width="34" height="106" rx="12" class="p-red"/><rect x="80" y="122" width="34" height="18" style="fill:#F2E3B6"/>
-    <rect x="130" y="92" width="34" height="106" rx="12" class="p-red"/><rect x="130" y="122" width="34" height="18" style="fill:#2F6FD6"/>
-    <rect x="180" y="92" width="34" height="106" rx="12" class="p-red"/><rect x="180" y="122" width="34" height="18" style="fill:#151A1F"/>
+  <path d="M198 146 Q222 166 248 176" fill="none" stroke="#fff" stroke-width="4" opacity=".5" stroke-linecap="round"/>
+  <path d="M246 170 L270 178 Q276 182 270 186 L246 190 Q238 180 246 170 Z" class="p-orange" style="stroke:var(--ink)" stroke-width="1"/>
+  <!-- person in the water -->
+  <circle cx="320" cy="196" r="5" class="p-ink"/>
+  <path d="M312 200 Q320 206 328 200" fill="none" stroke="#fff" stroke-width="1.6"/>
+  <!-- lifebuoy -->
+  <circle cx="340" cy="188" r="9" class="p-orange"/><circle cx="340" cy="188" r="4" class="p-water"/>
+  <!-- smoke float and orange smoke drifting -->
+  <rect x="352" y="196" width="7" height="10" rx="2" class="p-orange"/>
+  <path d="M356 196 Q366 176 384 170 Q396 166 400 150" fill="none" style="stroke:var(--suit-orange)" stroke-width="12" opacity=".45" stroke-linecap="round"/>
+  <!-- line of sight from the lookout -->
+  <path d="M262 140 L314 192" class="p-line" stroke-width="1.2" stroke-dasharray="4 4"/>
   </g>
-  <g class="p-ink">
-    <rect x="42" y="80" width="10" height="14" rx="2"/><rect x="92" y="80" width="10" height="14" rx="2"/><rect x="142" y="80" width="10" height="14" rx="2"/><rect x="192" y="80" width="10" height="14" rx="2"/>
-  </g>
-  <!-- small pressure gauges -->
-  <g><circle cx="47" cy="104" r="5" class="p-white"/><circle cx="97" cy="104" r="5" class="p-white"/><circle cx="147" cy="104" r="5" class="p-white"/></g>
-  <!-- hoses; the CO2 one ends in a horn -->
-  <path d="M52 84 Q66 84 66 104" fill="none" class="p-stroke" stroke-width="2"/>
-  <path d="M102 84 Q116 84 116 104" fill="none" class="p-stroke" stroke-width="2"/>
-  <path d="M152 84 Q166 84 166 104" fill="none" class="p-stroke" stroke-width="2"/>
-  <path d="M202 84 Q222 84 222 112" fill="none" class="p-stroke" stroke-width="2.4"/><path d="M216 112 L228 112 L224 132 L220 132 Z" class="p-ink"/>
-  <!-- brackets -->
-  <g class="p-line" stroke-width="2"><line x1="28" y1="150" x2="66" y2="150"/><line x1="78" y1="150" x2="116" y2="150"/><line x1="128" y1="150" x2="166" y2="150"/><line x1="178" y1="150" x2="216" y2="150"/></g>
-
-  <!-- fire hydrant -->
-  <path d="M256 212 V150" class="p-stroke" stroke-width="10" style="stroke:var(--antifoul)"/>
-  <rect x="246" y="148" width="20" height="16" rx="3" class="p-red"/>
-  <circle cx="256" cy="136" r="12" fill="none" style="stroke:var(--antifoul)" stroke-width="3.5"/>
-  <path d="M244 136 H268 M256 124 V148" style="stroke:var(--antifoul)" stroke-width="2"/>
-  <!-- hose box with the rolled hose -->
-  <rect x="280" y="80" width="62" height="96" rx="3" class="p-red"/>
-  <rect x="286" y="86" width="50" height="84" rx="2" class="p-white"/>
-  <circle cx="311" cy="122" r="20" fill="none" style="stroke:var(--gold)" stroke-width="7"/>
-  <circle cx="311" cy="122" r="9" fill="none" style="stroke:var(--gold)" stroke-width="5"/>
-  <rect x="300" y="148" width="22" height="8" rx="2" class="p-ink"/>
-  <!-- fire blanket pouch -->
-  <rect x="356" y="90" width="32" height="40" rx="3" class="p-red"/>
-  <path d="M362 130 L366 142 H378 L382 130" class="p-red"/>
-  <rect x="362" y="98" width="20" height="10" rx="1" style="fill:#fff" opacity=".8"/>
 </svg>

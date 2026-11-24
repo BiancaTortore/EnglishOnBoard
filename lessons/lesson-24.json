@@ -1,322 +1,252 @@
 {
  "n": 24,
  "module": 6,
- "title": "Fire party communication",
- "place": "Day 10 · 11:30 · Atlantic, galley",
- "goal": "Keep the BA board, read back names, times and pressure, and report that a fire is out.",
+ "title": "Firefighting equipment",
+ "place": "Day 9 · 15:00 · Atlantic, accommodation corridor",
+ "goal": "Name the firefighting equipment, match each extinguisher with the fire class and say which one to use.",
  "images": {
   "hero": "img/l24/hero.jpg",
   "scene": "img/l24/scene.jpg"
  },
  "modelAudio": true,
  "mediaRev": 2,
- "radioChannel": "UHF",
  "audio": {
   "l24-01": {
-   "pause": 600,
-   "voice": "mario",
-   "text": "Fire! Fire in the galley! The pan is on fire!",
-   "es": "¡Fuego! ¡Fuego en la cocina! ¡La sartén se prendió fuego!"
+   "voice": "rolando",
+   "text": "Cadet, tomorrow we have a fire drill. Today I show you the equipment in this corridor.",
+   "es": "Cadete, mañana tenemos zafarrancho de incendio. Hoy te muestro los equipos de este pasillo."
   },
   "l24-02": {
-   "pause": 1500,
-   "voice": "lars",
-   "text": "Fire, fire, fire. This is not a drill. Fire in the galley, main deck. Fire party to the scene. All other crew to the muster station.",
-   "es": "Fuego, fuego, fuego. Esto no es un zafarrancho. Fuego en la cocina, cubierta principal. Brigada de incendio a la escena. El resto de la tripulación al punto de reunión.",
-   "pa": true
+   "voice": "diego",
+   "text": "OK, Bosun. This red one is a fire extinguisher, right?",
+   "es": "Bien, contramaestre. Este rojo es un extintor, ¿no?"
   },
   "l24-03": {
-   "voice": "james",
-   "text": "Diego, you're with me. Take the BA board. Write every name and every time.",
-   "es": "Diego, venís conmigo. Agarrá el tablero de BA. Anotá cada nombre y cada hora."
+   "voice": "rolando",
+   "text": "Yes, but they're all red. Look at the label. This one is water. Use water for class A fires: wood, paper, cloth.",
+   "es": "Sí, pero son todos rojos. Mirá la etiqueta. Este es de agua. Usá agua para fuegos clase A: madera, papel, tela."
   },
   "l24-04": {
-   "pause": 1200,
+   "pause": 700,
    "voice": "diego",
-   "text": "Yes, Second. I'll take the BA board.",
-   "es": "Sí, segundo. Me encargo del tablero de BA."
+   "text": "And this one with the blue label is foam, for oil fires.",
+   "es": "Y este de etiqueta azul es de espuma, para fuegos de aceite."
   },
   "l24-05": {
-   "voice": "james",
-   "text": "Mario, did you use the fire blanket?",
-   "es": "Mario, ¿usaste la manta ignífuga?"
+   "voice": "rolando",
+   "text": "No, no. Careful! Blue is dry powder. Cream is foam. Use foam for class B fires: oil and fuel.",
+   "es": "No, no. ¡Cuidado! Azul es polvo químico. Crema es espuma. Usá espuma para fuegos clase B: aceite y combustible."
   },
   "l24-06": {
-   "voice": "mario",
-   "text": "Yes, but the fire broke out again, up in the extractor. Too much smoke.",
-   "es": "Sí, pero el fuego se volvió a desatar, arriba en el extractor. Demasiado humo."
+   "voice": "diego",
+   "text": "Sorry. Blue, dry powder. Cream, foam. I'll read the label first.",
+   "es": "Perdón. Azul, polvo químico. Crema, espuma. Primero voy a leer la etiqueta."
   },
   "l24-07": {
-   "voice": "james",
-   "text": "Team one, Rolando and Santos, ready to enter?",
-   "es": "Equipo uno, Rolando y Santos, ¿listos para entrar?"
+   "voice": "rolando",
+   "text": "Good. And the black one is CO2. Use CO2 for electrical fires. Never water on electricity!",
+   "es": "Bien. Y el negro es de CO2. Usá CO2 para fuegos eléctricos. ¡Nunca agua sobre electricidad!"
   },
   "l24-08": {
-   "voice": "rolando",
-   "text": "Team one ready. Entry time eleven thirty-five. Pressure two hundred bar.",
-   "es": "Equipo uno listo. Hora de entrada once treinta y cinco. Presión doscientos bar.",
-   "radio": true
+   "pause": 1200,
+   "voice": "diego",
+   "text": "Never water on electricity. Got it.",
+   "es": "Nunca agua sobre electricidad. Entendido."
   },
   "l24-09": {
-   "pause": 800,
-   "voice": "diego",
-   "text": "Team one: Rolando, Santos. Entry eleven thirty-five. Two hundred bar. Written.",
-   "es": "Equipo uno: Rolando, Santos. Entrada once treinta y cinco. Doscientos bar. Anotado."
+   "voice": "rolando",
+   "text": "Here is the fire hydrant, and the fire hose is in this box. The hose needs two people.",
+   "es": "Acá está el hidrante, y la manguera está en esta caja. La manguera necesita dos personas."
   },
   "l24-10": {
-   "pause": 1800,
-   "voice": "james",
-   "text": "Team two, start boundary cooling on the galley bulkhead, and back up team one.",
-   "es": "Equipo dos, empiecen el enfriamiento de límites en el mamparo de la cocina, y apoyen al equipo uno."
+   "voice": "diego",
+   "text": "And the fire blanket? I don't see one here.",
+   "es": "¿Y la manta ignífuga? Acá no veo ninguna."
   },
   "l24-11": {
-   "pause": 1500,
+   "pause": 900,
    "voice": "rolando",
-   "text": "Team one at the extractor. Small fire. We're putting it out with CO2.",
-   "es": "Equipo uno en el extractor. Fuego chico. Lo estamos apagando con CO2.",
-   "radio": true
+   "text": "It's in the galley, next to Mario's stove. It's for a small pan fire.",
+   "es": "Está en la cocina, al lado del fogón de Mario. Es para un fuego chico en una sartén."
   },
   "l24-12": {
-   "voice": "diego",
-   "text": "Second, team one has been inside for ten minutes.",
-   "es": "Segundo, el equipo uno ya lleva diez minutos adentro."
+   "voice": "rolando",
+   "text": "Now your job: check every extinguisher in this corridor. The needle must be in the green.",
+   "es": "Ahora tu trabajo: revisá todos los extintores de este pasillo. La aguja tiene que estar en el verde."
   },
   "l24-13": {
-   "voice": "james",
-   "text": "Thanks, Diego. Team one, check your pressure. Over.",
-   "es": "Gracias, Diego. Equipo uno, controlen su presión. Cambio."
+   "voice": "diego",
+   "text": "I'll check them all and tell you. Water, foam, powder, CO2.",
+   "es": "Los reviso todos y te aviso. Agua, espuma, polvo, CO2."
   },
-  "l24-14": {
-   "pause": 1200,
+  "w-extinguisher": {
+   "voice": "model",
+   "text": "fire extinguisher"
+  },
+  "x-extinguisher": {
+   "voice": "model",
+   "text": "Take the fire extinguisher.",
+   "es": "Agarrá el extintor."
+  },
+  "w-hose": {
+   "voice": "model",
+   "text": "fire hose"
+  },
+  "x-hose": {
+   "voice": "model",
+   "text": "The fire hose needs two people.",
+   "es": "La manguera necesita dos personas."
+  },
+  "w-hydrant": {
+   "voice": "model",
+   "text": "fire hydrant"
+  },
+  "x-hydrant": {
+   "voice": "model",
+   "text": "Connect the hose to the hydrant.",
+   "es": "Conectá la manguera al hidrante."
+  },
+  "w-blanket": {
+   "voice": "model",
+   "text": "fire blanket"
+  },
+  "x-blanket": {
+   "voice": "model",
+   "text": "Use the fire blanket on the pan.",
+   "es": "Usá la manta ignífuga sobre la sartén."
+  },
+  "w-co2": {
+   "voice": "model",
+   "text": "CO2"
+  },
+  "x-co2": {
+   "voice": "model",
+   "text": "Use CO2 for electrical fires.",
+   "es": "Usá CO2 para fuegos eléctricos."
+  },
+  "w-foam": {
+   "voice": "model",
+   "text": "foam"
+  },
+  "x-foam": {
+   "voice": "model",
+   "text": "Use foam for oil fires.",
+   "es": "Usá espuma para fuegos de aceite."
+  },
+  "w-powder": {
+   "voice": "model",
+   "text": "dry powder"
+  },
+  "x-powder": {
+   "voice": "model",
+   "text": "The blue label is dry powder.",
+   "es": "La etiqueta azul es polvo químico."
+  },
+  "w-fireclass": {
+   "voice": "model",
+   "text": "fire class"
+  },
+  "x-fireclass": {
+   "voice": "model",
+   "text": "Oil is fire class B.",
+   "es": "El aceite es fuego clase B."
+  },
+  "p-use": {
+   "voice": "model",
+   "text": "Use foam for oil fires.",
+   "es": "Usá espuma para fuegos de aceite."
+  },
+  "p-never": {
+   "voice": "model",
+   "text": "Never water on electricity.",
+   "es": "Nunca agua sobre electricidad."
+  },
+  "p-which": {
+   "voice": "model",
+   "text": "Which extinguisher for this fire?",
+   "es": "¿Qué extintor para este fuego?"
+  },
+  "p-label": {
+   "voice": "model",
+   "text": "I'll read the label first.",
+   "es": "Primero voy a leer la etiqueta."
+  },
+  "m-elec": {
+   "voice": "model",
+   "text": "Use CO2.",
+   "es": "Usá CO2."
+  },
+  "m-oil": {
+   "voice": "model",
+   "text": "Use foam. It's class B.",
+   "es": "Usá espuma. Es clase B."
+  },
+  "m-paper": {
+   "voice": "model",
+   "text": "Use water. It's class A.",
+   "es": "Usá agua. Es clase A."
+  },
+  "m-which": {
+   "voice": "model",
+   "text": "Which extinguisher for this fire?",
+   "es": "¿Qué extintor para este fuego?"
+  },
+  "m-co2": {
+   "voice": "model",
+   "text": "CO2",
+   "es": "CO2"
+  },
+  "c-show-extinguisher": {
    "voice": "rolando",
-   "text": "Pressure one hundred and forty bar. The fire is out. Repeat, the fire is out.",
-   "es": "Presión ciento cuarenta bar. El fuego está apagado. Repito, el fuego está apagado.",
-   "radio": true
+   "text": "Show me a fire extinguisher."
   },
-  "l24-15": {
-   "voice": "james",
-   "text": "Bridge, fire party. The fire in the galley is out and contained. No injuries. Boundary cooling continues. Over.",
-   "es": "Puente, brigada de incendio. El fuego en la cocina está apagado y contenido. Sin heridos. El enfriamiento sigue. Cambio."
-  },
-  "l24-16": {
-   "pause": 1800,
-   "voice": "lars",
-   "text": "Received. Well done, everybody. Keep a fire watch for one hour. Over.",
-   "es": "Recibido. Bien hecho, todos. Mantengan una guardia de incendio por una hora. Cambio.",
-   "radio": true
-  },
-  "l24-17": {
-   "voice": "james",
-   "text": "Good board, Diego. Every name, every time. That's how we bring everybody back.",
-   "es": "Buen tablero, Diego. Cada nombre, cada hora. Así es como traemos a todos de vuelta."
-  },
-  "w-fireparty": {
-   "voice": "model",
-   "text": "fire party"
-  },
-  "x-fireparty": {
-   "voice": "model",
-   "text": "Fire party to the scene.",
-   "es": "Brigada de incendio a la escena."
-  },
-  "w-ba": {
-   "voice": "model",
-   "text": "breathing apparatus"
-  },
-  "x-ba": {
-   "voice": "model",
-   "text": "Put on your breathing apparatus.",
-   "es": "Ponete el equipo de respiración."
-  },
-  "w-baboard": {
-   "voice": "model",
-   "text": "BA board"
-  },
-  "x-baboard": {
-   "voice": "model",
-   "text": "Write the names on the BA board.",
-   "es": "Anotá los nombres en el tablero de ERA."
-  },
-  "w-entrytime": {
-   "voice": "model",
-   "text": "entry time"
-  },
-  "x-entrytime": {
-   "voice": "model",
-   "text": "Entry time eleven thirty-five.",
-   "es": "Hora de entrada once treinta y cinco."
-  },
-  "w-pressure": {
-   "voice": "model",
-   "text": "pressure"
-  },
-  "x-pressure": {
-   "voice": "model",
-   "text": "Pressure two hundred bar.",
-   "es": "Presión doscientos bar."
-  },
-  "w-boundary": {
-   "voice": "model",
-   "text": "boundary cooling"
-  },
-  "x-boundary": {
-   "voice": "model",
-   "text": "Start boundary cooling on the bulkhead.",
-   "es": "Empezá a enfriar el mamparo."
-  },
-  "w-galley": {
-   "voice": "model",
-   "text": "galley"
-  },
-  "x-galley": {
-   "voice": "model",
-   "text": "Fire in the galley!",
-   "es": "¡Fuego en la cocina!"
-  },
-  "w-contained": {
-   "voice": "model",
-   "text": "contained"
-  },
-  "x-contained": {
-   "voice": "model",
-   "text": "The fire is contained.",
-   "es": "El fuego está contenido."
-  },
-  "w-firedoor": {
-   "voice": "model",
-   "text": "fire door"
-  },
-  "x-firedoor": {
-   "voice": "model",
-   "text": "Keep the fire door closed.",
-   "es": "Mantené cerrada la puerta cortafuego."
-  },
-  "w-mask": {
-   "voice": "model",
-   "text": "face mask"
-  },
-  "x-mask": {
-   "voice": "model",
-   "text": "Check the face mask before you enter.",
-   "es": "Revisá la máscara antes de entrar."
-  },
-  "w-radio": {
-   "voice": "model",
-   "text": "portable radio"
-  },
-  "x-radio": {
-   "voice": "model",
-   "text": "Take the red radio for the fire party.",
-   "es": "Llevá el handy rojo de la brigada de incendio."
-  },
-  "w-torch": {
-   "voice": "model",
-   "text": "torch"
-  },
-  "x-torch": {
-   "voice": "model",
-   "text": "Take a torch. There is a lot of smoke.",
-   "es": "Llevá una linterna. Hay mucho humo."
-  },
-  "p-out": {
-   "voice": "model",
-   "text": "The fire is out.",
-   "es": "El fuego está apagado."
-  },
-  "p-written": {
-   "voice": "model",
-   "text": "Entry eleven thirty-five. Two hundred bar. Written.",
-   "es": "Entrada once treinta y cinco. Doscientos bar. Anotado."
-  },
-  "p-backup": {
-   "voice": "model",
-   "text": "Team two, back up team one.",
-   "es": "Equipo dos, apoyen al equipo uno."
-  },
-  "p-board": {
-   "voice": "model",
-   "text": "I'll take the BA board.",
-   "es": "Me encargo del tablero de ERA."
-  },
-  "m-board": {
-   "voice": "model",
-   "text": "I'll take the BA board.",
-   "es": "Me encargo del tablero de ERA."
-  },
-  "m-readback": {
-   "voice": "model",
-   "text": "Team two: Bautista, Lim. Entry eleven forty. Two hundred bar. Written.",
-   "es": "Equipo dos: Bautista, Lim. Entrada once cuarenta. Doscientos bar. Anotado."
-  },
-  "m-time": {
-   "voice": "model",
-   "text": "Second, team one has been inside for fifteen minutes.",
-   "es": "Segundo, el equipo uno lleva quince minutos adentro."
-  },
-  "m-out": {
-   "voice": "model",
-   "text": "Bridge, the fire is out. No injuries.",
-   "es": "Puente, el fuego está apagado. Sin heridos."
-  },
-  "m-pressure": {
-   "voice": "model",
-   "text": "Pressure two hundred bar.",
-   "es": "Presión doscientos bar."
-  },
-  "c-show-baboard": {
-   "voice": "james",
-   "text": "Where's the BA board?"
-  },
-  "c-show-entrytime": {
-   "voice": "james",
-   "text": "Show me the entry time."
-  },
-  "c-show-pressure": {
-   "voice": "james",
-   "text": "Show me the pressure."
-  },
-  "c-show-ba": {
+  "c-show-foam": {
    "voice": "rolando",
-   "text": "Show me the breathing apparatus."
+   "text": "Which one is foam?"
   },
-  "c-show-galley": {
+  "c-show-powder": {
+   "voice": "rolando",
+   "text": "Which one is dry powder?"
+  },
+  "c-show-co2": {
+   "voice": "tanya",
+   "text": "Show me the CO2 extinguisher."
+  },
+  "c-show-hydrant": {
+   "voice": "rolando",
+   "text": "Where's the fire hydrant?"
+  },
+  "c-show-hose": {
+   "voice": "rolando",
+   "text": "Where's the fire hose?"
+  },
+  "c-show-blanket": {
    "voice": "mario",
-   "text": "Where's my galley?"
+   "text": "Where's the fire blanket?"
   },
-  "c-show-firedoor": {
-   "voice": "james",
-   "text": "Show me the fire door."
+  "c-show-fireclass": {
+   "voice": "tanya",
+   "text": "Show me the fire classes."
   },
-  "c-show-boundary": {
-   "voice": "james",
-   "text": "Show me the boundary cooling."
+  "c-elec": {
+   "voice": "tanya",
+   "text": "Smoke from the switchboard! Electrical fire. Which extinguisher?"
   },
-  "c-take": {
-   "voice": "james",
-   "text": "Diego, you're with me. Take the BA board."
-  },
-  "c-team2": {
-   "voice": "james",
-   "text": "Diego, team two: Bautista and Lim. Entry time eleven forty. Pressure two hundred bar."
-  },
-  "c-howlong": {
-   "voice": "james",
-   "text": "Diego, team one went in at eleven thirty-five. It's eleven fifty now. Tell me."
-  },
-  "c-report": {
-   "voice": "lars",
-   "text": "Fire party, bridge. What's the situation? Over.",
-   "radio": true
-  },
-  "c-time-other": {
+  "c-oil": {
    "voice": "rolando",
-   "text": "Team one ready. Entry time eleven forty-two. Pressure two hundred bar.",
-   "radio": true
+   "text": "Fuel on the floor, and it's burning. What do you use?"
   },
-  "c-out-other": {
+  "c-paper": {
+   "voice": "tanya",
+   "text": "Paper and cardboard on fire in the store. What do you use?"
+  },
+  "c-ask": {
    "voice": "rolando",
-   "text": "Pressure one hundred and twenty bar. The fire is out.",
-   "radio": true
+   "text": "You see a fire and you're not sure. Ask me."
+  },
+  "c-blanket-other": {
+   "voice": "mario",
+   "text": "The fire blanket is next to the stove, on the left."
   }
  },
  "dialogue": [
@@ -332,185 +262,148 @@
   "l24-10",
   "l24-11",
   "l24-12",
-  "l24-13",
-  "l24-14",
-  "l24-15",
-  "l24-16",
-  "l24-17"
+  "l24-13"
  ],
  "words": {
-  "fireparty": {
-   "en": "fire party",
-   "ipa": "/ˈfaɪə ˌpɑːti/",
-   "es": "brigada de incendio",
-   "audio": "w-fireparty",
-   "ex": "x-fireparty"
+  "extinguisher": {
+   "en": "fire extinguisher",
+   "ipa": "/ˈfaɪər ɪkˌstɪŋɡwɪʃə/",
+   "es": "extintor",
+   "audio": "w-extinguisher",
+   "ex": "x-extinguisher"
   },
-  "ba": {
-   "en": "breathing apparatus (BA set)",
-   "ipa": "/ˈbriːðɪŋ æpəˌreɪtəs/",
-   "es": "equipo de respiración autónoma (ERA)",
-   "audio": "w-ba",
-   "ex": "x-ba"
+  "hose": {
+   "en": "fire hose",
+   "ipa": "/ˈfaɪə həʊz/",
+   "es": "manguera contra incendio",
+   "audio": "w-hose",
+   "ex": "x-hose"
   },
-  "baboard": {
-   "en": "BA board",
-   "ipa": "/ˌbiː ˈeɪ bɔːd/",
-   "es": "tablero de control de ERA",
-   "audio": "w-baboard",
-   "ex": "x-baboard"
+  "hydrant": {
+   "en": "fire hydrant",
+   "ipa": "/ˈfaɪə ˌhaɪdrənt/",
+   "es": "hidrante",
+   "audio": "w-hydrant",
+   "ex": "x-hydrant"
   },
-  "entrytime": {
-   "en": "entry time",
-   "ipa": "/ˈentri taɪm/",
-   "es": "hora de entrada",
-   "audio": "w-entrytime",
-   "ex": "x-entrytime"
+  "blanket": {
+   "en": "fire blanket",
+   "ipa": "/ˈfaɪə ˌblæŋkɪt/",
+   "es": "manta ignífuga",
+   "audio": "w-blanket",
+   "ex": "x-blanket"
   },
-  "pressure": {
-   "en": "pressure",
-   "ipa": "/ˈpreʃə/",
-   "es": "presión",
-   "audio": "w-pressure",
-   "ex": "x-pressure"
+  "co2": {
+   "en": "CO2",
+   "ipa": "/ˌsiː əʊ ˈtuː/",
+   "es": "CO2, dióxido de carbono",
+   "audio": "w-co2",
+   "ex": "x-co2"
   },
-  "boundary": {
-   "en": "boundary cooling",
-   "ipa": "/ˈbaʊndri ˌkuːlɪŋ/",
-   "es": "enfriamiento de límites",
-   "audio": "w-boundary",
-   "ex": "x-boundary"
+  "foam": {
+   "en": "foam",
+   "ipa": "/fəʊm/",
+   "es": "espuma",
+   "audio": "w-foam",
+   "ex": "x-foam"
   },
-  "galley": {
-   "en": "galley",
-   "ipa": "/ˈɡæli/",
-   "es": "cocina (del buque)",
-   "audio": "w-galley",
-   "ex": "x-galley"
+  "powder": {
+   "en": "dry powder",
+   "ipa": "/ˌdraɪ ˈpaʊdə/",
+   "es": "polvo químico",
+   "audio": "w-powder",
+   "ex": "x-powder"
   },
-  "contained": {
-   "en": "contained",
-   "ipa": "/kənˈteɪnd/",
-   "es": "contenido, controlado",
-   "audio": "w-contained",
-   "ex": "x-contained"
-  },
-  "firedoor": {
-   "en": "fire door",
-   "ipa": "/ˈfaɪə dɔː/",
-   "es": "puerta cortafuego",
-   "audio": "w-firedoor",
-   "ex": "x-firedoor"
-  },
-  "mask": {
-   "en": "face mask",
-   "ipa": "/ˈfeɪs mɑːsk/",
-   "es": "máscara",
-   "audio": "w-mask",
-   "ex": "x-mask"
-  },
-  "radio": {
-   "en": "portable radio",
-   "ipa": "/ˈpɔːtəbl ˈreɪdiəʊ/",
-   "es": "handy (radio portátil)",
-   "audio": "w-radio",
-   "ex": "x-radio"
-  },
-  "torch": {
-   "en": "torch",
-   "ipa": "/tɔːtʃ/",
-   "es": "linterna",
-   "audio": "w-torch",
-   "ex": "x-torch"
+  "fireclass": {
+   "en": "fire class",
+   "ipa": "/ˈfaɪə klɑːs/",
+   "es": "clase de fuego",
+   "audio": "w-fireclass",
+   "ex": "x-fireclass"
   }
  },
  "plate": {
   "svg": "img/l24/plate.svg",
   "pins": [
    {
-    "word": "baboard",
-    "x": 92,
-    "y": 20
+    "word": "fireclass",
+    "x": 124,
+    "y": 16
    },
    {
-    "word": "entrytime",
-    "x": 102,
-    "y": 86
+    "word": "extinguisher",
+    "x": 47,
+    "y": 176
    },
    {
-    "word": "pressure",
-    "x": 146,
-    "y": 86
+    "word": "foam",
+    "x": 97,
+    "y": 131
    },
    {
-    "word": "ba",
-    "x": 215,
-    "y": 124
+    "word": "powder",
+    "x": 147,
+    "y": 131
    },
    {
-    "word": "firedoor",
-    "x": 341,
-    "y": 184
+    "word": "co2",
+    "x": 197,
+    "y": 131
    },
    {
-    "word": "boundary",
-    "x": 304,
-    "y": 150
+    "word": "hydrant",
+    "x": 256,
+    "y": 136
    },
    {
-    "word": "mask",
-    "x": 280,
-    "y": 26
+    "word": "hose",
+    "x": 311,
+    "y": 122
    },
    {
-    "word": "radio",
-    "x": 16,
-    "y": 168
-   },
-   {
-    "word": "torch",
-    "x": 86,
-    "y": 220
+    "word": "blanket",
+    "x": 372,
+    "y": 118
    }
   ]
  },
  "docs": {
-  "report": {
+  "label": {
    "kind": "form",
-   "title": "FIRE REPORT",
-   "subtitle": "M/V LNG HORIZON · 23 MAR 2026 · ATLANTIC",
+   "title": "DRY POWDER FIRE EXTINGUISHER",
+   "subtitle": "6 kg · CORRIDOR, DECK B · No. B-04",
    "cells": [
     [
-     "LOCATION",
-     "Galley, main deck"
+     "SUITABLE FOR",
+     "Class A · B · C"
     ],
     [
-     "ALARM",
-     "1130"
+     "CLASS A",
+     "Solids: wood, paper, cloth"
     ],
     [
-     "CAUSE",
-     "Pan of oil · fire spread to the extractor"
+     "CLASS B",
+     "Liquids: oil, fuel, paint"
     ],
     [
-     "FIRST ACTION",
-     "Fire blanket (cook)"
+     "CLASS C",
+     "Gases"
     ],
     [
-     "TEAM ONE",
-     "Bosun, AB Santos · entry 1135 · 200 bar"
+     "ELECTRICAL",
+     "Yes, up to 1000 V"
     ],
     [
-     "EXTINGUISHED WITH",
-     "CO2 · fire out 1150"
+     "NOT FOR",
+     "Cooking oil in pans: use the fire blanket"
     ],
     [
-     "INJURIES",
-     "None"
+     "PRESSURE GAUGE",
+     "Needle must be in the green"
     ],
     [
-     "FIRE WATCH",
-     "Until 1250 · Bosun"
+     "NEXT SERVICE",
+     "SEP 2026"
     ]
    ]
   }
@@ -518,79 +411,64 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: fire in the galley",
+   "title": "Listen: the fire station",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l24/scene.jpg",
-     "kicker": "Day 10 · 11:30 · Atlantic",
-     "title": "Fire party",
-     "body": "This time it's not a drill. There's a fire in Mario's galley. James leads the fire party and Diego keeps the BA board. Listen first, one piece at a time.",
+     "kicker": "Day 9 · 15:00 · Atlantic",
+     "title": "Fire extinguishers",
+     "body": "Tomorrow there's a fire drill. Rolando shows Diego the equipment in the corridor, and Diego gets one wrong. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l24-01",
-      "l24-02"
+      "l24-01"
      ],
-     "q": "Is this a drill?",
+     "q": "Why is Rolando showing the equipment today?",
      "opts": [
-      "No, it's a real fire",
-      "Yes, a fire drill",
-      "Yes, a man overboard drill"
+      "There's a fire drill tomorrow",
+      "There was a fire yesterday",
+      "The inspector is coming"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l24-03",
-      "l24-04"
+      "l24-03"
      ],
-     "q": "What is Diego's job?",
+     "q": "What does Rolando say about the colour?",
      "opts": [
-      "The BA board: names and times",
-      "Enter the galley",
-      "Call the bridge"
+      "They're all red: look at the label",
+      "Red is always water",
+      "Colour doesn't matter"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l24-05",
-      "l24-06"
+      "l24-04",
+      "l24-05"
      ],
-     "q": "Why didn't the fire blanket work?",
+     "q": "What is Diego's mistake?",
      "opts": [
-      "The fire broke out again in the extractor",
-      "Mario didn't find it",
-      "It was too small"
+      "He thinks blue is foam",
+      "He thinks black is water",
+      "He can't find the hydrant"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l24-08"
+      "l24-07"
      ],
-     "q": "Team one's entry time and pressure?",
-     "opts": [
-      "11:35 · 200 bar",
-      "11:30 · 140 bar",
-      "11:53 · 200 bar"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l24-11"
-     ],
-     "q": "What do they use to put it out?",
+     "q": "Which one for electrical fires?",
      "opts": [
       "CO2",
       "Water",
@@ -601,110 +479,113 @@
     {
      "type": "listen",
      "audio": [
-      "l24-15"
+      "l24-10",
+      "l24-11"
      ],
-     "q": "What does James report to the bridge?",
+     "q": "Where is the fire blanket?",
      "opts": [
-      "Out and contained, no injuries",
-      "Spreading, send help",
-      "Out, one injured"
+      "In the galley, next to the stove",
+      "In the hose box",
+      "On the bridge"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l24-12"
+     ],
+     "q": "What must Diego check?",
+     "opts": [
+      "That every needle is in the green",
+      "The hose length",
+      "The labels' language"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole emergency",
+     "title": "Now the whole conversation",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Fire party",
+   "title": "Firefighting equipment",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The BA board, a BA set and the galley door."
+     "body": "The fire station in the corridor."
     },
     {
      "type": "card",
-     "word": "fireparty"
+     "word": "extinguisher"
     },
     {
      "type": "card",
-     "word": "galley"
-    },
-    {
-     "type": "card",
-     "word": "firedoor"
+     "word": "fireclass"
     },
     {
      "type": "tap",
-     "audio": "c-show-firedoor",
-     "a": "firedoor"
+     "audio": "c-show-fireclass",
+     "a": "fireclass"
     },
     {
      "type": "card",
-     "word": "ba"
+     "word": "foam"
     },
     {
      "type": "card",
-     "word": "mask"
+     "word": "powder"
     },
     {
      "type": "card",
-     "word": "baboard"
+     "word": "co2"
     },
     {
      "type": "tap",
-     "audio": "c-show-ba",
-     "a": "ba"
-    },
-    {
-     "type": "card",
-     "word": "entrytime"
-    },
-    {
-     "type": "card",
-     "word": "pressure"
+     "audio": "c-show-powder",
+     "a": "powder"
     },
     {
      "type": "tap",
-     "audio": "c-show-pressure",
-     "a": "pressure"
+     "audio": "c-show-foam",
+     "a": "foam"
     },
     {
      "type": "card",
-     "word": "boundary"
+     "word": "hydrant"
     },
     {
      "type": "card",
-     "word": "contained"
+     "word": "hose"
     },
     {
      "type": "card",
-     "word": "radio"
-    },
-    {
-     "type": "card",
-     "word": "torch"
+     "word": "blanket"
     },
     {
      "type": "tap",
-     "audio": "c-show-boundary",
-     "a": "boundary"
+     "audio": "c-show-hydrant",
+     "a": "hydrant"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-blanket",
+     "a": "blanket"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"brigada de incendio\" in English:",
+     "q": "\"polvo químico\" in English:",
      "opts": [
-      "fire party",
-      "fire brigade team",
-      "fire group"
+      "dry powder",
+      "chemical dust",
+      "dry foam"
      ],
      "a": 0
     },
@@ -713,24 +594,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "galley",
-       "cocina"
+       "fire extinguisher",
+       "extintor"
       ],
       [
-       "entry time",
-       "hora de entrada"
+       "fire hose",
+       "manguera"
       ],
       [
-       "pressure",
-       "presión"
+       "fire hydrant",
+       "hidrante"
       ],
       [
-       "contained",
-       "contenido"
+       "fire blanket",
+       "manta ignífuga"
       ],
       [
-       "fire party",
-       "brigada de incendio"
+       "foam",
+       "espuma"
       ]
      ]
     }
@@ -738,143 +619,141 @@
   },
   {
    "id": "phrases",
-   "title": "Put out, break out, back up",
+   "title": "Use … for …",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "At the BA board",
+     "title": "Choosing the extinguisher",
      "list": [
       [
-       "I'll take the BA board.",
-       "Me encargo del tablero de ERA.",
-       "p-board"
+       "Use foam for oil fires.",
+       "Usá espuma para fuegos de aceite.",
+       "p-use"
       ],
       [
-       "Entry eleven thirty-five. Two hundred bar. Written.",
-       "Entrada once treinta y cinco. Doscientos bar. Anotado.",
-       "p-written"
+       "Never water on electricity.",
+       "Nunca agua sobre electricidad.",
+       "p-never"
       ],
       [
-       "Team two, back up team one.",
-       "Equipo dos, apoyen al equipo uno.",
-       "p-backup"
+       "Which extinguisher for this fire?",
+       "¿Qué extintor para este fuego?",
+       "p-which"
       ],
       [
-       "The fire is out.",
-       "El fuego está apagado.",
-       "p-out"
+       "I'll read the label first.",
+       "Primero voy a leer la etiqueta.",
+       "p-label"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Three phrasal verbs for fire",
+     "title": "use + equipment + for + fire",
      "steps": [
       [
-       "break out",
-       "A fire <b>broke out</b> in the galley. (empezar de golpe)"
+       "the pattern",
+       "<b>Use</b> water <b>for</b> class A fires."
       ],
       [
-       "put out",
-       "We're <b>putting</b> it <b>out</b> with CO2. The fire is <b>out</b>. (apagar)"
+       "the class",
+       "Oil <b>is</b> class B. It's a class B fire."
       ],
       [
-       "back up",
-       "Team two, <b>back up</b> team one. (apoyar, respaldar)"
+       "the warning",
+       "<b>Never</b> water on electricity!"
       ]
      ],
      "paras": [
-      "A phrasal verb is a verb + a small word, and the meaning changes: <b>put</b> is <i>poner</i>, but <b>put out</b> is <i>apagar</i>.",
-      "<b>The fire is out</b> is the sentence everybody wants to hear. Say it twice on the radio."
+      "On board you'll hear the fire classes as labels: <b>class A</b> (solids), <b>class B</b> (liquids), <b>class C</b> (gases). You don't need more theory: just match the class with the extinguisher.",
+      "<b>Use … for …</b> is how instructions and labels say it. Short and clear."
      ],
-     "avoid": "The fire is off · We're putting off the fire"
+     "avoid": "Use foam to oil fires · Use foam for to oil"
     },
     {
      "type": "choice",
-     "q": "The fire has stopped completely. You say…",
+     "q": "Paper is burning. Use…",
      "opts": [
-      "The fire is out.",
-      "The fire is off.",
-      "The fire is finished out."
+      "water: class A",
+      "CO2: class C",
+      "nothing"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "A fire started suddenly in the engine room. A fire…",
+     "q": "Fuel on the floor is burning. It's…",
      "opts": [
-      "broke out",
-      "put out",
-      "backed up"
+      "class B",
+      "class A",
+      "class C"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "q": "Team two, back up team one.",
+     "q": "Use CO2 for electrical fires.",
      "a": [
-      "Team",
-      "two,",
-      "back",
-      "up",
-      "team",
-      "one."
+      "Use",
+      "CO2",
+      "for",
+      "electrical",
+      "fires."
      ],
      "extra": [
-      "out",
-      "help"
+      "to",
+      "with"
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "Read back the numbers",
+     "title": "Colour isn't the name",
      "paras": [
-      "At the BA board you repeat what you hear and say <b>Written</b> at the end. Times in 24 hours (Lesson 8): <b>eleven thirty-five</b>. Pressure in <b>bar</b>, always the same word.",
-      "No Spanish words on the radio: not <i>once y treinta y cinco</i>, not <i>bares</i>."
+      "In Spanish we often call them by the colour. On board, the body is red for all of them: the <b>label</b> or the <b>band</b> tells you what's inside. Say the agent: <b>water, foam, dry powder, CO2</b>.",
+      "<b>CO2</b> is said letter by letter: <b>C-O-two</b>."
      ],
-     "avoid": "Eleven and thirty-five · two hundred bars"
+     "avoid": "Give me the blue one · the CO-dos"
     },
     {
      "type": "type",
-     "audio": "c-time-other",
-     "q": "What's the entry time? Write it with four numbers.",
+     "audio": "c-blanket-other",
+     "q": "Where is the fire blanket? Next to the…",
      "accept": [
-      "1142",
-      "11:42",
-      "11.42"
+      "stove",
+      "the stove"
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "c-out-other"
+      "c-oil"
      ],
-     "q": "What's the pressure now?",
+     "q": "What's burning?",
      "opts": [
-      "120 bar",
-      "200 bar",
-      "140 bar"
+      "Fuel on the floor",
+      "Paper",
+      "A switchboard"
      ],
      "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "bar, board, BA",
+     "title": "extinguisher",
      "paras": [
-      "<b>bar</b>: one short syllable, no <i>s</i> in the plural: <b>two hundred bar</b>.",
-      "<b>BA</b>: letter by letter, <b>bee-AY</b>. <b>board</b> sounds like <i>bord</i>, long."
+      "<b>ex-TIN-gwi-sher</b>: the stress is on <b>TIN</b>. The <i>gu</i> sounds <b>gw</b>, like in <i>agua</i>.",
+      "<b>CO2</b>: <b>see-oh-TOO</b>, stress on the last part."
      ],
      "list": [
       [
-       "Pressure two hundred bar.",
-       "Presión doscientos bar.",
-       "m-pressure"
+       "CO2",
+       "CO2",
+       "m-co2"
       ]
      ]
     }
@@ -882,57 +761,57 @@
   },
   {
    "id": "read",
-   "title": "Read the fire report",
+   "title": "Read the label",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "report",
-     "q": "Where was the fire?",
+     "doc": "label",
+     "q": "Which fire classes is it for?",
      "opts": [
-      "Galley, main deck",
-      "Engine room",
-      "Bridge"
+      "A, B and C",
+      "Only B",
+      "Only electrical"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "report",
-     "q": "What was the cause?",
+     "doc": "label",
+     "q": "What is class B?",
      "opts": [
-      "A pan of oil; it spread to the extractor",
-      "A cigarette",
-      "Electricity"
+      "Liquids: oil, fuel, paint",
+      "Solids",
+      "Gases"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "report",
-     "q": "Tap the line with team one's entry time.",
-     "a": 4
+     "doc": "label",
+     "q": "Tap what it is NOT for.",
+     "a": 5
     },
     {
      "type": "doc",
-     "doc": "report",
-     "q": "When was the fire out?",
+     "doc": "label",
+     "q": "For cooking oil in a pan, use…",
      "opts": [
-      "11:50",
-      "11:30",
-      "12:50"
+      "the fire blanket",
+      "this extinguisher",
+      "water"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "report",
-     "q": "Who keeps the fire watch?",
+     "doc": "label",
+     "q": "Where must the needle be?",
      "opts": [
-      "The bosun",
-      "The cook",
-      "Nobody"
+      "In the green",
+      "In the red",
+      "At zero"
      ],
      "a": 0
     }
@@ -940,72 +819,76 @@
   },
   {
    "id": "speak",
-   "title": "Keep the board",
+   "title": "Choose and say it",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Names, times, pressure",
-     "body": "Listen, say it, check it. Read back every number.",
-     "es": "Repetí cada número.",
+     "title": "Which extinguisher?",
+     "body": "Listen, say it, check it. Name the agent, not the colour.",
+     "es": "Decí el agente, no el color.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-board"
+     "model": "p-use"
     },
     {
      "type": "shadow",
-     "model": "p-written"
+     "model": "p-never"
     },
     {
      "type": "shadow",
-     "model": "p-out"
+     "model": "p-which"
     },
     {
      "type": "role",
-     "cue": "c-take",
-     "task": "Accept: you'll take the BA board.",
-     "model": "m-board",
+     "cue": "c-elec",
+     "task": "Electrical fire: say which one.",
+     "model": "m-elec",
      "accept": [
-      "I'll take the BA board.",
-      "Yes, Second. I'll take the BA board.",
-      "I will take the BA board."
+      "Use CO2.",
+      "CO2.",
+      "Use the CO2.",
+      "Use CO2!",
+      "Use the CO2 extinguisher."
      ]
     },
     {
      "type": "role",
-     "cue": "c-team2",
-     "task": "Read back team two: Bautista, Lim, 11:40, 200 bar. Then say \"Written\".",
-     "model": "m-readback",
+     "cue": "c-oil",
+     "task": "Fuel: foam, and say the class.",
+     "model": "m-oil",
      "accept": [
-      "Team two: Bautista, Lim. Entry eleven forty. Two hundred bar. Written.",
-      "Team two, Bautista and Lim. Entry eleven forty. Two hundred bar. Written.",
-      "Bautista, Lim. Entry eleven forty. Two hundred bar. Written."
+      "Use foam. It's class B.",
+      "Use foam, it's class B.",
+      "Foam. It's class B.",
+      "Use foam. Class B."
      ]
     },
     {
      "type": "role",
-     "cue": "c-howlong",
-     "task": "Team one has been inside for fifteen minutes. Tell James.",
-     "model": "m-time",
+     "cue": "c-paper",
+     "task": "Paper: water, and say the class.",
+     "model": "m-paper",
      "accept": [
-      "Second, team one has been inside for fifteen minutes.",
-      "Team one has been inside for fifteen minutes.",
-      "Fifteen minutes inside, Second."
+      "Use water. It's class A.",
+      "Use water, it's class A.",
+      "Water. It's class A.",
+      "Use water. Class A."
      ]
     },
     {
      "type": "role",
-     "cue": "c-report",
-     "task": "Report: the fire is out, no injuries.",
-     "model": "m-out",
+     "cue": "c-ask",
+     "task": "Ask which extinguisher for this fire.",
+     "model": "m-which",
      "accept": [
-      "Bridge, the fire is out. No injuries.",
-      "The fire is out. No injuries.",
-      "Bridge, fire party. The fire is out. No injuries."
+      "Which extinguisher for this fire?",
+      "Which extinguisher should I use?",
+      "Which extinguisher for this fire, Bosun?"
      ]
     }
    ]
@@ -1018,93 +901,81 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-galley",
+     "audio": "w-foam",
      "q": "Type what you hear.",
      "accept": [
-      "galley",
-      "the galley"
+      "foam"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-baboard",
-     "a": "baboard"
+     "audio": "c-show-co2",
+     "a": "co2"
     },
     {
      "type": "tap",
-     "audio": "c-show-entrytime",
-     "a": "entrytime"
+     "audio": "c-show-hose",
+     "a": "hose"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-extinguisher",
+     "a": "extinguisher"
     },
     {
      "type": "listen",
      "audio": [
-      "l24-16"
+      "l24-09"
      ],
-     "q": "How long is the fire watch?",
+     "q": "How many people does the fire hose need?",
      "opts": [
-      "One hour",
-      "Ten minutes",
-      "All night"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "Complete: \"We're putting it ___ with CO2.\"",
-     "opts": [
-      "out",
-      "off",
-      "up"
+      "Two",
+      "One",
+      "Four"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The fire can't spread any more. It's…",
+     "q": "Smoke from the radar's fuse box. You use…",
      "opts": [
-      "contained",
-      "contented",
-      "continued"
+      "CO2",
+      "water",
+      "the fire hose"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "Complete: \"Use foam ___ oil fires.\"",
+     "opts": [
+      "for",
+      "to",
+      "in"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "q": "A fire broke out in the galley.",
+     "q": "Never water on electricity.",
      "a": [
-      "A",
-      "fire",
-      "broke",
-      "out",
-      "in",
-      "the",
-      "galley."
+      "Never",
+      "water",
+      "on",
+      "electricity."
      ],
      "extra": [
-      "put",
-      "kitchen"
+      "use",
+      "no"
      ]
     },
     {
-     "type": "listen",
-     "audio": [
-      "l24-17"
-     ],
-     "q": "Why is the BA board important?",
-     "opts": [
-      "So everybody comes back",
-      "For the company report",
-      "To check the time"
-     ],
-     "a": 0
-    },
-    {
      "type": "type",
-     "q": "Write it in English: brigada de incendio",
+     "q": "Write it in English: manta ignífuga",
      "accept": [
-      "fire party",
-      "the fire party",
-      "a fire party"
+      "fire blanket",
+      "a fire blanket",
+      "the fire blanket"
      ]
     }
    ]

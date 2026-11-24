@@ -1,42 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The bow from above in fog, with the windlass, chain stopper, hawse pipe and chain locker, the chain leading two o'clock, the anchor holding and the fog bell">
-  <!-- Lesson 12 plate: the bow seen from above, at anchor in fog. A clock is laid over the bow: 12 = straight ahead,
-       3 = starboard beam, 9 = port beam. The starboard chain leads two o'clock to the anchor, which is holding (dug in);
-       the port anchor is still in its pocket. Windlass with brake wheels, fog bell on the foremast.
-       Colours come from app.css (.p-*). Generated with a small script. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The stern from above, port side alongside: stern lines, breast line, springs, bollards, fairleads, winch and tug">
+  <!-- Lesson 11 plate: the aft part of the ship seen from above. Bow to the left, port side alongside the quay (bottom).
+       Pattern from BIBLE.md: 3 stern lines (going aft), 1 breast line (straight across), 2 springs (going forward).
+       One stern line is slack (being let go); the winch heaves in. The tug is on the centre lead aft.
+       Colours come from app.css (.p-*). -->
   <rect class="p-water" x="0" y="0" width="400" height="240"/>
-  <circle cx="200" cy="112" r="92" fill="none" class="p-stroke" stroke-width="1.2" stroke-dasharray="3 4" opacity=".6"/><circle cx="246.0" cy="32.3" r="2" class="p-ink" opacity=".6"/><text x="290.1" y="64.0" text-anchor="middle" class="p-label">2</text><circle cx="279.7" cy="66.0" r="2" class="p-ink" opacity=".6"/><text x="304.0" y="116.0" text-anchor="middle" class="p-label">3</text><circle cx="292.0" cy="112.0" r="2" class="p-ink" opacity=".6"/><circle cx="279.7" cy="158.0" r="2" class="p-ink" opacity=".6"/><circle cx="246.0" cy="191.7" r="2" class="p-ink" opacity=".6"/><text x="200.0" y="220.0" text-anchor="middle" class="p-label">6</text><circle cx="200.0" cy="204.0" r="2" class="p-ink" opacity=".6"/><circle cx="154.0" cy="191.7" r="2" class="p-ink" opacity=".6"/><circle cx="120.3" cy="158.0" r="2" class="p-ink" opacity=".6"/><text x="96.0" y="116.0" text-anchor="middle" class="p-label">9</text><circle cx="108.0" cy="112.0" r="2" class="p-ink" opacity=".6"/><text x="109.9" y="64.0" text-anchor="middle" class="p-label">10</text><circle cx="120.3" cy="66.0" r="2" class="p-ink" opacity=".6"/><circle cx="154.0" cy="32.3" r="2" class="p-ink" opacity=".6"/><text x="200.0" y="12.0" text-anchor="middle" class="p-label">12</text><circle cx="200.0" cy="20.0" r="2" class="p-ink" opacity=".6"/>
-  <!-- BOW (pointing up) -->
-  <path d="M120 240 L120 150 Q122 92 200 26 Q278 92 280 150 L280 240 Z" class="p-hull"/>
-  <path d="M130 240 L130 152 Q132 100 200 40 Q268 100 270 152 L270 240 Z" class="p-deck"/>
-  <!-- port anchor still stowed in the hawse pocket -->
-  <g transform="translate(180 64) rotate(-30)"><path d="M0 -7 V8 M-7 3 Q0 12 7 3" fill="none" style="stroke:#8A97A4" stroke-width="2.6" stroke-linecap="round"/></g>
-  <!-- WINDLASS: two gypsies, brake wheels outboard -->
-  <g>
-    <rect x="160" y="118" width="80" height="18" rx="4" class="p-white"/>
-    <circle cx="180" cy="127" r="11" class="p-hull" opacity=".7"/><circle cx="220" cy="127" r="11" class="p-hull" opacity=".7"/>
-    <circle cx="148" cy="127" r="9" fill="none" style="stroke:var(--antifoul)" stroke-width="3"/>
-    <circle cx="252" cy="127" r="9" fill="none" style="stroke:var(--antifoul)" stroke-width="3"/>
+  <!-- QUAY -->
+  <rect class="p-quay" x="0" y="186" width="400" height="54"/>
+  <line class="p-line" x1="0" y1="186" x2="400" y2="186" stroke-width="2"/>
+  <!-- bollards on the quay edge -->
+  <g class="p-hull">
+    <circle cx="96" cy="200" r="6"/><circle cx="140" cy="200" r="6"/><circle cx="232" cy="200" r="6"/>
+    <circle cx="330" cy="200" r="6"/><circle cx="362" cy="200" r="6"/><circle cx="392" cy="200" r="6"/>
   </g>
-  <!-- chain on deck: gypsy to hawse -->
-  <line x1="220" y1="116" x2="214" y2="62" style="stroke:#8A97A4" stroke-width="3.2" stroke-dasharray="5 2"/>
-  <line x1="214" y1="62" x2="329.9" y2="37.0" style="stroke:#8A97A4" stroke-width="3.2" stroke-dasharray="5 2"/><line x1="258.0" y1="52.5" x2="267.3" y2="50.5" style="stroke:#fff" stroke-width="4.2"/><g transform="translate(329.9 37.0) rotate(258)">
-  <path d="M0 -10 V12 M-10 4 Q0 18 10 4 M-5 -6 H5" fill="none" style="stroke:#5E6B78" stroke-width="3.4" stroke-linecap="round"/><circle cy="-12" r="3" fill="none" style="stroke:#5E6B78" stroke-width="2.2"/>
-  <path d="M-14 14 Q0 26 14 14" fill="none" style="stroke:#B98A5A" stroke-width="2.4" stroke-dasharray="3 3" opacity=".9"/></g>
-  <!-- HAWSE PIPE: where the chain goes through the deck and out of the ship -->
-  <ellipse cx="214" cy="62" rx="8" ry="6" class="p-hull"/><ellipse cx="214" cy="62" rx="4" ry="3" style="fill:#8A97A4"/>
-  <!-- CHAIN STOPPER: a heavy clamp on the chain, with its locking bar -->
-  <rect x="207" y="88" width="22" height="12" rx="2" class="p-hull" transform="rotate(-6 218 94)"/>
-  <rect x="204" y="92" width="28" height="4" rx="1.5" style="fill:var(--antifoul)" transform="rotate(-6 218 94)"/>
-  <!-- CHAIN LOCKER below deck (dashed = under the deck): the chain goes down from the gypsy and lies in a heap -->
-  <rect x="204" y="142" width="34" height="26" rx="3" fill="none" class="p-stroke" stroke-width="1.4" stroke-dasharray="4 3"/>
-  <line x1="220" y1="138" x2="220" y2="150" style="stroke:#8A97A4" stroke-width="3" stroke-dasharray="5 2"/>
-  <path d="M209 162 q4 -6 8 0 t8 0 t8 0 M211 156 q4 -6 8 0 t8 0" fill="none" style="stroke:#8A97A4" stroke-width="2.4"/>
-  <!-- FOREMAST with the fog BELL -->
-  <circle cx="200" cy="178" r="6" class="p-hull"/>
-  <path d="M190 206 Q190 192 200 190 Q210 192 210 206 Z" class="p-gold"/><rect x="186" y="205" width="28" height="3" rx="1.5" class="p-gold"/>
-  <!-- FOG banks -->
-  <g style="fill:#fff">
-    <ellipse cx="70" cy="40" rx="90" ry="20" opacity=".35"/><ellipse cx="330" cy="150" rx="90" ry="22" opacity=".35"/>
-    <ellipse cx="60" cy="190" rx="80" ry="18" opacity=".3"/><ellipse cx="360" cy="40" rx="60" ry="14" opacity=".25"/>
+  <g class="p-soft"><circle cx="96" cy="200" r="2.5"/><circle cx="140" cy="200" r="2.5"/><circle cx="232" cy="200" r="2.5"/><circle cx="330" cy="200" r="2.5"/><circle cx="362" cy="200" r="2.5"/><circle cx="392" cy="200" r="2.5"/></g>
+
+  <!-- SHIP: aft end, seen from above -->
+  <path d="M0 40 H250 Q300 40 300 100 Q300 160 250 160 H0 Z" class="p-hull"/>
+  <path d="M0 48 H248 Q290 48 290 100 Q290 152 248 152 H0 Z" class="p-deck"/>
+  <!-- accommodation block -->
+  <rect x="40" y="58" width="120" height="84" class="p-super" style="stroke:var(--hull)" stroke-width="1"/>
+  <rect x="96" y="80" width="22" height="40" rx="3" class="p-hull" opacity=".55"/>
+  <!-- winch drums on deck -->
+  <!-- mooring WINCH: motor and gearbox on the left, the DRUM with the line wound on it, between two flanges -->
+  <g transform="translate(200 124)">
+    <rect x="-24" y="-9" width="12" height="18" rx="2" class="p-hull"/>
+    <rect x="-12" y="-3" width="4" height="6" class="p-hull" opacity=".7"/>
+    <rect x="-8" y="-12" width="3" height="24" rx="1" class="p-white"/>
+    <rect x="11" y="-12" width="3" height="24" rx="1" class="p-white"/>
+    <rect x="-5" y="-9" width="16" height="18" style="fill:#E9C46A"/>
+    <g style="stroke:#B98A3A" stroke-width="1"><path d="M-3 -9 V9 M0 -9 V9 M3 -9 V9 M6 -9 V9 M9 -9 V9"/></g>
+  </g>
+  <!-- the winch works two stern lines:
+       heave in = the lower line is tight and the arrow points in, to the winch;
+       slack away = the upper line sags in waves and the arrow points out, away from the winch -->
+  <g fill="none" style="stroke:#E9C46A" stroke-width="2.4" stroke-linecap="round">
+    <path d="M214 130 L268 150"/>
+    <path d="M214 118 Q220 104 230 104 q6 -6 11 0 t11 0 t11 0 t11 0 Q284 106 288 134"/>
+  </g>
+  <g style="stroke:var(--antifoul)" stroke-width="2.6" fill="none" stroke-linecap="round"><path d="M262 132 L236 122"/><path d="M234 88 L262 88"/></g>
+  <path d="M229 119 L239 116 L236 126 Z" style="fill:var(--antifoul)"/>
+  <path d="M269 88 L261 83 L261 93 Z" style="fill:var(--antifoul)"/>
+  <!-- fairleads on the port side (ship's edge) -->
+  <g class="p-white" style="stroke:var(--hull)" stroke-width="1">
+    <rect x="186" y="150" width="12" height="7" rx="2"/><rect x="226" y="150" width="12" height="7" rx="2"/>
+    <rect x="262" y="146" width="12" height="7" rx="2" transform="rotate(-25 268 150)"/><rect x="280" y="132" width="12" height="7" rx="2" transform="rotate(-50 286 136)"/>
+  </g>
+  <!-- centre lead aft -->
+  <rect x="294" y="96" width="9" height="10" rx="2" class="p-white" style="stroke:var(--hull)" stroke-width="1"/>
+
+  <!-- LINES (mooring lines: rope colour) -->
+  <g fill="none" style="stroke:#E9C46A" stroke-width="2.4" stroke-linecap="round">
+    <!-- springs: from aft, going forward -->
+    <path d="M192 156 L96 196"/><path d="M195 156 L140 196"/>
+    <!-- breast line: straight across -->
+    <path d="M232 156 L232 194"/>
+    <!-- stern lines: going aft -->
+    <path d="M270 152 L330 196"/><path d="M288 138 L362 196"/>
+    <!-- slack stern line: hangs in a curve -->
+    <path d="M290 132 Q356 206 392 196" stroke-dasharray="1 0"/>
+  </g>
+
+  <!-- TUG on the centre lead -->
+  <path d="M303 101 L346 101" style="stroke:#E9C46A" stroke-width="2" fill="none"/>
+  <g transform="translate(368 101)">
+    <path d="M-24 -14 H12 Q26 0 12 14 H-24 Q-28 0 -24 -14 Z" class="p-red"/>
+    <rect x="-14" y="-7" width="18" height="14" rx="2" class="p-super"/>
+    <rect x="-24" y="-3" width="8" height="6" class="p-hull"/>
   </g>
 </svg>

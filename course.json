@@ -19,31 +19,32 @@
     ]},
     {"n": 3, "title": "Deck work", "where": "Houston · Galveston", "lessons": [
       {"n": 10, "title": "Tools, PPE & deck work", "ready": true},
-      {"n": 11, "title": "Mooring & letting go", "ready": true},
-      {"n": 12, "title": "Anchoring", "ready": true}
+      {"n": 11, "title": "Lifting gear", "ready": true},
+      {"n": 12, "title": "Mooring & letting go", "ready": true},
+      {"n": 13, "title": "Anchoring", "ready": true}
     ]},
     {"n": 4, "title": "On the bridge", "where": "Gulf of Mexico", "lessons": [
-      {"n": 13, "title": "Bridge equipment", "ready": true},
-      {"n": 14, "title": "Watch handover", "ready": true},
-      {"n": 15, "title": "Weather & sea", "ready": true},
-      {"n": 16, "title": "Course, position & traffic", "ready": true}
+      {"n": 14, "title": "Bridge equipment", "ready": true},
+      {"n": 15, "title": "Watch handover", "ready": true},
+      {"n": 16, "title": "Weather & sea", "ready": true},
+      {"n": 17, "title": "Course, position & traffic", "ready": true}
     ]},
     {"n": 5, "title": "Reporting", "where": "Florida · Port Everglades", "lessons": [
-      {"n": 17, "title": "Speaking up about safety", "ready": true},
-      {"n": 18, "title": "Faults & defects", "ready": true},
-      {"n": 19, "title": "Cargo & documents", "ready": true},
-      {"n": 20, "title": "Bunkering & pollution", "ready": true}
+      {"n": 18, "title": "Speaking up about safety", "ready": true},
+      {"n": 19, "title": "Faults & defects", "ready": true},
+      {"n": 20, "title": "Cargo & documents", "ready": true},
+      {"n": 21, "title": "Bunkering & pollution", "ready": true}
     ]},
     {"n": 6, "title": "Emergencies", "where": "Atlantic Ocean", "lessons": [
-      {"n": 21, "title": "Life-saving appliances", "ready": true},
-      {"n": 22, "title": "Muster & man overboard", "ready": true},
-      {"n": 23, "title": "Firefighting equipment", "ready": true},
-      {"n": 24, "title": "Fire party communication", "ready": true}
+      {"n": 22, "title": "Life-saving appliances", "ready": true},
+      {"n": 23, "title": "Muster & man overboard", "ready": true},
+      {"n": 24, "title": "Firefighting equipment", "ready": true},
+      {"n": 25, "title": "Fire party communication", "ready": true}
     ]},
     {"n": 7, "title": "Radio & outside parties", "where": "Gibraltar · Marseille", "lessons": [
-      {"n": 25, "title": "Distress, urgency & safety", "ready": true},
-      {"n": 26, "title": "Medical & TMAS", "ready": true},
-      {"n": 27, "title": "Pilot boarding & helm orders", "ready": true}
+      {"n": 26, "title": "Distress, urgency & safety", "ready": true},
+      {"n": 27, "title": "Medical & TMAS", "ready": true},
+      {"n": 28, "title": "Pilot boarding & helm orders", "ready": true}
     ]}
   ]
 }

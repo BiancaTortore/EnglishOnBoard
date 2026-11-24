@@ -18,7 +18,7 @@ Inglés marítimo para oficiales de cubierta hispanohablantes, en formato app de
 
 Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horizon**: es su primer embarque y su primer buque con tripulación internacional. El viaje dura 14 días: Houston → Golfo de México → Port Everglades → Atlántico → Marsella. **El Día 1 es el 14 de marzo de 2026** (Día N = 14 de marzo + N − 1); es la fecha de embarque que figura en el crew agreement de la Lesson 6. Datos de Diego que ya salen en documentos: nacido el 12 AUG 2003, seaman's book AR047926, pasaporte AAB512304.
 
-**El arco:** en la Lesson 1 Diego está nervioso y le pide a Rolando que repita todo. En la Lesson 27, al timón, es el práctico de Marsella quien le dice "say again", y Diego repite la orden con calma. Al final el Capitán le dice: *"Well done, cadet. You'll make a good officer."* El alumno hace el mismo recorrido.
+**El arco:** en la Lesson 1 Diego está nervioso y le pide a Rolando que repita todo. En la Lesson 28, al timón, es el práctico de Marsella quien le dice "say again", y Diego repite la orden con calma. Al final el Capitán le dice: *"Well done, cadet. You'll make a good officer."* El alumno hace el mismo recorrido.
 
 **El buque:** metanero tipo **Moss**, unos 290 m de eslora, con **cuatro tanques esféricos gigantes** que sobresalen de la cubierta, cubiertos por domos blancos. Casco negro con fondo rojo, superestructura blanca a popa, cubierta verde con tuberías entre las esferas. Ninguna imagen muestra texto legible.
 
@@ -58,7 +58,7 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 
 ---
 
-## 4. Temario: 27 lecciones en 7 módulos
+## 4. Temario: 28 lecciones en 7 módulos
 
 | # | Lección | Día · lugar | Escena |
 |---|---|---|---|
@@ -75,32 +75,33 @@ Diego Martínez sube como **cadete de cubierta (deck cadet)** al **M/V LNG Horiz
 | 9 | Alarms & emergency instructions | Día 2 · 10:00 · puerto | Simulacro antes de zarpar |
 | **Módulo 3 · Deck work** ||||
 | 10 | Tools, PPE & deck work | Día 2 · 13:00 · cubierta | Rolando prepara la cubierta para el mar; permiso de trabajo |
-| 11 | Mooring & letting go | Día 2 · 17:20 · estación de popa | La zarpada |
-| 12 | Anchoring | Día 3 · 02:00 · frente a Galveston | Niebla; el buque fondea a esperar, Diego en la proa |
+| 11 | Lifting gear | Día 2 · 15:00 · cubierta, junto a la grúa de provisiones | Llegan los víveres al muelle; Rolando los sube con la grúa, Diego hace de señalero y lee la chapa de SWL; después trincan los pallets |
+| 12 | Mooring & letting go | Día 2 · 17:20 · estación de popa | La zarpada |
+| 13 | Anchoring | Día 3 · 02:00 · frente a Galveston | Niebla; el buque fondea a esperar, Diego en la proa |
 | **Módulo 4 · On the bridge** ||||
-| 13 | Bridge equipment | Día 3 · 16:30 · puente | Primera guardia de mar de Diego con Tanya: ella le muestra los equipos del puente |
-| 14 | Watch handover | Día 4 · 03:45 · puente | James le entrega la guardia a Tanya; primera guardia de noche de Diego |
-| 15 | Weather & sea | Día 4 · 06:30 · Golfo de México | Guardia de Tanya: entra un frente, Diego lo reporta desde el alerón y lo registra en el log |
-| 16 | Course, position & traffic | Día 5 · 17:00 · Estrecho de Florida | Guardia de Tanya: tráfico intenso; Diego de vigía reporta buques, marcaciones y distancias |
+| 14 | Bridge equipment | Día 3 · 16:30 · puente | Primera guardia de mar de Diego con Tanya: ella le muestra los equipos del puente |
+| 15 | Watch handover | Día 4 · 03:45 · puente | James le entrega la guardia a Tanya; primera guardia de noche de Diego |
+| 16 | Weather & sea | Día 4 · 06:30 · Golfo de México | Guardia de Tanya: entra un frente, Diego lo reporta desde el alerón y lo registra en el log |
+| 17 | Course, position & traffic | Día 5 · 17:00 · Estrecho de Florida | Guardia de Tanya: tráfico intenso; Diego de vigía reporta buques, marcaciones y distancias |
 | **Módulo 5 · Reporting** ||||
-| 17 | Speaking up about safety | Día 6 · 05:30 · cubierta, fondeados frente a Port Everglades | En la ronda de fondeo ve una rejilla rajada; Rolando dice que no importa y Diego se anima a decir que no es seguro |
-| 18 | Faults & defects | Día 6 · 07:30 · puente | Se congela el radar 1 y salta la alarma; Diego llama a Marek, que cambia un fusible |
-| 19 | Cargo & documents | Día 6 · 10:00 · cargo control room | Reporte diario de carga con Tanya; Diego encuentra una discrepancia en el tanque 3 (error de tipeo) |
-| 20 | Bunkering & pollution | Día 6 · 14:00 · fondeadero de Port Everglades | Bunker desde una barcaza; la inspectora Chen le pregunta a Diego qué hacer ante un derrame |
+| 18 | Speaking up about safety | Día 6 · 05:30 · cubierta, fondeados frente a Port Everglades | En la ronda de fondeo ve una rejilla rajada; Rolando dice que no importa y Diego se anima a decir que no es seguro |
+| 19 | Faults & defects | Día 6 · 07:30 · puente | Se congela el radar 1 y salta la alarma; Diego llama a Marek, que cambia un fusible |
+| 20 | Cargo & documents | Día 6 · 10:00 · cargo control room | Reporte diario de carga con Tanya; Diego encuentra una discrepancia en el tanque 3 (error de tipeo) |
+| 21 | Bunkering & pollution | Día 6 · 14:00 · fondeadero de Port Everglades | Bunker desde una barcaza; la inspectora Chen le pregunta a Diego qué hacer ante un derrame |
 | **Módulo 6 · Emergencies** ||||
-| 21 | Life-saving appliances | Día 7 · 09:00 · cubierta de botes | Inspección semanal de LSA con Tanya; Diego encuentra una bengala vencida |
-| 22 | Muster & man overboard | Día 8 · 10:00 · estribor | Simulacro de hombre al agua; Tanya le da a Diego el rol de vigía; Rolando tira el aro |
-| 23 | Firefighting equipment | Día 9 · 15:00 · pasillo | Rolando muestra los extintores; Diego confunde espuma y polvo |
-| 24 | Fire party communication | Día 10 · 11:30 · cocina | Incendio real en la cocina de Mario; James dirige la brigada, Diego lleva el tablero de BA (equipo uno: Rolando y el AB Santos) |
+| 22 | Life-saving appliances | Día 7 · 09:00 · cubierta de botes | Inspección semanal de LSA con Tanya; Diego encuentra una bengala vencida |
+| 23 | Muster & man overboard | Día 8 · 10:00 · estribor | Simulacro de hombre al agua; Tanya le da a Diego el rol de vigía; Rolando tira el aro |
+| 24 | Firefighting equipment | Día 9 · 15:00 · pasillo | Rolando muestra los extintores; Diego confunde espuma y polvo |
+| 25 | Fire party communication | Día 10 · 11:30 · cocina | Incendio real en la cocina de Mario; James dirige la brigada, Diego lleva el tablero de BA (equipo uno: Rolando y el AB Santos) |
 | **Módulo 7 · Radio & outside parties** ||||
-| 25 | Distress, urgency & safety | Día 12 · 19:20 · Estrecho | Guardia de Tanya y Diego: MAYDAY del pesquero francés *Cap Béar* (hace agua, 4 personas). Tarifa Traffic acusa recibo; el *Horizon* está a 6 millas y Diego llama a Tarifa; Salvamento Marítimo los rescata |
-| 26 | Medical & TMAS | Día 13 · 10:00 · cocina | Mario se corta la mano izquierda con un cuchillo; Tanya llama al CIRM de Roma por teléfono satelital y Diego dicta los signos vitales; Diego ayuda en la cocina |
-| 27 | Pilot boarding & helm orders | Día 14 · 07:00 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
+| 26 | Distress, urgency & safety | Día 12 · 19:20 · Estrecho | Guardia de Tanya y Diego: MAYDAY del pesquero francés *Cap Béar* (hace agua, 4 personas). Tarifa Traffic acusa recibo; el *Horizon* está a 6 millas y Diego llama a Tarifa; Salvamento Marítimo los rescata |
+| 27 | Medical & TMAS | Día 13 · 10:00 · cocina | Mario se corta la mano izquierda con un cuchillo; Tanya llama al CIRM de Roma por teléfono satelital y Diego dicta los signos vitales; Diego ayuda en la cocina |
+| 28 | Pilot boarding & helm orders | Día 14 · 07:00 · Marsella | Recibe al práctico Dubois en la escala, lo lleva al puente y toma el timón repitiendo sus órdenes. "Well done, cadet. You'll make a good officer." |
 
 ### Glosario náutico en español (cómo lo dice Bianca; usarlo en todas las traducciones)
-accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero · pumpman = bombero · messman = mozo · department = departamento · crew agreement = rol · to sign on = firmar el embarque · seaman's book = libreta de embarco · bunk = cama · muster card = tarjeta de rol · muster station = punto de reunión · drill = zafarrancho · announcement = anuncio · loudspeaker = altavoz · safety shoes = zapatos de seguridad · spanner = llave · chipping = picaretear · shackle = grillete · windlass = cabrestante · ECDIS = carta electrónica · swell = oleaje · rough (sea) = agitado · squall = chubasco
+accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero · pumpman = bombero · messman = mozo · department = departamento · crew agreement = rol · to sign on = firmar el embarque · seaman's book = libreta de embarco · bunk = cama · muster card = tarjeta de rol · muster station = punto de reunión · drill = zafarrancho · announcement = anuncio · loudspeaker = altavoz · safety shoes = zapatos de seguridad · spanner = llave · chipping = picaretear · shackle = grillete · crane = grúa · jib = pluma · hook = gancho · sling = eslinga · pad eye = cáncamo · wire rope = cable · snatch block = pasteca · tackle = aparejo · thimble = guardacabo · lashing = trinca · turnbuckle = tensor · winch = guinche · drum = tambor · chain stopper = estopor · hawse pipe = escobén · chain locker = caja de cadenas · windlass = cabrestante · ECDIS = carta electrónica · swell = oleaje · rough (sea) = agitado · squall = chubasco
 
-### Foco de idioma por lección (L1–16 ya escritas: así quedaron; L17+ borrador, no repetir)
+### Foco de idioma por lección (todas escritas: así quedaron; no repetir)
 
 | # | Gramática / estructura | Pronunciación / oído |
 |---|---|---|
@@ -114,23 +115,24 @@ accommodation = casillaje · rating = subalterno · AB (able seaman) = marinero 
 | 8 | La hora en 24 h; pedir con *can / could* | "zero seven thirty", "fourteen hundred" |
 | 9 | Do not vs Don't (altavoz vs persona) | Cazar el *not* |
 | 10 | Present continuous: What are you doing? I'm lashing… (+ Can you pass me…?) | La terminación -ing |
-| 11 | Orden → read-back → reporte corto (let go, all clear) | let go vs let's go; palabras clave fuertes |
-| 12 | Direcciones en reloj, grilletes; is leading / is holding | o'clock, shackle |
-| 13 | used to + verbo / used for + -ing | Siglas que se deletrean vs que se leen |
-| 14 | Rumbos de tres cifras, velocidad, read-back; I have / You have the watch | knot = not |
-| 15 | Tendencias y comparativos (increasing, backing) | Terminaciones -ing |
-| 16 | Reportar un buque: qué, dónde (bow/beam/quarter), range, bearing | quarter, CPA |
-| 17 | Dónde va el *not*: I don't think… | Entonación |
-| 18 | has stopped / isn't working | Terminaciones -ed |
-| 19 | Voz pasiva simple; cantidades | — |
-| 20 | must / mustn't / have to; respuestas directas | — |
-| 21 | Colocaciones: launch, inflate, activate, fire, throw; fecha de vencimiento | — |
-| 22 | Alertar y asignar roles: You will be… | Gritos cortos: "Man overboard, starboard side!" |
-| 23 | Use … for …; clases de fuego A, B, C (solo etiquetas) | *extinguisher*, CO2 letra por letra |
-| 24 | Phrasal verbs: put out, break out, back up | Reportes al tablero de BA; *bar* sin s |
-| 25 | Estructura MAYDAY / PAN-PAN / SÉCURITÉ | Mensajes con estática |
-| 26 | Describir síntomas y signos vitales | — |
-| 27 | Órdenes de timón y read-back | Velocidad real de un práctico |
+| 11 | Órdenes de grúa en imperativo (hoist, lower, stop) + can / can't con límites (SWL) | Números de carga: tonnes, "one point five" |
+| 12 | Orden → read-back → reporte corto (let go, all clear) | let go vs let's go; palabras clave fuertes |
+| 13 | Direcciones en reloj, grilletes; is leading / is holding | o'clock, shackle |
+| 14 | used to + verbo / used for + -ing | Siglas que se deletrean vs que se leen |
+| 15 | Rumbos de tres cifras, velocidad, read-back; I have / You have the watch | knot = not |
+| 16 | Tendencias y comparativos (increasing, backing) | Terminaciones -ing |
+| 17 | Reportar un buque: qué, dónde (bow/beam/quarter), range, bearing | quarter, CPA |
+| 18 | Dónde va el *not*: I don't think… | Entonación |
+| 19 | has stopped / isn't working | Terminaciones -ed |
+| 20 | Voz pasiva simple; cantidades | — |
+| 21 | must / mustn't / have to; respuestas directas | — |
+| 22 | Colocaciones: launch, inflate, activate, fire, throw; fecha de vencimiento | — |
+| 23 | Alertar y asignar roles: You will be… | Gritos cortos: "Man overboard, starboard side!" |
+| 24 | Use … for …; clases de fuego A, B, C (solo etiquetas) | *extinguisher*, CO2 letra por letra |
+| 25 | Phrasal verbs: put out, break out, back up | Reportes al tablero de BA; *bar* sin s |
+| 26 | Estructura MAYDAY / PAN-PAN / SÉCURITÉ | Mensajes con estática |
+| 27 | Describir síntomas y signos vitales | — |
+| 28 | Órdenes de timón y read-back | Velocidad real de un práctico |
 
 ---
 

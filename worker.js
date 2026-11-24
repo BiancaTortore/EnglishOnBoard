@@ -327,7 +327,7 @@ async function verify(url, env) {
   const e = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
   const when = found ? new Date(found.date + "T12:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric", timeZone: "UTC"}) : "";
   const result = !asked ? "" : found
-    ? `<div class="card ok"><span class="tag">Valid certificate</span><h2>${e(found.name)}</h2><p>completed <b>English on Board</b> (Maritime English for deck officers, 27 lessons in 7 modules) and passed the final test with <b>${found.pct}%</b> on <b>${e(when)}</b>.</p><p class="mu">Code ${e(found.code)}</p></div>`
+    ? `<div class="card ok"><span class="tag">Valid certificate</span><h2>${e(found.name)}</h2><p>completed <b>English on Board</b> (Maritime English for deck officers, from Houston to Marseille) and passed the final test with <b>${found.pct}%</b> on <b>${e(when)}</b>.</p><p class="mu">Code ${e(found.code)}</p></div>`
     : `<div class="card no"><span class="tag">Not found</span><p>There is no English on Board certificate with the code <b>${e(code)}</b>. Check the letters and numbers and try again.</p></div>`;
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>Check a certificate · English on Board</title><link rel="icon" href="/icons/favicon-32.png">

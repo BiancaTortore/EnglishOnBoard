@@ -1,332 +1,284 @@
 {
  "n": 27,
  "module": 7,
- "title": "Pilot boarding & helm orders",
- "place": "Day 14 · 07:00 · Marseille approach",
- "goal": "Report the pilot on board, repeat helm orders and report the wheel and the heading.",
+ "title": "Medical & TMAS",
+ "place": "Day 13 · 10:00 · Mediterranean, galley",
+ "goal": "Describe an injury, dictate vital signs and read back a doctor's advice.",
  "images": {
   "hero": "img/l27/hero.jpg",
   "scene": "img/l27/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 3,
- "radioChannel": "UHF",
+ "mediaRev": 5,
+ "radioChannel": "Sat phone",
  "audio": {
   "l27-01": {
-   "pause": 1500,
-   "voice": "lars",
-   "text": "Diego, the pilot boat is coming alongside. Report when the pilot is on board.",
-   "es": "Diego, la lancha del práctico se está abarloando. Avisá cuando el práctico esté a bordo.",
-   "radio": true
+   "pause": 500,
+   "voice": "mario",
+   "text": "Ay! Cadet! My hand! The knife slipped!",
+   "es": "¡Ay! ¡Cadete! ¡Mi mano! ¡Se me resbaló el cuchillo!"
   },
   "l27-02": {
-   "pause": 2000,
    "voice": "diego",
-   "text": "Bridge, pilot ladder. Pilot boat alongside, starboard side.",
-   "es": "Puente, escala de práctico. Lancha del práctico abarloada, banda de estribor."
+   "text": "Mario, sit down. Show me. Press here with this clean towel. Hard.",
+   "es": "Mario, sentate. Mostrame. Apretá acá con esta toalla limpia. Fuerte."
   },
   "l27-03": {
-   "voice": "diego",
-   "text": "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
-   "es": "Puente, escala de práctico. Práctico a bordo. Vamos al puente."
+   "pause": 900,
+   "voice": "tanya",
+   "text": "What happened?",
+   "es": "¿Qué pasó?"
   },
   "l27-04": {
-   "pause": 700,
-   "voice": "pilot",
-   "text": "Good morning, young man. Bonjour. Lead the way, please.",
-   "es": "Buen día, joven. Bonjour. Guíeme, por favor."
+   "voice": "diego",
+   "text": "He cut his left hand with a big knife. It's bleeding a lot, here, between the thumb and the first finger.",
+   "es": "Se cortó la mano izquierda con un cuchillo grande. Sangra mucho, acá, entre el pulgar y el índice."
   },
   "l27-05": {
-   "pause": 2200,
-   "voice": "diego",
-   "text": "Good morning, Pilot. This way, please. Mind the step.",
-   "es": "Buen día, práctico. Por acá, por favor. Cuidado con el escalón."
+   "pause": 1800,
+   "voice": "tanya",
+   "text": "Keep pressing. I'm calling TMAS. Diego, take his pulse, blood pressure and temperature.",
+   "es": "Seguí apretando. Llamo al TMAS. Diego, tomale el pulso, la presión y la temperatura."
   },
   "l27-06": {
-   "voice": "lars",
-   "text": "Good morning, Pilot. Welcome on board. Here is the pilot card. Draught nine point eight metres, speed eight knots.",
-   "es": "Buen día, práctico. Bienvenido a bordo. Acá tiene la tarjeta de práctico. Calado nueve coma ocho metros, velocidad ocho nudos."
-  },
-  "l27-07": {
-   "voice": "pilot",
-   "text": "Thank you, Captain. Who is on the helm?",
-   "es": "Gracias, Capitán. ¿Quién está en el timón?"
-  },
-  "l27-08": {
-   "pause": 900,
-   "voice": "lars",
-   "text": "The cadet. He's good, and I'm right here.",
-   "es": "El cadete. Es bueno, y yo estoy acá al lado."
-  },
-  "l27-09": {
-   "voice": "pilot",
-   "text": "Very good. Port ten.",
-   "es": "Muy bien. Babor diez."
-  },
-  "l27-10": {
-   "pause": 1500,
-   "voice": "diego",
-   "text": "Port ten.",
-   "es": "Babor diez."
-  },
-  "l27-11": {
-   "voice": "diego",
-   "text": "Wheel is port ten.",
-   "es": "Timón a babor diez."
-  },
-  "l27-12": {
-   "voice": "pilot",
-   "text": "Midships.",
-   "es": "A la vía."
-  },
-  "l27-13": {
-   "pause": 1400,
-   "voice": "diego",
-   "text": "Midships.",
-   "es": "A la vía."
-  },
-  "l27-14": {
-   "voice": "diego",
-   "text": "Wheel is amidships.",
-   "es": "Timón a la vía."
-  },
-  "l27-15": {
-   "voice": "pilot",
-   "text": "Steer zero four five.",
-   "es": "Gobierne cero cuatro cinco."
-  },
-  "l27-16": {
-   "pause": 2200,
-   "voice": "diego",
-   "text": "Steer zero four five.",
-   "es": "Gobernar cero cuatro cinco."
-  },
-  "l27-17": {
-   "voice": "diego",
-   "text": "Steady on zero four five.",
-   "es": "Rumbo cero cuatro cinco."
-  },
-  "l27-18": {
-   "voice": "pilot",
-   "text": "Starboard twenty.",
-   "es": "Estribor veinte."
-  },
-  "l27-19": {
-   "pause": 1400,
-   "voice": "diego",
-   "text": "Starboard twenty.",
-   "es": "Estribor veinte."
-  },
-  "l27-20": {
-   "voice": "diego",
-   "text": "Wheel is starboard twenty.",
-   "es": "Timón a estribor veinte."
-  },
-  "l27-21": {
-   "voice": "pilot",
-   "text": "Midships. Steady.",
-   "es": "A la vía. Así."
-  },
-  "l27-22": {
-   "pause": 2400,
-   "voice": "diego",
-   "text": "Midships. Steady. Steady on zero nine zero.",
-   "es": "A la vía. Así. Rumbo cero nueve cero."
-  },
-  "l27-23": {
-   "voice": "pilot",
-   "text": "Finished with the helm. Well done, cadet. You'll make a good officer.",
-   "es": "Terminado con el timón. Bien hecho, cadete. Vas a ser un buen oficial."
-  },
-  "l27-24": {
-   "pause": 900,
-   "voice": "diego",
-   "text": "Thank you, Pilot. Thank you, Captain.",
-   "es": "Gracias, práctico. Gracias, Capitán."
-  },
-  "l27-25": {
-   "voice": "lars",
-   "text": "Welcome to Marseille, Diego. And welcome to your new life at sea.",
-   "es": "Bienvenido a Marsella, Diego. Y bienvenido a tu nueva vida en el mar."
-  },
-  "w-ladder": {
-   "voice": "model",
-   "text": "pilot ladder"
-  },
-  "x-ladder": {
-   "voice": "model",
-   "text": "The pilot ladder is on the starboard side.",
-   "es": "La escala de práctico está por estribor."
-  },
-  "w-card": {
-   "voice": "model",
-   "text": "pilot card"
-  },
-  "x-card": {
-   "voice": "model",
-   "text": "Here is the pilot card.",
-   "es": "Acá tiene la tarjeta de práctico."
-  },
-  "w-helm": {
-   "voice": "model",
-   "text": "helm"
-  },
-  "x-helm": {
-   "voice": "model",
-   "text": "Who is on the helm?",
-   "es": "¿Quién está en el timón?"
-  },
-  "w-rudder": {
-   "voice": "model",
-   "text": "rudder angle indicator"
-  },
-  "x-rudder": {
-   "voice": "model",
-   "text": "Check the rudder angle indicator.",
-   "es": "Mirá el axiómetro."
-  },
-  "w-midships": {
-   "voice": "model",
-   "text": "midships"
-  },
-  "x-midships": {
-   "voice": "model",
-   "text": "Midships. Wheel is amidships.",
-   "es": "A la vía. Timón a la vía."
-  },
-  "w-hardport": {
-   "voice": "model",
-   "text": "hard-a-port"
-  },
-  "x-hardport": {
-   "voice": "model",
-   "text": "Hard-a-port!",
-   "es": "¡Todo a babor!"
-  },
-  "w-steady": {
-   "voice": "model",
-   "text": "steady"
-  },
-  "x-steady": {
-   "voice": "model",
-   "text": "Steady on zero four five.",
-   "es": "Rumbo cero cuatro cinco, así."
-  },
-  "w-heading": {
-   "voice": "model",
-   "text": "heading"
-  },
-  "x-heading": {
-   "voice": "model",
-   "text": "Our heading is zero four five.",
-   "es": "Nuestro rumbo es cero cuatro cinco."
-  },
-  "w-pilotboat": {
-   "voice": "model",
-   "text": "pilot boat"
-  },
-  "x-pilotboat": {
-   "voice": "model",
-   "text": "The pilot boat is alongside.",
-   "es": "La lancha de práctico está al costado."
-  },
-  "w-station": {
-   "voice": "model",
-   "text": "pilot station"
-  },
-  "x-station": {
-   "voice": "model",
-   "text": "Call the pilot station on channel twelve.",
-   "es": "Llamá a la estación de prácticos por el canal doce."
-  },
-  "p-port": {
-   "voice": "model",
-   "text": "Port ten.",
-   "es": "Babor diez."
-  },
-  "p-wheel": {
-   "voice": "model",
-   "text": "Wheel is port ten.",
-   "es": "Timón a babor diez."
-  },
-  "p-steady": {
-   "voice": "model",
-   "text": "Steady on zero four five.",
-   "es": "Rumbo cero cuatro cinco."
-  },
-  "p-onboard": {
-   "voice": "model",
-   "text": "Pilot on board. Coming to the bridge.",
-   "es": "Práctico a bordo. Vamos al puente."
-  },
-  "m-stbd": {
-   "voice": "model",
-   "text": "Starboard fifteen.",
-   "es": "Estribor quince."
-  },
-  "m-steer": {
-   "voice": "model",
-   "text": "Steer one two zero.",
-   "es": "Gobernar uno dos cero."
-  },
-  "m-onboard": {
-   "voice": "model",
-   "text": "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
-   "es": "Puente, escala de práctico. Práctico a bordo. Vamos al puente."
-  },
-  "m-hard": {
-   "voice": "model",
-   "text": "Hard-a-port.",
-   "es": "Todo a babor."
-  },
-  "c-show-ladder": {
-   "voice": "lars",
-   "text": "Show me the pilot ladder."
-  },
-  "c-show-card": {
-   "voice": "pilot",
-   "text": "Where's the pilot card?"
-  },
-  "c-show-helm": {
-   "voice": "lars",
-   "text": "Where's the helm?"
-  },
-  "c-show-rudder": {
-   "voice": "pilot",
-   "text": "Show me the rudder angle indicator."
-  },
-  "c-show-heading": {
-   "voice": "pilot",
-   "text": "Where can you see the heading?"
-  },
-  "c-o-stbd": {
-   "voice": "pilot",
-   "text": "Starboard fifteen."
-  },
-  "c-o-steer": {
-   "voice": "pilot",
-   "text": "Steer one two zero."
-  },
-  "c-o-mid": {
-   "voice": "pilot",
-   "text": "Midships."
-  },
-  "c-o-hard": {
-   "voice": "pilot",
-   "text": "Hard-a-port!"
-  },
-  "c-askladder": {
-   "voice": "lars",
-   "text": "Diego, is the pilot on board? Over.",
+   "voice": "doctor",
+   "text": "CIRM Rome, doctor speaking. Good morning. What is the problem?",
+   "es": "CIRM Roma, habla el médico. Buen día. ¿Cuál es el problema?",
    "radio": true
   },
-  "c-o-other": {
-   "voice": "pilot",
-   "text": "Port twenty. Then steer three three zero."
-  },
-  "c-head-other": {
+  "l27-07": {
    "voice": "tanya",
-   "text": "Our heading is two seven five."
+   "text": "Good morning, doctor. This is LNG Horizon. Our cook, fifty years old, cut his left hand with a knife twenty minutes ago.",
+   "es": "Buen día, doctor. Aquí LNG Horizon. Nuestro cocinero, de cincuenta años, se cortó la mano izquierda con un cuchillo hace veinte minutos."
+  },
+  "l27-08": {
+   "voice": "doctor",
+   "text": "Has the bleeding stopped? Can he move his fingers?",
+   "es": "¿Paró la hemorragia? ¿Puede mover los dedos?",
+   "radio": true
+  },
+  "l27-09": {
+   "voice": "diego",
+   "text": "The bleeding is slower now. He can move all his fingers, but it hurts.",
+   "es": "Ahora sangra menos. Puede mover todos los dedos, pero le duele."
+  },
+  "l27-10": {
+   "voice": "doctor",
+   "text": "Good. What are his vital signs?",
+   "es": "Bien. ¿Cuáles son sus signos vitales?",
+   "radio": true
+  },
+  "l27-11": {
+   "pause": 800,
+   "voice": "diego",
+   "text": "Pulse ninety-two. Blood pressure one hundred and thirty over eighty-five. Temperature thirty-six point eight. Pain seven out of ten.",
+   "es": "Pulso noventa y dos. Presión ciento treinta sobre ochenta y cinco. Temperatura treinta y seis coma ocho. Dolor siete sobre diez."
+  },
+  "l27-12": {
+   "voice": "doctor",
+   "text": "Thank you. Clean the wound with saline. Close it with steri-strips and put on a pressure bandage. Give him a painkiller, paracetamol, one gram. No work with that hand for five days. Call me again in six hours.",
+   "es": "Gracias. Limpien la herida con solución fisiológica. Ciérrenla con steri-strips y pongan un vendaje compresivo. Denle un analgésico, paracetamol, un gramo. Nada de trabajo con esa mano por cinco días. Llámenme de nuevo en seis horas.",
+   "radio": true
+  },
+  "l27-13": {
+   "voice": "tanya",
+   "text": "Clean with saline, steri-strips, pressure bandage, paracetamol one gram, no work for five days, call back in six hours. Correct?",
+   "es": "Limpiar con solución fisiológica, steri-strips, vendaje compresivo, paracetamol un gramo, nada de trabajo por cinco días, volver a llamar en seis horas. ¿Correcto?"
+  },
+  "l27-14": {
+   "pause": 1500,
+   "voice": "doctor",
+   "text": "Correct. Good luck.",
+   "es": "Correcto. Buena suerte.",
+   "radio": true
+  },
+  "l27-15": {
+   "voice": "mario",
+   "text": "Five days without work? And who cooks the lunch?",
+   "es": "¿Cinco días sin trabajar? ¿Y quién cocina el almuerzo?"
+  },
+  "l27-16": {
+   "voice": "diego",
+   "text": "Today I'll help in the galley, Mario. You just tell me what to do.",
+   "es": "Hoy te ayudo en la cocina, Mario. Vos decime qué hacer."
+  },
+  "w-wound": {
+   "voice": "model",
+   "text": "wound"
+  },
+  "x-wound": {
+   "voice": "model",
+   "text": "Clean the wound with saline.",
+   "es": "Limpiá la herida con solución fisiológica."
+  },
+  "w-bleeding": {
+   "voice": "model",
+   "text": "bleeding"
+  },
+  "x-bleeding": {
+   "voice": "model",
+   "text": "The bleeding has stopped.",
+   "es": "El sangrado paró."
+  },
+  "w-pulse": {
+   "voice": "model",
+   "text": "pulse"
+  },
+  "x-pulse": {
+   "voice": "model",
+   "text": "His pulse is ninety-two.",
+   "es": "Su pulso es noventa y dos."
+  },
+  "w-bp": {
+   "voice": "model",
+   "text": "blood pressure"
+  },
+  "x-bp": {
+   "voice": "model",
+   "text": "Blood pressure one thirty over eighty-five.",
+   "es": "Presión ciento treinta sobre ochenta y cinco."
+  },
+  "w-temp": {
+   "voice": "model",
+   "text": "temperature"
+  },
+  "x-temp": {
+   "voice": "model",
+   "text": "His temperature is thirty-six point eight.",
+   "es": "Su temperatura es treinta y seis coma ocho."
+  },
+  "w-vitals": {
+   "voice": "model",
+   "text": "vital signs"
+  },
+  "x-vitals": {
+   "voice": "model",
+   "text": "What are his vital signs?",
+   "es": "¿Cuáles son sus signos vitales?"
+  },
+  "w-painkiller": {
+   "voice": "model",
+   "text": "painkiller"
+  },
+  "x-painkiller": {
+   "voice": "model",
+   "text": "Give him a painkiller.",
+   "es": "Dale un analgésico."
+  },
+  "w-bandage": {
+   "voice": "model",
+   "text": "bandage"
+  },
+  "x-bandage": {
+   "voice": "model",
+   "text": "Put on a pressure bandage.",
+   "es": "Poné un vendaje compresivo."
+  },
+  "w-kit": {
+   "voice": "model",
+   "text": "first-aid kit"
+  },
+  "x-kit": {
+   "voice": "model",
+   "text": "Bring the first-aid kit to the galley.",
+   "es": "Traé el botiquín a la cocina."
+  },
+  "p-cut": {
+   "voice": "model",
+   "text": "He cut his left hand with a knife.",
+   "es": "Se cortó la mano izquierda con un cuchillo."
+  },
+  "p-hurts": {
+   "voice": "model",
+   "text": "He can move his fingers, but it hurts.",
+   "es": "Puede mover los dedos, pero le duele."
+  },
+  "p-bp": {
+   "voice": "model",
+   "text": "Blood pressure one hundred and thirty over eighty-five.",
+   "es": "Presión ciento treinta sobre ochenta y cinco."
+  },
+  "p-pain": {
+   "voice": "model",
+   "text": "Pain seven out of ten.",
+   "es": "Dolor siete sobre diez."
+  },
+  "m-what": {
+   "voice": "model",
+   "text": "He cut his hand. It's bleeding a lot.",
+   "es": "Se cortó la mano. Sangra mucho."
+  },
+  "m-vitals": {
+   "voice": "model",
+   "text": "Pulse eighty-eight. Temperature thirty-seven point two.",
+   "es": "Pulso ochenta y ocho. Temperatura treinta y siete coma dos."
+  },
+  "m-bp": {
+   "voice": "model",
+   "text": "Blood pressure one hundred and forty over ninety.",
+   "es": "Presión ciento cuarenta sobre noventa."
+  },
+  "m-fingers": {
+   "voice": "model",
+   "text": "Yes, he can move his fingers, but it hurts.",
+   "es": "Sí, puede mover los dedos, pero le duele."
+  },
+  "m-temp": {
+   "voice": "model",
+   "text": "Temperature thirty-six point eight.",
+   "es": "Temperatura treinta y seis coma ocho."
+  },
+  "c-show-wound": {
+   "voice": "tanya",
+   "text": "Show me the wound."
+  },
+  "c-show-bandage": {
+   "voice": "tanya",
+   "text": "Where's the bandage?"
+  },
+  "c-show-painkiller": {
+   "voice": "mario",
+   "text": "Where are the painkillers?"
+  },
+  "c-show-temp": {
+   "voice": "tanya",
+   "text": "Show me where you see his temperature."
+  },
+  "c-show-bp": {
+   "voice": "tanya",
+   "text": "Show me the blood pressure."
+  },
+  "c-show-pulse": {
+   "voice": "tanya",
+   "text": "Where do you take his pulse?"
+  },
+  "c-whathappened": {
+   "voice": "tanya",
+   "text": "Diego, what happened to Mario?"
+  },
+  "c-vitals": {
+   "voice": "doctor",
+   "text": "What are his pulse and temperature?",
+   "radio": true
+  },
+  "c-bp": {
+   "voice": "doctor",
+   "text": "And his blood pressure?",
+   "radio": true
+  },
+  "c-fingers": {
+   "voice": "doctor",
+   "text": "Can he move his fingers?",
+   "radio": true
+  },
+  "c-doc-other": {
+   "voice": "doctor",
+   "text": "Give him one tablet every eight hours and call me tomorrow morning.",
+   "radio": true
+  },
+  "c-bp-other": {
+   "voice": "tanya",
+   "text": "Blood pressure one hundred and twenty over seventy-five."
   }
  },
  "dialogue": [
@@ -345,166 +297,150 @@
   "l27-13",
   "l27-14",
   "l27-15",
-  "l27-16",
-  "l27-17",
-  "l27-18",
-  "l27-19",
-  "l27-20",
-  "l27-21",
-  "l27-22",
-  "l27-23",
-  "l27-24",
-  "l27-25"
+  "l27-16"
  ],
  "words": {
-  "ladder": {
-   "en": "pilot ladder",
-   "ipa": "/ˈpaɪlət ˌlædə/",
-   "es": "escala de práctico",
-   "audio": "w-ladder",
-   "ex": "x-ladder"
+  "wound": {
+   "en": "wound",
+   "ipa": "/wuːnd/",
+   "es": "herida",
+   "audio": "w-wound",
+   "ex": "x-wound"
   },
-  "card": {
-   "en": "pilot card",
-   "ipa": "/ˈpaɪlət kɑːd/",
-   "es": "tarjeta de práctico",
-   "audio": "w-card",
-   "ex": "x-card"
+  "bleeding": {
+   "en": "bleeding",
+   "ipa": "/ˈbliːdɪŋ/",
+   "es": "hemorragia, sangrado",
+   "audio": "w-bleeding",
+   "ex": "x-bleeding"
   },
-  "helm": {
-   "en": "helm",
-   "ipa": "/helm/",
-   "es": "timón (puesto de gobierno)",
-   "audio": "w-helm",
-   "ex": "x-helm"
+  "pulse": {
+   "en": "pulse",
+   "ipa": "/pʌls/",
+   "es": "pulso",
+   "audio": "w-pulse",
+   "ex": "x-pulse"
   },
-  "rudder": {
-   "en": "rudder angle indicator",
-   "ipa": "/ˈrʌdər ˌæŋɡl ˈɪndɪkeɪtə/",
-   "es": "axiómetro",
-   "audio": "w-rudder",
-   "ex": "x-rudder"
+  "bp": {
+   "en": "blood pressure",
+   "ipa": "/ˈblʌd ˌpreʃə/",
+   "es": "presión arterial",
+   "audio": "w-bp",
+   "ex": "x-bp"
   },
-  "midships": {
-   "en": "midships",
-   "ipa": "/ˈmɪdʃɪps/",
-   "es": "a la vía",
-   "audio": "w-midships",
-   "ex": "x-midships"
+  "temp": {
+   "en": "temperature",
+   "ipa": "/ˈtemprətʃə/",
+   "es": "temperatura",
+   "audio": "w-temp",
+   "ex": "x-temp"
   },
-  "hardport": {
-   "en": "hard-a-port",
-   "ipa": "/ˌhɑːd ə ˈpɔːt/",
-   "es": "todo a babor",
-   "audio": "w-hardport",
-   "ex": "x-hardport"
+  "vitals": {
+   "en": "vital signs",
+   "ipa": "/ˈvaɪtl saɪnz/",
+   "es": "signos vitales",
+   "audio": "w-vitals",
+   "ex": "x-vitals"
   },
-  "steady": {
-   "en": "steady",
-   "ipa": "/ˈstedi/",
-   "es": "mantener el rumbo",
-   "audio": "w-steady",
-   "ex": "x-steady"
+  "painkiller": {
+   "en": "painkiller",
+   "ipa": "/ˈpeɪnkɪlə/",
+   "es": "analgésico",
+   "audio": "w-painkiller",
+   "ex": "x-painkiller"
   },
-  "heading": {
-   "en": "heading",
-   "ipa": "/ˈhedɪŋ/",
-   "es": "rumbo",
-   "audio": "w-heading",
-   "ex": "x-heading"
+  "bandage": {
+   "en": "bandage",
+   "ipa": "/ˈbændɪdʒ/",
+   "es": "venda, vendaje",
+   "audio": "w-bandage",
+   "ex": "x-bandage"
   },
-  "pilotboat": {
-   "en": "pilot boat",
-   "ipa": "/ˈpaɪlət bəʊt/",
-   "es": "lancha de práctico",
-   "audio": "w-pilotboat",
-   "ex": "x-pilotboat"
-  },
-  "station": {
-   "en": "pilot station",
-   "ipa": "/ˈpaɪlət ˈsteɪʃn/",
-   "es": "estación de prácticos",
-   "audio": "w-station",
-   "ex": "x-station"
+  "kit": {
+   "en": "first-aid kit",
+   "ipa": "/ˌfɜːst ˈeɪd kɪt/",
+   "es": "botiquín",
+   "audio": "w-kit",
+   "ex": "x-kit"
   }
  },
  "plate": {
   "svg": "img/l27/plate.svg",
   "pins": [
    {
-    "word": "ladder",
-    "x": 78,
-    "y": 28
+    "word": "wound",
+    "x": 56,
+    "y": 112
    },
    {
-    "word": "rudder",
-    "x": 230,
-    "y": 38
+    "word": "pulse",
+    "x": 96,
+    "y": 218
    },
    {
-    "word": "heading",
-    "x": 342,
-    "y": 38
+    "word": "bandage",
+    "x": 210,
+    "y": 62
    },
    {
-    "word": "helm",
-    "x": 262,
-    "y": 146
+    "word": "painkiller",
+    "x": 215,
+    "y": 145
    },
    {
-    "word": "card",
-    "x": 360,
-    "y": 204
+    "word": "temp",
+    "x": 270,
+    "y": 52
    },
    {
-    "word": "pilotboat",
-    "x": 118,
-    "y": 212
+    "word": "bp",
+    "x": 339,
+    "y": 52
    },
    {
-    "word": "station",
-    "x": 26,
-    "y": 186
+    "word": "kit",
+    "x": 194,
+    "y": 30
    }
   ]
  },
  "docs": {
-  "card": {
+  "med": {
    "kind": "form",
-   "title": "PILOT CARD",
-   "subtitle": "M/V LNG HORIZON · MARSEILLE · 27 MAR 2026 · 0710",
+   "title": "TMAS · MEDICAL REPORT",
+   "subtitle": "M/V LNG HORIZON · 26 MAR 2026 · 1005 · TO CIRM ROME",
    "cells": [
     [
-     "DRAUGHT",
-     "Fwd 9.8 m · Aft 9.8 m"
+     "PATIENT",
+     "Chief Cook · male · 50 years"
     ],
     [
-     "LENGTH / BEAM",
-     "295 m / 46 m"
+     "WHAT HAPPENED",
+     "Cut, left hand, kitchen knife · 0940"
     ],
     [
-     "SPEED NOW",
-     "8 knots"
+     "WHERE",
+     "Between thumb and first finger"
     ],
     [
-     "HEADING",
-     "045°"
+     "BLEEDING",
+     "Slower after 15 min pressure"
     ],
     [
-     "RUDDER",
-     "Hard over to hard over: 28 seconds"
+     "MOVEMENT",
+     "Can move all fingers · pain"
     ],
     [
-     "PROPELLER",
-     "Right-handed, fixed pitch"
+     "VITAL SIGNS",
+     "Pulse 92 · BP 130/85 · Temp 36.8 °C"
     ],
     [
-     "BOW THRUSTER",
-     "Yes · 2,000 kW"
+     "PAIN",
+     "7/10"
     ],
     [
-     "ON THE HELM",
-     "Cadet D. Martínez · Master on the bridge"
+     "ALLERGIES",
+     "None known"
     ]
    ]
   }
@@ -512,16 +448,16 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: the pilot",
+   "title": "Listen: a cut in the galley",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l27/scene.jpg",
-     "kicker": "Day 14 · 07:00 · Marseille",
-     "title": "Pilot on board",
-     "body": "The last morning of the voyage. Diego meets the pilot at the ladder, takes him to the bridge and then takes the helm. Every order, he repeats. Listen first, one piece at a time.",
+     "kicker": "Day 13 · 10:00 · Mediterranean",
+     "title": "Calling TMAS",
+     "body": "There's no doctor on board. When Mario cuts his hand, Tanya calls the radio medical service in Rome, and Diego gives the numbers. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
@@ -530,169 +466,163 @@
       "l27-01",
       "l27-02"
      ],
-     "q": "On which side is the pilot boat?",
+     "q": "What does Diego do first?",
      "opts": [
-      "Starboard",
-      "Port",
-      "Astern"
+      "Presses the cut with a clean towel",
+      "Calls the bridge",
+      "Gives Mario water"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l27-06"
+      "l27-04"
      ],
-     "q": "What is the draught?",
+     "q": "Where is the cut?",
      "opts": [
-      "9.8 metres",
-      "8 metres",
-      "9 metres"
+      "Left hand, between the thumb and the first finger",
+      "Right arm",
+      "Left foot"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l27-07",
-      "l27-08"
+      "l27-08",
+      "l27-09"
      ],
-     "q": "Who is on the helm?",
+     "q": "Can Mario move his fingers?",
      "opts": [
-      "The cadet",
-      "The Captain",
-      "An AB"
+      "Yes, but it hurts",
+      "No",
+      "Only the thumb"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l27-09",
-      "l27-10",
       "l27-11"
      ],
-     "q": "What does Diego do with each order?",
+     "q": "What is Mario's pulse?",
      "opts": [
-      "Repeats it, then reports the wheel",
-      "Says OK",
-      "Waits in silence"
+      "92",
+      "130",
+      "85"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l27-21",
-      "l27-22"
+      "l27-12"
      ],
-     "q": "What is the new heading?",
+     "q": "How long without work?",
      "opts": [
-      "090",
-      "045",
-      "009"
+      "Five days",
+      "Six hours",
+      "One day"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l27-23"
+      "l27-15",
+      "l27-16"
      ],
-     "q": "What does the pilot say about Diego?",
+     "q": "Who will help in the galley?",
      "opts": [
-      "He'll make a good officer",
-      "He's too slow",
-      "He talks too much"
+      "Diego",
+      "Tanya",
+      "Nobody: no lunch today"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole arrival",
+     "title": "Now the whole scene",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Pilot and helm",
+   "title": "First aid and vital signs",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The steering position and the pilot ladder."
+     "body": "Mario's hand and the first-aid kit."
     },
     {
      "type": "card",
-     "word": "ladder"
+     "word": "wound"
     },
     {
      "type": "card",
-     "word": "card"
-    },
-    {
-     "type": "card",
-     "word": "pilotboat"
-    },
-    {
-     "type": "card",
-     "word": "station"
+     "word": "bleeding"
     },
     {
      "type": "tap",
-     "audio": "c-show-ladder",
-     "a": "ladder"
+     "audio": "c-show-wound",
+     "a": "wound"
     },
     {
      "type": "card",
-     "word": "helm"
+     "word": "vitals"
     },
     {
      "type": "card",
-     "word": "rudder"
+     "word": "pulse"
+    },
+    {
+     "type": "card",
+     "word": "bp"
+    },
+    {
+     "type": "card",
+     "word": "temp"
     },
     {
      "type": "tap",
-     "audio": "c-show-rudder",
-     "a": "rudder"
-    },
-    {
-     "type": "card",
-     "word": "midships"
-    },
-    {
-     "type": "card",
-     "word": "hardport"
-    },
-    {
-     "type": "card",
-     "word": "steady"
-    },
-    {
-     "type": "card",
-     "word": "heading"
+     "audio": "c-show-pulse",
+     "a": "pulse"
     },
     {
      "type": "tap",
-     "audio": "c-show-heading",
-     "a": "heading"
+     "audio": "c-show-bp",
+     "a": "bp"
+    },
+    {
+     "type": "card",
+     "word": "painkiller"
+    },
+    {
+     "type": "card",
+     "word": "bandage"
+    },
+    {
+     "type": "card",
+     "word": "kit"
     },
     {
      "type": "tap",
-     "audio": "c-show-helm",
-     "a": "helm"
+     "audio": "c-show-bandage",
+     "a": "bandage"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"a la vía\" in English:",
+     "q": "\"analgésico\" in English:",
      "opts": [
-      "midships",
-      "middle",
-      "straight"
+      "painkiller",
+      "analgesic pill",
+      "pain stopper"
      ],
      "a": 0
     },
@@ -701,24 +631,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "pilot ladder",
-       "escala de práctico"
+       "wound",
+       "herida"
       ],
       [
-       "helm",
-       "timón"
+       "bleeding",
+       "sangrado"
       ],
       [
-       "midships",
-       "a la vía"
+       "pulse",
+       "pulso"
       ],
       [
-       "steady",
-       "así"
+       "bandage",
+       "venda"
       ],
       [
-       "heading",
-       "rumbo"
+       "vital signs",
+       "signos vitales"
       ]
      ]
     }
@@ -726,142 +656,145 @@
   },
   {
    "id": "phrases",
-   "title": "Order, read-back, report",
+   "title": "Describe and dictate",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "At the helm",
+     "title": "Talking to the doctor",
      "list": [
       [
-       "Port ten.",
-       "Babor diez.",
-       "p-port"
+       "He cut his left hand with a knife.",
+       "Se cortó la mano izquierda con un cuchillo.",
+       "p-cut"
       ],
       [
-       "Wheel is port ten.",
-       "Timón a babor diez.",
-       "p-wheel"
+       "He can move his fingers, but it hurts.",
+       "Puede mover los dedos, pero le duele.",
+       "p-hurts"
       ],
       [
-       "Steady on zero four five.",
-       "Rumbo cero cuatro cinco.",
-       "p-steady"
+       "Blood pressure one hundred and thirty over eighty-five.",
+       "Presión ciento treinta sobre ochenta y cinco.",
+       "p-bp"
       ],
       [
-       "Pilot on board. Coming to the bridge.",
-       "Práctico a bordo. Vamos al puente.",
-       "p-onboard"
+       "Pain seven out of ten.",
+       "Dolor siete sobre diez.",
+       "p-pain"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Three steps for every order",
+     "title": "What happened · how he is · the numbers",
      "steps": [
       [
-       "1 · repeat",
-       "Pilot: <b>Port ten.</b> → You: <b>Port ten.</b>"
+       "what happened",
+       "He <b>cut</b> his hand. (past: <i>cut</i> doesn't change)"
       ],
       [
-       "2 · do it",
-       "Turn the wheel. Watch the rudder angle indicator."
+       "how he is now",
+       "It<b>'s bleeding</b>. It <b>hurts</b>. He <b>can</b> move his fingers."
       ],
       [
-       "3 · report",
-       "<b>Wheel is port ten.</b> · <b>Wheel is amidships.</b> · <b>Steady on zero four five.</b>"
+       "the numbers",
+       "Pulse <b>ninety-two</b> · BP <b>one thirty over eighty-five</b> · Temp <b>thirty-six point eight</b> · Pain <b>seven out of ten</b>"
       ]
      ],
      "paras": [
-      "The repeat is called the <b>read-back</b>: it proves you heard the right order. Exactly the same words, nothing more.",
-      "Courses are said figure by figure: <b>zero four five</b>, <b>one two zero</b>. Angles of rudder: <b>port ten</b>, <b>starboard twenty</b>, <b>hard-a-port</b>."
+      "Give the doctor the facts in that order: <b>what happened, when, where on the body, how he is now, vital signs</b>.",
+      "Blood pressure: two numbers with <b>over</b> in the middle. Temperature: <b>point</b>, not <i>comma</i>."
      ],
-     "avoid": "OK · Yes, sir · forty-five"
+     "avoid": "He has cut himself the hand · thirty-six comma eight"
     },
     {
      "type": "choice",
-     "q": "The pilot says \"Starboard twenty.\" First you say…",
+     "q": "Temperature 37,2 °C. You say…",
      "opts": [
-      "Starboard twenty.",
-      "Yes, Pilot.",
-      "OK, twenty."
+      "thirty-seven point two",
+      "thirty-seven comma two",
+      "thirty-seven and two"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The rudder is now at port ten. You report…",
+     "q": "Blood pressure 140/90. You say…",
      "opts": [
-      "Wheel is port ten.",
-      "Port ten done.",
-      "I did it."
+      "one hundred and forty over ninety",
+      "one hundred and forty on ninety",
+      "one hundred forty, ninety"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "audio": "c-head-other",
-     "q": "What's the heading? Write three numbers.",
+     "audio": "c-bp-other",
+     "q": "Write the blood pressure like on a form (number/number).",
      "accept": [
-      "275",
-      "2 7 5",
-      "two seven five"
+      "120/75",
+      "120 / 75",
+      "120 over 75"
      ]
     },
     {
      "type": "build",
-     "q": "Steady on zero four five.",
+     "q": "He can move his fingers, but it hurts.",
      "a": [
-      "Steady",
-      "on",
-      "zero",
-      "four",
-      "five."
+      "He",
+      "can",
+      "move",
+      "his",
+      "fingers,",
+      "but",
+      "it",
+      "hurts."
      ],
      "extra": [
-      "forty-five",
-      "in"
+      "hurt",
+      "the"
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "No numbers in Spanish style",
+     "title": "his hand, not the hand",
      "paras": [
-      "In Spanish we say <i>rumbo cuarenta y cinco</i>. On the helm it's always three figures: <b>zero four five</b>.",
-      "<b>Midships</b> is one word; when you report, <b>amidships</b>: <b>Wheel is amidships.</b>"
+      "In Spanish: <i>se cortó <b>la</b> mano</i>. In English the body part takes <b>his / her / my</b>: <b>He cut <u>his</u> hand.</b>",
+      "<b>It hurts</b>: the body part is the subject. <i>Le duele la mano</i> → <b>His hand hurts.</b>"
      ],
-     "avoid": "Steer forty-five · Wheel is in the middle"
+     "avoid": "He cut the hand · It hurts him the hand"
     },
     {
      "type": "listen",
      "audio": [
-      "c-o-other"
+      "c-doc-other"
      ],
-     "q": "What are the two orders?",
+     "q": "How often does he take a tablet?",
      "opts": [
-      "Port twenty, then steer 330",
-      "Starboard twenty, then steer 030",
-      "Port twelve, then steer 333"
+      "Every eight hours",
+      "Every hour",
+      "Once a day"
      ],
      "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Helm orders",
+     "title": "wound and temperature",
      "paras": [
-      "A pilot speaks fast. Answer at the same speed, clear and flat, no question tone.",
-      "<b>Hard-a-port</b>: three beats, <b>HARD-a-PORT</b>."
+      "<b>wound</b> (herida) sounds like <b>woond</b>, long <i>u</i>. Not like <i>round</i>.",
+      "<b>temperature</b>: <b>TEM-pruh-chuh</b>, three syllables. The middle <i>e</i> almost disappears."
      ],
      "list": [
       [
-       "Hard-a-port.",
-       "Todo a babor.",
-       "m-hard"
+       "Temperature thirty-six point eight.",
+       "Temperatura treinta y seis coma ocho.",
+       "m-temp"
       ]
      ]
     }
@@ -869,57 +802,57 @@
   },
   {
    "id": "read",
-   "title": "Read the pilot card",
+   "title": "Read the medical report",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "card",
-     "q": "How long from hard over to hard over?",
+     "doc": "med",
+     "q": "When did it happen?",
      "opts": [
-      "28 seconds",
-      "28 minutes",
-      "2 seconds"
+      "09:40",
+      "10:05",
+      "10:40"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "card",
-     "q": "Is there a bow thruster?",
+     "doc": "med",
+     "q": "Where did the report go?",
      "opts": [
-      "Yes, 2,000 kW",
-      "No",
-      "Only aft"
+      "CIRM Rome",
+      "Tarifa Traffic",
+      "The company"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "card",
-     "q": "Tap who is on the helm.",
-     "a": 7
+     "doc": "med",
+     "q": "Tap the vital signs.",
+     "a": 5
     },
     {
      "type": "doc",
-     "doc": "card",
-     "q": "What kind of propeller?",
+     "doc": "med",
+     "q": "Does Mario have allergies?",
      "opts": [
-      "Right-handed, fixed pitch",
-      "Left-handed",
-      "Controllable pitch"
+      "None known",
+      "Yes, to paracetamol",
+      "The report doesn't say"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "card",
-     "q": "What is the ship's length?",
+     "doc": "med",
+     "q": "How long did they press the wound?",
      "opts": [
-      "295 m",
-      "46 m",
-      "9.8 m"
+      "15 minutes",
+      "5 minutes",
+      "1 hour"
      ],
      "a": 0
     }
@@ -927,71 +860,72 @@
   },
   {
    "id": "speak",
-   "title": "Take the helm",
+   "title": "Give the facts",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Repeat every order",
-     "body": "Listen, say it, check it. Same words as the pilot, at the same speed.",
-     "es": "Las mismas palabras que el práctico.",
+     "title": "Calm numbers",
+     "body": "Listen, say it, check it. Slow and clear: the doctor is writing.",
+     "es": "Despacio y claro: el médico está anotando.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-port"
+     "model": "p-cut"
     },
     {
      "type": "shadow",
-     "model": "p-wheel"
+     "model": "p-bp"
     },
     {
      "type": "shadow",
-     "model": "p-steady"
+     "model": "p-pain"
     },
     {
      "type": "role",
-     "cue": "c-askladder",
-     "task": "Report: pilot on board, coming to the bridge.",
-     "model": "m-onboard",
+     "cue": "c-whathappened",
+     "task": "He cut his hand, it's bleeding a lot.",
+     "model": "m-what",
      "accept": [
-      "Bridge, pilot ladder. Pilot on board. Coming to the bridge.",
-      "Pilot on board. Coming to the bridge.",
-      "Bridge, pilot ladder, pilot on board, coming to the bridge."
+      "He cut his hand. It's bleeding a lot.",
+      "He cut his hand, it's bleeding a lot.",
+      "Mario cut his hand. It's bleeding a lot."
      ]
     },
     {
      "type": "role",
-     "cue": "c-o-stbd",
-     "task": "Repeat the order.",
-     "model": "m-stbd",
+     "cue": "c-vitals",
+     "task": "Pulse 88, temperature 37.2.",
+     "model": "m-vitals",
      "accept": [
-      "Starboard fifteen.",
-      "Starboard fifteen!"
+      "Pulse eighty-eight. Temperature thirty-seven point two.",
+      "Pulse eighty-eight, temperature thirty-seven point two.",
+      "His pulse is eighty-eight. Temperature thirty-seven point two."
      ]
     },
     {
      "type": "role",
-     "cue": "c-o-steer",
-     "task": "Repeat the order.",
-     "model": "m-steer",
+     "cue": "c-bp",
+     "task": "Blood pressure 140/90.",
+     "model": "m-bp",
      "accept": [
-      "Steer one two zero.",
-      "Steer one two zero!"
+      "Blood pressure one hundred and forty over ninety.",
+      "One hundred and forty over ninety.",
+      "Blood pressure one forty over ninety."
      ]
     },
     {
      "type": "role",
-     "cue": "c-o-hard",
-     "task": "Repeat the order.",
-     "model": "m-hard",
+     "cue": "c-fingers",
+     "task": "Yes, he can move them, but it hurts.",
+     "model": "m-fingers",
      "accept": [
-      "Hard-a-port.",
-      "Hard a port.",
-      "Hard-a-port!",
-      "Hard to port."
+      "Yes, he can move his fingers, but it hurts.",
+      "Yes, he can move his fingers but it hurts.",
+      "He can move his fingers, but it hurts."
      ]
     }
    ]
@@ -1004,89 +938,90 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-helm",
+     "audio": "w-wound",
      "q": "Type what you hear.",
      "accept": [
-      "helm",
-      "the helm"
+      "wound",
+      "a wound",
+      "the wound"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-card",
-     "a": "card"
+     "audio": "c-show-painkiller",
+     "a": "painkiller"
     },
     {
      "type": "tap",
-     "audio": "c-show-rudder",
-     "a": "rudder"
+     "audio": "c-show-temp",
+     "a": "temp"
     },
     {
      "type": "listen",
      "audio": [
-      "c-o-mid"
+      "l27-13"
      ],
-     "q": "What's the order?",
+     "q": "Why does Tanya repeat everything?",
      "opts": [
-      "Midships",
-      "Port side",
-      "Middle watch"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "After \"Steer zero four five\", when the ship is on 045, you report…",
-     "opts": [
-      "Steady on zero four five.",
-      "Forty-five, OK.",
-      "Steer zero four five done."
+      "To check she understood the doctor",
+      "Because the line is bad",
+      "For Mario"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Why do you repeat each order?",
+     "q": "Complete: \"He cut ___ hand.\"",
      "opts": [
-      "To prove you heard it right",
-      "To be polite",
-      "Because the pilot is French"
+      "his",
+      "the",
+      "him"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "\"Pain seven out of ten\" means the pain is…",
+     "opts": [
+      "strong",
+      "very small",
+      "gone"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "q": "Wheel is amidships.",
+     "q": "Give him a painkiller.",
      "a": [
-      "Wheel",
-      "is",
-      "amidships."
+      "Give",
+      "him",
+      "a",
+      "painkiller."
      ],
      "extra": [
-      "midships",
-      "the"
+      "his",
+      "to"
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "l27-25"
+      "l27-12"
      ],
-     "q": "What does the Captain say at the end?",
+     "q": "When must they call again?",
      "opts": [
-      "Welcome to your new life at sea",
-      "See you next voyage",
-      "Go and rest"
+      "In six hours",
+      "Tomorrow",
+      "In five days"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: escala de práctico",
+     "q": "Write it in English: signos vitales",
      "accept": [
-      "pilot ladder",
-      "the pilot ladder",
-      "a pilot ladder"
+      "vital signs",
+      "the vital signs"
      ]
     }
    ]

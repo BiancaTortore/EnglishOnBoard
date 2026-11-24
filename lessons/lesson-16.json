@@ -1,267 +1,279 @@
 {
- "n": 16, "modelAudio": true, "mediaRev": 1,
+ "n": 16,
+ "modelAudio": true,
+ "mediaRev": 3,
  "module": 4,
- "title": "Course, position & traffic",
- "place": "Day 5 · 17:00 · Florida Strait, bridge",
- "goal": "Report other ships as lookout: what, where, how far, and the bearing.",
+ "title": "Weather & sea",
+ "place": "Day 4 · 06:30 · Gulf of Mexico, bridge wing",
+ "goal": "Report wind, sea, visibility and the barometer, and say how they are changing.",
  "images": {
   "hero": "img/l16/hero.jpg",
   "scene": "img/l16/scene.jpg"
  },
+ "radioChannel": "PHONE",
  "audio": {
   "l16-01": {
-   "voice": "tanya",
-   "text": "Busy afternoon, Diego. This is the Florida Strait. Report every ship you see.",
-   "es": "Tarde movida, Diego. Este es el Estrecho de Florida. Reportá cada buque que veas."
+   "voice": "diego",
+   "text": "Chief Officer! The wind is increasing. And there's a dark cloud ahead.",
+   "es": "¡Primer Oficial! El viento está aumentando. Y hay una nube oscura adelante."
   },
   "l16-02": {
-   "pause": 1200,
-   "voice": "diego",
-   "text": "Ship on the starboard bow!",
-   "es": "¡Buque por la amura de estribor!"
+   "pause": 600,
+   "voice": "tanya",
+   "text": "Let me see… Yes, that's a squall. Rain and strong gusts. What's the barometer?",
+   "es": "A ver… Sí, es un chubasco. Lluvia y ráfagas fuertes. ¿Qué marca el barómetro?"
   },
   "l16-03": {
-   "voice": "tanya",
-   "text": "Range?",
-   "es": "¿Distancia?"
+   "pause": 900,
+   "voice": "diego",
+   "text": "One thousand and six. It's falling.",
+   "es": "Mil seis. Está bajando."
   },
   "l16-04": {
-   "voice": "diego",
-   "text": "About six miles.",
-   "es": "Unas seis millas."
+   "voice": "tanya",
+   "text": "Falling fast. That's the front. And the wind now?",
+   "es": "Bajando rápido. Es el frente. ¿Y el viento ahora?"
   },
   "l16-05": {
-   "voice": "tanya",
-   "text": "Good. Now take a bearing, and again in three minutes.",
-   "es": "Bien. Ahora tomá una marcación, y otra en tres minutos."
+   "voice": "diego",
+   "text": "North-west, force six, I think.",
+   "es": "Del noroeste, fuerza seis, creo."
   },
   "l16-06": {
-   "pause": 1500,
-   "voice": "diego",
-   "text": "Bearing zero four five… Now zero four five again. The bearing is steady.",
-   "es": "Marcación cero cuatro cinco… Ahora cero cuatro cinco otra vez. La marcación se mantiene."
+   "voice": "tanya",
+   "text": "Good. And the sea?",
+   "es": "Bien. ¿Y el mar?"
   },
   "l16-07": {
-   "voice": "tanya",
-   "text": "Steady bearing, and the range is closing. What does that mean?",
-   "es": "Marcación constante, y la distancia se achica. ¿Qué significa eso?"
+   "voice": "diego",
+   "text": "The sea is rough. And there's a long swell from the north-west.",
+   "es": "El mar está agitado. Y hay oleaje largo del noroeste."
   },
   "l16-08": {
-   "pause": 600,
-   "voice": "diego",
-   "text": "Risk of collision?",
-   "es": "¿Riesgo de abordaje?"
+   "voice": "tanya",
+   "text": "Visibility?",
+   "es": "¿Visibilidad?"
   },
   "l16-09": {
-   "voice": "tanya",
-   "text": "Exactly. She's crossing from starboard, so we give way. I'm altering course to starboard.",
-   "es": "Exacto. Nos cruza desde estribor, así que maniobramos nosotros. Caigo a estribor."
+   "voice": "diego",
+   "text": "Good now. Five miles, maybe. But in the rain, much less.",
+   "es": "Buena ahora. Cinco millas, quizás. Pero con la lluvia, mucho menos."
   },
   "l16-10": {
-   "pause": 1200,
-   "voice": "diego",
-   "text": "Another ship on the port quarter. She's overtaking us.",
-   "es": "Otro buque por la aleta de babor. Nos está alcanzando."
+   "pause": 500,
+   "voice": "tanya",
+   "text": "Right. Close the door of the bridge wing and write it in the log: zero six thirty, wind north-west six, sea rough, barometer one thousand and six, falling.",
+   "es": "Bien. Cerrá la puerta del alerón y anotalo en el diario: cero seis treinta, viento noroeste seis, mar agitado, barómetro mil seis, bajando."
   },
   "l16-11": {
-   "voice": "tanya",
-   "text": "Overtaking. She keeps clear of us. Good report.",
-   "es": "Alcanzando. Ella se mantiene apartada. Buen reporte."
+   "voice": "diego",
+   "text": "Zero six thirty, wind north-west six…",
+   "es": "Cero seis treinta, viento noroeste seis…"
   },
   "l16-12": {
-   "pause": 1200,
-   "voice": "diego",
-   "text": "And one ship right ahead. Head-on!",
-   "es": "Y un buque justo adelante. ¡De vuelta encontrada!"
+   "pause": 1500,
+   "voice": "tanya",
+   "text": "Here comes the rain. Diego, keep a good lookout and report the visibility.",
+   "es": "Ahí viene la lluvia. Diego, mantené buena vigía y reportá la visibilidad."
   },
   "l16-13": {
-   "pause": 400,
-   "voice": "tanya",
-   "text": "Head-on: both ships alter to starboard. Let's check the CPA on the radar… One point five miles. Watch her.",
-   "es": "De vuelta encontrada: los dos caen a estribor. Veamos el CPA en el radar… Una coma cinco millas. Vigilalo."
+   "pause": 1300,
+   "voice": "diego",
+   "text": "Visibility about one mile now!",
+   "es": "¡Visibilidad de una milla ahora!"
   },
   "l16-14": {
-   "voice": "diego",
-   "text": "Watching her, Chief.",
-   "es": "La vigilo, jefa."
-  },
-  "w-bearing": {
-   "voice": "model",
-   "text": "bearing"
-  },
-  "x-bearing": {
-   "voice": "model",
-   "text": "The bearing is steady.",
-   "es": "La marcación se mantiene."
-  },
-  "w-range": {
-   "voice": "model",
-   "text": "range"
-  },
-  "x-range": {
-   "voice": "model",
-   "text": "Range six miles.",
-   "es": "Distancia seis millas."
-  },
-  "w-stbdbow": {
-   "voice": "model",
-   "text": "starboard bow"
-  },
-  "x-stbdbow": {
-   "voice": "model",
-   "text": "Ship on the starboard bow.",
-   "es": "Buque por la amura de estribor."
-  },
-  "w-portqtr": {
-   "voice": "model",
-   "text": "port quarter"
-  },
-  "x-portqtr": {
-   "voice": "model",
-   "text": "A ship on the port quarter.",
-   "es": "Un buque por la aleta de babor."
-  },
-  "w-crossing": {
-   "voice": "model",
-   "text": "crossing"
-  },
-  "x-crossing": {
-   "voice": "model",
-   "text": "She's crossing from starboard.",
-   "es": "Nos cruza desde estribor."
-  },
-  "w-overtaking": {
-   "voice": "model",
-   "text": "overtaking"
-  },
-  "x-overtaking": {
-   "voice": "model",
-   "text": "She's overtaking us.",
-   "es": "Nos está alcanzando."
-  },
-  "w-headon": {
-   "voice": "model",
-   "text": "head-on"
-  },
-  "x-headon": {
-   "voice": "model",
-   "text": "A ship right ahead, head-on.",
-   "es": "Un buque justo adelante, de vuelta encontrada."
-  },
-  "w-cpa": {
-   "voice": "model",
-   "text": "CPA"
-  },
-  "x-cpa": {
-   "voice": "model",
-   "text": "The CPA is one point five miles.",
-   "es": "El CPA es una coma cinco millas."
-  },
-  "p-report": {
-   "voice": "model",
-   "text": "Ship on the starboard bow, range six miles.",
-   "es": "Buque por la amura de estribor, distancia seis millas."
-  },
-  "p-steady": {
-   "voice": "model",
-   "text": "The bearing is steady.",
-   "es": "La marcación se mantiene."
-  },
-  "p-overtaking": {
-   "voice": "model",
-   "text": "She's overtaking us.",
-   "es": "Nos está alcanzando."
-  },
-  "p-headon": {
-   "voice": "model",
-   "text": "One ship right ahead, head-on.",
-   "es": "Un buque justo adelante, de vuelta encontrada."
-  },
-  "m-portbow": {
-   "voice": "model",
-   "text": "Ship on the port bow, range four miles.",
-   "es": "Buque por la amura de babor, distancia cuatro millas."
-  },
-  "m-stbdbeam": {
-   "voice": "model",
-   "text": "Ship on the starboard beam, range three miles.",
-   "es": "Buque por el través de estribor, distancia tres millas."
-  },
-  "m-steady": {
-   "voice": "model",
-   "text": "Bearing steady. Range closing.",
-   "es": "Marcación constante. Distancia disminuyendo."
-  },
-  "m-overtaking": {
-   "voice": "model",
-   "text": "A ship on the port quarter is overtaking us.",
-   "es": "Un buque por la aleta de babor nos está alcanzando."
-  },
-  "m-quarter": {
-   "voice": "model",
-   "text": "quarter",
-   "es": "aleta"
-  },
-  "m-cpa": {
-   "voice": "model",
-   "text": "C, P, A",
-   "es": "C, P, A"
-  },
-  "c-show-bearing": {
    "voice": "tanya",
-   "text": "Show me the bearing."
+   "text": "One mile. Standing orders: under three miles, call the Captain.",
+   "es": "Una milla. Órdenes permanentes: menos de tres millas, llamar al Capitán."
   },
-  "c-show-stbdbow": {
-   "voice": "james",
-   "text": "Show me the starboard bow."
-  },
-  "c-show-portqtr": {
+  "l16-15": {
+   "pause": 800,
    "voice": "tanya",
-   "text": "Show me the port quarter."
+   "text": "Captain, Chief Officer. We're in a squall. Visibility one mile, wind north-west seven.",
+   "es": "Capitán, Primer Oficial. Estamos en un chubasco. Visibilidad una milla, viento noroeste siete."
   },
-  "c-show-crossing": {
-   "voice": "tanya",
-   "text": "Which ship is crossing?"
-  },
-  "c-show-overtaking": {
-   "voice": "james",
-   "text": "Which ship is overtaking?"
-  },
-  "c-show-headon": {
-   "voice": "tanya",
-   "text": "Which ship is head-on?"
-  },
-  "c-show-cpa": {
-   "voice": "tanya",
-   "text": "Where's the CPA?"
-  },
-  "c-see1": {
-   "voice": "tanya",
-   "text": "Diego, anything on the port side?"
-  },
-  "c-see2": {
-   "voice": "tanya",
-   "text": "And on the starboard side?"
-  },
-  "c-bearing": {
-   "voice": "tanya",
-   "text": "And the bearing? Is it changing?"
-  },
-  "c-behind": {
+  "l16-16": {
+   "pause": 700,
    "voice": "lars",
-   "text": "Cadet, what's that ship behind us?"
+   "text": "Thank you, Tanya. I'm coming up.",
+   "es": "Gracias, Tanya. Ya subo.",
+   "radio": true
   },
-  "c-range-other": {
+  "w-wind": {
+   "voice": "model",
+   "text": "wind"
+  },
+  "x-wind": {
+   "voice": "model",
+   "text": "The wind is north-west.",
+   "es": "El viento es del noroeste."
+  },
+  "w-gust": {
+   "voice": "model",
+   "text": "gust"
+  },
+  "x-gust": {
+   "voice": "model",
+   "text": "Strong gusts in the squall.",
+   "es": "Ráfagas fuertes en el chubasco."
+  },
+  "w-force": {
+   "voice": "model",
+   "text": "force"
+  },
+  "x-force": {
+   "voice": "model",
+   "text": "Wind force six.",
+   "es": "Viento fuerza seis."
+  },
+  "w-swell": {
+   "voice": "model",
+   "text": "swell"
+  },
+  "x-swell": {
+   "voice": "model",
+   "text": "A long swell from the north-west.",
+   "es": "Oleaje largo del noroeste."
+  },
+  "w-rough": {
+   "voice": "model",
+   "text": "rough"
+  },
+  "x-rough": {
+   "voice": "model",
+   "text": "The sea is rough.",
+   "es": "El mar está agitado."
+  },
+  "w-squall": {
+   "voice": "model",
+   "text": "squall"
+  },
+  "x-squall": {
+   "voice": "model",
+   "text": "That dark cloud is a squall.",
+   "es": "Esa nube oscura es un chubasco."
+  },
+  "w-visibility": {
+   "voice": "model",
+   "text": "visibility"
+  },
+  "x-visibility": {
+   "voice": "model",
+   "text": "Visibility one mile.",
+   "es": "Visibilidad una milla."
+  },
+  "w-barometer": {
+   "voice": "model",
+   "text": "barometer"
+  },
+  "x-barometer": {
+   "voice": "model",
+   "text": "The barometer is falling.",
+   "es": "El barómetro está bajando."
+  },
+  "p-increasing": {
+   "voice": "model",
+   "text": "The wind is increasing.",
+   "es": "El viento está aumentando."
+  },
+  "p-falling": {
+   "voice": "model",
+   "text": "The barometer is falling.",
+   "es": "El barómetro está bajando."
+  },
+  "p-wind": {
+   "voice": "model",
+   "text": "Wind north-west, force six.",
+   "es": "Viento noroeste, fuerza seis."
+  },
+  "p-vis": {
+   "voice": "model",
+   "text": "Visibility about one mile.",
+   "es": "Visibilidad de una milla."
+  },
+  "m-wind": {
+   "voice": "model",
+   "text": "North-west, force six.",
+   "es": "Noroeste, fuerza seis."
+  },
+  "m-baro": {
+   "voice": "model",
+   "text": "One thousand and six. It's falling.",
+   "es": "Mil seis. Está bajando."
+  },
+  "m-vis": {
+   "voice": "model",
+   "text": "Visibility about two miles.",
+   "es": "Visibilidad de unas dos millas."
+  },
+  "m-sea": {
+   "voice": "model",
+   "text": "The sea is rough.",
+   "es": "El mar está agitado."
+  },
+  "m-baro-stress": {
+   "voice": "model",
+   "text": "baROmeter",
+   "es": "barómetro"
+  },
+  "m-rough": {
+   "voice": "model",
+   "text": "rough",
+   "es": "agitado"
+  },
+  "c-show-wind": {
    "voice": "tanya",
-   "text": "Range three point five miles."
+   "text": "Show me the wind."
   },
-  "c-bearing-other": {
+  "c-show-gust": {
+   "voice": "tanya",
+   "text": "Where's the gust?"
+  },
+  "c-show-force": {
    "voice": "james",
-   "text": "Bearing two seven zero."
+   "text": "Show me force six."
   },
-  "c-changing": {
+  "c-show-swell": {
    "voice": "tanya",
-   "text": "Bearing zero four five… now zero five five. It's changing."
+   "text": "Show me the swell."
+  },
+  "c-show-squall": {
+   "voice": "tanya",
+   "text": "Show me the squall."
+  },
+  "c-show-barometer": {
+   "voice": "james",
+   "text": "Where's the barometer?"
+  },
+  "c-wind": {
+   "voice": "tanya",
+   "text": "Diego, what's the wind now?"
+  },
+  "c-baro": {
+   "voice": "tanya",
+   "text": "And the barometer?"
+  },
+  "c-vis": {
+   "voice": "lars",
+   "text": "Cadet, what's the visibility?",
+   "radio": true
+  },
+  "c-sea": {
+   "voice": "tanya",
+   "text": "How's the sea?"
+  },
+  "c-wind-other": {
+   "voice": "james",
+   "text": "Wind south-west, force five."
+  },
+  "c-baro-other": {
+   "voice": "tanya",
+   "text": "The barometer is rising. One thousand and twelve."
+  },
+  "c-from": {
+   "voice": "james",
+   "text": "The wind is from the north-east."
   }
  },
  "dialogue": [
@@ -278,148 +290,145 @@
   "l16-11",
   "l16-12",
   "l16-13",
-  "l16-14"
+  "l16-14",
+  "l16-15",
+  "l16-16"
  ],
  "words": {
-  "bearing": {
-   "en": "bearing",
-   "ipa": "/ˈbeərɪŋ/",
-   "es": "marcación",
-   "audio": "w-bearing",
-   "ex": "x-bearing"
+  "wind": {
+   "en": "wind",
+   "ipa": "/wɪnd/",
+   "es": "viento",
+   "audio": "w-wind",
+   "ex": "x-wind"
   },
-  "range": {
-   "en": "range",
-   "ipa": "/reɪndʒ/",
-   "es": "distancia",
-   "audio": "w-range",
-   "ex": "x-range"
+  "gust": {
+   "en": "gust",
+   "ipa": "/ɡʌst/",
+   "es": "ráfaga",
+   "audio": "w-gust",
+   "ex": "x-gust"
   },
-  "stbdbow": {
-   "en": "starboard bow",
-   "ipa": "/ˈstɑːbəd ˈbaʊ/",
-   "es": "amura de estribor",
-   "audio": "w-stbdbow",
-   "ex": "x-stbdbow"
+  "force": {
+   "en": "force",
+   "ipa": "/fɔːs/",
+   "es": "fuerza (Beaufort)",
+   "audio": "w-force",
+   "ex": "x-force"
   },
-  "portqtr": {
-   "en": "port quarter",
-   "ipa": "/ˌpɔːt ˈkwɔːtə/",
-   "es": "aleta de babor",
-   "audio": "w-portqtr",
-   "ex": "x-portqtr"
+  "swell": {
+   "en": "swell",
+   "ipa": "/swel/",
+   "es": "oleaje",
+   "audio": "w-swell",
+   "ex": "x-swell"
   },
-  "crossing": {
-   "en": "crossing",
-   "ipa": "/ˈkrɒsɪŋ/",
-   "es": "que cruza",
-   "audio": "w-crossing",
-   "ex": "x-crossing"
+  "rough": {
+   "en": "rough",
+   "ipa": "/rʌf/",
+   "es": "agitado",
+   "audio": "w-rough",
+   "ex": "x-rough"
   },
-  "overtaking": {
-   "en": "overtaking",
-   "ipa": "/ˌəʊvəˈteɪkɪŋ/",
-   "es": "que alcanza",
-   "audio": "w-overtaking",
-   "ex": "x-overtaking"
+  "squall": {
+   "en": "squall",
+   "ipa": "/skwɔːl/",
+   "es": "chubasco",
+   "audio": "w-squall",
+   "ex": "x-squall"
   },
-  "headon": {
-   "en": "head-on",
-   "ipa": "/ˌhed ˈɒn/",
-   "es": "de vuelta encontrada",
-   "audio": "w-headon",
-   "ex": "x-headon"
+  "visibility": {
+   "en": "visibility",
+   "ipa": "/ˌvɪzəˈbɪləti/",
+   "es": "visibilidad",
+   "audio": "w-visibility",
+   "ex": "x-visibility"
   },
-  "cpa": {
-   "en": "CPA",
-   "ipa": "/ˌsiː piː ˈeɪ/",
-   "es": "punto de máxima aproximación",
-   "audio": "w-cpa",
-   "ex": "x-cpa"
+  "barometer": {
+   "en": "barometer",
+   "ipa": "/bəˈrɒmɪtə/",
+   "es": "barómetro",
+   "audio": "w-barometer",
+   "ex": "x-barometer"
   }
  },
  "plate": {
   "svg": "img/l16/plate.svg",
   "pins": [
    {
-    "word": "stbdbow",
-    "x": 242,
-    "y": 40
+    "word": "force",
+    "x": 283,
+    "y": 44
    },
    {
-    "word": "portqtr",
-    "x": 128,
-    "y": 172
+    "word": "barometer",
+    "x": 64,
+    "y": 98
    },
    {
-    "word": "crossing",
-    "x": 264,
-    "y": 52
+    "word": "wind",
+    "x": 184,
+    "y": 96
    },
    {
-    "word": "overtaking",
-    "x": 186,
-    "y": 168
+    "word": "gust",
+    "x": 208,
+    "y": 64
    },
    {
-    "word": "headon",
-    "x": 218,
-    "y": 30
+    "word": "squall",
+    "x": 344,
+    "y": 50
    },
    {
-    "word": "bearing",
-    "x": 232,
-    "y": 100
+    "word": "rough",
+    "x": 300,
+    "y": 208
    },
    {
-    "word": "range",
-    "x": 110,
-    "y": 132
-   },
-   {
-    "word": "cpa",
-    "x": 192,
-    "y": 58
+    "word": "swell",
+    "x": 200,
+    "y": 178
    }
   ]
  },
  "docs": {
-  "targets": {
+  "wx": {
    "kind": "form",
-   "title": "RADAR TARGETS",
-   "subtitle": "M/V LNG HORIZON · FLORIDA STRAIT · 18 MAR 2026 · 1715",
+   "title": "WEATHER FORECAST · NAVTEX",
+   "subtitle": "GULF OF MEXICO · EAST · ISSUED 0400 UTC 17 MAR 2026",
    "cells": [
     [
-     "OWN SHIP",
-     "Course 095° · speed 16 kn"
+     "WIND",
+     "North-west 5 to 6, gusts 8"
     ],
     [
-     "TARGET 1 · CROSSING",
-     "Starboard bow · range 6.0 NM · bearing 045° steady"
+     "SEA",
+     "Rough"
     ],
     [
-     "TARGET 1 · CPA",
-     "0.2 NM · risk of collision"
+     "SWELL",
+     "North-west, 2 to 3 metres"
     ],
     [
-     "TARGET 2 · OVERTAKING",
-     "Port quarter · range 2.5 NM · CPA 1.0 NM"
+     "WEATHER",
+     "Squalls with heavy rain"
     ],
     [
-     "TARGET 3 · HEAD-ON",
-     "Right ahead · range 9.0 NM · CPA 1.5 NM"
+     "VISIBILITY",
+     "Good, poor in rain"
     ],
     [
-     "ACTION",
-     "Altered course to starboard, 10°"
+     "PRESSURE",
+     "1006 hPa, falling"
     ],
     [
-     "CALL THE MASTER",
-     "If CPA under 2 NM"
+     "OUTLOOK",
+     "Wind decreasing to force 4 from 1800"
     ],
     [
-     "OOW",
-     "C/O T. Williams · Lookout: Cadet D. Martínez"
+     "WARNING",
+     "Gale possible in the north"
     ]
    ]
   }
@@ -427,85 +436,70 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: busy waters",
+   "title": "Listen: the front",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l16/scene.jpg",
-     "kicker": "Day 5 · 17:00 · Florida Strait",
-     "title": "Ships everywhere",
-     "body": "The afternoon watch with Tanya, in one of the busiest straits in the world. Diego is the lookout, with the binoculars. Listen first, one piece at a time.",
+     "kicker": "Day 4 · 06:30 · Gulf of Mexico",
+     "title": "A front comes in",
+     "body": "The morning watch with Tanya. Diego is the lookout on the bridge wing. The sky is getting dark. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l16-02",
+      "l16-01",
+      "l16-02"
+     ],
+     "q": "What does Diego see?",
+     "opts": [
+      "A squall ahead",
+      "A ship ahead",
+      "Land ahead"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
       "l16-03",
       "l16-04"
      ],
-     "q": "Where is the first ship, and how far?",
+     "q": "What is the barometer doing?",
      "opts": [
-      "Starboard bow, 6 miles",
-      "Port bow, 6 miles",
-      "Starboard bow, 16 miles"
+      "Falling",
+      "Rising",
+      "Steady"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l16-05",
-      "l16-06"
+      "l16-05"
      ],
-     "q": "What happens to the bearing?",
+     "q": "What is the wind?",
      "opts": [
-      "It stays the same",
-      "It changes a lot",
-      "Diego can't see it"
+      "North-west, force 6",
+      "North-east, force 6",
+      "North-west, force 3"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l16-07",
-      "l16-08"
+      "l16-06",
+      "l16-07"
      ],
-     "q": "Steady bearing and closing range means…",
+     "q": "How is the sea?",
      "opts": [
-      "risk of collision",
-      "no danger",
-      "the ship is stopped"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l16-09"
-     ],
-     "q": "What does Tanya do?",
-     "opts": [
-      "Alters course to starboard",
-      "Alters course to port",
-      "Stops the ship"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l16-10",
-      "l16-11"
-     ],
-     "q": "The ship on the port quarter is…",
-     "opts": [
-      "overtaking us",
-      "crossing",
-      "head-on"
+      "Rough, with a long swell",
+      "Calm",
+      "Rough, no swell"
      ],
      "a": 0
     },
@@ -515,97 +509,108 @@
       "l16-12",
       "l16-13"
      ],
-     "q": "What is the CPA of the head-on ship?",
+     "q": "In the rain, the visibility is…",
      "opts": [
-      "1.5 miles",
-      "15 miles",
-      "0.5 miles"
+      "about one mile",
+      "five miles",
+      "zero"
      ],
      "a": 0
     },
     {
+     "type": "listen",
+     "audio": [
+      "l16-14",
+      "l16-15",
+      "l16-16"
+     ],
+     "q": "Why does Tanya call the Captain?",
+     "opts": [
+      "Visibility is under three miles",
+      "The engine stopped",
+      "Diego is sick"
+     ],
+     "a": 0,
+     "why": "From Lesson 15: call him if visibility is less than three miles."
+    },
+    {
      "type": "dialogue",
-     "title": "Now the whole watch",
+     "title": "Now the whole scene",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Around the ship",
+   "title": "Wind and sea",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "Our ship from above, and three ships around her."
+     "body": "The front coming in: wind, sea and the barometer."
     },
     {
      "type": "card",
-     "word": "stbdbow"
+     "word": "wind"
     },
     {
      "type": "card",
-     "word": "portqtr"
+     "word": "gust"
+    },
+    {
+     "type": "card",
+     "word": "force"
     },
     {
      "type": "tap",
-     "audio": "c-show-portqtr",
-     "a": "portqtr"
+     "audio": "c-show-force",
+     "a": "force"
     },
     {
      "type": "card",
-     "word": "bearing"
+     "word": "swell"
     },
     {
      "type": "card",
-     "word": "range"
+     "word": "rough"
     },
     {
      "type": "tap",
-     "audio": "c-show-bearing",
-     "a": "bearing"
+     "audio": "c-show-swell",
+     "a": "swell"
     },
     {
      "type": "card",
-     "word": "crossing"
+     "word": "squall"
     },
     {
      "type": "card",
-     "word": "overtaking"
+     "word": "visibility"
     },
     {
      "type": "card",
-     "word": "headon"
+     "word": "barometer"
     },
     {
      "type": "tap",
-     "audio": "c-show-crossing",
-     "a": "crossing"
+     "audio": "c-show-squall",
+     "a": "squall"
     },
     {
      "type": "tap",
-     "audio": "c-show-headon",
-     "a": "headon"
-    },
-    {
-     "type": "card",
-     "word": "cpa"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-cpa",
-     "a": "cpa"
+     "audio": "c-show-gust",
+     "a": "gust"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"marcación\" in English:",
+     "q": "\"oleaje\" in English:",
      "opts": [
-      "bearing",
-      "course",
-      "marking"
+      "swell",
+      "deep sea",
+      "background sea"
      ],
      "a": 0
     },
@@ -614,24 +619,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "bearing",
-       "marcación"
+       "gust",
+       "ráfaga"
       ],
       [
-       "range",
-       "distancia"
+       "swell",
+       "oleaje"
       ],
       [
-       "port quarter",
-       "aleta de babor"
+       "squall",
+       "chubasco"
       ],
       [
-       "overtaking",
-       "que alcanza"
+       "rough",
+       "agitado"
       ],
       [
-       "head-on",
-       "de vuelta encontrada"
+       "barometer",
+       "barómetro"
       ]
      ]
     }
@@ -639,226 +644,217 @@
   },
   {
    "id": "phrases",
-   "title": "Report a ship",
+   "title": "The wind is increasing",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "The lookout report",
+     "title": "Reporting the weather",
      "list": [
       [
-       "Ship on the starboard bow, range six miles.",
-       "Buque por la amura de estribor, distancia seis millas.",
-       "p-report"
+       "The wind is increasing.",
+       "El viento está aumentando.",
+       "p-increasing"
       ],
       [
-       "The bearing is steady.",
-       "La marcación se mantiene.",
-       "p-steady"
+       "The barometer is falling.",
+       "El barómetro está bajando.",
+       "p-falling"
       ],
       [
-       "She's overtaking us.",
-       "Nos está alcanzando.",
-       "p-overtaking"
+       "Wind north-west, force six.",
+       "Viento noroeste, fuerza seis.",
+       "p-wind"
       ],
       [
-       "One ship right ahead, head-on.",
-       "Un buque justo adelante, de vuelta encontrada.",
-       "p-headon"
+       "Visibility about one mile.",
+       "Visibilidad de una milla.",
+       "p-vis"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "What, where, how far",
+     "title": "Changes: is + -ing",
      "steps": [
       [
-       "What",
-       "Ship · fishing boat · light"
+       "Wind",
+       "increasing · decreasing"
       ],
       [
-       "Where",
-       "on the starboard bow · on the port beam · on the port quarter · right ahead · astern"
+       "Barometer",
+       "falling · rising · steady"
       ],
       [
-       "How far",
-       "range six miles"
-      ],
-      [
-       "Then",
-       "bearing steady / changing"
+       "Visibility",
+       "going down · improving"
       ]
      ],
      "paras": [
-      "Always in this order: <b>what</b>, <b>where</b>, <b>how far</b>. Short, no verb needed.",
-      "<b>bow</b> = between ahead and the beam · <b>beam</b> = at 90° · <b>quarter</b> = between the beam and astern. Plus <b>port</b> or <b>starboard</b>.",
-      "Ships are often <b>she</b>: <i>She's crossing.</i>"
+      "For weather that is changing <b>now</b>, use <b>is</b> + verb-ing, like in Lesson 10: <i>The barometer <b>is falling</b>.</i>",
+      "The wind is given by where it comes <b>from</b>: <i>wind north-west</i> = from the north-west. Then the Beaufort <b>force</b>."
      ],
-     "avoid": "There is a ship that is coming from the right. · Ship in the starboard bow."
+     "avoid": "The barometer falls now. · The wind is increase."
     },
     {
      "type": "choice",
-     "q": "A ship is behind you, a little to the left. She's on the…",
+     "q": "The barometer goes from 1012 to 1006. It's…",
      "opts": [
-      "port quarter",
-      "port bow",
-      "starboard quarter"
+      "falling",
+      "rising",
+      "steady"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "A ship is at 90° on your right. She's on the…",
+     "q": "The wind is stronger than an hour ago. It's…",
      "opts": [
-      "starboard beam",
-      "starboard bow",
-      "starboard quarter"
+      "increasing",
+      "decreasing",
+      "improving"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "A ship ahead and a little to the left, 4 miles.",
+     "situation": "The barometer goes down fast.",
      "q": "Report it.",
      "a": [
-      "Ship",
-      "on",
-      "the",
-      "port",
-      "bow,",
-      "range",
-      "four",
-      "miles."
+      "The",
+      "barometer",
+      "is",
+      "falling."
      ],
      "extra": [
-      "in",
-      "starboard"
+      "falls",
+      "rising"
      ]
     },
     {
      "type": "type",
-     "audio": "c-bearing-other",
-     "q": "Write the bearing, three digits.",
+     "audio": "c-wind-other",
+     "q": "What force is the wind? Write the number.",
      "accept": [
-      "270",
-      "270°",
-      "two seven zero"
+      "5",
+      "five"
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "Bearing is not course",
+     "title": "Wind FROM, current TO",
      "paras": [
-      "<b>course</b> = rumbo: where <i>our</i> ship goes. <b>bearing</b> = marcación: the direction from us to <i>another</i> ship or object.",
-      "And <b>range</b> is <i>distancia</i>, not <i>rango</i>. Use <b>on</b> the bow, not <i>in</i>."
+      "<b>Wind north-west</b> comes <b>from</b> the north-west, like <i>viento del noroeste</i>. (A current is the opposite: it is named for where it goes.)",
+      "Compass points in English: <b>north, south, east, west</b>; <i>noroeste</i> = <b>north-west</b>, <i>sudeste</i> = <b>south-east</b>. North or south always comes first."
      ],
-     "avoid": "The course of the other ship is zero four five (when you mean bearing). · in the starboard bow"
+     "avoid": "west-north · the wind goes to north-west (when it comes from there)"
     },
     {
      "type": "listen",
      "audio": [
-      "c-changing"
+      "c-from"
      ],
-     "q": "The bearing is changing. Is there a risk of collision?",
+     "q": "Where does the wind come from?",
      "opts": [
-      "Probably not",
-      "Yes, very high",
-      "We can't know"
+      "North-east",
+      "South-west",
+      "North-west"
      ],
-     "a": 0,
-     "why": "A steady bearing with a closing range is the danger. A changing bearing usually means she passes clear."
+     "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Quarter, CPA",
+     "title": "baROmeter, rough",
      "paras": [
-      "<b>quarter</b> = /ˈkwɔːtə/: <i>KWOR-ter</i>, with a <i>w</i>.",
-      "<b>CPA</b>: three letters, <i>see-pee-AY</i>, stress on the last one. Remember the letters from Lesson 5."
+      "<b>barometer</b> = /bəˈrɒmɪtə/: the stress is on <b>RO</b>, not on <i>me</i> like in Spanish.",
+      "<b>rough</b> = /rʌf/: <i>gh</i> sounds like <b>f</b>, like <i>enough</i>."
      ],
      "list": [
       [
-       "quarter",
-       "aleta",
-       "m-quarter"
+       "baROmeter",
+       "barómetro",
+       "m-baro-stress"
       ],
       [
-       "C, P, A",
-       "C, P, A",
-       "m-cpa"
+       "rough",
+       "agitado",
+       "m-rough"
       ]
      ]
     },
     {
-     "type": "type",
-     "audio": "c-range-other",
-     "q": "Write the range in miles.",
-     "accept": [
-      "3.5",
-      "3,5",
-      "three point five"
-     ]
+     "type": "listen",
+     "audio": [
+      "c-baro-other"
+     ],
+     "q": "What is the barometer doing now?",
+     "opts": [
+      "Rising",
+      "Falling",
+      "Steady"
+     ],
+     "a": 0
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the radar targets",
+   "title": "Read the forecast",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "targets",
-     "q": "Which target is dangerous?",
+     "doc": "wx",
+     "q": "What are the gusts?",
      "opts": [
-      "Target 1, crossing",
-      "Target 2, overtaking",
-      "Target 3, head-on"
+      "Force 8",
+      "Force 6",
+      "Force 5"
      ],
-     "a": 0,
-     "why": "CPA 0.2 NM, risk of collision."
+     "a": 0
     },
     {
      "type": "doc",
-     "doc": "targets",
-     "q": "What did they do?",
+     "doc": "wx",
+     "q": "How high is the swell?",
      "opts": [
-      "Altered course 10° to starboard",
-      "Stopped the engine",
-      "Called the other ship"
+      "2 to 3 metres",
+      "5 metres",
+      "Under 1 metre"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "targets",
-     "q": "Tap when to call the Master.",
+     "doc": "wx",
+     "q": "Tap when the weather gets better.",
      "a": 6
     },
     {
      "type": "doc",
-     "doc": "targets",
-     "q": "What is our speed?",
+     "doc": "wx",
+     "q": "When is the visibility poor?",
      "opts": [
-      "16 knots",
-      "9 knots",
-      "6 knots"
+      "In rain",
+      "At night",
+      "All day"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "targets",
-     "q": "Who is the lookout?",
+     "doc": "wx",
+     "q": "Where is a gale possible?",
      "opts": [
-      "The cadet",
-      "The Chief Officer",
-      "Nobody"
+      "In the north",
+      "In the south",
+      "Everywhere"
      ],
      "a": 0
     }
@@ -866,77 +862,78 @@
   },
   {
    "id": "speak",
-   "title": "Report as lookout",
+   "title": "Report the weather",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "What, where, how far",
-     "body": "Listen, say it, check it. Clear and short: SHIP, on the STARboard BOW, range SIX miles.",
-     "es": "Claro y corto.",
+     "title": "Short weather reports",
+     "body": "Listen, say it, check it. Direction, then force: north-west, force SIX.",
+     "es": "Dirección, después la fuerza.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-report"
+     "model": "p-wind"
     },
     {
      "type": "shadow",
-     "model": "p-steady"
+     "model": "p-falling"
     },
     {
      "type": "shadow",
-     "model": "p-headon"
+     "model": "p-increasing"
     },
     {
      "type": "role",
-     "cue": "c-see1",
-     "task": "A ship ahead and a little to the left, 4 miles. Report.",
-     "model": "m-portbow",
+     "cue": "c-wind",
+     "task": "The wind is from the north-west, force 6. Tell her.",
+     "model": "m-wind",
      "accept": [
-      "Ship on the port bow, range four miles.",
-      "Ship on the port bow, four miles.",
-      "A ship on the port bow, range four miles.",
-      "Yes, ship on the port bow, range four miles."
+      "North-west, force six.",
+      "Wind north-west, force six.",
+      "The wind is north-west, force six.",
+      "North-west force six."
      ]
     },
     {
      "type": "role",
-     "cue": "c-see2",
-     "task": "A ship at 90° on the right, 3 miles. Report.",
-     "model": "m-stbdbeam",
+     "cue": "c-baro",
+     "task": "It shows 1006 and it's going down.",
+     "model": "m-baro",
      "accept": [
-      "Ship on the starboard beam, range three miles.",
-      "Ship on the starboard beam, three miles.",
-      "A ship on the starboard beam, range three miles."
+      "One thousand and six. It's falling.",
+      "One thousand six, falling.",
+      "It's falling. One thousand and six.",
+      "One thousand and six, falling.",
+      "The barometer is falling."
      ]
     },
     {
      "type": "role",
-     "cue": "c-bearing",
-     "task": "The bearing doesn't change and the ship is closer. Report.",
-     "model": "m-steady",
+     "cue": "c-sea",
+     "task": "Big waves, white tops. Tell her.",
+     "model": "m-sea",
      "accept": [
-      "Bearing steady. Range closing.",
-      "Bearing steady, range closing.",
-      "The bearing is steady. The range is closing.",
-      "No, the bearing is steady.",
-      "Bearing steady."
+      "The sea is rough.",
+      "Rough.",
+      "It's rough.",
+      "Rough sea."
      ]
     },
     {
      "type": "role",
-     "cue": "c-behind",
-     "task": "Behind, a little to port, and it's faster than us.",
-     "model": "m-overtaking",
+     "cue": "c-vis",
+     "task": "You can see about two miles. Tell the Captain.",
+     "model": "m-vis",
      "accept": [
-      "A ship on the port quarter is overtaking us.",
-      "She's overtaking us.",
-      "Ship on the port quarter, overtaking.",
-      "It's overtaking us, Captain.",
-      "On the port quarter, overtaking us."
+      "Visibility about two miles.",
+      "About two miles.",
+      "Visibility two miles.",
+      "Two miles, Captain.",
+      "About two miles, Captain."
      ]
     }
    ]
@@ -949,87 +946,90 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-bearing",
+     "audio": "w-squall",
      "q": "Type what you hear.",
      "accept": [
-      "bearing",
-      "a bearing",
-      "the bearing"
+      "squall",
+      "a squall"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-overtaking",
-     "a": "overtaking"
+     "audio": "c-show-barometer",
+     "a": "barometer"
     },
     {
      "type": "tap",
-     "audio": "c-show-stbdbow",
-     "a": "stbdbow"
+     "audio": "c-show-wind",
+     "a": "wind"
     },
     {
      "type": "listen",
      "audio": [
-      "l16-01"
+      "l16-10"
      ],
-     "q": "Where is the ship?",
+     "q": "Where does Diego write the weather?",
      "opts": [
-      "Florida Strait",
-      "Gulf of Mexico",
-      "Galveston"
+      "In the log",
+      "On the chart",
+      "On the notice board"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "A ship is right in front, coming towards us. She's…",
+     "q": "Long, smooth waves from far away are…",
      "opts": [
-      "head-on",
-      "overtaking",
-      "on the quarter"
+      "swell",
+      "gusts",
+      "squalls"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "You see a ship in the bow sector, like twelve to two on the clock from Lesson 12. She's on the…",
+     "q": "Diego reports the time of the weather: 0630. He says…",
      "opts": [
-      "starboard bow",
-      "port bow",
-      "port quarter"
+      "zero six thirty",
+      "six and a half",
+      "six thirty a.m."
      ],
-     "a": 0
+     "a": 0,
+     "why": "From Lesson 8."
     },
     {
      "type": "build",
-     "q": "Report a ship faster than us, coming from behind.",
+     "q": "Report: the wind is getting stronger.",
      "a": [
-      "She's",
-      "overtaking",
-      "us."
+      "The",
+      "wind",
+      "is",
+      "increasing."
      ],
      "extra": [
-      "crossing",
-      "we"
+      "increase",
+      "more"
      ]
     },
     {
-     "type": "choice",
-     "q": "The bearing is steady and the range is closing. You…",
+     "type": "listen",
+     "audio": [
+      "l16-16"
+     ],
+     "q": "What does the Captain do?",
      "opts": [
-      "report it at once",
-      "wait and see",
-      "say nothing"
+      "He comes up to the bridge",
+      "He calls the engine room",
+      "He goes to sleep"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: marcación",
+     "q": "Write it in English: ráfaga",
      "accept": [
-      "bearing",
-      "a bearing",
-      "the bearing"
+      "gust",
+      "a gust"
      ]
     }
    ]

@@ -1,263 +1,321 @@
 {
  "n": 25,
- "module": 7,
- "title": "Distress, urgency & safety",
- "place": "Day 12 · 19:20 · Strait of Gibraltar",
- "goal": "Recognise Mayday, Pan-Pan and Sécurité, write down a distress message and answer it on the radio.",
+ "module": 6,
+ "title": "Fire party communication",
+ "place": "Day 10 · 11:30 · Atlantic, galley",
+ "goal": "Keep the BA board, read back names, times and pressure, and report that a fire is out.",
  "images": {
   "hero": "img/l25/hero.jpg",
   "scene": "img/l25/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 3,
+ "mediaRev": 2,
+ "radioChannel": "UHF",
  "audio": {
   "l25-01": {
    "pause": 600,
-   "voice": "skipper",
-   "text": "Mayday, Mayday, Mayday. This is fishing vessel Cap Béar, Cap Béar, Cap Béar. Mayday, Cap Béar. Position three five fifty-four North, zero zero five forty-two West. Taking water in the engine room. Require immediate assistance. Four persons on board. Over.",
-   "es": "Mayday, Mayday, Mayday. Aquí el pesquero Cap Béar, Cap Béar, Cap Béar. Mayday, Cap Béar. Posición tres cinco cincuenta y cuatro Norte, cero cero cinco cuarenta y dos Oeste. Hacemos agua en la sala de máquinas. Necesitamos asistencia inmediata. Cuatro personas a bordo. Cambio.",
-   "radio": true
+   "voice": "mario",
+   "text": "Fire! Fire in the galley! The pan is on fire!",
+   "es": "¡Fuego! ¡Fuego en la cocina! ¡La sartén se prendió fuego!"
   },
   "l25-02": {
-   "pause": 900,
-   "voice": "tanya",
-   "text": "Diego, write it down. Position, problem, persons. Quickly.",
-   "es": "Diego, anotalo. Posición, problema, personas. Rápido."
+   "pause": 1500,
+   "voice": "lars",
+   "text": "Fire, fire, fire. This is not a drill. Fire in the galley, main deck. Fire party to the scene. All other crew to the muster station.",
+   "es": "Fuego, fuego, fuego. Esto no es un zafarrancho. Fuego en la cocina, cubierta principal. Brigada de incendio a la escena. El resto de la tripulación al punto de reunión.",
+   "pa": true
   },
   "l25-03": {
-   "voice": "diego",
-   "text": "Thirty-five fifty-four North, five forty-two West. Taking water. Four persons.",
-   "es": "Treinta y cinco cincuenta y cuatro Norte, cinco cuarenta y dos Oeste. Hace agua. Cuatro personas."
+   "voice": "james",
+   "text": "Diego, you're with me. Take the BA board. Write every name and every time.",
+   "es": "Diego, venís conmigo. Agarrá el tablero de BA. Anotá cada nombre y cada hora."
   },
   "l25-04": {
    "pause": 1200,
-   "voice": "tarifa",
-   "text": "Cap Béar, this is Tarifa Traffic. Received Mayday. A Salvamento Marítimo boat is on its way. ETA forty minutes. Over.",
-   "es": "Cap Béar, aquí Tarifa Tráfico. Recibido Mayday. Una embarcación de Salvamento Marítimo va en camino. Llegada estimada cuarenta minutos. Cambio.",
-   "radio": true
+   "voice": "diego",
+   "text": "Yes, Second. I'll take the BA board.",
+   "es": "Sí, segundo. Me encargo del tablero de BA."
   },
   "l25-05": {
-   "voice": "tanya",
-   "text": "Captain, we're only six miles from that position.",
-   "es": "Capitán, estamos a solo seis millas de esa posición."
+   "voice": "james",
+   "text": "Mario, did you use the fire blanket?",
+   "es": "Mario, ¿usaste la manta ignífuga?"
   },
   "l25-06": {
-   "pause": 900,
-   "voice": "lars",
-   "text": "Then we go. Diego, you have a clear voice. Call Tarifa Traffic. Tanya, stay with him.",
-   "es": "Entonces vamos. Diego, tenés una voz clara. Llamá a Tarifa Tráfico. Tanya, quedate con él."
+   "voice": "mario",
+   "text": "Yes, but the fire broke out again, up in the extractor. Too much smoke.",
+   "es": "Sí, pero el fuego se volvió a desatar, arriba en el extractor. Demasiado humo."
   },
   "l25-07": {
-   "voice": "diego",
-   "text": "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Received Mayday from Cap Béar. We are six miles from the position. Proceeding to assist. ETA thirty minutes. Over.",
-   "es": "Tarifa Tráfico, Tarifa Tráfico, aquí LNG Horizon, LNG Horizon. Recibido el Mayday del Cap Béar. Estamos a seis millas de la posición. Vamos a asistir. Llegada estimada treinta minutos. Cambio."
+   "voice": "james",
+   "text": "Team one, Rolando and Santos, ready to enter?",
+   "es": "Equipo uno, Rolando y Santos, ¿listos para entrar?"
   },
   "l25-08": {
-   "pause": 1800,
-   "voice": "tarifa",
-   "text": "LNG Horizon, Tarifa Traffic. Thank you. Proceed to the position and report when on scene. Over.",
-   "es": "LNG Horizon, Tarifa Tráfico. Gracias. Diríjanse a la posición e informen al llegar. Cambio.",
+   "voice": "rolando",
+   "text": "Team one ready. Entry time eleven thirty-five. Pressure two hundred bar.",
+   "es": "Equipo uno listo. Hora de entrada once treinta y cinco. Presión doscientos bar.",
    "radio": true
   },
   "l25-09": {
-   "pause": 900,
-   "voice": "skipper",
-   "text": "Tarifa Traffic, Cap Béar. The water is rising. We are preparing the liferaft. Over.",
-   "es": "Tarifa Tráfico, Cap Béar. El agua sube. Estamos preparando la balsa. Cambio.",
-   "radio": true
+   "pause": 800,
+   "voice": "diego",
+   "text": "Team one: Rolando, Santos. Entry eleven thirty-five. Two hundred bar. Written.",
+   "es": "Equipo uno: Rolando, Santos. Entrada once treinta y cinco. Doscientos bar. Anotado."
   },
   "l25-10": {
-   "pause": 2000,
-   "voice": "lars",
-   "text": "Tanya, rescue boat crew to stand by. Pilot ladder ready on the starboard side.",
-   "es": "Tanya, la tripulación del bote de rescate en espera. La escala de práctico lista por estribor."
+   "pause": 1800,
+   "voice": "james",
+   "text": "Team two, start boundary cooling on the galley bulkhead, and back up team one.",
+   "es": "Equipo dos, empiecen el enfriamiento de límites en el mamparo de la cocina, y apoyen al equipo uno."
   },
   "l25-11": {
-   "pause": 700,
-   "voice": "tarifa",
-   "text": "LNG Horizon, Tarifa Traffic. Salvamento Marítimo is now on scene. Four persons recovered, all safe. You are released. Thank you for your assistance. Over.",
-   "es": "LNG Horizon, Tarifa Tráfico. Salvamento Marítimo ya está en la escena. Cuatro personas recuperadas, todas a salvo. Quedan liberados. Gracias por su asistencia. Cambio.",
+   "pause": 1500,
+   "voice": "rolando",
+   "text": "Team one at the extractor. Small fire. We're putting it out with CO2.",
+   "es": "Equipo uno en el extractor. Fuego chico. Lo estamos apagando con CO2.",
    "radio": true
   },
   "l25-12": {
-   "pause": 1200,
    "voice": "diego",
-   "text": "Tarifa Traffic, LNG Horizon. Released. Resuming our voyage. Over.",
-   "es": "Tarifa Tráfico, LNG Horizon. Liberados. Retomamos nuestro viaje. Cambio."
+   "text": "Second, team one has been inside for ten minutes.",
+   "es": "Segundo, el equipo uno ya lleva diez minutos adentro."
   },
   "l25-13": {
-   "voice": "lars",
-   "text": "Good radio work, cadet. Short and clear. That's what saves people.",
-   "es": "Buen trabajo en la radio, cadete. Corto y claro. Eso es lo que salva gente."
+   "voice": "james",
+   "text": "Thanks, Diego. Team one, check your pressure. Over.",
+   "es": "Gracias, Diego. Equipo uno, controlen su presión. Cambio."
   },
-  "w-mayday": {
-   "voice": "model",
-   "text": "Mayday"
-  },
-  "x-mayday": {
-   "voice": "model",
-   "text": "Mayday, Mayday, Mayday.",
-   "es": "Mayday, Mayday, Mayday."
-  },
-  "w-panpan": {
-   "voice": "model",
-   "text": "Pan-Pan"
-  },
-  "x-panpan": {
-   "voice": "model",
-   "text": "Pan-Pan, Pan-Pan, Pan-Pan. Engine failure.",
-   "es": "Pan-Pan, Pan-Pan, Pan-Pan. Falla de máquina."
-  },
-  "w-securite": {
-   "voice": "model",
-   "text": "Sécurité"
-  },
-  "x-securite": {
-   "voice": "model",
-   "text": "Sécurité. Navigational warning.",
-   "es": "Sécurité. Aviso a los navegantes."
-  },
-  "w-distress": {
-   "voice": "model",
-   "text": "distress"
-  },
-  "x-distress": {
-   "voice": "model",
-   "text": "The fishing vessel is in distress.",
-   "es": "El pesquero está en peligro."
-  },
-  "w-ch16": {
-   "voice": "model",
-   "text": "channel sixteen"
-  },
-  "x-ch16": {
-   "voice": "model",
-   "text": "Keep a watch on channel sixteen.",
-   "es": "Mantené escucha en el canal dieciséis."
-  },
-  "w-acknowledge": {
-   "voice": "model",
-   "text": "to acknowledge"
-  },
-  "x-acknowledge": {
-   "voice": "model",
-   "text": "Acknowledge the Mayday: received Mayday.",
-   "es": "Acusá recibo del Mayday: recibido Mayday."
-  },
-  "w-proceed": {
-   "voice": "model",
-   "text": "to proceed"
-  },
-  "x-proceed": {
-   "voice": "model",
-   "text": "We are proceeding to assist.",
-   "es": "Vamos a asistir."
-  },
-  "w-onscene": {
-   "voice": "model",
-   "text": "on scene"
-  },
-  "x-onscene": {
-   "voice": "model",
-   "text": "Report when on scene.",
-   "es": "Informen al llegar al lugar."
-  },
-  "p-received": {
-   "voice": "model",
-   "text": "Received Mayday.",
-   "es": "Recibido Mayday."
-  },
-  "p-proceed": {
-   "voice": "model",
-   "text": "Proceeding to assist. ETA thirty minutes.",
-   "es": "Vamos a asistir. Llegada estimada treinta minutos."
-  },
-  "p-call": {
-   "voice": "model",
-   "text": "Tarifa Traffic, this is LNG Horizon.",
-   "es": "Tarifa Tráfico, aquí LNG Horizon."
-  },
-  "p-persons": {
-   "voice": "model",
-   "text": "Four persons on board.",
-   "es": "Cuatro personas a bordo."
-  },
-  "m-call": {
-   "voice": "model",
-   "text": "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Over.",
-   "es": "Tarifa Tráfico, Tarifa Tráfico, aquí LNG Horizon, LNG Horizon. Cambio."
-  },
-  "m-proceed": {
-   "voice": "model",
-   "text": "Received Mayday. Proceeding to assist. ETA twenty minutes. Over.",
-   "es": "Recibido Mayday. Vamos a asistir. Llegada estimada veinte minutos. Cambio."
-  },
-  "m-onscene": {
-   "voice": "model",
-   "text": "Tarifa Traffic, LNG Horizon. We are on scene. Over.",
-   "es": "Tarifa Tráfico, LNG Horizon. Estamos en el lugar. Cambio."
-  },
-  "m-released": {
-   "voice": "model",
-   "text": "Released. Resuming our voyage. Over.",
-   "es": "Liberados. Retomamos nuestro viaje. Cambio."
-  },
-  "m-mayday": {
-   "voice": "model",
-   "text": "Mayday, Mayday, Mayday.",
-   "es": "Mayday, Mayday, Mayday."
-  },
-  "c-show-mayday": {
-   "voice": "tanya",
-   "text": "Show me the vessel in distress."
-  },
-  "c-show-ch16": {
-   "voice": "lars",
-   "text": "Where's channel sixteen?"
-  },
-  "c-show-distress": {
-   "voice": "tanya",
-   "text": "Show me the distress button."
-  },
-  "c-show-proceed": {
-   "voice": "lars",
-   "text": "Show me where we are proceeding."
-  },
-  "c-show-onscene": {
-   "voice": "tanya",
-   "text": "Who is on scene now?"
-  },
-  "c-panpan": {
-   "voice": "skipper",
-   "text": "Pan-Pan, Pan-Pan, Pan-Pan. This is sailing yacht Bella Luna. Engine failure. Drifting towards the coast. Three persons on board. Over.",
+  "l25-14": {
+   "pause": 1200,
+   "voice": "rolando",
+   "text": "Pressure one hundred and forty bar. The fire is out. Repeat, the fire is out.",
+   "es": "Presión ciento cuarenta bar. El fuego está apagado. Repito, el fuego está apagado.",
    "radio": true
   },
-  "c-securite": {
-   "voice": "tarifa",
-   "text": "Sécurité, Sécurité, Sécurité. All ships, this is Tarifa Traffic. Navigational warning. Floating container reported five miles south of Tarifa. Over.",
-   "radio": true
+  "l25-15": {
+   "voice": "james",
+   "text": "Bridge, fire party. The fire in the galley is out and contained. No injuries. Boundary cooling continues. Over.",
+   "es": "Puente, brigada de incendio. El fuego en la cocina está apagado y contenido. Sin heridos. El enfriamiento sigue. Cambio."
   },
-  "c-mayday2": {
-   "voice": "skipper",
-   "text": "Mayday, Mayday, Mayday. This is motor vessel Sirocco. Fire on board. Six persons on board. Over.",
-   "radio": true
-  },
-  "c-callnow": {
+  "l25-16": {
+   "pause": 1800,
    "voice": "lars",
-   "text": "Diego, call Tarifa Traffic."
-  },
-  "c-tarifa-ask": {
-   "voice": "tarifa",
-   "text": "LNG Horizon, Tarifa Traffic. Can you assist the vessel in distress? Over.",
+   "text": "Received. Well done, everybody. Keep a fire watch for one hour. Over.",
+   "es": "Recibido. Bien hecho, todos. Mantengan una guardia de incendio por una hora. Cambio.",
    "radio": true
   },
-  "c-arrive": {
-   "voice": "tanya",
-   "text": "We're there. Tell Tarifa Traffic."
+  "l25-17": {
+   "voice": "james",
+   "text": "Good board, Diego. Every name, every time. That's how we bring everybody back.",
+   "es": "Buen tablero, Diego. Cada nombre, cada hora. Así es como traemos a todos de vuelta."
   },
-  "c-release": {
-   "voice": "tarifa",
-   "text": "LNG Horizon, Tarifa Traffic. You are released. Thank you. Over.",
+  "w-fireparty": {
+   "voice": "model",
+   "text": "fire party"
+  },
+  "x-fireparty": {
+   "voice": "model",
+   "text": "Fire party to the scene.",
+   "es": "Brigada de incendio a la escena."
+  },
+  "w-ba": {
+   "voice": "model",
+   "text": "breathing apparatus"
+  },
+  "x-ba": {
+   "voice": "model",
+   "text": "Put on your breathing apparatus.",
+   "es": "Ponete el equipo de respiración."
+  },
+  "w-baboard": {
+   "voice": "model",
+   "text": "BA board"
+  },
+  "x-baboard": {
+   "voice": "model",
+   "text": "Write the names on the BA board.",
+   "es": "Anotá los nombres en el tablero de ERA."
+  },
+  "w-entrytime": {
+   "voice": "model",
+   "text": "entry time"
+  },
+  "x-entrytime": {
+   "voice": "model",
+   "text": "Entry time eleven thirty-five.",
+   "es": "Hora de entrada once treinta y cinco."
+  },
+  "w-pressure": {
+   "voice": "model",
+   "text": "pressure"
+  },
+  "x-pressure": {
+   "voice": "model",
+   "text": "Pressure two hundred bar.",
+   "es": "Presión doscientos bar."
+  },
+  "w-boundary": {
+   "voice": "model",
+   "text": "boundary cooling"
+  },
+  "x-boundary": {
+   "voice": "model",
+   "text": "Start boundary cooling on the bulkhead.",
+   "es": "Empezá a enfriar el mamparo."
+  },
+  "w-galley": {
+   "voice": "model",
+   "text": "galley"
+  },
+  "x-galley": {
+   "voice": "model",
+   "text": "Fire in the galley!",
+   "es": "¡Fuego en la cocina!"
+  },
+  "w-contained": {
+   "voice": "model",
+   "text": "contained"
+  },
+  "x-contained": {
+   "voice": "model",
+   "text": "The fire is contained.",
+   "es": "El fuego está contenido."
+  },
+  "w-firedoor": {
+   "voice": "model",
+   "text": "fire door"
+  },
+  "x-firedoor": {
+   "voice": "model",
+   "text": "Keep the fire door closed.",
+   "es": "Mantené cerrada la puerta cortafuego."
+  },
+  "w-mask": {
+   "voice": "model",
+   "text": "face mask"
+  },
+  "x-mask": {
+   "voice": "model",
+   "text": "Check the face mask before you enter.",
+   "es": "Revisá la máscara antes de entrar."
+  },
+  "w-radio": {
+   "voice": "model",
+   "text": "portable radio"
+  },
+  "x-radio": {
+   "voice": "model",
+   "text": "Take the red radio for the fire party.",
+   "es": "Llevá el handy rojo de la brigada de incendio."
+  },
+  "w-torch": {
+   "voice": "model",
+   "text": "torch"
+  },
+  "x-torch": {
+   "voice": "model",
+   "text": "Take a torch. There is a lot of smoke.",
+   "es": "Llevá una linterna. Hay mucho humo."
+  },
+  "p-out": {
+   "voice": "model",
+   "text": "The fire is out.",
+   "es": "El fuego está apagado."
+  },
+  "p-written": {
+   "voice": "model",
+   "text": "Entry eleven thirty-five. Two hundred bar. Written.",
+   "es": "Entrada once treinta y cinco. Doscientos bar. Anotado."
+  },
+  "p-backup": {
+   "voice": "model",
+   "text": "Team two, back up team one.",
+   "es": "Equipo dos, apoyen al equipo uno."
+  },
+  "p-board": {
+   "voice": "model",
+   "text": "I'll take the BA board.",
+   "es": "Me encargo del tablero de ERA."
+  },
+  "m-board": {
+   "voice": "model",
+   "text": "I'll take the BA board.",
+   "es": "Me encargo del tablero de ERA."
+  },
+  "m-readback": {
+   "voice": "model",
+   "text": "Team two: Bautista, Lim. Entry eleven forty. Two hundred bar. Written.",
+   "es": "Equipo dos: Bautista, Lim. Entrada once cuarenta. Doscientos bar. Anotado."
+  },
+  "m-time": {
+   "voice": "model",
+   "text": "Second, team one has been inside for fifteen minutes.",
+   "es": "Segundo, el equipo uno lleva quince minutos adentro."
+  },
+  "m-out": {
+   "voice": "model",
+   "text": "Bridge, the fire is out. No injuries.",
+   "es": "Puente, el fuego está apagado. Sin heridos."
+  },
+  "m-pressure": {
+   "voice": "model",
+   "text": "Pressure two hundred bar.",
+   "es": "Presión doscientos bar."
+  },
+  "c-show-baboard": {
+   "voice": "james",
+   "text": "Where's the BA board?"
+  },
+  "c-show-entrytime": {
+   "voice": "james",
+   "text": "Show me the entry time."
+  },
+  "c-show-pressure": {
+   "voice": "james",
+   "text": "Show me the pressure."
+  },
+  "c-show-ba": {
+   "voice": "rolando",
+   "text": "Show me the breathing apparatus."
+  },
+  "c-show-galley": {
+   "voice": "mario",
+   "text": "Where's my galley?"
+  },
+  "c-show-firedoor": {
+   "voice": "james",
+   "text": "Show me the fire door."
+  },
+  "c-show-boundary": {
+   "voice": "james",
+   "text": "Show me the boundary cooling."
+  },
+  "c-take": {
+   "voice": "james",
+   "text": "Diego, you're with me. Take the BA board."
+  },
+  "c-team2": {
+   "voice": "james",
+   "text": "Diego, team two: Bautista and Lim. Entry time eleven forty. Pressure two hundred bar."
+  },
+  "c-howlong": {
+   "voice": "james",
+   "text": "Diego, team one went in at eleven thirty-five. It's eleven fifty now. Tell me."
+  },
+  "c-report": {
+   "voice": "lars",
+   "text": "Fire party, bridge. What's the situation? Over.",
+   "radio": true
+  },
+  "c-time-other": {
+   "voice": "rolando",
+   "text": "Team one ready. Entry time eleven forty-two. Pressure two hundred bar.",
+   "radio": true
+  },
+  "c-out-other": {
+   "voice": "rolando",
+   "text": "Pressure one hundred and twenty bar. The fire is out.",
    "radio": true
   }
  },
@@ -274,143 +332,185 @@
   "l25-10",
   "l25-11",
   "l25-12",
-  "l25-13"
+  "l25-13",
+  "l25-14",
+  "l25-15",
+  "l25-16",
+  "l25-17"
  ],
  "words": {
-  "mayday": {
-   "en": "Mayday",
-   "ipa": "/ˈmeɪdeɪ/",
-   "es": "Mayday (socorro)",
-   "audio": "w-mayday",
-   "ex": "x-mayday"
+  "fireparty": {
+   "en": "fire party",
+   "ipa": "/ˈfaɪə ˌpɑːti/",
+   "es": "brigada de incendio",
+   "audio": "w-fireparty",
+   "ex": "x-fireparty"
   },
-  "panpan": {
-   "en": "Pan-Pan",
-   "ipa": "/ˌpæn ˈpæn/",
-   "es": "Pan-Pan (urgencia)",
-   "audio": "w-panpan",
-   "ex": "x-panpan"
+  "ba": {
+   "en": "breathing apparatus (BA set)",
+   "ipa": "/ˈbriːðɪŋ æpəˌreɪtəs/",
+   "es": "equipo de respiración autónoma (ERA)",
+   "audio": "w-ba",
+   "ex": "x-ba"
   },
-  "securite": {
-   "en": "Sécurité",
-   "ipa": "/seɪˌkjʊərɪˈteɪ/",
-   "es": "Sécurité (seguridad)",
-   "audio": "w-securite",
-   "ex": "x-securite"
+  "baboard": {
+   "en": "BA board",
+   "ipa": "/ˌbiː ˈeɪ bɔːd/",
+   "es": "tablero de control de ERA",
+   "audio": "w-baboard",
+   "ex": "x-baboard"
   },
-  "distress": {
-   "en": "distress",
-   "ipa": "/dɪˈstres/",
-   "es": "peligro grave, socorro",
-   "audio": "w-distress",
-   "ex": "x-distress"
+  "entrytime": {
+   "en": "entry time",
+   "ipa": "/ˈentri taɪm/",
+   "es": "hora de entrada",
+   "audio": "w-entrytime",
+   "ex": "x-entrytime"
   },
-  "ch16": {
-   "en": "channel sixteen",
-   "ipa": "/ˈtʃænl ˌsɪkˈstiːn/",
-   "es": "canal dieciséis",
-   "audio": "w-ch16",
-   "ex": "x-ch16"
+  "pressure": {
+   "en": "pressure",
+   "ipa": "/ˈpreʃə/",
+   "es": "presión",
+   "audio": "w-pressure",
+   "ex": "x-pressure"
   },
-  "acknowledge": {
-   "en": "to acknowledge",
-   "ipa": "/əkˈnɒlɪdʒ/",
-   "es": "acusar recibo",
-   "audio": "w-acknowledge",
-   "ex": "x-acknowledge"
+  "boundary": {
+   "en": "boundary cooling",
+   "ipa": "/ˈbaʊndri ˌkuːlɪŋ/",
+   "es": "enfriamiento de límites",
+   "audio": "w-boundary",
+   "ex": "x-boundary"
   },
-  "proceed": {
-   "en": "to proceed",
-   "ipa": "/prəˈsiːd/",
-   "es": "dirigirse, ir hacia",
-   "audio": "w-proceed",
-   "ex": "x-proceed"
+  "galley": {
+   "en": "galley",
+   "ipa": "/ˈɡæli/",
+   "es": "cocina (del buque)",
+   "audio": "w-galley",
+   "ex": "x-galley"
   },
-  "onscene": {
-   "en": "on scene",
-   "ipa": "/ˌɒn ˈsiːn/",
-   "es": "en la escena, en el lugar",
-   "audio": "w-onscene",
-   "ex": "x-onscene"
+  "contained": {
+   "en": "contained",
+   "ipa": "/kənˈteɪnd/",
+   "es": "contenido, controlado",
+   "audio": "w-contained",
+   "ex": "x-contained"
+  },
+  "firedoor": {
+   "en": "fire door",
+   "ipa": "/ˈfaɪə dɔː/",
+   "es": "puerta cortafuego",
+   "audio": "w-firedoor",
+   "ex": "x-firedoor"
+  },
+  "mask": {
+   "en": "face mask",
+   "ipa": "/ˈfeɪs mɑːsk/",
+   "es": "máscara",
+   "audio": "w-mask",
+   "ex": "x-mask"
+  },
+  "radio": {
+   "en": "portable radio",
+   "ipa": "/ˈpɔːtəbl ˈreɪdiəʊ/",
+   "es": "handy (radio portátil)",
+   "audio": "w-radio",
+   "ex": "x-radio"
+  },
+  "torch": {
+   "en": "torch",
+   "ipa": "/tɔːtʃ/",
+   "es": "linterna",
+   "audio": "w-torch",
+   "ex": "x-torch"
   }
  },
  "plate": {
   "svg": "img/l25/plate.svg",
   "pins": [
    {
-    "word": "ch16",
-    "x": 32,
-    "y": 58
+    "word": "baboard",
+    "x": 92,
+    "y": 20
    },
    {
-    "word": "distress",
-    "x": 124,
-    "y": 102
+    "word": "entrytime",
+    "x": 102,
+    "y": 86
    },
    {
-    "word": "mayday",
-    "x": 318,
+    "word": "pressure",
+    "x": 146,
+    "y": 86
+   },
+   {
+    "word": "ba",
+    "x": 215,
+    "y": 124
+   },
+   {
+    "word": "firedoor",
+    "x": 341,
+    "y": 184
+   },
+   {
+    "word": "boundary",
+    "x": 304,
     "y": 150
    },
    {
-    "word": "proceed",
-    "x": 264,
-    "y": 120
+    "word": "mask",
+    "x": 280,
+    "y": 26
    },
    {
-    "word": "onscene",
-    "x": 322,
-    "y": 100
+    "word": "radio",
+    "x": 16,
+    "y": 168
    },
    {
-    "word": "panpan",
-    "x": 178,
-    "y": 82
-   },
-   {
-    "word": "securite",
-    "x": 382,
-    "y": 172
+    "word": "torch",
+    "x": 86,
+    "y": 220
    }
   ]
  },
  "docs": {
-  "log": {
+  "report": {
    "kind": "form",
-   "title": "GMDSS RADIO LOG",
-   "subtitle": "M/V LNG HORIZON · 25 MAR 2026 · STRAIT OF GIBRALTAR",
+   "title": "FIRE REPORT",
+   "subtitle": "M/V LNG HORIZON · 23 MAR 2026 · ATLANTIC",
    "cells": [
     [
-     "1918 · VHF 16",
-     "MAYDAY from F/V Cap Béar · 35°54'N 005°42'W"
+     "LOCATION",
+     "Galley, main deck"
     ],
     [
-     "NATURE",
-     "Taking water in engine room · 4 POB"
+     "ALARM",
+     "1130"
     ],
     [
-     "1919 · VHF 16",
-     "Tarifa Traffic acknowledged · SAR boat ETA 40 min"
+     "CAUSE",
+     "Pan of oil · fire spread to the extractor"
     ],
     [
-     "1921 · VHF 16",
-     "Horizon to Tarifa: proceeding to assist · ETA 30 min"
+     "FIRST ACTION",
+     "Fire blanket (cook)"
     ],
     [
-     "1934 · VHF 16",
-     "Cap Béar preparing liferaft"
+     "TEAM ONE",
+     "Bosun, AB Santos · entry 1135 · 200 bar"
     ],
     [
-     "1958 · VHF 16",
-     "Salvamento Marítimo on scene · 4 recovered, all safe"
+     "EXTINGUISHED WITH",
+     "CO2 · fire out 1150"
     ],
     [
-     "2000 · VHF 16",
-     "Horizon released by Tarifa Traffic"
+     "INJURIES",
+     "None"
     ],
     [
-     "SIGNED",
-     "D. Martínez, cadet · T. Williams, C/O"
+     "FIRE WATCH",
+     "Until 1250 · Bosun"
     ]
    ]
   }
@@ -418,54 +518,43 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: Mayday",
+   "title": "Listen: fire in the galley",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l25/scene.jpg",
-     "kicker": "Day 12 · 19:20 · Strait of Gibraltar",
-     "title": "Mayday on channel 16",
-     "body": "Sunset near Gibraltar. Diego is on watch with Tanya when a Mayday comes in on the radio. Radio voices have static: listen more than once. Listen first, one piece at a time.",
+     "kicker": "Day 10 · 11:30 · Atlantic",
+     "title": "Fire party",
+     "body": "This time it's not a drill. There's a fire in Mario's galley. James leads the fire party and Diego keeps the BA board. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l25-01"
+      "l25-01",
+      "l25-02"
      ],
-     "q": "What is the problem on the Cap Béar?",
+     "q": "Is this a drill?",
      "opts": [
-      "Taking water in the engine room",
-      "Fire on deck",
-      "A man overboard"
+      "No, it's a real fire",
+      "Yes, a fire drill",
+      "Yes, a man overboard drill"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l25-01"
-     ],
-     "q": "How many persons on board?",
-     "opts": [
-      "Four",
-      "Fourteen",
-      "Forty"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
+      "l25-03",
       "l25-04"
      ],
-     "q": "Who is coming, and when?",
+     "q": "What is Diego's job?",
      "opts": [
-      "Salvamento Marítimo, in 40 minutes",
-      "A helicopter, in 4 minutes",
-      "Nobody"
+      "The BA board: names and times",
+      "Enter the galley",
+      "Call the bridge"
      ],
      "a": 0
     },
@@ -475,24 +564,24 @@
       "l25-05",
       "l25-06"
      ],
-     "q": "Why does the Horizon go?",
+     "q": "Why didn't the fire blanket work?",
      "opts": [
-      "It's only six miles away",
-      "Tarifa orders it",
-      "The Captain knows the skipper"
+      "The fire broke out again in the extractor",
+      "Mario didn't find it",
+      "It was too small"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l25-07"
+      "l25-08"
      ],
-     "q": "What is Diego's ETA?",
+     "q": "Team one's entry time and pressure?",
      "opts": [
-      "30 minutes",
-      "13 minutes",
-      "6 minutes"
+      "11:35 · 200 bar",
+      "11:30 · 140 bar",
+      "11:53 · 200 bar"
      ],
      "a": 0
     },
@@ -501,104 +590,121 @@
      "audio": [
       "l25-11"
      ],
-     "q": "How does it end?",
+     "q": "What do they use to put it out?",
      "opts": [
-      "Four recovered, all safe",
-      "Two missing",
-      "The fishing vessel is towed"
+      "CO2",
+      "Water",
+      "Foam"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l25-15"
+     ],
+     "q": "What does James report to the bridge?",
+     "opts": [
+      "Out and contained, no injuries",
+      "Spreading, send help",
+      "Out, one injured"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole radio traffic",
+     "title": "Now the whole emergency",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Distress, urgency, safety",
+   "title": "Fire party",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The VHF and the chart of the Strait."
+     "body": "The BA board, a BA set and the galley door."
     },
     {
      "type": "card",
-     "word": "ch16"
+     "word": "fireparty"
     },
     {
      "type": "card",
-     "word": "distress"
+     "word": "galley"
+    },
+    {
+     "type": "card",
+     "word": "firedoor"
     },
     {
      "type": "tap",
-     "audio": "c-show-ch16",
-     "a": "ch16"
+     "audio": "c-show-firedoor",
+     "a": "firedoor"
     },
     {
      "type": "card",
-     "word": "mayday"
+     "word": "ba"
     },
     {
      "type": "card",
-     "word": "panpan"
+     "word": "mask"
     },
     {
      "type": "card",
-     "word": "securite"
+     "word": "baboard"
     },
     {
      "type": "tap",
-     "audio": "x-panpan",
-     "q": "Listen to the call. Who is calling?",
-     "a": "panpan"
-    },
-    {
-     "type": "tap",
-     "audio": "x-securite",
-     "q": "Listen to the call. What is it about?",
-     "a": "securite"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-mayday",
-     "a": "mayday"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-distress",
-     "a": "distress"
+     "audio": "c-show-ba",
+     "a": "ba"
     },
     {
      "type": "card",
-     "word": "acknowledge"
+     "word": "entrytime"
     },
     {
      "type": "card",
-     "word": "proceed"
-    },
-    {
-     "type": "card",
-     "word": "onscene"
+     "word": "pressure"
     },
     {
      "type": "tap",
-     "audio": "c-show-onscene",
-     "a": "onscene"
+     "audio": "c-show-pressure",
+     "a": "pressure"
+    },
+    {
+     "type": "card",
+     "word": "boundary"
+    },
+    {
+     "type": "card",
+     "word": "contained"
+    },
+    {
+     "type": "card",
+     "word": "radio"
+    },
+    {
+     "type": "card",
+     "word": "torch"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-boundary",
+     "a": "boundary"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "Engine failure, no danger to life yet. The signal is…",
+     "q": "\"brigada de incendio\" in English:",
      "opts": [
-      "Pan-Pan",
-      "Mayday",
-      "Sécurité"
+      "fire party",
+      "fire brigade team",
+      "fire group"
      ],
      "a": 0
     },
@@ -607,24 +713,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "Mayday",
-       "socorro"
+       "galley",
+       "cocina"
       ],
       [
-       "Pan-Pan",
-       "urgencia"
+       "entry time",
+       "hora de entrada"
       ],
       [
-       "Sécurité",
-       "seguridad"
+       "pressure",
+       "presión"
       ],
       [
-       "to acknowledge",
-       "acusar recibo"
+       "contained",
+       "contenido"
       ],
       [
-       "on scene",
-       "en el lugar"
+       "fire party",
+       "brigada de incendio"
       ]
      ]
     }
@@ -632,144 +738,143 @@
   },
   {
    "id": "phrases",
-   "title": "Mayday, Pan-Pan, Sécurité",
+   "title": "Put out, break out, back up",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Answering a Mayday",
+     "title": "At the BA board",
      "list": [
       [
-       "Received Mayday.",
-       "Recibido Mayday.",
-       "p-received"
+       "I'll take the BA board.",
+       "Me encargo del tablero de ERA.",
+       "p-board"
       ],
       [
-       "Proceeding to assist. ETA thirty minutes.",
-       "Vamos a asistir. Llegada estimada treinta minutos.",
-       "p-proceed"
+       "Entry eleven thirty-five. Two hundred bar. Written.",
+       "Entrada once treinta y cinco. Doscientos bar. Anotado.",
+       "p-written"
       ],
       [
-       "Tarifa Traffic, this is LNG Horizon.",
-       "Tarifa Tráfico, aquí LNG Horizon.",
-       "p-call"
+       "Team two, back up team one.",
+       "Equipo dos, apoyen al equipo uno.",
+       "p-backup"
       ],
       [
-       "Four persons on board.",
-       "Cuatro personas a bordo.",
-       "p-persons"
+       "The fire is out.",
+       "El fuego está apagado.",
+       "p-out"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Three signals, one order",
+     "title": "Three phrasal verbs for fire",
      "steps": [
       [
-       "Mayday ×3",
-       "Distress: danger to life or to the ship. <i>Sinking, fire, man overboard.</i>"
+       "break out",
+       "A fire <b>broke out</b> in the galley. (empezar de golpe)"
       ],
       [
-       "Pan-Pan ×3",
-       "Urgency: a serious problem, no danger to life yet. <i>Engine failure, drifting, medical help.</i>"
+       "put out",
+       "We're <b>putting</b> it <b>out</b> with CO2. The fire is <b>out</b>. (apagar)"
       ],
       [
-       "Sécurité ×3",
-       "Safety: a warning for all ships. <i>Floating container, bad weather.</i>"
+       "back up",
+       "Team two, <b>back up</b> team one. (apoyar, respaldar)"
       ]
      ],
      "paras": [
-      "A distress message always comes in the same order: <b>Mayday ×3 · this is + name ×3 · position · what is wrong · what help · persons on board · Over</b>.",
-      "Write it in that order too: <b>position, problem, persons</b>, like Tanya says."
+      "A phrasal verb is a verb + a small word, and the meaning changes: <b>put</b> is <i>poner</i>, but <b>put out</b> is <i>apagar</i>.",
+      "<b>The fire is out</b> is the sentence everybody wants to hear. Say it twice on the radio."
      ],
-     "avoid": "Help! Help! We have a big problem!"
+     "avoid": "The fire is off · We're putting off the fire"
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-panpan"
-     ],
-     "q": "Which signal is it, and what's the problem?",
+     "type": "choice",
+     "q": "The fire has stopped completely. You say…",
      "opts": [
-      "Pan-Pan: engine failure",
-      "Mayday: fire",
-      "Sécurité: a container"
+      "The fire is out.",
+      "The fire is off.",
+      "The fire is finished out."
      ],
      "a": 0
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-securite"
-     ],
-     "q": "What does the warning say?",
+     "type": "choice",
+     "q": "A fire started suddenly in the engine room. A fire…",
      "opts": [
-      "A floating container south of Tarifa",
-      "A ship on fire",
-      "Fog in the Strait"
+      "broke out",
+      "put out",
+      "backed up"
      ],
      "a": 0
-    },
-    {
-     "type": "type",
-     "audio": "c-mayday2",
-     "q": "How many persons on board? Write the number.",
-     "accept": [
-      "6",
-      "six"
-     ]
     },
     {
      "type": "build",
-     "q": "Answer a Mayday: received, proceeding to assist.",
+     "q": "Team two, back up team one.",
      "a": [
-      "Received",
-      "Mayday.",
-      "Proceeding",
-      "to",
-      "assist."
+      "Team",
+      "two,",
+      "back",
+      "up",
+      "team",
+      "one."
      ],
      "extra": [
-      "Receive",
-      "going"
+      "out",
+      "help"
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "Pan-Pan and Sécurité",
+     "title": "Read back the numbers",
      "paras": [
-      "They're French words said in English: <b>Pan-Pan</b> rhymes with <i>man</i>, not with Spanish <i>pan</i>. <b>Sécurité</b>: <b>say-KYUR-ee-tay</b>.",
-      "Positions: say each figure: <b>three five fifty-four North</b>. Never <i>treinta y cinco</i>."
+      "At the BA board you repeat what you hear and say <b>Written</b> at the end. Times in 24 hours (Lesson 8): <b>eleven thirty-five</b>. Pressure in <b>bar</b>, always the same word.",
+      "No Spanish words on the radio: not <i>once y treinta y cinco</i>, not <i>bares</i>."
      ],
-     "avoid": "Pan pan (like bread) · Security, security, security"
+     "avoid": "Eleven and thirty-five · two hundred bars"
     },
     {
-     "type": "choice",
-     "q": "A floating container in the Strait. Tarifa Traffic says…",
+     "type": "type",
+     "audio": "c-time-other",
+     "q": "What's the entry time? Write it with four numbers.",
+     "accept": [
+      "1142",
+      "11:42",
+      "11.42"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-out-other"
+     ],
+     "q": "What's the pressure now?",
      "opts": [
-      "Sécurité ×3",
-      "Mayday ×3",
-      "Pan-Pan ×3"
+      "120 bar",
+      "200 bar",
+      "140 bar"
      ],
      "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Mayday",
+     "title": "bar, board, BA",
      "paras": [
-      "<b>MAY-day</b>: two syllables, strong first one. Three times, clear, not too fast.",
-      "After <b>Over</b>, stop talking and listen."
+      "<b>bar</b>: one short syllable, no <i>s</i> in the plural: <b>two hundred bar</b>.",
+      "<b>BA</b>: letter by letter, <b>bee-AY</b>. <b>board</b> sounds like <i>bord</i>, long."
      ],
      "list": [
       [
-       "Mayday, Mayday, Mayday.",
-       "Mayday, Mayday, Mayday.",
-       "m-mayday"
+       "Pressure two hundred bar.",
+       "Presión doscientos bar.",
+       "m-pressure"
       ]
      ]
     }
@@ -777,57 +882,57 @@
   },
   {
    "id": "read",
-   "title": "Read the radio log",
+   "title": "Read the fire report",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "log",
-     "q": "At what time did the Mayday come in?",
+     "doc": "report",
+     "q": "Where was the fire?",
      "opts": [
-      "19:18",
-      "19:58",
-      "20:00"
+      "Galley, main deck",
+      "Engine room",
+      "Bridge"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "log",
-     "q": "What does POB mean here?",
+     "doc": "report",
+     "q": "What was the cause?",
      "opts": [
-      "Persons on board",
-      "Port of berth",
-      "Position of boat"
+      "A pan of oil; it spread to the extractor",
+      "A cigarette",
+      "Electricity"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "log",
-     "q": "Tap the line where Salvamento Marítimo arrives.",
-     "a": 5
+     "doc": "report",
+     "q": "Tap the line with team one's entry time.",
+     "a": 4
     },
     {
      "type": "doc",
-     "doc": "log",
-     "q": "Who acknowledged the Mayday first?",
+     "doc": "report",
+     "q": "When was the fire out?",
      "opts": [
-      "Tarifa Traffic",
-      "LNG Horizon",
-      "Salvamento Marítimo"
+      "11:50",
+      "11:30",
+      "12:50"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "log",
-     "q": "Who signed the log?",
+     "doc": "report",
+     "q": "Who keeps the fire watch?",
      "opts": [
-      "The cadet and the Chief Officer",
-      "The Captain only",
-      "Tarifa Traffic"
+      "The bosun",
+      "The cook",
+      "Nobody"
      ],
      "a": 0
     }
@@ -835,72 +940,72 @@
   },
   {
    "id": "speak",
-   "title": "On channel 16",
+   "title": "Keep the board",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Short and clear",
-     "body": "Listen, say it, check it. Like on the radio: calm, short, clear.",
-     "es": "Como en la radio: calma, corto y claro.",
+     "title": "Names, times, pressure",
+     "body": "Listen, say it, check it. Read back every number.",
+     "es": "Repetí cada número.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-received"
+     "model": "p-board"
     },
     {
      "type": "shadow",
-     "model": "p-proceed"
+     "model": "p-written"
     },
     {
      "type": "shadow",
-     "model": "p-persons"
+     "model": "p-out"
     },
     {
      "type": "role",
-     "cue": "c-callnow",
-     "task": "Call Tarifa Traffic: their name twice, your name twice, Over.",
-     "model": "m-call",
+     "cue": "c-take",
+     "task": "Accept: you'll take the BA board.",
+     "model": "m-board",
      "accept": [
-      "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Over.",
-      "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon, over.",
-      "Tarifa Traffic, this is LNG Horizon. Over."
+      "I'll take the BA board.",
+      "Yes, Second. I'll take the BA board.",
+      "I will take the BA board."
      ]
     },
     {
      "type": "role",
-     "cue": "c-tarifa-ask",
-     "task": "Received Mayday, proceeding to assist, ETA 20 minutes.",
-     "model": "m-proceed",
+     "cue": "c-team2",
+     "task": "Read back team two: Bautista, Lim, 11:40, 200 bar. Then say \"Written\".",
+     "model": "m-readback",
      "accept": [
-      "Received Mayday. Proceeding to assist. ETA twenty minutes. Over.",
-      "Received Mayday, proceeding to assist, ETA twenty minutes, over.",
-      "Proceeding to assist. ETA twenty minutes. Over."
+      "Team two: Bautista, Lim. Entry eleven forty. Two hundred bar. Written.",
+      "Team two, Bautista and Lim. Entry eleven forty. Two hundred bar. Written.",
+      "Bautista, Lim. Entry eleven forty. Two hundred bar. Written."
      ]
     },
     {
      "type": "role",
-     "cue": "c-arrive",
-     "task": "Tell Tarifa Traffic you are on scene.",
-     "model": "m-onscene",
+     "cue": "c-howlong",
+     "task": "Team one has been inside for fifteen minutes. Tell James.",
+     "model": "m-time",
      "accept": [
-      "Tarifa Traffic, LNG Horizon. We are on scene. Over.",
-      "Tarifa Traffic, LNG Horizon, we are on scene, over.",
-      "We are on scene. Over."
+      "Second, team one has been inside for fifteen minutes.",
+      "Team one has been inside for fifteen minutes.",
+      "Fifteen minutes inside, Second."
      ]
     },
     {
      "type": "role",
-     "cue": "c-release",
-     "task": "Released: you resume your voyage.",
-     "model": "m-released",
+     "cue": "c-report",
+     "task": "Report: the fire is out, no injuries.",
+     "model": "m-out",
      "accept": [
-      "Released. Resuming our voyage. Over.",
-      "Released, resuming our voyage, over.",
-      "LNG Horizon released. Resuming our voyage. Over."
+      "Bridge, the fire is out. No injuries.",
+      "The fire is out. No injuries.",
+      "Bridge, fire party. The fire is out. No injuries."
      ]
     }
    ]
@@ -913,88 +1018,93 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-distress",
+     "audio": "w-galley",
      "q": "Type what you hear.",
      "accept": [
-      "distress"
+      "galley",
+      "the galley"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-proceed",
-     "a": "proceed"
+     "audio": "c-show-baboard",
+     "a": "baboard"
     },
     {
      "type": "tap",
-     "audio": "c-show-mayday",
-     "a": "mayday"
+     "audio": "c-show-entrytime",
+     "a": "entrytime"
     },
     {
      "type": "listen",
      "audio": [
-      "l25-09"
+      "l25-16"
      ],
-     "q": "What is the Cap Béar crew doing now?",
+     "q": "How long is the fire watch?",
      "opts": [
-      "Preparing the liferaft",
-      "Repairing the engine",
-      "Calling the owner"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "Put the Mayday in order: after \"This is Cap Béar ×3\" comes…",
-     "opts": [
-      "the position",
-      "the persons on board",
-      "Over"
+      "One hour",
+      "Ten minutes",
+      "All night"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "A crew member cut his arm. You need medical advice by radio. The signal is…",
+     "q": "Complete: \"We're putting it ___ with CO2.\"",
      "opts": [
-      "Pan-Pan",
-      "Sécurité",
-      "Mayday Relay"
+      "out",
+      "off",
+      "up"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The fire can't spread any more. It's…",
+     "opts": [
+      "contained",
+      "contented",
+      "continued"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "q": "Report when on scene.",
+     "q": "A fire broke out in the galley.",
      "a": [
-      "Report",
-      "when",
-      "on",
-      "scene."
+      "A",
+      "fire",
+      "broke",
+      "out",
+      "in",
+      "the",
+      "galley."
      ],
      "extra": [
-      "in",
-      "arrive"
+      "put",
+      "kitchen"
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "l25-13"
+      "l25-17"
      ],
-     "q": "What does the Captain say saves people?",
+     "q": "Why is the BA board important?",
      "opts": [
-      "Short and clear radio",
-      "A fast ship",
-      "Good English grammar"
+      "So everybody comes back",
+      "For the company report",
+      "To check the time"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: acusar recibo",
+     "q": "Write it in English: brigada de incendio",
      "accept": [
-      "acknowledge",
-      "to acknowledge"
+      "fire party",
+      "the fire party",
+      "a fire party"
      ]
     }
    ]

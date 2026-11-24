@@ -10,10 +10,10 @@ Hasta que se graban, la app las lee con la voz del celular.
 
 | Lección | Clave | Voz | Texto | Tipo |
 |---|---|---|---|---|
-| L11 | `w-slackaway` | Brian (modelo) | slack away | Nueva |
-| L11 | `x-slackaway` | Brian (modelo) | Slack away the stern line. | Nueva |
-| L11 | `w-headline` | Brian (modelo) | head line | Nueva |
-| L11 | `x-headline` | Brian (modelo) | The head lines are on the forecastle. | Nueva |
+| L12 | `w-slackaway` | Brian (modelo) | slack away | Nueva |
+| L12 | `x-slackaway` | Brian (modelo) | Slack away the stern line. | Nueva |
+| L12 | `w-headline` | Brian (modelo) | head line | Nueva |
+| L12 | `x-headline` | Brian (modelo) | The head lines are on the forecastle. | Nueva |
 | L3 | `w-smoking` | Brian (modelo) | smoking room | Nueva |
 | L3 | `x-smoking` | Brian (modelo) | The smoking room is on B-deck. | Nueva |
 | L3 | `w-recreation` | Brian (modelo) | recreation room | Nueva |
@@ -24,40 +24,41 @@ Hasta que se graban, la app las lee con la voz del celular.
 | L4 | `x-pumpman` | Brian (modelo) | The pumpman works with the cargo pumps. | Nueva |
 | L4 | `w-messman` | Brian (modelo) | messman | Nueva |
 | L4 | `x-messman` | Brian (modelo) | The messman cleans the mess room. | Nueva |
-| L13 | `w-gps` | Brian (modelo) | GPS | Nueva |
-| L13 | `x-gps` | Brian (modelo) | The GPS gives our position. | Nueva |
-| L13 | `w-log` | Brian (modelo) | speed log | Nueva |
-| L13 | `x-log` | Brian (modelo) | The speed log shows twelve knots. | Nueva |
-| L13 | `w-anemometer` | Brian (modelo) | anemometer | Nueva |
-| L13 | `x-anemometer` | Brian (modelo) | The anemometer shows the wind direction and speed. | Nueva |
-| L14 | `w-range` | Brian (modelo) | range | Nueva |
-| L14 | `x-range` | Brian (modelo) | Change the range to six miles. | Nueva |
-| L14 | `w-brill` | Brian (modelo) | brilliance | Nueva |
-| L14 | `x-brill` | Brian (modelo) | Turn down the brilliance at night. | Nueva |
-| L19 | `w-flow` | Brian (modelo) | flow | Nueva |
-| L19 | `x-flow` | Brian (modelo) | The gas flow to the engines is steady. | Nueva |
-| L24 | `w-firedoor` | Brian (modelo) | fire door | Nueva |
-| L24 | `x-firedoor` | Brian (modelo) | Keep the fire door closed. | Nueva |
-| L24 | `w-mask` | Brian (modelo) | face mask | Nueva |
-| L24 | `x-mask` | Brian (modelo) | Check the face mask before you enter. | Nueva |
-| L24 | `w-radio` | Brian (modelo) | portable radio | Nueva |
-| L24 | `x-radio` | Brian (modelo) | Take the red radio for the fire party. | Nueva |
-| L24 | `w-torch` | Brian (modelo) | torch | Nueva |
-| L24 | `x-torch` | Brian (modelo) | Take a torch. There is a lot of smoke. | Nueva |
-| L24 | `c-show-firedoor` | James | Show me the fire door. | Nueva |
-| L26 | `w-kit` | Brian (modelo) | first-aid kit | Nueva |
-| L26 | `x-kit` | Brian (modelo) | Bring the first-aid kit to the galley. | Nueva |
-| L27 | `w-pilotboat` | Brian (modelo) | pilot boat | Nueva |
-| L27 | `x-pilotboat` | Brian (modelo) | The pilot boat is alongside. | Nueva |
-| L27 | `w-station` | Brian (modelo) | pilot station | Nueva |
-| L27 | `x-station` | Brian (modelo) | Call the pilot station on channel twelve. | Nueva |
-| L12 | `w-stopper` | Brian (modelo) | chain stopper | Nueva |
-| L12 | `x-stopper` | Brian (modelo) | Put the chain stopper on. | Nueva |
-| L12 | `w-hawse` | Brian (modelo) | hawse pipe | Nueva |
-| L12 | `x-hawse` | Brian (modelo) | The chain runs through the hawse pipe. | Nueva |
-| L12 | `w-locker` | Brian (modelo) | chain locker | Nueva |
-| L12 | `x-locker` | Brian (modelo) | The chain is stowed in the chain locker. | Nueva |
-| L11 | `w-winch` | Brian (modelo) | winch | Nueva |
-| L11 | `x-winch` | Brian (modelo) | Start the winch. | Nueva |
-| L11 | `w-drum` | Brian (modelo) | drum | Nueva |
-| L11 | `x-drum` | Brian (modelo) | Keep three turns on the drum. | Nueva |
+| L14 | `w-gps` | Brian (modelo) | GPS | Nueva |
+| L14 | `x-gps` | Brian (modelo) | The GPS gives our position. | Nueva |
+| L14 | `w-log` | Brian (modelo) | speed log | Nueva |
+| L14 | `x-log` | Brian (modelo) | The speed log shows twelve knots. | Nueva |
+| L14 | `w-anemometer` | Brian (modelo) | anemometer | Nueva |
+| L14 | `x-anemometer` | Brian (modelo) | The anemometer shows the wind direction and speed. | Nueva |
+| L15 | `w-range` | Brian (modelo) | range | Nueva |
+| L15 | `x-range` | Brian (modelo) | Change the range to six miles. | Nueva |
+| L15 | `w-brill` | Brian (modelo) | brilliance | Nueva |
+| L15 | `x-brill` | Brian (modelo) | Turn down the brilliance at night. | Nueva |
+| L20 | `w-flow` | Brian (modelo) | flow | Nueva |
+| L20 | `x-flow` | Brian (modelo) | The gas flow to the engines is steady. | Nueva |
+| L25 | `w-firedoor` | Brian (modelo) | fire door | Nueva |
+| L25 | `x-firedoor` | Brian (modelo) | Keep the fire door closed. | Nueva |
+| L25 | `w-mask` | Brian (modelo) | face mask | Nueva |
+| L25 | `x-mask` | Brian (modelo) | Check the face mask before you enter. | Nueva |
+| L25 | `w-radio` | Brian (modelo) | portable radio | Nueva |
+| L25 | `x-radio` | Brian (modelo) | Take the red radio for the fire party. | Nueva |
+| L25 | `w-torch` | Brian (modelo) | torch | Nueva |
+| L25 | `x-torch` | Brian (modelo) | Take a torch. There is a lot of smoke. | Nueva |
+| L25 | `c-show-firedoor` | James | Show me the fire door. | Nueva |
+| L27 | `w-kit` | Brian (modelo) | first-aid kit | Nueva |
+| L27 | `x-kit` | Brian (modelo) | Bring the first-aid kit to the galley. | Nueva |
+| L28 | `w-pilotboat` | Brian (modelo) | pilot boat | Nueva |
+| L28 | `x-pilotboat` | Brian (modelo) | The pilot boat is alongside. | Nueva |
+| L28 | `w-station` | Brian (modelo) | pilot station | Nueva |
+| L28 | `x-station` | Brian (modelo) | Call the pilot station on channel twelve. | Nueva |
+| L13 | `w-stopper` | Brian (modelo) | chain stopper | Nueva |
+| L13 | `x-stopper` | Brian (modelo) | Put the chain stopper on. | Nueva |
+| L13 | `w-hawse` | Brian (modelo) | hawse pipe | Nueva |
+| L13 | `x-hawse` | Brian (modelo) | The chain runs through the hawse pipe. | Nueva |
+| L13 | `w-locker` | Brian (modelo) | chain locker | Nueva |
+| L13 | `x-locker` | Brian (modelo) | The chain is stowed in the chain locker. | Nueva |
+| L12 | `w-winch` | Brian (modelo) | winch | Nueva |
+| L12 | `x-winch` | Brian (modelo) | Start the winch. | Nueva |
+| L12 | `w-drum` | Brian (modelo) | drum | Nueva |
+| L12 | `x-drum` | Brian (modelo) | Keep three turns on the drum. | Nueva |
+| L11 | todas (62) | Personajes y Brian | Lección nueva *Lifting gear*: todo lo de `audio/l11/script.csv` (29 de personajes) más las 33 de la voz modelo | Nueva |

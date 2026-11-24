@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-49";
+const APP_VERSION = "beta-50";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -743,7 +743,7 @@ function viewCert(){
         <div class="cert-rule" aria-hidden="true"><i></i><b></b><i></i></div>
         <p class="cert-line">This is to certify that</p>
         <h1 class="cert-name">${esc(c.name)}</h1>
-        <p class="cert-body">has completed <b>English on Board</b>, Maritime English for deck officers: 27 lessons in 7 modules, from Houston to Marseille, and passed the final test with <b>${c.pct}%</b>.</p>
+        <p class="cert-body">has completed <b>English on Board</b>, Maritime English for deck officers: ${allLessons().length} lessons in ${COURSE.modules.length} modules, from Houston to Marseille, and passed the final test with <b>${c.pct}%</b>.</p>
         <div class="cert-foot">
           <div class="cert-col"><span class="cert-sign">Bianca Tortore</span><span class="cert-cap">Course author<br>Deck officer</span></div>
           ${certSeal()}
@@ -786,7 +786,7 @@ function certSeal(){
 }
 function finalRow(){
   const open = finalOpen(), t = testsState().final, c = progress.cert;
-  const meta = !open ? "Finish all 27 lessons first" : c ? `Passed · ${t ? t.best : c.pct}% · certificate ready` : t ? `Best: ${t.best}%${t.passed ? " · passed" : ""}` : "40 questions · about 25 min · 80% to pass";
+  const meta = !open ? `Finish all ${allLessons().length} lessons first` : c ? `Passed · ${t ? t.best : c.pct}% · certificate ready` : t ? `Best: ${t.best}%${t.passed ? " · passed" : ""}` : "40 questions · about 25 min · 80% to pass";
   return `<section class="module"><div class="module-head"><h3>Final test</h3><span class="mono">One certificate</span></div>
     <ol class="lrows"><li class="lrow test ${open ? "ready" : "locked"} ${t && t.passed ? "complete" : ""}">
     <button class="lrow-btn" ${open ? "data-final" : "disabled"}>
@@ -984,7 +984,7 @@ function viewHome(){
 
 function viewLessons(){
   const cur = currentLesson();
-  tabView("lessons", `<h2 class="tab-title">Lessons</h2><p class="sub tab-sub">27 lessons in 7 modules, from the first walk on deck to the radio.</p>
+  tabView("lessons", `<h2 class="tab-title">Lessons</h2><p class="sub tab-sub">${allLessons().length} lessons in ${COURSE.modules.length} modules, from the first walk on deck to the radio.</p>
     ${COURSE.modules.map(m => moduleSection(m, cur)).join("")}
     ${finalRow()}
     <p class="note">Progress is saved on this device.</p>`);
@@ -1182,9 +1182,9 @@ async function startDrill(kind, modN){
   try {
     if (kind === "final") {
       ns = allLessons().filter(l => l.ready).map(l => l.n);
-      const p = await screenPools(ns), last = ns.includes(27) ? 27 : ns[ns.length - 1], pick = finalPicker();
+      const p = await screenPools(ns), last = Math.max(...ns), pick = finalPicker();
       items = [
-        {type: "intro", ln: last, image: "img/l27/scene.jpg", kicker: "Final test · Marseille", title: "Before you sign off",
+        {type: "intro", ln: last, image: "img/l" + pad(last) + "/scene.jpg", kicker: "Final test · Marseille", title: "Before you sign off",
           body: "The voyage is over. Tanya has one last check before you go down the gangway: 40 questions from the whole course. You need 80% to pass, and then you get your certificate.",
           es: "40 preguntas de todo el curso. Con 80% aprobás y recibís el certificado."},
         ...pick(p.listen, FINAL.listen),
@@ -1963,7 +1963,7 @@ function viewWelcome(){
         <div><b>Read</b><span>logs and lists</span></div>
       </div>
       <button class="w-skip" id="wSkip">Already started? Go to the lessons</button>
-      <p class="w-meta mono">Module 1 free · 27 lessons in 7 modules · works offline</p>
+      <p class="w-meta mono">Module 1 free · ${allLessons().length} lessons in ${COURSE.modules.length} modules · works offline</p>
       ${betaNoteHTML()}
       ${installCardHTML("welcome")}
     </div>

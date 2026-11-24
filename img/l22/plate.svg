@@ -1,36 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Man overboard seen from above: the ship turning to starboard, the person in the water behind it with the lifebuoy and the orange smoke, the lookout pointing, and the rescue boat going out">
-  <!-- Lesson 22 plate: seen from above. The ship (bow to the right; the whole drawing is mirrored by the outer group) has started to turn to starboard (its wake curves).
-       Behind it, on the starboard quarter, the person in the water with the lifebuoy next to him and the orange smoke of
-       the smoke float drifting downwind. On the starboard side aft, the lookout points with his arm. The rescue boat
-       leaves the ship's side towards the person. The bridge has the MOB button (red). Colours come from app.css (.p-*). -->
-  <rect class="p-water" x="0" y="0" width="400" height="240"/>
-  <g transform="translate(400 0) scale(-1 1)">
-  <!-- wake: curving, the ship turns -->
-  <path d="M250 96 Q300 96 330 70 Q360 44 400 40" fill="none" stroke="#fff" stroke-width="10" opacity=".35" stroke-linecap="round"/>
-  <!-- ship -->
-  <g transform="rotate(-8 150 96)">
-    <path d="M20 96 Q40 66 80 66 H252 Q262 66 262 76 V116 Q262 126 252 126 H80 Q40 126 20 96 Z" class="p-hull"/>
-    <path d="M30 96 Q46 72 82 72 H248 V120 H82 Q46 120 30 96 Z" class="p-deck"/>
-    <g class="p-dome"><circle cx="90" cy="96" r="15"/><circle cx="130" cy="96" r="15"/><circle cx="170" cy="96" r="15"/></g>
-    <rect x="208" y="72" width="34" height="48" class="p-super" style="stroke:var(--ink)" stroke-width="1"/>
-    <!-- MOB button on the bridge -->
-    <circle cx="218" cy="80" r="5" class="p-red" style="stroke:#fff" stroke-width="1.4"/>
-    <!-- lookout on the starboard side aft, arm pointing -->
-    <circle cx="240" cy="128" r="4.5" class="p-orange"/>
-    <path d="M243 130 L258 142" class="p-stroke" stroke-width="2.4" stroke-linecap="round"/>
-    <!-- rescue boat leaving the starboard side -->
-  </g>
-  <path d="M198 146 Q222 166 248 176" fill="none" stroke="#fff" stroke-width="4" opacity=".5" stroke-linecap="round"/>
-  <path d="M246 170 L270 178 Q276 182 270 186 L246 190 Q238 180 246 170 Z" class="p-orange" style="stroke:var(--ink)" stroke-width="1"/>
-  <!-- person in the water -->
-  <circle cx="320" cy="196" r="5" class="p-ink"/>
-  <path d="M312 200 Q320 206 328 200" fill="none" stroke="#fff" stroke-width="1.6"/>
-  <!-- lifebuoy -->
-  <circle cx="340" cy="188" r="9" class="p-orange"/><circle cx="340" cy="188" r="4" class="p-water"/>
-  <!-- smoke float and orange smoke drifting -->
-  <rect x="352" y="196" width="7" height="10" rx="2" class="p-orange"/>
-  <path d="M356 196 Q366 176 384 170 Q396 166 400 150" fill="none" style="stroke:var(--suit-orange)" stroke-width="12" opacity=".45" stroke-linecap="round"/>
-  <!-- line of sight from the lookout -->
-  <path d="M262 140 L314 192" class="p-line" stroke-width="1.2" stroke-dasharray="4 4"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Port side boat deck: liferafts in their cradles with the hydrostatic release and the painter, the liferaft davit, a lifebuoy with light and smoke on the rail, and on the bridge wing above the EPIRB, the SART and the flare box">
+  <!-- Lesson 21 plate: port side of the accommodation, seen from outboard. Bottom: the boat deck with the rail.
+       Left: two white liferaft canisters in their cradle; the hydrostatic release (blue) holds the lashing,
+       the painter (rope) runs from the canister to a weak link on the deck. Middle: the liferaft davit with its hook.
+       Right on the rail: orange lifebuoy with the self-igniting light and the smoke float. Top: the bridge wing
+       with the EPIRB in its bracket, the SART on the bulkhead and the red flare box. Colours come from app.css (.p-*). -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <!-- sea -->
+  <rect class="p-water" x="0" y="206" width="400" height="34"/>
+  <!-- accommodation block and bridge wing -->
+  <rect class="p-super" x="150" y="20" width="250" height="140"/>
+  <g class="p-hull" opacity=".55"><rect x="176" y="96" width="20" height="16" rx="2"/><rect x="226" y="96" width="20" height="16" rx="2"/><rect x="276" y="96" width="20" height="16" rx="2"/><rect x="326" y="96" width="20" height="16" rx="2"/></g>
+  <!-- bridge wing deck and windows -->
+  <rect class="p-white" x="120" y="62" width="280" height="8"/>
+  <g class="p-water" opacity=".8"><rect x="300" y="30" width="22" height="22"/><rect x="330" y="30" width="22" height="22"/><rect x="360" y="30" width="22" height="22"/></g>
+  <line class="p-line" x1="120" y1="40" x2="290" y2="40" stroke-width="2"/>
+  <g class="p-line" stroke-width="1.4"><line x1="124" y1="40" x2="124" y2="62"/><line x1="170" y1="40" x2="170" y2="62"/><line x1="220" y1="40" x2="220" y2="62"/><line x1="270" y1="40" x2="270" y2="62"/></g>
+  <!-- EPIRB in its bracket on the wing rail -->
+  <rect x="136" y="32" width="16" height="30" rx="3" class="p-white" style="stroke:var(--ink)" stroke-width="1"/>
+  <rect x="139" y="36" width="10" height="18" rx="4" class="p-orange"/>
+  <rect x="142" y="26" width="4" height="10" class="p-ink"/>
+  <!-- SART on the bulkhead -->
+  <rect x="196" y="44" width="11" height="16" rx="4" class="p-orange"/>
+  <rect x="198" y="38" width="7" height="7" rx="2" class="p-gold"/>
+  <!-- flare box -->
+  <rect x="236" y="44" width="26" height="16" rx="2" class="p-red"/>
+  <path d="M240 48 H258 M240 52 H258" stroke="#fff" stroke-width="1.2" opacity=".75"/>
+
+  <!-- boat deck -->
+  <rect class="p-deck" x="0" y="160" width="400" height="10"/>
+  <rect class="p-hull" x="0" y="170" width="400" height="36"/>
+  <!-- rail -->
+  <line class="p-line" x1="0" y1="134" x2="400" y2="134" stroke-width="2"/>
+  <g class="p-line" stroke-width="1.4"><line x1="10" y1="134" x2="10" y2="160"/><line x1="110" y1="134" x2="110" y2="160"/><line x1="240" y1="134" x2="240" y2="160"/><line x1="300" y1="134" x2="300" y2="160"/><line x1="390" y1="134" x2="390" y2="160"/></g>
+
+  <!-- liferaft cradle and two canisters -->
+  <path d="M18 160 L24 146 H96 L102 160" class="p-quay" style="stroke:var(--ink)" stroke-width="1"/>
+  <rect x="24" y="118" width="34" height="28" rx="12" class="p-white" style="stroke:var(--ink)" stroke-width="1.2"/>
+  <rect x="62" y="118" width="34" height="28" rx="12" class="p-white" style="stroke:var(--ink)" stroke-width="1.2"/>
+  <line x1="41" y1="118" x2="41" y2="146" class="p-line" stroke-width="1" opacity=".5"/><line x1="79" y1="118" x2="79" y2="146" class="p-line" stroke-width="1" opacity=".5"/>
+  <!-- lashing over the canisters to the hydrostatic release -->
+  <path d="M22 146 Q60 104 98 128" fill="none" class="p-stroke" stroke-width="1.6"/>
+  <rect x="96" y="124" width="10" height="14" rx="2" class="p-blue"/>
+  <!-- painter: from the canister to the weak link on deck -->
+  <path d="M60 140 Q70 156 86 156 Q98 156 104 158" fill="none" style="stroke:var(--gold)" stroke-width="1.8"/>
+  <circle cx="106" cy="158" r="2.4" class="p-ink"/>
+
+  <!-- liferaft davit -->
+  <path d="M140 160 V88 Q140 78 150 78 H190" fill="none" class="p-stroke" stroke-width="5" stroke-linecap="round"/>
+  <line x1="188" y1="80" x2="188" y2="112" class="p-line" stroke-width="1.2"/>
+  <path d="M184 112 Q188 120 192 112" fill="none" class="p-stroke" stroke-width="2"/>
+  <rect x="132" y="150" width="16" height="10" class="p-hull"/>
+
+  <!-- lifebuoy with light and smoke float on the rail -->
+  <circle cx="270" cy="138" r="15" class="p-orange"/>
+  <circle cx="270" cy="138" r="7.5" class="p-soft"/>
+  <g stroke="#fff" stroke-width="2.4"><path d="M258 130 L263 133"/><path d="M282 130 L277 133"/><path d="M258 146 L263 143"/><path d="M282 146 L277 143"/></g>
+  <rect x="318" y="140" width="10" height="16" rx="2" class="p-gold"/><circle cx="323" cy="138" r="3" class="p-gold"/>
+  <rect x="340" y="138" width="14" height="20" rx="3" class="p-orange"/>
+  <path d="M285 140 Q300 150 318 150 M285 142 Q312 166 340 150" fill="none" class="p-line" stroke-width="1"/>
 </svg>

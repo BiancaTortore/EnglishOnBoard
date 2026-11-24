@@ -1,250 +1,254 @@
 {
  "n": 22,
  "module": 6,
- "title": "Muster & man overboard",
- "place": "Day 8 · 10:00 · Atlantic, starboard side",
- "goal": "Raise the man overboard alarm, take a role and keep reporting where the person is.",
+ "title": "Life-saving appliances",
+ "place": "Day 7 · 09:00 · Atlantic, boat deck",
+ "goal": "Name the life-saving appliances, use the right verb for each one and report what has expired.",
  "images": {
   "hero": "img/l22/hero.jpg",
   "scene": "img/l22/scene.jpg"
  },
  "modelAudio": true,
  "mediaRev": 3,
- "radioChannel": "UHF",
  "audio": {
   "l22-01": {
-   "voice": "lars",
-   "text": "Attention, all crew. This is a drill. Man overboard, starboard side. Man overboard, starboard side.",
-   "es": "Atención, toda la tripulación. Esto es un zafarrancho. Hombre al agua por estribor. Hombre al agua por estribor.",
-   "pa": true
+   "voice": "tanya",
+   "text": "Weekly inspection of the life-saving appliances. We start with the liferafts.",
+   "es": "Inspección semanal de los elementos salvavidas. Empezamos con las balsas."
   },
   "l22-02": {
-   "pause": 900,
-   "voice": "rolando",
-   "text": "Man overboard, starboard side! I see it!",
-   "es": "¡Hombre al agua por estribor! ¡Lo veo!"
+   "voice": "diego",
+   "text": "How many liferafts are there on this side?",
+   "es": "¿Cuántas balsas hay de este lado?"
   },
   "l22-03": {
-   "pause": 700,
    "voice": "tanya",
-   "text": "Diego, you will be the lookout. Keep pointing at him and don't look away.",
-   "es": "Diego, vos vas a ser el vigía. Seguí señalándolo y no le saques la vista de encima."
+   "text": "Two, in their cradles. If the ship sinks, the hydrostatic release lets them go and they inflate by themselves.",
+   "es": "Dos, en sus soportes. Si el buque se hunde, la zafa hidrostática las suelta y se inflan solas."
   },
   "l22-04": {
    "voice": "diego",
-   "text": "I'll keep pointing. He's there, about two hundred metres, starboard quarter!",
-   "es": "Lo sigo señalando. ¡Está ahí, a unos doscientos metros, por la aleta de estribor!"
+   "text": "And the painter?",
+   "es": "¿Y la boza?"
   },
   "l22-05": {
    "voice": "tanya",
-   "text": "Rolando, you will throw the lifebuoy with the smoke float.",
-   "es": "Rolando, vos vas a tirar el aro salvavidas con la señal fumígena."
+   "text": "The painter is the line from the raft to the ship. Check that it's connected.",
+   "es": "La boza es el cabo de la balsa al buque. Fijate que esté conectada."
   },
   "l22-06": {
-   "pause": 1200,
-   "voice": "rolando",
-   "text": "Lifebuoy and smoke float, gone!",
-   "es": "¡Aro y señal fumígena, tirados!"
+   "pause": 800,
+   "voice": "diego",
+   "text": "Connected. And this is the davit, for launching the other raft.",
+   "es": "Conectada. Y este es el pescante, para arriar la otra balsa."
   },
   "l22-07": {
    "voice": "tanya",
-   "text": "Bridge, starboard side. Lookout on the casualty, lifebuoy in the water. Over.",
-   "es": "Puente, banda de estribor. Vigía sobre el náufrago, aro en el agua. Cambio."
+   "text": "Right. Now the lifebuoy with light and smoke. And the EPIRB on the bridge wing.",
+   "es": "Bien. Ahora el aro salvavidas con luz y humo. Y la radiobaliza en el alerón."
   },
   "l22-08": {
-   "pause": 600,
-   "voice": "lars",
-   "text": "Received. MOB button pressed. I'm turning to starboard. Rescue boat crew, stand by. Over.",
-   "es": "Recibido. Botón de hombre al agua apretado. Caigo a estribor. Tripulación del bote de rescate, listos. Cambio.",
-   "radio": true
+   "pause": 1200,
+   "voice": "diego",
+   "text": "The EPIRB: green light, it's OK. What does it do exactly?",
+   "es": "La radiobaliza: luz verde, está bien. ¿Qué hace exactamente?"
   },
   "l22-09": {
-   "pause": 1500,
-   "voice": "diego",
-   "text": "I can still see him. Now he's on the starboard beam!",
-   "es": "¡Lo sigo viendo! ¡Ahora está por el través de estribor!"
+   "voice": "tanya",
+   "text": "When it's activated, it sends our position by satellite. The SART shows us on other ships' radar.",
+   "es": "Cuando se activa, manda nuestra posición por satélite. El SART nos muestra en el radar de otros buques."
   },
   "l22-10": {
+   "pause": 600,
    "voice": "tanya",
-   "text": "Good, Diego. Keep him in sight. If you lose him, say so at once.",
-   "es": "Bien, Diego. Mantenelo a la vista. Si lo perdés, decilo enseguida."
+   "text": "Last thing: the flares. Check the expiry dates.",
+   "es": "Lo último: las bengalas. Revisá las fechas de vencimiento."
   },
   "l22-11": {
-   "pause": 1000,
-   "voice": "james",
-   "text": "Rescue boat ready. Launching now.",
-   "es": "Bote de rescate listo. Arriando ahora.",
-   "radio": true
+   "pause": 1500,
+   "voice": "diego",
+   "text": "Chief, this flare has expired. The expiry date was January.",
+   "es": "Jefa, esta bengala está vencida. La fecha de vencimiento era enero."
   },
   "l22-12": {
-   "pause": 1800,
-   "voice": "lars",
-   "text": "This is the Captain. Recovery complete. The dummy is on board. The drill is over.",
-   "es": "Habla el Capitán. Recuperación completa. El maniquí está a bordo. El zafarrancho terminó.",
-   "pa": true
+   "voice": "tanya",
+   "text": "Well spotted. Write it on the checklist and take it to the store. We'll order a new one.",
+   "es": "Bien visto. Anotalo en la lista y llevala al pañol. Pedimos una nueva."
   },
   "l22-13": {
-   "pause": 800,
+   "voice": "diego",
+   "text": "Expired flare, written down.",
+   "es": "Bengala vencida, anotada."
+  },
+  "w-liferaft": {
+   "voice": "model",
+   "text": "liferaft"
+  },
+  "x-liferaft": {
+   "voice": "model",
+   "text": "The liferaft inflates by itself.",
+   "es": "La balsa se infla sola."
+  },
+  "w-davit": {
+   "voice": "model",
+   "text": "davit"
+  },
+  "x-davit": {
+   "voice": "model",
+   "text": "Launch the raft with the davit.",
+   "es": "Arriá la balsa con el pescante."
+  },
+  "w-hydro": {
+   "voice": "model",
+   "text": "hydrostatic release"
+  },
+  "x-hydro": {
+   "voice": "model",
+   "text": "The hydrostatic release lets the raft go.",
+   "es": "La zafa hidrostática suelta la balsa."
+  },
+  "w-epirb": {
+   "voice": "model",
+   "text": "EPIRB"
+  },
+  "x-epirb": {
+   "voice": "model",
+   "text": "Activate the EPIRB.",
+   "es": "Activá la radiobaliza."
+  },
+  "w-sart": {
+   "voice": "model",
+   "text": "SART"
+  },
+  "x-sart": {
+   "voice": "model",
+   "text": "The SART shows us on radar.",
+   "es": "El SART nos muestra en el radar."
+  },
+  "w-lifebuoy": {
+   "voice": "model",
+   "text": "lifebuoy"
+  },
+  "x-lifebuoy": {
+   "voice": "model",
+   "text": "Throw the lifebuoy!",
+   "es": "¡Tirá el aro salvavidas!"
+  },
+  "w-flare": {
+   "voice": "model",
+   "text": "flare"
+  },
+  "x-flare": {
+   "voice": "model",
+   "text": "This flare has expired.",
+   "es": "Esta bengala está vencida."
+  },
+  "w-painter": {
+   "voice": "model",
+   "text": "painter"
+  },
+  "x-painter": {
+   "voice": "model",
+   "text": "Check the painter is connected.",
+   "es": "Fijate que la boza esté conectada."
+  },
+  "p-launch": {
+   "voice": "model",
+   "text": "Launch the liferaft.",
+   "es": "Arriá la balsa."
+  },
+  "p-activate": {
+   "voice": "model",
+   "text": "Activate the EPIRB.",
+   "es": "Activá la radiobaliza."
+  },
+  "p-inflate": {
+   "voice": "model",
+   "text": "The liferaft inflates by itself.",
+   "es": "La balsa se infla sola."
+  },
+  "p-expired": {
+   "voice": "model",
+   "text": "This flare has expired.",
+   "es": "Esta bengala está vencida."
+  },
+  "m-expired": {
+   "voice": "model",
+   "text": "This flare has expired.",
+   "es": "Esta bengala está vencida."
+  },
+  "m-epirb": {
+   "voice": "model",
+   "text": "It sends our position by satellite.",
+   "es": "Manda nuestra posición por satélite."
+  },
+  "m-ok": {
+   "voice": "model",
+   "text": "Green light. It's OK.",
+   "es": "Luz verde. Está bien."
+  },
+  "m-painter": {
+   "voice": "model",
+   "text": "Yes, the painter is connected.",
+   "es": "Sí, la boza está conectada."
+  },
+  "m-epirb-say": {
+   "voice": "model",
+   "text": "EPIRB",
+   "es": "radiobaliza"
+  },
+  "m-sart-say": {
+   "voice": "model",
+   "text": "SART",
+   "es": "SART"
+  },
+  "c-show-liferaft": {
    "voice": "tanya",
-   "text": "Well done, everybody. In real life, the next problem is hypothermia. That's why we're fast.",
-   "es": "Bien hecho, todos. En la vida real, el próximo problema es la hipotermia. Por eso somos rápidos."
+   "text": "Show me the liferaft."
   },
-  "w-mob": {
-   "voice": "model",
-   "text": "man overboard"
-  },
-  "x-mob": {
-   "voice": "model",
-   "text": "Man overboard, starboard side!",
-   "es": "¡Hombre al agua por estribor!"
-  },
-  "w-mobbutton": {
-   "voice": "model",
-   "text": "MOB button"
-  },
-  "x-mobbutton": {
-   "voice": "model",
-   "text": "Press the MOB button.",
-   "es": "Apretá el botón de hombre al agua."
-  },
-  "w-smoke": {
-   "voice": "model",
-   "text": "smoke float"
-  },
-  "x-smoke": {
-   "voice": "model",
-   "text": "Throw the smoke float.",
-   "es": "Tirá la señal fumígena."
-  },
-  "w-sight": {
-   "voice": "model",
-   "text": "keep in sight"
-  },
-  "x-sight": {
-   "voice": "model",
-   "text": "Keep him in sight.",
-   "es": "Mantenelo a la vista."
-  },
-  "w-rescueboat": {
-   "voice": "model",
-   "text": "rescue boat"
-  },
-  "x-rescueboat": {
-   "voice": "model",
-   "text": "The rescue boat is ready.",
-   "es": "El bote de rescate está listo."
-  },
-  "w-recovery": {
-   "voice": "model",
-   "text": "recovery"
-  },
-  "x-recovery": {
-   "voice": "model",
-   "text": "Recovery complete.",
-   "es": "Recuperación completa."
-  },
-  "w-role": {
-   "voice": "model",
-   "text": "role"
-  },
-  "x-role": {
-   "voice": "model",
-   "text": "Everybody has a role.",
-   "es": "Todos tienen un rol."
-  },
-  "w-hypothermia": {
-   "voice": "model",
-   "text": "hypothermia"
-  },
-  "x-hypothermia": {
-   "voice": "model",
-   "text": "Cold water causes hypothermia.",
-   "es": "El agua fría causa hipotermia."
-  },
-  "p-mob": {
-   "voice": "model",
-   "text": "Man overboard, starboard side!",
-   "es": "¡Hombre al agua por estribor!"
-  },
-  "p-willbe": {
-   "voice": "model",
-   "text": "You will be the lookout.",
-   "es": "Vos vas a ser el vigía."
-  },
-  "p-ill": {
-   "voice": "model",
-   "text": "I'll keep pointing.",
-   "es": "Lo sigo señalando."
-  },
-  "p-sight": {
-   "voice": "model",
-   "text": "Keep him in sight.",
-   "es": "Mantenelo a la vista."
-  },
-  "m-mobport": {
-   "voice": "model",
-   "text": "Man overboard, port side!",
-   "es": "¡Hombre al agua por babor!"
-  },
-  "m-ill": {
-   "voice": "model",
-   "text": "I'll keep pointing.",
-   "es": "Lo sigo señalando."
-  },
-  "m-where": {
-   "voice": "model",
-   "text": "Starboard quarter, about two hundred metres!",
-   "es": "¡Aleta de estribor, a unos doscientos metros!"
-  },
-  "m-lost": {
-   "voice": "model",
-   "text": "I've lost him!",
-   "es": "¡Lo perdí!"
-  },
-  "m-shout": {
-   "voice": "model",
-   "text": "Man overboard, starboard side!",
-   "es": "¡Hombre al agua por estribor!"
-  },
-  "c-show-mob": {
-   "voice": "tanya",
-   "text": "Where's the man overboard?"
-  },
-  "c-show-smoke": {
+  "c-show-davit": {
    "voice": "rolando",
-   "text": "Show me the smoke float."
+   "text": "Where's the davit?"
   },
-  "c-show-rescueboat": {
+  "c-show-hydro": {
    "voice": "tanya",
-   "text": "Where's the rescue boat?"
+   "text": "Show me the hydrostatic release."
   },
-  "c-show-mobbutton": {
+  "c-show-epirb": {
+   "voice": "tanya",
+   "text": "Where's the EPIRB?"
+  },
+  "c-show-lifebuoy": {
+   "voice": "rolando",
+   "text": "Show me the lifebuoy."
+  },
+  "c-show-painter": {
+   "voice": "tanya",
+   "text": "Where's the painter?"
+  },
+  "c-q-flare": {
+   "voice": "tanya",
+   "text": "Diego, what's wrong with this flare?"
+  },
+  "c-q-epirb": {
    "voice": "lars",
-   "text": "Where's the MOB button?"
+   "text": "Cadet, what does the EPIRB do?"
   },
-  "c-see-port": {
+  "c-q-light": {
    "voice": "tanya",
-   "text": "You see someone fall on the left side. Shout!"
+   "text": "Check the EPIRB light. Is it OK?"
   },
-  "c-role": {
+  "c-q-painter": {
    "voice": "tanya",
-   "text": "Diego, you will be the lookout. Keep pointing."
+   "text": "Is the painter connected?"
   },
-  "c-where": {
+  "c-date-other": {
    "voice": "tanya",
-   "text": "Where is he? Distance?"
+   "text": "The liferaft service is due in June."
   },
-  "c-cantsee": {
-   "voice": "tanya",
-   "text": "Diego, can you still see him?"
-  },
-  "c-role-other": {
-   "voice": "tanya",
-   "text": "Rolando, you will be in the rescue boat."
-  },
-  "c-dist-other": {
+  "c-col-other": {
    "voice": "rolando",
-   "text": "He's about three hundred metres, port quarter!"
+   "text": "Inflate the raft, then launch it."
   }
  },
  "dialogue": [
@@ -263,130 +267,145 @@
   "l22-13"
  ],
  "words": {
-  "mob": {
-   "en": "man overboard",
-   "ipa": "/ˌmæn ˈəʊvəbɔːd/",
-   "es": "hombre al agua",
-   "audio": "w-mob",
-   "ex": "x-mob"
+  "liferaft": {
+   "en": "liferaft",
+   "ipa": "/ˈlaɪfrɑːft/",
+   "es": "balsa salvavidas",
+   "audio": "w-liferaft",
+   "ex": "x-liferaft"
   },
-  "mobbutton": {
-   "en": "MOB button",
-   "ipa": "/ˌem əʊ ˈbiː ˌbʌtn/",
-   "es": "botón de hombre al agua",
-   "audio": "w-mobbutton",
-   "ex": "x-mobbutton"
+  "davit": {
+   "en": "davit",
+   "ipa": "/ˈdævɪt/",
+   "es": "pescante",
+   "audio": "w-davit",
+   "ex": "x-davit"
   },
-  "smoke": {
-   "en": "smoke float",
-   "ipa": "/ˈsməʊk fləʊt/",
-   "es": "señal fumígena",
-   "audio": "w-smoke",
-   "ex": "x-smoke"
+  "hydro": {
+   "en": "hydrostatic release",
+   "ipa": "/ˌhaɪdrəˈstætɪk rɪˈliːs/",
+   "es": "zafa hidrostática",
+   "audio": "w-hydro",
+   "ex": "x-hydro"
   },
-  "sight": {
-   "en": "keep in sight",
-   "ipa": "/ˌkiːp ɪn ˈsaɪt/",
-   "es": "mantener a la vista",
-   "audio": "w-sight",
-   "ex": "x-sight"
+  "epirb": {
+   "en": "EPIRB",
+   "ipa": "/ˈiːpɜːb/",
+   "es": "radiobaliza (EPIRB)",
+   "audio": "w-epirb",
+   "ex": "x-epirb"
   },
-  "rescueboat": {
-   "en": "rescue boat",
-   "ipa": "/ˈreskjuː bəʊt/",
-   "es": "bote de rescate",
-   "audio": "w-rescueboat",
-   "ex": "x-rescueboat"
+  "sart": {
+   "en": "SART",
+   "ipa": "/sɑːt/",
+   "es": "respondedor de radar (SART)",
+   "audio": "w-sart",
+   "ex": "x-sart"
   },
-  "recovery": {
-   "en": "recovery",
-   "ipa": "/rɪˈkʌvəri/",
-   "es": "recuperación (de la persona)",
-   "audio": "w-recovery",
-   "ex": "x-recovery"
+  "lifebuoy": {
+   "en": "lifebuoy",
+   "ipa": "/ˈlaɪfbɔɪ/",
+   "es": "aro salvavidas",
+   "audio": "w-lifebuoy",
+   "ex": "x-lifebuoy"
   },
-  "role": {
-   "en": "role",
-   "ipa": "/rəʊl/",
-   "es": "rol, tarea",
-   "audio": "w-role",
-   "ex": "x-role"
+  "flare": {
+   "en": "flare",
+   "ipa": "/fleə/",
+   "es": "bengala",
+   "audio": "w-flare",
+   "ex": "x-flare"
   },
-  "hypothermia": {
-   "en": "hypothermia",
-   "ipa": "/ˌhaɪpəʊˈθɜːmiə/",
-   "es": "hipotermia",
-   "audio": "w-hypothermia",
-   "ex": "x-hypothermia"
+  "painter": {
+   "en": "painter",
+   "ipa": "/ˈpeɪntə/",
+   "es": "boza (de la balsa)",
+   "audio": "w-painter",
+   "ex": "x-painter"
   }
  },
  "plate": {
   "svg": "img/l22/plate.svg",
   "pins": [
    {
-    "word": "mobbutton",
-    "x": 181,
-    "y": 66
-   },
-   {
-    "word": "sight",
-    "x": 138,
+    "word": "liferaft",
+    "x": 41,
     "y": 132
    },
    {
-    "word": "rescueboat",
-    "x": 142,
-    "y": 180
+    "word": "hydro",
+    "x": 101,
+    "y": 118
    },
    {
-    "word": "mob",
-    "x": 80,
-    "y": 208
+    "word": "painter",
+    "x": 86,
+    "y": 156
    },
    {
-    "word": "smoke",
-    "x": 24,
-    "y": 160
+    "word": "davit",
+    "x": 140,
+    "y": 104
+   },
+   {
+    "word": "epirb",
+    "x": 144,
+    "y": 20
+   },
+   {
+    "word": "sart",
+    "x": 201,
+    "y": 32
+   },
+   {
+    "word": "flare",
+    "x": 249,
+    "y": 52
+   },
+   {
+    "word": "lifebuoy",
+    "x": 270,
+    "y": 138
    }
   ]
  },
  "docs": {
-  "roles": {
+  "lsa": {
    "kind": "form",
-   "title": "MAN OVERBOARD · ROLES",
-   "subtitle": "M/V LNG HORIZON · DRILL · 21 MAR 2026 · 1000",
+   "title": "WEEKLY LSA INSPECTION",
+   "subtitle": "M/V LNG HORIZON · 20 MAR 2026 · PORT SIDE",
    "cells": [
     [
-     "MASTER",
-     "Bridge · MOB button, turn, alarm"
+     "LIFERAFTS (2)",
+     "In cradles · painters connected"
     ],
     [
-     "CHIEF OFFICER",
-     "On scene · in charge on deck"
+     "HYDROSTATIC RELEASES",
+     "Expiry date: AUG 2026 · OK"
     ],
     [
-     "CADET",
-     "Lookout · keep pointing, never look away"
+     "DAVIT",
+     "Free to move · OK"
     ],
     [
-     "BOSUN",
-     "Lifebuoy with light and smoke float"
+     "LIFEBUOYS",
+     "4 · light and smoke OK"
     ],
     [
-     "2ND OFFICER",
-     "Rescue boat · in charge"
+     "EPIRB",
+     "Green light · battery expiry 2028"
     ],
     [
-     "RESCUE BOAT CREW",
-     "2/O, 2 ABs"
+     "SART",
+     "OK"
     ],
     [
-     "3RD OFFICER",
-     "Bridge · VHF and position"
+     "FLARES",
+     "1 expired (JAN 2026) · to store, order new"
     ],
     [
-     "AFTER RECOVERY",
-     "Check for hypothermia · ship's hospital"
+     "INSPECTED BY",
+     "C/O T. Williams · Cadet D. Martínez"
     ]
    ]
   }
@@ -394,82 +413,84 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: man overboard",
+   "title": "Listen: the weekly inspection",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l22/scene.jpg",
-     "kicker": "Day 8 · 10:00 · Atlantic",
-     "title": "Man overboard drill",
-     "body": "A drill in the middle of the ocean. A dummy goes into the water, and every person on board has a role. Diego has a new one. Listen first, one piece at a time.",
+     "kicker": "Day 7 · 09:00 · Atlantic",
+     "title": "Checking the life-saving appliances",
+     "body": "The ship is in the open Atlantic. After the morning watch, Tanya and Diego do the weekly inspection of the life-saving appliances. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l22-01"
+      "l22-02",
+      "l22-03"
      ],
-     "q": "Which side?",
+     "q": "How many liferafts are on this side?",
      "opts": [
-      "Starboard",
-      "Port",
-      "Astern"
+      "Two",
+      "One",
+      "Four"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l22-03",
-      "l22-04"
+      "l22-03"
      ],
-     "q": "What is Diego's role?",
+     "q": "What lets the liferafts go if the ship sinks?",
      "opts": [
-      "Lookout: keep pointing",
-      "Throw the lifebuoy",
-      "Drive the rescue boat"
+      "The hydrostatic release",
+      "The davit",
+      "The painter"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l22-04"
+      "l22-04",
+      "l22-05"
      ],
-     "q": "Where is the man, and how far?",
+     "q": "What is the painter?",
      "opts": [
-      "Starboard quarter, about 200 m",
-      "Port bow, 2 miles",
-      "Right ahead, 20 m"
+      "The line from the raft to the ship",
+      "A man who paints",
+      "A light on the raft"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l22-05",
-      "l22-06"
+      "l22-08",
+      "l22-09"
      ],
-     "q": "What does Rolando throw?",
+     "q": "What does the EPIRB do when it's activated?",
      "opts": [
-      "The lifebuoy with the smoke float",
-      "A liferaft",
-      "A line"
+      "Sends our position by satellite",
+      "Shows us on radar",
+      "Makes smoke"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l22-08"
+      "l22-10",
+      "l22-11"
      ],
-     "q": "What does the Captain do?",
+     "q": "What's wrong with the flare?",
      "opts": [
-      "Presses the MOB button and turns to starboard",
-      "Stops and waits",
-      "Calls the Coast Guard"
+      "It has expired",
+      "It's wet",
+      "It's missing"
      ],
      "a": 0
     },
@@ -479,87 +500,92 @@
       "l22-12",
       "l22-13"
      ],
-     "q": "In real life, what is the next danger?",
+     "q": "What happens with the flare now?",
      "opts": [
-      "Hypothermia",
-      "Sharks",
-      "Fire"
+      "To the store, and they order a new one",
+      "They fire it",
+      "They throw it overboard"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole drill",
+     "title": "Now the whole inspection",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Man overboard",
+   "title": "Life-saving appliances",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The ship from above during the drill."
+     "body": "The port side of the boat deck: liferafts, davit, lifebuoy and the EPIRB on the bridge wing."
     },
     {
      "type": "card",
-     "word": "mob"
+     "word": "liferaft"
     },
     {
      "type": "card",
-     "word": "mobbutton"
+     "word": "hydro"
     },
     {
      "type": "card",
-     "word": "smoke"
+     "word": "painter"
     },
     {
      "type": "tap",
-     "audio": "c-show-smoke",
-     "a": "smoke"
+     "audio": "c-show-hydro",
+     "a": "hydro"
     },
     {
      "type": "card",
-     "word": "sight"
-    },
-    {
-     "type": "card",
-     "word": "rescueboat"
+     "word": "davit"
     },
     {
      "type": "tap",
-     "audio": "c-show-rescueboat",
-     "a": "rescueboat"
+     "audio": "c-show-davit",
+     "a": "davit"
     },
     {
      "type": "card",
-     "word": "recovery"
+     "word": "lifebuoy"
     },
     {
      "type": "card",
-     "word": "role"
+     "word": "epirb"
     },
     {
      "type": "card",
-     "word": "hypothermia"
+     "word": "sart"
     },
     {
      "type": "tap",
-     "audio": "c-show-mob",
-     "a": "mob"
+     "audio": "c-show-epirb",
+     "a": "epirb"
+    },
+    {
+     "type": "card",
+     "word": "flare"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-painter",
+     "a": "painter"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"hombre al agua\" in English:",
+     "q": "\"bengala\" in English:",
      "opts": [
-      "man overboard",
-      "man in water",
-      "man out board"
+      "flare",
+      "rocket light",
+      "fire stick"
      ],
      "a": 0
     },
@@ -568,24 +594,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "man overboard",
-       "hombre al agua"
+       "liferaft",
+       "balsa salvavidas"
       ],
       [
-       "smoke float",
-       "señal fumígena"
+       "davit",
+       "pescante"
       ],
       [
-       "rescue boat",
-       "bote de rescate"
+       "lifebuoy",
+       "aro salvavidas"
       ],
       [
-       "recovery",
-       "recuperación"
+       "flare",
+       "bengala"
       ],
       [
-       "role",
-       "rol"
+       "painter",
+       "boza"
       ]
      ]
     }
@@ -593,201 +619,221 @@
   },
   {
    "id": "phrases",
-   "title": "You will be… I'll…",
+   "title": "Launch, inflate, activate",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Alarm and roles",
+     "title": "The right verb for each one",
      "list": [
       [
-       "Man overboard, starboard side!",
-       "¡Hombre al agua por estribor!",
-       "p-mob"
+       "Launch the liferaft.",
+       "Arriá la balsa.",
+       "p-launch"
       ],
       [
-       "You will be the lookout.",
-       "Vos vas a ser el vigía.",
-       "p-willbe"
+       "Activate the EPIRB.",
+       "Activá la radiobaliza.",
+       "p-activate"
       ],
       [
-       "I'll keep pointing.",
-       "Lo sigo señalando.",
-       "p-ill"
+       "The liferaft inflates by itself.",
+       "La balsa se infla sola.",
+       "p-inflate"
       ],
       [
-       "Keep him in sight.",
-       "Mantenelo a la vista.",
-       "p-sight"
+       "This flare has expired.",
+       "Esta bengala está vencida.",
+       "p-expired"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "will for roles and promises",
+     "title": "Word partners",
      "steps": [
       [
-       "give a role",
-       "You <b>will be</b> the lookout. Rolando, you <b>will throw</b> the lifebuoy."
+       "launch",
+       "a liferaft, a rescue boat"
       ],
       [
-       "accept it",
-       "<b>I'll</b> keep pointing. <b>I'll</b> throw it."
+       "inflate",
+       "a liferaft (it inflates)"
       ],
       [
-       "shout",
-       "Man overboard, <b>starboard side</b>! (no verb)"
+       "activate",
+       "the EPIRB, the SART, an alarm"
+      ],
+      [
+       "fire",
+       "a flare, a rocket"
+      ],
+      [
+       "throw",
+       "a lifebuoy"
       ]
      ],
      "paras": [
-      "In an emergency the person in charge gives roles with <b>You will…</b>. You answer with <b>I'll…</b> + the action: short, so everyone knows it's done.",
-      "The first shout has no verb: what + where. <b>Man overboard, port side!</b>"
+      "English uses fixed verb + noun pairs. Learn them together, like one word: <b>launch the raft</b>, <b>activate the EPIRB</b>, <b>fire a flare</b>.",
+      "For dates on labels: <b>expiry date</b>; <b>it has expired</b> / <b>it's out of date</b>."
      ],
-     "avoid": "You are going to be lookout? (sounds like a question) · OK OK (without saying what you'll do)"
+     "avoid": "open the EPIRB · shoot the lifebuoy · put the raft in the water (say: launch)"
     },
     {
      "type": "choice",
-     "q": "Tanya gives you a role: \"You will throw the lifebuoy.\" You answer…",
+     "q": "You ___ the EPIRB.",
      "opts": [
-      "I'll throw it.",
-      "OK, maybe.",
-      "I throw?"
+      "activate",
+      "launch",
+      "inflate"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Someone falls on the left side. You shout…",
+     "q": "You ___ a flare.",
      "opts": [
-      "Man overboard, port side!",
-      "There is a man in the water on the left!",
-      "Help, help!"
+      "fire",
+      "throw",
+      "inflate"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "Tanya: \"Rolando, you will be in the rescue boat.\"",
-     "q": "Answer as Rolando.",
+     "situation": "The date on the flare is last January.",
+     "q": "Report it.",
      "a": [
-      "I'll",
-      "be",
-      "in",
-      "the",
-      "rescue",
-      "boat."
+      "This",
+      "flare",
+      "has",
+      "expired."
      ],
      "extra": [
-      "will",
-      "going"
+      "is",
+      "expiry"
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "c-role-other"
+      "c-col-other"
      ],
-     "q": "What is Rolando's role?",
+     "q": "What comes first?",
      "opts": [
-      "Rescue boat",
-      "Lookout",
-      "Bridge"
+      "Inflate the raft",
+      "Launch the raft",
+      "Fire a flare"
      ],
      "a": 0
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "Don't explain, shout",
+     "title": "\"Vencido\" = expired",
      "paras": [
-      "In Spanish we might say <i>¡Se cayó alguien al agua por el lado derecho!</i> In English, the standard shout is shorter: <b>Man overboard, starboard side!</b> Then point and don't stop pointing.",
-      "Distances: <b>about two hundred metres</b>; position: the clock (Lesson 12) or the bow / beam / quarter (Lesson 16)."
+      "<i>Está vencida</i> → <b>It has expired</b> or <b>It's out of date</b>. <i>Fecha de vencimiento</i> → <b>expiry date</b>.",
+      "<b>painter</b> on a ship is the <i>boza</i> of the liferaft, not a person who paints!"
      ],
-     "avoid": "Somebody fell in the water at the right side!"
+     "avoid": "It's overcome. · The date of expiration is passed."
     },
     {
      "type": "type",
-     "audio": "c-dist-other",
-     "q": "How far is he? Write the number of metres.",
+     "audio": "c-date-other",
+     "q": "When is the liferaft service due? Write the month.",
      "accept": [
-      "300",
-      "three hundred"
+      "june"
      ]
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Shouting clearly",
+     "title": "Read it as a word",
      "paras": [
-      "A shout must be short, loud and clear: <b>MAN o-ver-BOARD | STAR-board SIDE</b>. A small pause after <i>overboard</i>.",
-      "Don't swallow the end: <i>side</i> with a clear <b>d</b>."
+      "<b>EPIRB</b> is read as a word: <i>EE-perb</i>. <b>SART</b>: <i>sart</i>, like <i>start</i> without the t.",
+      "Remember Lesson 14: some short names are spelled (VHF, GPS), others are read (ECDIS, EPIRB, SART)."
      ],
      "list": [
       [
-       "Man overboard, starboard side!",
-       "¡Hombre al agua por estribor!",
-       "m-shout"
+       "EPIRB",
+       "radiobaliza",
+       "m-epirb-say"
+      ],
+      [
+       "SART",
+       "SART",
+       "m-sart-say"
       ]
      ]
+    },
+    {
+     "type": "choice",
+     "q": "Which one is read as a word?",
+     "opts": [
+      "EPIRB",
+      "VHF",
+      "GPS"
+     ],
+     "a": 0
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the roles",
+   "title": "Read the inspection checklist",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "roles",
-     "q": "Who is in charge of the rescue boat?",
+     "doc": "lsa",
+     "q": "How many lifebuoys are on the port side?",
      "opts": [
-      "The Second Officer",
-      "The bosun",
-      "The cadet"
+      "4",
+      "2",
+      "1"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "roles",
-     "q": "What does the Master do?",
+     "doc": "lsa",
+     "q": "When does the EPIRB battery expire?",
      "opts": [
-      "MOB button, turn and alarm",
-      "Throws the lifebuoy",
-      "Drives the rescue boat"
+      "2028",
+      "2026",
+      "2030"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "roles",
-     "q": "Tap the cadet's role.",
-     "a": 2
+     "doc": "lsa",
+     "q": "Tap the item with a problem.",
+     "a": 6
     },
     {
      "type": "doc",
-     "doc": "roles",
-     "q": "After recovery, they check for…",
+     "doc": "lsa",
+     "q": "When does the hydrostatic release expire?",
      "opts": [
-      "hypothermia",
-      "fire",
-      "the time"
+      "August 2026",
+      "January 2026",
+      "2028"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "roles",
-     "q": "Where is the Third Officer?",
+     "doc": "lsa",
+     "q": "Are the painters connected?",
      "opts": [
-      "On the bridge, VHF and position",
-      "In the rescue boat",
-      "On deck with the lifebuoy"
+      "Yes",
+      "No",
+      "There are no painters"
      ],
      "a": 0
     }
@@ -795,75 +841,79 @@
   },
   {
    "id": "speak",
-   "title": "Shout and take your role",
+   "title": "Report the inspection",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Short, loud, clear",
-     "body": "Listen, say it, check it. Say it like a shout, but clear.",
-     "es": "Como un grito, pero claro.",
+     "title": "Short inspection reports",
+     "body": "Listen, say it, check it. The thing, then the state: this FLARE has EXPIRED.",
+     "es": "El equipo, y cómo está.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-mob"
+     "model": "p-launch"
     },
     {
      "type": "shadow",
-     "model": "p-ill"
+     "model": "p-activate"
     },
     {
      "type": "shadow",
-     "model": "p-sight"
+     "model": "p-expired"
     },
     {
      "type": "role",
-     "cue": "c-see-port",
-     "task": "Shout the alarm: man overboard, port side.",
-     "model": "m-mobport",
+     "cue": "c-q-flare",
+     "task": "The expiry date was January. Tell her.",
+     "model": "m-expired",
      "accept": [
-      "Man overboard, port side!",
-      "Man overboard port side!",
-      "Man overboard! Port side!"
+      "This flare has expired.",
+      "It has expired.",
+      "It's expired.",
+      "It's out of date.",
+      "This flare is out of date."
      ]
     },
     {
      "type": "role",
-     "cue": "c-role",
-     "task": "Accept: you'll keep pointing.",
-     "model": "m-ill",
+     "cue": "c-q-epirb",
+     "task": "It sends the ship's position by satellite.",
+     "model": "m-epirb",
      "accept": [
-      "I'll keep pointing.",
-      "I'll keep pointing!",
-      "I will keep pointing.",
-      "OK, I'll keep pointing."
+      "It sends our position by satellite.",
+      "It sends the position by satellite.",
+      "It sends our position.",
+      "It sends the ship's position by satellite."
      ]
     },
     {
      "type": "role",
-     "cue": "c-where",
-     "task": "Starboard quarter, about 200 metres.",
-     "model": "m-where",
+     "cue": "c-q-light",
+     "task": "Green light. It's fine.",
+     "model": "m-ok",
      "accept": [
-      "Starboard quarter, about two hundred metres!",
-      "Starboard quarter, about two hundred metres.",
-      "Starboard quarter, two hundred metres.",
-      "About two hundred metres, starboard quarter."
+      "Green light. It's OK.",
+      "Green light, it's OK.",
+      "It's OK. Green light.",
+      "Yes, green light.",
+      "Green light, OK."
      ]
     },
     {
      "type": "role",
-     "cue": "c-cantsee",
-     "task": "No! You can't see him any more. Say it at once.",
-     "model": "m-lost",
+     "cue": "c-q-painter",
+     "task": "Yes, it's connected.",
+     "model": "m-painter",
      "accept": [
-      "I've lost him!",
-      "I lost him!",
-      "I've lost him.",
-      "No, I've lost him!"
+      "Yes, the painter is connected.",
+      "Yes, it's connected.",
+      "Connected.",
+      "Yes, connected.",
+      "The painter is connected."
      ]
     }
    ]
@@ -876,96 +926,90 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-role",
+     "audio": "w-flare",
      "q": "Type what you hear.",
      "accept": [
-      "role",
-      "a role",
-      "the role"
+      "flare",
+      "a flare"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-mobbutton",
-     "a": "mobbutton"
+     "audio": "c-show-liferaft",
+     "a": "liferaft"
     },
     {
      "type": "tap",
-     "audio": "c-show-mob",
-     "a": "mob"
+     "audio": "c-show-lifebuoy",
+     "a": "lifebuoy"
     },
     {
      "type": "listen",
      "audio": [
-      "l22-09",
-      "l22-10"
+      "l22-09"
      ],
-     "q": "What must Diego do if he loses sight of the man?",
+     "q": "What does the SART do?",
      "opts": [
-      "Say so at once",
-      "Look for him quietly",
-      "Go to the bridge"
+      "Shows us on other ships' radar",
+      "Sends a message by satellite",
+      "Makes light and smoke"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The man is behind the ship, a little to the right. He's on the…",
+     "q": "You ___ a liferaft with the davit.",
      "opts": [
-      "starboard quarter",
-      "port bow",
-      "starboard bow"
+      "launch",
+      "activate",
+      "fire"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "\"The EPIRB ___ our position.\"",
+     "opts": [
+      "sends",
+      "send",
+      "is send"
      ],
      "a": 0,
-     "why": "From Lesson 16."
-    },
-    {
-     "type": "choice",
-     "q": "Tanya: \"You will launch the rescue boat.\" James answers…",
-     "opts": [
-      "I'll launch it.",
-      "I launch.",
-      "You will launch."
-     ],
-     "a": 0
+     "why": "The -s, from Lesson 4."
     },
     {
      "type": "build",
-     "q": "Give a role: Mateo will be on the VHF.",
+     "q": "Tell Rolando to activate the EPIRB.",
      "a": [
-      "Mateo,",
-      "you",
-      "will",
-      "be",
-      "on",
+      "Activate",
       "the",
-      "VHF."
+      "EPIRB."
      ],
      "extra": [
-      "are",
-      "going"
+      "Launch",
+      "fire"
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "l22-12"
+      "l22-01"
      ],
-     "q": "What is on board at the end?",
+     "q": "How often is this inspection?",
      "opts": [
-      "The dummy",
-      "A fisherman",
-      "The lifebuoy only"
+      "Every week",
+      "Every day",
+      "Every month"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: bote de rescate",
+     "q": "Write it in English: aro salvavidas",
      "accept": [
-      "rescue boat",
-      "the rescue boat",
-      "a rescue boat"
+      "lifebuoy",
+      "a lifebuoy",
+      "life buoy"
      ]
     }
    ]

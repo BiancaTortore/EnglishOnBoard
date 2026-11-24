@@ -1,254 +1,262 @@
 {
  "n": 21,
- "module": 6,
- "title": "Life-saving appliances",
- "place": "Day 7 · 09:00 · Atlantic, boat deck",
- "goal": "Name the life-saving appliances, use the right verb for each one and report what has expired.",
+ "module": 5,
+ "title": "Bunkering & pollution",
+ "place": "Day 6 · 14:00 · Port Everglades anchorage",
+ "goal": "Use must, mustn't and have to, and answer an inspector short and clear.",
  "images": {
   "hero": "img/l21/hero.jpg",
   "scene": "img/l21/scene.jpg"
  },
- "modelAudio": true,
- "mediaRev": 3,
  "audio": {
   "l21-01": {
    "voice": "tanya",
-   "text": "Weekly inspection of the life-saving appliances. We start with the liferafts.",
-   "es": "Inspección semanal de los elementos salvavidas. Empezamos con las balsas."
+   "text": "The bunker barge is alongside and the hose is connected. Diego, before we start: scuppers?",
+   "es": "La barcaza de combustible está abarloada y la manguera conectada. Diego, antes de empezar: ¿imbornales?"
   },
   "l21-02": {
    "voice": "diego",
-   "text": "How many liferafts are there on this side?",
-   "es": "¿Cuántas balsas hay de este lado?"
+   "text": "All scuppers are plugged, Chief.",
+   "es": "Todos los imbornales están tapados, jefa."
   },
   "l21-03": {
    "voice": "tanya",
-   "text": "Two, in their cradles. If the ship sinks, the hydrostatic release lets them go and they inflate by themselves.",
-   "es": "Dos, en sus soportes. Si el buque se hunde, la zafa hidrostática las suelta y se inflan solas."
+   "text": "Good. And the SOPEP locker is open and ready. We mustn't spill a drop.",
+   "es": "Bien. Y el pañol del SOPEP está abierto y listo. No se puede derramar ni una gota."
   },
   "l21-04": {
-   "voice": "diego",
-   "text": "And the painter?",
-   "es": "¿Y la boza?"
+   "pause": 1500,
+   "voice": "chen",
+   "text": "Good afternoon. Lieutenant Chen, US Coast Guard. I'd like to watch the bunkering.",
+   "es": "Buenas tardes. Teniente Chen, Guardia Costera de los Estados Unidos. Quisiera presenciar el bunker."
   },
   "l21-05": {
    "voice": "tanya",
-   "text": "The painter is the line from the raft to the ship. Check that it's connected.",
-   "es": "La boza es el cabo de la balsa al buque. Fijate que esté conectada."
+   "text": "Of course, Lieutenant. Welcome on board.",
+   "es": "Por supuesto, teniente. Bienvenida a bordo."
   },
   "l21-06": {
-   "pause": 800,
-   "voice": "diego",
-   "text": "Connected. And this is the davit, for launching the other raft.",
-   "es": "Conectada. Y este es el pescante, para arriar la otra balsa."
+   "pause": 600,
+   "voice": "chen",
+   "text": "Cadet, a few questions for you. Where is the SOPEP locker?",
+   "es": "Cadete, unas preguntas para usted. ¿Dónde está el pañol del SOPEP?"
   },
   "l21-07": {
-   "voice": "tanya",
-   "text": "Right. Now the lifebuoy with light and smoke. And the EPIRB on the bridge wing.",
-   "es": "Bien. Ahora el aro salvavidas con luz y humo. Y la radiobaliza en el alerón."
+   "pause": 700,
+   "voice": "diego",
+   "text": "Next to the bunker station, on the port side.",
+   "es": "Al lado de la estación de bunker, por babor."
   },
   "l21-08": {
-   "pause": 1200,
-   "voice": "diego",
-   "text": "The EPIRB: green light, it's OK. What does it do exactly?",
-   "es": "La radiobaliza: luz verde, está bien. ¿Qué hace exactamente?"
+   "voice": "chen",
+   "text": "What must you do if there's a spill on deck?",
+   "es": "¿Qué tiene que hacer si hay un derrame en cubierta?"
   },
   "l21-09": {
-   "voice": "tanya",
-   "text": "When it's activated, it sends our position by satellite. The SART shows us on other ships' radar.",
-   "es": "Cuando se activa, manda nuestra posición por satélite. El SART nos muestra en el radar de otros buques."
+   "voice": "diego",
+   "text": "Stop the bunkering, report to the Chief Officer, and contain the oil with the spill kit.",
+   "es": "Parar el bunker, avisar a la Primer Oficial y contener el combustible con el kit de derrames."
   },
   "l21-10": {
-   "pause": 600,
-   "voice": "tanya",
-   "text": "Last thing: the flares. Check the expiry dates.",
-   "es": "Lo último: las bengalas. Revisá las fechas de vencimiento."
+   "voice": "chen",
+   "text": "And what mustn't you do?",
+   "es": "¿Y qué no tiene que hacer?"
   },
   "l21-11": {
-   "pause": 1500,
    "voice": "diego",
-   "text": "Chief, this flare has expired. The expiry date was January.",
-   "es": "Jefa, esta bengala está vencida. La fecha de vencimiento era enero."
+   "text": "We mustn't wash it overboard.",
+   "es": "No se puede tirar al agua."
   },
   "l21-12": {
-   "voice": "tanya",
-   "text": "Well spotted. Write it on the checklist and take it to the store. We'll order a new one.",
-   "es": "Bien visto. Anotalo en la lista y llevala al pañol. Pedimos una nueva."
+   "pause": 800,
+   "voice": "chen",
+   "text": "Correct. Short and clear. Who has to sign the bunker checklist?",
+   "es": "Correcto. Corto y claro. ¿Quién tiene que firmar la lista de verificación de bunker?"
   },
   "l21-13": {
    "voice": "diego",
-   "text": "Expired flare, written down.",
-   "es": "Bengala vencida, anotada."
+   "text": "The Chief Officer and the barge master.",
+   "es": "La Primer Oficial y el patrón de la barcaza."
   },
-  "w-liferaft": {
-   "voice": "model",
-   "text": "liferaft"
+  "l21-14": {
+   "voice": "chen",
+   "text": "Good. Carry on.",
+   "es": "Bien. Continúen."
   },
-  "x-liferaft": {
-   "voice": "model",
-   "text": "The liferaft inflates by itself.",
-   "es": "La balsa se infla sola."
-  },
-  "w-davit": {
-   "voice": "model",
-   "text": "davit"
-  },
-  "x-davit": {
-   "voice": "model",
-   "text": "Launch the raft with the davit.",
-   "es": "Arriá la balsa con el pescante."
-  },
-  "w-hydro": {
-   "voice": "model",
-   "text": "hydrostatic release"
-  },
-  "x-hydro": {
-   "voice": "model",
-   "text": "The hydrostatic release lets the raft go.",
-   "es": "La zafa hidrostática suelta la balsa."
-  },
-  "w-epirb": {
-   "voice": "model",
-   "text": "EPIRB"
-  },
-  "x-epirb": {
-   "voice": "model",
-   "text": "Activate the EPIRB.",
-   "es": "Activá la radiobaliza."
-  },
-  "w-sart": {
-   "voice": "model",
-   "text": "SART"
-  },
-  "x-sart": {
-   "voice": "model",
-   "text": "The SART shows us on radar.",
-   "es": "El SART nos muestra en el radar."
-  },
-  "w-lifebuoy": {
-   "voice": "model",
-   "text": "lifebuoy"
-  },
-  "x-lifebuoy": {
-   "voice": "model",
-   "text": "Throw the lifebuoy!",
-   "es": "¡Tirá el aro salvavidas!"
-  },
-  "w-flare": {
-   "voice": "model",
-   "text": "flare"
-  },
-  "x-flare": {
-   "voice": "model",
-   "text": "This flare has expired.",
-   "es": "Esta bengala está vencida."
-  },
-  "w-painter": {
-   "voice": "model",
-   "text": "painter"
-  },
-  "x-painter": {
-   "voice": "model",
-   "text": "Check the painter is connected.",
-   "es": "Fijate que la boza esté conectada."
-  },
-  "p-launch": {
-   "voice": "model",
-   "text": "Launch the liferaft.",
-   "es": "Arriá la balsa."
-  },
-  "p-activate": {
-   "voice": "model",
-   "text": "Activate the EPIRB.",
-   "es": "Activá la radiobaliza."
-  },
-  "p-inflate": {
-   "voice": "model",
-   "text": "The liferaft inflates by itself.",
-   "es": "La balsa se infla sola."
-  },
-  "p-expired": {
-   "voice": "model",
-   "text": "This flare has expired.",
-   "es": "Esta bengala está vencida."
-  },
-  "m-expired": {
-   "voice": "model",
-   "text": "This flare has expired.",
-   "es": "Esta bengala está vencida."
-  },
-  "m-epirb": {
-   "voice": "model",
-   "text": "It sends our position by satellite.",
-   "es": "Manda nuestra posición por satélite."
-  },
-  "m-ok": {
-   "voice": "model",
-   "text": "Green light. It's OK.",
-   "es": "Luz verde. Está bien."
-  },
-  "m-painter": {
-   "voice": "model",
-   "text": "Yes, the painter is connected.",
-   "es": "Sí, la boza está conectada."
-  },
-  "m-epirb-say": {
-   "voice": "model",
-   "text": "EPIRB",
-   "es": "radiobaliza"
-  },
-  "m-sart-say": {
-   "voice": "model",
-   "text": "SART",
-   "es": "SART"
-  },
-  "c-show-liferaft": {
+  "l21-15": {
+   "pause": 1000,
    "voice": "tanya",
-   "text": "Show me the liferaft."
+   "text": "Well done, Diego. You answered like an officer.",
+   "es": "Bien hecho, Diego. Contestaste como un oficial."
   },
-  "c-show-davit": {
+  "w-bunkers": {
+   "voice": "model",
+   "text": "bunkers"
+  },
+  "x-bunkers": {
+   "voice": "model",
+   "text": "We take bunkers at anchor.",
+   "es": "Tomamos combustible fondeados."
+  },
+  "w-barge": {
+   "voice": "model",
+   "text": "barge"
+  },
+  "x-barge": {
+   "voice": "model",
+   "text": "The barge is alongside.",
+   "es": "La barcaza está abarloada."
+  },
+  "w-hose": {
+   "voice": "model",
+   "text": "hose"
+  },
+  "x-hose": {
+   "voice": "model",
+   "text": "The hose is connected.",
+   "es": "La manguera está conectada."
+  },
+  "w-spill": {
+   "voice": "model",
+   "text": "spill"
+  },
+  "x-spill": {
+   "voice": "model",
+   "text": "We mustn't spill a drop.",
+   "es": "No se puede derramar ni una gota."
+  },
+  "w-scupper": {
+   "voice": "model",
+   "text": "scupper"
+  },
+  "x-scupper": {
+   "voice": "model",
+   "text": "All scuppers are plugged.",
+   "es": "Todos los imbornales están tapados."
+  },
+  "w-sopep": {
+   "voice": "model",
+   "text": "SOPEP locker"
+  },
+  "x-sopep": {
+   "voice": "model",
+   "text": "The SOPEP locker is open.",
+   "es": "El pañol del SOPEP está abierto."
+  },
+  "w-boom": {
+   "voice": "model",
+   "text": "oil boom"
+  },
+  "x-boom": {
+   "voice": "model",
+   "text": "The oil boom is around the barge.",
+   "es": "La barrera de contención está alrededor de la barcaza."
+  },
+  "w-inspector": {
+   "voice": "model",
+   "text": "inspector"
+  },
+  "x-inspector": {
+   "voice": "model",
+   "text": "The inspector asks the cadet.",
+   "es": "La inspectora le pregunta al cadete."
+  },
+  "p-must": {
+   "voice": "model",
+   "text": "We must plug the scuppers.",
+   "es": "Tenemos que tapar los imbornales."
+  },
+  "p-mustnt": {
+   "voice": "model",
+   "text": "We mustn't wash it overboard.",
+   "es": "No se puede tirar al agua."
+  },
+  "p-hasto": {
+   "voice": "model",
+   "text": "The Chief Officer has to sign the checklist.",
+   "es": "La Primer Oficial tiene que firmar la lista."
+  },
+  "p-where": {
+   "voice": "model",
+   "text": "Next to the bunker station, on the port side.",
+   "es": "Al lado de la estación de bunker, por babor."
+  },
+  "m-sopep": {
+   "voice": "model",
+   "text": "Next to the bunker station, on the port side.",
+   "es": "Al lado de la estación de bunker, por babor."
+  },
+  "m-spill": {
+   "voice": "model",
+   "text": "Stop the bunkering and report to the Chief Officer.",
+   "es": "Parar el bunker y avisar a la Primer Oficial."
+  },
+  "m-smoke": {
+   "voice": "model",
+   "text": "No. You mustn't smoke on deck.",
+   "es": "No. No se puede fumar en cubierta."
+  },
+  "m-sign": {
+   "voice": "model",
+   "text": "The Chief Officer and the barge master.",
+   "es": "La Primer Oficial y el patrón de la barcaza."
+  },
+  "m-mustnt": {
+   "voice": "model",
+   "text": "mustn't",
+   "es": "no se puede"
+  },
+  "c-show-barge": {
+   "voice": "tanya",
+   "text": "Show me the barge."
+  },
+  "c-show-hose": {
+   "voice": "chen",
+   "text": "Where's the hose?"
+  },
+  "c-show-scupper": {
+   "voice": "chen",
+   "text": "Show me a scupper."
+  },
+  "c-show-sopep": {
+   "voice": "chen",
+   "text": "Where's the SOPEP locker?"
+  },
+  "c-show-boom": {
+   "voice": "tanya",
+   "text": "Where's the oil boom?"
+  },
+  "c-show-spill": {
+   "voice": "tanya",
+   "text": "Show me the spill."
+  },
+  "c-show-bunkers": {
    "voice": "rolando",
-   "text": "Where's the davit?"
+   "text": "Where do the bunkers go in?"
   },
-  "c-show-hydro": {
-   "voice": "tanya",
-   "text": "Show me the hydrostatic release."
+  "c-q-sopep": {
+   "voice": "chen",
+   "text": "Cadet, where is the SOPEP locker?"
   },
-  "c-show-epirb": {
-   "voice": "tanya",
-   "text": "Where's the EPIRB?"
+  "c-q-spill": {
+   "voice": "chen",
+   "text": "There's a spill on deck. What must you do?"
   },
-  "c-show-lifebuoy": {
+  "c-q-smoke": {
    "voice": "rolando",
-   "text": "Show me the lifebuoy."
+   "text": "Can I smoke here? Just one."
   },
-  "c-show-painter": {
+  "c-q-sign": {
+   "voice": "chen",
+   "text": "Who has to sign the bunker checklist?"
+  },
+  "c-rate": {
    "voice": "tanya",
-   "text": "Where's the painter?"
+   "text": "Maximum rate: three hundred cubic metres per hour."
   },
-  "c-q-flare": {
+  "c-dont-have": {
    "voice": "tanya",
-   "text": "Diego, what's wrong with this flare?"
-  },
-  "c-q-epirb": {
-   "voice": "lars",
-   "text": "Cadet, what does the EPIRB do?"
-  },
-  "c-q-light": {
-   "voice": "tanya",
-   "text": "Check the EPIRB light. Is it OK?"
-  },
-  "c-q-painter": {
-   "voice": "tanya",
-   "text": "Is the painter connected?"
-  },
-  "c-date-other": {
-   "voice": "tanya",
-   "text": "The liferaft service is due in June."
-  },
-  "c-col-other": {
-   "voice": "rolando",
-   "text": "Inflate the raft, then launch it."
+   "text": "You don't have to wear the lifejacket here, but you must wear your helmet."
   }
  },
  "dialogue": [
@@ -264,148 +272,145 @@
   "l21-10",
   "l21-11",
   "l21-12",
-  "l21-13"
+  "l21-13",
+  "l21-14",
+  "l21-15"
  ],
  "words": {
-  "liferaft": {
-   "en": "liferaft",
-   "ipa": "/ˈlaɪfrɑːft/",
-   "es": "balsa salvavidas",
-   "audio": "w-liferaft",
-   "ex": "x-liferaft"
+  "bunkers": {
+   "en": "bunkers",
+   "ipa": "/ˈbʌŋkəz/",
+   "es": "combustible (bunker)",
+   "audio": "w-bunkers",
+   "ex": "x-bunkers"
   },
-  "davit": {
-   "en": "davit",
-   "ipa": "/ˈdævɪt/",
-   "es": "pescante",
-   "audio": "w-davit",
-   "ex": "x-davit"
+  "barge": {
+   "en": "barge",
+   "ipa": "/bɑːdʒ/",
+   "es": "barcaza",
+   "audio": "w-barge",
+   "ex": "x-barge"
   },
-  "hydro": {
-   "en": "hydrostatic release",
-   "ipa": "/ˌhaɪdrəˈstætɪk rɪˈliːs/",
-   "es": "zafa hidrostática",
-   "audio": "w-hydro",
-   "ex": "x-hydro"
+  "hose": {
+   "en": "hose",
+   "ipa": "/həʊz/",
+   "es": "manguera",
+   "audio": "w-hose",
+   "ex": "x-hose"
   },
-  "epirb": {
-   "en": "EPIRB",
-   "ipa": "/ˈiːpɜːb/",
-   "es": "radiobaliza (EPIRB)",
-   "audio": "w-epirb",
-   "ex": "x-epirb"
+  "spill": {
+   "en": "spill",
+   "ipa": "/spɪl/",
+   "es": "derrame, derramar",
+   "audio": "w-spill",
+   "ex": "x-spill"
   },
-  "sart": {
-   "en": "SART",
-   "ipa": "/sɑːt/",
-   "es": "respondedor de radar (SART)",
-   "audio": "w-sart",
-   "ex": "x-sart"
+  "scupper": {
+   "en": "scupper",
+   "ipa": "/ˈskʌpə/",
+   "es": "imbornal",
+   "audio": "w-scupper",
+   "ex": "x-scupper"
   },
-  "lifebuoy": {
-   "en": "lifebuoy",
-   "ipa": "/ˈlaɪfbɔɪ/",
-   "es": "aro salvavidas",
-   "audio": "w-lifebuoy",
-   "ex": "x-lifebuoy"
+  "sopep": {
+   "en": "SOPEP locker",
+   "ipa": "/ˈsəʊpep ˌlɒkə/",
+   "es": "pañol del SOPEP (equipo antiderrames)",
+   "audio": "w-sopep",
+   "ex": "x-sopep"
   },
-  "flare": {
-   "en": "flare",
-   "ipa": "/fleə/",
-   "es": "bengala",
-   "audio": "w-flare",
-   "ex": "x-flare"
+  "boom": {
+   "en": "oil boom",
+   "ipa": "/ˈɔɪl buːm/",
+   "es": "barrera de contención",
+   "audio": "w-boom",
+   "ex": "x-boom"
   },
-  "painter": {
-   "en": "painter",
-   "ipa": "/ˈpeɪntə/",
-   "es": "boza (de la balsa)",
-   "audio": "w-painter",
-   "ex": "x-painter"
+  "inspector": {
+   "en": "inspector",
+   "ipa": "/ɪnˈspektə/",
+   "es": "inspector, inspectora",
+   "audio": "w-inspector",
+   "ex": "x-inspector"
   }
  },
  "plate": {
   "svg": "img/l21/plate.svg",
   "pins": [
    {
-    "word": "liferaft",
-    "x": 41,
-    "y": 132
+    "word": "barge",
+    "x": 120,
+    "y": 158
    },
    {
-    "word": "hydro",
-    "x": 101,
-    "y": 118
+    "word": "hose",
+    "x": 196,
+    "y": 110
    },
    {
-    "word": "painter",
-    "x": 86,
-    "y": 156
+    "word": "scupper",
+    "x": 120,
+    "y": 66
    },
    {
-    "word": "davit",
-    "x": 140,
-    "y": 104
+    "word": "boom",
+    "x": 382,
+    "y": 160
    },
    {
-    "word": "epirb",
-    "x": 144,
-    "y": 20
+    "word": "sopep",
+    "x": 264,
+    "y": 22
    },
    {
-    "word": "sart",
-    "x": 201,
-    "y": 32
+    "word": "spill",
+    "x": 184,
+    "y": 54
    },
    {
-    "word": "flare",
-    "x": 249,
-    "y": 52
-   },
-   {
-    "word": "lifebuoy",
-    "x": 270,
-    "y": 138
+    "word": "bunkers",
+    "x": 236,
+    "y": 100
    }
   ]
  },
  "docs": {
-  "lsa": {
+  "check": {
    "kind": "form",
-   "title": "WEEKLY LSA INSPECTION",
-   "subtitle": "M/V LNG HORIZON · 20 MAR 2026 · PORT SIDE",
+   "title": "BUNKER CHECKLIST",
+   "subtitle": "M/V LNG HORIZON · PORT EVERGLADES ANCHORAGE · 19 MAR 2026",
    "cells": [
     [
-     "LIFERAFTS (2)",
-     "In cradles · painters connected"
+     "FUEL",
+     "Very low sulphur fuel oil · 1,200 tonnes"
     ],
     [
-     "HYDROSTATIC RELEASES",
-     "Expiry date: AUG 2026 · OK"
+     "MAXIMUM RATE",
+     "300 m³ per hour"
     ],
     [
-     "DAVIT",
-     "Free to move · OK"
+     "SCUPPERS",
+     "All plugged"
     ],
     [
-     "LIFEBUOYS",
-     "4 · light and smoke OK"
+     "SOPEP LOCKER",
+     "Open and ready · port side"
     ],
     [
-     "EPIRB",
-     "Green light · battery expiry 2028"
+     "OIL BOOM",
+     "Around the barge"
     ],
     [
-     "SART",
-     "OK"
+     "NO SMOKING",
+     "Signs posted · no hot work"
     ],
     [
-     "FLARES",
-     "1 expired (JAN 2026) · to store, order new"
+     "IF A SPILL",
+     "Stop, report, contain. Never wash overboard"
     ],
     [
-     "INSPECTED BY",
-     "C/O T. Williams · Cadet D. Martínez"
+     "SIGNED BY",
+     "C/O T. Williams · barge master"
     ]
    ]
   }
@@ -413,29 +418,29 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: the weekly inspection",
+   "title": "Listen: bunkering",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l21/scene.jpg",
-     "kicker": "Day 7 · 09:00 · Atlantic",
-     "title": "Checking the life-saving appliances",
-     "body": "The ship is in the open Atlantic. After the morning watch, Tanya and Diego do the weekly inspection of the life-saving appliances. Listen first, one piece at a time.",
+     "kicker": "Day 6 · 14:00 · Port Everglades anchorage",
+     "title": "Fuel, and a visitor",
+     "body": "A bunker barge comes alongside to give the ship fuel. Then the US Coast Guard comes on board. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l21-02",
-      "l21-03"
+      "l21-01",
+      "l21-02"
      ],
-     "q": "How many liferafts are on this side?",
+     "q": "What has Diego done to the scuppers?",
      "opts": [
-      "Two",
-      "One",
-      "Four"
+      "Plugged them",
+      "Opened them",
+      "Cleaned them"
      ],
      "a": 0
     },
@@ -444,11 +449,11 @@
      "audio": [
       "l21-03"
      ],
-     "q": "What lets the liferafts go if the ship sinks?",
+     "q": "What is open and ready?",
      "opts": [
-      "The hydrostatic release",
-      "The davit",
-      "The painter"
+      "The SOPEP locker",
+      "The engine room",
+      "The hose"
      ],
      "a": 0
     },
@@ -458,11 +463,25 @@
       "l21-04",
       "l21-05"
      ],
-     "q": "What is the painter?",
+     "q": "Who comes on board?",
      "opts": [
-      "The line from the raft to the ship",
-      "A man who paints",
-      "A light on the raft"
+      "An inspector from the US Coast Guard",
+      "A new cadet",
+      "The barge master"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l21-06",
+      "l21-07"
+     ],
+     "q": "Where is the SOPEP locker?",
+     "opts": [
+      "Next to the bunker station, port side",
+      "On the bridge",
+      "In the engine room"
      ],
      "a": 0
     },
@@ -472,11 +491,11 @@
       "l21-08",
       "l21-09"
      ],
-     "q": "What does the EPIRB do when it's activated?",
+     "q": "First thing to do if there's a spill?",
      "opts": [
-      "Sends our position by satellite",
-      "Shows us on radar",
-      "Makes smoke"
+      "Stop the bunkering",
+      "Wash it overboard",
+      "Call the barge"
      ],
      "a": 0
     },
@@ -486,106 +505,92 @@
       "l21-10",
       "l21-11"
      ],
-     "q": "What's wrong with the flare?",
+     "q": "What mustn't you do with a spill?",
      "opts": [
-      "It has expired",
-      "It's wet",
-      "It's missing"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l21-12",
-      "l21-13"
-     ],
-     "q": "What happens with the flare now?",
-     "opts": [
-      "To the store, and they order a new one",
-      "They fire it",
-      "They throw it overboard"
+      "Wash it overboard",
+      "Report it",
+      "Use the spill kit"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole inspection",
+     "title": "Now the whole scene",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Life-saving appliances",
+   "title": "At the bunker station",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The port side of the boat deck: liferafts, davit, lifebuoy and the EPIRB on the bridge wing."
+     "body": "The barge alongside, port side, during bunkering."
     },
     {
      "type": "card",
-     "word": "liferaft"
+     "word": "bunkers"
     },
     {
      "type": "card",
-     "word": "hydro"
+     "word": "barge"
     },
     {
      "type": "card",
-     "word": "painter"
+     "word": "hose"
     },
     {
      "type": "tap",
-     "audio": "c-show-hydro",
-     "a": "hydro"
+     "audio": "c-show-hose",
+     "a": "hose"
     },
     {
      "type": "card",
-     "word": "davit"
+     "word": "scupper"
+    },
+    {
+     "type": "card",
+     "word": "sopep"
     },
     {
      "type": "tap",
-     "audio": "c-show-davit",
-     "a": "davit"
+     "audio": "c-show-scupper",
+     "a": "scupper"
     },
     {
      "type": "card",
-     "word": "lifebuoy"
+     "word": "spill"
     },
     {
      "type": "card",
-     "word": "epirb"
-    },
-    {
-     "type": "card",
-     "word": "sart"
+     "word": "boom"
     },
     {
      "type": "tap",
-     "audio": "c-show-epirb",
-     "a": "epirb"
+     "audio": "c-show-boom",
+     "a": "boom"
     },
     {
      "type": "card",
-     "word": "flare"
+     "word": "inspector"
     },
     {
      "type": "tap",
-     "audio": "c-show-painter",
-     "a": "painter"
+     "audio": "c-show-sopep",
+     "a": "sopep"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"bengala\" in English:",
+     "q": "\"imbornal\" in English:",
      "opts": [
-      "flare",
-      "rocket light",
-      "fire stick"
+      "scupper",
+      "drain hole",
+      "bilge"
      ],
      "a": 0
     },
@@ -594,24 +599,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "liferaft",
-       "balsa salvavidas"
+       "barge",
+       "barcaza"
       ],
       [
-       "davit",
-       "pescante"
+       "hose",
+       "manguera"
       ],
       [
-       "lifebuoy",
-       "aro salvavidas"
+       "spill",
+       "derrame"
       ],
       [
-       "flare",
-       "bengala"
+       "scupper",
+       "imbornal"
       ],
       [
-       "painter",
-       "boza"
+       "oil boom",
+       "barrera de contención"
       ]
      ]
     }
@@ -619,221 +624,204 @@
   },
   {
    "id": "phrases",
-   "title": "Launch, inflate, activate",
+   "title": "Must, mustn't, have to",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "The right verb for each one",
+     "title": "Rules and answers",
      "list": [
       [
-       "Launch the liferaft.",
-       "Arriá la balsa.",
-       "p-launch"
+       "We must plug the scuppers.",
+       "Tenemos que tapar los imbornales.",
+       "p-must"
       ],
       [
-       "Activate the EPIRB.",
-       "Activá la radiobaliza.",
-       "p-activate"
+       "We mustn't wash it overboard.",
+       "No se puede tirar al agua.",
+       "p-mustnt"
       ],
       [
-       "The liferaft inflates by itself.",
-       "La balsa se infla sola.",
-       "p-inflate"
+       "The Chief Officer has to sign the checklist.",
+       "La Primer Oficial tiene que firmar la lista.",
+       "p-hasto"
       ],
       [
-       "This flare has expired.",
-       "Esta bengala está vencida.",
-       "p-expired"
+       "Next to the bunker station, on the port side.",
+       "Al lado de la estación de bunker, por babor.",
+       "p-where"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Word partners",
+     "title": "must · mustn't · have to · don't have to",
      "steps": [
       [
-       "launch",
-       "a liferaft, a rescue boat"
+       "must",
+       "necessary: We <b>must</b> plug the scuppers."
       ],
       [
-       "inflate",
-       "a liferaft (it inflates)"
+       "have to",
+       "necessary (a rule): She <b>has to</b> sign."
       ],
       [
-       "activate",
-       "the EPIRB, the SART, an alarm"
+       "mustn't",
+       "forbidden: You <b>mustn't</b> smoke."
       ],
       [
-       "fire",
-       "a flare, a rocket"
-      ],
-      [
-       "throw",
-       "a lifebuoy"
+       "don't have to",
+       "not necessary: You <b>don't have to</b> wait."
       ]
      ],
      "paras": [
-      "English uses fixed verb + noun pairs. Learn them together, like one word: <b>launch the raft</b>, <b>activate the EPIRB</b>, <b>fire a flare</b>.",
-      "For dates on labels: <b>expiry date</b>; <b>it has expired</b> / <b>it's out of date</b>."
+      "<b>must</b> and <b>have to</b> mean almost the same. After <i>he / she</i>: <b>has to</b>.",
+      "But the negatives are very different: <b>mustn't</b> = prohibido; <b>don't have to</b> = no hace falta."
      ],
-     "avoid": "open the EPIRB · shoot the lifebuoy · put the raft in the water (say: launch)"
+     "avoid": "You don't have to smoke (when you mean it's forbidden). · She must to sign. · She have to sign."
     },
     {
      "type": "choice",
-     "q": "You ___ the EPIRB.",
+     "q": "Smoking on deck during bunkering is forbidden. You ___ smoke.",
      "opts": [
-      "activate",
-      "launch",
-      "inflate"
+      "mustn't",
+      "don't have to",
+      "must"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "You ___ a flare.",
+     "q": "The Chief Officer ___ sign the checklist.",
      "opts": [
-      "fire",
-      "throw",
-      "inflate"
+      "has to",
+      "have to",
+      "must to"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-dont-have"
+     ],
+     "q": "Is the life jacket necessary there?",
+     "opts": [
+      "No, but the helmet is",
+      "Yes, and the helmet too",
+      "No, nothing is necessary"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "The date on the flare is last January.",
-     "q": "Report it.",
+     "situation": "Rolando wants to wash the oil into the sea.",
+     "q": "Stop him.",
      "a": [
-      "This",
-      "flare",
-      "has",
-      "expired."
+      "We",
+      "mustn't",
+      "wash",
+      "it",
+      "overboard."
      ],
      "extra": [
-      "is",
-      "expiry"
+      "don't",
+      "to"
      ]
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "c-col-other"
-     ],
-     "q": "What comes first?",
-     "opts": [
-      "Inflate the raft",
-      "Launch the raft",
-      "Fire a flare"
-     ],
-     "a": 0
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "\"Vencido\" = expired",
+     "title": "Short answers to an inspector",
      "paras": [
-      "<i>Está vencida</i> → <b>It has expired</b> or <b>It's out of date</b>. <i>Fecha de vencimiento</i> → <b>expiry date</b>.",
-      "<b>painter</b> on a ship is the <i>boza</i> of the liferaft, not a person who paints!"
+      "An inspector wants <b>short, direct answers</b>: the place, the action, the person. No long stories, no <i>I think maybe…</i>",
+      "If you don't know: <b>I don't know, but I'll check with the Chief Officer.</b> Never invent."
      ],
-     "avoid": "It's overcome. · The date of expiration is passed."
+     "avoid": "Well, normally, in my opinion, maybe the locker is… · Yes, yes (without answering)"
     },
     {
      "type": "type",
-     "audio": "c-date-other",
-     "q": "When is the liferaft service due? Write the month.",
+     "audio": "c-rate",
+     "q": "What is the maximum rate? Write the number.",
      "accept": [
-      "june"
+      "300",
+      "three hundred"
      ]
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Read it as a word",
+     "title": "mustn't: no T in the middle",
      "paras": [
-      "<b>EPIRB</b> is read as a word: <i>EE-perb</i>. <b>SART</b>: <i>sart</i>, like <i>start</i> without the t.",
-      "Remember Lesson 13: some short names are spelled (VHF, GPS), others are read (ECDIS, EPIRB, SART)."
+      "<b>mustn't</b> = /ˈmʌsnt/: <i>MUS-nt</i>. The first <i>t</i> is silent.",
+      "In fast speech it's short; listen for the <b>n't</b> at the end. It changes everything: <i>must</i> or <i>mustn't</i>."
      ],
      "list": [
       [
-       "EPIRB",
-       "radiobaliza",
-       "m-epirb-say"
-      ],
-      [
-       "SART",
-       "SART",
-       "m-sart-say"
+       "mustn't",
+       "no se puede",
+       "m-mustnt"
       ]
      ]
-    },
-    {
-     "type": "choice",
-     "q": "Which one is read as a word?",
-     "opts": [
-      "EPIRB",
-      "VHF",
-      "GPS"
-     ],
-     "a": 0
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the inspection checklist",
+   "title": "Read the bunker checklist",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "lsa",
-     "q": "How many lifebuoys are on the port side?",
+     "doc": "check",
+     "q": "How much fuel do they take?",
      "opts": [
-      "4",
-      "2",
-      "1"
+      "1,200 tonnes",
+      "300 tonnes",
+      "12,000 tonnes"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "lsa",
-     "q": "When does the EPIRB battery expire?",
+     "doc": "check",
+     "q": "Where is the oil boom?",
      "opts": [
-      "2028",
-      "2026",
-      "2030"
+      "Around the barge",
+      "In the SOPEP locker",
+      "On the bridge"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "lsa",
-     "q": "Tap the item with a problem.",
+     "doc": "check",
+     "q": "Tap what to do if there's a spill.",
      "a": 6
     },
     {
      "type": "doc",
-     "doc": "lsa",
-     "q": "When does the hydrostatic release expire?",
+     "doc": "check",
+     "q": "What is forbidden?",
      "opts": [
-      "August 2026",
-      "January 2026",
-      "2028"
+      "Smoking and hot work",
+      "Talking on the radio",
+      "Using the hose"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "lsa",
-     "q": "Are the painters connected?",
+     "doc": "check",
+     "q": "Who signs the checklist?",
      "opts": [
-      "Yes",
-      "No",
-      "There are no painters"
+      "The Chief Officer and the barge master",
+      "The inspector",
+      "The cadet"
      ],
      "a": 0
     }
@@ -841,79 +829,76 @@
   },
   {
    "id": "speak",
-   "title": "Report the inspection",
+   "title": "Answer the inspector",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Short inspection reports",
-     "body": "Listen, say it, check it. The thing, then the state: this FLARE has EXPIRED.",
-     "es": "El equipo, y cómo está.",
+     "title": "Short and clear",
+     "body": "Listen, say it, check it. Answer the question, nothing more.",
+     "es": "Contestá lo que te preguntan, nada más.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-launch"
+     "model": "p-must"
     },
     {
      "type": "shadow",
-     "model": "p-activate"
+     "model": "p-mustnt"
     },
     {
      "type": "shadow",
-     "model": "p-expired"
+     "model": "p-hasto"
     },
     {
      "type": "role",
-     "cue": "c-q-flare",
-     "task": "The expiry date was January. Tell her.",
-     "model": "m-expired",
+     "cue": "c-q-sopep",
+     "task": "It's next to the bunker station, port side.",
+     "model": "m-sopep",
      "accept": [
-      "This flare has expired.",
-      "It has expired.",
-      "It's expired.",
-      "It's out of date.",
-      "This flare is out of date."
+      "Next to the bunker station, on the port side.",
+      "Next to the bunker station, port side.",
+      "It's next to the bunker station, on the port side.",
+      "Port side, next to the bunker station."
      ]
     },
     {
      "type": "role",
-     "cue": "c-q-epirb",
-     "task": "It sends the ship's position by satellite.",
-     "model": "m-epirb",
+     "cue": "c-q-spill",
+     "task": "Stop the bunkering and report to the Chief Officer.",
+     "model": "m-spill",
      "accept": [
-      "It sends our position by satellite.",
-      "It sends the position by satellite.",
-      "It sends our position.",
-      "It sends the ship's position by satellite."
+      "Stop the bunkering and report to the Chief Officer.",
+      "Stop the bunkering, report to the Chief Officer.",
+      "Stop bunkering and report to the Chief Officer.",
+      "We must stop the bunkering and report to the Chief Officer."
      ]
     },
     {
      "type": "role",
-     "cue": "c-q-light",
-     "task": "Green light. It's fine.",
-     "model": "m-ok",
+     "cue": "c-q-smoke",
+     "task": "No! It's forbidden on deck.",
+     "model": "m-smoke",
      "accept": [
-      "Green light. It's OK.",
-      "Green light, it's OK.",
-      "It's OK. Green light.",
-      "Yes, green light.",
-      "Green light, OK."
+      "No. You mustn't smoke on deck.",
+      "No, you mustn't smoke on deck.",
+      "You mustn't smoke on deck.",
+      "No, you mustn't smoke here.",
+      "No smoking on deck."
      ]
     },
     {
      "type": "role",
-     "cue": "c-q-painter",
-     "task": "Yes, it's connected.",
-     "model": "m-painter",
+     "cue": "c-q-sign",
+     "task": "The Chief Officer and the barge master.",
+     "model": "m-sign",
      "accept": [
-      "Yes, the painter is connected.",
-      "Yes, it's connected.",
-      "Connected.",
-      "Yes, connected.",
-      "The painter is connected."
+      "The Chief Officer and the barge master.",
+      "The Chief Officer and the barge master sign it.",
+      "Chief Officer and barge master."
      ]
     }
    ]
@@ -926,93 +911,99 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-flare",
+     "audio": "w-hose",
      "q": "Type what you hear.",
      "accept": [
-      "flare",
-      "a flare"
+      "hose",
+      "a hose",
+      "the hose"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-liferaft",
-     "a": "liferaft"
+     "audio": "c-show-barge",
+     "a": "barge"
     },
     {
      "type": "tap",
-     "audio": "c-show-lifebuoy",
-     "a": "lifebuoy"
+     "audio": "c-show-spill",
+     "a": "spill"
     },
     {
      "type": "listen",
      "audio": [
-      "l21-09"
+      "l21-14",
+      "l21-15"
      ],
-     "q": "What does the SART do?",
+     "q": "How did Diego answer?",
      "opts": [
-      "Shows us on other ships' radar",
-      "Sends a message by satellite",
-      "Makes light and smoke"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "You ___ a liferaft with the davit.",
-     "opts": [
-      "launch",
-      "activate",
-      "fire"
+      "Like an officer",
+      "Too slowly",
+      "In Spanish"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "\"The EPIRB ___ our position.\"",
+     "q": "It's not necessary to wait. You ___ wait.",
      "opts": [
-      "sends",
-      "send",
-      "is send"
+      "don't have to",
+      "mustn't",
+      "must"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "The SOPEP locker is on the port side. Port is…",
+     "opts": [
+      "left, looking forward",
+      "right, looking forward",
+      "at the back"
      ],
      "a": 0,
-     "why": "The -s, from Lesson 4."
+     "why": "From Lesson 1."
     },
     {
      "type": "build",
-     "q": "Tell Rolando to activate the EPIRB.",
+     "q": "Say a rule: plug the scuppers.",
      "a": [
-      "Activate",
+      "We",
+      "must",
+      "plug",
       "the",
-      "EPIRB."
+      "scuppers."
      ],
      "extra": [
-      "Launch",
-      "fire"
+      "to",
+      "mustn't"
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "l21-01"
+      "c-show-bunkers"
      ],
-     "q": "How often is this inspection?",
+     "q": "Rolando asks about the…",
      "opts": [
-      "Every week",
-      "Every day",
-      "Every month"
+      "bunkers",
+      "barge",
+      "boom"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: aro salvavidas",
+     "q": "Write it in English: manguera",
      "accept": [
-      "lifebuoy",
-      "a lifebuoy",
-      "life buoy"
+      "hose",
+      "a hose",
+      "the hose"
      ]
     }
    ]
   }
- ]
+ ],
+ "modelAudio": true,
+ "mediaRev": 2
 }

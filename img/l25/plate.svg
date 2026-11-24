@@ -1,58 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The bridge VHF on channel 16 with the red distress button, and the chart of the Strait of Gibraltar with the Horizon proceeding to the fishing vessel in distress and the rescue boat from Tarifa on scene">
-  <!-- Lesson 25 plate. Left: the VHF/DSC set on the bridge: display showing channel 16, the red DISTRESS button
-       under its flip cover, handset on its hook. Right: chart of the Strait: Spain (top), Morocco (bottom), Tarifa.
-       The Horizon (dark, coming from the west) steers east towards the Cap Béar (red, in distress); dashed line = 6 miles. The Salvamento
-       Marítimo boat (orange) comes from Tarifa and is on scene. Colours come from app.css (.p-*). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Fire in the galley: the BA control board with names, entry time and pressure, a breathing apparatus set, the fire door of the galley with boundary cooling on the wall, and a red portable radio and torch">
+  <!-- Lesson 24 plate: left, the BA control board held by the cadet: columns NAME, ENTRY, BAR, plus the tallies of
+       team one. Middle: a breathing apparatus set (yellow cylinder, harness, full face mask). Right: the galley door,
+       closed, with smoke coming from the top, and a hose spraying water on the wall next to it (boundary cooling).
+       Colours come from app.css (.p-*). -->
   <rect class="p-soft" x="0" y="0" width="400" height="240"/>
-  <!-- VHF set -->
-  <rect x="12" y="40" width="140" height="150" rx="8" style="fill:#1D2730"/>
-  <rect x="24" y="54" width="116" height="44" rx="4" style="fill:#13212D"/>
-  <text x="36" y="88" style="font:700 30px var(--f-mono);fill:#3DDC84">16</text>
-  <text x="88" y="70" style="font:600 9px var(--f-mono);fill:#7FA7B8">25W</text><text x="88" y="86" style="font:600 9px var(--f-mono);fill:#7FA7B8">DSC</text>
-  <!-- knobs -->
-  <circle cx="40" cy="124" r="11" style="fill:#3A4650"/><circle cx="76" cy="124" r="11" style="fill:#3A4650"/>
-  <!-- DSC call categories, from the most serious: DISTRESS (red button), URGENCY, SAFETY, ROUTINE -->
-  <rect x="22" y="146" width="27" height="14" rx="2" style="fill:#E9A23B"/><rect x="52" y="146" width="27" height="14" rx="2" style="fill:#3B82C4"/><rect x="82" y="146" width="22" height="14" rx="2" style="fill:#5A6772"/>
-  <g style="font:700 4.6px var(--f-mono);fill:#fff" text-anchor="middle"><text x="35.5" y="155">URGENCY</text><text x="65.5" y="155">SAFETY</text><text x="93" y="155">ROUTINE</text></g>
-  <!-- DISTRESS button with flip cover -->
-  <rect x="106" y="110" width="36" height="34" rx="4" style="fill:#C8281C"/>
-  <path d="M106 110 L142 110 L136 98 L112 98 Z" style="fill:#E8705F" opacity=".8"/>
-  <text x="124" y="131" text-anchor="middle" style="font:700 7px var(--f-mono);fill:#fff">DISTRESS</text>
-  <!-- handset -->
-  <rect x="112" y="156" width="24" height="26" rx="6" style="fill:#2C363F"/>
-  <path d="M124 182 Q124 206 96 206 Q70 206 70 192" fill="none" style="stroke:#2C363F" stroke-width="2"/>
+  <path class="p-quay" d="M0 212 H400 V240 H0 Z"/>
+  <!-- BA board -->
+  <rect x="12" y="20" width="160" height="150" rx="5" style="fill:#F4F6F7;stroke:#13212D" stroke-width="1"/>
+  <rect x="12" y="20" width="160" height="22" rx="5" class="p-red"/>
+  <text x="92" y="36" text-anchor="middle" style="font:700 11px var(--f-mono);fill:#fff">BA CONTROL</text>
+  <g style="font:600 8.5px var(--f-mono);fill:#13212D" opacity=".6"><text x="20" y="58">NAME</text><text x="88" y="58">ENTRY</text><text x="136" y="58">BAR</text></g>
+  <line style="stroke:#13212D" x1="18" y1="63" x2="166" y2="63" stroke-width="1"/>
+  <line style="stroke:#13212D" x1="82" y1="48" x2="82" y2="162" stroke-width=".8" opacity=".5"/><line style="stroke:#13212D" x1="130" y1="48" x2="130" y2="162" stroke-width=".8" opacity=".5"/>
+  <g style="font:600 10px var(--f-mono);fill:#13212D">
+    <text x="20" y="80">ROLANDO</text><text x="88" y="80">1135</text><text x="136" y="80">200</text>
+    <text x="20" y="98">SANTOS</text><text x="88" y="98">1135</text><text x="136" y="98">200</text>
+  </g>
+  <g style="stroke:#13212D" stroke-width=".8" opacity=".35"><line x1="18" y1="106" x2="166" y2="106"/><line x1="18" y1="124" x2="166" y2="124"/><line x1="18" y1="142" x2="166" y2="142"/></g>
+  <!-- marker -->
+  <rect x="140" y="176" width="34" height="7" rx="3" class="p-blue" transform="rotate(-20 157 180)"/>
 
-  <!-- chart -->
-  <rect x="166" y="14" width="224" height="212" rx="4" class="p-water" style="stroke:var(--ink)" stroke-width="1"/>
-  <path d="M166 14 H390 V58 Q360 66 330 60 Q300 54 282 70 Q268 84 250 76 Q220 62 196 70 Q180 74 166 70 Z" class="p-quay"/>
-  <path d="M166 226 H390 V178 Q362 168 338 178 Q316 190 290 176 Q262 164 236 180 Q210 194 186 182 L166 186 Z" class="p-quay"/>
-  <circle cx="272" cy="76" r="3" class="p-ink"/>
-  <text x="230" y="96" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".7">TARIFA</text>
-  <text x="300" y="34" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".55">SPAIN</text>
-  <text x="300" y="214" style="font:600 9px var(--f-mono);fill:var(--ink)" opacity=".55">MOROCCO</text>
-  <!-- Horizon (coming from the Atlantic, west) and its track east to the Cap Béar -->
-  <path d="M176 132 L198 132" class="p-line" stroke-width="1.4" stroke-dasharray="4 3"/>
-  <path d="M198 124 L218 124 L232 132 L218 140 L198 140 Z" class="p-hull" style="stroke:var(--ink)" stroke-width="1"/>
-  <path d="M236 132 L294 130" class="p-stroke" stroke-width="2.4"/>
-  <path d="M286 124 L296 130 L286 136" class="p-stroke" stroke-width="2.4"/>
-  <text x="246" y="148" style="font:600 8.5px var(--f-mono);fill:var(--ink)" opacity=".75">6 NM</text>
-  <!-- MAYDAY: Cap Béar on fire and listing (grave and imminent danger) -->
-  <circle cx="318" cy="130" r="14" fill="none" style="stroke:#E23D2D" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <path d="M308 130 L318 124 L330 126 L330 134 L318 136 Z" style="fill:#E23D2D" transform="rotate(-18 318 130)"/>
-  <path d="M316 124 Q314 116 319 112 Q319 118 323 117 Q325 121 321 125 Z" style="fill:#F2A23A"/>
-  <!-- PAN-PAN: a ship with engine failure, drifting (urgency) -->
-  <circle cx="196" cy="102" r="14" fill="none" style="stroke:#E9A23B" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <path d="M184 102 L194 96 L208 98 L208 106 L194 108 Z" class="p-hull" style="stroke:var(--ink)" stroke-width=".8"/>
-  <path d="M190 112 Q196 120 206 118" fill="none" style="stroke:#E9A23B" stroke-width="1.4" stroke-dasharray="2 2"/>
-  <path d="M203 115 L208 118 L202 121 Z" style="fill:#E9A23B"/>
-  <g transform="translate(212 90)"><circle r="5" style="fill:#E9A23B"/><path d="M-2.5 -2.5 L2.5 2.5 M2.5 -2.5 L-2.5 2.5" style="stroke:#fff" stroke-width="1.4"/></g>
-  <!-- SECURITE: a container adrift, a danger to navigation (safety) -->
-  <circle cx="360" cy="152" r="14" fill="none" style="stroke:#3B82C4" stroke-width="1.5" stroke-dasharray="3 2"/>
-  <rect x="351" y="148" width="16" height="9" rx="1" style="fill:#3B82C4;stroke:var(--ink)" stroke-width=".6" transform="rotate(-12 359 152)"/>
-  <path d="M358 150 v6 M362 149 v6" style="stroke:#fff" stroke-width=".6" opacity=".7" transform="rotate(-12 359 152)"/>
-  <path d="M370 132 L377 144 H363 Z" style="fill:#F2C230;stroke:var(--ink)" stroke-width=".8" stroke-linejoin="round"/>
-  <text x="370" y="142.5" text-anchor="middle" style="font:900 8px var(--f-display);fill:var(--ink)">!</text>
-  <!-- SAR boat from Tarifa -->
-  <path d="M272 80 Q292 98 308 112" fill="none" class="p-line" stroke-width="1.2" stroke-dasharray="3 3"/>
-  <path d="M304 104 L316 104 L316 112 L306 114 Z" class="p-orange" style="stroke:var(--ink)" stroke-width=".8"/>
+  <!-- breathing apparatus set -->
+  <rect x="200" y="70" width="30" height="110" rx="13" class="p-gold" style="stroke:var(--ink)" stroke-width="1"/>
+  <rect x="208" y="58" width="14" height="14" rx="2" class="p-ink"/>
+  <path d="M196 76 V190 M234 76 V190" class="p-stroke" stroke-width="5" stroke-linecap="round"/>
+  <path d="M215 58 Q216 30 246 34" fill="none" class="p-stroke" stroke-width="2.4"/>
+  <ellipse cx="256" cy="44" rx="15" ry="19" class="p-ink"/>
+  <ellipse cx="256" cy="40" rx="10" ry="11" class="p-water"/>
+  <circle cx="256" cy="58" r="5" class="p-white"/>
+  <!-- small gauge on the hose -->
+  <circle cx="236" cy="104" r="6" class="p-white"/><line x1="236" y1="104" x2="239" y2="100" class="p-line" stroke-width="1.2"/>
+
+  <!-- galley bulkhead and door -->
+  <rect x="282" y="10" width="118" height="202" class="p-super"/>
+  <!-- fire door: red steel door with a door closer, a lever handle and a KEEP CLOSED sign -->
+  <rect x="308" y="58" width="66" height="154" rx="2" class="p-hull"/>
+  <rect x="312" y="62" width="58" height="150" rx="3" class="p-red"/>
+  <rect x="318" y="70" width="46" height="2" class="p-hull" opacity=".5"/>
+  <rect x="334" y="62" width="30" height="5" rx="1" class="p-hull"/><rect x="346" y="66" width="18" height="3" rx="1" class="p-hull" transform="rotate(14 346 67)"/>
+  <rect x="317" y="96" width="48" height="18" rx="2" class="p-white"/>
+  <text x="341" y="107.5" text-anchor="middle" style="font:700 5.6px var(--f-mono);fill:#13212D">KEEP CLOSED</text>
+  <rect x="350" y="140" width="16" height="4" rx="2" class="p-super"/><circle cx="364" cy="142" r="3" class="p-super"/>
+  <!-- smoke from the top of the door -->
+  <path d="M316 58 Q330 40 320 24 Q340 30 346 14 Q356 30 372 22 Q366 42 376 56" style="fill:#5B6670" opacity=".55"/>
+  <!-- boundary cooling: water spray on the wall -->
+  <path d="M260 196 Q276 170 290 150" fill="none" class="p-stroke" stroke-width="5" stroke-linecap="round"/>
+  <g style="stroke:#8CC4DE" stroke-width="2" stroke-linecap="round" opacity=".95">
+    <line x1="292" y1="146" x2="300" y2="110"/><line x1="292" y1="146" x2="304" y2="122"/><line x1="292" y1="146" x2="306" y2="136"/><line x1="292" y1="146" x2="300" y2="96"/>
+  </g>
+  <g style="fill:#8CC4DE" opacity=".9"><circle cx="300" cy="104" r="2.5"/><circle cx="304" cy="118" r="2.5"/><circle cx="306" cy="132" r="2.5"/><circle cx="300" cy="92" r="2.5"/></g>
+  <path d="M296 100 V200 M302 110 V204" style="stroke:#8CC4DE" stroke-width="2" opacity=".5"/>
+  <!-- red fire party equipment on the deck: portable radio and torch -->
+  <g transform="translate(36 186)">
+    <rect x="-1.5" y="-20" width="3" height="12" rx="1.5" class="p-hull"/>
+    <rect x="-8" y="-10" width="16" height="30" rx="3" class="p-red" style="stroke:var(--hull)" stroke-width="1"/>
+    <rect x="-5" y="-6" width="10" height="6" rx="1" style="fill:#3DDC84"/>
+    <g class="p-hull" opacity=".7"><rect x="-5" y="4" width="10" height="1.5"/><rect x="-5" y="8" width="10" height="1.5"/><rect x="-5" y="12" width="10" height="1.5"/></g>
+  </g>
+  <g transform="translate(64 198)">
+    <path d="M44 -9 L74 -16 V16 L44 9 Z" style="fill:#F6E7A1" opacity=".75"/>
+    <rect x="0" y="-6" width="34" height="12" rx="3" class="p-red" style="stroke:var(--hull)" stroke-width="1"/>
+    <path d="M34 -6 L44 -9 V9 L34 6 Z" class="p-red" style="stroke:var(--hull)" stroke-width="1"/>
+    <rect x="44" y="-9" width="3" height="18" style="fill:#FFF6C8"/>
+    <rect x="12" y="-8" width="8" height="3" rx="1" class="p-hull"/>
+  </g>
 </svg>

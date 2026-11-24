@@ -1,34 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The walkway between two cargo tanks, with a cracked grating, barrier tape and a warning sign">
-  <!-- Lesson 17 plate: the raised walkway between tank 2 and tank 3, seen in perspective at dawn.
-       One grating panel is cracked and its edge is raised (the trip hazard); barrier tape on two posts and a
-       yellow warning sign close it off. Colours come from app.css (.p-*). -->
-  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
-  <!-- tank domes left and right -->
-  <path d="M-40 240 Q-40 40 110 30 L110 240 Z" class="p-super" style="stroke:var(--line)" stroke-width="1"/>
-  <path d="M440 240 Q440 40 290 30 L290 240 Z" class="p-super" style="stroke:var(--line)" stroke-width="1"/>
-  <!-- walkway in perspective -->
-  <path d="M150 70 L250 70 L330 240 L70 240 Z" class="p-deck"/>
-  <!-- grating panels -->
-  <g style="stroke:#5E6B78" stroke-width="1.4" opacity=".8">
-    <line x1="139" y1="94" x2="261" y2="94"/><line x1="124" y1="126" x2="276" y2="126"/><line x1="106" y1="164" x2="294" y2="164"/><line x1="86" y1="206" x2="314" y2="206"/>
-    <line x1="200" y1="70" x2="200" y2="240"/>
-  </g>
-  <g style="stroke:#5E6B78" stroke-width=".6" opacity=".45">
-    <path d="M150 80 H250 M146 88 H254 M134 104 H266 M130 114 H270 M118 138 H282 M112 150 H288 M100 176 H300 M94 190 H306 M80 218 H320 M74 230 H326"/>
-  </g>
-  <!-- the cracked panel (front left) with raised edge -->
-  <path d="M110 164 L200 164 L200 206 L90 206 Z" class="p-deck"/>
-  <path d="M110 164 L200 164 L200 206 L90 206 Z" fill="none" style="stroke:#5E6B78" stroke-width="1.4"/>
-  <path d="M120 168 L146 182 L138 190 L168 202" fill="none" class="p-hull" style="stroke:var(--hull)" stroke-width="2.4" stroke-linejoin="round"/>
-  <path d="M90 206 L200 206 L200 200 L96 199 Z" style="fill:#5E6B78"/>
-  <!-- handrails -->
-  <g style="stroke:var(--hull)" stroke-width="2" fill="none"><path d="M150 50 L70 200"/><path d="M250 50 L330 200"/><path d="M150 70 V50 M70 240 V200 M250 70 V50 M330 240 V200"/></g>
-  <!-- barrier posts and tape -->
-  <g class="p-hull"><rect x="80" y="150" width="4" height="62"/><rect x="214" y="150" width="4" height="62"/></g>
-  <g><rect x="82" y="156" width="134" height="7" style="fill:#fff"/>
-    <g style="fill:var(--antifoul)"><rect x="82" y="156" width="12" height="7"/><rect x="106" y="156" width="12" height="7"/><rect x="130" y="156" width="12" height="7"/><rect x="154" y="156" width="12" height="7"/><rect x="178" y="156" width="12" height="7"/><rect x="202" y="156" width="12" height="7"/></g></g>
-  <!-- warning sign -->
-  <rect x="236" y="150" width="4" height="58" class="p-hull"/>
-  <path d="M238 114 L262 156 H214 Z" style="fill:#F2C230;stroke:var(--hull)" stroke-width="2" stroke-linejoin="round"/>
-  <text x="238" y="150" text-anchor="middle" style="font:900 22px var(--f-display);fill:var(--hull)">!</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Our ship from above with the bow and quarter sectors, a crossing ship on the starboard bow, an overtaking ship on the port quarter and a head-on ship ahead">
+  <!-- Lesson 16 plate: own ship in the centre, heading up. Green = starboard, red = port; the wedges are the
+       bow sectors (front) and quarter sectors (back); the beams are the gaps at 90°. The dashed circle is the
+       6-mile range. Target 1 crosses from the starboard bow (bearing line dashed, CPA marked); target 2 overtakes
+       on the port quarter; target 3 is head-on. Colours come from app.css (.p-*). Generated with a small script. -->
+  <rect class="p-water" x="0" y="0" width="400" height="240"/>
+  <path d="M200 132 L200.0 14.0 A118 118 0 0 1 309.0 86.8 Z" style="fill:#2E9E6B" opacity="0.18"/><path d="M200 132 L91.0 86.8 A118 118 0 0 1 200.0 14.0 Z" style="fill:#C0392B" opacity="0.14"/><path d="M200 132 L200.0 250.0 A118 118 0 0 1 91.0 177.2 Z" style="fill:#C0392B" opacity="0.14"/><path d="M200 132 L309.0 177.2 A118 118 0 0 1 200.0 250.0 Z" style="fill:#2E9E6B" opacity="0.18"/><line x1="200" y1="132" x2="309.0" y2="86.8" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="309.0" y2="177.2" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="91.0" y2="177.2" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="91.0" y2="86.8" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="200.0" y2="14.0" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><line x1="200" y1="132" x2="200.0" y2="250.0" class="p-line" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/><circle cx="200" cy="132" r="90" fill="none" class="p-stroke" stroke-width="1.2" stroke-dasharray="4 3" opacity=".7"/>
+  <!-- own ship -->
+  <g transform="translate(200.0 132.0) rotate(0) scale(1.6)"><path d="M0 -12 Q6 -4 6 6 L6 12 H-6 L-6 6 Q-6 -4 0 -12 Z" style="fill:#5E6B78"/><rect x="-3.5" y="5" width="7" height="4" class="p-super"/></g>
+  <!-- bearing line to target 1 -->
+  <line x1="200" y1="132" x2="263.6" y2="68.4" style="stroke:var(--antifoul)" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <!-- target 1 crossing (heading west) with its track -->
+  <line x1="263.6" y1="68.4" x2="206" y2="68.4" style="stroke:var(--antifoul)" stroke-width="1" opacity=".6"/>
+  <g transform="translate(263.6 68.4) rotate(270) scale(1)"><path d="M0 -12 Q6 -4 6 6 L6 12 H-6 L-6 6 Q-6 -4 0 -12 Z" class="p-red"/><rect x="-3.5" y="5" width="7" height="4" class="p-super"/></g>
+  <!-- CPA marker -->
+  <g style="stroke:var(--antifoul)" stroke-width="2"><line x1="199" y1="63.4" x2="209" y2="73.4"/><line x1="209" y1="63.4" x2="199" y2="73.4"/></g>
+  <!-- target 2 overtaking on the port quarter (same direction) -->
+  <g transform="translate(170.2 174.6) rotate(0) scale(1)"><path d="M0 -12 Q6 -4 6 6 L6 12 H-6 L-6 6 Q-6 -4 0 -12 Z" class="p-blue"/><rect x="-3.5" y="5" width="7" height="4" class="p-super"/></g>
+  <path d="M170.2 158.6 v-12" style="stroke:var(--blue)" stroke-width="1.6"/>
+  <!-- target 3 head-on -->
+  <g transform="translate(200.0 34.0) rotate(180) scale(1)"><path d="M0 -12 Q6 -4 6 6 L6 12 H-6 L-6 6 Q-6 -4 0 -12 Z" class="p-orange"/><rect x="-3.5" y="5" width="7" height="4" class="p-super"/></g>
 </svg>

@@ -1,6 +1,6 @@
 # English on Board — estado del trabajo
 
-Leer junto con `BIBLE.md` (historia, personajes, temario de las 27 lecciones, reglas de imagen y audio).
+Leer junto con `BIBLE.md` (historia, personajes, temario de las 28 lecciones, reglas de imagen y audio).
 Actualizado: 3 nov 2026 (inicio con pestañas, test por módulo, audio sin cortes).
 
 ## Qué es
@@ -54,6 +54,12 @@ JS sin frameworks ni build. Se publica sola en Cloudflare Workers al hacer push 
 
 ## Logo (5 nov)
 - Timón blanco con el centro naranja (como la rosa de ChartroomLab con su centro de color), sobre azul `#17506A`. Fuente: `icons/icon.svg`; exportados `icon-192/512.png`, `apple-touch-icon.png`, `favicon-32.png`. En la app el mismo timón (`I.wheel`), blanco con centro naranja. También en la tarjeta de la landing de ChartroomLab.
+
+## Lecciones nuevas y renumeración (24 nov 2026)
+- Se agregó la **L11 "Lifting gear"** (Día 2 · 15:00, víveres con la grúa de provisiones: grúa, pluma, cable, gancho, eslinga, grillete, guardacabo, cáncamo, pasteca, aparejo, trinca, tensor; SWL vs WLL en la lectura). Las lecciones de la vieja L11 a la L27 pasaron a **L12–L28** (archivos, carpetas de audio e imagen, claves `lNN-…`, referencias "Lesson N", `course.json`, biblia). El progreso guardado en los celulares quedó corrido un número; no importa porque el curso no está abierto al público.
+- La L11 tiene JSON, lámina y `img/l11/prompts.md`; **faltan las fotos (`scene.jpg`, `hero.jpg`) y todos sus audios** (`audio/l11/script.csv`, 29 de personajes + voz modelo).
+- La app ya no tiene "27" fijo: la cantidad de lecciones y módulos sale de `course.json`, y el examen final usa la foto de la última lección.
+- Planeada: una lección final de atraque en Marsella (órdenes de máquina, hélice, pala de timón, gancho de remolque, defensas), después de la del práctico.
 
 ## Pendiente
 1. (hecho) Audio `l01-13` de Rolando subido el 3 nov.

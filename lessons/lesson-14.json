@@ -1,9 +1,11 @@
 {
- "n": 14, "modelAudio": true, "mediaRev": 2,
+ "n": 14,
+ "modelAudio": true,
+ "mediaRev": 4,
  "module": 4,
- "title": "Watch handover",
- "place": "Day 4 · 03:45 · Gulf of Mexico, bridge",
- "goal": "Follow a watch handover and read back course, speed and orders.",
+ "title": "Bridge equipment",
+ "place": "Day 3 · 16:30 · Gulf of Mexico, bridge",
+ "goal": "Name the bridge equipment and say what each one is used for.",
  "images": {
   "hero": "img/l14/hero.jpg",
   "scene": "img/l14/scene.jpg"
@@ -11,267 +13,267 @@
  "audio": {
   "l14-01": {
    "voice": "tanya",
-   "text": "Good morning, James. Diego, this is your first night watch. Listen to the handover.",
-   "es": "Buen día, James. Diego, esta es tu primera guardia de noche. Escuchá el relevo."
+   "text": "OK, Diego. Your first watch with me at sea. First, the equipment.",
+   "es": "Bueno, Diego. Tu primera guardia conmigo en el mar. Primero, los equipos."
   },
   "l14-02": {
-   "voice": "james",
-   "text": "Morning, both. OK. Course one one zero, speed sixteen knots, on autopilot.",
-   "es": "Buen día a los dos. Bueno. Rumbo uno uno cero, velocidad dieciséis nudos, en piloto automático."
+   "voice": "diego",
+   "text": "Great. Is this the radar?",
+   "es": "Genial. ¿Esto es el radar?"
   },
   "l14-03": {
    "voice": "tanya",
-   "text": "Course one one zero, speed sixteen.",
-   "es": "Rumbo uno uno cero, velocidad dieciséis."
+   "text": "No, that's the ECDIS, the electronic chart. It shows our position. This one is the radar. It shows other ships.",
+   "es": "No, eso es el ECDIS, la carta electrónica. Muestra nuestra posición. Este es el radar. Muestra otros buques."
   },
   "l14-04": {
-   "pause": 500,
-   "voice": "james",
-   "text": "Position: about ninety miles south of the Mississippi. It's on the chart.",
-   "es": "Posición: unas noventa millas al sur del Mississippi. Está en la carta."
+   "voice": "diego",
+   "text": "In fog too?",
+   "es": "¿Con niebla también?"
   },
   "l14-05": {
-   "voice": "james",
-   "text": "Traffic: one fishing boat on the port bow, eight miles. No danger.",
-   "es": "Tráfico: un pesquero por la amura de babor, a ocho millas. Sin peligro."
+   "voice": "tanya",
+   "text": "In fog, at night, always. Remember Galveston?",
+   "es": "Con niebla, de noche, siempre. ¿Te acordás de Galveston?"
   },
   "l14-06": {
-   "voice": "james",
-   "text": "Weather: wind north-west, force four. A front is coming in the morning.",
-   "es": "Tiempo: viento del noroeste, fuerza cuatro. Viene un frente a la mañana."
+   "voice": "diego",
+   "text": "I do! And what does this do?",
+   "es": "¡Sí! ¿Y esto para qué sirve?"
   },
   "l14-07": {
+   "pause": 500,
    "voice": "tanya",
-   "text": "And the Captain's night orders?",
-   "es": "¿Y las órdenes de noche del Capitán?"
+   "text": "That's the echo sounder. It measures the depth under the ship. Here, forty metres.",
+   "es": "Es la ecosonda. Mide la profundidad debajo del buque. Acá, cuarenta metros."
   },
   "l14-08": {
-   "pause": 400,
-   "voice": "james",
-   "text": "Call him if visibility is less than three miles, or if any ship comes closer than two miles.",
-   "es": "Llamarlo si la visibilidad baja de tres millas, o si algún buque se acerca a menos de dos millas."
+   "voice": "diego",
+   "text": "And the steering wheel?",
+   "es": "¿Y el timón?"
   },
   "l14-09": {
    "voice": "tanya",
-   "text": "Under three miles, closer than two miles. OK.",
-   "es": "Menos de tres millas, menos de dos millas. Okey."
+   "text": "We call it the helm. Now the autopilot steers, but we can change to hand steering any time.",
+   "es": "Lo llamamos helm. Ahora gobierna el piloto automático, pero podemos pasar a gobierno manual cuando sea."
   },
   "l14-10": {
-   "pause": 800,
-   "voice": "diego",
-   "text": "And the lookout? Is that me?",
-   "es": "¿Y la vigía? ¿Soy yo?"
+   "pause": 600,
+   "voice": "tanya",
+   "text": "This is the gyro compass. It gives the heading. And this lever is the engine telegraph.",
+   "es": "Este es el girocompás. Da el rumbo de proa. Y esta palanca es el telégrafo de máquinas."
   },
   "l14-11": {
-   "voice": "tanya",
-   "text": "Yes. You're the lookout. Eyes outside, and report everything you see.",
-   "es": "Sí. Vos sos la vigía. Ojos afuera, y reportá todo lo que veas."
+   "voice": "diego",
+   "text": "And the binoculars?",
+   "es": "¿Y los binoculares?"
   },
   "l14-12": {
-   "pause": 600,
-   "voice": "james",
-   "text": "Any questions, Tanya?",
-   "es": "¿Alguna pregunta, Tanya?"
+   "voice": "tanya",
+   "text": "For the lookout. That's your job on my watch. And remember: the most important equipment on the bridge is your eyes.",
+   "es": "Para la vigía. Ese es tu trabajo en mi guardia. Y acordate: el equipo más importante del puente son tus ojos."
   },
   "l14-13": {
-   "voice": "tanya",
-   "text": "No questions. I have the watch.",
-   "es": "Sin preguntas. Tomo la guardia."
-  },
-  "l14-14": {
-   "pause": 500,
-   "voice": "james",
-   "text": "You have the watch. Good night.",
-   "es": "La guardia es tuya. Buenas noches."
-  },
-  "l14-15": {
    "voice": "diego",
-   "text": "Good night, James.",
-   "es": "Buenas noches, James."
+   "text": "My eyes. Got it.",
+   "es": "Mis ojos. Entendido."
   },
-  "w-course": {
+  "w-radar": {
    "voice": "model",
-   "text": "course"
+   "text": "radar"
   },
-  "x-course": {
+  "x-radar": {
    "voice": "model",
-   "text": "Course one one zero.",
-   "es": "Rumbo uno uno cero."
+   "text": "The radar shows other ships.",
+   "es": "El radar muestra otros buques."
   },
-  "w-speed": {
+  "w-ecdis": {
    "voice": "model",
-   "text": "speed"
+   "text": "ECDIS"
   },
-  "x-speed": {
+  "x-ecdis": {
    "voice": "model",
-   "text": "Speed sixteen knots.",
-   "es": "Velocidad dieciséis nudos."
+   "text": "The ECDIS shows our position.",
+   "es": "El ECDIS muestra nuestra posición."
   },
-  "w-knot": {
+  "w-gyro": {
    "voice": "model",
-   "text": "knot"
+   "text": "gyro compass"
   },
-  "x-knot": {
+  "x-gyro": {
    "voice": "model",
-   "text": "The ship makes sixteen knots.",
-   "es": "El buque hace dieciséis nudos."
+   "text": "The gyro compass gives the heading.",
+   "es": "El girocompás da el rumbo de proa."
   },
-  "w-position": {
+  "w-autopilot": {
    "voice": "model",
-   "text": "position"
+   "text": "autopilot"
   },
-  "x-position": {
+  "x-autopilot": {
    "voice": "model",
-   "text": "The position is on the chart.",
-   "es": "La posición está en la carta."
+   "text": "The autopilot steers the ship.",
+   "es": "El piloto automático gobierna el buque."
   },
-  "w-traffic": {
+  "w-helm": {
    "voice": "model",
-   "text": "traffic"
+   "text": "helm"
   },
-  "x-traffic": {
+  "x-helm": {
    "voice": "model",
-   "text": "Traffic: one fishing boat.",
-   "es": "Tráfico: un pesquero."
+   "text": "Take the helm.",
+   "es": "Tomá el timón."
   },
-  "w-orders": {
+  "w-binoculars": {
    "voice": "model",
-   "text": "night orders"
+   "text": "binoculars"
   },
-  "x-orders": {
+  "x-binoculars": {
    "voice": "model",
-   "text": "Read the Captain's night orders.",
-   "es": "Leé las órdenes de noche del Capitán."
+   "text": "The binoculars are for the lookout.",
+   "es": "Los binoculares son para la vigía."
   },
-  "w-handover": {
+  "w-gps": {
    "voice": "model",
-   "text": "handover"
+   "text": "GPS"
   },
-  "x-handover": {
+  "x-gps": {
    "voice": "model",
-   "text": "Listen to the handover.",
-   "es": "Escuchá el relevo."
+   "text": "The GPS gives our position.",
+   "es": "El GPS da nuestra posición."
   },
-  "w-lookout": {
+  "w-log": {
    "voice": "model",
-   "text": "lookout"
+   "text": "speed log"
   },
-  "x-lookout": {
+  "x-log": {
    "voice": "model",
-   "text": "You're the lookout.",
-   "es": "Vos sos la vigía."
+   "text": "The speed log shows twelve knots.",
+   "es": "La corredera marca doce nudos."
   },
-  "w-range": {
+  "w-anemometer": {
    "voice": "model",
-   "text": "range"
+   "text": "anemometer"
   },
-  "x-range": {
+  "x-anemometer": {
    "voice": "model",
-   "text": "Change the range to six miles.",
-   "es": "Cambiá la escala a seis millas."
+   "text": "The anemometer shows the wind direction and speed.",
+   "es": "El anemómetro muestra la dirección y la velocidad del viento."
   },
-  "w-brill": {
+  "w-echo": {
    "voice": "model",
-   "text": "brilliance"
+   "text": "echo sounder"
   },
-  "x-brill": {
+  "x-echo": {
    "voice": "model",
-   "text": "Turn down the brilliance at night.",
-   "es": "Bajá el brillo de noche."
+   "text": "The echo sounder measures the depth.",
+   "es": "La ecosonda mide la profundidad."
   },
-  "p-course": {
+  "w-telegraph": {
    "voice": "model",
-   "text": "Course one one zero, speed sixteen knots.",
-   "es": "Rumbo uno uno cero, velocidad dieciséis nudos."
+   "text": "engine telegraph"
   },
-  "p-ihave": {
+  "x-telegraph": {
    "voice": "model",
-   "text": "I have the watch.",
-   "es": "Tomo la guardia."
+   "text": "The engine telegraph controls the speed.",
+   "es": "El telégrafo de máquinas controla la velocidad."
   },
-  "p-youhave": {
+  "p-whatdo": {
    "voice": "model",
-   "text": "You have the watch.",
-   "es": "La guardia es tuya."
+   "text": "What does this do?",
+   "es": "¿Esto para qué sirve?"
   },
-  "p-report": {
+  "p-shows": {
    "voice": "model",
-   "text": "Eyes outside, and report everything you see.",
-   "es": "Ojos afuera, y reportá todo lo que veas."
+   "text": "The radar shows other ships.",
+   "es": "El radar muestra otros buques."
   },
-  "m-rb1": {
+  "p-measures": {
    "voice": "model",
-   "text": "Course one two five, speed fifteen knots.",
-   "es": "Rumbo uno dos cinco, velocidad quince nudos."
+   "text": "The echo sounder measures the depth.",
+   "es": "La ecosonda mide la profundidad."
   },
-  "m-rb2": {
+  "p-eyes": {
    "voice": "model",
-   "text": "Course zero nine five, speed sixteen knots.",
-   "es": "Rumbo cero nueve cinco, velocidad dieciséis nudos."
+   "text": "The most important equipment is your eyes.",
+   "es": "El equipo más importante son tus ojos."
   },
-  "m-course": {
+  "m-radar": {
    "voice": "model",
-   "text": "Course one one zero.",
-   "es": "Rumbo uno uno cero."
+   "text": "It shows other ships.",
+   "es": "Muestra otros buques."
   },
-  "m-ihave": {
+  "m-echo": {
    "voice": "model",
-   "text": "No questions. I have the watch.",
-   "es": "Sin preguntas. Tomo la guardia."
+   "text": "It measures the depth.",
+   "es": "Mide la profundidad."
   },
-  "m-knot": {
+  "m-ecdis": {
    "voice": "model",
-   "text": "knot",
-   "es": "nudo"
+   "text": "It's the ECDIS. It shows our position.",
+   "es": "Es el ECDIS. Muestra nuestra posición."
   },
-  "m-not": {
+  "m-gyro": {
    "voice": "model",
-   "text": "not",
-   "es": "no"
+   "text": "It gives the heading.",
+   "es": "Da el rumbo de proa."
   },
-  "c-show-course": {
+  "m-spell": {
+   "voice": "model",
+   "text": "V H F, G P S, A I S",
+   "es": "V H F, G P S, A I S"
+  },
+  "m-read": {
+   "voice": "model",
+   "text": "ECDIS, NAVTEX, radar",
+   "es": "ECDIS, NAVTEX, radar"
+  },
+  "c-show-ecdis": {
+   "voice": "james",
+   "text": "Where's the ECDIS?"
+  },
+  "c-show-gyro": {
    "voice": "tanya",
-   "text": "Show me the course."
+   "text": "Show me the gyro compass."
   },
-  "c-show-speed": {
-   "voice": "james",
-   "text": "Where's the speed?"
-  },
-  "c-show-position": {
+  "c-show-helm": {
    "voice": "tanya",
-   "text": "Show me our position."
+   "text": "Show me the helm."
   },
-  "c-show-traffic": {
+  "c-show-binoculars": {
    "voice": "james",
-   "text": "Where's the traffic?"
+   "text": "Where are the binoculars?"
   },
-  "c-rb1": {
+  "c-show-echo": {
    "voice": "james",
-   "text": "Course one two five, speed fifteen knots."
+   "text": "Show me the echo sounder."
   },
-  "c-rb2": {
-   "voice": "james",
-   "text": "New course: zero nine five. Speed sixteen knots."
-  },
-  "c-whatcourse": {
+  "c-show-telegraph": {
    "voice": "tanya",
-   "text": "Diego, what's the course?"
+   "text": "Where's the engine telegraph?"
   },
-  "c-anyq": {
-   "voice": "james",
-   "text": "Any questions?"
-  },
-  "c-course-other": {
+  "c-what-radar": {
    "voice": "tanya",
-   "text": "Course zero eight five."
+   "text": "Diego, what does the radar do?"
   },
-  "c-speed-other": {
-   "voice": "james",
-   "text": "Speed fourteen knots."
+  "c-what-echo": {
+   "voice": "tanya",
+   "text": "And the echo sounder? What does it do?"
   },
-  "c-miles": {
+  "c-whatsthis": {
    "voice": "james",
-   "text": "The fishing boat is now six miles away."
+   "text": "Hey cadet, what's this screen?"
+  },
+  "c-what-gyro": {
+   "voice": "tanya",
+   "text": "What does the gyro compass do?"
+  },
+  "c-depth": {
+   "voice": "tanya",
+   "text": "The echo sounder shows twenty-five metres."
+  },
+  "c-steers": {
+   "voice": "tanya",
+   "text": "The autopilot steers. We watch."
   }
  },
  "dialogue": [
@@ -287,159 +289,184 @@
   "l14-10",
   "l14-11",
   "l14-12",
-  "l14-13",
-  "l14-14",
-  "l14-15"
+  "l14-13"
  ],
  "words": {
-  "course": {
-   "en": "course",
-   "ipa": "/kɔːs/",
-   "es": "rumbo",
-   "audio": "w-course",
-   "ex": "x-course"
+  "radar": {
+   "en": "radar",
+   "ipa": "/ˈreɪdɑː/",
+   "es": "radar",
+   "audio": "w-radar",
+   "ex": "x-radar"
   },
-  "speed": {
-   "en": "speed",
-   "ipa": "/spiːd/",
-   "es": "velocidad",
-   "audio": "w-speed",
-   "ex": "x-speed"
+  "ecdis": {
+   "en": "ECDIS",
+   "ipa": "/ˈekdɪs/",
+   "es": "carta electrónica",
+   "audio": "w-ecdis",
+   "ex": "x-ecdis"
   },
-  "knot": {
-   "en": "knot",
-   "ipa": "/nɒt/",
-   "es": "nudo",
-   "audio": "w-knot",
-   "ex": "x-knot"
+  "gyro": {
+   "en": "gyro compass",
+   "ipa": "/ˈdʒaɪrəʊ ˌkʌmpəs/",
+   "es": "girocompás",
+   "audio": "w-gyro",
+   "ex": "x-gyro"
   },
-  "position": {
-   "en": "position",
-   "ipa": "/pəˈzɪʃn/",
-   "es": "posición",
-   "audio": "w-position",
-   "ex": "x-position"
+  "autopilot": {
+   "en": "autopilot",
+   "ipa": "/ˈɔːtəʊˌpaɪlət/",
+   "es": "piloto automático",
+   "audio": "w-autopilot",
+   "ex": "x-autopilot"
   },
-  "traffic": {
-   "en": "traffic",
-   "ipa": "/ˈtræfɪk/",
-   "es": "tráfico",
-   "audio": "w-traffic",
-   "ex": "x-traffic"
+  "helm": {
+   "en": "helm",
+   "ipa": "/helm/",
+   "es": "timón",
+   "audio": "w-helm",
+   "ex": "x-helm"
   },
-  "orders": {
-   "en": "night orders",
-   "ipa": "/ˈnaɪt ˌɔːdəz/",
-   "es": "órdenes de noche",
-   "audio": "w-orders",
-   "ex": "x-orders"
+  "binoculars": {
+   "en": "binoculars",
+   "ipa": "/bɪˈnɒkjələz/",
+   "es": "binoculares",
+   "audio": "w-binoculars",
+   "ex": "x-binoculars"
   },
-  "handover": {
-   "en": "handover",
-   "ipa": "/ˈhændəʊvə/",
-   "es": "relevo, entrega de guardia",
-   "audio": "w-handover",
-   "ex": "x-handover"
+  "gps": {
+   "en": "GPS",
+   "ipa": "/ˌdʒiː piː ˈes/",
+   "es": "GPS",
+   "audio": "w-gps",
+   "ex": "x-gps"
   },
-  "lookout": {
-   "en": "lookout",
-   "ipa": "/ˈlʊkaʊt/",
-   "es": "vigía",
-   "audio": "w-lookout",
-   "ex": "x-lookout"
+  "log": {
+   "en": "speed log",
+   "ipa": "/ˈspiːd lɒɡ/",
+   "es": "corredera",
+   "audio": "w-log",
+   "ex": "x-log"
   },
-  "range": {
-   "en": "range",
-   "ipa": "/reɪndʒ/",
-   "es": "escala (del radar)",
-   "audio": "w-range",
-   "ex": "x-range"
+  "anemometer": {
+   "en": "anemometer",
+   "ipa": "/ˌænɪˈmɒmɪtə/",
+   "es": "anemómetro",
+   "audio": "w-anemometer",
+   "ex": "x-anemometer"
   },
-  "brill": {
-   "en": "brilliance (BRILL)",
-   "ipa": "/ˈbrɪliəns/",
-   "es": "brillo",
-   "audio": "w-brill",
-   "ex": "x-brill"
+  "echo": {
+   "en": "echo sounder",
+   "ipa": "/ˈekəʊ ˌsaʊndə/",
+   "es": "ecosonda",
+   "audio": "w-echo",
+   "ex": "x-echo"
+  },
+  "telegraph": {
+   "en": "engine telegraph",
+   "ipa": "/ˈendʒɪn ˌtelɪɡrɑːf/",
+   "es": "telégrafo de máquinas",
+   "audio": "w-telegraph",
+   "ex": "x-telegraph"
   }
  },
  "plate": {
   "svg": "img/l14/plate.svg",
   "pins": [
    {
-    "word": "course",
-    "x": 200,
-    "y": 140
+    "word": "radar",
+    "x": 61,
+    "y": 104
    },
    {
-    "word": "speed",
-    "x": 300,
-    "y": 100
+    "word": "ecdis",
+    "x": 169,
+    "y": 104
    },
    {
-    "word": "knot",
-    "x": 335,
-    "y": 100
+    "word": "gyro",
+    "x": 278,
+    "y": 110
    },
    {
-    "word": "position",
-    "x": 330,
-    "y": 150
+    "word": "autopilot",
+    "x": 282,
+    "y": 175
    },
    {
-    "word": "traffic",
-    "x": 196,
-    "y": 96
+    "word": "helm",
+    "x": 277,
+    "y": 220
    },
    {
-    "word": "range",
-    "x": 338,
-    "y": 184
+    "word": "telegraph",
+    "x": 317,
+    "y": 146
    },
    {
-    "word": "brill",
-    "x": 286,
-    "y": 222
+    "word": "echo",
+    "x": 370,
+    "y": 102
+   },
+   {
+    "word": "binoculars",
+    "x": 374,
+    "y": 204
+   },
+   {
+    "word": "gps",
+    "x": 70,
+    "y": 202
+   },
+   {
+    "word": "log",
+    "x": 142,
+    "y": 202
+   },
+   {
+    "word": "anemometer",
+    "x": 218,
+    "y": 202
    }
   ]
  },
  "docs": {
-  "orders": {
+  "test": {
    "kind": "form",
-   "title": "MASTER'S NIGHT ORDERS",
-   "subtitle": "M/V LNG HORIZON · 16–17 MAR 2026",
+   "title": "BRIDGE EQUIPMENT TEST",
+   "subtitle": "M/V LNG HORIZON · BEFORE DEPARTURE · 15 MAR 2026",
    "cells": [
     [
-     "COURSE · SPEED",
-     "110° · 16 knots"
+     "RADAR 1 AND 2",
+     "OK"
     ],
     [
-     "CALL ME IF",
-     "Visibility is less than 3 NM"
+     "ECDIS",
+     "OK · route loaded"
     ],
     [
-     "CALL ME IF",
-     "Any ship comes closer than 2 NM"
+     "GYRO COMPASS",
+     "OK · error 0.5° East"
     ],
     [
-     "CALL ME IF",
-     "You have any doubt"
+     "AUTOPILOT",
+     "OK"
     ],
     [
-     "LOOKOUT",
-     "Cadet on lookout 0400–0800"
+     "STEERING",
+     "OK · both pumps tested"
     ],
     [
-     "WEATHER",
-     "Front expected in the morning"
+     "ECHO SOUNDER",
+     "OK"
     ],
     [
-     "SIGNED",
-     "Master L. Andersen"
+     "ENGINE TELEGRAPH",
+     "OK · tested with the engine room"
     ],
     [
-     "READ BY",
-     "2/O J. O'Connor · C/O T. Williams"
+     "TESTED BY",
+     "3/O M. Rossi"
     ]
    ]
   }
@@ -447,17 +474,31 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: the handover",
+   "title": "Listen: the bridge at sea",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l14/scene.jpg",
-     "kicker": "Day 4 · 03:45 · Gulf of Mexico",
-     "title": "Diego's first night watch",
-     "body": "Quarter to four in the morning. Tanya comes to the bridge for her watch, and Diego comes with her. James gives the watch to Tanya. Listen first, one piece at a time.",
+     "kicker": "Day 3 · 16:30 · Gulf of Mexico",
+     "title": "First watch with the Chief Officer",
+     "body": "The fog is gone and the ship is at sea. Diego starts his watch with Tanya, from 4 to 8. First, she shows him the bridge. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-01"
+     ],
+     "q": "Whose watch is it?",
+     "opts": [
+      "Tanya's",
+      "James's",
+      "Mateo's"
+     ],
+     "a": 0,
+     "why": "\"Your first watch with me.\""
     },
     {
      "type": "listen",
@@ -465,62 +506,64 @@
       "l14-02",
       "l14-03"
      ],
-     "q": "What is the course?",
+     "q": "What does the ECDIS show?",
      "opts": [
-      "110",
-      "100",
-      "011"
-     ],
-     "a": 0,
-     "why": "\"Course one one zero.\""
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l14-04"
-     ],
-     "q": "Where is the ship?",
-     "opts": [
-      "South of the Mississippi",
-      "North of Galveston",
-      "Near Florida"
+      "Our position",
+      "Other ships",
+      "The depth"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
+      "l14-04",
       "l14-05"
      ],
-     "q": "What traffic is there?",
+     "q": "The radar works…",
      "opts": [
-      "A fishing boat, 8 miles",
-      "A tanker, 2 miles",
-      "No traffic"
+      "in fog and at night",
+      "only in daylight",
+      "only in port"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l14-07",
-      "l14-08"
+      "l14-06",
+      "l14-07"
      ],
-     "q": "When do they call the Captain?",
+     "q": "How deep is the water here?",
      "opts": [
-      "Visibility under 3 miles, or a ship closer than 2 miles",
-      "Every hour",
-      "Only for fire"
+      "40 metres",
+      "14 metres",
+      "400 metres"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l14-10",
-      "l14-11"
+      "l14-08",
+      "l14-09"
      ],
-     "q": "What is Diego's job on the watch?",
+     "q": "Who steers the ship now?",
+     "opts": [
+      "The autopilot",
+      "Tanya",
+      "Diego"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l14-11",
+      "l14-12",
+      "l14-13"
+     ],
+     "q": "What is Diego's job on Tanya's watch?",
      "opts": [
       "Lookout",
       "Helmsman",
@@ -529,101 +572,95 @@
      "a": 0
     },
     {
-     "type": "listen",
-     "audio": [
-      "l14-12",
-      "l14-13",
-      "l14-14"
-     ],
-     "q": "Who has the watch at the end?",
-     "opts": [
-      "Tanya",
-      "James",
-      "Diego"
-     ],
-     "a": 0
-    },
-    {
      "type": "dialogue",
-     "title": "Now the whole handover",
+     "title": "Now the whole scene",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "On the screen",
+   "title": "Bridge equipment",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The radar at night, during the handover."
+     "body": "The front of the bridge, from the helm."
     },
     {
      "type": "card",
-     "word": "course"
+     "word": "radar"
     },
     {
      "type": "card",
-     "word": "speed"
-    },
-    {
-     "type": "card",
-     "word": "knot"
+     "word": "ecdis"
     },
     {
      "type": "tap",
-     "audio": "c-show-course",
-     "a": "course"
+     "audio": "c-show-ecdis",
+     "a": "ecdis"
     },
     {
      "type": "card",
-     "word": "position"
+     "word": "gyro"
     },
     {
      "type": "card",
-     "word": "traffic"
+     "word": "autopilot"
+    },
+    {
+     "type": "card",
+     "word": "helm"
     },
     {
      "type": "tap",
-     "audio": "c-show-traffic",
-     "a": "traffic"
+     "audio": "c-show-helm",
+     "a": "helm"
     },
     {
      "type": "card",
-     "word": "orders"
+     "word": "echo"
     },
     {
      "type": "card",
-     "word": "handover"
+     "word": "telegraph"
     },
     {
      "type": "card",
-     "word": "lookout"
+     "word": "binoculars"
     },
     {
      "type": "card",
-     "word": "range"
+     "word": "gps"
     },
     {
      "type": "card",
-     "word": "brill"
+     "word": "log"
+    },
+    {
+     "type": "card",
+     "word": "anemometer"
     },
     {
      "type": "tap",
-     "audio": "c-show-position",
-     "a": "position"
+     "audio": "c-show-echo",
+     "a": "echo"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-telegraph",
+     "a": "telegraph"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"vigía\" in English:",
+     "q": "\"ecosonda\" in English:",
      "opts": [
-      "lookout",
-      "watcher",
-      "look man"
+      "echo sounder",
+      "sound echo",
+      "depth radar"
      ],
      "a": 0
     },
@@ -632,24 +669,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "course",
-       "rumbo"
+       "helm",
+       "timón"
       ],
       [
-       "speed",
-       "velocidad"
+       "gyro compass",
+       "girocompás"
       ],
       [
-       "knot",
-       "nudo"
+       "echo sounder",
+       "ecosonda"
       ],
       [
-       "handover",
-       "relevo"
+       "autopilot",
+       "piloto automático"
       ],
       [
-       "lookout",
-       "vigía"
+       "binoculars",
+       "binoculares"
       ]
      ]
     }
@@ -657,145 +694,159 @@
   },
   {
    "id": "phrases",
-   "title": "I have the watch",
+   "title": "What is it for?",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "The handover",
+     "title": "Asking about equipment",
      "list": [
       [
-       "Course one one zero, speed sixteen knots.",
-       "Rumbo uno uno cero, velocidad dieciséis nudos.",
-       "p-course"
+       "What does this do?",
+       "¿Esto para qué sirve?",
+       "p-whatdo"
       ],
       [
-       "I have the watch.",
-       "Tomo la guardia.",
-       "p-ihave"
+       "The radar shows other ships.",
+       "El radar muestra otros buques.",
+       "p-shows"
       ],
       [
-       "You have the watch.",
-       "La guardia es tuya.",
-       "p-youhave"
+       "The echo sounder measures the depth.",
+       "La ecosonda mide la profundidad.",
+       "p-measures"
       ],
       [
-       "Eyes outside, and report everything you see.",
-       "Ojos afuera, y reportá todo lo que veas.",
-       "p-report"
+       "The most important equipment is your eyes.",
+       "El equipo más importante son tus ojos.",
+       "p-eyes"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Course, speed, distance",
+     "title": "What is it for? used to / used for",
      "steps": [
       [
-       "Course 110°",
-       "one one zero: always three digits, one by one"
+       "used to + verb",
+       "The echo sounder is used to measure the depth."
       ],
       [
-       "Course 085°",
-       "zero eight five"
+       "used for + -ing",
+       "The radar is used for watching other ships."
       ],
       [
-       "Speed 16 kn",
-       "sixteen knots: a normal number"
-      ],
-      [
-       "Distance 8 NM",
-       "eight miles: nautical miles"
+       "question",
+       "What is it used for?"
       ]
      ],
      "paras": [
-      "Courses and headings have <b>three digits</b>, said one by one: <i>zero eight five</i>, never <i>eighty-five</i>.",
-      "The new officer <b>reads back</b> course and speed. The handover ends with <b>I have the watch</b> / <b>You have the watch</b>."
+      "Two ways to say what equipment is <b>for</b>: <b>is used to</b> + verb, or <b>is used for</b> + verb<b>-ing</b>. Same meaning.",
+      "Short and natural on the bridge: <i>It shows other ships.</i> <i>It measures the depth.</i> (Remember the -s from Lesson 4.)"
      ],
-     "avoid": "Course one hundred ten. · Course eighty-five. · I take the guard."
+     "avoid": "It's used for measure the depth. · It's used to measuring. · It serves for…"
     },
     {
      "type": "choice",
-     "q": "Course 095° is…",
+     "q": "The echo sounder is used to ___ the depth.",
      "opts": [
-      "zero nine five",
-      "ninety-five",
-      "nine five"
+      "measure",
+      "measuring",
+      "measures"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "James gives you the watch. You say…",
+     "q": "The gyro compass is used for ___ the heading.",
      "opts": [
-      "I have the watch.",
-      "You have the watch.",
-      "I take the guard."
+      "giving",
+      "give",
+      "gives"
      ],
      "a": 0
     },
     {
-     "type": "type",
-     "audio": "c-course-other",
-     "q": "Write the course you hear, three digits.",
-     "accept": [
-      "085",
-      "85",
-      "085°"
+     "type": "build",
+     "situation": "Diego asks about the echo sounder.",
+     "q": "Answer him.",
+     "a": [
+      "It's",
+      "used",
+      "to",
+      "measure",
+      "the",
+      "depth."
+     ],
+     "extra": [
+      "for",
+      "measuring"
      ]
     },
     {
      "type": "type",
-     "audio": "c-speed-other",
-     "q": "Write the speed in knots.",
+     "audio": "c-depth",
+     "q": "How deep is it? Write the number of metres.",
      "accept": [
-      "14",
-      "fourteen"
+      "25",
+      "twenty five",
+      "twentyfive"
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "\"Tomar la guardia\" is not \"take the guard\"",
+     "title": "\"Sirve para\" is not \"serves for\"",
      "paras": [
-      "In English it's <b>the watch</b>, not <i>the guard</i>: <b>I have the watch</b>, <b>I'm on watch</b>, <b>the 4 to 8 watch</b>.",
-      "And <b>course</b> is <i>rumbo</i>. A <i>curso</i> (like this one) is a <b>course</b> too, but on the bridge it always means direction."
+      "<i>Sirve para medir</i> = <b>it's used to measure</b>, or simply <b>it measures</b>.",
+      "Also: <b>the helm</b> is the steering; <b>the heading</b> is where the bow points now; <b>the course</b> is the planned way."
      ],
-     "avoid": "I take the guard. · The guard of 4 to 8."
+     "avoid": "It serves for measure the depth. · It serves to see ships."
+    },
+    {
+     "type": "choice",
+     "q": "What does the radar do?",
+     "opts": [
+      "It's used for watching other ships.",
+      "It serves for watch other ships.",
+      "It's used for watch other ships."
+     ],
+     "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Knot: no K",
+     "title": "Spell it or read it?",
      "paras": [
-      "<b>knot</b> sounds exactly like <b>not</b>: /nɒt/. The <i>k</i> is silent, like in <i>know</i> and <i>knife</i>.",
-      "<i>Sixteen KNOTS</i>: stress on the number and on knots."
+      "Some short names are <b>spelled</b>, letter by letter: <b>VHF</b>, <b>GPS</b>, <b>AIS</b>, <b>CPA</b>. Stress on the last letter: <i>vee-aitch-EF</i>.",
+      "Others are <b>read as a word</b>: <b>ECDIS</b> (<i>EK-dis</i>), <b>NAVTEX</b>, <b>radar</b> (<i>RAY-dar</i>)."
      ],
      "list": [
       [
-       "knot",
-       "nudo",
-       "m-knot"
+       "V H F, G P S, A I S",
+       "se deletrean",
+       "m-spell"
       ],
       [
-       "not",
-       "no",
-       "m-not"
+       "ECDIS, NAVTEX, radar",
+       "se leen como palabra",
+       "m-read"
       ]
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "c-miles"
+      "c-steers"
      ],
-     "q": "How far is the fishing boat now?",
+     "q": "Who steers?",
      "opts": [
-      "6 miles",
-      "16 miles",
-      "60 miles"
+      "The autopilot",
+      "Tanya",
+      "Nobody"
      ],
      "a": 0
     }
@@ -803,57 +854,57 @@
   },
   {
    "id": "read",
-   "title": "Read the night orders",
+   "title": "Read the equipment test",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "orders",
-     "q": "Visibility is 2 miles. What do you do?",
+     "doc": "test",
+     "q": "What is the gyro compass error?",
      "opts": [
-      "Call the Captain",
-      "Nothing",
-      "Stop the engine"
+      "0.5° East",
+      "0.5° West",
+      "No error"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "orders",
-     "q": "Who is the lookout from 0400 to 0800?",
+     "doc": "test",
+     "q": "How many radars does the ship have?",
      "opts": [
-      "The cadet",
-      "The bosun",
-      "The Second Officer"
+      "Two",
+      "One",
+      "Three"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "orders",
-     "q": "Tap the order for when you are not sure.",
-     "a": 3
+     "doc": "test",
+     "q": "Tap who did the test.",
+     "a": 7
     },
     {
      "type": "doc",
-     "doc": "orders",
-     "q": "What weather do they expect?",
+     "doc": "test",
+     "q": "What is loaded in the ECDIS?",
      "opts": [
-      "A front in the morning",
-      "Fog all night",
-      "Calm sea"
+      "The route",
+      "The cargo plan",
+      "The weather"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "orders",
-     "q": "Who signed the orders?",
+     "doc": "test",
+     "q": "They tested the engine telegraph with…",
      "opts": [
-      "The Master",
-      "The Chief Officer",
-      "The pilot"
+      "the engine room",
+      "the bridge wing",
+      "the Captain"
      ],
      "a": 0
     }
@@ -861,76 +912,81 @@
   },
   {
    "id": "speak",
-   "title": "Take the watch",
+   "title": "Explain the equipment",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Read back and take over",
-     "body": "Listen, say it, check it. Courses digit by digit: one, one, zero.",
-     "es": "Rumbos, cifra por cifra.",
+     "title": "Say what it does",
+     "body": "Listen, say it, check it. Short answers are fine: It shows other ships.",
+     "es": "Las respuestas cortas están bien.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-course"
+     "model": "p-whatdo"
     },
     {
      "type": "shadow",
-     "model": "p-ihave"
+     "model": "p-shows"
     },
     {
      "type": "shadow",
-     "model": "p-report"
+     "model": "p-measures"
     },
     {
      "type": "role",
-     "cue": "c-rb1",
-     "task": "Read back course and speed.",
-     "model": "m-rb1",
+     "cue": "c-what-radar",
+     "task": "Tell him what the radar does.",
+     "model": "m-radar",
      "accept": [
-      "Course one two five, speed fifteen knots.",
-      "Course one two five, speed fifteen.",
-      "One two five, fifteen knots.",
-      "Course one two five. Speed fifteen knots."
+      "It shows other ships.",
+      "The radar shows other ships.",
+      "It shows ships.",
+      "It shows the other ships.",
+      "It's used for watching other ships.",
+      "It's used to show other ships."
      ]
     },
     {
      "type": "role",
-     "cue": "c-rb2",
-     "task": "Read back the new course and speed.",
-     "model": "m-rb2",
+     "cue": "c-what-echo",
+     "task": "Tell him what the echo sounder does.",
+     "model": "m-echo",
      "accept": [
-      "Course zero nine five, speed sixteen knots.",
-      "Course zero nine five, speed sixteen.",
-      "Zero nine five, sixteen knots.",
-      "New course zero nine five, speed sixteen knots."
+      "It measures the depth.",
+      "The echo sounder measures the depth.",
+      "It measures depth.",
+      "It measures the depth under the ship.",
+      "It's used to measure the depth.",
+      "It's used for measuring the depth."
      ]
     },
     {
      "type": "role",
-     "cue": "c-whatcourse",
-     "task": "The course is 110°. Tell her.",
-     "model": "m-course",
+     "cue": "c-whatsthis",
+     "task": "It's the ECDIS. Say what it is and what it does.",
+     "model": "m-ecdis",
      "accept": [
-      "Course one one zero.",
-      "One one zero.",
-      "The course is one one zero.",
-      "It's one one zero."
+      "It's the ECDIS. It shows our position.",
+      "It's the ECDIS.",
+      "The ECDIS. It shows our position.",
+      "It's the electronic chart. It shows our position."
      ]
     },
     {
      "type": "role",
-     "cue": "c-anyq",
-     "task": "No questions. Take the watch.",
-     "model": "m-ihave",
+     "cue": "c-what-gyro",
+     "task": "Tell her what it does: the heading.",
+     "model": "m-gyro",
      "accept": [
-      "No questions. I have the watch.",
-      "I have the watch.",
-      "No questions, I have the watch.",
-      "No. I have the watch."
+      "It gives the heading.",
+      "The gyro compass gives the heading.",
+      "It shows the heading.",
+      "It gives our heading.",
+      "It's used to give the heading."
      ]
     }
    ]
@@ -943,90 +999,89 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-lookout",
+     "audio": "w-radar",
      "q": "Type what you hear.",
      "accept": [
-      "lookout",
-      "the lookout",
-      "look out"
+      "radar",
+      "the radar"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-speed",
-     "a": "speed"
+     "audio": "c-show-binoculars",
+     "a": "binoculars"
     },
     {
      "type": "tap",
-     "audio": "c-show-course",
-     "a": "course"
+     "audio": "c-show-gyro",
+     "a": "gyro"
     },
     {
      "type": "listen",
      "audio": [
-      "l14-06"
+      "l14-12"
      ],
-     "q": "What is the wind?",
+     "q": "For Tanya, the most important equipment is…",
      "opts": [
-      "North-west, force 4",
-      "North-east, force 4",
-      "North-west, force 8"
+      "your eyes",
+      "the radar",
+      "the ECDIS"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Diego's watch is with…",
+     "q": "Diego's watch is…",
      "opts": [
-      "the Chief Officer, 4 to 8",
-      "the Second Officer, 12 to 4",
-      "the Third Officer, 8 to 12"
+      "4 to 8, with the Chief Officer",
+      "12 to 4, with the Second Officer",
+      "8 to 12, with the Third Officer"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The bridge reads back an order. That means it…",
+     "q": "16 knots is the ship's…",
      "opts": [
-      "repeats the same words",
-      "says OK",
-      "writes it in the log"
+      "speed",
+      "course",
+      "depth"
      ],
-     "a": 0,
-     "why": "From Lesson 11."
+     "a": 0
     },
     {
      "type": "build",
-     "q": "Give the watch to the new officer.",
+     "q": "Ask what the telegraph does.",
      "a": [
-      "You",
-      "have",
+      "What",
+      "does",
       "the",
-      "watch."
+      "telegraph",
+      "do?"
      ],
      "extra": [
-      "guard",
-      "take"
+      "does",
+      "is"
      ]
     },
     {
      "type": "choice",
-     "q": "Course 007° is…",
+     "q": "A ship is far away in the fog. You see it on the…",
      "opts": [
-      "zero zero seven",
-      "seven",
-      "zero seven"
+      "radar",
+      "echo sounder",
+      "engine telegraph"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: relevo de guardia",
+     "q": "Write it in English: timón",
      "accept": [
-      "handover",
-      "watch handover",
-      "the handover",
-      "hand over"
+      "helm",
+      "the helm",
+      "wheel",
+      "steering wheel"
      ]
     }
    ]

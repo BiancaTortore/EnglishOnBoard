@@ -1,317 +1,305 @@
 {
- "n": 11, "modelAudio": true, "mediaRev": 5,
+ "n": 11,
+ "modelAudio": true,
+ "mediaRev": 1,
  "module": 3,
- "title": "Mooring & letting go",
- "place": "Day 2 · 17:20 · Houston, aft mooring station",
- "goal": "Understand mooring orders on the radio, read them back and report the lines.",
+ "title": "Lifting gear",
+ "place": "Day 2 · 15:00 · Houston, main deck",
+ "goal": "Name the lifting gear, give crane signals and read a load limit.",
  "images": {
   "hero": "img/l11/hero.jpg",
   "scene": "img/l11/scene.jpg"
  },
- "radioChannel": "UHF",
  "audio": {
   "l11-01": {
-   "voice": "lars",
-   "text": "Aft station, bridge. Single up to one and one. Over.",
-   "es": "Estación de popa, puente. Queden con uno y uno. Cambio.",
-   "radio": true
+   "voice": "rolando",
+   "text": "Cadet! The stores truck is here. We load everything with the provision crane.",
+   "es": "¡Cadete! Llegó el camión de víveres. Subimos todo con la grúa de provisiones."
   },
   "l11-02": {
-   "voice": "james",
-   "text": "Single up to one and one. Aft, roger. Over.",
-   "es": "Quedar con uno y uno. Popa, recibido. Cambio."
+   "voice": "diego",
+   "text": "With the crane? Can I help?",
+   "es": "¿Con la grúa? ¿Te ayudo?"
   },
   "l11-03": {
-   "pause": 500,
-   "voice": "james",
-   "text": "Rolando, single up. Keep one stern line and one spring.",
-   "es": "Rolando, largá los demás. Dejá un largo y un esprín."
+   "voice": "rolando",
+   "text": "Yes. I'm in the crane, you're the signalman. You watch the load and give me the signals.",
+   "es": "Sí. Yo voy en la grúa, vos sos el señalero. Mirás la carga y me hacés las señales."
   },
   "l11-04": {
-   "voice": "rolando",
-   "text": "One and one, OK. Diego, watch the lines. Tell me when they're clear of the water.",
-   "es": "Uno y uno, okey. Diego, mirá los cabos. Avisame cuando estén fuera del agua."
+   "pause": 900,
+   "voice": "tanya",
+   "text": "Wait a moment, Rolando. How heavy is the first pallet?",
+   "es": "Un momento, Rolando. ¿Cuánto pesa el primer pallet?"
   },
   "l11-05": {
-   "voice": "diego",
-   "text": "OK!",
-   "es": "¡Okey!"
+   "voice": "rolando",
+   "text": "About one point five tonnes, Chief.",
+   "es": "Alrededor de una tonelada y media, Primer."
   },
   "l11-06": {
-   "pause": 1500,
-   "voice": "diego",
-   "text": "Two stern lines and the breast line are clear of the water!",
-   "es": "¡Dos largos y el través están fuera del agua!"
+   "voice": "tanya",
+   "text": "Diego, read the marking on the jib. What's the SWL?",
+   "es": "Diego, leé lo que dice la pluma. ¿Cuál es la SWL?"
   },
   "l11-07": {
-   "voice": "james",
-   "text": "Bridge, aft. Singled up to one and one. Over.",
-   "es": "Puente, popa. Quedamos con uno y uno. Cambio."
+   "pause": 900,
+   "voice": "diego",
+   "text": "SWL two tonnes.",
+   "es": "SWL dos toneladas."
   },
   "l11-08": {
-   "pause": 800,
-   "voice": "lars",
-   "text": "Aft, bridge. Thank you. Let go aft. The tug is standing by. Over.",
-   "es": "Popa, puente. Gracias. Larguen a popa. El remolcador está listo. Cambio.",
-   "radio": true
+   "voice": "tanya",
+   "text": "Good. One point five is fine. But the drinks pallet is two point five. We can't lift that in one go. Split it.",
+   "es": "Bien. Una y media está bien. Pero el pallet de bebidas pesa dos y media. Eso no lo podemos izar de una vez. Dividilo."
   },
   "l11-09": {
-   "voice": "james",
-   "text": "Let go aft. Rolando, let go!",
-   "es": "Largar a popa. ¡Rolando, largá!"
+   "voice": "rolando",
+   "text": "No problem, Chief. Cadet, check the sling and the shackle on the hook.",
+   "es": "No hay problema, Primer. Cadete, revisá la eslinga y el grillete en el gancho."
   },
   "l11-10": {
-   "pause": 900,
-   "voice": "rolando",
-   "text": "Stern line slack… Heave in!",
-   "es": "Largo en banda… ¡Virá!"
+   "pause": 800,
+   "voice": "diego",
+   "text": "Sling on the hook, shackle pin tight. Ready.",
+   "es": "Eslinga en el gancho, perno del grillete ajustado. Listo."
   },
   "l11-11": {
-   "pause": 1500,
-   "voice": "diego",
-   "text": "The spring is out of the water… The stern line is out of the water!",
-   "es": "El esprín está fuera del agua… ¡El largo está fuera del agua!"
+   "voice": "rolando",
+   "text": "OK. Give me the signals.",
+   "es": "Bien. Haceme las señales."
   },
   "l11-12": {
-   "voice": "james",
-   "text": "Bridge, aft. All lines let go. Propeller clear. Over.",
-   "es": "Puente, popa. Todos los cabos largados. Hélice libre. Cambio."
+   "pause": 600,
+   "voice": "diego",
+   "text": "Hoist slowly… Stop! Lower… lower… Stop. Load on deck.",
+   "es": "Izá despacio… ¡Pará! Arriá… arriá… Pará. Carga en cubierta."
   },
   "l11-13": {
-   "pause": 700,
-   "voice": "lars",
-   "text": "All lines let go aft, propeller clear. Thank you. Over.",
-   "es": "Todos los cabos largados a popa, hélice libre. Gracias. Cambio.",
-   "radio": true
+   "pause": 1000,
+   "voice": "mario",
+   "text": "Careful! My eggs are in that pallet!",
+   "es": "¡Cuidado! ¡Mis huevos están en ese pallet!"
   },
   "l11-14": {
-   "pause": 1000,
    "voice": "rolando",
-   "text": "Good job, cadet. Now we sail.",
-   "es": "Buen trabajo, cadete. Ahora sí navegamos."
+   "text": "Relax, Mario. Cadet, now we lash it. Lashings on, turnbuckles tight.",
+   "es": "Tranquilo, Mario. Cadete, ahora lo trincamos. Trincas puestas, tensores ajustados."
   },
   "l11-15": {
+   "pause": 900,
    "voice": "diego",
-   "text": "My first departure!",
-   "es": "¡Mi primera zarpada!"
+   "text": "Lashings on, turnbuckles tight. Nothing moves.",
+   "es": "Trincas puestas, tensores ajustados. No se mueve nada."
   },
-  "w-mooring": {
+  "w-crane": {
    "voice": "model",
-   "text": "mooring line"
+   "text": "crane"
   },
-  "x-mooring": {
+  "x-crane": {
    "voice": "model",
-   "text": "Each mooring line goes to a bollard.",
-   "es": "Cada cabo de amarre va a una bita."
+   "text": "The provision crane is on the starboard side.",
+   "es": "La grúa de provisiones está a estribor."
   },
-  "w-stern": {
+  "w-jib": {
    "voice": "model",
-   "text": "stern line"
+   "text": "jib"
   },
-  "x-stern": {
+  "x-jib": {
    "voice": "model",
-   "text": "Keep one stern line.",
-   "es": "Dejá un largo de popa."
+   "text": "Read the marking on the jib.",
+   "es": "Leé lo que dice la pluma."
   },
-  "w-spring": {
+  "w-wire": {
    "voice": "model",
-   "text": "spring"
+   "text": "wire rope"
   },
-  "x-spring": {
+  "x-wire": {
    "voice": "model",
-   "text": "The spring goes forward.",
-   "es": "El esprín va hacia proa."
+   "text": "Check the wire rope before you lift.",
+   "es": "Revisá el cable antes de izar."
   },
-  "w-bollard": {
+  "w-hook": {
    "voice": "model",
-   "text": "bollard"
+   "text": "hook"
   },
-  "x-bollard": {
+  "x-hook": {
    "voice": "model",
-   "text": "The line is on the bollard.",
-   "es": "El cabo está en la bita."
+   "text": "Put the sling on the hook.",
+   "es": "Poné la eslinga en el gancho."
   },
-  "w-fairlead": {
+  "w-sling": {
    "voice": "model",
-   "text": "fairlead"
+   "text": "sling"
   },
-  "x-fairlead": {
+  "x-sling": {
    "voice": "model",
-   "text": "The line goes through the fairlead.",
-   "es": "El cabo pasa por el portaespía."
+   "text": "This sling has four legs.",
+   "es": "Esta eslinga tiene cuatro ramales."
   },
-  "w-tug": {
+  "w-shackle": {
    "voice": "model",
-   "text": "tug"
+   "text": "shackle"
   },
-  "x-tug": {
+  "x-shackle": {
    "voice": "model",
-   "text": "The tug is standing by.",
-   "es": "El remolcador está listo."
+   "text": "The shackle pin is tight.",
+   "es": "El perno del grillete está ajustado."
   },
-  "w-slack": {
+  "w-thimble": {
    "voice": "model",
-   "text": "slack"
+   "text": "thimble"
   },
-  "x-slack": {
+  "x-thimble": {
    "voice": "model",
-   "text": "The stern line is slack.",
-   "es": "El largo está en banda."
+   "text": "There's a thimble in the eye of the wire.",
+   "es": "Hay un guardacabo en la gaza del cable."
   },
-  "w-heave": {
+  "w-padeye": {
    "voice": "model",
-   "text": "heave in"
+   "text": "pad eye"
   },
-  "x-heave": {
+  "x-padeye": {
    "voice": "model",
-   "text": "Heave in the spring.",
-   "es": "Virá el esprín."
+   "text": "Shackle the block to the pad eye.",
+   "es": "Engrilletá la pasteca al cáncamo."
   },
-  "w-slackaway": {
+  "w-block": {
    "voice": "model",
-   "text": "slack away"
+   "text": "snatch block"
   },
-  "x-slackaway": {
+  "x-block": {
    "voice": "model",
-   "text": "Slack away the stern line.",
-   "es": "Arriá el largo de popa."
+   "text": "Lead the rope through the snatch block.",
+   "es": "Pasá el cabo por la pasteca."
   },
-  "w-headline": {
+  "w-tackle": {
    "voice": "model",
-   "text": "head line"
+   "text": "tackle"
   },
-  "x-headline": {
+  "x-tackle": {
    "voice": "model",
-   "text": "The head lines are on the forecastle.",
-   "es": "Los largos de proa están en el castillo de proa."
+   "text": "We lift the box with a tackle.",
+   "es": "Izamos la caja con un aparejo."
   },
-  "w-winch": {
+  "w-lashing": {
    "voice": "model",
-   "text": "winch"
+   "text": "lashing"
   },
-  "x-winch": {
+  "x-lashing": {
    "voice": "model",
-   "text": "Start the winch.",
-   "es": "Arrancá el guinche."
+   "text": "Put two lashings on the pallet.",
+   "es": "Poné dos trincas en el pallet."
   },
-  "w-drum": {
+  "w-turnbuckle": {
    "voice": "model",
-   "text": "drum"
+   "text": "turnbuckle"
   },
-  "x-drum": {
+  "x-turnbuckle": {
    "voice": "model",
-   "text": "Keep three turns on the drum.",
-   "es": "Dejá tres vueltas en el tambor."
+   "text": "Tighten the turnbuckle.",
+   "es": "Ajustá el tensor."
   },
-  "p-singleup": {
-   "voice": "model",
-   "text": "Single up to one and one.",
-   "es": "Quedar con uno y uno."
-  },
-  "p-letgo": {
-   "voice": "model",
-   "text": "Let go aft.",
-   "es": "Largar a popa."
-  },
-  "p-clear": {
-   "voice": "model",
-   "text": "The stern line is clear of the water.",
-   "es": "El largo está fuera del agua."
-  },
-  "p-allgone": {
-   "voice": "model",
-   "text": "All lines let go. Propeller clear.",
-   "es": "Todos los cabos largados. Hélice libre."
-  },
-  "p-roger": {
-   "voice": "model",
-   "text": "Aft, roger.",
-   "es": "Popa, recibido."
-  },
-  "m-letgo-rb": {
-   "voice": "model",
-   "text": "Let go aft.",
-   "es": "Largar a popa."
-  },
-  "m-single-rb": {
-   "voice": "model",
-   "text": "Single up to one and one.",
-   "es": "Quedar con uno y uno."
-  },
-  "m-springclear": {
-   "voice": "model",
-   "text": "The spring is clear of the water.",
-   "es": "El esprín está fuera del agua."
-  },
-  "m-report": {
-   "voice": "model",
-   "text": "All lines let go. Propeller clear.",
-   "es": "Todos los cabos largados. Hélice libre."
-  },
-  "m-letgo": {
-   "voice": "model",
-   "text": "let go",
-   "es": "largar"
-  },
-  "m-letsgo": {
-   "voice": "model",
-   "text": "let's go",
-   "es": "vamos"
-  },
-  "c-show-tug": {
-   "voice": "james",
-   "text": "Where's the tug?"
-  },
-  "c-show-stern": {
+  "c-show-hook": {
    "voice": "rolando",
-   "text": "Show me a stern line."
+   "text": "Show me the hook."
   },
-  "c-show-spring": {
+  "c-show-padeye": {
+   "voice": "tanya",
+   "text": "Where's the pad eye?"
+  },
+  "c-show-block": {
    "voice": "rolando",
-   "text": "Show me the spring."
+   "text": "Where's the snatch block?"
   },
-  "c-show-bollard": {
-   "voice": "james",
-   "text": "Where's the bollard?"
+  "c-show-thimble": {
+   "voice": "tanya",
+   "text": "Show me the thimble."
   },
-  "c-show-fairlead": {
+  "c-show-turnbuckle": {
    "voice": "rolando",
-   "text": "Show me the fairlead."
+   "text": "Show me the turnbuckle."
   },
-  "c-show-slack": {
+  "c-show-jib": {
+   "voice": "tanya",
+   "text": "Where's the jib?"
+  },
+  "p-hoist": {
+   "voice": "model",
+   "text": "Hoist slowly.",
+   "es": "Izá despacio."
+  },
+  "p-lower": {
+   "voice": "model",
+   "text": "Lower. Stop!",
+   "es": "Arriá. ¡Pará!"
+  },
+  "p-swl": {
+   "voice": "model",
+   "text": "What's the SWL?",
+   "es": "¿Cuál es la SWL?"
+  },
+  "p-cant": {
+   "voice": "model",
+   "text": "We can't lift that in one go.",
+   "es": "Eso no lo podemos izar de una vez."
+  },
+  "p-ondeck": {
+   "voice": "model",
+   "text": "Load on deck.",
+   "es": "Carga en cubierta."
+  },
+  "c-weight": {
    "voice": "rolando",
-   "text": "Which line is slack?"
+   "text": "This pallet is one point two tonnes."
   },
-  "c-show-heave": {
+  "c-crane-can": {
+   "voice": "tanya",
+   "text": "This crane can lift two tonnes. The pallet is three tonnes."
+  },
+  "c-signal": {
    "voice": "rolando",
-   "text": "Where do we heave in?"
+   "text": "Cadet, the load is ready. Give me the signal."
   },
-  "c-rb-letgo": {
-   "voice": "lars",
-   "text": "Aft, bridge. Let go aft. Over.",
-   "radio": true
+  "c-swl-q": {
+   "voice": "tanya",
+   "text": "Diego, what's the SWL of the crane?"
   },
-  "c-rb-single": {
-   "voice": "lars",
-   "text": "Aft, bridge. Single up to one and one. Over.",
-   "radio": true
-  },
-  "c-isclear": {
+  "c-heavy": {
    "voice": "rolando",
-   "text": "Diego! Is the spring clear of the water?"
+   "text": "The drinks pallet is two point five tonnes. One lift, OK?"
   },
-  "c-report": {
-   "voice": "lars",
-   "text": "Aft, bridge. Report. Over.",
-   "radio": true
+  "c-secure": {
+   "voice": "rolando",
+   "text": "Is the pallet secure?"
   },
-  "c-letgo-not": {
-   "voice": "james",
-   "text": "Don't let go the spring yet. Only the stern line."
+  "c-whatlift": {
+   "voice": "tanya",
+   "text": "Rolando, what are you lifting now?"
   },
-  "c-howmany": {
-   "voice": "james",
-   "text": "We have three stern lines, one breast line and two springs."
+  "c-lifting": {
+   "voice": "rolando",
+   "text": "I'm lifting the vegetables. One tonne."
+  },
+  "m-hoist": {
+   "voice": "model",
+   "text": "Hoist slowly.",
+   "es": "Izá despacio."
+  },
+  "m-swl": {
+   "voice": "model",
+   "text": "The SWL is two tonnes.",
+   "es": "La SWL es de dos toneladas."
+  },
+  "m-cant": {
+   "voice": "model",
+   "text": "We can't lift that in one go.",
+   "es": "Eso no lo podemos izar de una vez."
+  },
+  "m-secure": {
+   "voice": "model",
+   "text": "Lashings on, turnbuckles tight.",
+   "es": "Trincas puestas, tensores ajustados."
   }
  },
  "dialogue": [
@@ -332,188 +320,193 @@
   "l11-15"
  ],
  "words": {
-  "mooring": {
-   "en": "mooring line",
-   "ipa": "/ˈmʊərɪŋ laɪn/",
-   "es": "cabo de amarre",
-   "audio": "w-mooring",
-   "ex": "x-mooring"
+  "crane": {
+   "en": "crane",
+   "ipa": "/kreɪn/",
+   "es": "grúa",
+   "audio": "w-crane",
+   "ex": "x-crane"
   },
-  "stern": {
-   "en": "stern line",
-   "ipa": "/ˈstɜːn laɪn/",
-   "es": "largo de popa",
-   "audio": "w-stern",
-   "ex": "x-stern"
+  "jib": {
+   "en": "jib",
+   "ipa": "/dʒɪb/",
+   "es": "pluma",
+   "audio": "w-jib",
+   "ex": "x-jib"
   },
-  "spring": {
-   "en": "spring",
-   "ipa": "/sprɪŋ/",
-   "es": "esprín",
-   "audio": "w-spring",
-   "ex": "x-spring"
+  "wire": {
+   "en": "wire rope",
+   "ipa": "/ˈwaɪə rəʊp/",
+   "es": "cable (de acero)",
+   "audio": "w-wire",
+   "ex": "x-wire"
   },
-  "bollard": {
-   "en": "bollard",
-   "ipa": "/ˈbɒlɑːd/",
-   "es": "bita",
-   "audio": "w-bollard",
-   "ex": "x-bollard"
+  "hook": {
+   "en": "hook",
+   "ipa": "/hʊk/",
+   "es": "gancho",
+   "audio": "w-hook",
+   "ex": "x-hook"
   },
-  "fairlead": {
-   "en": "fairlead",
-   "ipa": "/ˈfeəliːd/",
-   "es": "portaespía",
-   "audio": "w-fairlead",
-   "ex": "x-fairlead"
+  "sling": {
+   "en": "sling",
+   "ipa": "/slɪŋ/",
+   "es": "eslinga",
+   "audio": "w-sling",
+   "ex": "x-sling"
   },
-  "tug": {
-   "en": "tug",
-   "ipa": "/tʌɡ/",
-   "es": "remolcador",
-   "audio": "w-tug",
-   "ex": "x-tug"
+  "shackle": {
+   "en": "shackle",
+   "ipa": "/ˈʃækl/",
+   "es": "grillete",
+   "audio": "w-shackle",
+   "ex": "x-shackle"
   },
-  "slack": {
-   "en": "slack",
-   "ipa": "/slæk/",
-   "es": "en banda, flojo",
-   "audio": "w-slack",
-   "ex": "x-slack"
+  "thimble": {
+   "en": "thimble",
+   "ipa": "/ˈθɪmbl/",
+   "es": "guardacabo",
+   "audio": "w-thimble",
+   "ex": "x-thimble"
   },
-  "heave": {
-   "en": "heave in",
-   "ipa": "/hiːv ˈɪn/",
-   "es": "virar, cobrar",
-   "audio": "w-heave",
-   "ex": "x-heave"
+  "padeye": {
+   "en": "pad eye",
+   "ipa": "/ˈpæd aɪ/",
+   "es": "cáncamo",
+   "audio": "w-padeye",
+   "ex": "x-padeye"
   },
-  "slackaway": {
-   "en": "slack away",
-   "ipa": "/ˌslæk əˈweɪ/",
-   "es": "arriar",
-   "audio": "w-slackaway",
-   "ex": "x-slackaway"
+  "block": {
+   "en": "snatch block",
+   "ipa": "/ˈsnætʃ blɒk/",
+   "es": "pasteca",
+   "audio": "w-block",
+   "ex": "x-block"
   },
-  "headline": {
-   "en": "head line",
-   "ipa": "/ˈhed laɪn/",
-   "es": "largo de proa",
-   "audio": "w-headline",
-   "ex": "x-headline"
+  "tackle": {
+   "en": "tackle",
+   "ipa": "/ˈteɪkl/",
+   "es": "aparejo",
+   "audio": "w-tackle",
+   "ex": "x-tackle"
   },
-  "winch": {
-   "en": "winch",
-   "ipa": "/wɪntʃ/",
-   "es": "guinche",
-   "audio": "w-winch",
-   "ex": "x-winch"
+  "lashing": {
+   "en": "lashing",
+   "ipa": "/ˈlæʃɪŋ/",
+   "es": "trinca",
+   "audio": "w-lashing",
+   "ex": "x-lashing"
   },
-  "drum": {
-   "en": "drum",
-   "ipa": "/drʌm/",
-   "es": "tambor",
-   "audio": "w-drum",
-   "ex": "x-drum"
+  "turnbuckle": {
+   "en": "turnbuckle",
+   "ipa": "/ˈtɜːnbʌkl/",
+   "es": "tensor",
+   "audio": "w-turnbuckle",
+   "ex": "x-turnbuckle"
   }
  },
  "plate": {
   "svg": "img/l11/plate.svg",
   "pins": [
    {
-    "word": "stern",
-    "x": 317,
-    "y": 178
+    "word": "crane",
+    "x": 180,
+    "y": 90
    },
    {
-    "word": "spring",
-    "x": 150,
-    "y": 180
+    "word": "jib",
+    "x": 226,
+    "y": 74
    },
    {
-    "word": "bollard",
-    "x": 232,
-    "y": 200
+    "word": "wire",
+    "x": 304,
+    "y": 78
    },
    {
-    "word": "fairlead",
-    "x": 192,
-    "y": 148
-   },
-   {
-    "word": "tug",
-    "x": 368,
-    "y": 82
-   },
-   {
-    "word": "mooring",
-    "x": 242,
-    "y": 172
-   },
-   {
-    "word": "slack",
-    "x": 372,
-    "y": 184
-   },
-   {
-    "word": "heave",
-    "x": 242,
-    "y": 141
-   },
-   {
-    "word": "slackaway",
-    "x": 248,
-    "y": 72
-   },
-   {
-    "word": "winch",
-    "x": 170,
+    "word": "hook",
+    "x": 298,
     "y": 124
    },
    {
-    "word": "drum",
-    "x": 206,
+    "word": "sling",
+    "x": 318,
+    "y": 166
+   },
+   {
+    "word": "shackle",
+    "x": 344,
+    "y": 60
+   },
+   {
+    "word": "thimble",
+    "x": 388,
     "y": 100
+   },
+   {
+    "word": "padeye",
+    "x": 18,
+    "y": 176
+   },
+   {
+    "word": "block",
+    "x": 18,
+    "y": 122
+   },
+   {
+    "word": "tackle",
+    "x": 94,
+    "y": 92
+   },
+   {
+    "word": "lashing",
+    "x": 172,
+    "y": 140
+   },
+   {
+    "word": "turnbuckle",
+    "x": 80,
+    "y": 152
    }
   ]
  },
  "docs": {
-  "plan": {
+  "register": {
    "kind": "form",
-   "title": "MOORING PLAN · AFT",
-   "subtitle": "M/V LNG HORIZON · HOUSTON · 15 MAR 2026",
+   "title": "LIFTING GEAR REGISTER",
+   "subtitle": "M/V LNG HORIZON · Deck stores",
    "cells": [
     [
-     "STATION",
-     "Aft · Officer in charge: 2/O J. O'Connor"
+     "PROVISION CRANE (STBD)",
+     "SWL 2 t · tested 10 JAN 2026"
     ],
     [
-     "SIDE ALONGSIDE",
-     "Port side"
+     "WIRE ROPE, 16 mm",
+     "WLL 3 t · on the crane"
     ],
     [
-     "STERN LINES",
-     "3"
+     "4-LEG SLING, No. 7",
+     "WLL 2 t"
     ],
     [
-     "BREAST LINE",
-     "1"
+     "SHACKLE, 3/4 in",
+     "WLL 4.75 t"
     ],
     [
-     "SPRINGS",
-     "2"
+     "SNATCH BLOCK, No. 2",
+     "SWL 1 t"
     ],
     [
-     "TUG",
-     "Centre lead aft"
+     "PAD EYE, beam aft",
+     "SWL 1.5 t"
     ],
     [
-     "SINGLE UP TO",
-     "1 stern line + 1 spring"
+     "NEXT INSPECTION",
+     "10 JUL 2026 · Chief Officer"
     ],
     [
-     "REPORT TO BRIDGE",
-     "All lines let go · Propeller clear"
+     "NOTE",
+     "Use the lowest limit of the whole set"
     ]
    ]
   }
@@ -521,44 +514,44 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: letting go",
+   "title": "Listen: loading the stores",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l11/scene.jpg",
-     "kicker": "Day 2 · 17:20 · Houston",
-     "title": "Departure from the stern",
-     "body": "The pilot is on the bridge. Diego is at the stern with James and Rolando. The orders come on the radio. Listen first, one piece at a time.",
-     "es": "Escuchá primero. El texto está escondido a propósito."
+     "kicker": "Day 2 · 15:00 · Houston",
+     "title": "Stores on board",
+     "body": "The stores truck arrives on the quay. Rolando goes up to the provision crane, and Diego gets his first job as signalman. Listen first, one piece at a time.",
+     "es": "Llegan los víveres. Rolando sube a la grúa y Diego hace de señalero por primera vez."
     },
     {
      "type": "listen",
      "audio": [
       "l11-01",
-      "l11-02"
+      "l11-02",
+      "l11-03"
      ],
-     "q": "What is the first order from the bridge?",
+     "q": "What is Diego's job?",
      "opts": [
-      "Single up to one and one",
-      "Let go everything",
-      "Make fast the tug"
+      "Signalman",
+      "Crane driver",
+      "Cook"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l11-03",
       "l11-04",
       "l11-05"
      ],
-     "q": "What is Diego's job?",
+     "q": "How heavy is the first pallet?",
      "opts": [
-      "Watch the lines and say when they're clear of the water",
-      "Call the bridge",
-      "Drive the winch"
+      "1.5 tonnes",
+      "5 tonnes",
+      "2.5 tonnes"
      ],
      "a": 0
     },
@@ -568,11 +561,11 @@
       "l11-06",
       "l11-07"
      ],
-     "q": "What does James report to the bridge?",
+     "q": "What is the SWL of the crane?",
      "opts": [
-      "Singled up to one and one",
-      "All lines let go",
-      "The tug is fast"
+      "2 tonnes",
+      "1.5 tonnes",
+      "2.5 tonnes"
      ],
      "a": 0
     },
@@ -582,136 +575,149 @@
       "l11-08",
       "l11-09"
      ],
-     "q": "What is the next order?",
+     "q": "What do they do with the drinks pallet?",
      "opts": [
-      "Let go aft",
-      "Single up",
-      "Stop"
+      "They split it",
+      "They lift it in one go",
+      "They leave it on the quay"
      ],
-     "a": 0
+     "a": 0,
+     "why": "\"We can't lift that in one go. Split it.\""
     },
     {
      "type": "listen",
      "audio": [
       "l11-10",
-      "l11-11"
+      "l11-11",
+      "l11-12"
      ],
-     "q": "Which line comes out of the water first?",
+     "q": "What is Diego's last signal?",
      "opts": [
-      "The spring",
-      "The stern line",
-      "The breast line"
+      "Stop",
+      "Hoist",
+      "Lower"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l11-12",
-      "l11-13"
+      "l11-13",
+      "l11-14",
+      "l11-15"
      ],
-     "q": "\"Propeller clear\" means…",
+     "q": "What do they do with the pallet on deck?",
      "opts": [
-      "no lines near the propeller",
-      "the propeller is clean",
-      "the propeller is stopped"
+      "They lash it",
+      "They open it",
+      "They paint it"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole departure",
+     "title": "Now the whole scene",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "At the stern",
+   "title": "The lifting gear",
    "skill": "Vocabulary",
-   "min": 4,
+   "min": 5,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The stern from above. Port side alongside, quay at the bottom."
+     "body": "The provision crane lifting a pallet, and the gear on deck."
     },
     {
      "type": "card",
-     "word": "mooring"
+     "word": "crane"
     },
     {
      "type": "card",
-     "word": "stern"
+     "word": "jib"
     },
     {
      "type": "card",
-     "word": "headline"
-    },
-    {
-     "type": "card",
-     "word": "spring"
+     "word": "wire"
     },
     {
      "type": "tap",
-     "audio": "c-show-spring",
-     "a": "spring"
+     "audio": "c-show-jib",
+     "a": "jib"
     },
     {
      "type": "card",
-     "word": "bollard"
+     "word": "hook"
     },
     {
      "type": "card",
-     "word": "fairlead"
+     "word": "sling"
     },
     {
      "type": "tap",
-     "audio": "c-show-fairlead",
-     "a": "fairlead"
+     "audio": "c-show-hook",
+     "a": "hook"
     },
     {
      "type": "card",
-     "word": "tug"
+     "word": "shackle"
+    },
+    {
+     "type": "card",
+     "word": "thimble"
     },
     {
      "type": "tap",
-     "audio": "c-show-tug",
-     "a": "tug"
+     "audio": "c-show-thimble",
+     "a": "thimble"
     },
     {
      "type": "card",
-     "word": "slack"
+     "word": "padeye"
     },
     {
      "type": "card",
-     "word": "winch"
+     "word": "block"
     },
     {
      "type": "card",
-     "word": "drum"
-    },
-    {
-     "type": "card",
-     "word": "heave"
-    },
-    {
-     "type": "card",
-     "word": "slackaway"
+     "word": "tackle"
     },
     {
      "type": "tap",
-     "audio": "c-show-slack",
-     "a": "slack"
+     "audio": "c-show-padeye",
+     "a": "padeye"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-block",
+     "a": "block"
+    },
+    {
+     "type": "card",
+     "word": "lashing"
+    },
+    {
+     "type": "card",
+     "word": "turnbuckle"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-turnbuckle",
+     "a": "turnbuckle"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"bita\" in English:",
+     "q": "\"pasteca\" in English:",
      "opts": [
-      "bollard",
-      "bit",
-      "post"
+      "snatch block",
+      "pulley box",
+      "catch block"
      ],
      "a": 0
     },
@@ -720,24 +726,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "stern line",
-       "largo de popa"
+       "sling",
+       "eslinga"
       ],
       [
-       "spring",
-       "esprín"
+       "pad eye",
+       "cáncamo"
       ],
       [
-       "bollard",
-       "bita"
+       "tackle",
+       "aparejo"
       ],
       [
-       "tug",
-       "remolcador"
+       "thimble",
+       "guardacabo"
       ],
       [
-       "heave in",
-       "virar"
+       "turnbuckle",
+       "tensor"
       ]
      ]
     }
@@ -745,219 +751,247 @@
   },
   {
    "id": "phrases",
-   "title": "Orders and reports",
+   "title": "Hoist, lower, stop",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "At the mooring station",
+     "title": "Crane talk",
      "list": [
       [
-       "Single up to one and one.",
-       "Quedar con uno y uno.",
-       "p-singleup"
+       "Hoist slowly.",
+       "Izá despacio.",
+       "p-hoist"
       ],
       [
-       "Let go aft.",
-       "Largar a popa.",
-       "p-letgo"
+       "Lower. Stop!",
+       "Arriá. ¡Pará!",
+       "p-lower"
       ],
       [
-       "The stern line is clear of the water.",
-       "El largo está fuera del agua.",
-       "p-clear"
+       "What's the SWL?",
+       "¿Cuál es la SWL?",
+       "p-swl"
       ],
       [
-       "All lines let go. Propeller clear.",
-       "Todos los cabos largados. Hélice libre.",
-       "p-allgone"
+       "We can't lift that in one go.",
+       "Eso no lo podemos izar de una vez.",
+       "p-cant"
+      ],
+      [
+       "Load on deck.",
+       "Carga en cubierta.",
+       "p-ondeck"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Order, read back, report",
+     "title": "Crane orders: the verb comes first",
      "steps": [
       [
-       "Order",
-       "Let go aft."
+       "Up",
+       "Hoist. Hoist slowly."
       ],
       [
-       "Read back",
-       "Let go aft."
+       "Down",
+       "Lower. Lower slowly."
       ],
       [
-       "Report",
-       "All lines let go."
+       "Stop",
+       "Stop!"
+      ],
+      [
+       "Not",
+       "Don't lower yet."
       ]
      ],
      "paras": [
-      "On the radio you <b>read back</b> the order: repeat it, the same words. Then the bridge knows you heard it right.",
-      "Reports are short. No <i>is</i>, no <i>are</i>: <b>All lines let go. Propeller clear. Singled up.</b>",
-      "<i>One and one</i> = one stern line and one spring."
+      "Signals to the crane driver are short orders: the verb first, no <b>you</b>, no <b>please</b>.",
+      "Add <b>slowly</b> after the verb when you need it."
      ],
-     "avoid": "OK, OK! (as the only answer) · The lines are been let go."
+     "avoid": "You hoist. · Hoisting slowly. · Slowly hoist."
     },
     {
      "type": "choice",
-     "q": "The bridge says: \"Let go aft.\" You read back…",
+     "q": "The load is too high. You want it to go down. You say…",
      "opts": [
-      "Let go aft.",
-      "OK.",
-      "Yes, I go."
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "All the lines are on board and away from the propeller. You report…",
-     "opts": [
-      "All lines let go. Propeller clear.",
-      "Lines are going.",
-      "All lines are let going."
+      "Lower.",
+      "Hoist.",
+      "You go down."
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "The spring is out of the water.",
-     "q": "Tell Rolando.",
+     "situation": "The load must go up, but carefully.",
+     "q": "Give Rolando the signal.",
      "a": [
-      "The",
-      "spring",
-      "is",
-      "clear",
-      "of",
-      "the",
-      "water."
+      "Hoist",
+      "slowly."
      ],
      "extra": [
-      "off",
-      "on"
+      "you",
+      "slow"
      ]
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-letgo-not"
+     "type": "tip",
+     "tag": "Language focus",
+     "title": "Limits: can / can't",
+     "steps": [
+      [
+       "Yes",
+       "The crane can lift two tonnes."
+      ],
+      [
+       "No",
+       "We can't lift two point five."
+      ],
+      [
+       "Question",
+       "Can we lift this pallet?"
+      ]
      ],
-     "q": "What can Rolando let go now?",
+     "paras": [
+      "<b>can</b> + verb, with no <i>to</i> and no <i>-s</i>: <i>it can lift</i>.",
+      "<b>in one go</b> = all in one lift."
+     ],
+     "avoid": "It can lifts. · It can to lift. · We don't can lift."
+    },
+    {
+     "type": "choice",
+     "q": "The SWL is 2 tonnes. The pallet is 3 tonnes. We ___ lift it in one go.",
      "opts": [
-      "Only the stern line",
-      "Only the spring",
-      "Both lines"
+      "can't",
+      "can",
+      "don't can"
      ],
      "a": 0
     },
     {
+     "type": "type",
+     "audio": "c-crane-can",
+     "q": "How heavy is the pallet? Write the number of tonnes.",
+     "accept": [
+      "3",
+      "three",
+      "3 tonnes",
+      "three tonnes",
+      "3 t"
+     ]
+    },
+    {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "\"Let go\" is not \"let's go\"",
+     "title": "One POINT five, not one comma five",
      "paras": [
-      "<b>Let go</b> = largar, soltar un cabo. <b>Let's go</b> = vamos.",
-      "On deck this mistake is dangerous: say <b>let go</b> only for lines."
+      "In English the decimal mark is a <b>point</b>: <i>1.5</i> = <b>one point five</b>.",
+      "Say every digit after the point: <i>2.25</i> = <b>two point two five</b>.",
+      "<b>Tonne</b> is the metric tonne, 1,000 kg. Written <i>t</i>."
      ],
-     "list": [
-      [
-       "let go",
-       "largar",
-       "m-letgo"
-      ],
-      [
-       "let's go",
-       "vamos",
-       "m-letsgo"
-      ]
-     ],
-     "avoid": "Let's go the stern line."
+     "avoid": "one comma five · one and a half point"
     },
     {
      "type": "choice",
-     "q": "Which one is an order for a line?",
+     "q": "Rolando writes 1.5 t. He says…",
      "opts": [
-      "Let go the stern line.",
-      "Let's go the stern line.",
-      "Go let the stern line."
+      "One point five tonnes.",
+      "One comma five tonnes.",
+      "One five tonnes."
      ],
      "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Clear words on deck",
+     "title": "Tackle on deck: TAY-kul",
      "paras": [
-      "At a mooring station it's noisy. Say the important word loud and clear: <b>let GO</b>, <b>CLEAR</b>, <b>SLACK</b>, <b>HEAVE</b>.",
-      "<b>heave</b> has a long <i>ee</i>: /hiːv/, like <i>leave</i>."
+      "On land, <i>tackle</i> sounds like <i>black</i>: /ˈtækl/.",
+      "At sea, for blocks and rope, many seafarers say <b>TAY-kul</b> /ˈteɪkl/. You'll hear both: they mean the same thing.",
+      "<i>Thimble</i> starts with the <i>th</i> of <i>think</i>: put your tongue between your teeth."
      ]
     },
     {
-     "type": "type",
-     "audio": "c-howmany",
-     "q": "How many springs? Write the number.",
-     "accept": [
-      "2",
-      "two"
-     ]
+     "type": "choice",
+     "q": "Which one is correct?",
+     "opts": [
+      "The crane can lift two tonnes.",
+      "The crane can lifts two tonnes.",
+      "The crane can to lift two tonnes."
+     ],
+     "a": 0,
+     "why": "can + verb, no -s, no to."
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the mooring plan",
+   "title": "Read the lifting gear register",
    "skill": "Reading",
-   "min": 3,
+   "min": 4,
    "screens": [
     {
+     "type": "tip",
+     "tag": "On the label",
+     "title": "SWL or WLL?",
+     "paras": [
+      "<b>SWL</b>, Safe Working Load: the most you may lift with that gear on board. You see it painted on cranes, davits and pad eyes.",
+      "<b>WLL</b>, Working Load Limit: the most the maker certifies for a loose part, like a shackle or a sling. It's stamped or written on its tag.",
+      "Newer rules use WLL, but on board you'll see both. With several parts together, the lowest limit is the limit of the whole set."
+     ]
+    },
+    {
      "type": "doc",
-     "doc": "plan",
-     "q": "Which side is alongside?",
+     "doc": "register",
+     "q": "What is the SWL of the provision crane?",
      "opts": [
-      "Port side",
-      "Starboard side",
-      "The stern"
+      "2 t",
+      "3 t",
+      "4.75 t"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "plan",
-     "q": "How many lines are there aft in total?",
+     "doc": "register",
+     "q": "Where is the WLL of the shackle written?",
      "opts": [
-      "Six",
-      "Three",
-      "Five"
+      "On the shackle",
+      "On the crane jib",
+      "On the bridge"
      ],
      "a": 0,
-     "why": "3 stern lines + 1 breast line + 2 springs."
+     "why": "WLL: stamped or written on the part itself."
     },
     {
      "type": "docfind",
-     "doc": "plan",
-     "q": "Tap where the tug is made fast.",
-     "a": 5
+     "doc": "register",
+     "q": "Tap the gear with the lowest limit.",
+     "a": 4
     },
     {
      "type": "doc",
-     "doc": "plan",
-     "q": "Who is in charge aft?",
+     "doc": "register",
+     "q": "You lift a 1.5 t pallet with the crane, sling No. 7 and the shackle. Is it OK?",
      "opts": [
-      "The Second Officer",
-      "The bosun",
-      "The Chief Officer"
+      "Yes",
+      "No"
      ],
-     "a": 0
+     "a": 0,
+     "why": "Crane 2 t, sling 2 t, shackle 4.75 t: the lowest is 2 t."
     },
     {
      "type": "doc",
-     "doc": "plan",
-     "q": "Single up to…",
+     "doc": "register",
+     "q": "When is the next inspection?",
      "opts": [
-      "one stern line and one spring",
-      "one line",
-      "two stern lines"
+      "10 July 2026",
+      "10 January 2026",
+      "10 June 2026"
      ],
      "a": 0
     }
@@ -965,79 +999,78 @@
   },
   {
    "id": "speak",
-   "title": "Read back and report",
+   "title": "Signal and report",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Read back, then report",
-     "body": "Listen, say it, check it. On the radio: the same words, slow and clear.",
-     "es": "Por radio: las mismas palabras, lento y claro.",
+     "title": "Short and clear",
+     "body": "Listen, say it, check it. Crane signals are short and strong: HOIST slowly. LOWer. STOP!",
+     "es": "Órdenes cortas y firmes.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-singleup"
+     "model": "p-hoist"
     },
     {
      "type": "shadow",
-     "model": "p-allgone"
+     "model": "p-cant"
     },
     {
      "type": "shadow",
-     "model": "p-roger"
+     "model": "p-ondeck"
     },
     {
      "type": "role",
-     "cue": "c-rb-single",
-     "task": "Read back the order.",
-     "model": "m-single-rb",
+     "cue": "c-signal",
+     "task": "The load must go up, carefully. Give the signal.",
+     "model": "m-hoist",
      "accept": [
-      "Single up to one and one.",
-      "Single up to one and one. Over.",
-      "Single up, one and one.",
-      "Aft, single up to one and one."
+      "Hoist slowly.",
+      "Hoist slowly!",
+      "Hoist.",
+      "Hoist, slowly."
      ]
     },
     {
      "type": "role",
-     "cue": "c-rb-letgo",
-     "task": "Read back the order.",
-     "model": "m-letgo-rb",
+     "cue": "c-swl-q",
+     "task": "Read the jib: SWL 2 t. Answer.",
+     "model": "m-swl",
      "accept": [
-      "Let go aft.",
-      "Let go aft. Over.",
-      "Aft, let go aft.",
-      "Let go aft, roger."
+      "The SWL is two tonnes.",
+      "Two tonnes.",
+      "SWL two tonnes.",
+      "It's two tonnes.",
+      "2 tonnes."
      ]
     },
     {
      "type": "role",
-     "cue": "c-isclear",
-     "task": "Yes, it's out of the water. Tell him.",
-     "model": "m-springclear",
+     "cue": "c-heavy",
+     "task": "The SWL is 2 t. Say you can't lift it in one go.",
+     "model": "m-cant",
      "accept": [
-      "The spring is clear of the water.",
-      "Yes, the spring is clear.",
-      "Spring is clear.",
-      "Yes, clear of the water.",
-      "The spring is clear.",
-      "Yes, it's clear."
+      "We can't lift that in one go.",
+      "We can't lift it in one go.",
+      "We can't lift that.",
+      "No, we can't lift that in one go.",
+      "We cannot lift that in one go."
      ]
     },
     {
      "type": "role",
-     "cue": "c-report",
-     "task": "All lines are on board, away from the propeller. Report.",
-     "model": "m-report",
+     "cue": "c-secure",
+     "task": "Say the lashings are on and the turnbuckles are tight.",
+     "model": "m-secure",
      "accept": [
-      "All lines let go. Propeller clear.",
-      "All lines let go, propeller clear. Over.",
-      "All lines let go.",
-      "All clear aft. Propeller clear.",
-      "All lines let go. Propeller clear. Over."
+      "Lashings on, turnbuckles tight.",
+      "Yes. Lashings on, turnbuckles tight.",
+      "The lashings are on and the turnbuckles are tight.",
+      "Lashings on and turnbuckles tight."
      ]
     }
    ]
@@ -1050,93 +1083,93 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-tug",
+     "audio": "w-sling",
      "q": "Type what you hear.",
      "accept": [
-      "tug",
-      "a tug",
-      "the tug"
+      "sling",
+      "a sling",
+      "the sling"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-bollard",
-     "a": "bollard"
+     "audio": "c-show-hook",
+     "a": "hook"
     },
     {
      "type": "tap",
-     "audio": "c-show-stern",
-     "a": "stern"
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l11-08"
-     ],
-     "q": "Where is the tug?",
-     "opts": [
-      "Standing by",
-      "Made fast forward",
-      "Going away"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "The stern line is loose, not tight. It's…",
-     "opts": [
-      "slack",
-      "heave",
-      "clear"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "The ship is port side alongside. The quay is on the ___ side.",
-     "opts": [
-      "port",
-      "starboard",
-      "aft"
-     ],
-     "a": 0,
-     "why": "From Lesson 1."
-    },
-    {
-     "type": "build",
-     "q": "Report to the bridge.",
-     "a": [
-      "All",
-      "lines",
-      "let",
-      "go."
-     ],
-     "extra": [
-      "are",
-      "lets"
-     ]
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "c-show-heave"
-     ],
-     "q": "Rolando asks where we…",
-     "opts": [
-      "heave in",
-      "let go",
-      "make fast"
-     ],
-     "a": 0
+     "audio": "c-show-turnbuckle",
+     "a": "turnbuckle"
     },
     {
      "type": "type",
-     "q": "Write it in English: remolcador",
+     "audio": "c-weight",
+     "q": "How heavy is the pallet? Write the number.",
      "accept": [
-      "tug",
-      "a tug",
-      "tugboat",
-      "the tug"
+      "1.2",
+      "1.2 t",
+      "1.2 tonnes",
+      "one point two",
+      "one point two tonnes"
+     ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-whatlift",
+      "c-lifting"
+     ],
+     "q": "What is Rolando lifting?",
+     "opts": [
+      "The vegetables",
+      "The drinks",
+      "The eggs"
+     ],
+     "a": 0,
+     "why": "From Lesson 10: I'm lifting… = now."
+    },
+    {
+     "type": "choice",
+     "q": "The load must stop now. You shout…",
+     "opts": [
+      "Stop!",
+      "You stop, please.",
+      "Stopping!"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "You need the shackle. Rolando has it. You say…",
+     "opts": [
+      "Can you pass me the shackle, please?",
+      "Give me shackle.",
+      "I want the shackle."
+     ],
+     "a": 0,
+     "why": "From Lesson 10."
+    },
+    {
+     "type": "build",
+     "q": "Ask Tanya about the limit of the crane.",
+     "a": [
+      "What's",
+      "the",
+      "SWL?"
+     ],
+     "extra": [
+      "is",
+      "how"
+     ]
+    },
+    {
+     "type": "type",
+     "q": "Write it in English: cáncamo",
+     "accept": [
+      "pad eye",
+      "a pad eye",
+      "padeye",
+      "the pad eye"
      ]
     }
    ]

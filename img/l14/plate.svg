@@ -1,27 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The radar at night: heading line on course 110, a fishing boat on the port bow, and the panel with speed and position">
-  <!-- Lesson 14 plate: the radar during the 03:45 handover, north up, 12-mile range, rings every 3 miles.
-       The heading line shows course 110°. The fishing boat from the handover is on the port bow at 8 miles.
-       The side panel shows course, speed in knots and position. Generated with a small script. -->
-  <rect x="0" y="0" width="400" height="240" style="fill:#0B1620"/>
-  <circle cx="128" cy="120" r="104" style="fill:#0E2A1F"/>
-  <circle cx="128" cy="120" r="26.0" fill="none" style="stroke:#3DDC84" stroke-width="1" opacity=".35"/><circle cx="128" cy="120" r="52.0" fill="none" style="stroke:#3DDC84" stroke-width="1" opacity=".35"/><circle cx="128" cy="120" r="78.0" fill="none" style="stroke:#3DDC84" stroke-width="1" opacity=".35"/><line x1="128.0" y1="21.0" x2="128.0" y2="16.0" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="177.5" y1="34.3" x2="180.0" y2="29.9" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="213.7" y1="70.5" x2="218.1" y2="68.0" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="227.0" y1="120.0" x2="232.0" y2="120.0" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="213.7" y1="169.5" x2="218.1" y2="172.0" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="177.5" y1="205.7" x2="180.0" y2="210.1" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="128.0" y1="219.0" x2="128.0" y2="224.0" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="78.5" y1="205.7" x2="76.0" y2="210.1" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="42.3" y1="169.5" x2="37.9" y2="172.0" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="29.0" y1="120.0" x2="24.0" y2="120.0" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="42.3" y1="70.5" x2="37.9" y2="68.0" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><line x1="78.5" y1="34.3" x2="76.0" y2="29.9" style="stroke:#3DDC84" stroke-width="1" opacity=".6"/><text x="128.0" y="10.0" text-anchor="middle" style="font:600 7px var(--f-mono);fill:#3DDC84" opacity=".8">000</text><text x="241.0" y="123.0" text-anchor="middle" style="font:600 7px var(--f-mono);fill:#3DDC84" opacity=".8">090</text><text x="128.0" y="236.0" text-anchor="middle" style="font:600 7px var(--f-mono);fill:#3DDC84" opacity=".8">180</text><text x="15.0" y="123.0" text-anchor="middle" style="font:600 7px var(--f-mono);fill:#3DDC84" opacity=".8">270</text>
-  <line x1="128" y1="120" x2="225.7" y2="155.6" style="stroke:#E9F5EC" stroke-width="1.6"/>
-  <circle cx="128" cy="120" r="4" style="fill:#E9F5EC"/>
-  <!-- the fishing boat: echo + vector -->
-  <circle cx="196.3" cy="108.0" r="4" style="fill:#E9C46A"/>
-  <line x1="196.3" y1="108.0" x2="182.3" y2="112.0" style="stroke:#E9C46A" stroke-width="1.4"/>
-  <!-- side panel -->
-  <rect x="252" y="20" width="136" height="200" rx="6" style="fill:#13212D"/>
-  <g style="font:600 8px var(--f-mono);fill:#7FA7B8">
-    <text x="264" y="42">COURSE</text><text x="264" y="92">SPEED</text><text x="264" y="142">POSITION</text><text x="264" y="190">RANGE 12 NM</text><text x="264" y="210">BRILL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The front of the bridge: radar, ECDIS, gyro compass, autopilot, helm, engine telegraph, echo sounder, binoculars, GPS, speed log and anemometer">
+  <!-- Lesson 13 plate: the bridge console seen from the helm position, with the front windows above.
+       Left to right: radar, ECDIS, gyro compass repeater with the autopilot below it, helm, engine telegraph,
+       echo sounder. Binoculars rest on the console. Colours come from app.css (.p-*). -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <!-- windows -->
+  <rect class="p-water" x="0" y="0" width="400" height="74"/>
+  <rect class="p-soft" x="0" y="0" width="400" height="34" opacity=".55"/>
+  <line class="p-line" x1="0" y1="44" x2="400" y2="44" stroke-width="1" opacity=".6"/>
+  <g class="p-hull"><rect x="0" y="0" width="400" height="5"/><rect x="0" y="72" width="400" height="6"/>
+    <rect x="96" y="0" width="5" height="74"/><rect x="198" y="0" width="5" height="74"/><rect x="300" y="0" width="5" height="74"/></g>
+  <!-- console -->
+  <path d="M0 96 H400 V240 H0 Z" class="p-blue" opacity=".9"/>
+  <rect x="0" y="92" width="400" height="8" class="p-hull"/>
+
+  <!-- RADAR -->
+  <rect x="12" y="106" width="98" height="92" rx="5" class="p-hull"/>
+  <circle cx="61" cy="152" r="40" style="fill:#0E2A1F"/>
+  <g fill="none" style="stroke:#3DDC84" opacity=".55" stroke-width="1"><circle cx="61" cy="152" r="26"/><circle cx="61" cy="152" r="13"/></g>
+  <path d="M61 152 L84 120 A40 40 0 0 0 61 112 Z" style="fill:#3DDC84" opacity=".25"/>
+  <line x1="61" y1="152" x2="61" y2="113" style="stroke:#3DDC84" stroke-width="1.4"/>
+  <g style="fill:#E9C46A"><circle cx="82" cy="134" r="2.4"/><circle cx="44" cy="128" r="2.4"/><circle cx="72" cy="176" r="2.4"/></g>
+
+  <!-- ECDIS -->
+  <rect x="120" y="106" width="98" height="92" rx="5" class="p-hull"/>
+  <rect x="126" y="112" width="86" height="72" style="fill:#BFD8E8"/>
+  <path d="M126 112 H212 V132 Q190 140 170 128 Q150 120 126 130 Z" style="fill:#E8DDB5"/>
+  <path d="M136 176 L166 158 L200 146" fill="none" style="stroke:#D9534F" stroke-width="2" stroke-dasharray="4 2"/>
+  <path d="M162 156 l8 -2 l-4 7 z" style="fill:#1E3A5F"/>
+  <rect x="126" y="186" width="86" height="8" style="fill:#2B3A4A"/>
+
+  <!-- GYRO COMPASS repeater -->
+  <circle cx="254" cy="128" r="22" class="p-white"/>
+  <circle cx="254" cy="128" r="17" fill="none" style="stroke:var(--hull)" stroke-width="1"/>
+  <g style="stroke:var(--hull)" stroke-width="1.2"><line x1="254" y1="111" x2="254" y2="116"/><line x1="254" y1="140" x2="254" y2="145"/><line x1="237" y1="128" x2="242" y2="128"/><line x1="266" y1="128" x2="271" y2="128"/></g>
+  <path d="M254 128 L262 114 L256 128 Z" style="fill:var(--antifoul)"/>
+  <!-- AUTOPILOT panel -->
+  <rect x="230" y="160" width="48" height="30" rx="3" class="p-hull"/>
+  <rect x="235" y="165" width="38" height="9" style="fill:#3DDC84" opacity=".7"/>
+  <g class="p-gold"><circle cx="241" cy="182" r="3"/><circle cx="254" cy="182" r="3"/><circle cx="267" cy="182" r="3"/></g>
+
+  <!-- HELM (small wheel) -->
+  <circle cx="254" cy="218" r="17" fill="none" style="stroke:var(--hull)" stroke-width="4"/>
+  <g style="stroke:var(--hull)" stroke-width="3"><line x1="254" y1="201" x2="254" y2="235"/><line x1="237" y1="218" x2="271" y2="218"/></g>
+  <circle cx="254" cy="218" r="4" class="p-hull"/>
+
+  <!-- ENGINE TELEGRAPH lever -->
+  <rect x="300" y="150" width="34" height="56" rx="4" class="p-hull"/>
+  <rect x="314" y="156" width="6" height="44" rx="3" style="fill:#5E6B78"/>
+  <rect x="306" y="166" width="22" height="9" rx="3" class="p-red"/>
+  <g class="p-label" style="font-size:6px"><text x="337" y="160">AH</text><text x="337" y="205">AS</text></g>
+
+  <!-- ECHO SOUNDER -->
+  <rect x="346" y="106" width="48" height="40" rx="4" class="p-hull"/>
+  <path d="M350 116 H390 V142 H350 Z" style="fill:#0E2A1F"/>
+  <path d="M350 132 Q360 130 368 134 Q378 138 390 133" fill="none" style="stroke:#E9C46A" stroke-width="1.6"/>
+  <text x="370" y="124" text-anchor="middle" style="font:700 8px var(--f-mono);fill:#3DDC84">40 m</text>
+
+  <!-- BINOCULARS on the console -->
+  <g transform="translate(374 180)">
+    <rect x="-16" y="-8" width="14" height="22" rx="5" style="fill:#2B3A4A"/><rect x="2" y="-8" width="14" height="22" rx="5" style="fill:#2B3A4A"/>
+    <rect x="-4" y="-2" width="8" height="8" style="fill:#2B3A4A"/>
+    <circle cx="-9" cy="-6" r="4" style="fill:#5E6B78"/><circle cx="9" cy="-6" r="4" style="fill:#5E6B78"/>
   </g>
-  <g style="font:700 18px var(--f-mono);fill:#3DDC84">
-    <text x="264" y="66">110.0°</text><text x="264" y="116">16.0</text>
-  </g>
-  <text x="320" y="116" style="font:700 12px var(--f-mono);fill:#3DDC84">kn</text>
-  <g style="font:700 10px var(--f-mono);fill:#3DDC84"><text x="264" y="160">27°48.6' N</text><text x="264" y="174">089°41.2' W</text></g>
-  <!-- range: rings; brilliance: how bright the screen is (bar at about two thirds) -->
-  <rect x="296" y="203" width="56" height="8" rx="2" style="fill:#0B1620;stroke:#7FA7B8" stroke-width=".8"/>
-  <rect x="297.5" y="204.5" width="36" height="5" rx="1" style="fill:#3DDC84"/>
-  <g style="stroke:#3DDC84" stroke-width="1.2" stroke-linecap="round"><circle cx="363" cy="207" r="3" style="fill:#3DDC84"/><path d="M363 200.5 v2 M363 211.5 v2 M356.5 207 h2 M367.5 207 h2 M358.4 202.4 l1.4 1.4 M366.2 210.2 l1.4 1.4 M367.6 202.4 l-1.4 1.4 M359.8 210.2 l-1.4 1.4"/></g>
+  <!-- GPS: position on a dark screen, with a satellite symbol -->
+  <rect x="12" y="204" width="58" height="32" rx="4" class="p-hull"/>
+  <rect x="16" y="208" width="50" height="24" style="fill:#0E2A1F"/>
+  <g transform="translate(24 220)" style="fill:#E9C46A"><rect x="-2" y="-2" width="4" height="4"/><rect x="-7" y="-1.2" width="4" height="2.4"/><rect x="3" y="-1.2" width="4" height="2.4"/></g>
+  <g style="font:700 6px var(--f-mono);fill:#3DDC84"><text x="32" y="217">36°08'N</text><text x="32" y="228">005°21'W</text></g>
+
+  <!-- SPEED LOG: speed through the water -->
+  <rect x="80" y="204" width="62" height="32" rx="4" class="p-hull"/>
+  <rect x="84" y="208" width="54" height="24" style="fill:#0E2A1F"/>
+  <text x="111" y="225" text-anchor="middle" style="font:700 11px var(--f-mono);fill:#3DDC84">12.0 kn</text>
+  <g style="stroke:#3DDC84" stroke-width="1" opacity=".6"><path d="M88 229 q3 -2 6 0 t6 0 t6 0"/></g>
+
+  <!-- ANEMOMETER: where the wind comes from (arrow towards the ship) and how strong it is -->
+  <rect x="150" y="204" width="68" height="32" rx="4" class="p-hull"/>
+  <circle cx="167" cy="220" r="13" class="p-white"/>
+  <path d="M167 213 L170 224 L164 224 Z" class="p-hull"/>
+  <path d="M178 211 L171 216" style="stroke:var(--antifoul)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M168 219 L173 213 L175 217 Z" style="fill:var(--antifoul)"/>
+  <text x="200" y="224" text-anchor="middle" style="font:700 9px var(--f-mono);fill:#3DDC84">25 kn</text>
 </svg>

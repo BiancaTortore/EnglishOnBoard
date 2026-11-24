@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Left: the pilot ladder on the ship's side with the pilot boat alongside, and the pilot station ashore. Right: the steering position with the helm, the rudder angle indicator at port ten, the heading repeater showing 045 and the pilot card">
+  <!-- Lesson 27 plate. Left: the ship's starboard side with the pilot ladder (rope with wooden steps) and the
+       pilot boat alongside. Right: the steering position on the bridge: the rudder angle indicator (needle at
+       port 10, red side = port, green side = starboard), the heading repeater showing 045, the small helm wheel and
+       the pilot card on the console. Colours come from app.css (.p-*). -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <!-- ship's side and sea -->
+  <rect class="p-water" x="0" y="176" width="140" height="64"/>
+  <rect class="p-hull" x="0" y="0" width="96" height="196"/>
+  <rect class="p-white" x="0" y="0" width="96" height="16"/>
+  <!-- pilot ladder -->
+  <g style="stroke:#C9A86A" stroke-width="2"><line x1="70" y1="16" x2="70" y2="186"/><line x1="86" y1="16" x2="86" y2="186"/></g>
+  <g style="fill:#B9812F"><rect x="66" y="40" width="24" height="5"/><rect x="66" y="66" width="24" height="5"/><rect x="66" y="92" width="24" height="5"/><rect x="66" y="118" width="24" height="5"/><rect x="66" y="144" width="24" height="5"/><rect x="66" y="170" width="24" height="5"/></g>
+  <!-- pilot boat -->
+  <path d="M96 176 H138 L130 198 H98 Z" style="fill:#E2671C;stroke:var(--ink)" stroke-width="1"/>
+  <rect x="106" y="160" width="22" height="16" rx="2" class="p-white"/>
+  <text x="112" y="192" style="font:700 7px var(--f-mono);fill:#fff">PILOT</text>
+  <!-- pilot station ashore: building with a lookout tower and the pilot flag (H) -->
+  <rect class="p-quay" x="0" y="222" width="140" height="18"/>
+  <rect x="10" y="204" width="30" height="18" class="p-white"/>
+  <path d="M8 205 L25 196 L42 205 Z" class="p-hull"/>
+  <g class="p-hull" opacity=".6"><rect x="15" y="209" width="6" height="5"/><rect x="29" y="209" width="6" height="5"/></g>
+  <rect x="44" y="200" width="10" height="22" class="p-white"/><rect x="42" y="196" width="14" height="5" class="p-hull"/>
+  <rect x="46" y="204" width="6" height="4" style="fill:#7FB7D6"/>
+  <line x1="64" y1="222" x2="64" y2="198" style="stroke:var(--ink)" stroke-width="1.2"/>
+  <rect x="65" y="199" width="6" height="8" style="fill:#FFFFFF;stroke:var(--ink)" stroke-width=".5"/><rect x="71" y="199" width="6" height="8" style="fill:#E23D2D;stroke:var(--ink)" stroke-width=".5"/>
+
+  <!-- console -->
+  <rect x="152" y="24" width="238" height="196" rx="8" style="fill:#1D2730"/>
+  <!-- rudder angle indicator -->
+  <rect x="166" y="38" width="128" height="76" rx="6" style="fill:#13212D"/>
+  <path d="M182 100 A48 48 0 0 1 230 52" fill="none" style="stroke:#E23D2D" stroke-width="5"/>
+  <path d="M230 52 A48 48 0 0 1 278 100" fill="none" style="stroke:#2E9E5B" stroke-width="5"/>
+  <g style="stroke:#7FA7B8" stroke-width="1.4"><line x1="230" y1="52" x2="230" y2="60"/><line x1="196" y1="66" x2="201" y2="71"/><line x1="264" y1="66" x2="259" y2="71"/></g>
+  <line x1="230" y1="100" x2="218" y2="56" style="stroke:#fff" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="230" cy="100" r="4" style="fill:#fff"/>
+  <text x="176" y="110" style="font:600 8px var(--f-mono);fill:#E8705F">P</text><text x="278" y="110" style="font:600 8px var(--f-mono);fill:#5FCF8E">S</text>
+  <!-- heading repeater -->
+  <rect x="306" y="38" width="72" height="76" rx="6" style="fill:#13212D"/>
+  <text x="342" y="60" text-anchor="middle" style="font:600 8px var(--f-mono);fill:#7FA7B8">HDG</text>
+  <text x="342" y="92" text-anchor="middle" style="font:700 22px var(--f-mono);fill:#3DDC84">045</text>
+  <!-- helm wheel -->
+  <circle cx="232" cy="170" r="30" fill="none" style="stroke:#C9CFD4" stroke-width="5"/>
+  <circle cx="232" cy="170" r="6" style="fill:#C9CFD4"/>
+  <g style="stroke:#C9CFD4" stroke-width="3"><line x1="232" y1="140" x2="232" y2="200"/><line x1="202" y1="170" x2="262" y2="170"/></g>
+  <!-- pilot card on the console -->
+  <rect x="300" y="138" width="70" height="66" rx="2" style="fill:#F4F6F7;stroke:#5B6670" stroke-width="1" transform="rotate(6 335 171)"/>
+  <g style="stroke:#13212D" stroke-width="1.6" opacity=".55" transform="rotate(6 335 171)"><line x1="308" y1="150" x2="350" y2="150"/><line x1="308" y1="162" x2="362" y2="162"/><line x1="308" y1="172" x2="356" y2="172"/><line x1="308" y1="182" x2="362" y2="182"/><line x1="308" y1="192" x2="344" y2="192"/></g>
+</svg>

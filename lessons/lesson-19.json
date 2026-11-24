@@ -1,256 +1,271 @@
 {
  "n": 19,
  "module": 5,
- "title": "Cargo & documents",
- "place": "Day 6 · 10:00 · off Port Everglades, cargo control room",
- "goal": "Read cargo figures aloud and talk about procedures with the passive.",
+ "title": "Faults & defects",
+ "place": "Day 6 · 07:30 · off Port Everglades, bridge",
+ "goal": "Report a fault: what has stopped, what isn't working, and when it happened.",
  "images": {
   "hero": "img/l19/hero.jpg",
   "scene": "img/l19/scene.jpg"
  },
+ "radioChannel": "PHONE",
  "audio": {
   "l19-01": {
-   "voice": "tanya",
-   "text": "Every morning we prepare the cargo report. The figures are taken from the cargo system at zero eight hundred.",
-   "es": "Todas las mañanas preparamos el reporte de carga. Las cifras se toman del sistema de carga a las cero ocho cero cero."
+   "voice": "diego",
+   "text": "Chief Officer, there's an alarm on radar one.",
+   "es": "Primer Oficial, hay una alarma en el radar uno."
   },
   "l19-02": {
-   "voice": "diego",
-   "text": "What is measured?",
-   "es": "¿Qué se mide?"
+   "voice": "tanya",
+   "text": "Let me see. The display has frozen. It isn't working.",
+   "es": "A ver. La pantalla se congeló. No funciona."
   },
   "l19-03": {
-   "voice": "tanya",
-   "text": "The volume of each tank, in cubic metres, and the temperature. And the boil-off.",
-   "es": "El volumen de cada tanque, en metros cúbicos, y la temperatura. Y el boil-off."
+   "voice": "diego",
+   "text": "Shall I reset it?",
+   "es": "¿Lo reinicio?"
   },
   "l19-04": {
-   "voice": "diego",
-   "text": "Boil-off?",
-   "es": "¿Boil-off?"
+   "voice": "tanya",
+   "text": "No, don't touch it. Radar two is working, and we're at anchor. Call the Chief Engineer, please.",
+   "es": "No, no lo toques. El radar dos funciona, y estamos fondeados. Llamá al Jefe de Máquinas, por favor."
   },
   "l19-05": {
-   "voice": "tanya",
-   "text": "LNG is kept at minus one hundred and sixty degrees. A little gas boils off every day, and it's burnt in the engines.",
-   "es": "El GNL se mantiene a menos ciento sesenta grados. Un poco de gas se evapora cada día, y se quema en los motores."
-  },
-  "l19-06": {
-   "pause": 800,
-   "voice": "diego",
-   "text": "Tank one, thirty-six thousand one hundred and eighty cubic metres. Tank two, thirty-six thousand two hundred and forty.",
-   "es": "Tanque uno, treinta y seis mil ciento ochenta metros cúbicos. Tanque dos, treinta y seis mil doscientos cuarenta."
-  },
-  "l19-07": {
-   "voice": "tanya",
-   "text": "Good. Tank three?",
-   "es": "Bien. ¿Tanque tres?"
-  },
-  "l19-08": {
    "pause": 900,
    "voice": "diego",
-   "text": "On the report, thirty-two thousand six hundred and ten. But on the screen, thirty-six thousand two hundred and ten.",
-   "es": "En el reporte, treinta y dos mil seiscientos diez. Pero en la pantalla, treinta y seis mil doscientos diez."
+   "text": "Chief Engineer, this is the cadet on the bridge. Radar one has stopped. The display has frozen and the alarm has gone off.",
+   "es": "Jefe, habla el cadete desde el puente. El radar uno se paró. La pantalla se congeló y saltó la alarma."
+  },
+  "l19-06": {
+   "pause": 600,
+   "voice": "marek",
+   "text": "Radar one. OK. I'm coming.",
+   "es": "Radar uno. Okey. Ya voy.",
+   "radio": true
+  },
+  "l19-07": {
+   "pause": 1800,
+   "voice": "marek",
+   "text": "So. What happened?",
+   "es": "Bueno. ¿Qué pasó?"
+  },
+  "l19-08": {
+   "voice": "diego",
+   "text": "The alarm went off at zero seven twenty-five. Then the display froze.",
+   "es": "La alarma saltó a las cero siete veinticinco. Después se congeló la pantalla."
   },
   "l19-09": {
-   "voice": "tanya",
-   "text": "That's a big difference. Four thousand cubic metres can't disappear in one night.",
-   "es": "Es una diferencia grande. Cuatro mil metros cúbicos no pueden desaparecer en una noche."
+   "voice": "marek",
+   "text": "Hmm. Has anybody touched it?",
+   "es": "Mmm. ¿Alguien lo tocó?"
   },
   "l19-10": {
-   "voice": "diego",
-   "text": "Is it a discrepancy?",
-   "es": "¿Es una discrepancia?"
+   "voice": "tanya",
+   "text": "No. Nobody has touched it.",
+   "es": "No. Nadie lo tocó."
   },
   "l19-11": {
-   "pause": 700,
-   "voice": "tanya",
-   "text": "Yes. Let me check… The six and the two were swapped. A typing error.",
-   "es": "Sí. A ver… Se invirtieron el seis y el dos. Un error de tipeo."
+   "pause": 1500,
+   "voice": "marek",
+   "text": "A fuse has blown. I have a spare.",
+   "es": "Se quemó un fusible. Tengo uno de repuesto."
   },
   "l19-12": {
-   "pause": 600,
-   "voice": "tanya",
-   "text": "Well spotted, Diego. The report is corrected and signed again. Figures are always checked twice.",
-   "es": "Bien visto, Diego. El reporte se corrige y se firma de nuevo. Las cifras siempre se controlan dos veces."
+   "pause": 1500,
+   "voice": "marek",
+   "text": "OK. I've changed the fuse. Now reset it, cadet.",
+   "es": "Listo. Cambié el fusible. Ahora reinicialo, cadete."
   },
   "l19-13": {
+   "pause": 900,
    "voice": "diego",
-   "text": "Checked twice. Got it.",
-   "es": "Se controlan dos veces. Entendido."
+   "text": "Reset… It's working! The display is back.",
+   "es": "Reinicio… ¡Funciona! Volvió la pantalla."
   },
-  "w-cargo": {
+  "l19-14": {
+   "voice": "marek",
+   "text": "Good. Write it in the defect list. Fault, cause, repair. Short.",
+   "es": "Bien. Anotalo en la lista de defectos. Falla, causa, reparación. Corto."
+  },
+  "l19-15": {
+   "voice": "diego",
+   "text": "Fault, cause, repair. Yes, Chief.",
+   "es": "Falla, causa, reparación. Sí, jefe."
+  },
+  "w-fault": {
    "voice": "model",
-   "text": "cargo"
+   "text": "fault"
   },
-  "x-cargo": {
+  "x-fault": {
    "voice": "model",
-   "text": "The cargo is LNG.",
-   "es": "La carga es GNL."
+   "text": "Write the fault in the list.",
+   "es": "Anotá la falla en la lista."
   },
-  "w-tank": {
+  "w-defect": {
    "voice": "model",
-   "text": "tank"
+   "text": "defect"
   },
-  "x-tank": {
+  "x-defect": {
    "voice": "model",
-   "text": "The ship has four tanks.",
-   "es": "El buque tiene cuatro tanques."
+   "text": "The defect list is on the bridge.",
+   "es": "La lista de defectos está en el puente."
   },
-  "w-volume": {
+  "w-alarm": {
    "voice": "model",
-   "text": "volume"
+   "text": "alarm"
   },
-  "x-volume": {
+  "x-alarm": {
    "voice": "model",
-   "text": "The volume is measured every day.",
-   "es": "El volumen se mide todos los días."
+   "text": "The alarm has gone off.",
+   "es": "Saltó la alarma."
   },
-  "w-cubic": {
+  "w-frozen": {
    "voice": "model",
-   "text": "cubic metre"
+   "text": "frozen"
   },
-  "x-cubic": {
+  "x-frozen": {
    "voice": "model",
-   "text": "Thirty-six thousand cubic metres.",
-   "es": "Treinta y seis mil metros cúbicos."
+   "text": "The display has frozen.",
+   "es": "La pantalla se congeló."
   },
-  "w-temp": {
+  "w-reset": {
    "voice": "model",
-   "text": "temperature"
+   "text": "reset"
   },
-  "x-temp": {
+  "x-reset": {
    "voice": "model",
-   "text": "The temperature is minus one hundred and sixty degrees.",
-   "es": "La temperatura es menos ciento sesenta grados."
+   "text": "Now reset the radar.",
+   "es": "Ahora reiniciá el radar."
   },
-  "w-boiloff": {
+  "w-spare": {
    "voice": "model",
-   "text": "boil-off"
+   "text": "spare"
   },
-  "x-boiloff": {
+  "x-spare": {
    "voice": "model",
-   "text": "The boil-off is burnt in the engines.",
-   "es": "El boil-off se quema en los motores."
+   "text": "I have a spare fuse.",
+   "es": "Tengo un fusible de repuesto."
   },
-  "w-discrepancy": {
+  "w-fuse": {
    "voice": "model",
-   "text": "discrepancy"
+   "text": "fuse"
   },
-  "x-discrepancy": {
+  "x-fuse": {
    "voice": "model",
-   "text": "There's a discrepancy in tank three.",
-   "es": "Hay una discrepancia en el tanque tres."
+   "text": "A fuse has blown.",
+   "es": "Se quemó un fusible."
   },
-  "w-figures": {
+  "w-repair": {
    "voice": "model",
-   "text": "figures"
+   "text": "repair"
   },
-  "x-figures": {
+  "x-repair": {
    "voice": "model",
-   "text": "The figures are checked twice.",
-   "es": "Las cifras se controlan dos veces."
+   "text": "Fault, cause, repair.",
+   "es": "Falla, causa, reparación."
   },
-  "w-flow": {
+  "p-stopped": {
    "voice": "model",
-   "text": "flow"
+   "text": "Radar one has stopped.",
+   "es": "El radar uno se paró."
   },
-  "x-flow": {
+  "p-notworking": {
    "voice": "model",
-   "text": "The gas flow to the engines is steady.",
-   "es": "El caudal de gas a las máquinas es estable."
+   "text": "The display isn't working.",
+   "es": "La pantalla no funciona."
   },
-  "p-measured": {
+  "p-goneoff": {
    "voice": "model",
-   "text": "The volume is measured in cubic metres.",
-   "es": "El volumen se mide en metros cúbicos."
+   "text": "The alarm has gone off.",
+   "es": "Saltó la alarma."
   },
-  "p-kept": {
+  "p-fcr": {
    "voice": "model",
-   "text": "LNG is kept at minus one hundred and sixty degrees.",
-   "es": "El GNL se mantiene a menos ciento sesenta grados."
+   "text": "Fault, cause, repair.",
+   "es": "Falla, causa, reparación."
   },
-  "p-checked": {
+  "m-wrong": {
    "voice": "model",
-   "text": "The figures are checked twice.",
-   "es": "Las cifras se controlan dos veces."
+   "text": "It has stopped. The display isn't working.",
+   "es": "Se paró. La pantalla no funciona."
   },
-  "p-disc": {
+  "m-happened": {
    "voice": "model",
-   "text": "There's a discrepancy in tank three.",
-   "es": "Hay una discrepancia en el tanque tres."
+   "text": "The alarm went off at zero seven twenty.",
+   "es": "La alarma saltó a las cero siete veinte."
   },
-  "m-tank4": {
+  "m-nobody": {
    "voice": "model",
-   "text": "Tank four, thirty-six thousand one hundred and fifty cubic metres.",
-   "es": "Tanque cuatro, treinta y seis mil ciento cincuenta metros cúbicos."
+   "text": "No, nobody has touched it.",
+   "es": "No, nadie lo tocó."
   },
-  "m-temp": {
+  "m-working": {
    "voice": "model",
-   "text": "Minus one hundred and sixty degrees.",
-   "es": "Menos ciento sesenta grados."
+   "text": "Yes, it's working now.",
+   "es": "Sí, ya funciona."
   },
-  "m-notok": {
+  "m-t": {
    "voice": "model",
-   "text": "No, there's a discrepancy in tank three.",
-   "es": "No, hay una discrepancia en el tanque tres."
+   "text": "stopped, fixed, checked",
+   "es": "se paró, arreglado, revisado"
   },
-  "m-twice": {
+  "m-d": {
    "voice": "model",
-   "text": "They're checked twice.",
-   "es": "Se controlan dos veces."
+   "text": "changed, failed, frozen",
+   "es": "cambiado, falló, congelado"
   },
-  "m-num": {
+  "m-id": {
    "voice": "model",
-   "text": "thirty-six thousand two hundred and ten",
-   "es": "treinta y seis mil doscientos diez"
+   "text": "reported, tested, started",
+   "es": "reportado, probado, arrancó"
   },
-  "c-show-tank": {
+  "c-show-alarm": {
    "voice": "tanya",
-   "text": "Show me tank three."
+   "text": "Show me the alarm."
   },
-  "c-show-volume": {
+  "c-show-frozen": {
+   "voice": "marek",
+   "text": "Which screen has frozen?"
+  },
+  "c-show-reset": {
+   "voice": "marek",
+   "text": "Where's the reset button?"
+  },
+  "c-show-fuse": {
+   "voice": "marek",
+   "text": "Show me the fuse."
+  },
+  "c-show-spare": {
+   "voice": "marek",
+   "text": "Where's the spare?"
+  },
+  "c-wrong": {
    "voice": "tanya",
-   "text": "Where's the volume of tank one?"
+   "text": "Diego, what's wrong with the radar?"
   },
-  "c-show-cubic": {
+  "c-happened": {
+   "voice": "marek",
+   "text": "So, cadet. What happened? When?"
+  },
+  "c-touched": {
+   "voice": "marek",
+   "text": "Has anybody touched it?"
+  },
+  "c-nowok": {
    "voice": "tanya",
-   "text": "Where are the cubic metres?"
+   "text": "Is it working now?"
   },
-  "c-show-temp": {
+  "c-gyro-other": {
    "voice": "tanya",
-   "text": "Show me the temperature."
+   "text": "The gyro alarm has gone off."
   },
-  "c-show-boiloff": {
-   "voice": "tanya",
-   "text": "Where does the boil-off go?"
+  "c-time-other": {
+   "voice": "marek",
+   "text": "The fuse blew at zero six fifty."
   },
-  "c-show-disc": {
-   "voice": "tanya",
-   "text": "Where's the discrepancy?"
-  },
-  "c-read4": {
-   "voice": "tanya",
-   "text": "Diego, read me tank four."
-  },
-  "c-temp": {
-   "voice": "tanya",
-   "text": "And the temperature?"
-  },
-  "c-allok": {
-   "voice": "tanya",
-   "text": "Is everything OK with the figures?"
-  },
-  "c-howchecked": {
-   "voice": "lars",
-   "text": "Cadet, how are the figures checked?"
-  },
-  "c-num-other": {
-   "voice": "tanya",
-   "text": "Tank two: thirty-six thousand two hundred and forty."
-  },
-  "c-passive-other": {
-   "voice": "tanya",
-   "text": "The report is sent to the company at nine hundred."
+  "c-printer": {
+   "voice": "james",
+   "text": "The printer isn't working again."
   }
  },
  "dialogue": [
@@ -266,150 +281,135 @@
   "l19-10",
   "l19-11",
   "l19-12",
-  "l19-13"
+  "l19-13",
+  "l19-14",
+  "l19-15"
  ],
  "words": {
-  "cargo": {
-   "en": "cargo",
-   "ipa": "/ˈkɑːɡəʊ/",
-   "es": "carga",
-   "audio": "w-cargo",
-   "ex": "x-cargo"
+  "fault": {
+   "en": "fault",
+   "ipa": "/fɔːlt/",
+   "es": "falla",
+   "audio": "w-fault",
+   "ex": "x-fault"
   },
-  "tank": {
-   "en": "tank",
-   "ipa": "/tæŋk/",
-   "es": "tanque",
-   "audio": "w-tank",
-   "ex": "x-tank"
+  "defect": {
+   "en": "defect",
+   "ipa": "/ˈdiːfekt/",
+   "es": "defecto, avería",
+   "audio": "w-defect",
+   "ex": "x-defect"
   },
-  "volume": {
-   "en": "volume",
-   "ipa": "/ˈvɒljuːm/",
-   "es": "volumen",
-   "audio": "w-volume",
-   "ex": "x-volume"
+  "alarm": {
+   "en": "alarm",
+   "ipa": "/əˈlɑːm/",
+   "es": "alarma",
+   "audio": "w-alarm",
+   "ex": "x-alarm"
   },
-  "cubic": {
-   "en": "cubic metre",
-   "ipa": "/ˌkjuːbɪk ˈmiːtə/",
-   "es": "metro cúbico",
-   "audio": "w-cubic",
-   "ex": "x-cubic"
+  "frozen": {
+   "en": "frozen",
+   "ipa": "/ˈfrəʊzn/",
+   "es": "congelado (pantalla)",
+   "audio": "w-frozen",
+   "ex": "x-frozen"
   },
-  "temp": {
-   "en": "temperature",
-   "ipa": "/ˈtemprətʃə/",
-   "es": "temperatura",
-   "audio": "w-temp",
-   "ex": "x-temp"
+  "reset": {
+   "en": "reset",
+   "ipa": "/ˌriːˈset/",
+   "es": "reiniciar",
+   "audio": "w-reset",
+   "ex": "x-reset"
   },
-  "boiloff": {
-   "en": "boil-off",
-   "ipa": "/ˈbɔɪl ɒf/",
-   "es": "vapor",
-   "audio": "w-boiloff",
-   "ex": "x-boiloff"
+  "spare": {
+   "en": "spare",
+   "ipa": "/speə/",
+   "es": "repuesto",
+   "audio": "w-spare",
+   "ex": "x-spare"
   },
-  "discrepancy": {
-   "en": "discrepancy",
-   "ipa": "/dɪˈskrepənsi/",
-   "es": "discrepancia",
-   "audio": "w-discrepancy",
-   "ex": "x-discrepancy"
+  "fuse": {
+   "en": "fuse",
+   "ipa": "/fjuːz/",
+   "es": "fusible",
+   "audio": "w-fuse",
+   "ex": "x-fuse"
   },
-  "figures": {
-   "en": "figures",
-   "ipa": "/ˈfɪɡəz/",
-   "es": "cifras",
-   "audio": "w-figures",
-   "ex": "x-figures"
-  },
-  "flow": {
-   "en": "flow",
-   "ipa": "/fləʊ/",
-   "es": "caudal",
-   "audio": "w-flow",
-   "ex": "x-flow"
+  "repair": {
+   "en": "repair",
+   "ipa": "/rɪˈpeə/",
+   "es": "reparación, reparar",
+   "audio": "w-repair",
+   "ex": "x-repair"
   }
  },
  "plate": {
   "svg": "img/l19/plate.svg",
   "pins": [
    {
-    "word": "tank",
-    "x": 30,
-    "y": 76
+    "word": "alarm",
+    "x": 72,
+    "y": 166
    },
    {
-    "word": "volume",
-    "x": 30,
-    "y": 152
+    "word": "frozen",
+    "x": 176,
+    "y": 28
    },
    {
-    "word": "cubic",
-    "x": 76,
-    "y": 156
+    "word": "reset",
+    "x": 200,
+    "y": 150
    },
    {
-    "word": "temp",
-    "x": 60,
-    "y": 198
+    "word": "fuse",
+    "x": 321,
+    "y": 52
    },
    {
-    "word": "boiloff",
-    "x": 372,
-    "y": 48
-   },
-   {
-    "word": "discrepancy",
-    "x": 280,
-    "y": 68
-   },
-   {
-    "word": "flow",
-    "x": 232,
-    "y": 14
+    "word": "spare",
+    "x": 322,
+    "y": 150
    }
   ]
  },
  "docs": {
-  "cargo": {
+  "defects": {
    "kind": "form",
-   "title": "DAILY CARGO REPORT",
-   "subtitle": "M/V LNG HORIZON · 19 MAR 2026 · 0800",
+   "title": "BRIDGE DEFECT LIST",
+   "subtitle": "M/V LNG HORIZON · 19 MAR 2026",
    "cells": [
     [
-     "TANK 1",
-     "36,180 m³ · −160.2 °C"
+     "EQUIPMENT",
+     "Radar 1 (X-band)"
     ],
     [
-     "TANK 2",
-     "36,240 m³ · −160.1 °C"
+     "FAULT",
+     "Display frozen, alarm at 0725"
     ],
     [
-     "TANK 3",
-     "32,610 m³ · −160.3 °C"
+     "CAUSE",
+     "Fuse blown"
     ],
     [
-     "TANK 4",
-     "36,150 m³ · −160.2 °C"
+     "REPAIR",
+     "Fuse changed by the Chief Engineer, radar reset"
     ],
     [
-     "TOTAL (CARGO SYSTEM)",
-     "144,780 m³"
+     "STATUS",
+     "Working · tested 0750"
     ],
     [
-     "BOIL-OFF",
-     "0.10 % per day · burnt in the engines"
+     "SPARE FUSES",
+     "1 left · order more"
     ],
     [
-     "DESTINATION",
-     "Marseille (Fos)"
+     "REPORTED BY",
+     "Cadet D. Martínez"
     ],
     [
-     "PREPARED BY",
-     "Cadet D. Martínez · checked by C/O T. Williams"
+     "CHECKED BY",
+     "C/O T. Williams"
     ]
    ]
   }
@@ -417,56 +417,43 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: the cargo report",
+   "title": "Listen: the radar alarm",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l19/scene.jpg",
-     "kicker": "Day 6 · 10:00 · off Port Everglades",
-     "title": "Numbers in the cargo control room",
-     "body": "After his watch, Diego works with Tanya in the cargo control room. Every morning they prepare the cargo report. Listen first, one piece at a time.",
+     "kicker": "Day 6 · 07:30 · off Port Everglades",
+     "title": "Radar one stops",
+     "body": "The end of the anchor watch. Suddenly an alarm sounds on the bridge. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l19-01"
+      "l19-01",
+      "l19-02"
      ],
-     "q": "When are the figures taken?",
+     "q": "What's wrong with radar one?",
      "opts": [
-      "At 0800",
-      "At 1000",
-      "At midnight"
+      "The display has frozen",
+      "It's too loud",
+      "It's switched off"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l19-02",
-      "l19-03"
+      "l19-03",
+      "l19-04"
      ],
-     "q": "What is measured?",
+     "q": "Why doesn't Tanya reset it?",
      "opts": [
-      "Volume, temperature and boil-off",
-      "Only the temperature",
-      "Speed and course"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l19-04",
-      "l19-05"
-     ],
-     "q": "What happens to the boil-off gas?",
-     "opts": [
-      "It's burnt in the engines",
-      "It goes into the sea",
-      "It goes back to Houston"
+      "She wants the Chief Engineer to see it",
+      "She doesn't know how",
+      "The Captain is sleeping"
      ],
      "a": 0
     },
@@ -476,39 +463,53 @@
       "l19-07",
       "l19-08"
      ],
-     "q": "What's wrong with tank three?",
+     "q": "When did the alarm go off?",
      "opts": [
-      "The report and the screen are different",
-      "The tank is empty",
-      "The temperature is too high"
+      "0725",
+      "0752",
+      "0525"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l19-10",
-      "l19-11"
+      "l19-09",
+      "l19-10"
      ],
-     "q": "What was the problem?",
+     "q": "Has anybody touched the radar?",
      "opts": [
-      "A typing error",
-      "A gas leak",
-      "A broken sensor"
+      "No",
+      "Yes, Diego",
+      "Yes, Tanya"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l19-12",
-      "l19-13"
+      "l19-11",
+      "l19-12"
      ],
-     "q": "How many times are the figures checked?",
+     "q": "What was the cause?",
      "opts": [
-      "Twice",
-      "Once",
-      "Every hour"
+      "A blown fuse",
+      "Water in the radar",
+      "A software update"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l19-14",
+      "l19-15"
+     ],
+     "q": "What three things go in the defect list?",
+     "opts": [
+      "Fault, cause, repair",
+      "Name, rank, cabin",
+      "Time, course, speed"
      ],
      "a": 0
     },
@@ -521,79 +522,75 @@
   },
   {
    "id": "words",
-   "title": "The cargo",
+   "title": "Faults",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The four cargo tanks from above, as on the cargo system screen."
+     "body": "Radar one with the alarm, and the fuse box under the console."
     },
     {
      "type": "card",
-     "word": "cargo"
+     "word": "alarm"
     },
     {
      "type": "card",
-     "word": "tank"
+     "word": "frozen"
     },
     {
      "type": "tap",
-     "audio": "c-show-tank",
-     "a": "tank"
+     "audio": "c-show-frozen",
+     "a": "frozen"
     },
     {
      "type": "card",
-     "word": "volume"
+     "word": "fault"
     },
     {
      "type": "card",
-     "word": "cubic"
+     "word": "defect"
+    },
+    {
+     "type": "card",
+     "word": "fuse"
+    },
+    {
+     "type": "card",
+     "word": "spare"
     },
     {
      "type": "tap",
-     "audio": "c-show-cubic",
-     "a": "cubic"
+     "audio": "c-show-fuse",
+     "a": "fuse"
     },
     {
      "type": "card",
-     "word": "temp"
+     "word": "reset"
     },
     {
      "type": "card",
-     "word": "boiloff"
-    },
-    {
-     "type": "card",
-     "word": "flow"
+     "word": "repair"
     },
     {
      "type": "tap",
-     "audio": "c-show-boiloff",
-     "a": "boiloff"
-    },
-    {
-     "type": "card",
-     "word": "figures"
-    },
-    {
-     "type": "card",
-     "word": "discrepancy"
+     "audio": "c-show-reset",
+     "a": "reset"
     },
     {
      "type": "tap",
-     "audio": "c-show-disc",
-     "a": "discrepancy"
+     "audio": "c-show-spare",
+     "a": "spare"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"cifras\" in English:",
+     "q": "\"repuesto\" in English:",
      "opts": [
-      "figures",
-      "ciphers",
-      "numbers list"
+      "spare",
+      "replace",
+      "extra piece"
      ],
      "a": 0
     },
@@ -602,24 +599,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "tank",
-       "tanque"
+       "fault",
+       "falla"
       ],
       [
-       "volume",
-       "volumen"
+       "fuse",
+       "fusible"
       ],
       [
-       "cubic metre",
-       "metro cúbico"
+       "spare",
+       "repuesto"
       ],
       [
-       "discrepancy",
-       "discrepancia"
+       "reset",
+       "reiniciar"
       ],
       [
-       "figures",
-       "cifras"
+       "repair",
+       "reparación"
       ]
      ]
     }
@@ -627,233 +624,224 @@
   },
   {
    "id": "phrases",
-   "title": "It is measured",
+   "title": "It has stopped",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Talking about cargo",
+     "title": "Reporting a fault",
      "list": [
       [
-       "The volume is measured in cubic metres.",
-       "El volumen se mide en metros cúbicos.",
-       "p-measured"
+       "Radar one has stopped.",
+       "El radar uno se paró.",
+       "p-stopped"
       ],
       [
-       "LNG is kept at minus one hundred and sixty degrees.",
-       "El GNL se mantiene a menos ciento sesenta grados.",
-       "p-kept"
+       "The display isn't working.",
+       "La pantalla no funciona.",
+       "p-notworking"
       ],
       [
-       "The figures are checked twice.",
-       "Las cifras se controlan dos veces.",
-       "p-checked"
+       "The alarm has gone off.",
+       "Saltó la alarma.",
+       "p-goneoff"
       ],
       [
-       "There's a discrepancy in tank three.",
-       "Hay una discrepancia en el tanque tres.",
-       "p-disc"
+       "Fault, cause, repair.",
+       "Falla, causa, reparación.",
+       "p-fcr"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "The passive: is measured, are checked",
+     "title": "has stopped · isn't working · went off at…",
      "steps": [
       [
-       "one thing",
-       "The volume <b>is measured</b>."
+       "Result now",
+       "The radar <b>has stopped</b>. A fuse <b>has blown</b>."
       ],
       [
-       "more things",
-       "The figures <b>are checked</b> twice."
+       "State now",
+       "The display <b>isn't working</b>."
       ],
       [
-       "in the past",
-       "The numbers <b>were swapped</b>."
+       "With a time",
+       "The alarm <b>went off at</b> 0725."
       ]
      ],
      "paras": [
-      "When the action matters more than the person: <b>is / are / was / were</b> + past participle.",
-      "Reports and procedures use it a lot: <i>The report <b>is sent</b> at 0900. The tanks <b>are inspected</b> every week.</i>"
+      "To report a fault you see <b>now</b>: <b>has / have</b> + past participle (<i>stopped, frozen, gone off, blown</i>), or <b>isn't working</b>.",
+      "When you say <b>when</b> it happened, use the simple past: <i>It <b>stopped</b> at 0725.</i> Not <i>has stopped at</i>."
      ],
-     "avoid": "The volume measures in cubic metres. · The figures are check twice."
+     "avoid": "The radar is stop. · It has stopped at 0725. · It don't work."
     },
     {
      "type": "choice",
-     "q": "The temperature ___ every hour.",
+     "q": "You see the screen: nothing moves. You report…",
      "opts": [
-      "is measured",
-      "measures",
-      "is measure"
+      "The display has frozen.",
+      "The display is freeze.",
+      "The display froze at."
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The figures ___ twice.",
+     "q": "With the time: \"The alarm ___ off at 0725.\"",
      "opts": [
-      "are checked",
-      "is checked",
-      "checked"
+      "went",
+      "has gone",
+      "is going"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "How is LNG kept?",
-     "q": "Answer.",
+     "situation": "Radar two is off and nothing works.",
+     "q": "Report it.",
      "a": [
-      "LNG",
-      "is",
-      "kept",
-      "at",
-      "minus",
-      "160",
-      "degrees."
+      "Radar",
+      "two",
+      "isn't",
+      "working."
      ],
      "extra": [
-      "keeps",
-      "are"
+      "don't",
+      "no"
      ]
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-passive-other"
-     ],
-     "q": "When is the report sent to the company?",
-     "opts": [
-      "At 0900",
-      "At 0800",
-      "At 1900"
-     ],
-     "a": 0
-    },
-    {
-     "type": "tip",
-     "tag": "Language focus",
-     "title": "Big numbers",
-     "steps": [
-      [
-       "36,180",
-       "thirty-six thousand one hundred and eighty"
-      ],
-      [
-       "144,780",
-       "one hundred and forty-four thousand seven hundred and eighty"
-      ],
-      [
-       "−160 °C",
-       "minus one hundred and sixty degrees"
-      ],
-      [
-       "0.10 %",
-       "zero point one zero per cent"
-      ]
-     ],
-     "paras": [
-      "<b>thousand</b> and <b>hundred</b> never take <i>-s</i> after a number: <i>thirty-six thousand</i>, not <i>thousands</i>.",
-      "British English says <b>and</b> before the last part: <i>one hundred <b>and</b> eighty</i>.",
-      "The comma (,) separates thousands; the point (.) is for decimals. It's the opposite of Spanish."
-     ],
-     "avoid": "thirty-six thousands · 36.180 m³ (for thirty-six thousand)"
-    },
-    {
      "type": "type",
-     "audio": "c-num-other",
-     "q": "Write the volume of tank two in numbers.",
+     "audio": "c-time-other",
+     "q": "What time did the fuse blow? Four digits.",
      "accept": [
-      "36240",
-      "36,240",
-      "36.240"
+      "0650",
+      "06:50",
+      "650"
      ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "\"Se mide\" = \"is measured\"",
+     "title": "\"No funciona\" = isn't working",
      "paras": [
-      "Spanish says <i>se mide, se controla, se quema</i>. English uses the passive: <b>is measured, is checked, is burnt</b>.",
-      "And on paper: <b>36,180</b> in English is <i>36.180</i> in Spanish. Read the comma as <b>thousand</b>."
+      "<i>No funciona</i> → <b>It isn't working</b> (or <i>It doesn't work</i>). Not <i>It no works</i>.",
+      "<i>Saltó la alarma</i> → <b>The alarm has gone off</b> / <b>went off</b>. <i>Se quemó el fusible</i> → <b>The fuse has blown</b>."
      ],
-     "avoid": "It measures itself. · Is measured the volume."
+     "avoid": "It no works. · The alarm jumped. · The fuse burned."
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-printer"
+     ],
+     "q": "What's the problem?",
+     "opts": [
+      "The printer isn't working",
+      "The printer is new",
+      "James needs paper"
+     ],
+     "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Long numbers, clear groups",
+     "title": "Three sounds for -ed",
+     "paras": [
+      "After <i>p, k, s, sh, ch, f</i>: a short <b>/t/</b>: <i>stopped, fixed, checked</i>.",
+      "After most other sounds: <b>/d/</b>: <i>changed, failed</i>.",
+      "After <i>t</i> or <i>d</i>: a new syllable <b>/ɪd/</b>: <i>reported, tested, started</i>. Never add a syllable to <i>stopped</i>: it's one beat, <i>stopt</i>."
+     ],
      "list": [
       [
-       "thirty-six thousand two hundred and ten",
-       "treinta y seis mil doscientos diez",
-       "m-num"
+       "stopped, fixed, checked",
+       "/t/",
+       "m-t"
+      ],
+      [
+       "changed, failed, frozen",
+       "/d/",
+       "m-d"
+      ],
+      [
+       "reported, tested, started",
+       "/ɪd/",
+       "m-id"
       ]
-     ],
-     "paras": [
-      "Say long numbers in groups, with a small pause after <b>thousand</b>: <i>thirty-six thousand | two hundred and ten</i>.",
-      "<b>thir-TY</b> vs <b>thir-TEEN</b>: remember Lesson 8."
      ]
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "c-gyro-other"
+     ],
+     "q": "Which alarm?",
+     "opts": [
+      "Gyro",
+      "Radar",
+      "Fire"
+     ],
+     "a": 0
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the cargo report",
+   "title": "Read the defect list",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "cargo",
-     "q": "Which tank has the wrong figure?",
+     "doc": "defects",
+     "q": "What was the cause?",
      "opts": [
-      "Tank 3",
-      "Tank 1",
-      "Tank 4"
+      "A blown fuse",
+      "A broken screen",
+      "Bad weather"
      ],
-     "a": 0,
-     "why": "The others are all about 36,000 m³, and the total doesn't match."
+     "a": 0
     },
     {
      "type": "doc",
-     "doc": "cargo",
-     "q": "What is the temperature in tank 2?",
+     "doc": "defects",
+     "q": "When was the radar tested?",
      "opts": [
-      "−160.1 °C",
-      "−160.3 °C",
-      "+160.1 °C"
+      "0750",
+      "0725",
+      "0705"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "cargo",
-     "q": "Tap where the boil-off goes.",
+     "doc": "defects",
+     "q": "Tap what they must order.",
      "a": 5
     },
     {
      "type": "doc",
-     "doc": "cargo",
-     "q": "Where is the cargo going?",
+     "doc": "defects",
+     "q": "Who changed the fuse?",
      "opts": [
-      "Marseille",
-      "Houston",
-      "Port Everglades"
+      "The Chief Engineer",
+      "The cadet",
+      "The Chief Officer"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "cargo",
-     "q": "Who checked the report?",
+     "doc": "defects",
+     "q": "Is the radar working now?",
      "opts": [
-      "The Chief Officer",
-      "The Captain",
-      "The cadet"
+      "Yes",
+      "No",
+      "Only at night"
      ],
      "a": 0
     }
@@ -861,76 +849,77 @@
   },
   {
    "id": "speak",
-   "title": "Read the figures",
+   "title": "Report the fault",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Numbers, slowly and clearly",
-     "body": "Listen, say it, check it. Group big numbers: thirty-six THOUSAND | one hundred and FIFTY.",
-     "es": "Números largos, en grupos.",
+     "title": "Short fault reports",
+     "body": "Listen, say it, check it. What, then the state: Radar one HAS STOPPED.",
+     "es": "Qué equipo, y qué le pasa.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-measured"
+     "model": "p-stopped"
     },
     {
      "type": "shadow",
-     "model": "p-kept"
+     "model": "p-goneoff"
     },
     {
      "type": "shadow",
-     "model": "p-disc"
+     "model": "p-fcr"
     },
     {
      "type": "role",
-     "cue": "c-read4",
-     "task": "Tank 4: 36,150 m³. Read it.",
-     "model": "m-tank4",
+     "cue": "c-wrong",
+     "task": "It stopped and the screen doesn't work. Tell her.",
+     "model": "m-wrong",
      "accept": [
-      "Tank four, thirty-six thousand one hundred and fifty cubic metres.",
-      "Thirty-six thousand one hundred and fifty cubic metres.",
-      "Tank four, 36,150 cubic metres.",
-      "Thirty-six thousand one hundred fifty cubic metres."
+      "It has stopped. The display isn't working.",
+      "It has stopped.",
+      "It's stopped. The display isn't working.",
+      "The display isn't working.",
+      "The display has frozen."
      ]
     },
     {
      "type": "role",
-     "cue": "c-temp",
-     "task": "It's −160 °C.",
-     "model": "m-temp",
+     "cue": "c-happened",
+     "task": "The alarm went off at 0720.",
+     "model": "m-happened",
      "accept": [
-      "Minus one hundred and sixty degrees.",
-      "Minus 160 degrees.",
-      "Minus one hundred sixty degrees.",
-      "It's minus one hundred and sixty degrees."
+      "The alarm went off at zero seven twenty.",
+      "At zero seven twenty.",
+      "The alarm went off at 0720.",
+      "It went off at zero seven twenty."
      ]
     },
     {
      "type": "role",
-     "cue": "c-allok",
-     "task": "No: tank three doesn't match.",
-     "model": "m-notok",
+     "cue": "c-touched",
+     "task": "Nobody touched it. Tell him.",
+     "model": "m-nobody",
      "accept": [
-      "No, there's a discrepancy in tank three.",
-      "There's a discrepancy in tank three.",
-      "No. There is a discrepancy in tank three.",
-      "No, tank three has a discrepancy."
+      "No, nobody has touched it.",
+      "Nobody has touched it.",
+      "No, nobody.",
+      "No, nobody touched it."
      ]
     },
     {
      "type": "role",
-     "cue": "c-howchecked",
-     "task": "Twice. Tell the Captain.",
-     "model": "m-twice",
+     "cue": "c-nowok",
+     "task": "Yes, it works now.",
+     "model": "m-working",
      "accept": [
-      "They're checked twice.",
-      "They are checked twice.",
-      "Twice, Captain.",
-      "The figures are checked twice."
+      "Yes, it's working now.",
+      "Yes, it's working.",
+      "Yes, it is working now.",
+      "It's working now."
      ]
     }
    ]
@@ -943,92 +932,97 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-volume",
+     "audio": "w-fuse",
      "q": "Type what you hear.",
      "accept": [
-      "volume",
-      "the volume"
+      "fuse",
+      "a fuse",
+      "the fuse"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-temp",
-     "a": "temp"
+     "audio": "c-show-alarm",
+     "a": "alarm"
     },
     {
      "type": "tap",
-     "audio": "c-show-volume",
-     "a": "volume"
+     "audio": "c-show-fuse",
+     "a": "fuse"
     },
     {
      "type": "listen",
      "audio": [
-      "l19-09"
+      "l19-05",
+      "l19-06"
      ],
-     "q": "How big is the difference?",
+     "q": "Who is coming to the bridge?",
      "opts": [
-      "4,000 cubic metres",
-      "400 cubic metres",
-      "40 cubic metres"
+      "The Chief Engineer",
+      "The Captain",
+      "The bosun"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The report ___ again after the correction.",
+     "q": "A piece you keep for when the old one breaks is a…",
      "opts": [
-      "is signed",
-      "signs",
-      "is sign"
+      "spare",
+      "fault",
+      "reset"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The two numbers don't match. That's a…",
+     "q": "\"What does the radar do?\" \"It ___ other ships.\"",
      "opts": [
-      "discrepancy",
-      "boil-off",
-      "volume"
+      "shows",
+      "show",
+      "is show"
      ],
-     "a": 0
+     "a": 0,
+     "why": "From Lessons 4 and 13."
     },
     {
      "type": "build",
-     "q": "Say how the figures are checked.",
+     "q": "Report: the alarm sounded at 0725.",
      "a": [
       "The",
-      "figures",
-      "are",
-      "checked",
-      "twice."
+      "alarm",
+      "went",
+      "off",
+      "at",
+      "0725."
      ],
      "extra": [
-      "is",
-      "check"
+      "has",
+      "gone"
      ]
     },
     {
      "type": "choice",
-     "q": "Which one says 1,250?",
+     "q": "Which -ed ending is one beat, /t/?",
      "opts": [
-      "one thousand two hundred and fifty",
-      "one thousands two hundreds fifty",
-      "twelve fifty thousand"
+      "stopped",
+      "reported",
+      "tested"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: discrepancia",
+     "q": "Write it in English: fusible",
      "accept": [
-      "discrepancy",
-      "a discrepancy"
+      "fuse",
+      "a fuse",
+      "the fuse"
      ]
     }
    ]
   }
  ],
  "modelAudio": true,
- "mediaRev": 2
+ "mediaRev": 1
 }

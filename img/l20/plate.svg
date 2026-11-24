@@ -1,34 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Bunkering at anchor seen from above: the barge alongside with the oil boom around it, the hose to the bunker station, plugged scuppers, the SOPEP locker and a small spill in the drip tray">
-  <!-- Lesson 20 plate: seen from above. The ship's port side is at the top, the bunker barge alongside below it,
-       the yellow oil boom floats around the barge. The hose runs from the barge to the bunker station (drip tray);
-       the arrow shows the bunkers going in. Scuppers along the deck edge are plugged (red plugs). The SOPEP locker
-       is next to the bunker station; a small spill sits in the drip tray. Colours come from app.css (.p-*). -->
-  <rect class="p-water" x="0" y="0" width="400" height="240"/>
-  <!-- ship (port side towards the barge) -->
-  <rect x="0" y="0" width="400" height="92" class="p-hull"/>
-  <rect x="0" y="0" width="400" height="84" class="p-deck"/>
-  <!-- scuppers along the deck edge, plugged -->
-  <g><circle cx="40" cy="78" r="5" class="p-hull"/><circle cx="40" cy="78" r="3" style="fill:#E23D2D"/>
-     <circle cx="120" cy="78" r="5" class="p-hull"/><circle cx="120" cy="78" r="3" style="fill:#E23D2D"/>
-     <circle cx="300" cy="78" r="5" class="p-hull"/><circle cx="300" cy="78" r="3" style="fill:#E23D2D"/>
-     <circle cx="370" cy="78" r="5" class="p-hull"/><circle cx="370" cy="78" r="3" style="fill:#E23D2D"/></g>
-  <!-- bunker station with drip tray -->
-  <rect x="176" y="40" width="56" height="34" rx="3" style="fill:#5E6B78"/>
-  <rect x="182" y="46" width="44" height="22" rx="2" class="p-hull" opacity=".7"/>
-  <circle cx="204" cy="57" r="5" class="p-white"/>
-  <!-- small spill in the drip tray -->
-  <path d="M184 62 q6 -6 12 -2 q6 3 10 -1 q4 4 -2 7 q-8 3 -20 -4 z" style="fill:#1B1B1B" opacity=".75"/>
-  <!-- SOPEP locker -->
-  <rect x="246" y="30" width="36" height="40" rx="3" style="fill:#F2C230;stroke:var(--hull)" stroke-width="1.5"/>
-  <rect x="252" y="36" width="24" height="10" rx="1" class="p-white"/>
-  <circle cx="276" cy="56" r="2" class="p-hull"/>
-  <!-- barge -->
-  <path d="M60 118 H330 Q350 118 350 140 V176 Q350 198 330 198 H60 Q40 198 40 176 V140 Q40 118 60 118 Z" class="p-red"/>
-  <rect x="80" y="130" width="70" height="56" rx="4" style="fill:#7A3226"/><rect x="170" y="130" width="70" height="56" rx="4" style="fill:#7A3226"/>
-  <rect x="270" y="132" width="50" height="40" rx="3" class="p-super"/>
-  <!-- hose from barge manifold to the bunker station, with flow arrow -->
-  <path d="M210 128 C210 108 204 100 204 74" fill="none" style="stroke:#1B1B1B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M222 112 V92 M216 98 L222 90 L228 98" fill="none" style="stroke:#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- oil boom around the barge -->
-  <path d="M28 104 H362 Q382 104 382 126 V196 Q382 222 360 222 H30 Q10 222 10 196 V126 Q10 104 28 104 Z" fill="none" style="stroke:#F2C230" stroke-width="4" stroke-dasharray="10 4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="The four cargo tanks from above with volume and temperature; tank 3 shows a discrepancy; the boil-off gas goes to the engines, with a flow meter on the header">
+  <!-- Lesson 19 plate: the four spherical tanks as on the cargo system, each with its volume (m³) and temperature (°C).
+       Tank 3 shows the wrong figure from the paper report (discrepancy, red). The boil-off gas leaves the tanks
+       through the vapour header (top) and goes to the engines (right). Colours come from app.css (.p-*). Generated. -->
+  <rect class="p-soft" x="0" y="0" width="400" height="240"/>
+  <line x1="52" y1="34" x2="372" y2="34" style="stroke:#8A97A4" stroke-width="4"/>
+  <path d="M372 34 H388 V60" fill="none" style="stroke:#8A97A4" stroke-width="4"/>
+  <path d="M381 58 L388 70 L395 58 Z" style="fill:#8A97A4"/>
+  <g transform="translate(388 82)"><circle r="9" class="p-hull"/><circle r="4" style="fill:#E9C46A"/></g>
+  <g fill="none" style="stroke:#9AA6B2" stroke-width="1.6" stroke-linecap="round" opacity=".9">
+    <path d="M300 24 q4 -6 0 -12 q-4 -6 0 -12"/><path d="M314 24 q4 -6 0 -12 q-4 -6 0 -12"/>
+  </g>
+  <circle cx="52" cy="104" r="38" class="p-super" style="stroke:var(--hull)" stroke-width="1.5"/><circle cx="52" cy="104" r="26" fill="none" style="stroke:#9AA6B2" stroke-width="1" stroke-dasharray="3 3"/><text x="52" y="109" text-anchor="middle" style="font:700 14px var(--f-display);fill:var(--hull)">1</text><rect x="8" y="152" width="88" height="44" rx="5" style="fill:#13212D"/><text x="16" y="170" style="font:700 12px var(--f-mono);fill:#3DDC84">36,180</text><text x="72" y="170" style="font:600 9px var(--f-mono);fill:#7FA7B8">m³</text><text x="16" y="188" style="font:600 10px var(--f-mono);fill:#7FA7B8">−160.2 °C</text><line x1="52" y1="66" x2="52" y2="34" style="stroke:#8A97A4" stroke-width="3"/><circle cx="146" cy="104" r="38" class="p-super" style="stroke:var(--hull)" stroke-width="1.5"/><circle cx="146" cy="104" r="26" fill="none" style="stroke:#9AA6B2" stroke-width="1" stroke-dasharray="3 3"/><text x="146" y="109" text-anchor="middle" style="font:700 14px var(--f-display);fill:var(--hull)">2</text><rect x="102" y="152" width="88" height="44" rx="5" style="fill:#13212D"/><text x="110" y="170" style="font:700 12px var(--f-mono);fill:#3DDC84">36,240</text><text x="166" y="170" style="font:600 9px var(--f-mono);fill:#7FA7B8">m³</text><text x="110" y="188" style="font:600 10px var(--f-mono);fill:#7FA7B8">−160.1 °C</text><line x1="146" y1="66" x2="146" y2="34" style="stroke:#8A97A4" stroke-width="3"/><circle cx="240" cy="104" r="38" class="p-super" style="stroke:var(--antifoul)" stroke-width="3"/><circle cx="240" cy="104" r="26" fill="none" style="stroke:#9AA6B2" stroke-width="1" stroke-dasharray="3 3"/><text x="240" y="109" text-anchor="middle" style="font:700 14px var(--f-display);fill:var(--hull)">3</text><rect x="196" y="152" width="88" height="44" rx="5" style="fill:#13212D"/><text x="204" y="170" style="font:700 12px var(--f-mono);fill:#FF8A7A">32,610</text><text x="260" y="170" style="font:600 9px var(--f-mono);fill:#7FA7B8">m³</text><text x="204" y="188" style="font:600 10px var(--f-mono);fill:#7FA7B8">−160.3 °C</text><line x1="240" y1="66" x2="240" y2="34" style="stroke:#8A97A4" stroke-width="3"/><circle cx="334" cy="104" r="38" class="p-super" style="stroke:var(--hull)" stroke-width="1.5"/><circle cx="334" cy="104" r="26" fill="none" style="stroke:#9AA6B2" stroke-width="1" stroke-dasharray="3 3"/><text x="334" y="109" text-anchor="middle" style="font:700 14px var(--f-display);fill:var(--hull)">4</text><rect x="290" y="152" width="88" height="44" rx="5" style="fill:#13212D"/><text x="298" y="170" style="font:700 12px var(--f-mono);fill:#3DDC84">36,150</text><text x="354" y="170" style="font:600 9px var(--f-mono);fill:#7FA7B8">m³</text><text x="298" y="188" style="font:600 10px var(--f-mono);fill:#7FA7B8">−160.2 °C</text><line x1="334" y1="66" x2="334" y2="34" style="stroke:#8A97A4" stroke-width="3"/>
+  <!-- discrepancy mark on tank 3 -->
+  <path d="M262 70 L276 94 H248 Z" style="fill:#F2C230;stroke:var(--hull)" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="262" y="91" text-anchor="middle" style="font:900 14px var(--f-display);fill:var(--hull)">!</text>
+  <!-- FLOW: the flow meter on the vapour header, gas moving towards the engines -->
+  <g style="fill:#8A97A4"><path d="M118 29 l7 5 l-7 5 z"/><path d="M212 29 l7 5 l-7 5 z"/><path d="M306 29 l7 5 l-7 5 z"/></g>
+  <line x1="180" y1="22" x2="180" y2="32" style="stroke:var(--hull)" stroke-width="2"/>
+  <rect x="140" y="4" width="80" height="20" rx="4" class="p-hull"/>
+  <text x="180" y="18" text-anchor="middle" style="font:700 9px var(--f-mono);fill:#3DDC84">3,200 kg/h →</text>
 </svg>

@@ -1,256 +1,267 @@
 {
- "n": 17,
- "module": 5,
- "title": "Speaking up about safety",
- "place": "Day 6 · 05:30 · off Port Everglades, main deck",
- "goal": "Speak up politely and clearly when something isn't safe, and report it.",
+ "n": 17, "modelAudio": true, "mediaRev": 1,
+ "module": 4,
+ "title": "Course, position & traffic",
+ "place": "Day 5 · 17:00 · Florida Strait, bridge",
+ "goal": "Report other ships as lookout: what, where, how far, and the bearing.",
  "images": {
   "hero": "img/l17/hero.jpg",
   "scene": "img/l17/scene.jpg"
  },
- "radioChannel": "UHF",
  "audio": {
   "l17-01": {
-   "voice": "diego",
-   "text": "Bosun! Sorry, can I say something?",
-   "es": "¡Contramaestre! Perdón, ¿puedo decir algo?"
+   "voice": "tanya",
+   "text": "Busy afternoon, Diego. This is the Florida Strait. Report every ship you see.",
+   "es": "Tarde movida, Diego. Este es el Estrecho de Florida. Reportá cada buque que veas."
   },
   "l17-02": {
-   "voice": "rolando",
-   "text": "Morning, cadet. Quick, I'm busy. What is it?",
-   "es": "Buen día, cadete. Rápido, que estoy ocupado. ¿Qué pasa?"
+   "pause": 1200,
+   "voice": "diego",
+   "text": "Ship on the starboard bow!",
+   "es": "¡Buque por la amura de estribor!"
   },
   "l17-03": {
-   "voice": "diego",
-   "text": "This grating is cracked. Look, here. The edge is up.",
-   "es": "Esta rejilla está rajada. Mirá, acá. El borde está levantado."
+   "voice": "tanya",
+   "text": "Range?",
+   "es": "¿Distancia?"
   },
   "l17-04": {
-   "pause": 900,
-   "voice": "rolando",
-   "text": "Ah, yes. It's an old crack. It's OK, just walk around it.",
-   "es": "Ah, sí. Es una rajadura vieja. No pasa nada, pasá por al costado."
+   "voice": "diego",
+   "text": "About six miles.",
+   "es": "Unas seis millas."
   },
   "l17-05": {
-   "pause": 700,
-   "voice": "diego",
-   "text": "Sorry, Bosun, but I don't think it's safe. It's a trip hazard. Someone could fall in the dark.",
-   "es": "Perdón, contramaestre, pero no creo que sea seguro. Es un peligro de tropiezo. Alguien se puede caer a oscuras."
+   "voice": "tanya",
+   "text": "Good. Now take a bearing, and again in three minutes.",
+   "es": "Bien. Ahora tomá una marcación, y otra en tres minutos."
   },
   "l17-06": {
-   "pause": 900,
-   "voice": "rolando",
-   "text": "Hmm. You're right. At night nobody sees it.",
-   "es": "Mmm. Tenés razón. De noche nadie la ve."
-  },
-  "l17-07": {
-   "voice": "diego",
-   "text": "Can we put a barrier and a warning sign?",
-   "es": "¿Podemos poner una barrera y un cartel de advertencia?"
-  },
-  "l17-08": {
-   "voice": "rolando",
-   "text": "Good idea. Bring the tape and a sign from the store. I'll stay here.",
-   "es": "Buena idea. Traé la cinta y un cartel del pañol. Yo me quedo acá."
-  },
-  "l17-09": {
    "pause": 1500,
    "voice": "diego",
-   "text": "Here. Barrier tape and the sign.",
-   "es": "Acá está. Cinta de barrera y el cartel."
+   "text": "Bearing zero four five… Now zero four five again. The bearing is steady.",
+   "es": "Marcación cero cuatro cinco… Ahora cero cuatro cinco otra vez. La marcación se mantiene."
+  },
+  "l17-07": {
+   "voice": "tanya",
+   "text": "Steady bearing, and the range is closing. What does that mean?",
+   "es": "Marcación constante, y la distancia se achica. ¿Qué significa eso?"
+  },
+  "l17-08": {
+   "pause": 600,
+   "voice": "diego",
+   "text": "Risk of collision?",
+   "es": "¿Riesgo de abordaje?"
+  },
+  "l17-09": {
+   "voice": "tanya",
+   "text": "Exactly. She's crossing from starboard, so we give way. I'm altering course to starboard.",
+   "es": "Exacto. Nos cruza desde estribor, así que maniobramos nosotros. Caigo a estribor."
   },
   "l17-10": {
-   "voice": "rolando",
-   "text": "Good. Now report it to the bridge. Say exactly where it is.",
-   "es": "Bien. Ahora reportalo al puente. Decí exactamente dónde está."
+   "pause": 1200,
+   "voice": "diego",
+   "text": "Another ship on the port quarter. She's overtaking us.",
+   "es": "Otro buque por la aleta de babor. Nos está alcanzando."
   },
   "l17-11": {
-   "voice": "diego",
-   "text": "Bridge, Diego. There's a cracked grating on the walkway between tank two and tank three, port side. We put a barrier and a sign. Over.",
-   "es": "Puente, Diego. Hay una rejilla rajada en la pasarela entre el tanque dos y el tres, babor. Pusimos una barrera y un cartel. Cambio."
+   "voice": "tanya",
+   "text": "Overtaking. She keeps clear of us. Good report.",
+   "es": "Alcanzando. Ella se mantiene apartada. Buen reporte."
   },
   "l17-12": {
-   "pause": 800,
-   "voice": "tanya",
-   "text": "Received, Diego. Well done. Write a near miss report after the watch. Over.",
-   "es": "Recibido, Diego. Bien hecho. Escribí un reporte de casi accidente después de la guardia. Cambio.",
-   "radio": true
+   "pause": 1200,
+   "voice": "diego",
+   "text": "And one ship right ahead. Head-on!",
+   "es": "Y un buque justo adelante. ¡De vuelta encontrada!"
   },
   "l17-13": {
-   "pause": 800,
-   "voice": "rolando",
-   "text": "You see, cadet? Speaking up is part of the job.",
-   "es": "¿Ves, cadete? Hablar es parte del trabajo."
+   "pause": 400,
+   "voice": "tanya",
+   "text": "Head-on: both ships alter to starboard. Let's check the CPA on the radar… One point five miles. Watch her.",
+   "es": "De vuelta encontrada: los dos caen a estribor. Veamos el CPA en el radar… Una coma cinco millas. Vigilalo."
   },
   "l17-14": {
    "voice": "diego",
-   "text": "Thanks, Bosun.",
-   "es": "Gracias, contramaestre."
+   "text": "Watching her, Chief.",
+   "es": "La vigilo, jefa."
   },
-  "w-crack": {
+  "w-bearing": {
    "voice": "model",
-   "text": "crack"
+   "text": "bearing"
   },
-  "x-crack": {
+  "x-bearing": {
    "voice": "model",
-   "text": "There's a crack in the grating.",
-   "es": "Hay una rajadura en la rejilla."
+   "text": "The bearing is steady.",
+   "es": "La marcación se mantiene."
   },
-  "w-grating": {
+  "w-range": {
    "voice": "model",
-   "text": "grating"
+   "text": "range"
   },
-  "x-grating": {
+  "x-range": {
    "voice": "model",
-   "text": "This grating is cracked.",
-   "es": "Esta rejilla está rajada."
+   "text": "Range six miles.",
+   "es": "Distancia seis millas."
   },
-  "w-walkway": {
+  "w-stbdbow": {
    "voice": "model",
-   "text": "walkway"
+   "text": "starboard bow"
   },
-  "x-walkway": {
+  "x-stbdbow": {
    "voice": "model",
-   "text": "The walkway between the tanks.",
-   "es": "La pasarela entre los tanques."
+   "text": "Ship on the starboard bow.",
+   "es": "Buque por la amura de estribor."
   },
-  "w-trip": {
+  "w-portqtr": {
    "voice": "model",
-   "text": "trip hazard"
+   "text": "port quarter"
   },
-  "x-trip": {
+  "x-portqtr": {
    "voice": "model",
-   "text": "It's a trip hazard.",
-   "es": "Es un peligro de tropiezo."
+   "text": "A ship on the port quarter.",
+   "es": "Un buque por la aleta de babor."
   },
-  "w-barrier": {
+  "w-crossing": {
    "voice": "model",
-   "text": "barrier"
+   "text": "crossing"
   },
-  "x-barrier": {
+  "x-crossing": {
    "voice": "model",
-   "text": "Put a barrier around it.",
-   "es": "Poné una barrera alrededor."
+   "text": "She's crossing from starboard.",
+   "es": "Nos cruza desde estribor."
   },
-  "w-sign": {
+  "w-overtaking": {
    "voice": "model",
-   "text": "warning sign"
+   "text": "overtaking"
   },
-  "x-sign": {
+  "x-overtaking": {
    "voice": "model",
-   "text": "Bring a warning sign.",
-   "es": "Traé un cartel de advertencia."
+   "text": "She's overtaking us.",
+   "es": "Nos está alcanzando."
   },
-  "w-nearmiss": {
+  "w-headon": {
    "voice": "model",
-   "text": "near miss"
+   "text": "head-on"
   },
-  "x-nearmiss": {
+  "x-headon": {
    "voice": "model",
-   "text": "Write a near miss report.",
-   "es": "Escribí un reporte de casi accidente."
+   "text": "A ship right ahead, head-on.",
+   "es": "Un buque justo adelante, de vuelta encontrada."
   },
-  "w-report": {
+  "w-cpa": {
    "voice": "model",
-   "text": "report"
+   "text": "CPA"
   },
-  "x-report": {
+  "x-cpa": {
    "voice": "model",
-   "text": "Report it to the bridge.",
-   "es": "Reportalo al puente."
+   "text": "The CPA is one point five miles.",
+   "es": "El CPA es una coma cinco millas."
   },
-  "p-cani": {
+  "p-report": {
    "voice": "model",
-   "text": "Sorry, can I say something?",
-   "es": "Perdón, ¿puedo decir algo?"
+   "text": "Ship on the starboard bow, range six miles.",
+   "es": "Buque por la amura de estribor, distancia seis millas."
   },
-  "p-dontthink": {
+  "p-steady": {
    "voice": "model",
-   "text": "I don't think it's safe.",
-   "es": "No creo que sea seguro."
+   "text": "The bearing is steady.",
+   "es": "La marcación se mantiene."
   },
-  "p-trip": {
+  "p-overtaking": {
    "voice": "model",
-   "text": "It's a trip hazard.",
-   "es": "Es un peligro de tropiezo."
+   "text": "She's overtaking us.",
+   "es": "Nos está alcanzando."
   },
-  "p-there": {
+  "p-headon": {
    "voice": "model",
-   "text": "There's a cracked grating on the walkway.",
-   "es": "Hay una rejilla rajada en la pasarela."
+   "text": "One ship right ahead, head-on.",
+   "es": "Un buque justo adelante, de vuelta encontrada."
   },
-  "m-notsafe": {
+  "m-portbow": {
    "voice": "model",
-   "text": "Sorry, but I don't think it's safe.",
-   "es": "Perdón, pero no creo que sea seguro."
+   "text": "Ship on the port bow, range four miles.",
+   "es": "Buque por la amura de babor, distancia cuatro millas."
   },
-  "m-problem": {
+  "m-stbdbeam": {
    "voice": "model",
-   "text": "There's a cracked grating on the walkway.",
-   "es": "Hay una rejilla rajada en la pasarela."
+   "text": "Ship on the starboard beam, range three miles.",
+   "es": "Buque por el través de estribor, distancia tres millas."
   },
-  "m-notthisway": {
+  "m-steady": {
    "voice": "model",
-   "text": "I don't think it's safe. There's a crack.",
-   "es": "No creo que sea seguro. Hay una rajadura."
+   "text": "Bearing steady. Range closing.",
+   "es": "Marcación constante. Distancia disminuyendo."
   },
-  "m-need": {
+  "m-overtaking": {
    "voice": "model",
-   "text": "A barrier and a warning sign.",
-   "es": "Una barrera y un cartel de advertencia."
+   "text": "A ship on the port quarter is overtaking us.",
+   "es": "Un buque por la aleta de babor nos está alcanzando."
   },
-  "m-firm": {
+  "m-quarter": {
    "voice": "model",
-   "text": "I don't think it's safe.",
-   "es": "No creo que sea seguro."
+   "text": "quarter",
+   "es": "aleta"
   },
-  "c-show-crack": {
-   "voice": "rolando",
-   "text": "Show me the crack."
+  "m-cpa": {
+   "voice": "model",
+   "text": "C, P, A",
+   "es": "C, P, A"
   },
-  "c-show-grating": {
+  "c-show-bearing": {
    "voice": "tanya",
-   "text": "Where's the grating?"
+   "text": "Show me the bearing."
   },
-  "c-show-walkway": {
-   "voice": "rolando",
-   "text": "Show me the walkway."
-  },
-  "c-show-trip": {
-   "voice": "tanya",
-   "text": "Where's the trip hazard?"
-  },
-  "c-show-barrier": {
-   "voice": "rolando",
-   "text": "Where's the barrier?"
-  },
-  "c-show-sign": {
-   "voice": "tanya",
-   "text": "Show me the warning sign."
-  },
-  "c-walkaround": {
-   "voice": "rolando",
-   "text": "It's OK, just walk around it."
-  },
-  "c-whatproblem": {
-   "voice": "tanya",
-   "text": "Diego, what's the problem?"
-  },
-  "c-thisway": {
+  "c-show-stbdbow": {
    "voice": "james",
-   "text": "Can I go this way? It's shorter."
+   "text": "Show me the starboard bow."
   },
-  "c-needwhat": {
-   "voice": "rolando",
-   "text": "OK, cadet. What do we need?"
-  },
-  "c-where-other": {
+  "c-show-portqtr": {
    "voice": "tanya",
-   "text": "There's oil on the deck next to the windlass."
+   "text": "Show me the port quarter."
   },
-  "c-dont-other": {
-   "voice": "rolando",
-   "text": "I don't think this ladder is safe."
+  "c-show-crossing": {
+   "voice": "tanya",
+   "text": "Which ship is crossing?"
+  },
+  "c-show-overtaking": {
+   "voice": "james",
+   "text": "Which ship is overtaking?"
+  },
+  "c-show-headon": {
+   "voice": "tanya",
+   "text": "Which ship is head-on?"
+  },
+  "c-show-cpa": {
+   "voice": "tanya",
+   "text": "Where's the CPA?"
+  },
+  "c-see1": {
+   "voice": "tanya",
+   "text": "Diego, anything on the port side?"
+  },
+  "c-see2": {
+   "voice": "tanya",
+   "text": "And on the starboard side?"
+  },
+  "c-bearing": {
+   "voice": "tanya",
+   "text": "And the bearing? Is it changing?"
+  },
+  "c-behind": {
+   "voice": "lars",
+   "text": "Cadet, what's that ship behind us?"
+  },
+  "c-range-other": {
+   "voice": "tanya",
+   "text": "Range three point five miles."
+  },
+  "c-bearing-other": {
+   "voice": "james",
+   "text": "Bearing two seven zero."
+  },
+  "c-changing": {
+   "voice": "tanya",
+   "text": "Bearing zero four five… now zero five five. It's changing."
   }
  },
  "dialogue": [
@@ -270,135 +281,145 @@
   "l17-14"
  ],
  "words": {
-  "crack": {
-   "en": "crack",
-   "ipa": "/kræk/",
-   "es": "rajadura, fisura",
-   "audio": "w-crack",
-   "ex": "x-crack"
+  "bearing": {
+   "en": "bearing",
+   "ipa": "/ˈbeərɪŋ/",
+   "es": "marcación",
+   "audio": "w-bearing",
+   "ex": "x-bearing"
   },
-  "grating": {
-   "en": "grating",
-   "ipa": "/ˈɡreɪtɪŋ/",
-   "es": "rejilla (de piso)",
-   "audio": "w-grating",
-   "ex": "x-grating"
+  "range": {
+   "en": "range",
+   "ipa": "/reɪndʒ/",
+   "es": "distancia",
+   "audio": "w-range",
+   "ex": "x-range"
   },
-  "walkway": {
-   "en": "walkway",
-   "ipa": "/ˈwɔːkweɪ/",
-   "es": "pasarela",
-   "audio": "w-walkway",
-   "ex": "x-walkway"
+  "stbdbow": {
+   "en": "starboard bow",
+   "ipa": "/ˈstɑːbəd ˈbaʊ/",
+   "es": "amura de estribor",
+   "audio": "w-stbdbow",
+   "ex": "x-stbdbow"
   },
-  "trip": {
-   "en": "trip hazard",
-   "ipa": "/ˈtrɪp ˌhæzəd/",
-   "es": "peligro de tropiezo",
-   "audio": "w-trip",
-   "ex": "x-trip"
+  "portqtr": {
+   "en": "port quarter",
+   "ipa": "/ˌpɔːt ˈkwɔːtə/",
+   "es": "aleta de babor",
+   "audio": "w-portqtr",
+   "ex": "x-portqtr"
   },
-  "barrier": {
-   "en": "barrier",
-   "ipa": "/ˈbæriə/",
-   "es": "barrera",
-   "audio": "w-barrier",
-   "ex": "x-barrier"
+  "crossing": {
+   "en": "crossing",
+   "ipa": "/ˈkrɒsɪŋ/",
+   "es": "que cruza",
+   "audio": "w-crossing",
+   "ex": "x-crossing"
   },
-  "sign": {
-   "en": "warning sign",
-   "ipa": "/ˈwɔːnɪŋ saɪn/",
-   "es": "cartel de advertencia",
-   "audio": "w-sign",
-   "ex": "x-sign"
+  "overtaking": {
+   "en": "overtaking",
+   "ipa": "/ˌəʊvəˈteɪkɪŋ/",
+   "es": "que alcanza",
+   "audio": "w-overtaking",
+   "ex": "x-overtaking"
   },
-  "nearmiss": {
-   "en": "near miss",
-   "ipa": "/ˌnɪə ˈmɪs/",
-   "es": "casi accidente",
-   "audio": "w-nearmiss",
-   "ex": "x-nearmiss"
+  "headon": {
+   "en": "head-on",
+   "ipa": "/ˌhed ˈɒn/",
+   "es": "de vuelta encontrada",
+   "audio": "w-headon",
+   "ex": "x-headon"
   },
-  "report": {
-   "en": "report",
-   "ipa": "/rɪˈpɔːt/",
-   "es": "reportar, reporte",
-   "audio": "w-report",
-   "ex": "x-report"
+  "cpa": {
+   "en": "CPA",
+   "ipa": "/ˌsiː piː ˈeɪ/",
+   "es": "punto de máxima aproximación",
+   "audio": "w-cpa",
+   "ex": "x-cpa"
   }
  },
  "plate": {
   "svg": "img/l17/plate.svg",
   "pins": [
    {
-    "word": "walkway",
-    "x": 200,
-    "y": 84
+    "word": "stbdbow",
+    "x": 242,
+    "y": 40
    },
    {
-    "word": "grating",
-    "x": 250,
-    "y": 186
+    "word": "portqtr",
+    "x": 128,
+    "y": 172
    },
    {
-    "word": "crack",
-    "x": 150,
-    "y": 184
+    "word": "crossing",
+    "x": 264,
+    "y": 52
    },
    {
-    "word": "trip",
+    "word": "overtaking",
+    "x": 186,
+    "y": 168
+   },
+   {
+    "word": "headon",
+    "x": 218,
+    "y": 30
+   },
+   {
+    "word": "bearing",
+    "x": 232,
+    "y": 100
+   },
+   {
+    "word": "range",
     "x": 110,
-    "y": 214
+    "y": 132
    },
    {
-    "word": "barrier",
-    "x": 150,
-    "y": 146
-   },
-   {
-    "word": "sign",
-    "x": 262,
-    "y": 120
+    "word": "cpa",
+    "x": 192,
+    "y": 58
    }
   ]
  },
  "docs": {
-  "nm": {
+  "targets": {
    "kind": "form",
-   "title": "NEAR MISS REPORT",
-   "subtitle": "M/V LNG HORIZON · No. NM-0319",
+   "title": "RADAR TARGETS",
+   "subtitle": "M/V LNG HORIZON · FLORIDA STRAIT · 18 MAR 2026 · 1715",
    "cells": [
     [
-     "DATE · TIME",
-     "19 MAR 2026 · 0530"
+     "OWN SHIP",
+     "Course 095° · speed 16 kn"
     ],
     [
-     "LOCATION",
-     "Walkway between tanks 2 and 3, port side"
+     "TARGET 1 · CROSSING",
+     "Starboard bow · range 6.0 NM · bearing 045° steady"
     ],
     [
-     "WHAT HAPPENED",
-     "Cracked deck grating, edge raised about 2 cm"
+     "TARGET 1 · CPA",
+     "0.2 NM · risk of collision"
     ],
     [
-     "HAZARD",
-     "Trip and fall, worse at night"
+     "TARGET 2 · OVERTAKING",
+     "Port quarter · range 2.5 NM · CPA 1.0 NM"
     ],
     [
-     "INJURY",
-     "None"
+     "TARGET 3 · HEAD-ON",
+     "Right ahead · range 9.0 NM · CPA 1.5 NM"
     ],
     [
-     "ACTION TAKEN",
-     "Barrier tape and warning sign. Reported to the bridge"
+     "ACTION",
+     "Altered course to starboard, 10°"
     ],
     [
-     "RECOMMENDATION",
-     "Replace the grating"
+     "CALL THE MASTER",
+     "If CPA under 2 NM"
     ],
     [
-     "REPORTED BY",
-     "Cadet D. Martínez"
+     "OOW",
+     "C/O T. Williams · Lookout: Cadet D. Martínez"
     ]
    ]
   }
@@ -406,43 +427,30 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: say it",
+   "title": "Listen: busy waters",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l17/scene.jpg",
-     "kicker": "Day 6 · 05:30 · off Port Everglades",
-     "title": "A crack on the walkway",
-     "body": "The ship is at anchor. On his watch, Diego does a round on deck with a torch. Then he sees something on the walkway. Listen first, one piece at a time.",
+     "kicker": "Day 5 · 17:00 · Florida Strait",
+     "title": "Ships everywhere",
+     "body": "The afternoon watch with Tanya, in one of the busiest straits in the world. Diego is the lookout, with the binoculars. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
-      "l17-01",
       "l17-02",
-      "l17-03"
-     ],
-     "q": "What does Diego find?",
-     "opts": [
-      "A cracked grating",
-      "An oil spill",
-      "A broken light"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
+      "l17-03",
       "l17-04"
      ],
-     "q": "What does Rolando say first?",
+     "q": "Where is the first ship, and how far?",
      "opts": [
-      "It's OK, walk around it",
-      "Stop! Call the bridge",
-      "Fix it now"
+      "Starboard bow, 6 miles",
+      "Port bow, 6 miles",
+      "Starboard bow, 16 miles"
      ],
      "a": 0
     },
@@ -452,11 +460,11 @@
       "l17-05",
       "l17-06"
      ],
-     "q": "Why does Diego think it's not safe?",
+     "q": "What happens to the bearing?",
      "opts": [
-      "Someone could fall in the dark",
-      "It's very expensive",
-      "The Captain is coming"
+      "It stays the same",
+      "It changes a lot",
+      "Diego can't see it"
      ],
      "a": 0
     },
@@ -464,14 +472,26 @@
      "type": "listen",
      "audio": [
       "l17-07",
-      "l17-08",
+      "l17-08"
+     ],
+     "q": "Steady bearing and closing range means…",
+     "opts": [
+      "risk of collision",
+      "no danger",
+      "the ship is stopped"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
       "l17-09"
      ],
-     "q": "What do they put there?",
+     "q": "What does Tanya do?",
      "opts": [
-      "A barrier and a warning sign",
-      "A new grating",
-      "Nothing"
+      "Alters course to starboard",
+      "Alters course to port",
+      "Stops the ship"
      ],
      "a": 0
     },
@@ -481,11 +501,11 @@
       "l17-10",
       "l17-11"
      ],
-     "q": "Where is the grating?",
+     "q": "The ship on the port quarter is…",
      "opts": [
-      "Between tank 2 and tank 3, port side",
-      "Between tank 1 and tank 2, starboard",
-      "On the bridge wing"
+      "overtaking us",
+      "crossing",
+      "head-on"
      ],
      "a": 0
     },
@@ -495,92 +515,97 @@
       "l17-12",
       "l17-13"
      ],
-     "q": "What does Tanya ask Diego to write?",
+     "q": "What is the CPA of the head-on ship?",
      "opts": [
-      "A near miss report",
-      "The deck log",
-      "A letter to the company"
+      "1.5 miles",
+      "15 miles",
+      "0.5 miles"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole scene",
+     "title": "Now the whole watch",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "On the walkway",
+   "title": "Around the ship",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The walkway between tanks 2 and 3, at dawn."
+     "body": "Our ship from above, and three ships around her."
     },
     {
      "type": "card",
-     "word": "walkway"
+     "word": "stbdbow"
     },
     {
      "type": "card",
-     "word": "grating"
-    },
-    {
-     "type": "card",
-     "word": "crack"
+     "word": "portqtr"
     },
     {
      "type": "tap",
-     "audio": "c-show-crack",
-     "a": "crack"
+     "audio": "c-show-portqtr",
+     "a": "portqtr"
     },
     {
      "type": "card",
-     "word": "trip"
+     "word": "bearing"
+    },
+    {
+     "type": "card",
+     "word": "range"
     },
     {
      "type": "tap",
-     "audio": "c-show-trip",
-     "a": "trip"
+     "audio": "c-show-bearing",
+     "a": "bearing"
     },
     {
      "type": "card",
-     "word": "barrier"
+     "word": "crossing"
     },
     {
      "type": "card",
-     "word": "sign"
+     "word": "overtaking"
+    },
+    {
+     "type": "card",
+     "word": "headon"
     },
     {
      "type": "tap",
-     "audio": "c-show-sign",
-     "a": "sign"
-    },
-    {
-     "type": "card",
-     "word": "nearmiss"
-    },
-    {
-     "type": "card",
-     "word": "report"
+     "audio": "c-show-crossing",
+     "a": "crossing"
     },
     {
      "type": "tap",
-     "audio": "c-show-walkway",
-     "a": "walkway"
+     "audio": "c-show-headon",
+     "a": "headon"
+    },
+    {
+     "type": "card",
+     "word": "cpa"
+    },
+    {
+     "type": "tap",
+     "audio": "c-show-cpa",
+     "a": "cpa"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"casi accidente\" in English:",
+     "q": "\"marcación\" in English:",
      "opts": [
-      "near miss",
-      "almost accident",
-      "nearly crash"
+      "bearing",
+      "course",
+      "marking"
      ],
      "a": 0
     },
@@ -589,24 +614,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "crack",
-       "rajadura"
+       "bearing",
+       "marcación"
       ],
       [
-       "grating",
-       "rejilla"
+       "range",
+       "distancia"
       ],
       [
-       "walkway",
-       "pasarela"
+       "port quarter",
+       "aleta de babor"
       ],
       [
-       "warning sign",
-       "cartel de advertencia"
+       "overtaking",
+       "que alcanza"
       ],
       [
-       "near miss",
-       "casi accidente"
+       "head-on",
+       "de vuelta encontrada"
       ]
      ]
     }
@@ -614,211 +639,226 @@
   },
   {
    "id": "phrases",
-   "title": "I don't think it's safe",
+   "title": "Report a ship",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Speaking up",
+     "title": "The lookout report",
      "list": [
       [
-       "Sorry, can I say something?",
-       "Perdón, ¿puedo decir algo?",
-       "p-cani"
+       "Ship on the starboard bow, range six miles.",
+       "Buque por la amura de estribor, distancia seis millas.",
+       "p-report"
       ],
       [
-       "I don't think it's safe.",
-       "No creo que sea seguro.",
-       "p-dontthink"
+       "The bearing is steady.",
+       "La marcación se mantiene.",
+       "p-steady"
       ],
       [
-       "It's a trip hazard.",
-       "Es un peligro de tropiezo.",
-       "p-trip"
+       "She's overtaking us.",
+       "Nos está alcanzando.",
+       "p-overtaking"
       ],
       [
-       "There's a cracked grating on the walkway.",
-       "Hay una rejilla rajada en la pasarela.",
-       "p-there"
+       "One ship right ahead, head-on.",
+       "Un buque justo adelante, de vuelta encontrada.",
+       "p-headon"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Where does NOT go?",
+     "title": "What, where, how far",
      "steps": [
       [
-       "English",
-       "I <b>don't</b> think it's safe."
+       "What",
+       "Ship · fishing boat · light"
       ],
       [
-       "Not like this",
-       "I think it's not safe."
+       "Where",
+       "on the starboard bow · on the port beam · on the port quarter · right ahead · astern"
       ],
       [
-       "Also",
-       "I don't think we should go this way."
+       "How far",
+       "range six miles"
+      ],
+      [
+       "Then",
+       "bearing steady / changing"
       ]
      ],
      "paras": [
-      "With <b>think</b>, English puts the <i>not</i> on <b>think</b>: <b>I don't think</b> + the rest positive. It sounds polite but clear.",
-      "To start: <b>Sorry, can I say something?</b> · <b>Sorry to interrupt, but…</b> · <b>I'm worried about…</b>"
+      "Always in this order: <b>what</b>, <b>where</b>, <b>how far</b>. Short, no verb needed.",
+      "<b>bow</b> = between ahead and the beam · <b>beam</b> = at 90° · <b>quarter</b> = between the beam and astern. Plus <b>port</b> or <b>starboard</b>.",
+      "Ships are often <b>she</b>: <i>She's crossing.</i>"
      ],
-     "avoid": "I think it's not safe. · I think no. · I no think so."
+     "avoid": "There is a ship that is coming from the right. · Ship in the starboard bow."
     },
     {
      "type": "choice",
-     "q": "You think the ladder is dangerous. You say…",
+     "q": "A ship is behind you, a little to the left. She's on the…",
      "opts": [
-      "I don't think it's safe.",
-      "I think it's no safe.",
-      "I no think it's safe."
+      "port quarter",
+      "port bow",
+      "starboard quarter"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The bosun is busy, but you must tell him something. You start with…",
+     "q": "A ship is at 90° on your right. She's on the…",
      "opts": [
-      "Sorry, can I say something?",
-      "Listen to me!",
-      "Hey, problem."
+      "starboard beam",
+      "starboard bow",
+      "starboard quarter"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "The Second Officer wants to take a short cut over the cracked grating.",
-     "q": "Tell him.",
+     "situation": "A ship ahead and a little to the left, 4 miles.",
+     "q": "Report it.",
      "a": [
-      "I",
-      "don't",
-      "think",
-      "it's",
-      "safe."
+      "Ship",
+      "on",
+      "the",
+      "port",
+      "bow,",
+      "range",
+      "four",
+      "miles."
      ],
      "extra": [
-      "not",
-      "no"
+      "in",
+      "starboard"
      ]
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-dont-other"
-     ],
-     "q": "What does Rolando think about the ladder?",
-     "opts": [
-      "It isn't safe",
-      "It's safe",
-      "It's new"
-     ],
-     "a": 0
+     "type": "type",
+     "audio": "c-bearing-other",
+     "q": "Write the bearing, three digits.",
+     "accept": [
+      "270",
+      "270°",
+      "two seven zero"
+     ]
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "\"Creo que no\" → \"I don't think so\"",
+     "title": "Bearing is not course",
      "paras": [
-      "<i>Creo que no es seguro</i> = <b>I don't think it's safe</b>. <i>Creo que no</i> (as an answer) = <b>I don't think so</b>.",
-      "And speaking up to a senior is normal and expected on board. It's part of the safety culture, not a lack of respect."
+      "<b>course</b> = rumbo: where <i>our</i> ship goes. <b>bearing</b> = marcación: the direction from us to <i>another</i> ship or object.",
+      "And <b>range</b> is <i>distancia</i>, not <i>rango</i>. Use <b>on</b> the bow, not <i>in</i>."
      ],
-     "avoid": "I think that no. · I believe it's not safe."
+     "avoid": "The course of the other ship is zero four five (when you mean bearing). · in the starboard bow"
     },
     {
-     "type": "type",
-     "audio": "c-where-other",
-     "q": "Where is the oil? Write the place next to it.",
-     "accept": [
-      "windlass",
-      "the windlass",
-      "next to the windlass"
-     ]
+     "type": "listen",
+     "audio": [
+      "c-changing"
+     ],
+     "q": "The bearing is changing. Is there a risk of collision?",
+     "opts": [
+      "Probably not",
+      "Yes, very high",
+      "We can't know"
+     ],
+     "a": 0,
+     "why": "A steady bearing with a closing range is the danger. A changing bearing usually means she passes clear."
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "Polite, but firm",
+     "title": "Quarter, CPA",
      "paras": [
-      "Start soft: <i>Sorry, Bosun…</i>, with a rising, polite tone.",
-      "Then the important part goes <b>down</b> at the end, clear and calm: <i>I don't think it's SAFE.</i> A falling tone sounds sure. A rising tone sounds like a question."
+      "<b>quarter</b> = /ˈkwɔːtə/: <i>KWOR-ter</i>, with a <i>w</i>.",
+      "<b>CPA</b>: three letters, <i>see-pee-AY</i>, stress on the last one. Remember the letters from Lesson 5."
      ],
      "list": [
       [
-       "I don't think it's safe.",
-       "No creo que sea seguro.",
-       "m-firm"
+       "quarter",
+       "aleta",
+       "m-quarter"
+      ],
+      [
+       "C, P, A",
+       "C, P, A",
+       "m-cpa"
       ]
      ]
     },
     {
-     "type": "choice",
-     "q": "Which one sounds sure of itself?",
-     "opts": [
-      "\"It's not safe\" with the voice going down",
-      "\"It's not safe?\" with the voice going up",
-      "Saying it very fast"
-     ],
-     "a": 0
+     "type": "type",
+     "audio": "c-range-other",
+     "q": "Write the range in miles.",
+     "accept": [
+      "3.5",
+      "3,5",
+      "three point five"
+     ]
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the near miss report",
+   "title": "Read the radar targets",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "nm",
-     "q": "Was anybody hurt?",
+     "doc": "targets",
+     "q": "Which target is dangerous?",
      "opts": [
-      "No",
-      "Yes, the bosun",
-      "Yes, the cadet"
+      "Target 1, crossing",
+      "Target 2, overtaking",
+      "Target 3, head-on"
      ],
-     "a": 0
+     "a": 0,
+     "why": "CPA 0.2 NM, risk of collision."
     },
     {
      "type": "doc",
-     "doc": "nm",
-     "q": "How high is the edge of the grating?",
+     "doc": "targets",
+     "q": "What did they do?",
      "opts": [
-      "About 2 cm",
-      "About 20 cm",
-      "Flat"
+      "Altered course 10° to starboard",
+      "Stopped the engine",
+      "Called the other ship"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "nm",
-     "q": "Tap what they did about it.",
-     "a": 5
+     "doc": "targets",
+     "q": "Tap when to call the Master.",
+     "a": 6
     },
     {
      "type": "doc",
-     "doc": "nm",
-     "q": "What is the recommendation?",
+     "doc": "targets",
+     "q": "What is our speed?",
      "opts": [
-      "Replace the grating",
-      "Paint it yellow",
-      "Close the walkway forever"
+      "16 knots",
+      "9 knots",
+      "6 knots"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "nm",
-     "q": "When is the hazard worse?",
+     "doc": "targets",
+     "q": "Who is the lookout?",
      "opts": [
-      "At night",
-      "In port",
-      "In the afternoon"
+      "The cadet",
+      "The Chief Officer",
+      "Nobody"
      ],
      "a": 0
     }
@@ -826,76 +866,77 @@
   },
   {
    "id": "speak",
-   "title": "Speak up",
+   "title": "Report as lookout",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Polite, clear, firm",
-     "body": "Listen, say it, check it. Soft start, firm end: Sorry… I don't think it's SAFE.",
-     "es": "Empezá suave, terminá firme.",
+     "title": "What, where, how far",
+     "body": "Listen, say it, check it. Clear and short: SHIP, on the STARboard BOW, range SIX miles.",
+     "es": "Claro y corto.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-cani"
+     "model": "p-report"
     },
     {
      "type": "shadow",
-     "model": "p-dontthink"
+     "model": "p-steady"
     },
     {
      "type": "shadow",
-     "model": "p-there"
+     "model": "p-headon"
     },
     {
      "type": "role",
-     "cue": "c-walkaround",
-     "task": "You think it's dangerous. Say so, politely.",
-     "model": "m-notsafe",
+     "cue": "c-see1",
+     "task": "A ship ahead and a little to the left, 4 miles. Report.",
+     "model": "m-portbow",
      "accept": [
-      "Sorry, but I don't think it's safe.",
-      "I don't think it's safe.",
-      "Sorry, I don't think it's safe.",
-      "Sorry Bosun, but I don't think it's safe."
+      "Ship on the port bow, range four miles.",
+      "Ship on the port bow, four miles.",
+      "A ship on the port bow, range four miles.",
+      "Yes, ship on the port bow, range four miles."
      ]
     },
     {
      "type": "role",
-     "cue": "c-whatproblem",
-     "task": "Tell her: a cracked grating on the walkway.",
-     "model": "m-problem",
+     "cue": "c-see2",
+     "task": "A ship at 90° on the right, 3 miles. Report.",
+     "model": "m-stbdbeam",
      "accept": [
-      "There's a cracked grating on the walkway.",
-      "A cracked grating on the walkway.",
-      "There is a cracked grating on the walkway.",
-      "The grating on the walkway is cracked."
+      "Ship on the starboard beam, range three miles.",
+      "Ship on the starboard beam, three miles.",
+      "A ship on the starboard beam, range three miles."
      ]
     },
     {
      "type": "role",
-     "cue": "c-thisway",
-     "task": "No. Tell him it's not safe, there's a crack.",
-     "model": "m-notthisway",
+     "cue": "c-bearing",
+     "task": "The bearing doesn't change and the ship is closer. Report.",
+     "model": "m-steady",
      "accept": [
-      "I don't think it's safe. There's a crack.",
-      "I don't think it's safe.",
-      "Sorry, I don't think it's safe. There's a crack.",
-      "No, there's a crack. I don't think it's safe."
+      "Bearing steady. Range closing.",
+      "Bearing steady, range closing.",
+      "The bearing is steady. The range is closing.",
+      "No, the bearing is steady.",
+      "Bearing steady."
      ]
     },
     {
      "type": "role",
-     "cue": "c-needwhat",
-     "task": "Say what you need: a barrier and a warning sign.",
-     "model": "m-need",
+     "cue": "c-behind",
+     "task": "Behind, a little to port, and it's faster than us.",
+     "model": "m-overtaking",
      "accept": [
-      "A barrier and a warning sign.",
-      "We need a barrier and a warning sign.",
-      "A barrier and a sign.",
-      "Barrier tape and a warning sign."
+      "A ship on the port quarter is overtaking us.",
+      "She's overtaking us.",
+      "Ship on the port quarter, overtaking.",
+      "It's overtaking us, Captain.",
+      "On the port quarter, overtaking us."
      ]
     }
    ]
@@ -908,96 +949,90 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-crack",
+     "audio": "w-bearing",
      "q": "Type what you hear.",
      "accept": [
-      "crack",
-      "a crack"
+      "bearing",
+      "a bearing",
+      "the bearing"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-grating",
-     "a": "grating"
+     "audio": "c-show-overtaking",
+     "a": "overtaking"
     },
     {
      "type": "tap",
-     "audio": "c-show-barrier",
-     "a": "barrier"
+     "audio": "c-show-stbdbow",
+     "a": "stbdbow"
     },
     {
      "type": "listen",
      "audio": [
-      "l17-13",
-      "l17-14"
+      "l17-01"
      ],
-     "q": "For Rolando, speaking up is…",
+     "q": "Where is the ship?",
      "opts": [
-      "part of the job",
-      "a problem",
-      "only for officers"
+      "Florida Strait",
+      "Gulf of Mexico",
+      "Galveston"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Nobody was hurt, but somebody almost fell. It's a…",
+     "q": "A ship is right in front, coming towards us. She's…",
      "opts": [
-      "near miss",
-      "trip hazard",
-      "walkway"
+      "head-on",
+      "overtaking",
+      "on the quarter"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "You report on the radio. You end with…",
+     "q": "You see a ship in the bow sector, like twelve to two on the clock from Lesson 13. She's on the…",
      "opts": [
-      "Over.",
-      "Bye.",
-      "OK, finished."
+      "starboard bow",
+      "port bow",
+      "port quarter"
      ],
-     "a": 0,
-     "why": "From Lessons 11 and 12."
+     "a": 0
     },
     {
      "type": "build",
-     "q": "Start politely: you want to say something to the Captain.",
+     "q": "Report a ship faster than us, coming from behind.",
      "a": [
-      "Sorry,",
-      "can",
-      "I",
-      "say",
-      "something?"
+      "She's",
+      "overtaking",
+      "us."
      ],
      "extra": [
-      "tell",
-      "you"
+      "crossing",
+      "we"
      ]
     },
     {
      "type": "choice",
-     "q": "The grating is between tank 2 and tank 3. It's ___ the tanks.",
+     "q": "The bearing is steady and the range is closing. You…",
      "opts": [
-      "between",
-      "next",
-      "in"
+      "report it at once",
+      "wait and see",
+      "say nothing"
      ],
-     "a": 0,
-     "why": "Place words, from Lesson 7."
+     "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: pasarela",
+     "q": "Write it in English: marcación",
      "accept": [
-      "walkway",
-      "a walkway",
-      "the walkway"
+      "bearing",
+      "a bearing",
+      "the bearing"
      ]
     }
    ]
   }
- ],
- "modelAudio": true,
- "mediaRev": 2
+ ]
 }

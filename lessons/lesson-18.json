@@ -1,271 +1,256 @@
 {
  "n": 18,
  "module": 5,
- "title": "Faults & defects",
- "place": "Day 6 · 07:30 · off Port Everglades, bridge",
- "goal": "Report a fault: what has stopped, what isn't working, and when it happened.",
+ "title": "Speaking up about safety",
+ "place": "Day 6 · 05:30 · off Port Everglades, main deck",
+ "goal": "Speak up politely and clearly when something isn't safe, and report it.",
  "images": {
   "hero": "img/l18/hero.jpg",
   "scene": "img/l18/scene.jpg"
  },
- "radioChannel": "PHONE",
+ "radioChannel": "UHF",
  "audio": {
   "l18-01": {
    "voice": "diego",
-   "text": "Chief Officer, there's an alarm on radar one.",
-   "es": "Primer Oficial, hay una alarma en el radar uno."
+   "text": "Bosun! Sorry, can I say something?",
+   "es": "¡Contramaestre! Perdón, ¿puedo decir algo?"
   },
   "l18-02": {
-   "voice": "tanya",
-   "text": "Let me see. The display has frozen. It isn't working.",
-   "es": "A ver. La pantalla se congeló. No funciona."
+   "voice": "rolando",
+   "text": "Morning, cadet. Quick, I'm busy. What is it?",
+   "es": "Buen día, cadete. Rápido, que estoy ocupado. ¿Qué pasa?"
   },
   "l18-03": {
    "voice": "diego",
-   "text": "Shall I reset it?",
-   "es": "¿Lo reinicio?"
+   "text": "This grating is cracked. Look, here. The edge is up.",
+   "es": "Esta rejilla está rajada. Mirá, acá. El borde está levantado."
   },
   "l18-04": {
-   "voice": "tanya",
-   "text": "No, don't touch it. Radar two is working, and we're at anchor. Call the Chief Engineer, please.",
-   "es": "No, no lo toques. El radar dos funciona, y estamos fondeados. Llamá al Jefe de Máquinas, por favor."
+   "pause": 900,
+   "voice": "rolando",
+   "text": "Ah, yes. It's an old crack. It's OK, just walk around it.",
+   "es": "Ah, sí. Es una rajadura vieja. No pasa nada, pasá por al costado."
   },
   "l18-05": {
-   "pause": 900,
+   "pause": 700,
    "voice": "diego",
-   "text": "Chief Engineer, this is the cadet on the bridge. Radar one has stopped. The display has frozen and the alarm has gone off.",
-   "es": "Jefe, habla el cadete desde el puente. El radar uno se paró. La pantalla se congeló y saltó la alarma."
+   "text": "Sorry, Bosun, but I don't think it's safe. It's a trip hazard. Someone could fall in the dark.",
+   "es": "Perdón, contramaestre, pero no creo que sea seguro. Es un peligro de tropiezo. Alguien se puede caer a oscuras."
   },
   "l18-06": {
-   "pause": 600,
-   "voice": "marek",
-   "text": "Radar one. OK. I'm coming.",
-   "es": "Radar uno. Okey. Ya voy.",
-   "radio": true
+   "pause": 900,
+   "voice": "rolando",
+   "text": "Hmm. You're right. At night nobody sees it.",
+   "es": "Mmm. Tenés razón. De noche nadie la ve."
   },
   "l18-07": {
-   "pause": 1800,
-   "voice": "marek",
-   "text": "So. What happened?",
-   "es": "Bueno. ¿Qué pasó?"
+   "voice": "diego",
+   "text": "Can we put a barrier and a warning sign?",
+   "es": "¿Podemos poner una barrera y un cartel de advertencia?"
   },
   "l18-08": {
-   "voice": "diego",
-   "text": "The alarm went off at zero seven twenty-five. Then the display froze.",
-   "es": "La alarma saltó a las cero siete veinticinco. Después se congeló la pantalla."
+   "voice": "rolando",
+   "text": "Good idea. Bring the tape and a sign from the store. I'll stay here.",
+   "es": "Buena idea. Traé la cinta y un cartel del pañol. Yo me quedo acá."
   },
   "l18-09": {
-   "voice": "marek",
-   "text": "Hmm. Has anybody touched it?",
-   "es": "Mmm. ¿Alguien lo tocó?"
+   "pause": 1500,
+   "voice": "diego",
+   "text": "Here. Barrier tape and the sign.",
+   "es": "Acá está. Cinta de barrera y el cartel."
   },
   "l18-10": {
-   "voice": "tanya",
-   "text": "No. Nobody has touched it.",
-   "es": "No. Nadie lo tocó."
+   "voice": "rolando",
+   "text": "Good. Now report it to the bridge. Say exactly where it is.",
+   "es": "Bien. Ahora reportalo al puente. Decí exactamente dónde está."
   },
   "l18-11": {
-   "pause": 1500,
-   "voice": "marek",
-   "text": "A fuse has blown. I have a spare.",
-   "es": "Se quemó un fusible. Tengo uno de repuesto."
+   "voice": "diego",
+   "text": "Bridge, Diego. There's a cracked grating on the walkway between tank two and tank three, port side. We put a barrier and a sign. Over.",
+   "es": "Puente, Diego. Hay una rejilla rajada en la pasarela entre el tanque dos y el tres, babor. Pusimos una barrera y un cartel. Cambio."
   },
   "l18-12": {
-   "pause": 1500,
-   "voice": "marek",
-   "text": "OK. I've changed the fuse. Now reset it, cadet.",
-   "es": "Listo. Cambié el fusible. Ahora reinicialo, cadete."
+   "pause": 800,
+   "voice": "tanya",
+   "text": "Received, Diego. Well done. Write a near miss report after the watch. Over.",
+   "es": "Recibido, Diego. Bien hecho. Escribí un reporte de casi accidente después de la guardia. Cambio.",
+   "radio": true
   },
   "l18-13": {
-   "pause": 900,
-   "voice": "diego",
-   "text": "Reset… It's working! The display is back.",
-   "es": "Reinicio… ¡Funciona! Volvió la pantalla."
+   "pause": 800,
+   "voice": "rolando",
+   "text": "You see, cadet? Speaking up is part of the job.",
+   "es": "¿Ves, cadete? Hablar es parte del trabajo."
   },
   "l18-14": {
-   "voice": "marek",
-   "text": "Good. Write it in the defect list. Fault, cause, repair. Short.",
-   "es": "Bien. Anotalo en la lista de defectos. Falla, causa, reparación. Corto."
-  },
-  "l18-15": {
    "voice": "diego",
-   "text": "Fault, cause, repair. Yes, Chief.",
-   "es": "Falla, causa, reparación. Sí, jefe."
+   "text": "Thanks, Bosun.",
+   "es": "Gracias, contramaestre."
   },
-  "w-fault": {
+  "w-crack": {
    "voice": "model",
-   "text": "fault"
+   "text": "crack"
   },
-  "x-fault": {
+  "x-crack": {
    "voice": "model",
-   "text": "Write the fault in the list.",
-   "es": "Anotá la falla en la lista."
+   "text": "There's a crack in the grating.",
+   "es": "Hay una rajadura en la rejilla."
   },
-  "w-defect": {
+  "w-grating": {
    "voice": "model",
-   "text": "defect"
+   "text": "grating"
   },
-  "x-defect": {
+  "x-grating": {
    "voice": "model",
-   "text": "The defect list is on the bridge.",
-   "es": "La lista de defectos está en el puente."
+   "text": "This grating is cracked.",
+   "es": "Esta rejilla está rajada."
   },
-  "w-alarm": {
+  "w-walkway": {
    "voice": "model",
-   "text": "alarm"
+   "text": "walkway"
   },
-  "x-alarm": {
+  "x-walkway": {
    "voice": "model",
-   "text": "The alarm has gone off.",
-   "es": "Saltó la alarma."
+   "text": "The walkway between the tanks.",
+   "es": "La pasarela entre los tanques."
   },
-  "w-frozen": {
+  "w-trip": {
    "voice": "model",
-   "text": "frozen"
+   "text": "trip hazard"
   },
-  "x-frozen": {
+  "x-trip": {
    "voice": "model",
-   "text": "The display has frozen.",
-   "es": "La pantalla se congeló."
+   "text": "It's a trip hazard.",
+   "es": "Es un peligro de tropiezo."
   },
-  "w-reset": {
+  "w-barrier": {
    "voice": "model",
-   "text": "reset"
+   "text": "barrier"
   },
-  "x-reset": {
+  "x-barrier": {
    "voice": "model",
-   "text": "Now reset the radar.",
-   "es": "Ahora reiniciá el radar."
+   "text": "Put a barrier around it.",
+   "es": "Poné una barrera alrededor."
   },
-  "w-spare": {
+  "w-sign": {
    "voice": "model",
-   "text": "spare"
+   "text": "warning sign"
   },
-  "x-spare": {
+  "x-sign": {
    "voice": "model",
-   "text": "I have a spare fuse.",
-   "es": "Tengo un fusible de repuesto."
+   "text": "Bring a warning sign.",
+   "es": "Traé un cartel de advertencia."
   },
-  "w-fuse": {
+  "w-nearmiss": {
    "voice": "model",
-   "text": "fuse"
+   "text": "near miss"
   },
-  "x-fuse": {
+  "x-nearmiss": {
    "voice": "model",
-   "text": "A fuse has blown.",
-   "es": "Se quemó un fusible."
+   "text": "Write a near miss report.",
+   "es": "Escribí un reporte de casi accidente."
   },
-  "w-repair": {
+  "w-report": {
    "voice": "model",
-   "text": "repair"
+   "text": "report"
   },
-  "x-repair": {
+  "x-report": {
    "voice": "model",
-   "text": "Fault, cause, repair.",
-   "es": "Falla, causa, reparación."
+   "text": "Report it to the bridge.",
+   "es": "Reportalo al puente."
   },
-  "p-stopped": {
+  "p-cani": {
    "voice": "model",
-   "text": "Radar one has stopped.",
-   "es": "El radar uno se paró."
+   "text": "Sorry, can I say something?",
+   "es": "Perdón, ¿puedo decir algo?"
   },
-  "p-notworking": {
+  "p-dontthink": {
    "voice": "model",
-   "text": "The display isn't working.",
-   "es": "La pantalla no funciona."
+   "text": "I don't think it's safe.",
+   "es": "No creo que sea seguro."
   },
-  "p-goneoff": {
+  "p-trip": {
    "voice": "model",
-   "text": "The alarm has gone off.",
-   "es": "Saltó la alarma."
+   "text": "It's a trip hazard.",
+   "es": "Es un peligro de tropiezo."
   },
-  "p-fcr": {
+  "p-there": {
    "voice": "model",
-   "text": "Fault, cause, repair.",
-   "es": "Falla, causa, reparación."
+   "text": "There's a cracked grating on the walkway.",
+   "es": "Hay una rejilla rajada en la pasarela."
   },
-  "m-wrong": {
+  "m-notsafe": {
    "voice": "model",
-   "text": "It has stopped. The display isn't working.",
-   "es": "Se paró. La pantalla no funciona."
+   "text": "Sorry, but I don't think it's safe.",
+   "es": "Perdón, pero no creo que sea seguro."
   },
-  "m-happened": {
+  "m-problem": {
    "voice": "model",
-   "text": "The alarm went off at zero seven twenty.",
-   "es": "La alarma saltó a las cero siete veinte."
+   "text": "There's a cracked grating on the walkway.",
+   "es": "Hay una rejilla rajada en la pasarela."
   },
-  "m-nobody": {
+  "m-notthisway": {
    "voice": "model",
-   "text": "No, nobody has touched it.",
-   "es": "No, nadie lo tocó."
+   "text": "I don't think it's safe. There's a crack.",
+   "es": "No creo que sea seguro. Hay una rajadura."
   },
-  "m-working": {
+  "m-need": {
    "voice": "model",
-   "text": "Yes, it's working now.",
-   "es": "Sí, ya funciona."
+   "text": "A barrier and a warning sign.",
+   "es": "Una barrera y un cartel de advertencia."
   },
-  "m-t": {
+  "m-firm": {
    "voice": "model",
-   "text": "stopped, fixed, checked",
-   "es": "se paró, arreglado, revisado"
+   "text": "I don't think it's safe.",
+   "es": "No creo que sea seguro."
   },
-  "m-d": {
-   "voice": "model",
-   "text": "changed, failed, frozen",
-   "es": "cambiado, falló, congelado"
+  "c-show-crack": {
+   "voice": "rolando",
+   "text": "Show me the crack."
   },
-  "m-id": {
-   "voice": "model",
-   "text": "reported, tested, started",
-   "es": "reportado, probado, arrancó"
-  },
-  "c-show-alarm": {
+  "c-show-grating": {
    "voice": "tanya",
-   "text": "Show me the alarm."
+   "text": "Where's the grating?"
   },
-  "c-show-frozen": {
-   "voice": "marek",
-   "text": "Which screen has frozen?"
+  "c-show-walkway": {
+   "voice": "rolando",
+   "text": "Show me the walkway."
   },
-  "c-show-reset": {
-   "voice": "marek",
-   "text": "Where's the reset button?"
-  },
-  "c-show-fuse": {
-   "voice": "marek",
-   "text": "Show me the fuse."
-  },
-  "c-show-spare": {
-   "voice": "marek",
-   "text": "Where's the spare?"
-  },
-  "c-wrong": {
+  "c-show-trip": {
    "voice": "tanya",
-   "text": "Diego, what's wrong with the radar?"
+   "text": "Where's the trip hazard?"
   },
-  "c-happened": {
-   "voice": "marek",
-   "text": "So, cadet. What happened? When?"
+  "c-show-barrier": {
+   "voice": "rolando",
+   "text": "Where's the barrier?"
   },
-  "c-touched": {
-   "voice": "marek",
-   "text": "Has anybody touched it?"
-  },
-  "c-nowok": {
+  "c-show-sign": {
    "voice": "tanya",
-   "text": "Is it working now?"
+   "text": "Show me the warning sign."
   },
-  "c-gyro-other": {
+  "c-walkaround": {
+   "voice": "rolando",
+   "text": "It's OK, just walk around it."
+  },
+  "c-whatproblem": {
    "voice": "tanya",
-   "text": "The gyro alarm has gone off."
+   "text": "Diego, what's the problem?"
   },
-  "c-time-other": {
-   "voice": "marek",
-   "text": "The fuse blew at zero six fifty."
-  },
-  "c-printer": {
+  "c-thisway": {
    "voice": "james",
-   "text": "The printer isn't working again."
+   "text": "Can I go this way? It's shorter."
+  },
+  "c-needwhat": {
+   "voice": "rolando",
+   "text": "OK, cadet. What do we need?"
+  },
+  "c-where-other": {
+   "voice": "tanya",
+   "text": "There's oil on the deck next to the windlass."
+  },
+  "c-dont-other": {
+   "voice": "rolando",
+   "text": "I don't think this ladder is safe."
   }
  },
  "dialogue": [
@@ -282,134 +267,138 @@
   "l18-11",
   "l18-12",
   "l18-13",
-  "l18-14",
-  "l18-15"
+  "l18-14"
  ],
  "words": {
-  "fault": {
-   "en": "fault",
-   "ipa": "/fɔːlt/",
-   "es": "falla",
-   "audio": "w-fault",
-   "ex": "x-fault"
+  "crack": {
+   "en": "crack",
+   "ipa": "/kræk/",
+   "es": "rajadura, fisura",
+   "audio": "w-crack",
+   "ex": "x-crack"
   },
-  "defect": {
-   "en": "defect",
-   "ipa": "/ˈdiːfekt/",
-   "es": "defecto, avería",
-   "audio": "w-defect",
-   "ex": "x-defect"
+  "grating": {
+   "en": "grating",
+   "ipa": "/ˈɡreɪtɪŋ/",
+   "es": "rejilla (de piso)",
+   "audio": "w-grating",
+   "ex": "x-grating"
   },
-  "alarm": {
-   "en": "alarm",
-   "ipa": "/əˈlɑːm/",
-   "es": "alarma",
-   "audio": "w-alarm",
-   "ex": "x-alarm"
+  "walkway": {
+   "en": "walkway",
+   "ipa": "/ˈwɔːkweɪ/",
+   "es": "pasarela",
+   "audio": "w-walkway",
+   "ex": "x-walkway"
   },
-  "frozen": {
-   "en": "frozen",
-   "ipa": "/ˈfrəʊzn/",
-   "es": "congelado (pantalla)",
-   "audio": "w-frozen",
-   "ex": "x-frozen"
+  "trip": {
+   "en": "trip hazard",
+   "ipa": "/ˈtrɪp ˌhæzəd/",
+   "es": "peligro de tropiezo",
+   "audio": "w-trip",
+   "ex": "x-trip"
   },
-  "reset": {
-   "en": "reset",
-   "ipa": "/ˌriːˈset/",
-   "es": "reiniciar",
-   "audio": "w-reset",
-   "ex": "x-reset"
+  "barrier": {
+   "en": "barrier",
+   "ipa": "/ˈbæriə/",
+   "es": "barrera",
+   "audio": "w-barrier",
+   "ex": "x-barrier"
   },
-  "spare": {
-   "en": "spare",
-   "ipa": "/speə/",
-   "es": "repuesto",
-   "audio": "w-spare",
-   "ex": "x-spare"
+  "sign": {
+   "en": "warning sign",
+   "ipa": "/ˈwɔːnɪŋ saɪn/",
+   "es": "cartel de advertencia",
+   "audio": "w-sign",
+   "ex": "x-sign"
   },
-  "fuse": {
-   "en": "fuse",
-   "ipa": "/fjuːz/",
-   "es": "fusible",
-   "audio": "w-fuse",
-   "ex": "x-fuse"
+  "nearmiss": {
+   "en": "near miss",
+   "ipa": "/ˌnɪə ˈmɪs/",
+   "es": "casi accidente",
+   "audio": "w-nearmiss",
+   "ex": "x-nearmiss"
   },
-  "repair": {
-   "en": "repair",
-   "ipa": "/rɪˈpeə/",
-   "es": "reparación, reparar",
-   "audio": "w-repair",
-   "ex": "x-repair"
+  "report": {
+   "en": "report",
+   "ipa": "/rɪˈpɔːt/",
+   "es": "reportar, reporte",
+   "audio": "w-report",
+   "ex": "x-report"
   }
  },
  "plate": {
   "svg": "img/l18/plate.svg",
   "pins": [
    {
-    "word": "alarm",
-    "x": 72,
-    "y": 166
-   },
-   {
-    "word": "frozen",
-    "x": 176,
-    "y": 28
-   },
-   {
-    "word": "reset",
+    "word": "walkway",
     "x": 200,
-    "y": 150
+    "y": 84
    },
    {
-    "word": "fuse",
-    "x": 321,
-    "y": 52
+    "word": "grating",
+    "x": 250,
+    "y": 186
    },
    {
-    "word": "spare",
-    "x": 322,
-    "y": 150
+    "word": "crack",
+    "x": 150,
+    "y": 184
+   },
+   {
+    "word": "trip",
+    "x": 110,
+    "y": 214
+   },
+   {
+    "word": "barrier",
+    "x": 150,
+    "y": 146
+   },
+   {
+    "word": "sign",
+    "x": 262,
+    "y": 120
    }
   ]
  },
  "docs": {
-  "defects": {
+  "nm": {
    "kind": "form",
-   "title": "BRIDGE DEFECT LIST",
-   "subtitle": "M/V LNG HORIZON · 19 MAR 2026",
+   "title": "NEAR MISS REPORT",
+   "subtitle": "M/V LNG HORIZON · No. NM-0319",
    "cells": [
     [
-     "EQUIPMENT",
-     "Radar 1 (X-band)"
+     "DATE · TIME",
+     "19 MAR 2026 · 0530"
     ],
     [
-     "FAULT",
-     "Display frozen, alarm at 0725"
+     "LOCATION",
+     "Walkway between tanks 2 and 3, port side"
     ],
     [
-     "CAUSE",
-     "Fuse blown"
+     "WHAT HAPPENED",
+     "Cracked deck grating, edge raised about 2 cm"
     ],
     [
-     "REPAIR",
-     "Fuse changed by the Chief Engineer, radar reset"
+     "HAZARD",
+     "Trip and fall, worse at night"
     ],
     [
-     "STATUS",
-     "Working · tested 0750"
+     "INJURY",
+     "None"
     ],
     [
-     "SPARE FUSES",
-     "1 left · order more"
+     "ACTION TAKEN",
+     "Barrier tape and warning sign. Reported to the bridge"
+    ],
+    [
+     "RECOMMENDATION",
+     "Replace the grating"
     ],
     [
      "REPORTED BY",
      "Cadet D. Martínez"
-    ],
-    [
-     "CHECKED BY",
-     "C/O T. Williams"
     ]
    ]
   }
@@ -417,43 +406,57 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: the radar alarm",
+   "title": "Listen: say it",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l18/scene.jpg",
-     "kicker": "Day 6 · 07:30 · off Port Everglades",
-     "title": "Radar one stops",
-     "body": "The end of the anchor watch. Suddenly an alarm sounds on the bridge. Listen first, one piece at a time.",
+     "kicker": "Day 6 · 05:30 · off Port Everglades",
+     "title": "A crack on the walkway",
+     "body": "The ship is at anchor. On his watch, Diego does a round on deck with a torch. Then he sees something on the walkway. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
      "type": "listen",
      "audio": [
       "l18-01",
-      "l18-02"
+      "l18-02",
+      "l18-03"
      ],
-     "q": "What's wrong with radar one?",
+     "q": "What does Diego find?",
      "opts": [
-      "The display has frozen",
-      "It's too loud",
-      "It's switched off"
+      "A cracked grating",
+      "An oil spill",
+      "A broken light"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l18-03",
       "l18-04"
      ],
-     "q": "Why doesn't Tanya reset it?",
+     "q": "What does Rolando say first?",
      "opts": [
-      "She wants the Chief Engineer to see it",
-      "She doesn't know how",
-      "The Captain is sleeping"
+      "It's OK, walk around it",
+      "Stop! Call the bridge",
+      "Fix it now"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l18-05",
+      "l18-06"
+     ],
+     "q": "Why does Diego think it's not safe?",
+     "opts": [
+      "Someone could fall in the dark",
+      "It's very expensive",
+      "The Captain is coming"
      ],
      "a": 0
     },
@@ -461,55 +464,42 @@
      "type": "listen",
      "audio": [
       "l18-07",
-      "l18-08"
+      "l18-08",
+      "l18-09"
      ],
-     "q": "When did the alarm go off?",
+     "q": "What do they put there?",
      "opts": [
-      "0725",
-      "0752",
-      "0525"
+      "A barrier and a warning sign",
+      "A new grating",
+      "Nothing"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l18-09",
-      "l18-10"
+      "l18-10",
+      "l18-11"
      ],
-     "q": "Has anybody touched the radar?",
+     "q": "Where is the grating?",
      "opts": [
-      "No",
-      "Yes, Diego",
-      "Yes, Tanya"
+      "Between tank 2 and tank 3, port side",
+      "Between tank 1 and tank 2, starboard",
+      "On the bridge wing"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l18-11",
-      "l18-12"
+      "l18-12",
+      "l18-13"
      ],
-     "q": "What was the cause?",
+     "q": "What does Tanya ask Diego to write?",
      "opts": [
-      "A blown fuse",
-      "Water in the radar",
-      "A software update"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "l18-14",
-      "l18-15"
-     ],
-     "q": "What three things go in the defect list?",
-     "opts": [
-      "Fault, cause, repair",
-      "Name, rank, cabin",
-      "Time, course, speed"
+      "A near miss report",
+      "The deck log",
+      "A letter to the company"
      ],
      "a": 0
     },
@@ -522,75 +512,75 @@
   },
   {
    "id": "words",
-   "title": "Faults",
+   "title": "On the walkway",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "Radar one with the alarm, and the fuse box under the console."
+     "body": "The walkway between tanks 2 and 3, at dawn."
     },
     {
      "type": "card",
-     "word": "alarm"
+     "word": "walkway"
     },
     {
      "type": "card",
-     "word": "frozen"
+     "word": "grating"
+    },
+    {
+     "type": "card",
+     "word": "crack"
     },
     {
      "type": "tap",
-     "audio": "c-show-frozen",
-     "a": "frozen"
+     "audio": "c-show-crack",
+     "a": "crack"
     },
     {
      "type": "card",
-     "word": "fault"
-    },
-    {
-     "type": "card",
-     "word": "defect"
-    },
-    {
-     "type": "card",
-     "word": "fuse"
-    },
-    {
-     "type": "card",
-     "word": "spare"
+     "word": "trip"
     },
     {
      "type": "tap",
-     "audio": "c-show-fuse",
-     "a": "fuse"
+     "audio": "c-show-trip",
+     "a": "trip"
     },
     {
      "type": "card",
-     "word": "reset"
+     "word": "barrier"
     },
     {
      "type": "card",
-     "word": "repair"
+     "word": "sign"
     },
     {
      "type": "tap",
-     "audio": "c-show-reset",
-     "a": "reset"
+     "audio": "c-show-sign",
+     "a": "sign"
+    },
+    {
+     "type": "card",
+     "word": "nearmiss"
+    },
+    {
+     "type": "card",
+     "word": "report"
     },
     {
      "type": "tap",
-     "audio": "c-show-spare",
-     "a": "spare"
+     "audio": "c-show-walkway",
+     "a": "walkway"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"repuesto\" in English:",
+     "q": "\"casi accidente\" in English:",
      "opts": [
-      "spare",
-      "replace",
-      "extra piece"
+      "near miss",
+      "almost accident",
+      "nearly crash"
      ],
      "a": 0
     },
@@ -599,24 +589,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "fault",
-       "falla"
+       "crack",
+       "rajadura"
       ],
       [
-       "fuse",
-       "fusible"
+       "grating",
+       "rejilla"
       ],
       [
-       "spare",
-       "repuesto"
+       "walkway",
+       "pasarela"
       ],
       [
-       "reset",
-       "reiniciar"
+       "warning sign",
+       "cartel de advertencia"
       ],
       [
-       "repair",
-       "reparación"
+       "near miss",
+       "casi accidente"
       ]
      ]
     }
@@ -624,166 +614,153 @@
   },
   {
    "id": "phrases",
-   "title": "It has stopped",
+   "title": "I don't think it's safe",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Reporting a fault",
+     "title": "Speaking up",
      "list": [
       [
-       "Radar one has stopped.",
-       "El radar uno se paró.",
-       "p-stopped"
+       "Sorry, can I say something?",
+       "Perdón, ¿puedo decir algo?",
+       "p-cani"
       ],
       [
-       "The display isn't working.",
-       "La pantalla no funciona.",
-       "p-notworking"
+       "I don't think it's safe.",
+       "No creo que sea seguro.",
+       "p-dontthink"
       ],
       [
-       "The alarm has gone off.",
-       "Saltó la alarma.",
-       "p-goneoff"
+       "It's a trip hazard.",
+       "Es un peligro de tropiezo.",
+       "p-trip"
       ],
       [
-       "Fault, cause, repair.",
-       "Falla, causa, reparación.",
-       "p-fcr"
+       "There's a cracked grating on the walkway.",
+       "Hay una rejilla rajada en la pasarela.",
+       "p-there"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "has stopped · isn't working · went off at…",
+     "title": "Where does NOT go?",
      "steps": [
       [
-       "Result now",
-       "The radar <b>has stopped</b>. A fuse <b>has blown</b>."
+       "English",
+       "I <b>don't</b> think it's safe."
       ],
       [
-       "State now",
-       "The display <b>isn't working</b>."
+       "Not like this",
+       "I think it's not safe."
       ],
       [
-       "With a time",
-       "The alarm <b>went off at</b> 0725."
+       "Also",
+       "I don't think we should go this way."
       ]
      ],
      "paras": [
-      "To report a fault you see <b>now</b>: <b>has / have</b> + past participle (<i>stopped, frozen, gone off, blown</i>), or <b>isn't working</b>.",
-      "When you say <b>when</b> it happened, use the simple past: <i>It <b>stopped</b> at 0725.</i> Not <i>has stopped at</i>."
+      "With <b>think</b>, English puts the <i>not</i> on <b>think</b>: <b>I don't think</b> + the rest positive. It sounds polite but clear.",
+      "To start: <b>Sorry, can I say something?</b> · <b>Sorry to interrupt, but…</b> · <b>I'm worried about…</b>"
      ],
-     "avoid": "The radar is stop. · It has stopped at 0725. · It don't work."
+     "avoid": "I think it's not safe. · I think no. · I no think so."
     },
     {
      "type": "choice",
-     "q": "You see the screen: nothing moves. You report…",
+     "q": "You think the ladder is dangerous. You say…",
      "opts": [
-      "The display has frozen.",
-      "The display is freeze.",
-      "The display froze at."
+      "I don't think it's safe.",
+      "I think it's no safe.",
+      "I no think it's safe."
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "With the time: \"The alarm ___ off at 0725.\"",
+     "q": "The bosun is busy, but you must tell him something. You start with…",
      "opts": [
-      "went",
-      "has gone",
-      "is going"
+      "Sorry, can I say something?",
+      "Listen to me!",
+      "Hey, problem."
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "Radar two is off and nothing works.",
-     "q": "Report it.",
+     "situation": "The Second Officer wants to take a short cut over the cracked grating.",
+     "q": "Tell him.",
      "a": [
-      "Radar",
-      "two",
-      "isn't",
-      "working."
+      "I",
+      "don't",
+      "think",
+      "it's",
+      "safe."
      ],
      "extra": [
-      "don't",
+      "not",
       "no"
      ]
     },
     {
-     "type": "type",
-     "audio": "c-time-other",
-     "q": "What time did the fuse blow? Four digits.",
-     "accept": [
-      "0650",
-      "06:50",
-      "650"
-     ]
-    },
-    {
-     "type": "tip",
-     "tag": "Spanish speaker alert",
-     "title": "\"No funciona\" = isn't working",
-     "paras": [
-      "<i>No funciona</i> → <b>It isn't working</b> (or <i>It doesn't work</i>). Not <i>It no works</i>.",
-      "<i>Saltó la alarma</i> → <b>The alarm has gone off</b> / <b>went off</b>. <i>Se quemó el fusible</i> → <b>The fuse has blown</b>."
-     ],
-     "avoid": "It no works. · The alarm jumped. · The fuse burned."
-    },
-    {
      "type": "listen",
      "audio": [
-      "c-printer"
+      "c-dont-other"
      ],
-     "q": "What's the problem?",
+     "q": "What does Rolando think about the ladder?",
      "opts": [
-      "The printer isn't working",
-      "The printer is new",
-      "James needs paper"
+      "It isn't safe",
+      "It's safe",
+      "It's new"
      ],
      "a": 0
     },
     {
      "type": "tip",
-     "tag": "Pronunciation",
-     "title": "Three sounds for -ed",
+     "tag": "Spanish speaker alert",
+     "title": "\"Creo que no\" → \"I don't think so\"",
      "paras": [
-      "After <i>p, k, s, sh, ch, f</i>: a short <b>/t/</b>: <i>stopped, fixed, checked</i>.",
-      "After most other sounds: <b>/d/</b>: <i>changed, failed</i>.",
-      "After <i>t</i> or <i>d</i>: a new syllable <b>/ɪd/</b>: <i>reported, tested, started</i>. Never add a syllable to <i>stopped</i>: it's one beat, <i>stopt</i>."
+      "<i>Creo que no es seguro</i> = <b>I don't think it's safe</b>. <i>Creo que no</i> (as an answer) = <b>I don't think so</b>.",
+      "And speaking up to a senior is normal and expected on board. It's part of the safety culture, not a lack of respect."
+     ],
+     "avoid": "I think that no. · I believe it's not safe."
+    },
+    {
+     "type": "type",
+     "audio": "c-where-other",
+     "q": "Where is the oil? Write the place next to it.",
+     "accept": [
+      "windlass",
+      "the windlass",
+      "next to the windlass"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Polite, but firm",
+     "paras": [
+      "Start soft: <i>Sorry, Bosun…</i>, with a rising, polite tone.",
+      "Then the important part goes <b>down</b> at the end, clear and calm: <i>I don't think it's SAFE.</i> A falling tone sounds sure. A rising tone sounds like a question."
      ],
      "list": [
       [
-       "stopped, fixed, checked",
-       "/t/",
-       "m-t"
-      ],
-      [
-       "changed, failed, frozen",
-       "/d/",
-       "m-d"
-      ],
-      [
-       "reported, tested, started",
-       "/ɪd/",
-       "m-id"
+       "I don't think it's safe.",
+       "No creo que sea seguro.",
+       "m-firm"
       ]
      ]
     },
     {
-     "type": "listen",
-     "audio": [
-      "c-gyro-other"
-     ],
-     "q": "Which alarm?",
+     "type": "choice",
+     "q": "Which one sounds sure of itself?",
      "opts": [
-      "Gyro",
-      "Radar",
-      "Fire"
+      "\"It's not safe\" with the voice going down",
+      "\"It's not safe?\" with the voice going up",
+      "Saying it very fast"
      ],
      "a": 0
     }
@@ -791,57 +768,57 @@
   },
   {
    "id": "read",
-   "title": "Read the defect list",
+   "title": "Read the near miss report",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "defects",
-     "q": "What was the cause?",
+     "doc": "nm",
+     "q": "Was anybody hurt?",
      "opts": [
-      "A blown fuse",
-      "A broken screen",
-      "Bad weather"
+      "No",
+      "Yes, the bosun",
+      "Yes, the cadet"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "defects",
-     "q": "When was the radar tested?",
+     "doc": "nm",
+     "q": "How high is the edge of the grating?",
      "opts": [
-      "0750",
-      "0725",
-      "0705"
+      "About 2 cm",
+      "About 20 cm",
+      "Flat"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "defects",
-     "q": "Tap what they must order.",
+     "doc": "nm",
+     "q": "Tap what they did about it.",
      "a": 5
     },
     {
      "type": "doc",
-     "doc": "defects",
-     "q": "Who changed the fuse?",
+     "doc": "nm",
+     "q": "What is the recommendation?",
      "opts": [
-      "The Chief Engineer",
-      "The cadet",
-      "The Chief Officer"
+      "Replace the grating",
+      "Paint it yellow",
+      "Close the walkway forever"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "defects",
-     "q": "Is the radar working now?",
+     "doc": "nm",
+     "q": "When is the hazard worse?",
      "opts": [
-      "Yes",
-      "No",
-      "Only at night"
+      "At night",
+      "In port",
+      "In the afternoon"
      ],
      "a": 0
     }
@@ -849,77 +826,76 @@
   },
   {
    "id": "speak",
-   "title": "Report the fault",
+   "title": "Speak up",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Short fault reports",
-     "body": "Listen, say it, check it. What, then the state: Radar one HAS STOPPED.",
-     "es": "Qué equipo, y qué le pasa.",
+     "title": "Polite, clear, firm",
+     "body": "Listen, say it, check it. Soft start, firm end: Sorry… I don't think it's SAFE.",
+     "es": "Empezá suave, terminá firme.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-stopped"
+     "model": "p-cani"
     },
     {
      "type": "shadow",
-     "model": "p-goneoff"
+     "model": "p-dontthink"
     },
     {
      "type": "shadow",
-     "model": "p-fcr"
+     "model": "p-there"
     },
     {
      "type": "role",
-     "cue": "c-wrong",
-     "task": "It stopped and the screen doesn't work. Tell her.",
-     "model": "m-wrong",
+     "cue": "c-walkaround",
+     "task": "You think it's dangerous. Say so, politely.",
+     "model": "m-notsafe",
      "accept": [
-      "It has stopped. The display isn't working.",
-      "It has stopped.",
-      "It's stopped. The display isn't working.",
-      "The display isn't working.",
-      "The display has frozen."
+      "Sorry, but I don't think it's safe.",
+      "I don't think it's safe.",
+      "Sorry, I don't think it's safe.",
+      "Sorry Bosun, but I don't think it's safe."
      ]
     },
     {
      "type": "role",
-     "cue": "c-happened",
-     "task": "The alarm went off at 0720.",
-     "model": "m-happened",
+     "cue": "c-whatproblem",
+     "task": "Tell her: a cracked grating on the walkway.",
+     "model": "m-problem",
      "accept": [
-      "The alarm went off at zero seven twenty.",
-      "At zero seven twenty.",
-      "The alarm went off at 0720.",
-      "It went off at zero seven twenty."
+      "There's a cracked grating on the walkway.",
+      "A cracked grating on the walkway.",
+      "There is a cracked grating on the walkway.",
+      "The grating on the walkway is cracked."
      ]
     },
     {
      "type": "role",
-     "cue": "c-touched",
-     "task": "Nobody touched it. Tell him.",
-     "model": "m-nobody",
+     "cue": "c-thisway",
+     "task": "No. Tell him it's not safe, there's a crack.",
+     "model": "m-notthisway",
      "accept": [
-      "No, nobody has touched it.",
-      "Nobody has touched it.",
-      "No, nobody.",
-      "No, nobody touched it."
+      "I don't think it's safe. There's a crack.",
+      "I don't think it's safe.",
+      "Sorry, I don't think it's safe. There's a crack.",
+      "No, there's a crack. I don't think it's safe."
      ]
     },
     {
      "type": "role",
-     "cue": "c-nowok",
-     "task": "Yes, it works now.",
-     "model": "m-working",
+     "cue": "c-needwhat",
+     "task": "Say what you need: a barrier and a warning sign.",
+     "model": "m-need",
      "accept": [
-      "Yes, it's working now.",
-      "Yes, it's working.",
-      "Yes, it is working now.",
-      "It's working now."
+      "A barrier and a warning sign.",
+      "We need a barrier and a warning sign.",
+      "A barrier and a sign.",
+      "Barrier tape and a warning sign."
      ]
     }
    ]
@@ -932,97 +908,96 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-fuse",
+     "audio": "w-crack",
      "q": "Type what you hear.",
      "accept": [
-      "fuse",
-      "a fuse",
-      "the fuse"
+      "crack",
+      "a crack"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-alarm",
-     "a": "alarm"
+     "audio": "c-show-grating",
+     "a": "grating"
     },
     {
      "type": "tap",
-     "audio": "c-show-fuse",
-     "a": "fuse"
+     "audio": "c-show-barrier",
+     "a": "barrier"
     },
     {
      "type": "listen",
      "audio": [
-      "l18-05",
-      "l18-06"
+      "l18-13",
+      "l18-14"
      ],
-     "q": "Who is coming to the bridge?",
+     "q": "For Rolando, speaking up is…",
      "opts": [
-      "The Chief Engineer",
-      "The Captain",
-      "The bosun"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "A piece you keep for when the old one breaks is a…",
-     "opts": [
-      "spare",
-      "fault",
-      "reset"
+      "part of the job",
+      "a problem",
+      "only for officers"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "\"What does the radar do?\" \"It ___ other ships.\"",
+     "q": "Nobody was hurt, but somebody almost fell. It's a…",
      "opts": [
-      "shows",
-      "show",
-      "is show"
+      "near miss",
+      "trip hazard",
+      "walkway"
+     ],
+     "a": 0
+    },
+    {
+     "type": "choice",
+     "q": "You report on the radio. You end with…",
+     "opts": [
+      "Over.",
+      "Bye.",
+      "OK, finished."
      ],
      "a": 0,
-     "why": "From Lessons 4 and 13."
+     "why": "From Lessons 11 and 12."
     },
     {
      "type": "build",
-     "q": "Report: the alarm sounded at 0725.",
+     "q": "Start politely: you want to say something to the Captain.",
      "a": [
-      "The",
-      "alarm",
-      "went",
-      "off",
-      "at",
-      "0725."
+      "Sorry,",
+      "can",
+      "I",
+      "say",
+      "something?"
      ],
      "extra": [
-      "has",
-      "gone"
+      "tell",
+      "you"
      ]
     },
     {
      "type": "choice",
-     "q": "Which -ed ending is one beat, /t/?",
+     "q": "The grating is between tank 2 and tank 3. It's ___ the tanks.",
      "opts": [
-      "stopped",
-      "reported",
-      "tested"
+      "between",
+      "next",
+      "in"
      ],
-     "a": 0
+     "a": 0,
+     "why": "Place words, from Lesson 7."
     },
     {
      "type": "type",
-     "q": "Write it in English: fusible",
+     "q": "Write it in English: pasarela",
      "accept": [
-      "fuse",
-      "a fuse",
-      "the fuse"
+      "walkway",
+      "a walkway",
+      "the walkway"
      ]
     }
    ]
   }
  ],
  "modelAudio": true,
- "mediaRev": 1
+ "mediaRev": 2
 }

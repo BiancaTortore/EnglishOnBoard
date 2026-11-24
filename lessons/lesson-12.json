@@ -1,11 +1,9 @@
 {
- "n": 12,
- "modelAudio": true,
- "mediaRev": 4,
+ "n": 12, "modelAudio": true, "mediaRev": 5,
  "module": 3,
- "title": "Anchoring",
- "place": "Day 3 · 02:00 · off Galveston, in fog",
- "goal": "Report the anchor and the chain with numbers and clock directions.",
+ "title": "Mooring & letting go",
+ "place": "Day 2 · 17:20 · Houston, aft mooring station",
+ "goal": "Understand mooring orders on the radio, read them back and report the lines.",
  "images": {
   "hero": "img/l12/hero.jpg",
   "scene": "img/l12/scene.jpg"
@@ -14,300 +12,306 @@
  "audio": {
   "l12-01": {
    "voice": "lars",
-   "text": "Forward, bridge. Stand by starboard anchor. Over.",
-   "es": "Proa, puente. Listos con el ancla de estribor. Cambio.",
+   "text": "Aft station, bridge. Single up to one and one. Over.",
+   "es": "Estación de popa, puente. Queden con uno y uno. Cambio.",
    "radio": true
   },
   "l12-02": {
-   "voice": "tanya",
-   "text": "Stand by starboard anchor. Forward, roger. Over.",
-   "es": "Listos con el ancla de estribor. Proa, recibido. Cambio."
+   "voice": "james",
+   "text": "Single up to one and one. Aft, roger. Over.",
+   "es": "Quedar con uno y uno. Popa, recibido. Cambio."
   },
   "l12-03": {
    "pause": 500,
-   "voice": "tanya",
-   "text": "Rolando, take off the lashing. Keep it on the brake. Diego, stand next to me and watch the chain.",
-   "es": "Rolando, sacá la trinca. Dejala en el freno. Diego, ponete al lado mío y mirá la cadena."
+   "voice": "james",
+   "text": "Rolando, single up. Keep one stern line and one spring.",
+   "es": "Rolando, largá los demás. Dejá un largo y un esprín."
   },
   "l12-04": {
-   "voice": "diego",
-   "text": "This fog… I can't see the water!",
-   "es": "Esta niebla… ¡No veo el agua!"
+   "voice": "rolando",
+   "text": "One and one, OK. Diego, watch the lines. Tell me when they're clear of the water.",
+   "es": "Uno y uno, okey. Diego, mirá los cabos. Avisame cuando estén fuera del agua."
   },
   "l12-05": {
-   "voice": "tanya",
-   "text": "That's why we anchor. No entry to Galveston in this fog.",
-   "es": "Por eso fondeamos. Con esta niebla no se entra a Galveston."
+   "voice": "diego",
+   "text": "OK!",
+   "es": "¡Okey!"
   },
   "l12-06": {
-   "pause": 1300,
-   "voice": "lars",
-   "text": "Forward, bridge. Let go starboard anchor. Over.",
-   "es": "Proa, puente. Fondo el ancla de estribor. Cambio.",
-   "radio": true
+   "pause": 1500,
+   "voice": "diego",
+   "text": "Two stern lines and the breast line are clear of the water!",
+   "es": "¡Dos largos y el través están fuera del agua!"
   },
   "l12-07": {
-   "voice": "tanya",
-   "text": "Let go starboard anchor!",
-   "es": "¡Fondo el ancla de estribor!"
+   "voice": "james",
+   "text": "Bridge, aft. Singled up to one and one. Over.",
+   "es": "Puente, popa. Quedamos con uno y uno. Cambio."
   },
   "l12-08": {
-   "voice": "rolando",
-   "text": "Letting go!",
-   "es": "¡Fondeando!"
+   "pause": 800,
+   "voice": "lars",
+   "text": "Aft, bridge. Thank you. Let go aft. The tug is standing by. Over.",
+   "es": "Popa, puente. Gracias. Larguen a popa. El remolcador está listo. Cambio.",
+   "radio": true
   },
   "l12-09": {
-   "pause": 1600,
-   "voice": "tanya",
-   "text": "Diego, how many shackles in the water?",
-   "es": "Diego, ¿cuántos grilletes en el agua?"
+   "voice": "james",
+   "text": "Let go aft. Rolando, let go!",
+   "es": "Largar a popa. ¡Rolando, largá!"
   },
   "l12-10": {
-   "pause": 700,
-   "voice": "diego",
-   "text": "Three shackles in the water.",
-   "es": "Tres grilletes en el agua."
+   "pause": 900,
+   "voice": "rolando",
+   "text": "Stern line slack… Heave in!",
+   "es": "Largo en banda… ¡Virá!"
   },
   "l12-11": {
-   "voice": "tanya",
-   "text": "Good. And where is the chain leading?",
-   "es": "Bien. ¿Y hacia dónde trabaja la cadena?"
+   "pause": 1500,
+   "voice": "diego",
+   "text": "The spring is out of the water… The stern line is out of the water!",
+   "es": "El esprín está fuera del agua… ¡El largo está fuera del agua!"
   },
   "l12-12": {
-   "pause": 600,
-   "voice": "diego",
-   "text": "It's leading… two o'clock.",
-   "es": "Trabaja… hacia las dos."
+   "voice": "james",
+   "text": "Bridge, aft. All lines let go. Propeller clear. Over.",
+   "es": "Puente, popa. Todos los cabos largados. Hélice libre. Cambio."
   },
   "l12-13": {
-   "voice": "tanya",
-   "text": "Bridge, forward. Three shackles in the water, chain leading two o'clock. Over.",
-   "es": "Puente, proa. Tres grilletes en el agua, cadena trabajando a las dos. Cambio."
-  },
-  "l12-14": {
    "pause": 700,
    "voice": "lars",
-   "text": "Thank you. Report when the anchor is holding. Over.",
-   "es": "Gracias. Avise cuando el ancla esté agarrando. Cambio.",
+   "text": "All lines let go aft, propeller clear. Thank you. Over.",
+   "es": "Todos los cabos largados a popa, hélice libre. Gracias. Cambio.",
    "radio": true
+  },
+  "l12-14": {
+   "pause": 1000,
+   "voice": "rolando",
+   "text": "Good job, cadet. Now we sail.",
+   "es": "Buen trabajo, cadete. Ahora sí navegamos."
   },
   "l12-15": {
-   "pause": 2000,
-   "voice": "tanya",
-   "text": "Bridge, forward. The anchor is holding. Over.",
-   "es": "Puente, proa. El ancla está agarrando. Cambio."
-  },
-  "l12-16": {
-   "pause": 800,
-   "voice": "tanya",
-   "text": "Diego, now the fog bell. Ring it for five seconds, every minute.",
-   "es": "Diego, ahora la campana de niebla. Tocala cinco segundos, cada minuto."
-  },
-  "l12-17": {
    "voice": "diego",
-   "text": "Five seconds, every minute. OK, Chief.",
-   "es": "Cinco segundos, cada minuto. Okey, jefa."
+   "text": "My first departure!",
+   "es": "¡Mi primera zarpada!"
   },
-  "w-anchor": {
+  "w-mooring": {
    "voice": "model",
-   "text": "anchor"
+   "text": "mooring line"
   },
-  "x-anchor": {
+  "x-mooring": {
    "voice": "model",
-   "text": "Stand by starboard anchor.",
-   "es": "Listos con el ancla de estribor."
+   "text": "Each mooring line goes to a bollard.",
+   "es": "Cada cabo de amarre va a una bita."
   },
-  "w-chain": {
+  "w-stern": {
    "voice": "model",
-   "text": "chain"
+   "text": "stern line"
   },
-  "x-chain": {
+  "x-stern": {
    "voice": "model",
-   "text": "Watch the chain.",
-   "es": "Mirá la cadena."
+   "text": "Keep one stern line.",
+   "es": "Dejá un largo de popa."
   },
-  "w-shackle": {
+  "w-spring": {
    "voice": "model",
-   "text": "shackle"
+   "text": "spring"
   },
-  "x-shackle": {
+  "x-spring": {
    "voice": "model",
-   "text": "Three shackles in the water.",
-   "es": "Tres grilletes en el agua."
+   "text": "The spring goes forward.",
+   "es": "El esprín va hacia proa."
   },
-  "w-windlass": {
+  "w-bollard": {
    "voice": "model",
-   "text": "windlass"
+   "text": "bollard"
   },
-  "x-windlass": {
+  "x-bollard": {
    "voice": "model",
-   "text": "Rolando is at the windlass.",
-   "es": "Rolando está en el cabrestante."
+   "text": "The line is on the bollard.",
+   "es": "El cabo está en la bita."
   },
-  "w-brake": {
+  "w-fairlead": {
    "voice": "model",
-   "text": "brake"
+   "text": "fairlead"
   },
-  "x-brake": {
+  "x-fairlead": {
    "voice": "model",
-   "text": "Keep it on the brake.",
-   "es": "Dejala en el freno."
+   "text": "The line goes through the fairlead.",
+   "es": "El cabo pasa por el portaespía."
   },
-  "w-holding": {
+  "w-tug": {
    "voice": "model",
-   "text": "holding"
+   "text": "tug"
   },
-  "x-holding": {
+  "x-tug": {
    "voice": "model",
-   "text": "The anchor is holding.",
-   "es": "El ancla está agarrando."
+   "text": "The tug is standing by.",
+   "es": "El remolcador está listo."
   },
-  "w-fog": {
+  "w-slack": {
    "voice": "model",
-   "text": "fog"
+   "text": "slack"
   },
-  "x-fog": {
+  "x-slack": {
    "voice": "model",
-   "text": "No entry in this fog.",
-   "es": "Con esta niebla no se entra."
+   "text": "The stern line is slack.",
+   "es": "El largo está en banda."
   },
-  "w-bell": {
+  "w-heave": {
    "voice": "model",
-   "text": "bell"
+   "text": "heave in"
   },
-  "x-bell": {
+  "x-heave": {
    "voice": "model",
-   "text": "Ring the bell every minute.",
-   "es": "Tocá la campana cada minuto."
+   "text": "Heave in the spring.",
+   "es": "Virá el esprín."
   },
-  "w-stopper": {
+  "w-slackaway": {
    "voice": "model",
-   "text": "chain stopper"
+   "text": "slack away"
   },
-  "x-stopper": {
+  "x-slackaway": {
    "voice": "model",
-   "text": "Put the chain stopper on.",
-   "es": "Poné el estopor."
+   "text": "Slack away the stern line.",
+   "es": "Arriá el largo de popa."
   },
-  "w-hawse": {
+  "w-headline": {
    "voice": "model",
-   "text": "hawse pipe"
+   "text": "head line"
   },
-  "x-hawse": {
+  "x-headline": {
    "voice": "model",
-   "text": "The chain runs through the hawse pipe.",
-   "es": "La cadena pasa por el escobén."
+   "text": "The head lines are on the forecastle.",
+   "es": "Los largos de proa están en el castillo de proa."
   },
-  "w-locker": {
+  "w-winch": {
    "voice": "model",
-   "text": "chain locker"
+   "text": "winch"
   },
-  "x-locker": {
+  "x-winch": {
    "voice": "model",
-   "text": "The chain is stowed in the chain locker.",
-   "es": "La cadena va estibada en la caja de cadenas."
+   "text": "Start the winch.",
+   "es": "Arrancá el guinche."
   },
-  "p-howmany": {
+  "w-drum": {
    "voice": "model",
-   "text": "How many shackles in the water?",
-   "es": "¿Cuántos grilletes en el agua?"
+   "text": "drum"
   },
-  "p-three": {
+  "x-drum": {
    "voice": "model",
-   "text": "Three shackles in the water.",
-   "es": "Tres grilletes en el agua."
+   "text": "Keep three turns on the drum.",
+   "es": "Dejá tres vueltas en el tambor."
   },
-  "p-leading": {
+  "p-singleup": {
    "voice": "model",
-   "text": "The chain is leading two o'clock.",
-   "es": "La cadena trabaja a las dos."
+   "text": "Single up to one and one.",
+   "es": "Quedar con uno y uno."
   },
-  "p-holding": {
+  "p-letgo": {
    "voice": "model",
-   "text": "The anchor is holding.",
-   "es": "El ancla está agarrando."
+   "text": "Let go aft.",
+   "es": "Largar a popa."
   },
-  "m-four": {
+  "p-clear": {
    "voice": "model",
-   "text": "Four shackles in the water.",
-   "es": "Cuatro grilletes en el agua."
+   "text": "The stern line is clear of the water.",
+   "es": "El largo está fuera del agua."
   },
-  "m-ten": {
+  "p-allgone": {
    "voice": "model",
-   "text": "The chain is leading ten o'clock.",
-   "es": "La cadena trabaja a las diez."
+   "text": "All lines let go. Propeller clear.",
+   "es": "Todos los cabos largados. Hélice libre."
   },
-  "m-twelve": {
+  "p-roger": {
    "voice": "model",
-   "text": "Leading twelve o'clock.",
-   "es": "Trabaja a las doce."
+   "text": "Aft, roger.",
+   "es": "Popa, recibido."
   },
-  "m-rb": {
+  "m-letgo-rb": {
    "voice": "model",
-   "text": "Stand by port anchor.",
-   "es": "Listos con el ancla de babor."
+   "text": "Let go aft.",
+   "es": "Largar a popa."
   },
-  "m-oclock": {
+  "m-single-rb": {
    "voice": "model",
-   "text": "two o'clock",
-   "es": "las dos"
+   "text": "Single up to one and one.",
+   "es": "Quedar con uno y uno."
   },
-  "c-show-anchor": {
-   "voice": "tanya",
-   "text": "Show me the port anchor."
+  "m-springclear": {
+   "voice": "model",
+   "text": "The spring is clear of the water.",
+   "es": "El esprín está fuera del agua."
   },
-  "c-show-shackle": {
-   "voice": "tanya",
-   "text": "Show me the shackle mark."
+  "m-report": {
+   "voice": "model",
+   "text": "All lines let go. Propeller clear.",
+   "es": "Todos los cabos largados. Hélice libre."
   },
-  "c-show-windlass": {
+  "m-letgo": {
+   "voice": "model",
+   "text": "let go",
+   "es": "largar"
+  },
+  "m-letsgo": {
+   "voice": "model",
+   "text": "let's go",
+   "es": "vamos"
+  },
+  "c-show-tug": {
+   "voice": "james",
+   "text": "Where's the tug?"
+  },
+  "c-show-stern": {
    "voice": "rolando",
-   "text": "Show me the windlass."
+   "text": "Show me a stern line."
   },
-  "c-show-brake": {
+  "c-show-spring": {
    "voice": "rolando",
-   "text": "Where's the brake?"
+   "text": "Show me the spring."
   },
-  "c-show-bell": {
-   "voice": "tanya",
-   "text": "Where's the fog bell?"
+  "c-show-bollard": {
+   "voice": "james",
+   "text": "Where's the bollard?"
   },
-  "c-show-holding": {
-   "voice": "tanya",
-   "text": "Which anchor is holding?"
-  },
-  "c-show-fog": {
+  "c-show-fairlead": {
    "voice": "rolando",
-   "text": "Show me the fog."
+   "text": "Show me the fairlead."
   },
-  "c-howmany": {
-   "voice": "tanya",
-   "text": "Diego, how many shackles in the water?"
+  "c-show-slack": {
+   "voice": "rolando",
+   "text": "Which line is slack?"
   },
-  "c-leading": {
-   "voice": "tanya",
-   "text": "Where is the chain leading?"
+  "c-show-heave": {
+   "voice": "rolando",
+   "text": "Where do we heave in?"
   },
-  "c-leading2": {
-   "voice": "tanya",
-   "text": "And now? Where is it leading?"
-  },
-  "c-rb": {
+  "c-rb-letgo": {
    "voice": "lars",
-   "text": "Forward, bridge. Stand by port anchor. Over.",
+   "text": "Aft, bridge. Let go aft. Over.",
    "radio": true
   },
-  "c-clock-other": {
+  "c-rb-single": {
+   "voice": "lars",
+   "text": "Aft, bridge. Single up to one and one. Over.",
+   "radio": true
+  },
+  "c-isclear": {
    "voice": "rolando",
-   "text": "Chain leading eleven o'clock."
+   "text": "Diego! Is the spring clear of the water?"
   },
-  "c-shackles-other": {
-   "voice": "tanya",
-   "text": "Five shackles on deck."
+  "c-report": {
+   "voice": "lars",
+   "text": "Aft, bridge. Report. Over.",
+   "radio": true
   },
-  "c-clock3": {
-   "voice": "tanya",
-   "text": "The other ship is at three o'clock."
+  "c-letgo-not": {
+   "voice": "james",
+   "text": "Don't let go the spring yet. Only the stern line."
+  },
+  "c-howmany": {
+   "voice": "james",
+   "text": "We have three stern lines, one breast line and two springs."
   }
  },
  "dialogue": [
@@ -325,186 +329,191 @@
   "l12-12",
   "l12-13",
   "l12-14",
-  "l12-15",
-  "l12-16",
-  "l12-17"
+  "l12-15"
  ],
  "words": {
-  "anchor": {
-   "en": "anchor",
-   "ipa": "/ˈæŋkə/",
-   "es": "ancla",
-   "audio": "w-anchor",
-   "ex": "x-anchor"
+  "mooring": {
+   "en": "mooring line",
+   "ipa": "/ˈmʊərɪŋ laɪn/",
+   "es": "cabo de amarre",
+   "audio": "w-mooring",
+   "ex": "x-mooring"
   },
-  "chain": {
-   "en": "chain",
-   "ipa": "/tʃeɪn/",
-   "es": "cadena",
-   "audio": "w-chain",
-   "ex": "x-chain"
+  "stern": {
+   "en": "stern line",
+   "ipa": "/ˈstɜːn laɪn/",
+   "es": "largo de popa",
+   "audio": "w-stern",
+   "ex": "x-stern"
   },
-  "shackle": {
-   "en": "shackle",
-   "ipa": "/ˈʃækl/",
-   "es": "grillete (la pieza, y también el tramo de cadena: 27,5 m)",
-   "audio": "w-shackle",
-   "ex": "x-shackle"
+  "spring": {
+   "en": "spring",
+   "ipa": "/sprɪŋ/",
+   "es": "esprín",
+   "audio": "w-spring",
+   "ex": "x-spring"
   },
-  "windlass": {
-   "en": "windlass",
-   "ipa": "/ˈwɪndləs/",
-   "es": "cabrestante",
-   "audio": "w-windlass",
-   "ex": "x-windlass"
+  "bollard": {
+   "en": "bollard",
+   "ipa": "/ˈbɒlɑːd/",
+   "es": "bita",
+   "audio": "w-bollard",
+   "ex": "x-bollard"
   },
-  "brake": {
-   "en": "brake",
-   "ipa": "/breɪk/",
-   "es": "freno",
-   "audio": "w-brake",
-   "ex": "x-brake"
+  "fairlead": {
+   "en": "fairlead",
+   "ipa": "/ˈfeəliːd/",
+   "es": "portaespía",
+   "audio": "w-fairlead",
+   "ex": "x-fairlead"
   },
-  "holding": {
-   "en": "holding",
-   "ipa": "/ˈhəʊldɪŋ/",
-   "es": "agarrando (el ancla)",
-   "audio": "w-holding",
-   "ex": "x-holding"
+  "tug": {
+   "en": "tug",
+   "ipa": "/tʌɡ/",
+   "es": "remolcador",
+   "audio": "w-tug",
+   "ex": "x-tug"
   },
-  "fog": {
-   "en": "fog",
-   "ipa": "/fɒɡ/",
-   "es": "niebla",
-   "audio": "w-fog",
-   "ex": "x-fog"
+  "slack": {
+   "en": "slack",
+   "ipa": "/slæk/",
+   "es": "en banda, flojo",
+   "audio": "w-slack",
+   "ex": "x-slack"
   },
-  "bell": {
-   "en": "bell",
-   "ipa": "/bel/",
-   "es": "campana",
-   "audio": "w-bell",
-   "ex": "x-bell"
+  "heave": {
+   "en": "heave in",
+   "ipa": "/hiːv ˈɪn/",
+   "es": "virar, cobrar",
+   "audio": "w-heave",
+   "ex": "x-heave"
   },
-  "stopper": {
-   "en": "chain stopper",
-   "ipa": "/ˈtʃeɪn ˌstɒpə/",
-   "es": "estopor",
-   "audio": "w-stopper",
-   "ex": "x-stopper"
+  "slackaway": {
+   "en": "slack away",
+   "ipa": "/ˌslæk əˈweɪ/",
+   "es": "arriar",
+   "audio": "w-slackaway",
+   "ex": "x-slackaway"
   },
-  "hawse": {
-   "en": "hawse pipe",
-   "ipa": "/ˈhɔːz paɪp/",
-   "es": "escobén",
-   "audio": "w-hawse",
-   "ex": "x-hawse"
+  "headline": {
+   "en": "head line",
+   "ipa": "/ˈhed laɪn/",
+   "es": "largo de proa",
+   "audio": "w-headline",
+   "ex": "x-headline"
   },
-  "locker": {
-   "en": "chain locker",
-   "ipa": "/ˈtʃeɪn ˌlɒkə/",
-   "es": "caja de cadenas",
-   "audio": "w-locker",
-   "ex": "x-locker"
+  "winch": {
+   "en": "winch",
+   "ipa": "/wɪntʃ/",
+   "es": "guinche",
+   "audio": "w-winch",
+   "ex": "x-winch"
+  },
+  "drum": {
+   "en": "drum",
+   "ipa": "/drʌm/",
+   "es": "tambor",
+   "audio": "w-drum",
+   "ex": "x-drum"
   }
  },
  "plate": {
   "svg": "img/l12/plate.svg",
   "pins": [
    {
-    "word": "holding",
-    "x": 330,
-    "y": 22
+    "word": "stern",
+    "x": 317,
+    "y": 178
    },
    {
-    "word": "chain",
-    "x": 194,
+    "word": "spring",
+    "x": 150,
+    "y": 180
+   },
+   {
+    "word": "bollard",
+    "x": 232,
+    "y": 200
+   },
+   {
+    "word": "fairlead",
+    "x": 192,
+    "y": 148
+   },
+   {
+    "word": "tug",
+    "x": 368,
     "y": 82
    },
    {
-    "word": "shackle",
-    "x": 263,
-    "y": 40
+    "word": "mooring",
+    "x": 242,
+    "y": 172
    },
    {
-    "word": "windlass",
-    "x": 200,
-    "y": 108
+    "word": "slack",
+    "x": 372,
+    "y": 184
    },
    {
-    "word": "brake",
-    "x": 252,
-    "y": 146
+    "word": "heave",
+    "x": 242,
+    "y": 141
    },
    {
-    "word": "anchor",
-    "x": 180,
-    "y": 52
+    "word": "slackaway",
+    "x": 248,
+    "y": 72
    },
    {
-    "word": "bell",
-    "x": 200,
-    "y": 214
+    "word": "winch",
+    "x": 170,
+    "y": 124
    },
    {
-    "word": "fog",
-    "x": 80,
-    "y": 40
-   },
-   {
-    "word": "stopper",
-    "x": 244,
-    "y": 98
-   },
-   {
-    "word": "hawse",
-    "x": 232,
-    "y": 56
-   },
-   {
-    "word": "locker",
-    "x": 252,
-    "y": 176
+    "word": "drum",
+    "x": 206,
+    "y": 100
    }
   ]
  },
  "docs": {
-  "log": {
+  "plan": {
    "kind": "form",
-   "title": "DECK LOG · ANCHORING",
-   "subtitle": "M/V LNG HORIZON · OFF GALVESTON · 16 MAR 2026",
+   "title": "MOORING PLAN · AFT",
+   "subtitle": "M/V LNG HORIZON · HOUSTON · 15 MAR 2026",
    "cells": [
     [
-     "0214",
-     "Starboard anchor let go"
+     "STATION",
+     "Aft · Officer in charge: 2/O J. O'Connor"
     ],
     [
-     "POSITION",
-     "29°12.8' N 094°37.5' W"
+     "SIDE ALONGSIDE",
+     "Port side"
     ],
     [
-     "SHACKLES",
-     "3 in the water"
+     "STERN LINES",
+     "3"
     ],
     [
-     "CHAIN",
-     "Leading 2 o'clock"
+     "BREAST LINE",
+     "1"
     ],
     [
-     "0231",
-     "Anchor holding · brought up"
+     "SPRINGS",
+     "2"
     ],
     [
-     "VISIBILITY",
-     "Under 0.5 NM · fog"
+     "TUG",
+     "Centre lead aft"
     ],
     [
-     "FOG SIGNAL",
-     "Bell forward, 5 s every minute"
+     "SINGLE UP TO",
+     "1 stern line + 1 spring"
     ],
     [
-     "OOW",
-     "2/O J. O'Connor"
+     "REPORT TO BRIDGE",
+     "All lines let go · Propeller clear"
     ]
    ]
   }
@@ -512,16 +521,16 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: anchoring in fog",
+   "title": "Listen: letting go",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l12/scene.jpg",
-     "kicker": "Day 3 · 02:00 · off Galveston",
-     "title": "Fog at the bow",
-     "body": "In the night the fog comes down. The ship can't enter port, so she anchors to wait. Diego is at the bow with Tanya and Rolando. Listen first, one piece at a time.",
+     "kicker": "Day 2 · 17:20 · Houston",
+     "title": "Departure from the stern",
+     "body": "The pilot is on the bridge. Diego is at the stern with James and Rolando. The orders come on the radio. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
@@ -530,187 +539,179 @@
       "l12-01",
       "l12-02"
      ],
-     "q": "Which anchor?",
+     "q": "What is the first order from the bridge?",
      "opts": [
-      "Starboard",
-      "Port",
-      "Both"
+      "Single up to one and one",
+      "Let go everything",
+      "Make fast the tug"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l12-03"
-     ],
-     "q": "What does Diego do?",
-     "opts": [
-      "Watch the chain",
-      "Hold the brake",
-      "Call the bridge"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
+      "l12-03",
       "l12-04",
       "l12-05"
      ],
-     "q": "Why do they anchor?",
+     "q": "What is Diego's job?",
      "opts": [
-      "Because of the fog",
-      "Because of the wind",
-      "To wait for the pilot"
+      "Watch the lines and say when they're clear of the water",
+      "Call the bridge",
+      "Drive the winch"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l12-09",
-      "l12-10"
+      "l12-06",
+      "l12-07"
      ],
-     "q": "How many shackles are in the water?",
+     "q": "What does James report to the bridge?",
      "opts": [
-      "Three",
-      "Two",
-      "Four"
+      "Singled up to one and one",
+      "All lines let go",
+      "The tug is fast"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l12-11",
-      "l12-12"
+      "l12-08",
+      "l12-09"
      ],
-     "q": "Where is the chain leading?",
+     "q": "What is the next order?",
      "opts": [
-      "Two o'clock",
-      "Ten o'clock",
-      "Twelve o'clock"
+      "Let go aft",
+      "Single up",
+      "Stop"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l12-14",
-      "l12-15"
+      "l12-10",
+      "l12-11"
      ],
-     "q": "What does Tanya report at the end?",
+     "q": "Which line comes out of the water first?",
      "opts": [
-      "The anchor is holding",
-      "The chain is broken",
-      "Three shackles on deck"
+      "The spring",
+      "The stern line",
+      "The breast line"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l12-16",
-      "l12-17"
+      "l12-12",
+      "l12-13"
      ],
-     "q": "How often does Diego ring the bell?",
+     "q": "\"Propeller clear\" means…",
      "opts": [
-      "Every minute, for five seconds",
-      "Every five minutes",
-      "Once"
+      "no lines near the propeller",
+      "the propeller is clean",
+      "the propeller is stopped"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole anchoring",
+     "title": "Now the whole departure",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "At the bow",
+   "title": "At the stern",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The bow from above, in fog. The clock shows directions from the bow."
+     "body": "The stern from above. Port side alongside, quay at the bottom."
     },
     {
      "type": "card",
-     "word": "anchor"
+     "word": "mooring"
     },
     {
      "type": "card",
-     "word": "chain"
+     "word": "stern"
     },
     {
      "type": "card",
-     "word": "shackle"
+     "word": "headline"
+    },
+    {
+     "type": "card",
+     "word": "spring"
     },
     {
      "type": "tap",
-     "audio": "c-show-shackle",
-     "a": "shackle"
+     "audio": "c-show-spring",
+     "a": "spring"
     },
     {
      "type": "card",
-     "word": "windlass"
+     "word": "bollard"
     },
     {
      "type": "card",
-     "word": "brake"
-    },
-    {
-     "type": "card",
-     "word": "stopper"
-    },
-    {
-     "type": "card",
-     "word": "hawse"
-    },
-    {
-     "type": "card",
-     "word": "locker"
+     "word": "fairlead"
     },
     {
      "type": "tap",
-     "audio": "c-show-brake",
-     "a": "brake"
+     "audio": "c-show-fairlead",
+     "a": "fairlead"
     },
     {
      "type": "card",
-     "word": "holding"
+     "word": "tug"
     },
     {
      "type": "tap",
-     "audio": "c-show-holding",
-     "a": "holding"
+     "audio": "c-show-tug",
+     "a": "tug"
     },
     {
      "type": "card",
-     "word": "fog"
+     "word": "slack"
     },
     {
      "type": "card",
-     "word": "bell"
+     "word": "winch"
+    },
+    {
+     "type": "card",
+     "word": "drum"
+    },
+    {
+     "type": "card",
+     "word": "heave"
+    },
+    {
+     "type": "card",
+     "word": "slackaway"
     },
     {
      "type": "tap",
-     "audio": "c-show-bell",
-     "a": "bell"
+     "audio": "c-show-slack",
+     "a": "slack"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"cabrestante\" in English:",
+     "q": "\"bita\" in English:",
      "opts": [
-      "windlass",
-      "winch wheel",
-      "windmill"
+      "bollard",
+      "bit",
+      "post"
      ],
      "a": 0
     },
@@ -719,24 +720,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "anchor",
-       "ancla"
+       "stern line",
+       "largo de popa"
       ],
       [
-       "chain",
-       "cadena"
+       "spring",
+       "esprín"
       ],
       [
-       "brake",
-       "freno"
+       "bollard",
+       "bita"
       ],
       [
-       "fog",
-       "niebla"
+       "tug",
+       "remolcador"
       ],
       [
-       "bell",
-       "campana"
+       "heave in",
+       "virar"
       ]
      ]
     }
@@ -744,214 +745,219 @@
   },
   {
    "id": "phrases",
-   "title": "Two o'clock",
+   "title": "Orders and reports",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Anchor reports",
+     "title": "At the mooring station",
      "list": [
       [
-       "How many shackles in the water?",
-       "¿Cuántos grilletes en el agua?",
-       "p-howmany"
+       "Single up to one and one.",
+       "Quedar con uno y uno.",
+       "p-singleup"
       ],
       [
-       "Three shackles in the water.",
-       "Tres grilletes en el agua.",
-       "p-three"
+       "Let go aft.",
+       "Largar a popa.",
+       "p-letgo"
       ],
       [
-       "The chain is leading two o'clock.",
-       "La cadena trabaja a las dos.",
-       "p-leading"
+       "The stern line is clear of the water.",
+       "El largo está fuera del agua.",
+       "p-clear"
       ],
       [
-       "The anchor is holding.",
-       "El ancla está agarrando.",
-       "p-holding"
+       "All lines let go. Propeller clear.",
+       "Todos los cabos largados. Hélice libre.",
+       "p-allgone"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "Directions like a clock",
+     "title": "Order, read back, report",
      "steps": [
       [
-       "12 o'clock",
-       "straight ahead"
+       "Order",
+       "Let go aft."
       ],
       [
-       "3 o'clock",
-       "starboard side, at 90°"
+       "Read back",
+       "Let go aft."
       ],
       [
-       "6 o'clock",
-       "astern, behind"
-      ],
-      [
-       "9 o'clock",
-       "port side, at 90°"
+       "Report",
+       "All lines let go."
       ]
      ],
      "paras": [
-      "Imagine a clock on the deck, with <b>12</b> at the bow. The chain, a ship, a buoy: say where it is with the hour.",
-      "<b>leading</b> = the direction the chain goes from the ship: <i>The chain is leading two o'clock.</i>",
-      "<b>one shackle</b> = one length of chain, 27.5 metres (15 fathoms)."
+      "On the radio you <b>read back</b> the order: repeat it, the same words. Then the bridge knows you heard it right.",
+      "Reports are short. No <i>is</i>, no <i>are</i>: <b>All lines let go. Propeller clear. Singled up.</b>",
+      "<i>One and one</i> = one stern line and one spring."
      ],
-     "avoid": "at the two · two hours · the two o'clock"
+     "avoid": "OK, OK! (as the only answer) · The lines are been let go."
     },
     {
      "type": "choice",
-     "q": "The chain goes straight ahead. It's leading…",
+     "q": "The bridge says: \"Let go aft.\" You read back…",
      "opts": [
-      "twelve o'clock",
-      "six o'clock",
-      "three o'clock"
+      "Let go aft.",
+      "OK.",
+      "Yes, I go."
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "A buoy is on the port side, at 90°. It's at…",
+     "q": "All the lines are on board and away from the propeller. You report…",
      "opts": [
-      "nine o'clock",
-      "three o'clock",
-      "six o'clock"
-     ],
-     "a": 0
-    },
-    {
-     "type": "listen",
-     "audio": [
-      "c-clock3"
-     ],
-     "q": "Where is the other ship?",
-     "opts": [
-      "Starboard side, at 90°",
-      "Port side, at 90°",
-      "Straight ahead"
+      "All lines let go. Propeller clear.",
+      "Lines are going.",
+      "All lines are let going."
      ],
      "a": 0
     },
     {
      "type": "build",
-     "situation": "Tanya asks about the shackles.",
-     "q": "Answer: two in the water.",
+     "situation": "The spring is out of the water.",
+     "q": "Tell Rolando.",
      "a": [
-      "Two",
-      "shackles",
-      "in",
+      "The",
+      "spring",
+      "is",
+      "clear",
+      "of",
       "the",
       "water."
      ],
      "extra": [
-      "on",
-      "at"
+      "off",
+      "on"
      ]
     },
     {
-     "type": "type",
-     "audio": "c-clock-other",
-     "q": "What o'clock is the chain leading? Write the number.",
-     "accept": [
-      "11",
-      "eleven"
-     ]
+     "type": "listen",
+     "audio": [
+      "c-letgo-not"
+     ],
+     "q": "What can Rolando let go now?",
+     "opts": [
+      "Only the stern line",
+      "Only the spring",
+      "Both lines"
+     ],
+     "a": 0
     },
     {
      "type": "tip",
      "tag": "Spanish speaker alert",
-     "title": "\"A las dos\" is \"two o'clock\"",
+     "title": "\"Let go\" is not \"let's go\"",
      "paras": [
-      "For directions and for time, say <b>two o'clock</b>, never <i>at the two</i> or <i>two hours</i>.",
-      "For the chain, no <i>at</i>: <b>leading two o'clock</b>. For a ship or a buoy: <b>at two o'clock</b>."
+      "<b>Let go</b> = largar, soltar un cabo. <b>Let's go</b> = vamos.",
+      "On deck this mistake is dangerous: say <b>let go</b> only for lines."
      ],
-     "avoid": "The chain is leading at the two. · Two hours."
+     "list": [
+      [
+       "let go",
+       "largar",
+       "m-letgo"
+      ],
+      [
+       "let's go",
+       "vamos",
+       "m-letsgo"
+      ]
+     ],
+     "avoid": "Let's go the stern line."
+    },
+    {
+     "type": "choice",
+     "q": "Which one is an order for a line?",
+     "opts": [
+      "Let go the stern line.",
+      "Let's go the stern line.",
+      "Go let the stern line."
+     ],
+     "a": 0
     },
     {
      "type": "tip",
      "tag": "Pronunciation",
-     "title": "o'clock and shackle",
+     "title": "Clear words on deck",
      "paras": [
-      "<b>o'clock</b> = /əˈklɒk/: a quick <i>uh</i>, then <b>CLOCK</b>.",
-      "<b>shackle</b> = /ˈʃækl/: <b>SHACK</b>-l. The <i>-le</i> is almost silent."
-     ],
-     "list": [
-      [
-       "two o'clock",
-       "las dos",
-       "m-oclock"
-      ]
+      "At a mooring station it's noisy. Say the important word loud and clear: <b>let GO</b>, <b>CLEAR</b>, <b>SLACK</b>, <b>HEAVE</b>.",
+      "<b>heave</b> has a long <i>ee</i>: /hiːv/, like <i>leave</i>."
      ]
     },
     {
      "type": "type",
-     "audio": "c-shackles-other",
-     "q": "How many shackles on deck? Write the number.",
+     "audio": "c-howmany",
+     "q": "How many springs? Write the number.",
      "accept": [
-      "5",
-      "five"
+      "2",
+      "two"
      ]
     }
    ]
   },
   {
    "id": "read",
-   "title": "Read the log",
+   "title": "Read the mooring plan",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "log",
-     "q": "What time did they let go the anchor?",
+     "doc": "plan",
+     "q": "Which side is alongside?",
      "opts": [
-      "0214",
-      "0231",
-      "0200"
+      "Port side",
+      "Starboard side",
+      "The stern"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "log",
-     "q": "When was the anchor holding?",
+     "doc": "plan",
+     "q": "How many lines are there aft in total?",
      "opts": [
-      "0231",
-      "0214",
-      "0300"
+      "Six",
+      "Three",
+      "Five"
      ],
-     "a": 0
+     "a": 0,
+     "why": "3 stern lines + 1 breast line + 2 springs."
     },
     {
      "type": "docfind",
-     "doc": "log",
-     "q": "Tap the direction of the chain.",
-     "a": 3
+     "doc": "plan",
+     "q": "Tap where the tug is made fast.",
+     "a": 5
     },
     {
      "type": "doc",
-     "doc": "log",
-     "q": "How far can they see?",
+     "doc": "plan",
+     "q": "Who is in charge aft?",
      "opts": [
-      "Less than half a mile",
-      "Two miles",
-      "Five miles"
+      "The Second Officer",
+      "The bosun",
+      "The Chief Officer"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "log",
-     "q": "Where is the fog bell?",
+     "doc": "plan",
+     "q": "Single up to…",
      "opts": [
-      "Forward",
-      "On the bridge",
-      "Aft"
+      "one stern line and one spring",
+      "one line",
+      "two stern lines"
      ],
      "a": 0
     }
@@ -959,78 +965,79 @@
   },
   {
    "id": "speak",
-   "title": "Report from the bow",
+   "title": "Read back and report",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Numbers and directions",
-     "body": "Listen, say it, check it. The number and the hour are the strong words: THREE shackles, TWO o'CLOCK.",
-     "es": "El número y la hora, fuertes.",
+     "title": "Read back, then report",
+     "body": "Listen, say it, check it. On the radio: the same words, slow and clear.",
+     "es": "Por radio: las mismas palabras, lento y claro.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-three"
+     "model": "p-singleup"
     },
     {
      "type": "shadow",
-     "model": "p-leading"
+     "model": "p-allgone"
     },
     {
      "type": "shadow",
-     "model": "p-holding"
+     "model": "p-roger"
     },
     {
      "type": "role",
-     "cue": "c-howmany",
-     "task": "You see four shackles in the water. Tell her.",
-     "model": "m-four",
-     "accept": [
-      "Four shackles in the water.",
-      "Four shackles.",
-      "Four in the water.",
-      "Four shackles in the water, Chief."
-     ]
-    },
-    {
-     "type": "role",
-     "cue": "c-leading",
-     "task": "The chain goes forward and to port, at ten o'clock. Tell her.",
-     "model": "m-ten",
-     "accept": [
-      "The chain is leading ten o'clock.",
-      "Leading ten o'clock.",
-      "Ten o'clock.",
-      "It's leading ten o'clock.",
-      "The chain is leading at ten o'clock."
-     ]
-    },
-    {
-     "type": "role",
-     "cue": "c-leading2",
-     "task": "Now the chain goes straight ahead.",
-     "model": "m-twelve",
-     "accept": [
-      "Leading twelve o'clock.",
-      "Twelve o'clock.",
-      "It's leading twelve o'clock.",
-      "The chain is leading twelve o'clock.",
-      "Straight ahead, twelve o'clock."
-     ]
-    },
-    {
-     "type": "role",
-     "cue": "c-rb",
+     "cue": "c-rb-single",
      "task": "Read back the order.",
-     "model": "m-rb",
+     "model": "m-single-rb",
      "accept": [
-      "Stand by port anchor.",
-      "Stand by port anchor. Over.",
-      "Forward, stand by port anchor.",
-      "Stand by port anchor, roger."
+      "Single up to one and one.",
+      "Single up to one and one. Over.",
+      "Single up, one and one.",
+      "Aft, single up to one and one."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-rb-letgo",
+     "task": "Read back the order.",
+     "model": "m-letgo-rb",
+     "accept": [
+      "Let go aft.",
+      "Let go aft. Over.",
+      "Aft, let go aft.",
+      "Let go aft, roger."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-isclear",
+     "task": "Yes, it's out of the water. Tell him.",
+     "model": "m-springclear",
+     "accept": [
+      "The spring is clear of the water.",
+      "Yes, the spring is clear.",
+      "Spring is clear.",
+      "Yes, clear of the water.",
+      "The spring is clear.",
+      "Yes, it's clear."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-report",
+     "task": "All lines are on board, away from the propeller. Report.",
+     "model": "m-report",
+     "accept": [
+      "All lines let go. Propeller clear.",
+      "All lines let go, propeller clear. Over.",
+      "All lines let go.",
+      "All clear aft. Propeller clear.",
+      "All lines let go. Propeller clear. Over."
      ]
     }
    ]
@@ -1043,95 +1050,93 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-chain",
+     "audio": "w-tug",
      "q": "Type what you hear.",
      "accept": [
-      "chain",
-      "the chain"
+      "tug",
+      "a tug",
+      "the tug"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-windlass",
-     "a": "windlass"
+     "audio": "c-show-bollard",
+     "a": "bollard"
     },
     {
      "type": "tap",
-     "audio": "c-show-anchor",
-     "a": "anchor"
+     "audio": "c-show-stern",
+     "a": "stern"
     },
     {
      "type": "listen",
      "audio": [
-      "l12-06",
-      "l12-07",
       "l12-08"
      ],
-     "q": "What is the order?",
+     "q": "Where is the tug?",
      "opts": [
-      "Let go starboard anchor",
-      "Heave up the anchor",
-      "Stand by port anchor"
+      "Standing by",
+      "Made fast forward",
+      "Going away"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The anchor is in the ground and the ship doesn't move. The anchor is…",
+     "q": "The stern line is loose, not tight. It's…",
      "opts": [
-      "holding",
-      "leading",
-      "slack"
+      "slack",
+      "heave",
+      "clear"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "The bridge says \"Let go starboard anchor.\" You…",
+     "q": "The ship is port side alongside. The quay is on the ___ side.",
      "opts": [
-      "read back: \"Let go starboard anchor.\"",
-      "say: \"OK.\"",
-      "say: \"Let's go.\""
+      "port",
+      "starboard",
+      "aft"
      ],
      "a": 0,
-     "why": "From Lesson 11: read back, and let go is not let's go."
+     "why": "From Lesson 1."
     },
     {
      "type": "build",
-     "q": "Report: the chain goes to two o'clock.",
+     "q": "Report to the bridge.",
      "a": [
-      "The",
-      "chain",
-      "is",
-      "leading",
-      "two",
-      "o'clock."
+      "All",
+      "lines",
+      "let",
+      "go."
      ],
      "extra": [
-      "at",
-      "hours"
+      "are",
+      "lets"
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "c-show-fog"
+      "c-show-heave"
      ],
-     "q": "Rolando wants to see the…",
+     "q": "Rolando asks where we…",
      "opts": [
-      "fog",
-      "bell",
-      "brake"
+      "heave in",
+      "let go",
+      "make fast"
      ],
      "a": 0
     },
     {
      "type": "type",
-     "q": "Write it in English: ancla",
+     "q": "Write it in English: remolcador",
      "accept": [
-      "anchor",
-      "an anchor",
-      "the anchor"
+      "tug",
+      "a tug",
+      "tugboat",
+      "the tug"
      ]
     }
    ]

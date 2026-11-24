@@ -1,252 +1,250 @@
 {
  "n": 23,
  "module": 6,
- "title": "Firefighting equipment",
- "place": "Day 9 · 15:00 · Atlantic, accommodation corridor",
- "goal": "Name the firefighting equipment, match each extinguisher with the fire class and say which one to use.",
+ "title": "Muster & man overboard",
+ "place": "Day 8 · 10:00 · Atlantic, starboard side",
+ "goal": "Raise the man overboard alarm, take a role and keep reporting where the person is.",
  "images": {
   "hero": "img/l23/hero.jpg",
   "scene": "img/l23/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 2,
+ "mediaRev": 3,
+ "radioChannel": "UHF",
  "audio": {
   "l23-01": {
-   "voice": "rolando",
-   "text": "Cadet, tomorrow we have a fire drill. Today I show you the equipment in this corridor.",
-   "es": "Cadete, mañana tenemos zafarrancho de incendio. Hoy te muestro los equipos de este pasillo."
+   "voice": "lars",
+   "text": "Attention, all crew. This is a drill. Man overboard, starboard side. Man overboard, starboard side.",
+   "es": "Atención, toda la tripulación. Esto es un zafarrancho. Hombre al agua por estribor. Hombre al agua por estribor.",
+   "pa": true
   },
   "l23-02": {
-   "voice": "diego",
-   "text": "OK, Bosun. This red one is a fire extinguisher, right?",
-   "es": "Bien, contramaestre. Este rojo es un extintor, ¿no?"
-  },
-  "l23-03": {
-   "voice": "rolando",
-   "text": "Yes, but they're all red. Look at the label. This one is water. Use water for class A fires: wood, paper, cloth.",
-   "es": "Sí, pero son todos rojos. Mirá la etiqueta. Este es de agua. Usá agua para fuegos clase A: madera, papel, tela."
-  },
-  "l23-04": {
-   "pause": 700,
-   "voice": "diego",
-   "text": "And this one with the blue label is foam, for oil fires.",
-   "es": "Y este de etiqueta azul es de espuma, para fuegos de aceite."
-  },
-  "l23-05": {
-   "voice": "rolando",
-   "text": "No, no. Careful! Blue is dry powder. Cream is foam. Use foam for class B fires: oil and fuel.",
-   "es": "No, no. ¡Cuidado! Azul es polvo químico. Crema es espuma. Usá espuma para fuegos clase B: aceite y combustible."
-  },
-  "l23-06": {
-   "voice": "diego",
-   "text": "Sorry. Blue, dry powder. Cream, foam. I'll read the label first.",
-   "es": "Perdón. Azul, polvo químico. Crema, espuma. Primero voy a leer la etiqueta."
-  },
-  "l23-07": {
-   "voice": "rolando",
-   "text": "Good. And the black one is CO2. Use CO2 for electrical fires. Never water on electricity!",
-   "es": "Bien. Y el negro es de CO2. Usá CO2 para fuegos eléctricos. ¡Nunca agua sobre electricidad!"
-  },
-  "l23-08": {
-   "pause": 1200,
-   "voice": "diego",
-   "text": "Never water on electricity. Got it.",
-   "es": "Nunca agua sobre electricidad. Entendido."
-  },
-  "l23-09": {
-   "voice": "rolando",
-   "text": "Here is the fire hydrant, and the fire hose is in this box. The hose needs two people.",
-   "es": "Acá está el hidrante, y la manguera está en esta caja. La manguera necesita dos personas."
-  },
-  "l23-10": {
-   "voice": "diego",
-   "text": "And the fire blanket? I don't see one here.",
-   "es": "¿Y la manta ignífuga? Acá no veo ninguna."
-  },
-  "l23-11": {
    "pause": 900,
    "voice": "rolando",
-   "text": "It's in the galley, next to Mario's stove. It's for a small pan fire.",
-   "es": "Está en la cocina, al lado del fogón de Mario. Es para un fuego chico en una sartén."
+   "text": "Man overboard, starboard side! I see it!",
+   "es": "¡Hombre al agua por estribor! ¡Lo veo!"
+  },
+  "l23-03": {
+   "pause": 700,
+   "voice": "tanya",
+   "text": "Diego, you will be the lookout. Keep pointing at him and don't look away.",
+   "es": "Diego, vos vas a ser el vigía. Seguí señalándolo y no le saques la vista de encima."
+  },
+  "l23-04": {
+   "voice": "diego",
+   "text": "I'll keep pointing. He's there, about two hundred metres, starboard quarter!",
+   "es": "Lo sigo señalando. ¡Está ahí, a unos doscientos metros, por la aleta de estribor!"
+  },
+  "l23-05": {
+   "voice": "tanya",
+   "text": "Rolando, you will throw the lifebuoy with the smoke float.",
+   "es": "Rolando, vos vas a tirar el aro salvavidas con la señal fumígena."
+  },
+  "l23-06": {
+   "pause": 1200,
+   "voice": "rolando",
+   "text": "Lifebuoy and smoke float, gone!",
+   "es": "¡Aro y señal fumígena, tirados!"
+  },
+  "l23-07": {
+   "voice": "tanya",
+   "text": "Bridge, starboard side. Lookout on the casualty, lifebuoy in the water. Over.",
+   "es": "Puente, banda de estribor. Vigía sobre el náufrago, aro en el agua. Cambio."
+  },
+  "l23-08": {
+   "pause": 600,
+   "voice": "lars",
+   "text": "Received. MOB button pressed. I'm turning to starboard. Rescue boat crew, stand by. Over.",
+   "es": "Recibido. Botón de hombre al agua apretado. Caigo a estribor. Tripulación del bote de rescate, listos. Cambio.",
+   "radio": true
+  },
+  "l23-09": {
+   "pause": 1500,
+   "voice": "diego",
+   "text": "I can still see him. Now he's on the starboard beam!",
+   "es": "¡Lo sigo viendo! ¡Ahora está por el través de estribor!"
+  },
+  "l23-10": {
+   "voice": "tanya",
+   "text": "Good, Diego. Keep him in sight. If you lose him, say so at once.",
+   "es": "Bien, Diego. Mantenelo a la vista. Si lo perdés, decilo enseguida."
+  },
+  "l23-11": {
+   "pause": 1000,
+   "voice": "james",
+   "text": "Rescue boat ready. Launching now.",
+   "es": "Bote de rescate listo. Arriando ahora.",
+   "radio": true
   },
   "l23-12": {
-   "voice": "rolando",
-   "text": "Now your job: check every extinguisher in this corridor. The needle must be in the green.",
-   "es": "Ahora tu trabajo: revisá todos los extintores de este pasillo. La aguja tiene que estar en el verde."
+   "pause": 1800,
+   "voice": "lars",
+   "text": "This is the Captain. Recovery complete. The dummy is on board. The drill is over.",
+   "es": "Habla el Capitán. Recuperación completa. El maniquí está a bordo. El zafarrancho terminó.",
+   "pa": true
   },
   "l23-13": {
-   "voice": "diego",
-   "text": "I'll check them all and tell you. Water, foam, powder, CO2.",
-   "es": "Los reviso todos y te aviso. Agua, espuma, polvo, CO2."
-  },
-  "w-extinguisher": {
-   "voice": "model",
-   "text": "fire extinguisher"
-  },
-  "x-extinguisher": {
-   "voice": "model",
-   "text": "Take the fire extinguisher.",
-   "es": "Agarrá el extintor."
-  },
-  "w-hose": {
-   "voice": "model",
-   "text": "fire hose"
-  },
-  "x-hose": {
-   "voice": "model",
-   "text": "The fire hose needs two people.",
-   "es": "La manguera necesita dos personas."
-  },
-  "w-hydrant": {
-   "voice": "model",
-   "text": "fire hydrant"
-  },
-  "x-hydrant": {
-   "voice": "model",
-   "text": "Connect the hose to the hydrant.",
-   "es": "Conectá la manguera al hidrante."
-  },
-  "w-blanket": {
-   "voice": "model",
-   "text": "fire blanket"
-  },
-  "x-blanket": {
-   "voice": "model",
-   "text": "Use the fire blanket on the pan.",
-   "es": "Usá la manta ignífuga sobre la sartén."
-  },
-  "w-co2": {
-   "voice": "model",
-   "text": "CO2"
-  },
-  "x-co2": {
-   "voice": "model",
-   "text": "Use CO2 for electrical fires.",
-   "es": "Usá CO2 para fuegos eléctricos."
-  },
-  "w-foam": {
-   "voice": "model",
-   "text": "foam"
-  },
-  "x-foam": {
-   "voice": "model",
-   "text": "Use foam for oil fires.",
-   "es": "Usá espuma para fuegos de aceite."
-  },
-  "w-powder": {
-   "voice": "model",
-   "text": "dry powder"
-  },
-  "x-powder": {
-   "voice": "model",
-   "text": "The blue label is dry powder.",
-   "es": "La etiqueta azul es polvo químico."
-  },
-  "w-fireclass": {
-   "voice": "model",
-   "text": "fire class"
-  },
-  "x-fireclass": {
-   "voice": "model",
-   "text": "Oil is fire class B.",
-   "es": "El aceite es fuego clase B."
-  },
-  "p-use": {
-   "voice": "model",
-   "text": "Use foam for oil fires.",
-   "es": "Usá espuma para fuegos de aceite."
-  },
-  "p-never": {
-   "voice": "model",
-   "text": "Never water on electricity.",
-   "es": "Nunca agua sobre electricidad."
-  },
-  "p-which": {
-   "voice": "model",
-   "text": "Which extinguisher for this fire?",
-   "es": "¿Qué extintor para este fuego?"
-  },
-  "p-label": {
-   "voice": "model",
-   "text": "I'll read the label first.",
-   "es": "Primero voy a leer la etiqueta."
-  },
-  "m-elec": {
-   "voice": "model",
-   "text": "Use CO2.",
-   "es": "Usá CO2."
-  },
-  "m-oil": {
-   "voice": "model",
-   "text": "Use foam. It's class B.",
-   "es": "Usá espuma. Es clase B."
-  },
-  "m-paper": {
-   "voice": "model",
-   "text": "Use water. It's class A.",
-   "es": "Usá agua. Es clase A."
-  },
-  "m-which": {
-   "voice": "model",
-   "text": "Which extinguisher for this fire?",
-   "es": "¿Qué extintor para este fuego?"
-  },
-  "m-co2": {
-   "voice": "model",
-   "text": "CO2",
-   "es": "CO2"
-  },
-  "c-show-extinguisher": {
-   "voice": "rolando",
-   "text": "Show me a fire extinguisher."
-  },
-  "c-show-foam": {
-   "voice": "rolando",
-   "text": "Which one is foam?"
-  },
-  "c-show-powder": {
-   "voice": "rolando",
-   "text": "Which one is dry powder?"
-  },
-  "c-show-co2": {
+   "pause": 800,
    "voice": "tanya",
-   "text": "Show me the CO2 extinguisher."
+   "text": "Well done, everybody. In real life, the next problem is hypothermia. That's why we're fast.",
+   "es": "Bien hecho, todos. En la vida real, el próximo problema es la hipotermia. Por eso somos rápidos."
   },
-  "c-show-hydrant": {
-   "voice": "rolando",
-   "text": "Where's the fire hydrant?"
+  "w-mob": {
+   "voice": "model",
+   "text": "man overboard"
   },
-  "c-show-hose": {
-   "voice": "rolando",
-   "text": "Where's the fire hose?"
+  "x-mob": {
+   "voice": "model",
+   "text": "Man overboard, starboard side!",
+   "es": "¡Hombre al agua por estribor!"
   },
-  "c-show-blanket": {
-   "voice": "mario",
-   "text": "Where's the fire blanket?"
+  "w-mobbutton": {
+   "voice": "model",
+   "text": "MOB button"
   },
-  "c-show-fireclass": {
+  "x-mobbutton": {
+   "voice": "model",
+   "text": "Press the MOB button.",
+   "es": "Apretá el botón de hombre al agua."
+  },
+  "w-smoke": {
+   "voice": "model",
+   "text": "smoke float"
+  },
+  "x-smoke": {
+   "voice": "model",
+   "text": "Throw the smoke float.",
+   "es": "Tirá la señal fumígena."
+  },
+  "w-sight": {
+   "voice": "model",
+   "text": "keep in sight"
+  },
+  "x-sight": {
+   "voice": "model",
+   "text": "Keep him in sight.",
+   "es": "Mantenelo a la vista."
+  },
+  "w-rescueboat": {
+   "voice": "model",
+   "text": "rescue boat"
+  },
+  "x-rescueboat": {
+   "voice": "model",
+   "text": "The rescue boat is ready.",
+   "es": "El bote de rescate está listo."
+  },
+  "w-recovery": {
+   "voice": "model",
+   "text": "recovery"
+  },
+  "x-recovery": {
+   "voice": "model",
+   "text": "Recovery complete.",
+   "es": "Recuperación completa."
+  },
+  "w-role": {
+   "voice": "model",
+   "text": "role"
+  },
+  "x-role": {
+   "voice": "model",
+   "text": "Everybody has a role.",
+   "es": "Todos tienen un rol."
+  },
+  "w-hypothermia": {
+   "voice": "model",
+   "text": "hypothermia"
+  },
+  "x-hypothermia": {
+   "voice": "model",
+   "text": "Cold water causes hypothermia.",
+   "es": "El agua fría causa hipotermia."
+  },
+  "p-mob": {
+   "voice": "model",
+   "text": "Man overboard, starboard side!",
+   "es": "¡Hombre al agua por estribor!"
+  },
+  "p-willbe": {
+   "voice": "model",
+   "text": "You will be the lookout.",
+   "es": "Vos vas a ser el vigía."
+  },
+  "p-ill": {
+   "voice": "model",
+   "text": "I'll keep pointing.",
+   "es": "Lo sigo señalando."
+  },
+  "p-sight": {
+   "voice": "model",
+   "text": "Keep him in sight.",
+   "es": "Mantenelo a la vista."
+  },
+  "m-mobport": {
+   "voice": "model",
+   "text": "Man overboard, port side!",
+   "es": "¡Hombre al agua por babor!"
+  },
+  "m-ill": {
+   "voice": "model",
+   "text": "I'll keep pointing.",
+   "es": "Lo sigo señalando."
+  },
+  "m-where": {
+   "voice": "model",
+   "text": "Starboard quarter, about two hundred metres!",
+   "es": "¡Aleta de estribor, a unos doscientos metros!"
+  },
+  "m-lost": {
+   "voice": "model",
+   "text": "I've lost him!",
+   "es": "¡Lo perdí!"
+  },
+  "m-shout": {
+   "voice": "model",
+   "text": "Man overboard, starboard side!",
+   "es": "¡Hombre al agua por estribor!"
+  },
+  "c-show-mob": {
    "voice": "tanya",
-   "text": "Show me the fire classes."
+   "text": "Where's the man overboard?"
   },
-  "c-elec": {
-   "voice": "tanya",
-   "text": "Smoke from the switchboard! Electrical fire. Which extinguisher?"
-  },
-  "c-oil": {
+  "c-show-smoke": {
    "voice": "rolando",
-   "text": "Fuel on the floor, and it's burning. What do you use?"
+   "text": "Show me the smoke float."
   },
-  "c-paper": {
+  "c-show-rescueboat": {
    "voice": "tanya",
-   "text": "Paper and cardboard on fire in the store. What do you use?"
+   "text": "Where's the rescue boat?"
   },
-  "c-ask": {
+  "c-show-mobbutton": {
+   "voice": "lars",
+   "text": "Where's the MOB button?"
+  },
+  "c-see-port": {
+   "voice": "tanya",
+   "text": "You see someone fall on the left side. Shout!"
+  },
+  "c-role": {
+   "voice": "tanya",
+   "text": "Diego, you will be the lookout. Keep pointing."
+  },
+  "c-where": {
+   "voice": "tanya",
+   "text": "Where is he? Distance?"
+  },
+  "c-cantsee": {
+   "voice": "tanya",
+   "text": "Diego, can you still see him?"
+  },
+  "c-role-other": {
+   "voice": "tanya",
+   "text": "Rolando, you will be in the rescue boat."
+  },
+  "c-dist-other": {
    "voice": "rolando",
-   "text": "You see a fire and you're not sure. Ask me."
-  },
-  "c-blanket-other": {
-   "voice": "mario",
-   "text": "The fire blanket is next to the stove, on the left."
+   "text": "He's about three hundred metres, port quarter!"
   }
  },
  "dialogue": [
@@ -265,145 +263,130 @@
   "l23-13"
  ],
  "words": {
-  "extinguisher": {
-   "en": "fire extinguisher",
-   "ipa": "/ˈfaɪər ɪkˌstɪŋɡwɪʃə/",
-   "es": "extintor",
-   "audio": "w-extinguisher",
-   "ex": "x-extinguisher"
+  "mob": {
+   "en": "man overboard",
+   "ipa": "/ˌmæn ˈəʊvəbɔːd/",
+   "es": "hombre al agua",
+   "audio": "w-mob",
+   "ex": "x-mob"
   },
-  "hose": {
-   "en": "fire hose",
-   "ipa": "/ˈfaɪə həʊz/",
-   "es": "manguera contra incendio",
-   "audio": "w-hose",
-   "ex": "x-hose"
+  "mobbutton": {
+   "en": "MOB button",
+   "ipa": "/ˌem əʊ ˈbiː ˌbʌtn/",
+   "es": "botón de hombre al agua",
+   "audio": "w-mobbutton",
+   "ex": "x-mobbutton"
   },
-  "hydrant": {
-   "en": "fire hydrant",
-   "ipa": "/ˈfaɪə ˌhaɪdrənt/",
-   "es": "hidrante",
-   "audio": "w-hydrant",
-   "ex": "x-hydrant"
+  "smoke": {
+   "en": "smoke float",
+   "ipa": "/ˈsməʊk fləʊt/",
+   "es": "señal fumígena",
+   "audio": "w-smoke",
+   "ex": "x-smoke"
   },
-  "blanket": {
-   "en": "fire blanket",
-   "ipa": "/ˈfaɪə ˌblæŋkɪt/",
-   "es": "manta ignífuga",
-   "audio": "w-blanket",
-   "ex": "x-blanket"
+  "sight": {
+   "en": "keep in sight",
+   "ipa": "/ˌkiːp ɪn ˈsaɪt/",
+   "es": "mantener a la vista",
+   "audio": "w-sight",
+   "ex": "x-sight"
   },
-  "co2": {
-   "en": "CO2",
-   "ipa": "/ˌsiː əʊ ˈtuː/",
-   "es": "CO2, dióxido de carbono",
-   "audio": "w-co2",
-   "ex": "x-co2"
+  "rescueboat": {
+   "en": "rescue boat",
+   "ipa": "/ˈreskjuː bəʊt/",
+   "es": "bote de rescate",
+   "audio": "w-rescueboat",
+   "ex": "x-rescueboat"
   },
-  "foam": {
-   "en": "foam",
-   "ipa": "/fəʊm/",
-   "es": "espuma",
-   "audio": "w-foam",
-   "ex": "x-foam"
+  "recovery": {
+   "en": "recovery",
+   "ipa": "/rɪˈkʌvəri/",
+   "es": "recuperación (de la persona)",
+   "audio": "w-recovery",
+   "ex": "x-recovery"
   },
-  "powder": {
-   "en": "dry powder",
-   "ipa": "/ˌdraɪ ˈpaʊdə/",
-   "es": "polvo químico",
-   "audio": "w-powder",
-   "ex": "x-powder"
+  "role": {
+   "en": "role",
+   "ipa": "/rəʊl/",
+   "es": "rol, tarea",
+   "audio": "w-role",
+   "ex": "x-role"
   },
-  "fireclass": {
-   "en": "fire class",
-   "ipa": "/ˈfaɪə klɑːs/",
-   "es": "clase de fuego",
-   "audio": "w-fireclass",
-   "ex": "x-fireclass"
+  "hypothermia": {
+   "en": "hypothermia",
+   "ipa": "/ˌhaɪpəʊˈθɜːmiə/",
+   "es": "hipotermia",
+   "audio": "w-hypothermia",
+   "ex": "x-hypothermia"
   }
  },
  "plate": {
   "svg": "img/l23/plate.svg",
   "pins": [
    {
-    "word": "fireclass",
-    "x": 124,
-    "y": 16
+    "word": "mobbutton",
+    "x": 181,
+    "y": 66
    },
    {
-    "word": "extinguisher",
-    "x": 47,
-    "y": 176
+    "word": "sight",
+    "x": 138,
+    "y": 132
    },
    {
-    "word": "foam",
-    "x": 97,
-    "y": 131
+    "word": "rescueboat",
+    "x": 142,
+    "y": 180
    },
    {
-    "word": "powder",
-    "x": 147,
-    "y": 131
+    "word": "mob",
+    "x": 80,
+    "y": 208
    },
    {
-    "word": "co2",
-    "x": 197,
-    "y": 131
-   },
-   {
-    "word": "hydrant",
-    "x": 256,
-    "y": 136
-   },
-   {
-    "word": "hose",
-    "x": 311,
-    "y": 122
-   },
-   {
-    "word": "blanket",
-    "x": 372,
-    "y": 118
+    "word": "smoke",
+    "x": 24,
+    "y": 160
    }
   ]
  },
  "docs": {
-  "label": {
+  "roles": {
    "kind": "form",
-   "title": "DRY POWDER FIRE EXTINGUISHER",
-   "subtitle": "6 kg · CORRIDOR, DECK B · No. B-04",
+   "title": "MAN OVERBOARD · ROLES",
+   "subtitle": "M/V LNG HORIZON · DRILL · 21 MAR 2026 · 1000",
    "cells": [
     [
-     "SUITABLE FOR",
-     "Class A · B · C"
+     "MASTER",
+     "Bridge · MOB button, turn, alarm"
     ],
     [
-     "CLASS A",
-     "Solids: wood, paper, cloth"
+     "CHIEF OFFICER",
+     "On scene · in charge on deck"
     ],
     [
-     "CLASS B",
-     "Liquids: oil, fuel, paint"
+     "CADET",
+     "Lookout · keep pointing, never look away"
     ],
     [
-     "CLASS C",
-     "Gases"
+     "BOSUN",
+     "Lifebuoy with light and smoke float"
     ],
     [
-     "ELECTRICAL",
-     "Yes, up to 1000 V"
+     "2ND OFFICER",
+     "Rescue boat · in charge"
     ],
     [
-     "NOT FOR",
-     "Cooking oil in pans: use the fire blanket"
+     "RESCUE BOAT CREW",
+     "2/O, 2 ABs"
     ],
     [
-     "PRESSURE GAUGE",
-     "Needle must be in the green"
+     "3RD OFFICER",
+     "Bridge · VHF and position"
     ],
     [
-     "NEXT SERVICE",
-     "SEP 2026"
+     "AFTER RECOVERY",
+     "Check for hypothermia · ship's hospital"
     ]
    ]
   }
@@ -411,16 +394,16 @@
  "sessions": [
   {
    "id": "listen",
-   "title": "Listen: the fire station",
+   "title": "Listen: man overboard",
    "skill": "Listening",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "image": "img/l23/scene.jpg",
-     "kicker": "Day 9 · 15:00 · Atlantic",
-     "title": "Fire extinguishers",
-     "body": "Tomorrow there's a fire drill. Rolando shows Diego the equipment in the corridor, and Diego gets one wrong. Listen first, one piece at a time.",
+     "kicker": "Day 8 · 10:00 · Atlantic",
+     "title": "Man overboard drill",
+     "body": "A drill in the middle of the ocean. A dummy goes into the water, and every person on board has a role. Diego has a new one. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
@@ -428,164 +411,155 @@
      "audio": [
       "l23-01"
      ],
-     "q": "Why is Rolando showing the equipment today?",
+     "q": "Which side?",
      "opts": [
-      "There's a fire drill tomorrow",
-      "There was a fire yesterday",
-      "The inspector is coming"
+      "Starboard",
+      "Port",
+      "Astern"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l23-03"
+      "l23-03",
+      "l23-04"
      ],
-     "q": "What does Rolando say about the colour?",
+     "q": "What is Diego's role?",
      "opts": [
-      "They're all red: look at the label",
-      "Red is always water",
-      "Colour doesn't matter"
+      "Lookout: keep pointing",
+      "Throw the lifebuoy",
+      "Drive the rescue boat"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l23-04",
-      "l23-05"
+      "l23-04"
      ],
-     "q": "What is Diego's mistake?",
+     "q": "Where is the man, and how far?",
      "opts": [
-      "He thinks blue is foam",
-      "He thinks black is water",
-      "He can't find the hydrant"
+      "Starboard quarter, about 200 m",
+      "Port bow, 2 miles",
+      "Right ahead, 20 m"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l23-07"
+      "l23-05",
+      "l23-06"
      ],
-     "q": "Which one for electrical fires?",
+     "q": "What does Rolando throw?",
      "opts": [
-      "CO2",
-      "Water",
-      "Foam"
+      "The lifebuoy with the smoke float",
+      "A liferaft",
+      "A line"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l23-10",
-      "l23-11"
+      "l23-08"
      ],
-     "q": "Where is the fire blanket?",
+     "q": "What does the Captain do?",
      "opts": [
-      "In the galley, next to the stove",
-      "In the hose box",
-      "On the bridge"
+      "Presses the MOB button and turns to starboard",
+      "Stops and waits",
+      "Calls the Coast Guard"
      ],
      "a": 0
     },
     {
      "type": "listen",
      "audio": [
-      "l23-12"
+      "l23-12",
+      "l23-13"
      ],
-     "q": "What must Diego check?",
+     "q": "In real life, what is the next danger?",
      "opts": [
-      "That every needle is in the green",
-      "The hose length",
-      "The labels' language"
+      "Hypothermia",
+      "Sharks",
+      "Fire"
      ],
      "a": 0
     },
     {
      "type": "dialogue",
-     "title": "Now the whole conversation",
+     "title": "Now the whole drill",
      "body": "Play it again. Open the text and the Spanish if you want them."
     }
    ]
   },
   {
    "id": "words",
-   "title": "Firefighting equipment",
+   "title": "Man overboard",
    "skill": "Vocabulary",
    "min": 4,
    "screens": [
     {
      "type": "plate",
      "title": "Tap every number",
-     "body": "The fire station in the corridor."
+     "body": "The ship from above during the drill."
     },
     {
      "type": "card",
-     "word": "extinguisher"
+     "word": "mob"
     },
     {
      "type": "card",
-     "word": "fireclass"
+     "word": "mobbutton"
+    },
+    {
+     "type": "card",
+     "word": "smoke"
     },
     {
      "type": "tap",
-     "audio": "c-show-fireclass",
-     "a": "fireclass"
+     "audio": "c-show-smoke",
+     "a": "smoke"
     },
     {
      "type": "card",
-     "word": "foam"
+     "word": "sight"
     },
     {
      "type": "card",
-     "word": "powder"
-    },
-    {
-     "type": "card",
-     "word": "co2"
+     "word": "rescueboat"
     },
     {
      "type": "tap",
-     "audio": "c-show-powder",
-     "a": "powder"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-foam",
-     "a": "foam"
+     "audio": "c-show-rescueboat",
+     "a": "rescueboat"
     },
     {
      "type": "card",
-     "word": "hydrant"
+     "word": "recovery"
     },
     {
      "type": "card",
-     "word": "hose"
+     "word": "role"
     },
     {
      "type": "card",
-     "word": "blanket"
+     "word": "hypothermia"
     },
     {
      "type": "tap",
-     "audio": "c-show-hydrant",
-     "a": "hydrant"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-blanket",
-     "a": "blanket"
+     "audio": "c-show-mob",
+     "a": "mob"
     },
     {
      "type": "choice",
      "quick": true,
-     "q": "\"polvo químico\" in English:",
+     "q": "\"hombre al agua\" in English:",
      "opts": [
-      "dry powder",
-      "chemical dust",
-      "dry foam"
+      "man overboard",
+      "man in water",
+      "man out board"
      ],
      "a": 0
     },
@@ -594,24 +568,24 @@
      "title": "Match the pairs",
      "pairs": [
       [
-       "fire extinguisher",
-       "extintor"
+       "man overboard",
+       "hombre al agua"
       ],
       [
-       "fire hose",
-       "manguera"
+       "smoke float",
+       "señal fumígena"
       ],
       [
-       "fire hydrant",
-       "hidrante"
+       "rescue boat",
+       "bote de rescate"
       ],
       [
-       "fire blanket",
-       "manta ignífuga"
+       "recovery",
+       "recuperación"
       ],
       [
-       "foam",
-       "espuma"
+       "role",
+       "rol"
       ]
      ]
     }
@@ -619,141 +593,143 @@
   },
   {
    "id": "phrases",
-   "title": "Use … for …",
+   "title": "You will be… I'll…",
    "skill": "Phrases",
    "min": 6,
    "screens": [
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "Choosing the extinguisher",
+     "title": "Alarm and roles",
      "list": [
       [
-       "Use foam for oil fires.",
-       "Usá espuma para fuegos de aceite.",
-       "p-use"
+       "Man overboard, starboard side!",
+       "¡Hombre al agua por estribor!",
+       "p-mob"
       ],
       [
-       "Never water on electricity.",
-       "Nunca agua sobre electricidad.",
-       "p-never"
+       "You will be the lookout.",
+       "Vos vas a ser el vigía.",
+       "p-willbe"
       ],
       [
-       "Which extinguisher for this fire?",
-       "¿Qué extintor para este fuego?",
-       "p-which"
+       "I'll keep pointing.",
+       "Lo sigo señalando.",
+       "p-ill"
       ],
       [
-       "I'll read the label first.",
-       "Primero voy a leer la etiqueta.",
-       "p-label"
+       "Keep him in sight.",
+       "Mantenelo a la vista.",
+       "p-sight"
       ]
      ]
     },
     {
      "type": "tip",
      "tag": "Language focus",
-     "title": "use + equipment + for + fire",
+     "title": "will for roles and promises",
      "steps": [
       [
-       "the pattern",
-       "<b>Use</b> water <b>for</b> class A fires."
+       "give a role",
+       "You <b>will be</b> the lookout. Rolando, you <b>will throw</b> the lifebuoy."
       ],
       [
-       "the class",
-       "Oil <b>is</b> class B. It's a class B fire."
+       "accept it",
+       "<b>I'll</b> keep pointing. <b>I'll</b> throw it."
       ],
       [
-       "the warning",
-       "<b>Never</b> water on electricity!"
+       "shout",
+       "Man overboard, <b>starboard side</b>! (no verb)"
       ]
      ],
      "paras": [
-      "On board you'll hear the fire classes as labels: <b>class A</b> (solids), <b>class B</b> (liquids), <b>class C</b> (gases). You don't need more theory: just match the class with the extinguisher.",
-      "<b>Use … for …</b> is how instructions and labels say it. Short and clear."
+      "In an emergency the person in charge gives roles with <b>You will…</b>. You answer with <b>I'll…</b> + the action: short, so everyone knows it's done.",
+      "The first shout has no verb: what + where. <b>Man overboard, port side!</b>"
      ],
-     "avoid": "Use foam to oil fires · Use foam for to oil"
+     "avoid": "You are going to be lookout? (sounds like a question) · OK OK (without saying what you'll do)"
     },
     {
      "type": "choice",
-     "q": "Paper is burning. Use…",
+     "q": "Tanya gives you a role: \"You will throw the lifebuoy.\" You answer…",
      "opts": [
-      "water: class A",
-      "CO2: class C",
-      "nothing"
+      "I'll throw it.",
+      "OK, maybe.",
+      "I throw?"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Fuel on the floor is burning. It's…",
+     "q": "Someone falls on the left side. You shout…",
      "opts": [
-      "class B",
-      "class A",
-      "class C"
+      "Man overboard, port side!",
+      "There is a man in the water on the left!",
+      "Help, help!"
      ],
      "a": 0
     },
     {
      "type": "build",
-     "q": "Use CO2 for electrical fires.",
+     "situation": "Tanya: \"Rolando, you will be in the rescue boat.\"",
+     "q": "Answer as Rolando.",
      "a": [
-      "Use",
-      "CO2",
-      "for",
-      "electrical",
-      "fires."
+      "I'll",
+      "be",
+      "in",
+      "the",
+      "rescue",
+      "boat."
      ],
      "extra": [
-      "to",
-      "with"
-     ]
-    },
-    {
-     "type": "tip",
-     "tag": "Spanish speaker alert",
-     "title": "Colour isn't the name",
-     "paras": [
-      "In Spanish we often call them by the colour. On board, the body is red for all of them: the <b>label</b> or the <b>band</b> tells you what's inside. Say the agent: <b>water, foam, dry powder, CO2</b>.",
-      "<b>CO2</b> is said letter by letter: <b>C-O-two</b>."
-     ],
-     "avoid": "Give me the blue one · the CO-dos"
-    },
-    {
-     "type": "type",
-     "audio": "c-blanket-other",
-     "q": "Where is the fire blanket? Next to the…",
-     "accept": [
-      "stove",
-      "the stove"
+      "will",
+      "going"
      ]
     },
     {
      "type": "listen",
      "audio": [
-      "c-oil"
+      "c-role-other"
      ],
-     "q": "What's burning?",
+     "q": "What is Rolando's role?",
      "opts": [
-      "Fuel on the floor",
-      "Paper",
-      "A switchboard"
+      "Rescue boat",
+      "Lookout",
+      "Bridge"
      ],
      "a": 0
     },
     {
      "type": "tip",
-     "tag": "Pronunciation",
-     "title": "extinguisher",
+     "tag": "Spanish speaker alert",
+     "title": "Don't explain, shout",
      "paras": [
-      "<b>ex-TIN-gwi-sher</b>: the stress is on <b>TIN</b>. The <i>gu</i> sounds <b>gw</b>, like in <i>agua</i>.",
-      "<b>CO2</b>: <b>see-oh-TOO</b>, stress on the last part."
+      "In Spanish we might say <i>¡Se cayó alguien al agua por el lado derecho!</i> In English, the standard shout is shorter: <b>Man overboard, starboard side!</b> Then point and don't stop pointing.",
+      "Distances: <b>about two hundred metres</b>; position: the clock (Lesson 13) or the bow / beam / quarter (Lesson 17)."
+     ],
+     "avoid": "Somebody fell in the water at the right side!"
+    },
+    {
+     "type": "type",
+     "audio": "c-dist-other",
+     "q": "How far is he? Write the number of metres.",
+     "accept": [
+      "300",
+      "three hundred"
+     ]
+    },
+    {
+     "type": "tip",
+     "tag": "Pronunciation",
+     "title": "Shouting clearly",
+     "paras": [
+      "A shout must be short, loud and clear: <b>MAN o-ver-BOARD | STAR-board SIDE</b>. A small pause after <i>overboard</i>.",
+      "Don't swallow the end: <i>side</i> with a clear <b>d</b>."
      ],
      "list": [
       [
-       "CO2",
-       "CO2",
-       "m-co2"
+       "Man overboard, starboard side!",
+       "¡Hombre al agua por estribor!",
+       "m-shout"
       ]
      ]
     }
@@ -761,57 +737,57 @@
   },
   {
    "id": "read",
-   "title": "Read the label",
+   "title": "Read the roles",
    "skill": "Reading",
    "min": 3,
    "screens": [
     {
      "type": "doc",
-     "doc": "label",
-     "q": "Which fire classes is it for?",
+     "doc": "roles",
+     "q": "Who is in charge of the rescue boat?",
      "opts": [
-      "A, B and C",
-      "Only B",
-      "Only electrical"
+      "The Second Officer",
+      "The bosun",
+      "The cadet"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "label",
-     "q": "What is class B?",
+     "doc": "roles",
+     "q": "What does the Master do?",
      "opts": [
-      "Liquids: oil, fuel, paint",
-      "Solids",
-      "Gases"
+      "MOB button, turn and alarm",
+      "Throws the lifebuoy",
+      "Drives the rescue boat"
      ],
      "a": 0
     },
     {
      "type": "docfind",
-     "doc": "label",
-     "q": "Tap what it is NOT for.",
-     "a": 5
+     "doc": "roles",
+     "q": "Tap the cadet's role.",
+     "a": 2
     },
     {
      "type": "doc",
-     "doc": "label",
-     "q": "For cooking oil in a pan, use…",
+     "doc": "roles",
+     "q": "After recovery, they check for…",
      "opts": [
-      "the fire blanket",
-      "this extinguisher",
-      "water"
+      "hypothermia",
+      "fire",
+      "the time"
      ],
      "a": 0
     },
     {
      "type": "doc",
-     "doc": "label",
-     "q": "Where must the needle be?",
+     "doc": "roles",
+     "q": "Where is the Third Officer?",
      "opts": [
-      "In the green",
-      "In the red",
-      "At zero"
+      "On the bridge, VHF and position",
+      "In the rescue boat",
+      "On deck with the lifebuoy"
      ],
      "a": 0
     }
@@ -819,76 +795,75 @@
   },
   {
    "id": "speak",
-   "title": "Choose and say it",
+   "title": "Shout and take your role",
    "skill": "Speaking",
    "min": 5,
    "screens": [
     {
      "type": "intro",
      "kicker": "Speaking",
-     "title": "Which extinguisher?",
-     "body": "Listen, say it, check it. Name the agent, not the colour.",
-     "es": "Decí el agente, no el color.",
+     "title": "Short, loud, clear",
+     "body": "Listen, say it, check it. Say it like a shout, but clear.",
+     "es": "Como un grito, pero claro.",
      "button": "Start"
     },
     {
      "type": "shadow",
-     "model": "p-use"
+     "model": "p-mob"
     },
     {
      "type": "shadow",
-     "model": "p-never"
+     "model": "p-ill"
     },
     {
      "type": "shadow",
-     "model": "p-which"
+     "model": "p-sight"
     },
     {
      "type": "role",
-     "cue": "c-elec",
-     "task": "Electrical fire: say which one.",
-     "model": "m-elec",
+     "cue": "c-see-port",
+     "task": "Shout the alarm: man overboard, port side.",
+     "model": "m-mobport",
      "accept": [
-      "Use CO2.",
-      "CO2.",
-      "Use the CO2.",
-      "Use CO2!",
-      "Use the CO2 extinguisher."
+      "Man overboard, port side!",
+      "Man overboard port side!",
+      "Man overboard! Port side!"
      ]
     },
     {
      "type": "role",
-     "cue": "c-oil",
-     "task": "Fuel: foam, and say the class.",
-     "model": "m-oil",
+     "cue": "c-role",
+     "task": "Accept: you'll keep pointing.",
+     "model": "m-ill",
      "accept": [
-      "Use foam. It's class B.",
-      "Use foam, it's class B.",
-      "Foam. It's class B.",
-      "Use foam. Class B."
+      "I'll keep pointing.",
+      "I'll keep pointing!",
+      "I will keep pointing.",
+      "OK, I'll keep pointing."
      ]
     },
     {
      "type": "role",
-     "cue": "c-paper",
-     "task": "Paper: water, and say the class.",
-     "model": "m-paper",
+     "cue": "c-where",
+     "task": "Starboard quarter, about 200 metres.",
+     "model": "m-where",
      "accept": [
-      "Use water. It's class A.",
-      "Use water, it's class A.",
-      "Water. It's class A.",
-      "Use water. Class A."
+      "Starboard quarter, about two hundred metres!",
+      "Starboard quarter, about two hundred metres.",
+      "Starboard quarter, two hundred metres.",
+      "About two hundred metres, starboard quarter."
      ]
     },
     {
      "type": "role",
-     "cue": "c-ask",
-     "task": "Ask which extinguisher for this fire.",
-     "model": "m-which",
+     "cue": "c-cantsee",
+     "task": "No! You can't see him any more. Say it at once.",
+     "model": "m-lost",
      "accept": [
-      "Which extinguisher for this fire?",
-      "Which extinguisher should I use?",
-      "Which extinguisher for this fire, Bosun?"
+      "I've lost him!",
+      "I lost him!",
+      "I've lost him.",
+      "No, I've lost him!"
      ]
     }
    ]
@@ -901,81 +876,96 @@
    "screens": [
     {
      "type": "type",
-     "audio": "w-foam",
+     "audio": "w-role",
      "q": "Type what you hear.",
      "accept": [
-      "foam"
+      "role",
+      "a role",
+      "the role"
      ]
     },
     {
      "type": "tap",
-     "audio": "c-show-co2",
-     "a": "co2"
+     "audio": "c-show-mobbutton",
+     "a": "mobbutton"
     },
     {
      "type": "tap",
-     "audio": "c-show-hose",
-     "a": "hose"
-    },
-    {
-     "type": "tap",
-     "audio": "c-show-extinguisher",
-     "a": "extinguisher"
+     "audio": "c-show-mob",
+     "a": "mob"
     },
     {
      "type": "listen",
      "audio": [
-      "l23-09"
+      "l23-09",
+      "l23-10"
      ],
-     "q": "How many people does the fire hose need?",
+     "q": "What must Diego do if he loses sight of the man?",
      "opts": [
-      "Two",
-      "One",
-      "Four"
-     ],
-     "a": 0
-    },
-    {
-     "type": "choice",
-     "q": "Smoke from the radar's fuse box. You use…",
-     "opts": [
-      "CO2",
-      "water",
-      "the fire hose"
+      "Say so at once",
+      "Look for him quietly",
+      "Go to the bridge"
      ],
      "a": 0
     },
     {
      "type": "choice",
-     "q": "Complete: \"Use foam ___ oil fires.\"",
+     "q": "The man is behind the ship, a little to the right. He's on the…",
      "opts": [
-      "for",
-      "to",
-      "in"
+      "starboard quarter",
+      "port bow",
+      "starboard bow"
+     ],
+     "a": 0,
+     "why": "From Lesson 17."
+    },
+    {
+     "type": "choice",
+     "q": "Tanya: \"You will launch the rescue boat.\" James answers…",
+     "opts": [
+      "I'll launch it.",
+      "I launch.",
+      "You will launch."
      ],
      "a": 0
     },
     {
      "type": "build",
-     "q": "Never water on electricity.",
+     "q": "Give a role: Mateo will be on the VHF.",
      "a": [
-      "Never",
-      "water",
+      "Mateo,",
+      "you",
+      "will",
+      "be",
       "on",
-      "electricity."
+      "the",
+      "VHF."
      ],
      "extra": [
-      "use",
-      "no"
+      "are",
+      "going"
      ]
     },
     {
+     "type": "listen",
+     "audio": [
+      "l23-12"
+     ],
+     "q": "What is on board at the end?",
+     "opts": [
+      "The dummy",
+      "A fisherman",
+      "The lifebuoy only"
+     ],
+     "a": 0
+    },
+    {
      "type": "type",
-     "q": "Write it in English: manta ignífuga",
+     "q": "Write it in English: bote de rescate",
      "accept": [
-      "fire blanket",
-      "a fire blanket",
-      "the fire blanket"
+      "rescue boat",
+      "the rescue boat",
+      "a rescue boat"
      ]
     }
    ]
