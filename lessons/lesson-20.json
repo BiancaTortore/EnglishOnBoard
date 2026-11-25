@@ -53,8 +53,8 @@
   },
   "l20-09": {
    "voice": "tanya",
-   "text": "That's a big difference. Four thousand cubic metres can't disappear in one night.",
-   "es": "Es una diferencia grande. Cuatro mil metros cúbicos no pueden desaparecer en una noche."
+   "text": "That's a big difference. Three thousand six hundred cubic metres can't disappear in one night.",
+   "es": "Es una diferencia grande. Tres mil seiscientos metros cúbicos no pueden desaparecer en una noche."
   },
   "l20-10": {
    "voice": "diego",
@@ -967,9 +967,9 @@
      ],
      "q": "How big is the difference?",
      "opts": [
-      "4,000 cubic metres",
-      "400 cubic metres",
-      "40 cubic metres"
+      "3,600 cubic metres",
+      "360 cubic metres",
+      "6,300 cubic metres"
      ],
      "a": 0
     },
@@ -1030,5 +1030,5 @@
   }
  ],
  "modelAudio": true,
- "mediaRev": 2
+ "mediaRev": 3
 }

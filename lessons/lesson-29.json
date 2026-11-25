@@ -2,7 +2,7 @@
  "n": 29,
  "module": 7,
  "title": "Pilot boarding & helm orders",
- "place": "Day 14 · 07:00 · Marseille approach",
+ "place": "Day 14 · 07:00 · Fos approach, port of Marseille",
  "goal": "Report the pilot on board, repeat helm orders and report the wheel and the heading.",
  "images": {
   "hero": "img/l29/hero.jpg",
@@ -483,7 +483,7 @@
   "card": {
    "kind": "form",
    "title": "PILOT CARD",
-   "subtitle": "M/V LNG HORIZON · MARSEILLE · 27 MAR 2026 · 0710",
+   "subtitle": "M/V LNG HORIZON · MARSEILLE-FOS · 27 MAR 2026 · 0710",
    "cells": [
     [
      "DRAUGHT",

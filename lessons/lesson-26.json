@@ -3,13 +3,13 @@
  "module": 7,
  "title": "Distress, urgency & safety",
  "place": "Day 12 · 19:20 · Strait of Gibraltar",
- "goal": "Recognise Mayday, Pan-Pan and Sécurité, write down a distress message and answer it on the radio.",
+ "goal": "Recognise Mayday, Pan-Pan and Sécurité, log the radio traffic with the time, and answer a Mayday on the radio.",
  "images": {
   "hero": "img/l26/hero.jpg",
   "scene": "img/l26/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 3,
+ "mediaRev": 4,
  "audio": {
   "l26-01": {
    "pause": 600,
@@ -21,13 +21,13 @@
   "l26-02": {
    "pause": 900,
    "voice": "tanya",
-   "text": "Diego, write it down. Position, problem, persons. Quickly.",
-   "es": "Diego, anotalo. Posición, problema, personas. Rápido."
+   "text": "Diego, the log. Write down the time.",
+   "es": "Diego, el libro. Anotá la hora."
   },
   "l26-03": {
    "voice": "diego",
-   "text": "Thirty-five fifty-four North, five forty-two West. Taking water. Four persons.",
-   "es": "Treinta y cinco cincuenta y cuatro Norte, cinco cuarenta y dos Oeste. Hace agua. Cuatro personas."
+   "text": "Nineteen eighteen. Mayday received. Written, Chief.",
+   "es": "Diecinueve dieciocho. Mayday recibido. Anotado, jefa."
   },
   "l26-04": {
    "pause": 1200,
@@ -44,11 +44,11 @@
   "l26-06": {
    "pause": 900,
    "voice": "lars",
-   "text": "Then we go. Diego, you have a clear voice. Call Tarifa Traffic. Tanya, stay with him.",
-   "es": "Entonces vamos. Diego, tenés una voz clara. Llamá a Tarifa Tráfico. Tanya, quedate con él."
+   "text": "Then we go. Tanya, call Tarifa Traffic. Diego, keep the log: every call, with the time.",
+   "es": "Entonces vamos. Tanya, llamá a Tarifa Tráfico. Diego, llevá el registro: cada llamada, con la hora."
   },
   "l26-07": {
-   "voice": "diego",
+   "voice": "tanya",
    "text": "Tarifa Traffic, Tarifa Traffic, this is LNG Horizon, LNG Horizon. Received Mayday from Cap Béar. We are six miles from the position. Proceeding to assist. ETA thirty minutes. Over.",
    "es": "Tarifa Tráfico, Tarifa Tráfico, aquí LNG Horizon, LNG Horizon. Recibido el Mayday del Cap Béar. Estamos a seis millas de la posición. Vamos a asistir. Llegada estimada treinta minutos. Cambio."
   },
@@ -81,14 +81,20 @@
   },
   "l26-12": {
    "pause": 1200,
-   "voice": "diego",
+   "voice": "tanya",
    "text": "Tarifa Traffic, LNG Horizon. Released. Resuming our voyage. Over.",
    "es": "Tarifa Tráfico, LNG Horizon. Liberados. Retomamos nuestro viaje. Cambio."
   },
   "l26-13": {
    "voice": "lars",
-   "text": "Good radio work, cadet. Short and clear. That's what saves people.",
-   "es": "Buen trabajo en la radio, cadete. Corto y claro. Eso es lo que salva gente."
+   "text": "Good work, both of you. Short and clear on the radio, and every time in the log. That's how we save people.",
+   "es": "Buen trabajo, los dos. Corto y claro en la radio, y cada hora en el libro. Así se salva gente."
+  },
+  "l26-14": {
+   "pause": 600,
+   "voice": "diego",
+   "text": "Nineteen twenty-one. Proceeding to assist, ETA thirty minutes. Written.",
+   "es": "Diecinueve veintiuno. Vamos a asistir, llegada estimada treinta minutos. Anotado."
   },
   "w-mayday": {
    "voice": "model",
@@ -244,7 +250,7 @@
   },
   "c-callnow": {
    "voice": "lars",
-   "text": "Diego, call Tarifa Traffic."
+   "text": "Call Tarifa Traffic."
   },
   "c-tarifa-ask": {
    "voice": "tarifa",
@@ -270,6 +276,7 @@
   "l26-06",
   "l26-07",
   "l26-08",
+  "l26-14",
   "l26-09",
   "l26-10",
   "l26-11",
@@ -427,7 +434,7 @@
      "image": "img/l26/scene.jpg",
      "kicker": "Day 12 · 19:20 · Strait of Gibraltar",
      "title": "Mayday on channel 16",
-     "body": "Sunset near Gibraltar. Diego is on watch with Tanya when a Mayday comes in on the radio. Radio voices have static: listen more than once. Listen first, one piece at a time.",
+     "body": "Sunset near Gibraltar. Diego is on watch with Tanya when a Mayday comes in on the radio. Tanya talks on the radio, and Diego keeps the log with the time of every call. Radio voices have static: listen more than once. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
@@ -488,7 +495,7 @@
      "audio": [
       "l26-07"
      ],
-     "q": "What is Diego's ETA?",
+     "q": "What is the Horizon's ETA?",
      "opts": [
       "30 minutes",
       "13 minutes",
@@ -983,7 +990,7 @@
      ],
      "q": "What does the Captain say saves people?",
      "opts": [
-      "Short and clear radio",
+      "Short, clear radio and a good log",
       "A fast ship",
       "Good English grammar"
      ],

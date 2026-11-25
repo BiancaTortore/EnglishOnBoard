@@ -1,10 +1,10 @@
 {
  "n": 28,
  "modelAudio": true,
- "mediaRev": 2,
+ "mediaRev": 3,
  "module": 7,
  "title": "Engine orders",
- "place": "Day 14 · 05:30 · off Marseille, bridge",
+ "place": "Day 14 · 05:30 · off Marseille-Fos, bridge",
  "goal": "Read back engine orders, report the engine, and talk about the berthing plan.",
  "images": {
   "hero": "img/l28/hero.jpg",
@@ -30,8 +30,8 @@
   "l28-04": {
    "pause": 1200,
    "voice": "marek",
-   "text": "Bridge, engine room. Standing by. Engine tested ahead and astern. Rudder tested, hard over both sides. All OK.",
-   "es": "Puente, máquinas. En atención. Máquina probada avante y atrás. Timón probado, todo a una y otra banda. Todo bien."
+   "text": "Bridge, engine room. Standing by. Engine tested ahead and astern. All OK.",
+   "es": "Puente, máquinas. En atención. Máquina probada avante y atrás. Todo bien."
   },
   "l28-05": {
    "voice": "lars",
@@ -501,7 +501,7 @@
     {
      "type": "intro",
      "image": "img/l28/scene.jpg",
-     "kicker": "Day 14 · 05:30 · off Marseille",
+     "kicker": "Day 14 · 05:30 · off Marseille-Fos",
      "title": "Stand by engine",
      "body": "Dawn on the last day of the voyage. The ship slows down for the pilot, and Diego goes to the engine telegraph. Listen first, one piece at a time.",
      "es": "Amanece el último día del viaje. El buque baja la velocidad para el práctico y Diego va al telégrafo de máquina."
@@ -528,12 +528,12 @@
      ],
      "q": "What did the engine room test?",
      "opts": [
-      "The engine and the rudder",
+      "The engine, ahead and astern",
       "The radar and the GPS",
       "The lifeboat"
      ],
      "a": 0,
-     "why": "\"Engine tested ahead and astern. Rudder tested.\""
+     "why": "\"Engine tested ahead and astern. All OK.\""
     },
     {
      "type": "listen",

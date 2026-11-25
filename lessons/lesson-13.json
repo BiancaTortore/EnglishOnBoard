@@ -1,7 +1,7 @@
 {
  "n": 13,
  "modelAudio": true,
- "mediaRev": 4,
+ "mediaRev": 5,
  "module": 3,
  "title": "Anchoring",
  "place": "Day 3 · 02:00 · off Galveston, in fog",
@@ -36,8 +36,8 @@
   },
   "l13-05": {
    "voice": "tanya",
-   "text": "That's why we anchor. No entry to Galveston in this fog.",
-   "es": "Por eso fondeamos. Con esta niebla no se entra a Galveston."
+   "text": "That's why we anchor. The pilot boat can't come out in this fog, so the pilot stays with us.",
+   "es": "Por eso fondeamos. Con esta niebla la lancha no puede salir a buscar al práctico, así que el práctico se queda con nosotros."
   },
   "l13-06": {
    "pause": 1300,
@@ -168,8 +168,8 @@
   },
   "x-fog": {
    "voice": "model",
-   "text": "No entry in this fog.",
-   "es": "Con esta niebla no se entra."
+   "text": "The pilot boat can't come out in this fog.",
+   "es": "Con esta niebla la lancha del práctico no puede salir."
   },
   "w-bell": {
    "voice": "model",
@@ -500,7 +500,7 @@
     ],
     [
      "FOG SIGNAL",
-     "Bell forward, 5 s every minute"
+     "Bell forward 5 s, then gong aft 5 s, every minute"
     ],
     [
      "OOW",
@@ -521,7 +521,7 @@
      "image": "img/l13/scene.jpg",
      "kicker": "Day 3 · 02:00 · off Galveston",
      "title": "Fog at the bow",
-     "body": "In the night the fog comes down. The ship can't enter port, so she anchors to wait. Diego is at the bow with Tanya and Rolando. Listen first, one piece at a time.",
+     "body": "In the night the fog comes down. The pilot boat can't come out to take the pilot off, so the ship anchors to wait. Diego is at the bow with Tanya and Rolando. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
@@ -561,7 +561,7 @@
      "opts": [
       "Because of the fog",
       "Because of the wind",
-      "To wait for the pilot"
+      "The engine has a problem"
      ],
      "a": 0
     },

@@ -1,5 +1,5 @@
 {
- "n": 17, "modelAudio": true, "mediaRev": 1,
+ "n": 17, "modelAudio": true, "mediaRev": 2,
  "module": 4,
  "title": "Course, position & traffic",
  "place": "Day 5 · 17:00 · Florida Strait, bridge",
@@ -84,6 +84,17 @@
    "voice": "diego",
    "text": "Watching her, Chief.",
    "es": "La vigilo, jefa."
+  },
+  "l17-15": {
+   "pause": 600,
+   "voice": "tanya",
+   "text": "Three ships under two miles. Captain's orders: we call him. Diego, call the Captain to the bridge.",
+   "es": "Tres buques a menos de dos millas. Órdenes del Capitán: lo llamamos. Diego, llamá al Capitán al puente."
+  },
+  "l17-16": {
+   "voice": "diego",
+   "text": "Yes, Chief. Calling the Captain now.",
+   "es": "Sí, jefa. Llamo al Capitán ahora."
   },
   "w-bearing": {
    "voice": "model",
@@ -278,7 +289,9 @@
   "l17-11",
   "l17-12",
   "l17-13",
-  "l17-14"
+  "l17-14",
+  "l17-15",
+  "l17-16"
  ],
  "words": {
   "bearing": {
@@ -415,7 +428,7 @@
     ],
     [
      "CALL THE MASTER",
-     "If CPA under 2 NM"
+     "If CPA under 2 NM · called 1716"
     ],
     [
      "OOW",
@@ -520,6 +533,20 @@
       "1.5 miles",
       "15 miles",
       "0.5 miles"
+     ],
+     "a": 0
+    },
+    {
+     "type": "listen",
+     "audio": [
+      "l17-15",
+      "l17-16"
+     ],
+     "q": "Why do they call the Captain?",
+     "opts": [
+      "Three ships are under two miles",
+      "The radar has a fault",
+      "It's the end of the watch"
      ],
      "a": 0
     },

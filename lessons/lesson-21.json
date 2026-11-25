@@ -54,8 +54,8 @@
   },
   "l21-09": {
    "voice": "diego",
-   "text": "Stop the bunkering, report to the Chief Officer, and contain the oil with the spill kit.",
-   "es": "Parar el bunker, avisar a la Primer Oficial y contener el combustible con el kit de derrames."
+   "text": "Stop the bunkering, report to the Chief Engineer, and contain the oil with the spill kit.",
+   "es": "Parar el bunker, avisar al Jefe de Máquinas y contener el combustible con el kit de derrames."
   },
   "l21-10": {
    "voice": "chen",
@@ -75,8 +75,8 @@
   },
   "l21-13": {
    "voice": "diego",
-   "text": "The Chief Officer and the barge master.",
-   "es": "La Primer Oficial y el patrón de la barcaza."
+   "text": "The Chief Engineer and the barge master.",
+   "es": "El Jefe de Máquinas y el patrón de la barcaza."
   },
   "l21-14": {
    "voice": "chen",
@@ -173,8 +173,8 @@
   },
   "p-hasto": {
    "voice": "model",
-   "text": "The Chief Officer has to sign the checklist.",
-   "es": "La Primer Oficial tiene que firmar la lista."
+   "text": "The Chief Engineer has to sign the checklist.",
+   "es": "El Jefe de Máquinas tiene que firmar la lista."
   },
   "p-where": {
    "voice": "model",
@@ -188,8 +188,8 @@
   },
   "m-spill": {
    "voice": "model",
-   "text": "Stop the bunkering and report to the Chief Officer.",
-   "es": "Parar el bunker y avisar a la Primer Oficial."
+   "text": "Stop the bunkering and report to the Chief Engineer.",
+   "es": "Parar el bunker y avisar al Jefe de Máquinas."
   },
   "m-smoke": {
    "voice": "model",
@@ -198,8 +198,8 @@
   },
   "m-sign": {
    "voice": "model",
-   "text": "The Chief Officer and the barge master.",
-   "es": "La Primer Oficial y el patrón de la barcaza."
+   "text": "The Chief Engineer and the barge master.",
+   "es": "El Jefe de Máquinas y el patrón de la barcaza."
   },
   "m-mustnt": {
    "voice": "model",
@@ -410,7 +410,7 @@
     ],
     [
      "SIGNED BY",
-     "C/O T. Williams · barge master"
+     "C/E M. Novak · barge master"
     ]
    ]
   }
@@ -427,7 +427,7 @@
      "image": "img/l21/scene.jpg",
      "kicker": "Day 6 · 14:00 · Port Everglades anchorage",
      "title": "Fuel, and a visitor",
-     "body": "A bunker barge comes alongside to give the ship fuel. Then the US Coast Guard comes on board. Listen first, one piece at a time.",
+     "body": "A bunker barge comes alongside to give the ship fuel. Marek, the Chief Engineer, is in charge of the bunkering; Tanya and Diego check the deck. Then the US Coast Guard comes on board. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
@@ -644,8 +644,8 @@
        "p-mustnt"
       ],
       [
-       "The Chief Officer has to sign the checklist.",
-       "La Primer Oficial tiene que firmar la lista.",
+       "The Chief Engineer has to sign the checklist.",
+       "El Jefe de Máquinas tiene que firmar la lista.",
        "p-hasto"
       ],
       [
@@ -666,7 +666,7 @@
       ],
       [
        "have to",
-       "necessary (a rule): She <b>has to</b> sign."
+       "necessary (a rule): He <b>has to</b> sign."
       ],
       [
        "mustn't",
@@ -681,7 +681,7 @@
       "<b>must</b> and <b>have to</b> mean almost the same. After <i>he / she</i>: <b>has to</b>.",
       "But the negatives are very different: <b>mustn't</b> = prohibido; <b>don't have to</b> = no hace falta."
      ],
-     "avoid": "You don't have to smoke (when you mean it's forbidden). · She must to sign. · She have to sign."
+     "avoid": "You don't have to smoke (when you mean it's forbidden). · He must to sign. · He have to sign."
     },
     {
      "type": "choice",
@@ -695,7 +695,7 @@
     },
     {
      "type": "choice",
-     "q": "The Chief Officer ___ sign the checklist.",
+     "q": "The Chief Engineer ___ sign the checklist.",
      "opts": [
       "has to",
       "have to",
@@ -819,7 +819,7 @@
      "doc": "check",
      "q": "Who signs the checklist?",
      "opts": [
-      "The Chief Officer and the barge master",
+      "The Chief Engineer and the barge master",
       "The inspector",
       "The cadet"
      ],
@@ -868,13 +868,13 @@
     {
      "type": "role",
      "cue": "c-q-spill",
-     "task": "Stop the bunkering and report to the Chief Officer.",
+     "task": "Stop the bunkering and report to the Chief Engineer.",
      "model": "m-spill",
      "accept": [
-      "Stop the bunkering and report to the Chief Officer.",
-      "Stop the bunkering, report to the Chief Officer.",
-      "Stop bunkering and report to the Chief Officer.",
-      "We must stop the bunkering and report to the Chief Officer."
+      "Stop the bunkering and report to the Chief Engineer.",
+      "Stop the bunkering, report to the Chief Engineer.",
+      "Stop bunkering and report to the Chief Engineer.",
+      "We must stop the bunkering and report to the Chief Engineer."
      ]
     },
     {
@@ -893,12 +893,12 @@
     {
      "type": "role",
      "cue": "c-q-sign",
-     "task": "The Chief Officer and the barge master.",
+     "task": "The Chief Engineer and the barge master.",
      "model": "m-sign",
      "accept": [
-      "The Chief Officer and the barge master.",
-      "The Chief Officer and the barge master sign it.",
-      "Chief Officer and barge master."
+      "The Chief Engineer and the barge master.",
+      "The Chief Engineer and the barge master sign it.",
+      "Chief Engineer and barge master."
      ]
     }
    ]
@@ -1005,5 +1005,5 @@
   }
  ],
  "modelAudio": true,
- "mediaRev": 2
+ "mediaRev": 3
 }
