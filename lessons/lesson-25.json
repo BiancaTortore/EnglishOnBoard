@@ -9,7 +9,7 @@
   "scene": "img/l25/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 5,
+ "mediaRev": 6,
  "radioChannel": "UHF",
  "audio": {
   "l25-01": {
