@@ -3,13 +3,13 @@
  "module": 6,
  "title": "Fire party communication",
  "place": "Day 10 · 11:30 · Atlantic, galley",
- "goal": "Pass messages to the bridge on the radio, read back pressure, and report that a fire is out.",
+ "goal": "Check and read back BA pressure, pass messages to the bridge on the radio, and report that a fire is out.",
  "images": {
   "hero": "img/l25/hero.jpg",
   "scene": "img/l25/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 4,
+ "mediaRev": 5,
  "radioChannel": "UHF",
  "audio": {
   "l25-01": {
@@ -27,14 +27,14 @@
   },
   "l25-03": {
    "voice": "james",
-   "text": "Diego, you're with me. Take a radio. You're my messenger to the bridge.",
-   "es": "Diego, venís conmigo. Agarrá un handy. Sos mi mensajero con el puente."
+   "text": "Diego, you're with me. Check team one's BA sets and read me the pressure.",
+   "es": "Diego, venís conmigo. Revisá los equipos de respiración del equipo uno y leeme la presión."
   },
   "l25-04": {
    "pause": 1200,
    "voice": "diego",
-   "text": "Yes, Second. I'll take the radio.",
-   "es": "Sí, Segundo. Agarro el handy."
+   "text": "Yes, Second. I'll check the BA sets.",
+   "es": "Sí, Segundo. Reviso los equipos de respiración."
   },
   "l25-05": {
    "voice": "james",
@@ -48,18 +48,17 @@
   },
   "l25-07": {
    "voice": "james",
-   "text": "Team one, Rolando and Santos, ready to enter?",
-   "es": "Equipo uno, Rolando y Santos, ¿listos para entrar?"
+   "text": "Team one, Rolando and Santos, BA on. Diego, check them.",
+   "es": "Equipo uno, Rolando y Santos, pónganse los equipos. Diego, revisalos."
   },
   "l25-08": {
-   "voice": "rolando",
-   "text": "Team one ready. BA on, pressure two hundred bar.",
-   "es": "Equipo uno listo. Equipos puestos, presión doscientos bar.",
-   "radio": true
+   "voice": "diego",
+   "text": "Bosun, two hundred bar. Santos, one hundred and ninety bar. Masks are good, no leaks.",
+   "es": "Contramaestre, doscientos bar. Santos, ciento noventa bar. Las máscaras están bien, sin fugas."
   },
   "l25-09": {
    "pause": 800,
-   "voice": "diego",
+   "voice": "james",
    "text": "Bridge, fire party. Team one is entering the galley. Over.",
    "es": "Puente, brigada. El equipo uno está entrando a la cocina. Cambio."
   },
@@ -77,9 +76,14 @@
    "radio": true
   },
   "l25-12": {
-   "voice": "diego",
+   "voice": "james",
    "text": "Bridge, fire party. Team one is at the extractor. Small fire. Over.",
    "es": "Puente, brigada. El equipo uno está en el extractor. Fuego chico. Cambio."
+  },
+  "l25-18": {
+   "voice": "diego",
+   "text": "Second, team one has been inside for ten minutes.",
+   "es": "Segundo, el equipo uno ya lleva diez minutos adentro."
   },
   "l25-13": {
    "voice": "james",
@@ -107,8 +111,8 @@
   },
   "l25-17": {
    "voice": "james",
-   "text": "Good work, Diego. The bridge knew everything, all the time.",
-   "es": "Buen trabajo, Diego. El puente supo todo, todo el tiempo."
+   "text": "Good work, Diego. You checked every set, and you watched the time.",
+   "es": "Buen trabajo, Diego. Revisaste cada equipo y controlaste el tiempo."
   },
   "w-fireparty": {
    "voice": "model",
@@ -238,7 +242,11 @@
   },
   "c-take": {
    "voice": "james",
-   "text": "Diego, you're with me. Take a radio."
+   "text": "Diego, you're with me. Check the BA sets."
+  },
+  "c-ask-pressure": {
+   "voice": "james",
+   "text": "Diego, read me the pressure."
   },
   "c-report": {
    "voice": "lars",
@@ -252,8 +260,8 @@
   },
   "p-radio": {
    "voice": "model",
-   "text": "I'll take the radio.",
-   "es": "Agarro el handy."
+   "text": "I'll check the BA sets.",
+   "es": "Reviso los equipos de respiración."
   },
   "p-relay": {
    "voice": "model",
@@ -262,8 +270,8 @@
   },
   "m-radio": {
    "voice": "model",
-   "text": "I'll take the radio.",
-   "es": "Agarro el handy."
+   "text": "I'll check the BA sets.",
+   "es": "Reviso los equipos de respiración."
   },
   "m-relay": {
    "voice": "model",
@@ -276,8 +284,9 @@
    "es": "Puente, brigada. Sin heridos. Cambio."
   },
   "c-relay": {
-   "voice": "james",
-   "text": "Diego, tell the bridge: team two is starting boundary cooling."
+   "voice": "lars",
+   "text": "Fire party, bridge. What is team two doing? Over.",
+   "radio": true
   },
   "c-bridge-q": {
    "voice": "lars",
@@ -285,8 +294,8 @@
    "radio": true
   },
   "c-relay-other": {
-   "voice": "james",
-   "text": "Diego, tell the bridge the fire door is closed."
+   "voice": "diego",
+   "text": "Second, the fire door is closed."
   }
  },
  "dialogue": [
@@ -302,6 +311,7 @@
   "l25-10",
   "l25-11",
   "l25-12",
+  "l25-18",
   "l25-13",
   "l25-14",
   "l25-15",
@@ -444,7 +454,7 @@
     ],
     [
      "TEAM ONE",
-     "Bosun, AB Santos · BA · 200 bar"
+     "Bosun 200 bar · AB Santos 190 bar · BA"
     ],
     [
      "EXTINGUISHED WITH",
@@ -473,7 +483,7 @@
      "image": "img/l25/scene.jpg",
      "kicker": "Day 10 · 11:30 · Atlantic",
      "title": "Fire party",
-     "body": "This time it's not a drill. There's a fire in Mario's galley. James leads the fire party and Diego is his messenger to the bridge, with a radio. Listen first, one piece at a time.",
+     "body": "This time it's not a drill. There's a fire in Mario's galley. James leads the fire party and talks to the bridge. Diego checks the pressure of the BA sets. Listen first, one piece at a time.",
      "es": "Escuchá primero. El texto está escondido a propósito."
     },
     {
@@ -498,8 +508,8 @@
      ],
      "q": "What is Diego's job?",
      "opts": [
-      "Messenger to the bridge, with a radio",
-      "Enter the galley",
+      "Check the BA sets and read the pressure",
+      "Talk to the bridge on the radio",
       "Cook the lunch"
      ],
      "a": 0
@@ -523,11 +533,11 @@
      "audio": [
       "l25-08"
      ],
-     "q": "What is team one's pressure?",
+     "q": "What is Santos's pressure?",
      "opts": [
+      "190 bar",
       "200 bar",
-      "140 bar",
-      "120 bar"
+      "140 bar"
      ],
      "a": 0
     },
@@ -683,11 +693,11 @@
     {
      "type": "tip",
      "tag": "Useful language",
-     "title": "On the radio",
+     "title": "At the fire",
      "list": [
       [
-       "I'll take the radio.",
-       "Agarro el handy.",
+       "I'll check the BA sets.",
+       "Reviso los equipos de respiración.",
        "p-radio"
       ],
       [
@@ -782,7 +792,7 @@
      "audio": [
       "c-relay-other"
      ],
-     "q": "What does James want you to tell the bridge?",
+     "q": "What does Diego tell James?",
      "opts": [
       "The fire door is closed",
       "The fire is out",
@@ -881,7 +891,7 @@
   },
   {
    "id": "speak",
-   "title": "Messenger to the bridge",
+   "title": "BA check and radio",
    "skill": "Speaking",
    "min": 5,
    "screens": [
@@ -889,7 +899,7 @@
      "type": "intro",
      "kicker": "Speaking",
      "title": "Short radio messages",
-     "body": "Listen, say it, check it. Who you call, who you are, the message, Over.",
+     "body": "Listen, say it, check it. Read back the pressure. On the radio: who you call, who you are, the message, Over.",
      "es": "A quién llamás, quién sos, el mensaje, Cambio.",
      "button": "Start"
     },
@@ -908,19 +918,32 @@
     {
      "type": "role",
      "cue": "c-take",
-     "task": "Accept: you'll take the radio.",
+     "task": "Accept: you'll check the BA sets.",
      "model": "m-radio",
      "accept": [
-      "I'll take the radio.",
-      "Yes, Second. I'll take the radio.",
-      "I will take the radio.",
-      "OK, I'll take the radio."
+      "I'll check the BA sets.",
+      "Yes, Second. I'll check the BA sets.",
+      "I will check the BA sets.",
+      "OK, I'll check the BA sets.",
+      "I'll check the BA."
+     ]
+    },
+    {
+     "type": "role",
+     "cue": "c-ask-pressure",
+     "task": "Read it back: two hundred bar.",
+     "model": "m-pressure",
+     "accept": [
+      "Pressure two hundred bar.",
+      "Two hundred bar.",
+      "Pressure is two hundred bar.",
+      "The pressure is two hundred bar."
      ]
     },
     {
      "type": "role",
      "cue": "c-relay",
-     "task": "Tell the bridge: team two is starting boundary cooling.",
+     "task": "Answer: team two is starting boundary cooling.",
      "model": "m-relay",
      "accept": [
       "Bridge, fire party. Team two is starting boundary cooling. Over.",
@@ -1035,8 +1058,8 @@
      ],
      "q": "What does James say about Diego's work?",
      "opts": [
-      "The bridge knew everything",
-      "He wrote every name",
+      "He checked every set and watched the time",
+      "He talked to the bridge",
       "He was too slow"
      ],
      "a": 0
