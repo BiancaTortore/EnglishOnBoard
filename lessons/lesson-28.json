@@ -39,12 +39,13 @@
    "es": "Gracias, Jefe. Adelante media."
   },
   "l28-06": {
-   "pause": 1300,
+   "pause": 400,
    "voice": "diego",
    "text": "Half ahead.",
    "es": "Adelante media."
   },
   "l28-07": {
+   "pause": 2500,
    "voice": "diego",
    "text": "Engine is half ahead.",
    "es": "Máquina adelante media."
@@ -56,12 +57,13 @@
    "es": "Adelante despacio."
   },
   "l28-09": {
-   "pause": 1300,
+   "pause": 400,
    "voice": "diego",
    "text": "Slow ahead.",
    "es": "Adelante despacio."
   },
   "l28-10": {
+   "pause": 2500,
    "voice": "diego",
    "text": "Engine is slow ahead. Captain, why so slow?",
    "es": "Máquina adelante despacio. Capitán, ¿por qué tan despacio?"
@@ -89,12 +91,13 @@
    "es": "Adelante muy despacio."
   },
   "l28-15": {
-   "pause": 1300,
+   "pause": 400,
    "voice": "diego",
    "text": "Dead slow ahead.",
    "es": "Adelante muy despacio."
   },
   "l28-16": {
+   "pause": 2500,
    "voice": "diego",
    "text": "Engine is dead slow ahead.",
    "es": "Máquina adelante muy despacio."

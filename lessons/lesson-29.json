@@ -9,7 +9,7 @@
   "scene": "img/l29/scene.jpg"
  },
  "modelAudio": true,
- "mediaRev": 3,
+ "mediaRev": 4,
  "radioChannel": "UHF",
  "audio": {
   "l29-01": {
@@ -64,12 +64,13 @@
    "es": "Muy bien. Babor diez."
   },
   "l29-10": {
-   "pause": 1500,
+   "pause": 400,
    "voice": "diego",
    "text": "Port ten.",
    "es": "Babor diez."
   },
   "l29-11": {
+   "pause": 2500,
    "voice": "diego",
    "text": "Wheel is port ten.",
    "es": "Timón a babor diez."
@@ -80,12 +81,13 @@
    "es": "A la vía."
   },
   "l29-13": {
-   "pause": 1400,
+   "pause": 400,
    "voice": "diego",
    "text": "Midships.",
    "es": "A la vía."
   },
   "l29-14": {
+   "pause": 2500,
    "voice": "diego",
    "text": "Wheel is amidships.",
    "es": "Timón a la vía."
@@ -96,12 +98,13 @@
    "es": "Gobierne cero cuatro cinco."
   },
   "l29-16": {
-   "pause": 2200,
+   "pause": 400,
    "voice": "diego",
    "text": "Steer zero four five.",
    "es": "Gobernar cero cuatro cinco."
   },
   "l29-17": {
+   "pause": 3500,
    "voice": "diego",
    "text": "Steady on zero four five.",
    "es": "Rumbo cero cuatro cinco."
@@ -112,12 +115,13 @@
    "es": "Estribor veinte."
   },
   "l29-19": {
-   "pause": 1400,
+   "pause": 400,
    "voice": "diego",
    "text": "Starboard twenty.",
    "es": "Estribor veinte."
   },
   "l29-20": {
+   "pause": 2500,
    "voice": "diego",
    "text": "Wheel is starboard twenty.",
    "es": "Timón a estribor veinte."
@@ -128,10 +132,16 @@
    "es": "A la vía. Así."
   },
   "l29-22": {
-   "pause": 2400,
+   "pause": 400,
    "voice": "diego",
-   "text": "Midships. Steady. Steady on zero nine zero.",
-   "es": "A la vía. Así. Rumbo cero nueve cero."
+   "text": "Midships. Steady.",
+   "es": "A la vía. Así."
+  },
+  "l29-26": {
+   "pause": 3000,
+   "voice": "diego",
+   "text": "Steady on zero nine zero.",
+   "es": "Rumbo cero nueve cero."
   },
   "l29-23": {
    "voice": "pilot",
@@ -352,6 +362,7 @@
   "l29-20",
   "l29-21",
   "l29-22",
+  "l29-26",
   "l29-23",
   "l29-24",
   "l29-25"
@@ -584,7 +595,8 @@
      "type": "listen",
      "audio": [
       "l29-21",
-      "l29-22"
+      "l29-22",
+      "l29-26"
      ],
      "q": "What is the new heading?",
      "opts": [

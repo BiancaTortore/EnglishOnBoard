@@ -1,7 +1,7 @@
 {
  "n": 11,
  "modelAudio": true,
- "mediaRev": 2,
+ "mediaRev": 3,
  "module": 3,
  "title": "Lifting gear",
  "place": "Day 2 · 15:00 · Houston, main deck",
@@ -46,8 +46,14 @@
   "l11-07": {
    "pause": 600,
    "voice": "diego",
-   "text": "Hoist slowly… Stop!",
-   "es": "Izá despacio… ¡Pará!"
+   "text": "Hoist slowly…",
+   "es": "Izá despacio…"
+  },
+  "l11-14": {
+   "pause": 2500,
+   "voice": "diego",
+   "text": "Stop!",
+   "es": "¡Pará!"
   },
   "l11-08": {
    "voice": "rolando",
@@ -57,8 +63,26 @@
   "l11-09": {
    "pause": 600,
    "voice": "diego",
-   "text": "Slew left… Stop. Lower… lower… Stop. Load on deck.",
-   "es": "Girá a la izquierda… Pará. Arriá… arriá… Pará. Carga en cubierta."
+   "text": "Slew left…",
+   "es": "Girá a la izquierda…"
+  },
+  "l11-15": {
+   "pause": 2500,
+   "voice": "diego",
+   "text": "Stop.",
+   "es": "Pará."
+  },
+  "l11-16": {
+   "pause": 800,
+   "voice": "diego",
+   "text": "Lower… lower…",
+   "es": "Arriá… arriá…"
+  },
+  "l11-17": {
+   "pause": 2500,
+   "voice": "diego",
+   "text": "Stop. Load on deck.",
+   "es": "Pará. Carga en cubierta."
   },
   "l11-10": {
    "pause": 1000,
@@ -72,10 +96,16 @@
    "es": "Tranquilo, Mario. Cadete, ahora lo trincamos. Trincas puestas, tensores ajustados."
   },
   "l11-12": {
-   "pause": 900,
+   "pause": 400,
    "voice": "diego",
-   "text": "Lashings on, turnbuckles tight. Nothing moves.",
-   "es": "Trincas puestas, tensores ajustados. No se mueve nada."
+   "text": "Lashings on, turnbuckles tight.",
+   "es": "Trincas puestas, tensores ajustados."
+  },
+  "l11-18": {
+   "pause": 2500,
+   "voice": "diego",
+   "text": "Nothing moves.",
+   "es": "No se mueve nada."
   },
   "l11-13": {
    "voice": "tanya",
@@ -292,11 +322,16 @@
   "l11-05",
   "l11-06",
   "l11-07",
+  "l11-14",
   "l11-08",
   "l11-09",
+  "l11-15",
+  "l11-16",
+  "l11-17",
   "l11-10",
   "l11-11",
   "l11-12",
+  "l11-18",
   "l11-13"
  ],
  "words": {
@@ -524,7 +559,8 @@
      "type": "listen",
      "audio": [
       "l11-06",
-      "l11-07"
+      "l11-07",
+      "l11-14"
      ],
      "q": "What is Diego's first signal?",
      "opts": [
@@ -538,7 +574,10 @@
      "type": "listen",
      "audio": [
       "l11-08",
-      "l11-09"
+      "l11-09",
+      "l11-15",
+      "l11-16",
+      "l11-17"
      ],
      "q": "Which signal moves the load to the side?",
      "opts": [
@@ -554,7 +593,8 @@
      "audio": [
       "l11-10",
       "l11-11",
-      "l11-12"
+      "l11-12",
+      "l11-18"
      ],
      "q": "What do they do with the pallet on deck?",
      "opts": [
