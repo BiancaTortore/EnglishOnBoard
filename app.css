@@ -575,3 +575,22 @@ html.dark-page body{background:#0A1620}
 .consent input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--accent)}
 .consent i{color:var(--muted)}
 .acc-btns a.chip-btn{text-decoration:none}
+
+/* profile: grouped lists */
+.psec{font:600 12px/1 var(--f-mono,ui-monospace,monospace);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 0 -8px}
+.plist{background:var(--surface);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+.prow{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:14px;padding:14px;border-top:1px solid var(--rule)}
+.prow:first-child{border-top:0}
+.prow .pt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.prow .pt b{font-size:17px;font-weight:600;overflow-wrap:anywhere}
+.prow .pt small{font-size:14px;color:var(--muted)}
+.prow .pcard-ico{width:40px;height:40px;border-radius:10px}
+.prow-btns{flex-wrap:wrap;gap:8px}
+.prow-btns a.chip-btn{text-decoration:none}
+.prow-link{cursor:pointer}
+.prow-link > svg{color:var(--muted);flex:none}
+.prow-link:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.prow .seg{flex:none}
+.pfoot{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.prow .pt b.pmail{font-size:15px}
+.prow-wrap{flex-wrap:wrap}.prow-wrap .pt{flex-basis:100%}

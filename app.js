@@ -265,7 +265,7 @@ async function playSeq(ids, {rate = 1, onLine} = {}){
 /* =========================================================
    BETA · DEVICE · OUTBOX (feedback and anonymous progress, sent when there is signal)
    ========================================================= */
-const APP_VERSION = "beta-55";
+const APP_VERSION = "1.0";
 const PREVIEW_KEY = "eob-preview", DEVICE_KEY = "eob-device", OUTBOX_KEY = "eob-outbox", INSTALL_ASKED_KEY = "eob-install-asked";
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
@@ -433,10 +433,24 @@ function loadGoogle(){
 function accountCardHTML(){
   if (!ACC()) return "";
   if (!signedIn()) return `<button class="pcard" id="accIn"><span class="pcard-ico">${I.user}</span><span><b>Sign in</b><small>Keep your progress safe in a free account</small></span>${I.chev}</button>`;
-  const u = session.user || {};
-  return `<section class="panel setting acc">
-    <div><b>Account</b><span class="sub">${esc(u.email || "")}${u.google ? " · Google" : ""}<br>${u.access ? "Full course: yes" : "Full course: not yet (Module 1)"}</span></div>
-    <div class="acc-btns"><button class="chip-btn" id="accOut">Sign out</button><button class="chip-btn danger" id="accDel">Delete account</button></div></section>`;
+  const u = session.user || {}, sb = u.sub;
+  const day = t => t ? new Date(t).toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric"}) : "";
+  const cancelled = !!(sb && sb.cancelAt);
+  const plan = !u.access ? "Module 1 is open. Modules 2–7 come with the full course."
+    : !sb ? "All modules open"
+    : sb.status === "past_due" ? "The last payment didn't go through: update your card."
+    : cancelled ? `Cancelled · open until ${day(sb.cancelAt)}`
+    : `Renews on ${day(sb.ends)}`;
+  const btns = [
+    sb && sb.updateUrl ? `<a class="chip-btn" href="${esc(sb.updateUrl)}" target="_blank" rel="noopener">Update card</a>` : "",
+    sb && !cancelled && sb.cancelUrl ? `<a class="chip-btn" href="${esc(sb.cancelUrl)}" target="_blank" rel="noopener">Cancel subscription</a>` : "",
+    `<button class="chip-btn" id="accOut">Sign out</button>`].join("");
+  return `<section class="plist">
+    <div class="prow"><span class="pcard-ico">${I.user}</span><div class="pt"><b class="pmail">${esc(u.email || "")}</b><small>${u.google ? "Signed in with Google" : "Signed in with e-mail"}</small></div></div>
+    <div class="prow"><span class="pcard-ico">${u.access ? I.check : I.lock}</span><div class="pt"><b>${u.access ? "Full course" : "Free plan"}</b><small>${plan}</small></div></div>
+    <div class="prow prow-btns">${btns}</div>
+  </section>
+  ${u.access ? "" : `<button class="pcard pcard-buy" data-buy><span class="pcard-ico">${I.lock}</span><span><b>Unlock the full course</b><small>Modules 2–7, final test and certificate · US$ 39 a year</small></span>${I.chev}</button>`}`;
 }
 function wireAccount(){
   const i = $("#accIn"); if (i) i.onclick = () => signInNav(0);
@@ -542,17 +556,7 @@ async function afterPayment(){
   app.innerHTML = `<div class="home"><h2 class="prompt">Your payment is being confirmed</h2><p>It can take a few minutes. Close the app and open it again. If Modules 2–7 are still locked in an hour, write to info@chartroomlab.com.</p><button class="cta" id="home">Back</button></div>`;
   $("#home").onclick = goHome;
 }
-function subCardHTML(){
-  if (!SALE() || !signedIn()) return "";
-  const u = session.user || {}, sb = u.sub;
-  const day = t => t ? new Date(t).toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric"}) : "";
-  if (!u.access) return `<button class="pcard" data-buy><span class="pcard-ico">${I.lock}</span><span><b>Unlock the full course</b><small>Modules 2–7 · US$ 39 a year</small></span>${I.chev}</button>`;
-  if (!sb) return "";
-  const cancelled = !!sb.cancelAt;
-  return `<section class="panel setting acc">
-    <div><b>Subscription</b><span class="sub">${sb.status === "past_due" ? "The last payment didn't go through: update your card." : cancelled ? `Cancelled · access until ${day(sb.cancelAt)}` : `Full course · renews on ${day(sb.ends)}`}</span></div>
-    <div class="acc-btns">${sb.updateUrl ? `<a class="chip-btn" href="${esc(sb.updateUrl)}" target="_blank" rel="noopener">Update card</a>` : ""}${!cancelled && sb.cancelUrl ? `<a class="chip-btn danger" href="${esc(sb.cancelUrl)}" target="_blank" rel="noopener">Cancel subscription</a>` : ""}</div></section>`;
-}
+function subCardHTML(){ return ""; }   /* merged into accountCardHTML */
 
 /* ---------- install on the phone ---------- */
 let installEvt = null;
@@ -1140,28 +1144,36 @@ function viewProfile(){
       <div><b>${avg}</b><span>right first time</span></div><div><b>${passed}</b><span>module ${passed === 1 ? "test" : "tests"} passed</span></div>
     </div>
     ${progress.cert ? `<button class="pcard" data-cert><span class="pcard-ico">${I.check}</span><span><b>Your certificate</b><small>${esc(progress.cert.code)} · ${progress.cert.pct}%</small></span>${I.chev}</button>` : ""}
-    ${accountCardHTML()}
-    ${subCardHTML()}
-    <button class="pcard" id="fbOpen"><span class="pcard-ico">${I.msg}</span><span><b>Send feedback</b><small>Tell us what works and what to improve</small></span>${I.chev}</button>
+
+    ${ACC() ? `<h3 class="psec">Account</h3>${accountCardHTML()}` : ""}
+
+    <h3 class="psec">Settings</h3>
+    <section class="plist">
+      <div class="prow prow-wrap"><div class="pt"><b>Listening speed</b><small>Clips start at this speed. You can always tap Slower on a clip.</small></div>
+        <div class="seg" role="group" aria-label="Listening speed">${seg("normal", "Normal")}${seg("slow", "Slower")}</div></div>
+      <div class="prow"><div class="pt"><b>Offline</b><small id="offState">Checking what is saved on this phone…</small></div></div>
+    </section>
     ${installCardHTML("profile")}
-    <section class="panel setting">
-      <div><b>Offline</b><span class="sub" id="offState">Checking what is saved on this phone…</span></div>
+
+    <h3 class="psec">Help</h3>
+    <section class="plist">
+      <button class="prow prow-link" id="fbOpen"><div class="pt"><b>Send feedback</b><small>Tell us what works and what to improve</small></div>${I.chev}</button>
+      <button class="prow prow-link" id="showWelcome"><div class="pt"><b>Show the intro again</b><small>The welcome screen, step by step</small></div>${I.chev}</button>
     </section>
-    <section class="panel setting">
-      <div><b>Listening speed</b><span class="sub">Clips start at this speed. You can always tap Slower on a clip.</span></div>
-      <div class="seg" role="group" aria-label="Listening speed">${seg("normal", "Normal")}${seg("slow", "Slower")}</div>
+
+    <h3 class="psec">Erase</h3>
+    <section class="plist">
+      <div class="prow"><div class="pt"><b>Reset progress</b><small>Clears lessons, scores, tests and the review list${signedIn() ? ", here and in your account" : " on this phone"}.</small></div>
+        <button class="chip-btn danger" id="reset">Reset</button></div>
+      ${ACC() && signedIn() ? `<div class="prow"><div class="pt"><b>Delete account</b><small>Erases your e-mail and progress from the server.</small></div>
+        <button class="chip-btn danger" id="accDel">Delete</button></div>` : ""}
     </section>
-    <section class="panel setting">
-      <div><b>Introduction</b><span class="sub">Show the welcome screen again.</span></div>
-      <button class="chip-btn" id="showWelcome">Show intro</button>
-    </section>
-    <section class="panel setting">
-      <div><b>Reset progress</b><span class="sub">Clears lessons, scores, tests and the review list${signedIn() ? ", here and in your account" : " on this device"}.</span></div>
-      <button class="chip-btn danger" id="reset">Reset progress</button>
-    </section>
-    ${betaNoteHTML()}
-    <p class="note legal-links"><a href="/course" target="_blank" rel="noopener">The course</a> · <a href="/terms" target="_blank" rel="noopener">Terms</a> · <a href="/refunds" target="_blank" rel="noopener">Refunds</a> · <a href="/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="/impressum" target="_blank" rel="noopener">Impressum</a></p>
-    <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>`);
+
+    <div class="pfoot">
+      ${betaNoteHTML()}
+      <p class="note legal-links"><a href="/course" target="_blank" rel="noopener">The course</a> · <a href="/terms" target="_blank" rel="noopener">Terms</a> · <a href="/refunds" target="_blank" rel="noopener">Refunds</a> · <a href="/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="/impressum" target="_blank" rel="noopener">Impressum</a></p>
+      <p class="note" id="ver">English on Board · ${APP_VERSION}${PREVIEW ? " · preview: all ready lessons open" : ""}</p>
+    </div>`);
   wireInstall(); wireAccount();
   $$("[data-buy]").forEach(b => b.onclick = () => buyNav());
   $("#fbOpen").onclick = () => { navPush({v: "feedback"}); viewFeedback(); };
@@ -1179,7 +1191,7 @@ function viewProfile(){
   $("#showWelcome").onclick = () => { navPush({v: "welcome"}); viewWelcome(); };
   let armed = false; const reset = $("#reset");
   reset.onclick = () => {
-    if (!armed) { armed = true; reset.textContent = "Tap again to erase"; reset.classList.add("armed"); return; }
+    if (!armed) { armed = true; reset.textContent = "Tap again"; reset.classList.add("armed"); return; }
     progress = {}; try { localStorage.setItem(KEY, "{}"); } catch (e) {}
     if (signedIn()) enqueue("/api/me/progress", {token: session.token, device: platform(), progress: {}, replace: true});
     goHome();
@@ -1188,7 +1200,7 @@ function viewProfile(){
 const viewSettings = viewProfile;
 const TAB_VIEWS = {home: viewHome, lessons: viewLessons, practice: viewPractice, logbook: viewLogbook, profile: viewProfile};
 function betaNoteHTML(){
-  return `<div class="beta-note"><span class="mono">Beta</span><p>Module 1 is open and free. Modules 2 to 7 open with the full course.
+  return `<div class="beta-note"><span class="mono">About</span><p>Module 1 is free. Modules 2 to 7, the final test and the certificate come with the full course.
     English on Board is a language course: it is not approved by the IMO and does not give an STCW certificate.</p></div>`;
 }
 function viewFeedback(){
